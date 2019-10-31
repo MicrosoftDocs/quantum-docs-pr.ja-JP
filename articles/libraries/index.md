@@ -9,8 +9,8 @@ ms.openlocfilehash: 5a5b28f7e8c1669d26d1064753f20551a6b0d036
 ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72970391"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056450"
 ---
 Quantum 開発キットには、Q# で量子アプリケーションを簡単に開発するためのいくつかのライブラリが用意されています。
 ドキュメントのこのセクションでは、そのライブラリと、それらをプログラムで使用する方法について説明します。
