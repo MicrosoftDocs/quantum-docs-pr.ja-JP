@@ -1,0 +1,99 @@
+### YamlMime:Landing
+title: Microsoft Quantum ドキュメント
+summary: Microsoft Quantum Developer Kit と、量子アルゴリズム用の言語である Q# を使用する方法について説明します。 主要な概念を学び、最初の量子プログラムを記述します。
+metadata:
+  title: Microsoft Quantum ドキュメント - Q# API リファレンス
+  description: Microsoft Quantum Developer Kit と、量子アルゴリズム用の言語である Q# を使用する方法について説明します。 主要な概念を学び、最初の量子プログラムを記述します。
+  ms.prod: quantum
+  ms.topic: landing-page
+  ms.collection: collection
+  author: cjgronlund
+  ms.author: cgronlun
+  ms.date: 09/30/2019
+  ms.openlocfilehash: 692456cb6b117b206d202b01967202b7ac89e59d
+  ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/30/2019
+  ms.locfileid: "73065063"
+landingContent:
+- title: Microsoft Quantum の概要
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Microsoft Quantum Developer Kit へようこそ
+      url: welcome.md
+  - linkListType: get-started
+    links:
+    - text: QDK をインストールする
+      url: install-guide/index.md
+    - text: QDK を更新する
+      url: install-guide/update.md
+  - linkListType: quickstart
+    links:
+    - text: 初めての量子プログラムを作成する
+      url: quickstart.md
+- title: 量子コンピューティングについて学ぶ
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 量子コンピューティングとは
+      url: concepts/index.md
+    - text: ベクトルと行列
+      url: concepts/vectors-and-matrices.md
+    - text: 高度な行列の概念
+      url: concepts/advanced-matrices.md
+    - text: 量子ビット
+      url: concepts/the-qubit.md
+    - text: ソフトウェア スタック
+      url: concepts/software-stack.md
+- title: 量子開発手法
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Q# とは
+      url: techniques/file-structure.md
+    - text: 操作と関数
+      url: techniques/operations-and-functions.md
+    - text: ローカル変数
+      url: techniques/local-variables.md
+    - text: 量子ビットの操作
+      url: techniques/working-with-qubits.md
+    - text: 併せてお読みください。テレポーテーション
+      url: techniques/putting-it-all-together.md
+- title: マシンとドライバーの管理
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 従来型のドライバーとマシン
+      url: machines/index.md
+    - text: QDK の完全状態シミュレーター
+      url: machines/full-state-simulator.md
+    - text: リソース推定
+      url: machines/resources-estimator.md
+    - text: 量子トレース シミュレーター
+      url: machines/qc-trace-simulator/index.md
+    - text: QDK トフォリ シミュレーター
+      url: machines/toffoli-simulator.md
+- title: Q# 言語とライブラリ
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Q# 言語の紹介
+      url: language/index.md
+    - text: リリース ノート
+      url: relnotes/index.md
+  - linkListType: reference
+    links:
+    - text: 標準ライブラリ
+      url: libraries/standard/index.md
+    - text: 化学ライブラリ
+      url: libraries/chemistry/index.md
+    - text: 数値ライブラリ
+      url: libraries/numerics/index.md
+  - linkListType: reference
+    links:
+    - text: Q# リファレンス
+      url: https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.bitwise?view=qsharp-preview
+    - text: C# コンポーネント
+      url: https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators?view=quantum-dotnet-latest
