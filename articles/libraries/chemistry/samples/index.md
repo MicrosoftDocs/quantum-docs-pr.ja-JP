@@ -1,0 +1,24 @@
+---
+title: 量子化学の例 | Microsoft Docs
+description: 量子化学の例の Docs
+author: guanghaolow
+ms.author: gulow
+ms.date: 10/23/2018
+ms.topic: article-type-from-white-list
+uid: microsoft.quantum.chemistry.examples
+ms.openlocfilehash: 586ea98321ff71947df8d81a2141a8b050dbd9ed
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960397"
+---
+# <a name="quantum-chemistry-examples"></a>量子化学の例
+
+量子化学の概念では、フェルミオン ハミルトニアンの例を手動で構築しました。 [ハミルトニアン ダイナミクスのシミュレーション](xref:microsoft.quantum.libraries.standard.algorithms)で説明した化学シミュレーション アルゴリズムは、規範ライブラリの[量子位相推定](xref:microsoft.quantum.libraries.characterization)に統合されています。 この組み合わせにより、分子で表されるエネルギー レベルを推定することができます。量子コンピューターの量子化学が主に応用されているのが、分子です。 
+
+ハミルトニアンの用語を 1 つずつ指定する代わりに、大規模な量子化学実験の実行を可能にするいくつかの例についても説明します。 最初に、[Broombridge スキーマ](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)でエンコードされた化学ハミルトニアンを読み込む例から始めます。
+
+[完全状態シミュレーター](xref:microsoft.quantum.machines.full-state-simulator)でシミュレートするには大きすぎる分子でも、興味深い科学を実行できます。 たとえば、大規模な化学シミュレーションを実行するリソース コストは、[トレース シミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)を対象にすることで評価できます。
+
+提供された例のいくつかを使用して、化学シミュレーション ライブラリの興味深い応用例を説明します。

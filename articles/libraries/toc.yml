@@ -1,0 +1,9 @@
+- name: 標準ライブラリ
+  topicHref: standard/index.md
+  href: standard/toc.yml
+- name: 量子化学ライブラリ
+  topicHref: chemistry/index.md
+  href: chemistry/toc.yml
+- name: 量子数値ライブラリ
+  topicHref: numerics/index.md
+  href: numerics/toc.yml

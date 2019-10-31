@@ -11,7 +11,7 @@ ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/29/2019
-ms.locfileid: "72999098"
+ms.locfileid: "73056962"
 ---
 # <a name="q-standard-libraries"></a>Q# 標準ライブラリ #
 
