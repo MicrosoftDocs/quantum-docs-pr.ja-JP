@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifonec
+name: ApplyIfOneC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  古典的な結果値が1であるという制御可能な操作を適用します。
+
+
+  `op` 操作と結果値 `result`を指定した場合、`result` が `One`場合、は `target` に `op` を適用します。 `Zero`した場合、`target`には何も起こりません。
+
+  サフィックス `C` は、適用される操作が制御可能であることを示します。
+syntax: "operation ApplyIfOneC (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit is Ctl), target : 'T))"
+  types:
+  - name: result
+    summary: Op が適用されるかどうかを制御する測定結果。
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: 条件付きで適用する操作。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: target
+    summary: 操作が適用される入力。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 条件付きで適用される操作の入力型。
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifonec
+- microsoft.quantum.canon.applyifonea
+- microsoft.quantum.canon.applyifoneca
+ms.openlocfilehash: 51388c63a15b9f8244b49cc145297faef11bf5cc
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220778"

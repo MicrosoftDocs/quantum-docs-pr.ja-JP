@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
+name: DeterministicStateOracleFromStateOracle
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: '`StateOracle` 型の oracle を `DeterministicStateOracle`に変換します。'
+syntax: 'function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle) : Microsoft.Quantum.Oracles.DeterministicStateOracle'
+input:
+  content: '(idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle)'
+  types:
+  - name: idxFlagQubit
+    summary: '`stateOracle` $A $ のフラグ qubit のインデックス。2つのレジスタを明示的に処理します。フラグ $f $ とシステム $s $ (例: $A \ket{0}\_f\ket {\ psi}\_s $)。'
+    isPrimitive: true
+    uid: Int
+  - name: stateOracle
+    summary: '`StateOracle`型の状態準備 oracle $A $。'
+    uid: microsoft.quantum.oracles.stateoracle
+output:
+  content: Microsoft.Quantum.Oracles.DeterministicStateOracle
+  types:
+  - summary: 同じ状態準備 oracle $A $ ですが、現在は型 `DeterministicStateOracle`になっているため、$a、s $ が明示的に分離されていないレジスタに対して動作します。たとえば、 $A \ket{0\psi}\_{as} $。
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+seeAlso:
+- microsoft.quantum.canon.stateoracle
+- microsoft.quantum.canon.deterministicstateoracle
+ms.openlocfilehash: 5eda40115d4d4ca7b4187f76b5e0807695913407
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231097"

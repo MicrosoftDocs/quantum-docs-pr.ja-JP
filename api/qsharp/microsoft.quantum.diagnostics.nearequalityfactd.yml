@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.nearequalityfactd
+name: NearEqualityFactD
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: 古典的な浮動小数点値が、最小の許容範囲 (1e-10) までの予測値を持つことをアサートします。
+remarks: これは、ハードコーディングされた許容範囲 $10 ^{-10}$ の <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact> に相当します。
+syntax: 'function NearEqualityFactD (actual : Double, expected : Double) : Unit'
+input:
+  content: '(actual : Double, expected : Double)'
+  types:
+  - name: actual
+    summary: 確認する数値。
+    isPrimitive: true
+    uid: Double
+  - name: expected
+    summary: 予期される値。
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 9bbf1ced753b2fde5a3f8fb20417053a47866ada
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230502"

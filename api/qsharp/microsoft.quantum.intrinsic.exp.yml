@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.exp
+name: Exp
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  マルチ qubit の P# li 演算子の指数を適用します。
+
+
+  \begin{align} e ^ {i \ シータ [P_0/otimes P_1, cドット P_ {N-1}]}, \end{align} where $P _i $ は `paulis`の $ th 要素 $i、where $N = $`Length(paulis)`です。
+syntax: 'operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit'
+input:
+  content: '(paulis: p Li []、シータ: Double、qubits: Qubits [])'
+  types:
+  - name: paulis
+    summary: 各 qubit の最新の製品要素を示す single qubit の値の配列。
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: シータ
+    summary: ターゲットレジスタのローテーションに使用する、指定されたマルチ qubit の P# li 演算子に関する角度。
+    isPrimitive: true
+    uid: Double
+  - name: qubits
+    summary: 指定された回転をに適用するために登録します。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: 単位
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: d301f6281d5c8a07479417fab1e25c66e2251a25
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067324"

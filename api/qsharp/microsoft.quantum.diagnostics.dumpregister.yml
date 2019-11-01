@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.dumpregister
+name: DumpRegister
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: 指定した qubits に関連付けられている現在のターゲットコンピューターの状態をダンプします。
+remarks: >-
+  このメソッドを使用すると、指定した qubits の状態に関連付けられた情報をファイルまたはその他の場所にダンプできます。
+
+  生成される実際の情報と `location` のセマンティクスは、各ターゲットコンピューターに固有です。 ただし、空のタプルを場所 (`()`) として指定することは、通常、出力をコンソールに生成することを意味します。
+
+
+  Quantum 開発キットの一部として配布されたローカルの完全な状態シミュレーターでは、このメソッドは、指定された qubits (つまり、対応するサブシステムの wave 関数) の状態を1次元の ar として書き込むファイルへのパスを含む文字列を想定します。複素数の射線。各要素は、対応する状態を測定する確率の振幅を表します。
+
+  指定した qubits が他の qubits と区別され、その状態を分離できない場合は、qubits がありであることを報告するだけです。
+syntax: "function DumpRegister (location : 'T, qubits : Qubit[]) : Unit"
+input:
+  content: "(location : 'T, qubits : Qubit[])"
+  types:
+  - name: location
+    summary: 状態のダンプを生成する場所に関する情報を提供します。
+    uid: "'T"
+    isLocal: true
+  - name: qubits
+    summary: 報告する qubits の一覧。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - summary: なし。
+    isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 6d553a95bfa619d142b681e2830fc0375c6bcae5
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227034"
