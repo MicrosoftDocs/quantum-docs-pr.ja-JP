@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.notequali
+name: NotEqualI
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: 2つの入力が等しくない場合にのみ true を返します。
+remarks: >-
+  同等のものを次に示します。
+
+
+  ```Q#
+
+  let cond = a != b;
+
+  let cond = NotEqualI(a, b);
+
+  ```
+syntax: 'function NotEqualI (a : Int, b : Int) : Bool'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: 比較する最初の値。
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: 比較する2番目の値。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool
+  types:
+  - summary: '`a` が `b`と等しくない場合にのみ `true` します。'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 2aea02b6434ab1fa55b3b39146990a6c4bf4deba
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235262"

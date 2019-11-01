@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.bitwise.rightshiftedi
+name: RightShiftedI
+type: function
+namespace: Microsoft.Quantum.Bitwise
+summary: 数値のビットごとの表現を指定されたビット数だけ右にシフトします。
+remarks: >-
+  同等のものを次に示します。
+
+
+  ```Q#
+
+  let c = a >>> b;
+
+  let c = RightShiftedI(a, b);
+
+  ```
+syntax: 'function RightShiftedI (value : Int, amount : Int) : Int'
+input:
+  content: '(value : Int, amount : Int)'
+  types:
+  - name: value
+    summary: ビットごとの表現を右にシフトする数値 (重要ではない)。
+    isPrimitive: true
+    uid: Int
+  - name: amount
+    summary: '`value` を右にシフトするときに使用するビット数。'
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: '`value`の値は、`amount` ビットで右にシフトされます。'
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 801e07c06b8af34385fb80badf4dfebb503c982d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217752"

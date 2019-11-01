@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.enumerated
+name: Enumerated
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 配列が指定された場合、は、元の配列の要素と各要素のインデックスを含む新しい配列を返します。
+examples: >-
+  次の `for` ループは同等です。
+
+
+  ```Q#
+
+  for (idx in IndexRange(array)) {
+      let element = array[idx];
+      ...
+  }
+
+  for ((idx, element) in Enumerated(array)) { ... }
+
+  ```
+syntax: "function Enumerated (array : 'TElement[]) : (Int, 'TElement)[]"
+input:
+  content: "(array : 'TElement[])"
+  types:
+  - name: array
+    summary: 要素が列挙される配列。
+    isArray: true
+    uid: "'TElement"
+    isLocal: true
+output:
+  content: (Int, 'TElement)[]
+  types:
+  - summary: 元の配列の要素そのインデックスを含む新しい配列。
+    isArray: true
+    types:
+    - isPrimitive: true
+      uid: Int
+    - uid: "'TElement"
+      isLocal: true
+typeParameters:
+- uid: "'TElement"
+  summary: 配列の要素の型。
+ms.openlocfilehash: 471b62b28ef2014584de637d41158fb8ac7c629d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220965"

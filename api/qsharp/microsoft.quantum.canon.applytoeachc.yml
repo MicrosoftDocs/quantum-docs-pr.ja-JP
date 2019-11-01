@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeachc
+name: ApplyToEachC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  レジスタ内の各要素に単一の qubit 演算を適用します。
+
+  修飾子 `C` は、single qubit 演算が制御可能であることを示します。
+examples: >-
+  3 qubit $ \ket{+} $ 状態を準備します。
+
+
+  ```qsharp
+
+  using (register = Qubit[3]) {
+      ApplyToEach(H, register);
+  }
+
+  ```
+syntax: "operation ApplyToEachC (singleElementOperation : ('T => Unit is Ctl), register : 'T[]) : Unit"
+input:
+  content: "(singleElementOperation : ('T => Unit is Ctl), register : 'T[])"
+  types:
+  - name: singleElementOperation
+    summary: 各 qubit に適用する操作。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: register
+    summary: 指定された操作を適用する qubits の配列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 操作が動作するターゲット。
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applytoeach
+ms.openlocfilehash: ba49e50f643f061b3f1257e66f9ebb4c686ee1ba
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210476"

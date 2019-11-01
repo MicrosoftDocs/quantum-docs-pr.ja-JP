@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.minusi
+name: MinusI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: 2つの入力の差を返します。
+syntax: 'function MinusI (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: 1番目の入力 $a $ 減算されます。
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: 2番目の入力 $b $ 減算されます。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: $A-b $ との違いがあります。
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 005729ab867dd0affaa32be92f1cb7a0ca4a1a5f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233800"

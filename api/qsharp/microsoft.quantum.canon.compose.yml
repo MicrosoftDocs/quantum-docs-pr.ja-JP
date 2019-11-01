@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.compose
+name: Compose
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  2つの関数の合成を生成します。
+
+
+  つまり、$ および $g $ $f 2 つの関数を指定すると、$f-circ g $ を表す新しい関数が返されます。
+syntax: "function Compose (outer : ('U -> 'V), inner : ('T -> 'U)) : ('T -> 'V)"
+input:
+  content: "(outer : ('U -> 'V), inner : ('T -> 'U))"
+  types:
+  - name: outer
+    summary: 適用する2番目の関数。
+    isFunction: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - uid: "'V"
+        isLocal: true
+  - name: inner
+    summary: 適用される最初の関数。
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+output:
+  content: ('T -> 'V)
+  types:
+  - summary: $、$F (g (x)) = h (x) $ のすべての入力 $x の新しい関数 $h $。
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'V"
+        isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 適用する最初の関数の入力型。
+- uid: "'U"
+  summary: 適用される最初の関数の出力型と、適用する2番目の関数の入力型。
+- uid: "'V"
+  summary: 適用する2番目の関数の出力型。
+ms.openlocfilehash: 69fbd6a4fafbc61a63e41257b7100303fd48d4d4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223073"

@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.maj
+name: MAJ
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  これにより、インプレースマジョリティ操作が3つの qubits に適用されます。
+
+
+  ターゲットの qubit を $ \ket{z} $ として、入力 qubit の入力状態を $ \ket{x} $ および $ \ket{y} $ として示す場合、この操作では、$ \ket{xyz} \rightarrow \ket{x/oplus z} \ket{y/oplus z} \ket{\operatorname{MAJ} (x、y、z)} $。
+syntax: 'operation MAJ (input0 : Qubit, input1 : Qubit, target : Qubit) : Unit'
+input:
+  content: '(input0 : Qubit, input1 : Qubit, target : Qubit)'
+  types:
+  - name: input0
+    summary: 最初の入力 qubit。
+    isPrimitive: true
+    uid: Qubit
+  - name: input1
+    summary: 2番目の入力 qubit。
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: マジョリティ関数が適用される qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 253b6f6ee152f2aa5326a06fab120433b75a5f0b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218806"

@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
+name: OptimizedBEXY
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: $ (X ^ {z + 1}\_.Py ^ {z}\_p) Z\_{p-1}... に p Li 文字列を適用するユニタリ $U $...等価 $ on qubits $ 0.. p $ は、インデックス $z \\{0、1\}$、および $p $ に条件を付けます。 つまり、$ $ \begin{align} U\ket {z} \ k {p} \ k {\ psi} = \ket{z}\ket{p} (X ^ {z + 1}\_.Py ^ {z}\_p) Z\_{p-1}...Z_0\ket {\ psi} \end{align} $ $
+syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
+references: '- Babbush、Spectra、Gidney、Dominic W Berry、Nathan Wiebe、Jarrod McClean、Alexandru Er、オースティン Fowler、Hartmut Neven、、https://arxiv.org/abs/1805.03662'
+input:
+  content: '(pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
+  types:
+  - name: pauliBasis
+    summary: この qubit が state $ \ket{0}$ の場合、$X $ が適用されます。 State が $ \ket{1}$ の場合、$Y $ が適用されます。
+    isPrimitive: true
+    uid: Qubit
+  - name: indexRegister
+    summary: このレジスタの状態 $ \ket{p} $ によって、$X $ または $Y $ が適用される qubit が決まります。
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: targetRegister
+    summary: Pare Li 演算子が適用される qubits の登録です。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: e0ac3f2f050ed584053f7da7a310f1855e992141
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228462"

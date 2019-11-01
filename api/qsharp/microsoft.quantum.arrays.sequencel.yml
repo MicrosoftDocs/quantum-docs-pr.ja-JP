@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.sequencel
+name: SequenceL
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 指定された間隔で整数の配列を取得します。
+remarks: '`from` と `to` の違いは `Int` の値に適合する必要があります。'
+examples: >-
+  ```qsharp
+
+  let arr1 = SequenceL(0L, 3L); // [0L, 1L, 2L, 3L]
+
+  let arr2 = SequenceL(23L, 29L); // [23L, 24L, 25L, 26L, 27L, 28L, 29L]
+
+  let arr3 = SequenceL(-5L, -2L); // [-5L, -4L, -3L, -2L]
+
+  ```
+syntax: 'function SequenceL (from : BigInt, to : BigInt) : BigInt[]'
+input:
+  content: '(from : BigInt, to : BigInt)'
+  types:
+  - name: from
+    summary: 間隔の包括開始インデックス。
+    isPrimitive: true
+    uid: BigInt
+  - name: to
+    summary: '`from`よりも小さい、期間の包括終了インデックス。'
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt[]
+  types:
+  - summary: '`from`、`from + 1`、`to`の数値のシーケンスを格納している配列。'
+    isArray: true
+    isPrimitive: true
+    uid: BigInt
+ms.openlocfilehash: 09d5798b0311285e671bc5ed1f9358c557a74946
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217990"

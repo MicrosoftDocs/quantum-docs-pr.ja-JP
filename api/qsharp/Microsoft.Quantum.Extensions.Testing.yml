@@ -1,0 +1,56 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.testing
+name: Microsoft.Quantum.Extensions.Testing
+operations:
+- uid: microsoft.quantum.extensions.testing.assertallzero
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.diagnostics.assertallzero"を使用してください。
+- uid: microsoft.quantum.extensions.testing.assertallzerotol
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.diagnostics.assertallzerowithintolerance"を使用してください。
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.diagnostics.assertoperationsequalinplace"を使用してください。
+
+    この操作の引数の順序が変更されていることに注意してください。
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis"を使用してください。
+
+    この操作の引数の順序が変更されていることに注意してください。
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.diagnostics.assertoperationsequalreferenced"を使用してください。
+
+    この操作の引数の順序が変更されていることに注意してください。
+- uid: microsoft.quantum.extensions.testing.assertqubit
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.diagnostics.assertqubit"を使用してください。
+- uid: microsoft.quantum.extensions.testing.assertqubitstate
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance"を使用してください。
+- uid: microsoft.quantum.extensions.testing.assertqubittol
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.diagnostics.assertqubitwithintolerance"を使用してください。
+ms.openlocfilehash: 031bbd476ac37f113f9fb692ccd6fca916612ac3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210349"

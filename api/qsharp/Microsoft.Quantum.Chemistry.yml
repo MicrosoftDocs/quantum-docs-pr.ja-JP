@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.chemistry
+name: Microsoft.Quantum.Chemistry
+functions:
+- uid: microsoft.quantum.chemistry.htermstogenidx
+  summary: インデックスを `HTerm[]` データ形式の Hamiltonian term から GeneratorIndex に変換します。
+- uid: microsoft.quantum.chemistry.htermstogensys
+  summary: '`HTerm[]` データ形式の Hamiltonian を GeneratorSystem に変換します。'
+- uid: microsoft.quantum.chemistry.htermtogenidx
+  summary: '`HTerm` データ形式の Hamiltonian term を GeneratorIndex に変換します。'
+- uid: microsoft.quantum.chemistry.isnotzero
+  summary: '`Double` 数が約0でないかどうかを確認します。'
+newtypes:
+- uid: microsoft.quantum.chemistry.hterm
+  summary: >-
+    Hamiltonian の用語を表すC#ためにから Q # に渡されるデータの形式。
+
+    表されるデータの意味は、それを受け取るアルゴリズムによって決まります。
+ms.openlocfilehash: 78d6e9f54c25f9d1a6af32c157d23069b8a4872b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210918"

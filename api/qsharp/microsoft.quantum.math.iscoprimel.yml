@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.iscoprimel
+name: IsCoprimeL
+type: function
+namespace: Microsoft.Quantum.Math
+summary: $A $ と $b $ が共存している場合は true、それ以外の場合は false を返します。
+syntax: 'function IsCoprimeL (a : BigInt, b : BigInt) : Bool'
+input:
+  content: '(a : BigInt, b : BigInt)'
+  types:
+  - name: a
+    summary: primality がテストされている最初の数
+    isPrimitive: true
+    uid: BigInt
+  - name: b
+    summary: テストされている共同 primality の2番目の数
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: Bool
+  types:
+  - summary: $A $ と $b $ が共存している場合 (たとえば、最も一般的な除数が 1) の場合は True、それ以外の場合は false です。
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 8c96c49bd02f7601ba4851fdb81f33d01dfccfdd
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232695"

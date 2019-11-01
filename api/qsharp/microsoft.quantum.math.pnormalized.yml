@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.pnormalized
+name: PNormalized
+type: function
+namespace: Microsoft.Quantum.Math
+summary: >-
+  `L(p)` 基準で `Double`s のベクターを正規化します。
+
+
+  つまり、`Double[]`型の配列 $x $ を指定すると、すべての要素が $p $-基準 $\|x\|_p $ で除算された配列が返されます。
+syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
+input:
+  content: '(p: Double、array: Double [])'
+  types:
+  - name: p
+    summary: 指数は、$p $-基準で $ $p ます。
+    isPrimitive: true
+    uid: Double
+  - name: array
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double []
+  types:
+  - summary: $-$P $\|x\|_p $ によって正規化された配列 $x $。
+    isArray: true
+    isPrimitive: true
+    uid: Double
+seeAlso:
+- pnorm
+ms.openlocfilehash: 5fd219b866b14d3d6faf58cdf4f1ce2b9fbadf9d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067290"

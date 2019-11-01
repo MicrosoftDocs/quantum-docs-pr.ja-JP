@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexz
+name: MultiplexZ
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Qubits の配列で条件付きの Pan Li Z の回転条件を適用します。
+
+
+  これにより、$n $ qubit number $ \ket{j} $ によって制御されている場合に、single qubit p Li operator $Z $ によって回転を実行する、乗算によって制御される $U $ に適用されます。
+
+
+  $U = \ sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z > $。
+remarks: $ 2 ^ n $ 未満の値が指定されている場合、`coefficients` には要素 $0.0 $ > が埋め込まれます。
+syntax: 'operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+references: '- クォンタムロジック回線の合成、Shende、Stephen、、Igor または Markov の https://arxiv.org/abs/quant-ph/0406176'
+input:
+  content: '(coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  types:
+  - name: coefficients
+    summary: '最大で $ 2 ^ n $ 係数 $ & # の配列。 $J $ th 係数は、リトルエンディアン形式でエンコードされた数値の状態 $ \ket{j} $ にインデックスを付けます。'
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: control
+    summary: 数値の状態をリトルエンディアン形式でエンコードする $-qubit コントロールレジスタ $n ます。
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: target
+    summary: $E ^ {i P > $ によって回転される1つの qubit レジスタ。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 7098b849ea730b46b4cc3039520ef2b040d43d34
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222699"

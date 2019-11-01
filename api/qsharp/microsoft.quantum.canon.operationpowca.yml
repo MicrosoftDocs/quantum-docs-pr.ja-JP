@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.operationpowca
+name: OperationPowCA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  操作を累乗します。
+
+  修飾子 `A` は、操作が制御可能であり、adjointable であることを示します。
+
+
+  つまり、ゲート $U $ を表す操作が指定されている場合は、power $m $ に対して ^ m $ $U 新しい操作を返します。
+syntax: "function OperationPowCA (oracle : ('T => Unit is Ctl + Adj), power : Int) : ('T => Unit is Ctl + Adj)"
+input:
+  content: "(oracle : ('T => Unit is Ctl + Adj), power : Int)"
+  types:
+  - name: oracle
+    summary: 繰り返すゲートを表す $ $U 演算。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: power
+    summary: $U $ を繰り返す回数を指定します。
+    isPrimitive: true
+    uid: Int
+output:
+  content: ('T => Unit is Ctl + Adj)
+  types:
+  - summary: $U ^ m $ を表す新しい操作 $m = \texttt{power} $。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: 電力を供給する操作の種類。
+seeAlso:
+- microsoft.quantum.canon.operationpow
+ms.openlocfilehash: d671ba738ec1d8d24b6fe956230ab0af60dbbda1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211717"

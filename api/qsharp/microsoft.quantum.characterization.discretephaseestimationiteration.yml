@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.discretephaseestimationiteration
+name: DiscretePhaseEstimationIteration
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: ユニタリ oracle の整数の累乗を使用して、反復 (クラシックデプロイ制御) フェーズの推定アルゴリズムの単一の反復処理を実行します。
+syntax: 'operation DiscretePhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit'
+input:
+  content: '(oracle : Microsoft.Quantum.Oracles.DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit)'
+  types:
+  - name: oracle
+    summary: 整数とレジスタに作用する操作。この場合、指定されたレジスタに $U ^ m $ が適用されます。ここで $U $ は、フェーズが推定されるユニタリ、$m $ は oracle に与えられた整数乗です。
+    uid: microsoft.quantum.oracles.discreteoracle
+  - name: power
+    summary: 指定されたユニタリ oracle を適用する回数。
+    isPrimitive: true
+    uid: Int
+  - name: theta
+    summary: 対象の状態で動作する前に、コントロール qubit のフェーズを反転する角度。
+    isPrimitive: true
+    uid: Double
+  - name: targetState
+    summary: 指定されたユニタリ oracle によって操作された状態の登録。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: controlQubit
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 9acf864fe93303489308078eb5039189808549f1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229227"

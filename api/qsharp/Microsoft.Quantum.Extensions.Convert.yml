@@ -1,0 +1,61 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.convert
+name: Microsoft. Quantum. 変換
+summary: " # <a name=\"summary\"></a>Summary\n これらは、Q # 型システム内で関連する .NET CLR の system.string 名前空間の関数の一部です。\n\n # <a name=\"remarks\"></a>解説\n Bool、Int、Double 型の関数の複数のバージョンがある場合、対応する関数にはサフィックス B、I、および D があります。"
+functions:
+- uid: microsoft.quantum.extensions.convert.biginttobools
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.convert.bigintasboolarray"を使用してください。
+- uid: microsoft.quantum.extensions.convert.boolstobigint
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.convert.boolarrayasbigint"を使用してください。
+- uid: microsoft.quantum.extensions.convert.pauliarraytoint
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.convert.pauliarrayasint"を使用してください。
+- uid: microsoft.quantum.extensions.convert.tobigint
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.convert.intasbigint"を使用してください。
+- uid: microsoft.quantum.extensions.convert.todouble
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.convert.intasdouble"を使用してください。
+- uid: microsoft.quantum.extensions.convert.tostringb
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.convert.boolasstring"を使用してください。
+- uid: microsoft.quantum.extensions.convert.tostringd
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.convert.doubleasstring"を使用してください。
+- uid: microsoft.quantum.extensions.convert.tostringdformat
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.convert.doubleasstringwithformat"を使用してください。
+- uid: microsoft.quantum.extensions.convert.tostringi
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.convert.intasstring"を使用してください。
+- uid: microsoft.quantum.extensions.convert.tostringiformat
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.convert.intasstringwithformat"を使用してください。
+ms.openlocfilehash: 57f341ec6e8f82cfa9fc4bb958a580743a350218
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056484"

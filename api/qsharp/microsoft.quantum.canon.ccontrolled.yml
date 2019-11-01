@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.ccontrolled
+name: CControlled
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: 操作 op が指定された場合、は、従来の制御ビットが true の場合に op を適用する新しい操作を返します。 `false`した場合、何も起こりません。
+syntax: "function CControlled (op : ('T => Unit)) : ((Bool, 'T) => Unit)"
+input:
+  content: "(op : ('T => Unit))"
+  types:
+  - name: op
+    summary: 条件付きで適用する操作。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+output:
+  content: ((Bool, 'T) => Unit)
+  types:
+  - summary: 新しい操作。これは、クラシック制御ビットが true の場合の op です。
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Bool
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 条件付きで適用される操作の入力型。
+seeAlso:
+- microsoft.quantum.canon.ccontrolledc
+- microsoft.quantum.canon.ccontrolleda
+- microsoft.quantum.canon.ccontrolledca
+ms.openlocfilehash: 340a993f5949d3faa6e4ebf883ee0f15c219a49b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211989"

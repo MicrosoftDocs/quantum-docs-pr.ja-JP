@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.incrementbymodularinteger
+name: IncrementByModularInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  整数定数によって、qubit レジスタのモジュール単位インクリメントを実行します。
+
+
+  `target` で y によってエンコードされた N と整数の `modulus` によって `increment` を示します。その後、操作は次の変換を実行します: \begin{align} \ket{y}-mapare \ket{y + 1 > \end{align} 整数はリトルエンディアン形式でエンコードされます。
+remarks: Target の値が N 未満であることを前提としています。 <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> は同じ操作を実装しますが、`PhaseLittleEndian` 単位で実装されることに注意してください。
+syntax: 'operation IncrementByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: increment
+    summary: Y に加算されるを加算した値。
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    summary: Y + a を mods する整数 N。
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: '`increment` を `LittleEndian` 形式の整数 y がに追加されます。'
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- incrementphasebymodularinteger
+ms.openlocfilehash: 9b61ed007a08d176d1754a7c1cd6cd2d9edce7d2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219061"

@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applyreversedopbec
+name: ApplyReversedOpBEC
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: リトルエンディアン入力をリトルエンディアン形式で符号なし整数にエンコードする操作を適用します。
+syntax: 'operation ApplyReversedOpBEC (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(op: (LittleEndian = > Unit is Ctl)、register:) を実行していません。'
+  types:
+  - name: ファンド
+    summary: ビッグエンディアンレジスタに対して動作する操作。
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.bigendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: registrations
+    summary: 変換されるリトルエンディアンレジスタ。
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: 単位
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
+seeAlso:
+- applyreversedopbe
+- applyreversedopbea
+- applyreversedopbeca
+ms.openlocfilehash: fcf4110845e43426b7f2e1ec882bce75159ef789
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057276"

@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.modi
+name: ModI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: 別の数値に対する数値の剰余を返します。
+syntax: 'function ModI (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: 剰余が返される入力 $a $。
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: $A $ の剰余を返す対象となる数値。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: 剰余 $a \bmod b $。
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 546d65a3bd08d7a33ebf8157ba7b65041fd1bc64
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233732"

@@ -1,0 +1,69 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.decomposeintotimestepsca
+name: DecomposeIntoTimeStepsCA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: 指定された操作に対して Trotter – Suzuki インテグレーターを実装する操作を返します。
+syntax: "function DecomposeIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
+references: >-
+  We use the implementation in
+
+
+  - [ *D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders* ](https://arxiv.org/abs/quant-ph/0508139)
+input:
+  content: '((n ステップ: Int, op: ((Int, Double, t) = > Unit is 形容詞 + Ctl)), trotterOrder: Int)'
+  types:
+  - name: nSteps
+    isPrimitive: true
+    uid: Int
+  - name: ファンド
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Int
+      - isPrimitive: true
+        uid: Double
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: trotterOrder
+    summary: >-
+      使用する Trotter – Suzuki インテグレーターの順序を選択します。
+
+      現在、注文1と2がサポートされています。
+    isPrimitive: true
+    uid: Int
+output:
+  content: ((Double, t) = > 単位は形容詞 + Ctl)
+  types:
+  - summary: Trotter – Suzuki インテグレーターを実装するユニタリを返します。最初のパラメーター `Double` は統合ステップサイズで、2番目のパラメーターは操作対象のターゲットです。
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Double
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: 各時間ステップが動作する型。通常は、`Qubit[]` または `Qubit`ます。
+ms.openlocfilehash: 328db9b314320c724cf03adb19ee59d63a33e56e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067834"

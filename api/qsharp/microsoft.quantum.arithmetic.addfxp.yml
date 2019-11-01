@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.addfxp
+name: AddFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  クォンタムレジスタに格納されている2つの固定小数点数を追加します。
+
+
+  それぞれ、状態が $ \ket{f_1} $ および $ \ket{f_2} $ の2つの固定小数点レジスタを指定すると、$ \ket{f_1} \ket{f_2}-map \ket{f_1} \ket{f_1 + f_2} $ という演算が実行されます。
+remarks: 現在の実装では、_i $ と $p _i $ が同じである必要がありますが、この2つの固定小数点数では、最下位ビットと同じポイント位置を持つ必要があります $n。
+syntax: 'operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: fp1
+    summary: 最初の固定小数点数
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: fp2
+    summary: 2番目の固定小数点数は、2つの入力の合計を含むように更新されます。
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 142c7927519e59fb3df1661b3beadd32cda0d2c8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215423"

@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.stacknew
+name: StackNew
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: 指定された容量で新しい空の <xref:microsoft.quantum.canon.resultstack> を作成します。
+syntax: 'function StackNew (size : Int) : Microsoft.Quantum.Canon.ResultStack'
+input:
+  content: '(size : Int)'
+  types:
+  - name: size
+    summary: 新しいスタックの容量。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.Canon.ResultStack
+  types:
+  - summary: 容量 `size` と長さが0の新しい `ResultStack`。
+    uid: microsoft.quantum.canon.resultstack
+ms.openlocfilehash: 4ce9db8cdae4d6c7813a4d5cfbd04e1b8d25cfaf
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222189"

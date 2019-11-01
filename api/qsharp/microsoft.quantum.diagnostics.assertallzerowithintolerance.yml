@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
+name: AssertAllZeroWithinTolerance
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: 指定された qubits のアサートはすべて $ \ket{0}$ state で、指定された許容範囲になります。
+syntax: 'operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit'
+input:
+  content: '(qubits: Qubits []、tolerance: Double)'
+  types:
+  - name: qubits
+    summary: $ \Ket{0}$ state にアサートされた qubits。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: 許容
+    summary: 状態が $ \ket{0}$ state の精度
+    isPrimitive: true
+    uid: Double
+output:
+  content: 単位
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- assertqubitwithintolerance
+ms.openlocfilehash: 0e3b560d08077bb353147d98a921a2c2ca3ae202
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066542"

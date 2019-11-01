@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.lessthanorequali
+name: LessThanOrEqualI
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: 数値が別の数値以下の場合にのみ true を返します。
+remarks: >-
+  同等のものを次に示します。
+
+
+  ```Q#
+
+  let cond = a <= b;
+
+  let cond = LessThanOrEqualI(a, b);
+
+  ```
+syntax: 'function LessThanOrEqualI (a : Int, b : Int) : Bool'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: 比較する最初の値。
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: 比較する2番目の値。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool
+  types:
+  - summary: '`a` が `b`以下である場合にのみ `true` します。'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 9c9b663eab0c88024f05bd9da245a3c49c22ac8a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235500"

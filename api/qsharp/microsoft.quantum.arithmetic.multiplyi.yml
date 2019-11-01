@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.multiplyi
+name: MultiplyI
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 整数 `xs` を整数 `ys` で乗算し、結果を `result`に格納します。最初はゼロである必要があります。
+remarks: >-
+  標準のシフトアンド追加アプローチを使用して乗算を実装します。
+
+  制御されたバージョンを改善するには $x _i $ をコントロール qubit の ancilla qubit にコピーし、ancilla qubit に対する加算を制御します。
+syntax: 'operation MultiplyI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: xs
+    summary: $n $-bit 被乗数 (LittleEndian)
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: $n $-bit 乗数 (LittleEndian)
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: result
+    summary: $ 2n $ bit result (LittleEndian) は、初期状態では $ \ket{0}$ である必要があります。
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 5af23390ef67bf339e816e4e8af1d3f52847aaa7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218738"

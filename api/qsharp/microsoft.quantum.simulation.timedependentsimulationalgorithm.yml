@@ -1,0 +1,19 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.timedependentsimulationalgorithm
+name: TimeDependentSimulationAlgorithm
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  時間に依存するシミュレーションアルゴリズムを表します。
+
+
+  時間に依存するシミュレーション手法によって、<xref:microsoft.quantum.simulation.evolutionschedule> が変換されます。
+
+  ある期間の時間の進化を時間単位で示します。
+syntax: newtype TimeDependentSimulationAlgorithm = ((Double, Microsoft.Quantum.Simulation.EvolutionSchedule, Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 0af6aa57fceb45254fa4cf13b97dad81f44fa237
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219928"

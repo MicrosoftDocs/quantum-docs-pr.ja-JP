@@ -1,0 +1,190 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.math
+name: Microsoft. Quantum. Math
+functions:
+- uid: microsoft.quantum.extensions.math.absb
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.absl"を使用してください。
+- uid: microsoft.quantum.extensions.math.absd
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.absd"を使用してください。
+- uid: microsoft.quantum.extensions.math.absi
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.absi"を使用してください。
+- uid: microsoft.quantum.extensions.math.arccos
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.arccos"を使用してください。
+- uid: microsoft.quantum.extensions.math.arcsin
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.arcsin"を使用してください。
+- uid: microsoft.quantum.extensions.math.arctan
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.arctan"を使用してください。
+- uid: microsoft.quantum.extensions.math.arctan2
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.arctan2"を使用してください。
+- uid: microsoft.quantum.extensions.math.ceiling
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.ceiling"を使用してください。
+- uid: microsoft.quantum.extensions.math.cos
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.cos"を使用してください。
+- uid: microsoft.quantum.extensions.math.cosh
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.cosh"を使用してください。
+- uid: microsoft.quantum.extensions.math.divremb
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.divreml"を使用してください。
+- uid: microsoft.quantum.extensions.math.e
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.e"を使用してください。
+- uid: microsoft.quantum.extensions.math.expd
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.expd"を使用してください。
+- uid: microsoft.quantum.extensions.math.floor
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.floor"を使用してください。
+- uid: microsoft.quantum.extensions.math.ieeeremainder
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.ieeeremainder"を使用してください。
+- uid: microsoft.quantum.extensions.math.log
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.log"を使用してください。
+- uid: microsoft.quantum.extensions.math.log10
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.log10"を使用してください。
+- uid: microsoft.quantum.extensions.math.maxb
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.maxl"を使用してください。
+- uid: microsoft.quantum.extensions.math.maxd
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.maxd"を使用してください。
+- uid: microsoft.quantum.extensions.math.maxi
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.maxi"を使用してください。
+- uid: microsoft.quantum.extensions.math.minb
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.minl"を使用してください。
+- uid: microsoft.quantum.extensions.math.mind
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.mind"を使用してください。
+- uid: microsoft.quantum.extensions.math.mini
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.mini"を使用してください。
+- uid: microsoft.quantum.extensions.math.modpowb
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.modpowl"を使用してください。
+- uid: microsoft.quantum.extensions.math.pi
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.pi"を使用してください。
+- uid: microsoft.quantum.extensions.math.powd
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.powd"を使用してください。
+- uid: microsoft.quantum.extensions.math.round
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.round"を使用してください。
+- uid: microsoft.quantum.extensions.math.signb
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.signl"を使用してください。
+- uid: microsoft.quantum.extensions.math.signd
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.signd"を使用してください。
+- uid: microsoft.quantum.extensions.math.signi
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.signi"を使用してください。
+- uid: microsoft.quantum.extensions.math.sin
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.sin"を使用してください。
+- uid: microsoft.quantum.extensions.math.sinh
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.sinh"を使用してください。
+- uid: microsoft.quantum.extensions.math.sqrt
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.sqrt"を使用してください。
+- uid: microsoft.quantum.extensions.math.tan
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.tan"を使用してください。
+- uid: microsoft.quantum.extensions.math.tanh
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.tanh"を使用してください。
+- uid: microsoft.quantum.extensions.math.truncate
+  summary: >-
+    > [!WARNING]
+
+    > 非推奨 @"microsoft.quantum.math.truncate"を使用してください。
+ms.openlocfilehash: a1a8cda192f7e95141eb2e34baa37ddaae4cb8c9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056328"

@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.boolasresult
+name: BoolAsResult
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: '`Bool` 型を `Result` 型に変換します。 `true` は `One` にマップされ、`false` は `Zero`にマップされます。'
+syntax: 'function BoolAsResult (input : Bool) : Result'
+input:
+  content: '(input : Bool)'
+  types:
+  - name: input
+    summary: 変換する `Bool`。
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Result
+  types:
+  - summary: '`input`を表す `Result`。'
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 88019e17d91753f9aeafd273d2f38fef0f420be2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212295"

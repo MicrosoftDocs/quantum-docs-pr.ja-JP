@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.inplacemajority
+name: InPlaceMajority
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  これは、3つの qubits に対して大部分の関数を計算します。
+
+
+  出力 qubit を $z $、入力 qubit を $x $ および $y $ として示す場合、この操作では次の変換が実行されます: $ \ket{xyz} \rightarrow \ket{x-oplus z} \ket{y \ oplus z} \ket{\operatorname{MAJ} (x, y, z)} $。
+syntax: 'operation InPlaceMajority (output : Qubit, input : Qubit[]) : Unit'
+input:
+  content: '(output : Qubit, input : Qubit[])'
+  types:
+  - name: output
+    summary: 最初の入力 qubit。 出力がインプレースで計算され、この qubit に格納されていることに注意してください。
+    isPrimitive: true
+    uid: Qubit
+  - name: input
+    summary: 2番目と3番目の入力 qubits。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 0f02f9820fd1f4bc71fd4cf584a915f3b9682c9c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214981"

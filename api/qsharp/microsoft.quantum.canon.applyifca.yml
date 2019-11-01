@@ -1,0 +1,74 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifca
+name: ApplyIfCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  古典的なビットに対して条件付きのユニタリ操作を適用します。
+
+
+  操作 `op` とビット値 `bit`を指定すると、`bit` が `true`の場合、`target` に `op` が適用されます。 `false`した場合、`target`には何も起こりません。
+
+  サフィックス `CA` は、適用される操作が、ユニタリ (制御可能および adjointable) であることを示します。
+examples: >-
+  次の例では、`Bool` 値の配列として指定された古典的なビット文字列によって表される計算基準の状態に qubits のレジスタを準備します。
+
+
+  ```Q#
+
+  let bitstring = [true, false, true];
+
+  using (register = Qubit(3)) {
+      ApplyToEach(ApplyIf(X, _, _), Zip(bitstring, register));
+      // register should now be in the state |101⟩.
+      ...
+  }
+
+  ```
+syntax: "operation ApplyIfCA (op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T) : Unit"
+input:
+  content: "(op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T)"
+  types:
+  - name: op
+    summary: 条件付きで適用する操作。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: bit
+    summary: op が適用されるかどうかを制御するブール値。
+    isPrimitive: true
+    uid: Bool
+  - name: target
+    summary: 操作が適用される入力。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 条件付きで適用される操作の入力型。
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifc
+- microsoft.quantum.canon.applyifa
+- microsoft.quantum.canon.applyifca
+ms.openlocfilehash: c78136688111a71e6a9a58972c9b9bb71603e0cf
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213757"

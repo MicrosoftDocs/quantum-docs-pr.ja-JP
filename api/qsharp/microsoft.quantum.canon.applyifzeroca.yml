@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifzeroca
+name: ApplyIfZeroCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  古典的な結果値に対して条件付きの、ゼロを指定した、ユニタリ操作を適用します。
+
+
+  `op` 操作と結果値 `result`を指定した場合、`result` が `Zero`場合、は `target` に `op` を適用します。 `One`した場合、`target`には何も起こりません。
+
+  サフィックス `CA` は、適用される操作が、ユニタリ (制御可能および adjointable) であることを示します。
+syntax: "operation ApplyIfZeroCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
+  types:
+  - name: result
+    summary: Op が適用されるかどうかを制御する測定結果。
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: 条件付きで適用する操作。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: target
+    summary: 操作が適用される入力。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 条件付きで適用される操作の入力型。
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifzeroc
+- microsoft.quantum.canon.applyifzeroa
+- microsoft.quantum.canon.applyifzeroca
+ms.openlocfilehash: 9ec05f688c3895b2d68fc3f4717401e127fbe641
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213604"

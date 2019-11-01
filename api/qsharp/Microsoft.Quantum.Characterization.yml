@@ -1,0 +1,33 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.characterization
+name: Microsoft... 特性
+summary: " # <a name=\"summary\"></a>Summary\n この名前空間には、tomography やフェーズの推定など、クォンタムの状態とプロセスのプロパティを学習するための関数と操作が含まれています。"
+operations:
+- uid: microsoft.quantum.characterization.continuousphaseestimationiteration
+  summary: ユニタリ oracle の任意の真の累乗を使用して、反復 (クラシックデプロイ制御) フェーズの推定アルゴリズムの単一の反復処理を実行します。
+- uid: microsoft.quantum.characterization.discretephaseestimationiteration
+  summary: ユニタリ oracle の整数の累乗を使用して、反復 (クラシックデプロイ制御) フェーズの推定アルゴリズムの単一の反復処理を実行します。
+- uid: microsoft.quantum.characterization.estimatefrequency
+  summary: 準備と測定値を指定した場合は、指定された数の試行回数を実行することで、測定が成功する頻度を推定します (`Zero`を返します)。
+- uid: microsoft.quantum.characterization.estimatefrequencya
+  summary: Adjointable と測定値の準備を行うと、は、指定された数の試行回数を実行することで、測定が成功する頻度を推定します (`Zero`を返します)。
+- uid: microsoft.quantum.characterization.measureallz
+  summary: >-
+    によって、レジスタの qubits が Pに評価されます。
+
+
+    言い換えると、は、指定されたレジスタに対して操作を実行します。これには、Z ~ otimes/cドットの $Z が含まれます。
+- uid: microsoft.quantum.characterization.measureidentity
+  summary: Qubits のレジスタで id 演算子を測定します。
+- uid: microsoft.quantum.characterization.quantumphaseestimation
+  summary: 指定された oracle `U` と `targetState`に対してクォンタムフェーズ推定アルゴリズムを実行し、そのフェーズをビッグエンディアンクォンタムレジスタに読み取ります。
+- uid: microsoft.quantum.characterization.robustphaseestimation
+  summary: 指定された oracle `U` と eigenstate に対して、反復的ではない堅牢なクォンタムフェーズの推定アルゴリズムを実行し、ハイゼンベルグ limit での差異スケールを使用して、フェーズの1つの実際の予測値を提供します。
+- uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
+  summary: 特定の目的のチャネルを指定して、tomography の単一の qubit プロセス測定を実行します。
+ms.openlocfilehash: f6ca8c97c1e44950fb87da8ed7335c885cabc425
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056939"

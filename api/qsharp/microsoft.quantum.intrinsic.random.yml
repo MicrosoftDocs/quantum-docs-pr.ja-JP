@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.random
+name: Random
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  ランダム操作は、入力として double の配列を取得し、ランダムに選択されたインデックスを `Int`として配列に返します。
+
+  特定のインデックスを選択する確率は、そのインデックス位置にある配列要素の値に比例します。
+
+  0に等しい配列要素は無視され、インデックスは返されません。 配列要素が0未満の場合、または配列要素がゼロより大きい場合、操作は失敗します。
+syntax: 'operation Random (probs : Double[]) : Int'
+input:
+  content: '(probs : Double[])'
+  types:
+  - name: probs
+    summary: 各インデックスを選択する確率に比例した浮動小数点数の配列。
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Int
+  types:
+  - summary: $ $I 確率が $ \ Pr (i) = p_i/\sum_i p_i $ の整数を指定します。ここで $p _i $ は `probs`の $i $ th 要素です。
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: b2a5f6a0b1d2584e385bfa4de2b2c43fc1cf6509
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233936"

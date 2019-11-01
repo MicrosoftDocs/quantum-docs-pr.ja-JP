@@ -1,0 +1,69 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifelseb
+name: ApplyIfElseB
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  従来のビットの値に応じて、2つの操作のいずれかを適用します。
+
+
+  ビット `bit`が指定されている場合、`bit` を `true`するときに、入力として `trueInput` を持つ操作 `trueOp` を適用し、`falseOp(falseInput)` が `bit` されたときに `false`を適用します。
+syntax: "operation ApplyIfElseB (bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U => Unit), falseInput : 'U)) : Unit"
+input:
+  content: "(bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U => Unit), falseInput : 'U))"
+  types:
+  - name: bit
+    isPrimitive: true
+    uid: Bool
+  - name: trueOp
+    summary: '`bit` が `true`ときに適用される操作。'
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: trueInput
+    summary: '`bit` が `true`場合に `trueOp` に提供される入力。'
+    uid: "'T"
+    isLocal: true
+  - name: falseOp
+    summary: '`bit` が `false`ときに適用される操作。'
+    isOperation: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: falseInput
+    summary: '`bit` が `false`場合に `falseOp` に提供される入力。'
+    uid: "'U"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 条件付きで適用する操作 `trueOp` の入力型。
+- uid: "'U"
+  summary: 条件付きで適用する操作 `falseOp` の入力型。
+seeAlso:
+- microsoft.quantum.canon.applyifzero
+- microsoft.quantum.canon.applyifone
+- microsoft.quantum.canon.applyifelserc
+- microsoft.quantum.canon.applyifelsera
+- microsoft.quantum.canon.applyifelserca
+ms.openlocfilehash: 023608bfe390acff37363fde3dac71ab03eb3bb2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217480"

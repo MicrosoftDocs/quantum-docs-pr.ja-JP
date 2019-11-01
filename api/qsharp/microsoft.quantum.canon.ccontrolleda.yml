@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.ccontrolleda
+name: Ccontrol/
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  操作 op が指定された場合、は、従来の制御ビットが true の場合に op を適用する新しい操作を返します。 `false`した場合、何も起こりません。
+
+  修飾子 `A` は、操作が adjointable であることを示します。
+syntax: "function CControlledA (op : ('T => Unit is Adj)) : ((Bool, 'T) => Unit is Adj)"
+input:
+  content: '(op: (t = > 単位は形容詞)'
+  types:
+  - name: ファンド
+    summary: 条件付きで適用する操作。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: ((Bool, t) = > 単位は形容詞)
+  types:
+  - summary: 新しい操作。これは、クラシック制御ビットが true の場合の op です。
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Bool
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+typeParameters:
+- uid: "'T"
+  summary: 条件付きで適用される操作の入力型。
+seeAlso:
+- microsoft.quantum.canon.ccontrolled
+ms.openlocfilehash: e02446273f93b51a228679d3eb75bf16a2526e8a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068106"

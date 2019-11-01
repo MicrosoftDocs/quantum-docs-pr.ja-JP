@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.minusl
+name: MinusL
+type: function
+namespace: Microsoft.Quantum.Math
+summary: 2つの入力の差を返します。
+syntax: 'function MinusL (a : BigInt, b : BigInt) : BigInt'
+input:
+  content: '(a : BigInt, b : BigInt)'
+  types:
+  - name: a
+    summary: 1番目の入力 $a $ 減算されます。
+    isPrimitive: true
+    uid: BigInt
+  - name: b
+    summary: 2番目の入力 $b $ 減算されます。
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt
+  types:
+  - summary: $A-b $ との違いがあります。
+    isPrimitive: true
+    uid: BigInt
+ms.openlocfilehash: 00ca21accf35438953450410369837751266e9bf
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233766"
