@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.preparequbit
+name: PrepareQubit
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  指定された Pauli 演算子の + 1 (`Zero`) eigenstate で qubit を準備します。
+
+  Id 演算子が指定されている場合、qubit は下回っ mixed 状態で準備されます。
+
+
+  Qubit が最初に $ \ket{0}$ state 内にあった場合、この操作では、指定された P下回っ Li 演算子の $ + $1 eigenstate の qubit を準備するか、または、代わりに mixed 状態 (<xref:microsoft.quantum.preparation.preparesinglequbitidentity>を参照) で `PauliI`使用します。
+
+
+  Qubit が $ \ket{0}$ 以外の状態であった場合、この操作は次のゲートを適用します: $H $ for `PauliX`、$HS $ for `PauliY`、$I $ for `PauliZ`、<xref:microsoft.quantum.preparation.preparesinglequbitidentity> の `PauliI`。
+syntax: 'operation PrepareQubit (basis : Pauli, qubit : Qubit) : Unit'
+input:
+  content: '(basis : Pauli, qubit : Qubit)'
+  types:
+  - name: basis
+    summary: P$P Li 演算子は $ です。
+    isPrimitive: true
+    uid: Pauli
+  - name: qubit
+    summary: 準備する qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: be4eb730bebd00531aaa49302578b23f4a52237b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226541"

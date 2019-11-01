@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.mresetz
+name: MResetZ
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: '`Z` ベースの1つの qubit を測定し、測定値に従って標準の基本状態 | 0 〉にリセットします。'
+syntax: 'operation MResetZ (target : Qubit) : Result'
+input:
+  content: '(target : Qubit)'
+  types:
+  - name: target
+    summary: 測定される1つの qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: $Z $ ベースで `target` を測定した結果。
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: a0a07ec90e36b06640ff66340b7a3d979251b0ff
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231182"

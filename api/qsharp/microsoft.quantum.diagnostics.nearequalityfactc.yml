@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.nearequalityfactc
+name: NearEqualityFactC
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: 古典的な複素数の値が、最小許容範囲である 1e-10 になるようにアサートします。
+syntax: 'function NearEqualityFactC (actual : Microsoft.Quantum.Math.Complex, expected : Microsoft.Quantum.Math.Complex) : Unit'
+input:
+  content: '(actual : Microsoft.Quantum.Math.Complex, expected : Microsoft.Quantum.Math.Complex)'
+  types:
+  - name: actual
+    summary: 確認する数値。
+    uid: microsoft.quantum.math.complex
+  - name: expected
+    summary: 予期される値。
+    uid: microsoft.quantum.math.complex
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 38bad9b13e74ddaa816213b006566b35616ccbbb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230570"

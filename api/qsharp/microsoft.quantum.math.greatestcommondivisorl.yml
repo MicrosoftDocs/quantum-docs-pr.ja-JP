@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.greatestcommondivisorl
+name: GreatestCommonDivisorL
+type: function
+namespace: Microsoft.Quantum.Math
+summary: $A $ と $b $ の最大公約数を計算します。 GCD は常に正の数値です。
+syntax: 'function GreatestCommonDivisorL (a : BigInt, b : BigInt) : BigInt'
+input:
+  content: '(a : BigInt, b : BigInt)'
+  types:
+  - name: a
+    summary: 拡張された最も一般的な除数の計算対象となる最初の数値
+    isPrimitive: true
+    uid: BigInt
+  - name: b
+    summary: 拡張された最も一般的な除数が計算されている2番目の数値
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt
+  types:
+  - summary: $a $ と $b $ の最も一般的な除数
+    isPrimitive: true
+    uid: BigInt
+ms.openlocfilehash: 54808793900a2a4878c91a5b4f8810a9e289f945
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232814"

@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.assertprobint
+name: AssertProbInt
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  クォンタムレジスタの特定の状態の確率に予期される値があることをアサートします。
+
+
+  $N $-qubit クォンタムの状態が $ \ket{\psi} = \ sum ^ {2 ^ n-1} _ {j = 0} \alpha_j \ket{j} $ の場合、$j $ によってインデックスが作成された状態 $ \ket{j} $ の確率 $ | \alpha_j | ^ 2 $ が予期される値であることをアサートします。
+examples: >-
+  `qubits` レジスタが、リトルエンディアン形式で、3つの qubit クォンタム状態 $ \ket{\psi} = \ sqrt {1/8} \ k{0}+ \ sqrt {7/8} \ k{6}$ をエンコードするとします。
+
+  これは、番号が $ \ket{0}\equiv\ket{0}\ket{0}\ket{0}$ および $ \ket{6}\equiv\ket{0}\ket{1}\ket{1}$ であることを意味します。 その後、次のアサートは成功します。
+
+
+  - `AssertProbInt(0,0.125,qubits,10e-10);`
+
+  - `AssertProbInt(6,0.875,qubits,10e-10);`
+syntax: 'operation AssertProbInt (stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double) : Unit'
+input:
+  content: '(stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double)'
+  types:
+  - name: stateIndex
+    summary: '`LittleEndian` レジスタによって表される状態 $ \ket{j} $ の $j $ のインデックス。'
+    isPrimitive: true
+    uid: Int
+  - name: expected
+    summary: 予期される値 $ | \alpha_j | ^ 2 $。
+    isPrimitive: true
+    uid: Double
+  - name: qubits
+    summary: リトルエンディアン形式で $ \ket{\psi} $ を格納する qubit レジスタ。
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: tolerance
+    summary: 実際と予想される差に対する絶対許容値。
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 183f1252ba555c10e7011eea98a5cc98fae4495a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221441"

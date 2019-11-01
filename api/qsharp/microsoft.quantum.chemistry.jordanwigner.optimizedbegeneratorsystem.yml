@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
+name: OptimizedBEGeneratorSystem
+type: newtype
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: 1番目の `Int` に含まれる用語の数と、`Double`内のすべての項係数の絶対値の合計と共に、整数 `n`を指定して、`n` 用語の `OptimizedBETermIndex` データを返す関数。
+syntax: newtype OptimizedBEGeneratorSystem = (Int, Double, (Int -> Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex));
+ms.openlocfilehash: 4f3375a952bbd72331742d77c3a6e2a56b1814c8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228479"

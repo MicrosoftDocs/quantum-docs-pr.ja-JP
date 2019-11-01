@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.measureidentity
+name: MeasureIdentity
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Qubits のレジスタで id 演算子を測定します。
+remarks: >-
+  $/Bold が $ は eigenvalue $1 $ のみを持ち、負の eigenvalue を持たないため、この操作は常に eigenvalue $ + 1 = (-1) ^ 0 $ に対応する `Zero`を返し、`register`の状態が折りたたまれることはありません。
+
+
+  実際には、この操作は役に立ちませんが、プロセス tomography のコンテキストでは、クォンタムプロセスのトレース保持に関する情報を提供するので役立ちます。
+
+  特に、損失の多い測定値を持つターゲットコンピューターでは、この操作を実際の測定値 $/bold で置き換える必要があります。
+syntax: 'operation MeasureIdentity (register : Qubit[]) : Result'
+input:
+  content: '(register : Qubit[])'
+  types:
+  - name: register
+    summary: 測定するレジスタ。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: 結果の値 `Zero`。
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: fcfe08d4ae7a192074b90b7b45fffbcb5944e7ff
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229125"

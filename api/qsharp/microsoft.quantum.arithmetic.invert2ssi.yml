@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.invert2ssi
+name: Invert2sSI
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 指定された整数剰余2の補数を反転します。
+syntax: 'operation Invert2sSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
+  types:
+  - name: xs
+    summary: n ビット符号付き整数 (SignedLittleEndian) では、モジュロ2の補数が反転されます。
+    uid: microsoft.quantum.arithmetic.signedlittleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: a850f62055280d43b691d12ef5ab7ef6491d5efb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218857"
