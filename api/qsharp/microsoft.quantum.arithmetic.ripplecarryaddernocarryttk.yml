@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
+name: RippleCarryAdderNoCarryTTK
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 元に戻すことができ、インプレースリップは実行されずに2つの整数を追加します。LittleEndian レジスタ `xs` と `ys`でエンコードされた $n $ bit 整数が2つある場合、演算は2つの整数剰余 $ 2 ^ n $ の合計を計算します。ここで、$n $ は入力 `xs` と `ys`のビットサイズです。 実行ビットは計算されません。
+remarks: この操作には RippleCarryAdderTTK と同じ機能がありますが、キャリービットは返されません。
+syntax: 'operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+references: >-
+  - Yasuhiro Takahashi、Seiichiro Tani、Noboru Kunihiro: "クォンタムの追加回路と無制限のファンアウト"、クォンタムの情報と計算、Vol. 10、2010。
+    https://arxiv.org/abs/0910.2530
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: xs
+    summary: LittleEndian qubit レジスタは、最初の整数 summand をエンコードします。
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: LittleEndian qubit レジスタエンコーディング2番目の整数 summand は、合計の最下位のビット $n を保持するように変更されています。
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 9aa955764b16806df1ea6205b92483f4747463f5
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214522"

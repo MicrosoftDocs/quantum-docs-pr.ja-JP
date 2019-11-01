@@ -1,0 +1,45 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.bitwise
+name: Microsoft.Quantum.Bitwise
+functions:
+- uid: microsoft.quantum.bitwise.and
+  summary: >-
+    2つの整数のビットごとの AND を返します。
+
+    これにより、組み込みの `&&&` 演算子と同じ計算が実行されます。
+- uid: microsoft.quantum.bitwise.leftshiftedi
+  summary: 指定されたビット数だけ左にある数値のビットごとの表現をシフトします。
+- uid: microsoft.quantum.bitwise.leftshiftedl
+  summary: 指定されたビット数だけ左にある数値のビットごとの表現をシフトします。
+- uid: microsoft.quantum.bitwise.not
+  summary: >-
+    整数のビットごとの NOT を返します。
+
+    これにより、組み込みの `~~~` 演算子と同じ計算が実行されます。
+- uid: microsoft.quantum.bitwise.or
+  summary: >-
+    2つの整数のビットごとの OR を返します。
+
+    これにより、組み込みの `|||` 演算子と同じ計算が実行されます。
+- uid: microsoft.quantum.bitwise.parity
+  summary: 整数のビットごとのパリティを返します (そのバイナリ表現に奇数の数値が含まれている場合は1、それ以外の場合は 0)。
+- uid: microsoft.quantum.bitwise.rightshiftedi
+  summary: 数値のビットごとの表現を指定されたビット数だけ右にシフトします。
+- uid: microsoft.quantum.bitwise.rightshiftedl
+  summary: 数値のビットごとの表現を指定されたビット数だけ右にシフトします。
+- uid: microsoft.quantum.bitwise.xbits
+  summary: P# li 演算子の配列の X ビットを表す整数を返します。
+- uid: microsoft.quantum.bitwise.xor
+  summary: >-
+    2つの整数のビットごとの排他的 OR (XOR) を返します。
+
+    これにより、組み込みの `^^^` 演算子と同じ計算が実行されます。
+- uid: microsoft.quantum.bitwise.zbits
+  summary: P# li 演算子の配列の Z ビットを表す整数を返します。
+summary: " # <a name=\"summary\"></a>Summary\n この名前空間には、典型的なデータ型のビットごとの表現を操作するための関数が含まれています。"
+ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210952"

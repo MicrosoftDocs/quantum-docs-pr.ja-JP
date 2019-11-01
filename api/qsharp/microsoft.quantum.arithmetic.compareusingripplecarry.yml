@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.compareusingripplecarry
+name: CompareUsingRippleCarry
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  このユニタリは、2つの整数 `x` と `y` が等しいサイズの qubit レジスタに格納されているかどうかをテストします `x > y`を満たしています。 True の場合、1は出力 qubit に Xor ます。 それ以外の場合、0は出力 qubit に Xor されます。
+
+
+  言い換えると、このユニタリ $U $: $ $ \begin{align} U\ket {x} \ k {y} \ k {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)} です。
+
+  \end{align} $ $。
+syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
+references: '- 新しいクォンタム ripple は、Cuccaro、Draper、Samuel Kutin、David Petrie e を追加しています。これは、'
+input:
+  content: '(x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit)'
+  types:
+  - name: x
+    summary: Qubit レジスタの `LittleEndian` 形式で格納されている最初の数値。
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: y
+    summary: Qubit レジスタの `LittleEndian` 形式で格納されている2番目の数値。
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: output
+    summary: 比較 $x > y $ の結果を格納する qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: fa3db99da28f96e1cb42dd03e465440e015722fa
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221101"

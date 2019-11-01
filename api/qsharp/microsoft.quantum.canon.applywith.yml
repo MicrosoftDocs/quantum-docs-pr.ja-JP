@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applywith
+name: ApplyWith
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  2つの操作を指定した場合、1つは conjugated として適用されます。
+
+
+  指定された2つの操作は、それぞれが $U $ および $V $ という順序で記述されていますが、これらはシーケンス $U ^ {\ dagger} V U $ に適用されます。 つまり、この操作では、$V $ conjugated によって指定された、$U $ のユニタリ演算子が実装されます。
+remarks: 外部操作は常に adjointable と見なされますが、結合された操作を制御可能にするために制御する必要はありません。
+syntax: "operation ApplyWith (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit), target : 'T) : Unit"
+input:
+  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit), target : 'T)"
+  types:
+  - name: outerOperation
+    summary: $ $V を共役するために使用する必要がある操作 $U $。 外部操作 $U $ は adjointable である必要があることに注意してください。ただし、制御可能である必要はありません。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: innerOperation
+    summary: 操作 $V $ conjugated。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: target
+    summary: 外部操作と内部操作に提供する入力。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 内部および外部の各操作が動作するターゲット。
+seeAlso:
+- applywitha
+- applywithc
+- applywithca
+ms.openlocfilehash: 910ecee6febcea39c82b02a21ab9231a681a0a4a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212941"

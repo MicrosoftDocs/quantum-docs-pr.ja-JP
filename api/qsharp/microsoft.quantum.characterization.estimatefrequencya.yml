@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.estimatefrequencya
+name: EstimateFrequencyA
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Adjointable と測定値の準備を行うと、は、指定された数の試行回数を実行することで、測定が成功する頻度を推定します (`Zero`を返します)。
+remarks: Adjointable 操作の場合、操作の呼び出しなどの特定の仮定を行うと、qubits がまったく同じ状態になるように準備することができます。これにより、ターゲットマシンでパフォーマンスを最適化することができます。
+syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
+input:
+  content: '(preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
+  types:
+  - name: preparation
+    summary: 入力レジスタに指定された状態 $ \rho $ を準備する adjointable 操作 ($ $P)。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: measurement
+    summary: 対象の測定値を表す $ $M 演算。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Result
+  - name: nQubits
+    summary: 準備と測定がそれぞれ作用する qubits の数。
+    isPrimitive: true
+    uid: Int
+  - name: nMeasurements
+    summary: 対象の頻度を推定するために測定を実行する回数。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: $M (P (\ket{00/cドット 0} \bra{00/cドット 0})) $ が `Zero`返された推定 $ \hat{p} $ は、バイアスをかける二項分出し $ \hat{p} = n\_{\uparrow}/n\_{\text{measurements}} $ を使用して取得したものであり、$n\_{\uparrow} $ は、観測される `Zero` の結果の数です。
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229176"

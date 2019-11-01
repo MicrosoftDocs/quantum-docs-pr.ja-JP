@@ -1,0 +1,21 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.core
+name: Microsoft. Quantum. コア
+summary: " # <a name=\"summary\"></a>Summary\n この名前空間には、Q # コア関数と操作が含まれています。\n\n # <a name=\"remarks\"></a>解説\n この名前空間は、Q # コンパイラによって自動的に開かれるので、この名前空間のすべての要素を常に使用できます。"
+functions:
+- uid: microsoft.quantum.core.length
+  summary: 配列内の要素数を返します。
+- uid: microsoft.quantum.core.rangeend
+  summary: 指定された範囲の定義済みの終了値を返します。これは必ずしもシーケンスの最後の要素ではありません。
+- uid: microsoft.quantum.core.rangereverse
+  summary: 入力範囲の逆の新しい範囲を返します。
+- uid: microsoft.quantum.core.rangestart
+  summary: 指定された範囲の開始値を定義して返します。
+- uid: microsoft.quantum.core.rangestep
+  summary: 範囲の次の値を計算する方法を指定する整数を返します。
+ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056886"

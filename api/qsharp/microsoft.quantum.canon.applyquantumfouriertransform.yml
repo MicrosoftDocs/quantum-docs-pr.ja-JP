@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyquantumfouriertransform
+name: ApplyQuantumFourierTransform
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: リトルエンディアン表現内の整数を含むクォンタムレジスタに対して、Quantum フーリエ変換を実行します。
+remarks: 入力と出力は、リトルエンディアンエンコーディングであると見なされます。
+syntax: 'operation ApplyQuantumFourierTransform (qs : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(qs : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: qs
+    summary: クォンタムのフーリエ変換が適用されるクォンタムレジスタ
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- applyquantumfouriertransformbe
+ms.openlocfilehash: 7660a59dad4c90a6f6a0b5cc5c959a3e7a3d659f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217327"

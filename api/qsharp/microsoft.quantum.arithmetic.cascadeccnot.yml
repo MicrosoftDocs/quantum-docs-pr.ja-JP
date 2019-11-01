@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.cascadeccnot
+name: CascadeCCNOT
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  2つの qubit レジスタの対応するビットで制御される CCNOT ゲートのカスケードを実装します。これは、いずれかのレジスタの次の qubit で動作します。
+
+  両方のレジスタでコントロールとして位置0にある qubits から開始します。 CCNOT はターゲットレジスタの位置1の qubits に適用され、ターゲットレジスタの位置2の qubits に作用する位置1の qubits によって制御されます。位置 `Length(nQubits)-1`のターゲット qubit。
+remarks: ターゲットの qubit レジスタには、もう一方のレジスタよりも1つの qubit が必要です。
+syntax: 'operation CascadeCCNOT (register : Qubit[], targets : Qubit[]) : Unit'
+input:
+  content: '(register : Qubit[], targets : Qubit[])'
+  types:
+  - name: register
+    summary: Qubit レジスタ。コントロールにのみ使用されます。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targets
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 02ef9028070a0922b6644bf4cd20ef2f6ec9d04e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221322"

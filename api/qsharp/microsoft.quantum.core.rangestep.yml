@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangestep
+name: RangeStep
+type: function
+namespace: Microsoft.Quantum.Core
+summary: 範囲の次の値を計算する方法を指定する整数を返します。
+remarks: 範囲式の最初の要素が `start`、2番目の要素が `start+step`、3番目の要素が `start+step+step`など、`end` が渡されるまで続きます。
+syntax: 'function RangeStep (range : Range) : Int'
+input:
+  content: '(範囲: 範囲)'
+  types:
+  - name: range
+    isPrimitive: true
+    uid: Range
+output:
+  content: int
+  types:
+  - summary: 指定された範囲の定義されたステップ値。
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 0195f0f2eb03c163ae08cc789867627286a44097
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066610"

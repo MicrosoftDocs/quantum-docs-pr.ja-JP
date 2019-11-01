@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.multiplybymodularinteger
+name: MultiplyByModularInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Qubit レジスタで整数定数を使ってモジュール乗算を実行します。
+
+
+  剰余を N で、をによって指定した場合、この操作では、計算ベースで次のマップによって定義された周期を実装します。 | y ⟩↦ | a ⋅ y (mod N) ⟩ (0 から N-1 までのすべての y)
+remarks: >-
+  - 回路図と説明については、arXiv のページ8の図7を参照してください[: quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)
+
+  - この操作は Arxiv の U ₐに対応し[ます: quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
+syntax: 'operation MultiplyByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: constMultiplier
+    summary: 乗数を乗算する定数。 係数は連にする必要があります。
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    summary: 乗算演算が実行され `modulus`
+    isPrimitive: true
+    uid: Int
+  - name: multiplier
+    summary: >-
+      定数を乗算した数値。
+
+      これは、リトルエンディアンのビット順で整数を表す qubits の配列です。
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 4a99aff903b22ad4edcd96f2a980bd65c740025f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218755"

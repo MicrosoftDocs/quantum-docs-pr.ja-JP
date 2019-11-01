@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifzeroa
+name: ApplyIfZeroA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  従来の結果値が0である adjointable 操作を適用します。
+
+
+  `op` 操作と結果値 `result`を指定した場合、`result` が `Zero`場合、は `target` に `op` を適用します。 `One`した場合、`target`には何も起こりません。
+
+  サフィックス `A` は、適用される操作が adjointable であることを示します。
+syntax: "operation ApplyIfZeroA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit is Adj), target : 'T))"
+  types:
+  - name: result
+    summary: Op が適用されるかどうかを制御する測定結果。
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: 条件付きで適用する操作。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: target
+    summary: 操作が適用される入力。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 条件付きで適用される操作の入力型。
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applyifzeroc
+- microsoft.quantum.canon.applyifzeroa
+- microsoft.quantum.canon.applyifzeroca
+ms.openlocfilehash: 626bb5bbd18cceb409632ec0d27b48c6ea98fbbe
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220727"

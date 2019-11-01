@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.squaresi
+name: SquareSI
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 角かっこで囲まれた符号付き整数 `xs` し、結果を `result`に格納します。最初はゼロである必要があります。
+remarks: 実装は、整数の平方根に依存します。
+syntax: 'operation SquareSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
+  types:
+  - name: xs
+    summary: n ビット整数から二乗 (SignedLittleEndian)
+    uid: microsoft.quantum.arithmetic.signedlittleendian
+  - name: result
+    summary: 2n ビット結果 (SignedLittleEndian) は、初期状態では $ \ket{0}$ である必要があります。
+    uid: microsoft.quantum.arithmetic.signedlittleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 71a3ffc190540ccfb51eb81febdce6a943dc99fb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218415"

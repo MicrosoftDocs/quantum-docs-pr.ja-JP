@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.conditioned
+name: Conditioned
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: ブール条件の値に応じて、2つの値のいずれかを返します。
+remarks: >-
+  `?|` 演算子とは異なり、この関数はショートサーキットではなく、両方の入力が完全に評価されます。
+
+
+  ショートサーキットの動作は、次のようになります。
+
+
+  ```Q#
+
+  let x = condition ? ifTrue | ifFalse;
+
+  let x = Conditioned(condition, ifTrue, ifFalse);
+
+  ```
+syntax: "function Conditioned (condition : Bool, ifTrue : 'T, ifFalse : 'T) : 'T"
+input:
+  content: "(condition : Bool, ifTrue : 'T, ifFalse : 'T)"
+  types:
+  - name: condition
+    summary: 返される入力を制御するために使用される条件。
+    isPrimitive: true
+    uid: Bool
+  - name: ifTrue
+    summary: '`condition` が `true`場合に返される値。'
+    uid: "'T"
+    isLocal: true
+  - name: ifFalse
+    summary: '`condition` が `false`場合に返される値。'
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T"
+  types:
+  - summary: '`condition` が `true`場合は `ifTrue`、それ以外の場合は `ifFalse`。'
+    uid: "'T"
+    isLocal: true
+ms.openlocfilehash: f26e540b181ce405125dbf80cd97c3e177ad9531
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233341"

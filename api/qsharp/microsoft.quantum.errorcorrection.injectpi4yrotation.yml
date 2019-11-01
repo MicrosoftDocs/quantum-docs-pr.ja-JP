@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.injectpi4yrotation
+name: InjectPi4YRotation
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: >-
+  `Y`に対してπ/4 回転を実行します。
+
+
+  回転はマジック状態を使用して実行されます。つまり、$ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \ sin \frac{\pi}{8} \ket{1}の状態のコピーです。
+
+  \end{align} $ $
+remarks: >-
+  同等のものを次に示します。
+
+
+  ```qsharp
+
+  Ry(PI() / 4.0, data);
+
+  ```
+
+
+  および
+
+
+  ```qsharp
+
+  using (magic = Qubit()) {
+      Ry(PI() / 4.0, magic);
+      InjectPi4YRotation(data, magic);
+      Reset(magic);
+  }
+
+  ```
+
+
+  この操作では、`Adjoint` のファンクタがサポートされます。この場合、同じマジック状態が使用されますが、データ qubit への影響は $-\ pi/4 $ $Y $-rotation になります。
+syntax: 'operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit'
+input:
+  content: '(data : Qubit, magic : Qubit)'
+  types:
+  - name: data
+    summary: $Y $ ($ \ pi/$4) について回転する qubit。
+    isPrimitive: true
+    uid: Qubit
+  - name: magic
+    summary: マジック状態の最初の qubit。 この操作を適用した後、`magic` が $ \ket{0}$ state に返されます。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+ms.openlocfilehash: fa0b69740e94247aa9f31d03715464be1b29a0a6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211428"

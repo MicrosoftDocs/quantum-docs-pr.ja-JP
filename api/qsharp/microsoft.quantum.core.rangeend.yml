@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangeend
+name: RangeEnd
+type: function
+namespace: Microsoft.Quantum.Core
+summary: 指定された範囲の定義済みの終了値を返します。これは必ずしもシーケンスの最後の要素ではありません。
+remarks: >-
+  範囲式の最初の要素が `start`、2番目の要素が `start+step`、3番目の要素が `start+step+step`など、`end` が渡されるまで続きます。
+
+
+  範囲の定義済みの終了値は、範囲によって指定されたシーケンスの最後の要素と異なる場合があることに注意してください。たとえば、0 ~ の範囲で指定します。 2.. 5最後の要素は4ですが、終了値は5です。
+syntax: 'function RangeEnd (range : Range) : Int'
+input:
+  content: '(範囲: 範囲)'
+  types:
+  - name: range
+    isPrimitive: true
+    uid: Range
+output:
+  content: int
+  types:
+  - summary: 指定された範囲の定義済みの終了値。
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066644"

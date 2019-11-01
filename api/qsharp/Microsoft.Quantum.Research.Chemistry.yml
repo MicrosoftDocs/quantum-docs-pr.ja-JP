@@ -1,0 +1,23 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.research.chemistry
+name: Microsoft.Quantum.Research.Chemistry
+functions:
+- uid: microsoft.quantum.research.chemistry.jordanwigneroptimizedfermionevolutionset
+  summary: Dynamical generator を simulatable ゲートのセットとして表し、拡張を p にします。
+- uid: microsoft.quantum.research.chemistry.jwoptimizedfermionevolutionfunction
+  summary: Dynamical generator を simulatable ゲートと JWOptimized ベースの拡張のセットとして表します。
+- uid: microsoft.quantum.research.chemistry.jwoptimizedgeneratorsystem
+  summary: '`JWOptimizedHTerms` によって記述される Hamiltonian を、このファイルで定義されている `GeneratorIndex` 規約に従って表される `GeneratorSystem` に変換します。'
+- uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
+  summary: 最適化された Trotter step 操作と、それを実行するために必要なパラメーターを返します。
+operations:
+- uid: microsoft.quantum.research.chemistry.applydeltaparity
+  summary: 前の PQRS 間のパリティの差を計算します...用語と次の PQRS...句. この違いは補助 qubit で計算されます。
+- uid: microsoft.quantum.research.chemistry.jwoptimizedstatepreparation
+  summary: スピン orbitals を利用して、評価版の状態を簡単に準備
+ms.openlocfilehash: 8737229d1362a444f54d1a8d0791da9312923224
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215950"

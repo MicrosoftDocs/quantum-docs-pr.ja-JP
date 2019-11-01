@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.approximateqft
+name: ApproximateQFT
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: クォンタムレジスタにおおよそのクォンタムフーリエ変換 (アク FT) を適用します。
+remarks: >-
+  アク FT には、2π/2k と Hadamard ゲートの形式の Z 回転ゲートが必要です。
+
+
+  入力と出力は、ビッグエンディアンエンコーディングでエンコードされると想定されます。
+syntax: 'operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+references: >-
+  - [*M.、Beth*、Appl.exe、Commun のようになります。コンピューター.19 (3): 177-193 (2008)](http://doi.org/10.1007/s00200-008-0072-2)
+
+  - [*D. Coppersmith* arxiv: quant-ph/0201067v1](https://arxiv.org/abs/quant-ph/0201067)
+input:
+  content: '(a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian)'
+  types:
+  - name: a
+    summary: >-
+      QFT 回線で発生する制御された Z 回転を排除するレベルを決定する近似パラメーター。
+
+
+      近似パラメーター a は、Z 回転の排除レベルを決定します。つまり、∈ {0.. n} と Z 回転 2π/2k (k > a が QFT 回線から削除される) です。 K > = log ₂ (n) + log ₂ (1/ε) + 3 をバインドできることがわかっています。QFT-アク FT | |εを < します。
+    isPrimitive: true
+    uid: Int
+  - name: qs
+    summary: おおよそのクォンタムフーリエ変換が適用される n qubits のクォンタムレジスタ。
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6d650d4c1d80e747df7560c630543189513d252a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212533"

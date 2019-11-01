@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.addconstantfxp
+name: AddConstantFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: クォンタム固定小数点数に古典定数を追加します。
+syntax: 'operation AddConstantFxP (constant : Double, fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(constant : Double, fp : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: constant
+    summary: クォンタム固定小数点数に追加する定数。
+    isPrimitive: true
+    uid: Double
+  - name: fp
+    summary: 定数が加算される固定小数点数。
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 2707a711150913106dda0876e45a00f19259bdef
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215508"

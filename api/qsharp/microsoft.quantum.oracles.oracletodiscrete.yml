@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.oracletodiscrete
+name: OracleToDiscrete
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: "\"ブラックボックス\" oracle を表す操作が指定された場合、は、\"ブラックボックス\" の oracle が複数回繰り返されている不連続タイム oracle を返します。"
+examples: '`OracleToDiscrete(U)(3, target)` は、3回繰り返し `U(target)` に相当します。'
+syntax: 'function OracleToDiscrete (blackBoxOracle : (Qubit[] => Unit is Adj + Ctl)) : Microsoft.Quantum.Oracles.DiscreteOracle'
+input:
+  content: '(blackBoxOracle : (Qubit[] => Unit is Adj + Ctl))'
+  types:
+  - name: blackBoxOracle
+    summary: 累乗する操作。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+output:
+  content: Microsoft.Quantum.Oracles.DiscreteOracle
+  types:
+  - summary: "\"ブラックボックス\" oracle に部分的に適用された操作で、離散タイム oracle を表します。"
+    uid: microsoft.quantum.oracles.discreteoracle
+ms.openlocfilehash: e82c2f3a9d606b1e5316c45aaceeff702d067258
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230893"

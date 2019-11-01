@@ -1,0 +1,74 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bounda
+name: BoundA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  1つの入力に対して動作する操作の配列を指定すると、によって、指定された各操作を順番に実行する新しい操作が生成されます。
+
+  修飾子 `A` は、配列内のすべての操作が adjointable であることを示します。
+examples: >-
+  同等のものを次に示します。
+
+
+  ```qsharp
+
+  let bound = BoundA([U, V]);
+
+  bound(x);
+
+  ```
+
+
+  および
+
+
+  ```qsharp
+
+  U(x); V(x);
+
+  ```
+syntax: "function BoundA (operations : ('T => Unit is Adj)[]) : ('T => Unit is Adj)"
+input:
+  content: "(operations : ('T => Unit is Adj)[])"
+  types:
+  - name: operations
+    summary: 指定された入力に対して実行される一連の操作。
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: ('T => Unit is Adj)
+  types:
+  - summary: 入力に基づいて指定された各操作を順番に実行する新しい操作。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+typeParameters:
+- uid: "'T"
+  summary: 配列内の各操作が動作するターゲット。
+seeAlso:
+- microsoft.quantum.canon.bound
+ms.openlocfilehash: a4707b75fdedf6612343690f0b42368fe0979ead
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220625"

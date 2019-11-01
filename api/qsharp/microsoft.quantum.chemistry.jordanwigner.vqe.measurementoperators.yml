@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.measurementoperators
+name: MeasurementOperators
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: ヨルダンという用語の予測を計算するために必要なすべての測定演算子を計算します。
+syntax: 'function MeasurementOperators (nQubits : Int, indices : Int[], termType : Int) : Pauli[][]'
+input:
+  content: '(nQubits : Int, indices : Int[], termType : Int)'
+  types:
+  - name: nQubits
+    summary: 分子システムをシミュレートするために必要な qubits の数。
+    isPrimitive: true
+    uid: Int
+  - name: indices
+    summary: 各 P# li 演算子が適用される qubit のインデックスを格納している配列。
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: termType
+    summary: ヨルダン-Wigner 用語の種類。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Pauli[][]
+  types:
+  - summary: 測定演算子の配列 (それぞれが Pan Li の配列)。
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+ms.openlocfilehash: e22af035b43d8b3ebeea22c8c4bfa0f7289ab82c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227527"

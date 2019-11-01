@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
+name: AmpAmpByOraclePhases
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: 部分的な反射のための oracles による振幅増幅。
+remarks: >-
+  これにより、`AmpAmpByReflectionPhases`よりも、開始状態とターゲット状態の形式に対してより厳密な条件が課されます。
+
+  ターゲットの状態が $ \ket{1}\_f $ によってマークされていることを前提としています。
+
+  \Begin{align} A\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ text {target}}\_s + \sqrt{1-| \ ラムダ | ^ 2} \ket{0}\_fcドットであると想定されています。ほとんどの場合、`flagQubit` と `ancillaRegister` は、$ \ket{0}\_{f} \ket{0}\_s $ という状態で初期化されます。
+syntax: 'function AmpAmpByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
+input:
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
+  types:
+  - name: phases
+    summary: 部分的な反射のフェーズ
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+  - name: stateOracle
+    summary: 開始状態を準備する oracle $A $ のユニタリ
+    uid: microsoft.quantum.oracles.stateoracle
+  - name: idxFlagQubit
+    summary: フラグ qubit へのインデックス
+    isPrimitive: true
+    uid: Int
+output:
+  content: (Qubit[] => Unit is Adj + Ctl)
+  types:
+  - summary: 部分的な反射によって実装される、oracles による振幅増幅を実装する操作。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: cacd3b34fae01697ee5bba414d9a7422b3260e2f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215831"

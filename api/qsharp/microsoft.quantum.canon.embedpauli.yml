@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.embedpauli
+name: EmbedPauli
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Single qubit の P# li 演算子と qubit のインデックスを指定した場合、は、そのインデックス位置にある指定された single qubit 演算子を持つマルチ qubit の P# li 演算子を返し、他のすべてのインデックスで `PauliI` します。
+examples: >-
+  配列 `[PauliI, PauliI, PauliX, PauliI]`を取得するには、次のようにします。
+
+
+  ```qsharp
+
+  EmbedPauli(PauliX, 2, 3);
+
+  ```
+syntax: 'function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]'
+input:
+  content: '(pauli : Pauli, location : Int, n : Int)'
+  types:
+  - name: pauli
+    summary: 指定された場所に配置される単一の qubit の P# li 演算子。
+    isPrimitive: true
+    uid: Pauli
+  - name: location
+    summary: '`output[location] == pauli`する (`output` がこの関数の出力である) インデックス。'
+    isPrimitive: true
+    uid: Int
+  - name: n
+    summary: 返される配列の長さ。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Pauli[]
+  types:
+  - isArray: true
+    isPrimitive: true
+    uid: Pauli
+ms.openlocfilehash: 1e852781f6dd85e5432f5613184f028db0e84b87
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219384"

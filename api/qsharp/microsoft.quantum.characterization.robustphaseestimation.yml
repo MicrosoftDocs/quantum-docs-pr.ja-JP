@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.robustphaseestimation
+name: RobustPhaseEstimation
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: 指定された oracle `U` と eigenstate に対して、反復的ではない堅牢なクォンタムフェーズの推定アルゴリズムを実行し、ハイゼンベルグ limit での差異スケールを使用して、フェーズの1つの実際の予測値を提供します。
+remarks: クエリ数が多い場合、$/phi $ を満たす推定の標準偏差の下限を Cramer します。この値を超えると、$/シグマが使用されます (クエリ数 {#)。
+syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double'
+references: '- 堅牢なフェーズ推定 Shelby Kimmel、Guang Hao Low、Theodore J https://arxiv.org/abs/1502.02677 氏による、ユニバーサルシングル Qubit ゲートセットの堅牢な調整'
+input:
+  content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[])'
+  types:
+  - name: bitsPrecision
+    summary: これにより、$-シグマ/le 10.7 \ pi/\ text{# of queries} $ のような多数のクエリを使用して、標準偏差 $/シグマ/le 2 \ pi/2 ^ \text{bitsPrecision} $ の推定値が $/phi $ になります。
+    isPrimitive: true
+    uid: Int
+  - name: oracle
+    summary: 指定された整数に $U ^ m $ を実装する操作では $m $ が使用されます。
+    uid: microsoft.quantum.oracles.discreteoracle
+  - name: targetState
+    summary: $ Act を $U するクォンタムレジスタ。 Eigenstate $ \ket{\phi} $ of $U $ が格納されている場合は $U、$ \phi\in (-\ pi,-pi) $ の \ket{\phi} = e ^ {i} \ket{\phi} $ が不明なフェーズになります。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 169a828036fbe84f49e5d87399319d14a9584051
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229057"

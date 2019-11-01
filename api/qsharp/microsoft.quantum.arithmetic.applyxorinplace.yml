@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applyxorinplace
+name: ApplyXorInPlace
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  整数内の1ビットに基づいて、リトルエンディアンレジスタの qubits に `X` 操作を適用します。
+
+
+  によって `value` を示し、y が `target`でエンコードされた符号なし整数であることを示し、`InPlaceXorLE` は $ \ket{y}\rightarrow \ket{y\oplus a} $ というマップによって指定された操作を実行します。 $ \ oplus $ はビットごとの排他的 OR 演算子です。
+syntax: 'operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: value
+    summary: 負でないと見なされる整数。
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: リトルエンディアンエンコーディングで `value` を格納するために使用されるクォンタムレジスタ。
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: b37de7ed7e838089fe0c3bce00c8a0e9b222c43f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221645"

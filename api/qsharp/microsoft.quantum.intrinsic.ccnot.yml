@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.ccnot
+name: CCNOT
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: ダブル制御された (CCNOT) ゲートを3つの qubits に適用します。
+remarks: >-
+  次と同じです。
+
+
+  ```qsharp
+
+  Controlled X([control1, control2], target);
+
+  ```
+syntax: 'operation CCNOT (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
+input:
+  content: '(control1: Qubit、control2: Qubit、target: Qubit)'
+  types:
+  - name: control1
+    summary: CCNOT gate の最初の制御 qubit。
+    isPrimitive: true
+    uid: Qubit
+  - name: control2
+    summary: CCNOT gate の2番目のコントロール qubit。
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: CCNOT gate のターゲット qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: 単位
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: cf3731ba41dde045fb5b7509d7d33801f8e3cee6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067358"

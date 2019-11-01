@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.functionasoperation
+name: FunctionAsOperation
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: >-
+  関数を操作に変換します。
+
+
+  関数を指定した場合、その関数を呼び出す操作を返します。それ以外は何も行いません。
+remarks: これは主に、操作を入力として受け取る関数または操作に関数を渡す場合に便利です。
+syntax: "function FunctionAsOperation (fn : ('Input -> 'Output)) : ('Input => 'Output)"
+input:
+  content: "(fn : ('Input -> 'Output))"
+  types:
+  - name: fn
+    summary: 操作に変換される関数。
+    isFunction: true
+    input:
+      types:
+      - uid: "'Input"
+        isLocal: true
+    output:
+      types:
+      - uid: "'Output"
+        isLocal: true
+output:
+  content: ('Input => 'Output)
+  types:
+  - summary: '`op(input)` がすべての `input`の `fn(input)` と同一であることを `op` 操作。'
+    isOperation: true
+    input:
+      types:
+      - uid: "'Input"
+        isLocal: true
+    output:
+      types:
+      - uid: "'Output"
+        isLocal: true
+typeParameters:
+- uid: "'Input"
+  summary: 変換する関数の入力型。
+- uid: "'Output"
+  summary: 変換する関数の出力の種類。
+ms.openlocfilehash: a58e2fc4f9c8f931b4020cb06abebdd94c642bd9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220387"

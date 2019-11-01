@@ -1,0 +1,75 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifelseba
+name: ApplyIfElseBA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  従来のビットの値に応じて、2つの adjointable 操作のいずれかを適用します。
+
+
+  ビット `bit`が指定されている場合、`bit` を `true`するときに、入力として `trueInput` を持つ操作 `trueOp` を適用し、`falseOp(falseInput)` が `bit` されたときに `false`を適用します。
+syntax: "operation ApplyIfElseBA (bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U)) : Unit"
+input:
+  content: "(bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U))"
+  types:
+  - name: bit
+    isPrimitive: true
+    uid: Bool
+  - name: trueOp
+    summary: '`bit` が `true`ときに適用される adjointable 操作。'
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: trueInput
+    summary: '`bit` が `true`場合に `trueOp` に提供される入力。'
+    uid: "'T"
+    isLocal: true
+  - name: falseOp
+    summary: '`bit` が `false`ときに適用される adjointable 操作。'
+    isOperation: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: falseInput
+    summary: '`bit` が `false`場合に `falseOp` に提供される入力。'
+    uid: "'U"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 条件付きで適用する操作 `trueOp` の入力型。
+- uid: "'U"
+  summary: 条件付きで適用する操作 `falseOp` の入力型。
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applyifzero
+- microsoft.quantum.canon.applyifone
+- microsoft.quantum.canon.applyifelserc
+- microsoft.quantum.canon.applyifelsera
+- microsoft.quantum.canon.applyifelserca
+ms.openlocfilehash: bcc8b1e13b653c5bb778a923b16b2f6928dedb86
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213927"

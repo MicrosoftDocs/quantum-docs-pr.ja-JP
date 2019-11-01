@@ -1,0 +1,72 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.transformedoperationca
+name: TransformedOperationCA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: 関数と操作が指定された場合、指定された関数によって入力が変換される新しい操作を返します。
+examples: >-
+  次の呼び出しでは、@"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" を使用して、@"Microsoft.Quantum.Arithmetic.BigEndian" 入力用に設計された操作を @"Microsoft.Quantum.Arithmetic.LittleEndian"型の入力を受け入れる操作に変換します。
+
+
+  ```qsharp
+
+  let leOp = TransformedOperation(LittleEndianAsBigEndian, ApplyXorInPlaceBE);
+
+  ```
+syntax: "function TransformedOperationCA (fn : ('U -> 'T), op : ('T => Unit is Adj + Ctl)) : ('U => Unit is Adj + Ctl)"
+input:
+  content: "(fn : ('U -> 'T), op : ('T => Unit is Adj + Ctl))"
+  types:
+  - name: fn
+    summary: 指定された入力を操作によって予期される形式に変換する関数。
+    isFunction: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - uid: "'T"
+        isLocal: true
+  - name: op
+    summary: 変換する操作。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+output:
+  content: ('U => Unit is Adj + Ctl)
+  types:
+  - summary: 新しい操作 tbat は、入力と共に `fn` を呼び出し、その結果の出力を `op`に渡します。
+    isOperation: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+seeAlso:
+- transformedoperation
+- transformedoperationa
+- transformedoperationca
+- applywithinputtransformation
+- compose
+ms.openlocfilehash: 4383a28fa6cae8e36438b6c4ba8262f60edbf025
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217038"

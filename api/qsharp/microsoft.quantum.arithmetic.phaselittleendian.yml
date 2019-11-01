@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.phaselittleendian
+name: PhaseLittleEndian
+type: newtype
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  QFT のリトルエンディアン符号なし整数。
+
+
+  たとえば、$ \ket{x} $ が計算のために $ $x 整数のリトルエンディアンエンコーディングである場合、$ \ket{x} $ は QFT の $x $ のエンコーディングとして使用されます。
+remarks: ドキュメントの `PhaseLE` として、`PhaseLittleEndian` を省略します。
+syntax: newtype PhaseLittleEndian = Qubit[];
+seeAlso:
+- qft
+- qftle
+ms.openlocfilehash: 8efb8b58ff7ee5c0530abfb81792366f6990997e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218721"

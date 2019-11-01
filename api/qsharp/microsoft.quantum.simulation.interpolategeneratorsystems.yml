@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.interpolategeneratorsystems
+name: InterpolateGeneratorSystems
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: 2つの `GeneratorSystem`間の線形補間を表す `TimeDependentGeneratorSystem` を返します。
+syntax: 'function InterpolateGeneratorSystems (generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem'
+input:
+  content: '(generatorSystemStart: GeneratorSystem, generatorSystemEnd: GeneratorSystem) を実行しています。'
+  types:
+  - name: generatorSystemStart
+    summary: 開始 `GeneratorSystem`。
+    uid: microsoft.quantum.simulation.generatorsystem
+  - name: generatorSystemEnd
+    summary: 終了 `GeneratorSystem`。
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: TimeDependentGeneratorSystem です。
+  types:
+  - summary: 入力ジェネレーターシステムの合計であるシステムを表す `TimeDependentGeneratorSystem`。 `generatorSystemStart` は weight $ (1-s) $ on、`generatorSystemEnd`では weight $s $ です。
+    uid: microsoft.quantum.simulation.timedependentgeneratorsystem
+seeAlso:
+- microsoft.quantum.canon.generatorsystem
+- microsoft.quantum.canon.timedependentgeneratorsystem
+ms.openlocfilehash: ac01ddee211ddf2ad741b611707aa6e5e6ea70f9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065522"

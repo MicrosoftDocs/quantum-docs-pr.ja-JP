@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
+name: MultiplyAndAddByModularInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Qubit レジスタに対して、モジュールの乗算および加算による整数定数を実行します。
+
+
+  指定された剰余 $N $、定数乗数 $a $、\ket{b $y $ に対して、map $ $ \begin{align} \ket{x} \ket{b}/map\end{align} {\ket{x}} N} summand $ $ を実装します。
+remarks: >-
+  - 回路図と説明については、arXiv のページ7の図6を参照してください[: quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=7)
+
+  - この操作は[Arxiv: quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)の CMULT (a) MOD (N) に対応します。
+syntax: 'operation MultiplyAndAddByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: constMultiplier
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    summary: に関して、加算と乗算が行われる剰余 $N $。
+    isPrimitive: true
+    uid: Int
+  - name: multiplier
+    summary: '`summand`の各基準状態ラベルに値を追加する符号なし整数を表すクォンタムレジスタ。'
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: summand
+    summary: この操作のターゲットとして使用する符号なし整数を表すクォンタムレジスタ。
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6f445f584af1c05266be8e68a4298d73376cda27
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218772"

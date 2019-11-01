@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.boolarrayasbigint
+name: BoolArrayAsBigInt
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: >-
+  指定したブール値の配列を等価の大きい整数に変換します。
+
+  配列の0要素は、大きい整数の最下位ビットです。
+remarks: 詳細については、「 [ C# BigInteger コンストラクター](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) 」を参照してください。
+syntax: 'function BoolArrayAsBigInt (a : Bool[]) : BigInt'
+input:
+  content: '(a : Bool[])'
+  types:
+  - name: a
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+output:
+  content: BigInt
+  types:
+  - isPrimitive: true
+    uid: BigInt
+ms.openlocfilehash: 40a263976361a3322142d17213c28b2b8ec7d81d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227476"

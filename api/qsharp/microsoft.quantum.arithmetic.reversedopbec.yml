@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.reversedopbec
+name: ReversedOpBEC
+type: function
+namespace: Microsoft.Quantum.Arithmetic
+summary: ビッグエンディアン入力を受け取る操作が指定された場合、は、リトルエンディアン入力を受け取る新しい操作を返します。
+syntax: 'function ReversedOpBEC (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl)) : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Ctl)'
+input:
+  content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl))'
+  types:
+  - name: op
+    summary: 入力を元に戻す操作。
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.bigendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+output:
+  content: (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Ctl)
+  types:
+  - summary: 入力をリトルエンディアンレジスタとして受け入れる新しい操作。
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+seeAlso:
+- applyreversedopbec
+- reversedopbe
+- reversedopbea
+- reversedopbeca
+ms.openlocfilehash: bf9b4e26fc3a11bd9d68f6b49117ebdb8eecc66f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218670"

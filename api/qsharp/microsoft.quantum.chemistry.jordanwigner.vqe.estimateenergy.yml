@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimateenergy
+name: EstimateEnergy
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: >-
+  個々のヨルダン条件によって得たエネルギーを合計することによって、分子のエネルギーを見積もります。
+
+
+  この操作は、スピンアップダウンインデックス作成規則に暗黙的に依存します。
+syntax: 'operation EstimateEnergy (jwHamiltonian : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, nSamples : Int) : Double'
+input:
+  content: '(jwHamiltonian : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, nSamples : Int)'
+  types:
+  - name: jwHamiltonian
+    summary: ヨルダン-Wigner。
+    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
+  - name: nSamples
+    summary: 期待される用語の推定に使用するサンプルの数。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: 分子の予測エネルギー
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 057a695c6206679ec5aad4c8ee8f2bb8e5ffbbd3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73225028"

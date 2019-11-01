@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
+name: MultiplexOperationsFromGenerator
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  N-qubit number 状態 $ \ket{j} $ によって制御される場合に、$V j $ に対して、多重制御された $U $ に適用します。
+
+
+  $U = \ sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
+remarks: $ 2 ^ n $ 未満の値が指定されている場合、`coefficients` には id 要素が埋め込まれます。 この実装では、$n-$1 補助 qubits を使用します。
+syntax: "operation MultiplexOperationsFromGenerator (unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
+references: '- [*Andrew m. Childs、Dmitri Maslov、Yunseong、Neil、Ross、人民 Su*、arxiv: 1711.10980](https://arxiv.org/abs/1711.10980)'
+input:
+  content: "(unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
+  types:
+  - name: unitaryGenerator
+    summary: 1番目の要素 `Int` が $ $N $ にあり、2番目の要素が $ [0, N-1] $ の $ $j 整数を取得 $V して、`(Int -> ('T => () is Adj + Ctl))` のを含む関数であるタプル。
+    types:
+    - isPrimitive: true
+      uid: Int
+    - isFunction: true
+      input:
+        types:
+        - isPrimitive: true
+          uid: Int
+      output:
+        types:
+        - isOperation: true
+          input:
+            types:
+            - uid: "'T"
+              isLocal: true
+          output:
+            types:
+            - isPrimitive: true
+              uid: Unit
+          functors:
+          - Adjoint
+          - Controlled
+  - name: index
+    summary: 数値の状態をリトルエンディアン形式でエンコードする $-qubit コントロールレジスタ $n ます。
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: target
+    summary: $V j $ が動作する汎用 qubit レジスタ。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 54c0db61b5e18c7a598b6c8ec930f2851ba608f2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227782"

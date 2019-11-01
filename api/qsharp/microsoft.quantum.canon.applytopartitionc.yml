@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytopartitionc
+name: ApplyToPartitionC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  レジスタの特定のパーティションに2つの操作を適用して、2つの部分に分割します。
+
+  修飾子 `C` は、操作が制御可能であることを示します。
+syntax: 'operation ApplyToPartitionC (op : ((Qubit[], Qubit[]) => Unit is Ctl), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit'
+input:
+  content: '(op : ((Qubit[], Qubit[]) => Unit is Ctl), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
+  types:
+  - name: op
+    summary: 指定されたパーティションに適用される操作のペア。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: numberOfQubitsToFirstArgument
+    summary: >-
+      パーティションの最初の部分に入れるターゲットからの qubits の数。
+
+      残りの qubits は、パーティションの2番目の部分を構成します。
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: 指定された2つの操作によってパーティション分割および操作されている qubits のレジスタ。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applytopartition
+ms.openlocfilehash: c63a98dd508b1a987e4b82c6e5e136d02162fb97
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213026"

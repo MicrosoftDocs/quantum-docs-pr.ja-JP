@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.encodeintobitflipcode
+name: EncodeIntoBitFlipCode
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: '[3, 1, 3]/⟦ 3, 1, 1 ⟧ビットフリップコードにエンコードされます。'
+syntax: 'operation EncodeIntoBitFlipCode (physRegister : Qubit[], auxQubits : Qubit[]) : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
+input:
+  content: '(physRegister : Qubit[], auxQubits : Qubit[])'
+  types:
+  - name: physRegister
+    summary: 保護されるデータを表す物理 qubits のレジスタ。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: auxQubits
+    summary: 保護されるデータのエンコードに使用される $ \ket{00}$ state の最初の補助 qubits のレジスタ。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Microsoft.Quantum.ErrorCorrection.LogicalRegister
+  types:
+  - summary: エンコーディングで使用される物理および補助 qubits。論理レジスタとして表されます。
+    uid: microsoft.quantum.errorcorrection.logicalregister
+seeAlso:
+- logicalregister
+ms.openlocfilehash: 3890f4eebb70ea38fd23ffbe2b7b7eadf9e41d7b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234582"

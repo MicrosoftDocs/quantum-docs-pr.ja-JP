@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.resultarrayasboolarray
+name: ResultArrayAsBoolArray
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: '`Result[]` 型を `Bool[]` 型に変換します。 `One` は `true` にマップされ、`Zero` は `false`にマップされます。'
+syntax: 'function ResultArrayAsBoolArray (input : Result[]) : Bool[]'
+input:
+  content: '(input : Result[])'
+  types:
+  - name: input
+    summary: 変換する `Result[]`。
+    isArray: true
+    isPrimitive: true
+    uid: Result
+output:
+  content: Bool[]
+  types:
+  - summary: '`input`を表す `Bool[]`。'
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: d2ccd4c2b8f1b3e67050f7ebb0756def5bea3b07
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230740"

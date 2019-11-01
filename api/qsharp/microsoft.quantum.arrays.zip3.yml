@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.zip3
+name: Zip3
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 3つの配列を指定すると、3組の新しい配列が返されます。これにより、各3組には各元の配列の要素が含まれます。
+syntax: "function Zip3 (first : 'T1[], second : 'T2[], third : 'T3[]) : ('T1, 'T2, 'T3)[]"
+input:
+  content: "(first : 'T1[], second : 'T2[], third : 'T3[])"
+  types:
+  - name: first
+    summary: 各組の最初の要素の値を格納している配列。
+    isArray: true
+    uid: "'T1"
+    isLocal: true
+  - name: second
+    summary: 各組の2番目の要素の値を格納している配列。
+    isArray: true
+    uid: "'T2"
+    isLocal: true
+  - name: third
+    summary: 各組の3番目の要素の値を格納している配列。
+    isArray: true
+    uid: "'T3"
+    isLocal: true
+output:
+  content: ('T1, 'T2, 'T3)[]
+  types:
+  - summary: 各 `idx`のフォーム `(first[idx], second[idx], third[idx])` 3 つの組を格納している配列。 3つの配列の長さが等しくない場合、出力は入力の短い方の長さになります。
+    isArray: true
+    types:
+    - uid: "'T1"
+      isLocal: true
+    - uid: "'T2"
+      isLocal: true
+    - uid: "'T3"
+      isLocal: true
+typeParameters:
+- uid: "'T1"
+  summary: 最初の配列要素の型。
+- uid: "'T2"
+  summary: 2番目の配列要素の型。
+- uid: "'T3"
+  summary: 3番目の配列要素の型。
+seeAlso:
+- zip
+- zip4
+ms.openlocfilehash: 1a4f3a533178e089d975d5a510d202afe004d999
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214182"

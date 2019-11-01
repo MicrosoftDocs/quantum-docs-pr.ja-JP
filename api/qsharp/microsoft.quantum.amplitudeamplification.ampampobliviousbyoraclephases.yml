@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyoraclephases
+name: AmpAmpObliviousByOraclePhases
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: 部分的な反射のために oracles による振幅増幅を無関係します。
+remarks: >-
+  これにより、`AmpAmpObliviousByReflectionPhases`ではなく、ancilla の開始状態とターゲット状態の形式に対してより厳しい条件が課されます。
+
+  $A \ket{0}\_f\ket{0}\_A = \ket{\text{start}}\_{fa} $ は、計算基準 $ \ket{\text{start}}\_{0}\ket から ancilla start state $ f\ket \_{fa} $ を準備することを前提としています{0}$。
+
+  ターゲットの状態が $ \ket{1}\_f $ によってマークされていることを前提としています。
+
+  \Begin{align} O\ket {\ text {start}}\_{fa} \ket{\psi}\_s = \lambda\ket{1}\_f\ket {\ text {すべて}}\_a\ket {\ text {target}}\_s U \ket{\psi}\_s + \sqrt{1-| \ lambda | ^ 2} \ket と想定されています。{0}\_\end{align}、一部のユニタリ $U $ の場合は、
+syntax: 'function AmpAmpObliviousByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
+input:
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
+  types:
+  - name: phases
+    summary: 部分的な反射のフェーズ
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+  - name: ancillaOracle
+    summary: Ancilla の開始状態を準備する oracle $A $ のユニタリ
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+  - name: signalOracle
+    summary: Ancilla とシステムレジスタに共同で動作する `ObliviousOracle` 型の、oracle $O $ のユニタリ
+    uid: microsoft.quantum.oracles.obliviousoracle
+  - name: idxFlagQubit
+    summary: シングル qubit フラグ登録のインデックス
+    isPrimitive: true
+    uid: Int
+output:
+  content: ((Qubit[], Qubit[]) => Unit is Adj + Ctl)
+  types:
+  - summary: 部分的な反射に基づいて無関係の振幅増幅を実装する操作。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: ff75e09bf106ccc351aa9c6fa1b6bc6ee776ffad
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215763"

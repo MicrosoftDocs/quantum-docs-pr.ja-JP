@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.blockencodingreflectionbylcu
+name: BlockEncodingReflectionByLCU
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  対象の演算子を `BlockEncodingReflection`にエンコードします。
+
+
+  これにより、一部の $H 演算子をエンコードする `BlockEncodingReflection` の $U = pcdot V\ cdot P ^/ダガー $ が構築されます。U_j $ の関心は、unitaries います。 通常、$P $ は、$P \ket{0}\_U_ {\ alpha_j/\|-vec\ket{j}\|\_2}\_$、および $V = \sum_{j}\ket{j}\bra{j}\_a/otimes という状態の準備を行うためのものです。j $。
+remarks: この `BlockEncoding` 実装は、`BlockEncodingReflection`のプロパティを提供します。
+syntax: 'function BlockEncodingReflectionByLCU (statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
+input:
+  content: '(statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl))'
+  types:
+  - name: statePreparation
+    summary: いくつかのターゲット状態を準備する、$P の1つのユニタリ。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: selector
+    summary: $H $ のコンポーネント unitaries エンコードする、$V の $。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+output:
+  content: Microsoft.Quantum.Simulation.BlockEncodingReflection
+  types:
+  - summary: レジスタに対して共同で動作する $U $ の `a` と `s` は $H $ をブロックエンコードし、$U ' ^{-1} = U $ を満たすことができます。
+    uid: microsoft.quantum.simulation.blockencodingreflection
+seeAlso:
+- microsoft.quantum.canon.blockencoding
+- microsoft.quantum.canon.blockencodingreflection
+ms.openlocfilehash: a092068a61d860074ace150b0c7872eb064a63b9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219163"

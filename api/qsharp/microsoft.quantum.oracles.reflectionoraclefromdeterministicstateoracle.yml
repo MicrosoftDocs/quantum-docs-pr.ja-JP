@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
+name: ReflectionOracleFromDeterministicStateOracle
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Oracle から特定の状態に関するリフレクションを構築します。
+
+
+  型が <xref:microsoft.quantum.oracles.deterministicstateoracle>の oracle $O $ を指定した場合、この関数の結果は、$O \ket{0} = \ket{\psi} $ という州 $ \ket{\psi} $ の周りのリフレクションになります。
+syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
+input:
+  content: '(oracle: Oracles. DeterministicStateOracle)'
+  types:
+  - name: Oracle11i
+    summary: "\"DeterministicStateOracle\" 型の Oracle"
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+output:
+  content: Oracles. ReflectionOracle
+  types:
+  - summary: 状態 $ \ket{\psi} $ を反映する `ReflectionOracle`。
+    uid: microsoft.quantum.oracles.reflectionoracle
+seeAlso:
+- deterministicstateoracle
+- reflectionoracle
+ms.openlocfilehash: c48c9259b4b3c122a8d7551db6d326ea523dd2a0
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73050328"

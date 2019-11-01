@@ -1,0 +1,88 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
+name: AssertQubitIsInStateWithinTolerance
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: >-
+  予期される状態の qubit をアサートします。
+
+
+  `expected` は、$ \ket{\psi} = \begin{bmatrix}a & B\mathrm{T}} $ という複雑なベクトルを表します。
+
+  各 $a $、$b $ を表す組の最初の要素は複素数の実数部ですが、2番目の要素は虚数部です。
+
+  最後の引数は、アサーションが行われる許容範囲を定義します。
+remarks: >-
+  次の Mathematica コードは、mi、mx、my、mz の式を検証するために使用できます。
+
+
+  ```mathematica
+
+  {Id, X, Y, Z} = Table[PauliMatrix[k], {k, 0, 3}];
+
+  st = {{ reA + I imA }, { reB + I imB} };
+
+  M = st . ConjugateTranspose[st];
+
+  mx = Tr[M.X] // ComplexExpand;
+
+  my = Tr[M.Y] // ComplexExpand;
+
+  mz = Tr[M.Z] // ComplexExpand;
+
+  mi = Tr[M.Id] // ComplexExpand;
+
+  2 m == Id mi + X mx + Z mz + Y my // ComplexExpand // Simplify
+
+  ```
+
+
+  許容範囲は、$ \langle\psi | \psi\rangle = x\_1 I + x\_2 X + x\_3 Y + x\_4 Z $ と実数 vector (Y ₂) によって定義された3次元実数ベクター (x ₂, x ₃, x ₄) 間の $L\_{\ infty} $ 距離です。、y ₃、y ₄) で定義された複素数 = y ₁ I + y ₂ X + y ₃ Y + y ₄ Z (複素数は、レジスタの状態に対応する密度マトリックス)。
+
+  これは、Tr (複素数) と Tr (| ψ⟩⟨ψ |) が両方とも 1 (たとえば、x ₁ = 1/2、y ₁ = 1/2) であることを前提としています。
+
+  そうでない場合、関数は、(x ₂-x ₁、x ₃₁、x ₄-x ₁、x ₄ + x ₁) と (y ₂-y ₁、y ₃-y ₁、y ₄-y ₁、y ₄ + y ₁) が tolerance パラメーターより小さいことをアサートします。
+examples: >-
+  ```Q#
+
+  using (qubits = Qubit[2]) {
+      // Both qubits are initialized as |0〉: a=(1 + 0*i), b=(0 + 0*i)
+      AssertQubitIsInStateWithinTolerance((Complex(1., 0.), Complex(0., 0.)), qubits[0], 1e-5);
+      AssertQubitIsInStateWithinTolerance((Complex(1., 0.), Complex(0., 0.)), qubits[1], 1e-5);
+      Y(qubits[1]);
+      // Y |0〉 = i |1〉: a=(0 + 0*i), b=(0 + 1*i)
+      AssertQubitIsInStateWithinTolerance((Complex(0., 0.), Complex(0., 1.)), qubits[1], 1e-5);
+  }
+
+  ```
+syntax: 'operation AssertQubitIsInStateWithinTolerance (expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double) : Unit'
+input:
+  content: '(expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double)'
+  types:
+  - name: expected
+    summary: $ \Ket{0}$ と $ \ket{1}$ には、それぞれ複雑な振幅が必要です。
+    types:
+    - uid: microsoft.quantum.math.complex
+    - uid: microsoft.quantum.math.complex
+  - name: register
+    summary: 状態がアサートされる qubit。 この qubit は、割り当てられた他の qubit から分離可能であり、entangled ではないと見なされます。
+    isPrimitive: true
+    uid: Qubit
+  - name: tolerance
+    summary: >-
+      実際の振幅が予期された値と異なることが許容される加法許容範囲。
+
+      詳細については、以下の解説を参照してください。
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 8b43bac19173c5ae5a11ff6879a03209c32e7c76
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227119"

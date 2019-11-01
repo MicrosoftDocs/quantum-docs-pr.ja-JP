@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifoneca
+name: ApplyIfOneCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  古典的な結果値が1であることを条件とする、一連の検索操作を適用します。
+
+
+  `op` 操作と結果値 `result`を指定した場合、`result` が `One`場合、は `target` に `op` を適用します。 `Zero`した場合、`target`には何も起こりません。
+
+  サフィックス `CA` は、適用される操作が、ユニタリ (制御可能および adjointable) であることを示します。
+syntax: "operation ApplyIfOneCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
+input:
+  content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
+  types:
+  - name: result
+    summary: Op が適用されるかどうかを制御する測定結果。
+    isPrimitive: true
+    uid: Result
+  - name: op
+    summary: 条件付きで適用する操作。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: target
+    summary: 操作が適用される入力。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 条件付きで適用される操作の入力型。
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifonec
+- microsoft.quantum.canon.applyifonea
+- microsoft.quantum.canon.applyifoneca
+ms.openlocfilehash: 9756dcc29853d41e1d2a9fee5816254afa5e5d73
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217395"

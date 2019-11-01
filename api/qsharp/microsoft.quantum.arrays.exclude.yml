@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.exclude
+name: Exclude
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 指定されたインデックスリストの要素を除く、別の配列の要素を含む配列を返します。
+examples: >-
+  ```qsharp
+
+  let array = [10, 11, 12, 13, 14, 15];
+
+  // The following line returns [10, 12, 15].
+
+  let subarray = Exclude([1, 3, 4], array);
+
+  ```
+syntax: "function Exclude (remove : Int[], array : 'T[]) : 'T[]"
+input:
+  content: "(remove : Int[], array : 'T[])"
+  types:
+  - name: remove
+    summary: 出力から除外する要素を示すインデックスの配列。
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: array
+    summary: 出力配列内の値を取得する対象の配列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: 配列は、`output[0]` が `output[1]` `remove`に表示されない `array` の最初の要素であり、そのような要素が2番目の要素である場合などに `output` ます。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 配列要素の型。
+ms.openlocfilehash: 624021333e156a4da58509186bffa3074cf44f85
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214301"

@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applydiagonalunitary
+name: ApplyDiagonalUnitary
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  複雑なフェーズの配列を、qubits のレジスタの数値ベースの状態に適用します。
+
+
+  つまり、$-qubit number $ \ket{j} $ という $n に $e ^ {i > $ という複雑なフェーズを適用する、$ $U の斜線検索演算が実装されています。
+
+
+  $U = \ sum ^ {2 ^ n-1} _ {j = 0} e ^ {k {j} \ bra {j} $ となります。
+remarks: $ 2 ^ n $ 未満の値が指定されている場合、`coefficients` には要素 $0.0 $ > が埋め込まれます。
+syntax: 'operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+references: '- クォンタムロジック回線の合成、Shende、Stephen、、Igor または Markov の https://arxiv.org/abs/quant-ph/0406176'
+input:
+  content: '(coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: coefficients
+    summary: '最大で $ 2 ^ n $ 係数 $ & # の配列。 $J $ th 係数は、リトルエンディアン形式でエンコードされた数値の状態 $ \ket{j} $ にインデックスを付けます。'
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: qubits
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 80247438297c9d3a4f7d582f659a50f5d48c1335
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217684"

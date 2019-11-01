@@ -1,0 +1,69 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.bound
+name: Bound
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: 1つの入力に対して動作する操作の配列を指定すると、によって、指定された各操作を順番に実行する新しい操作が生成されます。
+examples: >-
+  同等のものを次に示します。
+
+
+  ```qsharp
+
+  let bound = Bound([U, V]);
+
+  bound(x);
+
+  ```
+
+
+  および
+
+
+  ```qsharp
+
+  U(x); V(x);
+
+  ```
+syntax: "function Bound (operations : ('T => Unit)[]) : ('T => Unit)"
+input:
+  content: "(operations : ('T => Unit)[])"
+  types:
+  - name: operations
+    summary: 指定された入力に対して実行される一連の操作。
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+output:
+  content: ('T => Unit)
+  types:
+  - summary: 入力に基づいて指定された各操作を順番に実行する新しい操作。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 配列内の各操作が動作するターゲット。
+seeAlso:
+- microsoft.quantum.canon.boundc
+- microsoft.quantum.canon.bounda
+- microsoft.quantum.canon.boundca
+ms.openlocfilehash: 67cb4cb93c5d306491bfce83caf1c112194991be
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220642"

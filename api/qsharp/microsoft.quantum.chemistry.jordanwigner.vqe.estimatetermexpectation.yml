@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
+name: EstimateTermExpectation
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: >-
+  指定されたヨルダン-Wigner term に関連するエネルギーを計算します
+
+
+  この操作では、各測定演算子に関連付けられた予測値を推定し、サンプリングを使用して対応する係数で乗算します。
+
+  結果は、ヨルダンという用語のエネルギーを含む変数に集計されます。
+syntax: 'operation EstimateTermExpectation (inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int) : Double'
+input:
+  content: '(inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int)'
+  types:
+  - name: inputStateUnitary
+    summary: 状態の準備に使用されるユニタリ。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: ops
+    summary: ヨルダンという用語の測定演算子。
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+  - name: coeffs
+    summary: ヨルダンという用語の係数。
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: nQubits
+    summary: 分子システムをシミュレートするために必要な qubits の数。
+    isPrimitive: true
+    uid: Int
+  - name: nSamples
+    summary: 想定用語の推定に使用するサンプル数。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: ヨルダンという用語に関連するエネルギー。
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 9efa1c2aaa66d4b35e3266f785f837cb5e4dba27
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228445"

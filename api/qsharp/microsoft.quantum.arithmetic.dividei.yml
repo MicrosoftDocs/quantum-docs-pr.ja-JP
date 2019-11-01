@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.dividei
+name: DivideI
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  2つのクォンタム整数を除算します。
+
+
+  `xs` は残りの `xs - floor(xs/ys) * ys` を保持し、`result` は `floor(xs/ys)`を保持します。
+remarks: >-
+  は、標準のシフトと減算のアプローチを使用して除算を実装します。
+
+  コントロールバージョンは特化されているので、減算には追加の制御は必要ありません。
+syntax: 'operation DivideI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: xs
+    summary: $n $-bit 被除数は、剰余に置き換えられます。
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: $n $-bit 除数
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: result
+    summary: $ bit の結果 $n は、最初は $ \ket{0}$ の状態にする必要があり、整数除算の結果に置き換えられます。
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: cf59cded0bb1de135268b578d3e06872c0cb8b68
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215117"

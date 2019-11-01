@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.encodeintofivequbitcode
+name: EncodeIntoFiveQubitCode
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: ⟦ 5, 1, 3 ⟧クォンタムコードにエンコードします。
+syntax: 'operation EncodeIntoFiveQubitCode (physRegister : Qubit[], auxQubits : Qubit[]) : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
+input:
+  content: '(physRegister : Qubit[], auxQubits : Qubit[])'
+  types:
+  - name: physRegister
+    summary: エンコード前の状態を表す qubit。 この配列 `Qubit[]` の長さは1です。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: auxQubits
+    summary: エンコードされた状態を表すために使用される補助 qubits のレジスタ。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Microsoft.Quantum.ErrorCorrection.LogicalRegister
+  types:
+  - summary: エンコードされた状態を格納する `LogicalRegister` 型の物理 qubits の配列。
+    uid: microsoft.quantum.errorcorrection.logicalregister
+seeAlso:
+- logicalregister
+ms.openlocfilehash: 6147098742759d72dba9c8eee0218d973320793b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234565"

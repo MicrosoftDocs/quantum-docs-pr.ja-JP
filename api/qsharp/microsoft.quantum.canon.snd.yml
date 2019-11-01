@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.snd
+name: Snd
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: ペアが指定されると、はその2番目の要素を返します。
+syntax: "function Snd (pair : ('T, 'U)) : 'U"
+input:
+  content: "(pair : ('T, 'U))"
+  types:
+  - name: pair
+    summary: 2つの要素を持つタプル。
+    types:
+    - uid: "'T"
+      isLocal: true
+    - uid: "'U"
+      isLocal: true
+output:
+  content: "'U"
+  types:
+  - summary: '`pair`の2番目の要素。'
+    uid: "'U"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: ペアの最初のメンバーの型。
+- uid: "'U"
+  summary: ペアの2番目のメンバーの型。
+ms.openlocfilehash: c9a7d38a389411b374fbe2b154ce22a6bed5943e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222308"

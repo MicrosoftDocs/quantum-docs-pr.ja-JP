@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.copymostsignificantbit
+name: CopyMostSignificantBit
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 符号なし整数を表す qubit レジスタ `from` の最上位ビットを qubit `target`にコピーします。
+syntax: 'operation CopyMostSignificantBit (from : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+input:
+  content: '(from : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  types:
+  - name: from
+    summary: >-
+      最上位ビットのコピー元の符号なし整数。
+
+      整数は、リトルエンディアン形式でエンコードされます。
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: target
+    summary: 最上位ビットがコピーされる qubit。 ビットエンコードは計算に基づいています。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+seeAlso:
+- littleendian
+ms.openlocfilehash: d397bd580600545c2a6f1c6ce0112b82087d99b4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219129"

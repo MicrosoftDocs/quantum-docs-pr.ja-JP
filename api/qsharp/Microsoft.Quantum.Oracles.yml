@@ -1,0 +1,80 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.oracles
+name: Microsoft.Quantum.Oracles
+summary: " # <a name=\"summary\"></a>Summary\n この名前空間は、フェーズの推定や振幅増幅などのクォンタムアルゴリズムでの用途によって、さまざまな種類の oracles を装飾するためのユーザー定義型を提供します。"
+functions:
+- uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
+  summary: '`StateOracle` 型の oracle を `DeterministicStateOracle`に変換します。'
+- uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
+  summary: Oracles `DeterministicStateOracle` と `ObliviousOracle`を結合します。
+- uid: microsoft.quantum.oracles.oracletodiscrete
+  summary: "\"ブラックボックス\" oracle を表す操作が指定された場合、は、\"ブラックボックス\" の oracle が複数回繰り返されている不連続タイム oracle を返します。"
+- uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
+  summary: >-
+    Oracle から特定の状態に関するリフレクションを構築します。
+
+
+    型が <xref:microsoft.quantum.oracles.deterministicstateoracle>の oracle $O $ を指定した場合、この関数の結果は、$O \ket{0} = \ket{\psi} $ という州 $ \ket{\psi} $ の周りのリフレクションになります。
+- uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
+  summary: '`DeterministicStateOracle` 型の oracle を `StateOracle`に変換します。'
+newtypes:
+- uid: microsoft.quantum.oracles.continuousoracle
+  summary: >-
+    連続した oracle を表します。
+
+
+    これは、$U (\ delta t): \ket{\psi (t)} \ map\ket{\psi (t +-delta t)} $ を実装する oracle で、$ のすべての $t 時刻に対して $U $ は固定された操作で、$ \ delta t $ は負でない実数です。
+- uid: microsoft.quantum.oracles.deterministicstateoracle
+  summary: >-
+    決定的な状態の準備のための oracle を表します。
+
+
+    Oracle $O $ への入力は次のとおりです。
+
+
+    - 目的のクォンタム状態 $ \ket{\psi}\_s $ を格納するレジスタ。
+- uid: microsoft.quantum.oracles.discreteoracle
+  summary: >-
+    不連続タイム oracle を表します。
+
+
+    これは $U ^ m $ を実装する oracle で、$ と負でない整数 $m $ $U 固定操作に使用されます。
+- uid: microsoft.quantum.oracles.obliviousoracle
+  summary: >-
+    Oracle for 無関係の振幅増幅を表します。
+
+
+    Oracle $O $ への入力は次のとおりです。
+
+
+    - $ Act $O ancilla register $a $。
+
+    - システム登録 $s $ が適用されています。 $ という $a\_$ は、レジスタ $ に $U $ が適用されます。
+- uid: microsoft.quantum.oracles.reflectionoracle
+  summary: >-
+    リフレクション oracle を表します。
+
+
+    リフレクション oracle ($O $) には、次の入力があります。
+
+
+    - 反映されたサブ空間の回転に使用するフェーズ $/phi $。
+
+    - 指定されたリフレクションを実行する qubit レジスタ。
+- uid: microsoft.quantum.oracles.stateoracle
+  summary: >-
+    状態の準備のための oracle を表します。
+
+
+    Oracle $O $ への入力は次のとおりです。
+
+
+    - フラグ qubit $f $ にインデックスを付ける整数。
+
+    - 必要なクォンタムの状態 $ \ket{\psi}\_s $ を格納する $s $ がシステムに登録されます。
+ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216103"

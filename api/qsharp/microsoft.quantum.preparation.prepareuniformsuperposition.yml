@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.prepareuniformsuperposition
+name: PrepareUniformSuperposition
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  0から `nIndices`をエンコードする、州を超える uniform 法則を作成します。
+
+
+  つまり、このユニタリ $U $ は、入力状態が $ \ket{0\cdots 0} $ の場合に、すべての数値の州 $0 $ に対して $M-$1 に対して uniform 法則を作成します。 つまり、$ $ \begin{align} U\ket{0}= \ frac{1}{\ sqrt{j = 0} ^ {M-1} \ket{j}. になります。
+
+  \end{align} $ $。
+examples: >-
+  次の例では、$3 $ qubits 上で、$-frac{1}{\ sqrt{6}}-sumj = 0} ^{5}\ket{j} $ の状態を準備します。
+
+
+  ```Q#
+
+  let nIndices = 6;
+
+  using(indexRegister = Qubit[3]) {
+      PrepareUniformSuperposition(nIndices, LittleEndian(indexRegister));
+  }
+
+  ```
+syntax: 'operation PrepareUniformSuperposition (nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: nIndices
+    summary: Uniform 法則内で、必要な状態の数を $ $M します。
+    isPrimitive: true
+    uid: Int
+  - name: indexRegister
+    summary: >-
+      数値の状態を `LittleEndian` 形式で格納する qubit レジスタ。
+
+      このレジスタは $M-$1 の数値を格納できる必要があり、$ \ket{0\cdots 0} $ という状態で初期化されると想定されています。
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 4bb7c83382f8d48f132fbd91acfd2184a570aea4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226490"

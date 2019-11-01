@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangestart
+name: RangeStart
+type: function
+namespace: Microsoft.Quantum.Core
+summary: 指定された範囲の開始値を定義して返します。
+remarks: >-
+  範囲式の最初の要素が `start`、2番目の要素が `start+step`、3番目の要素が `start+step+step`など、`end` が渡されるまで続きます。
+
+
+  範囲で空のシーケンスが指定されていない限り、範囲の定義済みの開始値が、シーケンスの最初の要素と同じであることに注意してください (例: 2.. 1)。
+syntax: 'function RangeStart (range : Range) : Int'
+input:
+  content: '(range : Range)'
+  types:
+  - name: range
+    isPrimitive: true
+    uid: Range
+output:
+  content: Int
+  types:
+  - summary: 指定された範囲の開始値。
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 0d618a26d71a5b41e6ea6b73503e9f099b18f129
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231760"

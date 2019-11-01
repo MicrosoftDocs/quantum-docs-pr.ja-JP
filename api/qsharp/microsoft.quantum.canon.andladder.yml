@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.andladder
+name: AndLadder
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  ターゲット qubits に対して、制御された ' AND はしご ' を実行します。
+
+
+  これにより、計算ベースのベクトルの次のマップで指定された周期が適用されます: $ $ \begin{align} \ket{x\_1, \ ドット, x\_n} \ket{y\_1, \ ドット, y\_{n-1}} \ map\ket{x\_1,、\ ドット, x\_n} \ket{y\_1 \ oplus (x\_1 \ 横 x\_2), \ ドット, y\_{n-1} \ oplus (x\_1 \ 陸 x\_2 \ \ ドット/陸 x\_{n-1}},、\end{align} $ $ where $ \ket{x\_1, \ ドット, x\_n} $ は `controls`の計算ベースの状態を表し、$ \ket{y\_1, \ ドット, y\_{n-1}} $ は `targets`の計算基盤の状態を示します。
+remarks: >-
+  - <xref:microsoft.quantum.canon.applymulticontrolledc> と <xref:microsoft.quantum.canon.applymulticontrolledca>の一部として使用されます。
+
+  - 説明とサーキットの図については、図4.10 のセクション4.3 を参照してください & 語。
+syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
+references: '- [*Michael、Isaac、語*、量子計算、およびクォンタム情報](http://doi.org/10.1017/CBO9780511976667)'
+input:
+  content: '(ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[])'
+  types:
+  - name: ccnot
+    summary: 構築に使用する CCNOT ゲート。
+    uid: microsoft.quantum.canon.ccnotop
+  - name: controls
+    summary: >-
+      およびはしごのコントロールとして使用される qubits のレジスタ。
+
+      この操作では、`controls` インバリアントの計算ベースの状態が残ります。
+
+      `controls` の長さは2以上である必要があり、1に `targets`の長さを加えた値にする必要があります。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targets
+    summary: '`targets` の長さは1以上、`controls` から1を引いた長さと同じである必要があります。'
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+ms.openlocfilehash: 2970f9c783ea233f2f1ceb4089802320efe82602
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217718"

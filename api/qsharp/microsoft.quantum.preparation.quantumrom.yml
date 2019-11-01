@@ -1,0 +1,99 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.quantumrom
+name: QuantumROM
+type: function
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  は、指定された密度マトリックスを表すために、クォンタム ROM の手法を使用します。
+
+
+  $N $ 係数 $ \alpha_j $ のリストが指定されている場合、この $U 値は、\tilde\rho\sum_{j = 0} ^ {N-1} p_j\ket {j} \ bra {j} $ 密度マトリックス $ purification = j = 0} ^ {N-1} \rho | の \frac{の近似を準備するために、クォンタム ROM の手法を使用します。alpha_j |}{\ sumk | \alpha_k |}\ket{j}\bra{j} $。 この近似値で、$/イプシロン $ というエラーは $ | p_j-\frac{| alpha_j |} となります。{\ sumk | \alpha_k |} |\ le/イプシロン/N $ と $\|\tilde\rho-\rho\|。 つまり、$ $ \begin{align} U\ket{0}^ {\lceil\log_2 N\r ceil} \ k{0}^ {m} = \ sum_ = 0} ^ {N-1} \ sqrt{pnoj} \ket{j}\ket{\text{garbage}_j}.
+
+  \end{align} $ $
+examples: >-
+  次のコードスニペットは、$ 3 $-qubit 状態の purification を準備します $ \rho = \frac{j = 0} ^{4}| alpha_j |}{\ sumk | \alpha_k |}\ket{j}\bra{j} $,、$ \ vec\ alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $、エラーは `1e-3`です。
+
+
+  ```qsharp
+
+  let coefficients = [1.0,2.0,3.0,4.0,5.0];
+
+  let targetError = 1e-3;
+
+  let ((nTotalQubits, (nIndexQubits, nGarbageQubits)), oneNorm, op) = QuantumROM(targetError, coefficients);
+
+  using (indexRegister = Qubit[nIndexQubits]) {
+      using (garbageRegister = Qubit[nGarbageQubits]) {
+          op(LittleEndian(indexRegister), garbageRegister);
+      }
+  }
+
+  ```
+syntax: 'function QuantumROM (targetError : Double, coefficients : Double[]) : ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl))'
+references: '- Babbush、Spectra、Gidney、Dominic W Berry、Nathan Wiebe、Jarrod McClean、Alexandru Er、オースティン Fowler、Hartmut Neven、、https://arxiv.org/abs/1805.03662'
+input:
+  content: '(targetError : Double, coefficients : Double[])'
+  types:
+  - name: targetError
+    summary: ターゲットエラー $ \ イプシロン $。
+    isPrimitive: true
+    uid: Double
+  - name: coefficients
+    summary: >-
+      ベース状態の確率を指定する $N $ 係数の配列。
+
+      負の値 $-\alpha_j $ は、正の $ | \alpha_j | $ として扱われます。
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl))
+  types:
+  - summary: >-
+      ## <a name="first-parameter"></a>最初のパラメーター
+
+
+      `x = y + z` が割り当てられている qubits の合計数、`y` が `LittleEndian` レジスタの qubits の数、`z` がガベージ qubits の数である `(x,(y,z))` 組。
+
+
+      ## <a name="second-parameter"></a>2番目のパラメーター
+
+
+      係数配列の1番目の $-sum_ | \alpha_j | $。
+
+
+      ## <a name="third-parameter"></a>3番目のパラメーター
+
+
+      $U のユニタリは $ です。
+    types:
+    - types:
+      - isPrimitive: true
+        uid: Int
+      - types:
+        - isPrimitive: true
+          uid: Int
+        - isPrimitive: true
+          uid: Int
+    - isPrimitive: true
+      uid: Double
+    - isOperation: true
+      input:
+        types:
+        - uid: microsoft.quantum.arithmetic.littleendian
+        - isArray: true
+          isPrimitive: true
+          uid: Qubit
+      output:
+        types:
+        - isPrimitive: true
+          uid: Unit
+      functors:
+      - Adjoint
+      - Controlled
+ms.openlocfilehash: 33d21289b0b1ad64577677d5fa5ca622346224cc
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226422"

@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.randomintpow2
+name: RandomIntPow2
+type: operation
+namespace: Microsoft.Quantum.Math
+summary: 指定したビット数で表現できるすべての整数から一様にサンプリングされたランダムな整数を生成します。
+remarks: この関数は <xref:microsoft.quantum.intrinsic.random>を呼び出します。そのため、`Random`の実装によってはランダムに変化します。
+syntax: 'operation RandomIntPow2 (maxBits : Int) : Int'
+input:
+  content: '(maxBits : Int)'
+  types:
+  - name: maxBits
+    summary: この操作によって返される可能性のある最大の整数を表すために必要な古典ビットの数。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: $ [0, 2 ^ {\texttt{maxBits}}-1] $; からランダムに $ 一様の整数を $xつまり、$ \ Pr (x) = \ frac{1}{2 ^ {\texttt{maxBits}}} $ を使用します。
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: e690509a7dcd2b1ec51bdde85da6439a688e75e7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219979"

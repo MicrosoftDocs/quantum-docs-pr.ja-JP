@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.r
+name: R
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  指定された P# li 軸についての回転を適用します。
+
+
+  \begin{align} R_ {\ mu} (\ シータ) \mathrel{: =} e ^ {-}/2}, \end{align} where $ \ mu \ in \{I, X, Y, Z\}$ ですが、$。
+remarks: '`pauli = PauliI`で呼び出された場合、この操作は*グローバルフェーズ*を適用します。 このフェーズは、`Controlled` ファンクタと共に使用すると重要になる場合があります。'
+syntax: 'operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit'
+input:
+  content: '(pauli : Pauli, theta : Double, qubit : Qubit)'
+  types:
+  - name: pauli
+    summary: 回転を形成するために累乗される p# li 演算子 ($ \ mu $)。
+    isPrimitive: true
+    uid: Pauli
+  - name: theta
+    summary: Qubit を回転する角度。
+    isPrimitive: true
+    uid: Double
+  - name: qubit
+    summary: ゲートを適用する qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: cb7cf0c4c2a758b1abaa80d6fe3c265fc9feabb2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234021"

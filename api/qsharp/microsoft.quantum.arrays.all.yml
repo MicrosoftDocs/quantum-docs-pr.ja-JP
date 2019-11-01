@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.all
+name: All
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 配列と、配列の要素に対して定義されている述語が指定されている場合、配列のすべての要素が述語を満たすかどうかを確認します。
+remarks: "関数は、ジェネリック型に対して定義されます。つまり、配列 `'T[]` と関数 `predicate: 'T -> Bool` は、すべての要素が `predicate`を満たすかどうかを示す `Bool` 値を生成できます。"
+syntax: "function All (predicate : ('T -> Bool), array : 'T[]) : Bool"
+input:
+  content: "(predicate : ('T -> Bool), array : 'T[])"
+  types:
+  - name: predicate
+    summary: 要素のチェックに使用される `Bool` に `'T` の関数。
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: "`'T`上の要素の配列。"
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Bool
+  types:
+  - summary: すべての要素に適用される述語のおよび関数の `Bool` 値。
+    isPrimitive: true
+    uid: Bool
+typeParameters:
+- uid: "'T"
+  summary: '`array` 要素の型。'
+ms.openlocfilehash: bb439ae76d0f7644625686cd89f05670051a4c9d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214454"

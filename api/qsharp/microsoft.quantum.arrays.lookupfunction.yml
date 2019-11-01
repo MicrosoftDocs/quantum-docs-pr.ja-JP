@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.lookupfunction
+name: LookupFunction
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 配列が指定されている場合、その配列の要素を返す関数を返します。
+remarks: この関数は、主に、引数として `Int -> 'T` 関数を受け取る関数と操作との相互運用に役立ちます。 これは、たとえば、ジェネレーター表現ライブラリ内で、配列全体をメモリに記録する必要がないようにするために関数が使用される場合などに共通します。
+syntax: "function LookupFunction (array : 'T[]) : (Int -> 'T)"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: 参照関数として表現される配列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: (Int -> 'T)
+  types:
+  - summary: 関数は、`f(idx) == f[idx]`を `f` ます。
+    isFunction: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Int
+    output:
+      types:
+      - uid: "'T"
+        isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 参照関数として表される配列の要素の型。
+ms.openlocfilehash: b4f509de7137377465f1e76e59a04abfd9a22fd1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218109"

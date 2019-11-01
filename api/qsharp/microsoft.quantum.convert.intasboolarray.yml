@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.intasboolarray
+name: IntAsBoolArray
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: 返された配列に対してリトルエンディアン表現を使用して、正の整数のバイナリ表現を生成します。
+remarks: 入力 `number` は、最大で $ 2 ^ {\texttt{bits}}-$1 である必要があります。
+syntax: 'function IntAsBoolArray (number : Int, bits : Int) : Bool[]'
+input:
+  content: '(number : Int, bits : Int)'
+  types:
+  - name: number
+    summary: ブール値の配列に変換する正の整数。
+    isPrimitive: true
+    uid: Int
+  - name: bits
+    summary: '`number`のバイナリ表現に含まれるビット数。'
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool[]
+  types:
+  - summary: '`number`を表すブール値の配列。'
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 5f9dcb138c24390f5abfec3e0b9b12263b6119d6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220370"

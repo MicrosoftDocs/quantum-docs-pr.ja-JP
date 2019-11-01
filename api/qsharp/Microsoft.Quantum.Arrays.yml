@@ -1,0 +1,64 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.arrays
+name: Microsoft. Quantum. 配列
+summary: " # <a name=\"summary\"></a>Summary\n この名前空間には、データの配列を作成および操作するための関数が含まれています。"
+functions:
+- uid: microsoft.quantum.arrays.all
+  summary: 配列と、配列の要素に対して定義されている述語が指定されている場合、配列のすべての要素が述語を満たすかどうかを確認します。
+- uid: microsoft.quantum.arrays.any
+  summary: 配列と、配列の要素に対して定義された述語が指定されている場合、配列の少なくとも1つの要素が述語を満たすかどうかを確認します。
+- uid: microsoft.quantum.arrays.constantarray
+  summary: 指定された値と等しいすべての要素を使用して、指定された長さの配列を作成します。
+- uid: microsoft.quantum.arrays.enumerated
+  summary: 配列が指定された場合、は、元の配列の要素と各要素のインデックスを含む新しい配列を返します。
+- uid: microsoft.quantum.arrays.exclude
+  summary: 指定されたインデックスリストの要素を除く、別の配列の要素を含む配列を返します。
+- uid: microsoft.quantum.arrays.filtered
+  summary: 配列と、配列の要素に対して定義された述語が指定されている場合、は述語を満たす要素で構成される配列を返します。
+- uid: microsoft.quantum.arrays.fold
+  summary: 配列 `array`を通じて関数 `f` を反復処理し、`f(f(f(initialState, array[0]), array[1]), ...)`を返します。
+- uid: microsoft.quantum.arrays.head
+  summary: 配列の最初の要素を返します。
+- uid: microsoft.quantum.arrays.indexof
+  summary: 指定された述語を満たす配列内の最初の要素の最初のインデックスを返します。 そのような要素が存在しない場合は、-1 を返します。
+- uid: microsoft.quantum.arrays.indexrange
+  summary: 配列を指定した場合は、その配列のインデックスに対する範囲を返します。 for ループでの使用に適しています。
+- uid: microsoft.quantum.arrays.lookupfunction
+  summary: 配列が指定されている場合、その配列の要素を返す関数を返します。
+- uid: microsoft.quantum.arrays.mapped
+  summary: 配列と、配列の要素に対して定義されている関数を指定すると、関数の下にある元の配列のイメージで構成される新しい配列を返します。
+- uid: microsoft.quantum.arrays.mappedbyindex
+  summary: 配列と、配列のインデックス付き要素に対して定義された関数を指定すると、関数の下にある元の配列のイメージで構成される新しい配列を返します。
+- uid: microsoft.quantum.arrays.most
+  summary: 最後の配列要素が削除される点を除いて、入力配列と等しい配列を作成します。
+- uid: microsoft.quantum.arrays.padded
+  summary: 指定された値で指定した長さまで、に埋め込まれた配列を返します。
+- uid: microsoft.quantum.arrays.partitioned
+  summary: 配列を複数の部分に分割します。
+- uid: microsoft.quantum.arrays.rest
+  summary: 最初の配列要素が削除される点を除いて、入力配列と等しい配列を作成します。
+- uid: microsoft.quantum.arrays.reversed
+  summary: 入力配列と同じ要素が逆順に含まれる配列を作成します。
+- uid: microsoft.quantum.arrays.sequencei
+  summary: 指定された間隔で整数の配列を取得します。
+- uid: microsoft.quantum.arrays.sequencel
+  summary: 指定された間隔で整数の配列を取得します。
+- uid: microsoft.quantum.arrays.subarray
+  summary: 配列と場所のリストを受け取り、指定した場所に一致する元の配列の要素から新しい配列を作成します。
+- uid: microsoft.quantum.arrays.tail
+  summary: 配列の最後の要素を返します。
+- uid: microsoft.quantum.arrays.zip
+  summary: 2つの配列を指定すると、は、各ペアに各元の配列の要素が含まれるように、ペアの新しい配列を返します。
+- uid: microsoft.quantum.arrays.zip3
+  summary: 3つの配列を指定すると、3組の新しい配列が返されます。これにより、各3組には各元の配列の要素が含まれます。
+- uid: microsoft.quantum.arrays.zip4
+  summary: 4つの配列がある場合、4組の新しい配列を返して、各4組に各元の配列の要素が格納されるようにします。
+operations:
+- uid: microsoft.quantum.arrays.foreach
+  summary: 配列と、配列の要素に対して定義されている操作が指定された場合、は、操作の下にある元の配列のイメージで構成される新しい配列を返します。
+ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056978"

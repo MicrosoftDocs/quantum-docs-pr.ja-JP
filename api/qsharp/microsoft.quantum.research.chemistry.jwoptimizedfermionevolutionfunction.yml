@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.research.chemistry.jwoptimizedfermionevolutionfunction
+name: JWOptimizedFermionEvolutionFunction
+type: function
+namespace: Microsoft.Quantum.Research.Chemistry
+summary: Dynamical generator を simulatable ゲートと JWOptimized ベースの拡張のセットとして表します。
+syntax: 'function JWOptimizedFermionEvolutionFunction (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, parityQubit : Qubit) : Microsoft.Quantum.Simulation.EvolutionUnitary'
+input:
+  content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, parityQubit : Qubit)'
+  types:
+  - name: generatorIndex
+    summary: JWOptimized ベースでの、周期的な進化として表現されるジェネレーターインデックス。
+    uid: microsoft.quantum.simulation.generatorindex
+  - name: parityQubit
+    summary: タイム進化の符号を決定する qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Microsoft.Quantum.Simulation.EvolutionUnitary
+  types:
+  - summary: "' GeneratorIndex ' で参照される期間による時間の進化を表す `EvolutionUnitary`。"
+    uid: microsoft.quantum.simulation.evolutionunitary
+ms.openlocfilehash: 0e85f9be6001d71980a442ebbc04b88ba4240166
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228020"

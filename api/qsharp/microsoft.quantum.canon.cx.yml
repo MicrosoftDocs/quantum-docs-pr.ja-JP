@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.cx
+name: CX
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  制御された X (CX) ゲートを qubits のペアに適用します。
+
+
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align},、$ $。行と列は、「クォンタムの概念ガイド」のように編成されています。
+remarks: >-
+  次と同じです。
+
+
+  ```qsharp
+
+  Controlled X([control], target);
+
+  ```
+
+
+  および:
+
+
+  ```qsharp
+
+  CNOT(control, target);
+
+  ```
+syntax: 'operation CX (control : Qubit, target : Qubit) : Unit'
+input:
+  content: '(control: Qubit、target: Qubit)'
+  types:
+  - name: control
+    summary: CX ゲートの制御 qubit。
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: CX ゲートのターゲット qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: 単位
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 26cbc8dc2f22cdf8583d453b84e53b0151619f5d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067868"

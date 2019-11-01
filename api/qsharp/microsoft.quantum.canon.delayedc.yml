@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.delayedc
+name: DelayedC
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: 指定された引数を使用して指定された操作を適用する操作を返します。
+syntax: "function DelayedC (op : ('T => Unit is Ctl), arg : 'T) : (Unit => Unit is Ctl)"
+input:
+  content: "(op : ('T => Unit is Ctl), arg : 'T)"
+  types:
+  - name: op
+    summary: 戻り値を適用した結果として適用される操作
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: arg
+    summary: 操作 `op` が適用される入力。
+    uid: "'T"
+    isLocal: true
+output:
+  content: (Unit => Unit is Ctl)
+  types:
+  - summary: 入力と共に `op` に適用される新しい操作 `arg`
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: 遅延する操作の入力型。
+seeAlso:
+- microsoft.quantum.canon.delayed
+- microsoft.quantum.canon.delay
+ms.openlocfilehash: 99a85abc78a28a939f67278458069b46a8c36324
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219418"

@@ -1,0 +1,70 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applymulticontrolledca
+name: ApplyMultiControlledCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  1つの操作の制御された複数のバージョンを適用します。
+
+  修飾子 `CA` は、single qubit 操作が制御可能で adjointable であることを示します。
+remarks: >-
+  この操作では、clean ancilla qubits のみを使用します。
+
+
+  説明とサーキットの図については、図4.10 のセクション4.3 を参照してください & 語
+syntax: 'operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => Unit is Adj), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
+references: '- [*Michael、Isaac、語*、量子計算、およびクォンタム情報](http://doi.org/10.1017/CBO9780511976667)'
+input:
+  content: '(singlyControlledOp : (Qubit[] => Unit is Adj), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[])'
+  types:
+  - name: singlyControlledOp
+    summary: >-
+      1つの qubit で制御される操作。
+
+      操作の引数の最初の qubit はコントロールであると想定され、残りはターゲット qubit と見なされます。
+
+      `ApplyMultiControlled` は常に、長さが1以上の引数を使用して `singlyControlledOp` を呼び出します。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: ccnot
+    summary: 構築に使用する制御制御された非対応のゲート。
+    uid: microsoft.quantum.canon.ccnotop
+  - name: controls
+    summary: >-
+      `singlyControlledOp` が制御される qubits。
+
+      `controls` の長さは1以上である必要があります。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targets
+    summary: '`singlyControlledOp` が動作するターゲットの qubits。'
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applymulticontrolledc
+ms.openlocfilehash: d9b0f2b18d025d0ce60bbb02a9559546539eaecd
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220710"

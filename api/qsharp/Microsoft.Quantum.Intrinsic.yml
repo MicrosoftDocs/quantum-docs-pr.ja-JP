@@ -1,0 +1,188 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.intrinsic
+name: Microsoft. Quantum. 組み込み
+functions:
+- uid: microsoft.quantum.intrinsic.message
+  summary: メッセージをログに記録します。
+operations:
+- uid: microsoft.quantum.intrinsic.assert
+  summary: 指定された P# li の指定した qubits を測定すると、常に指定された結果が得られることをアサートします。
+- uid: microsoft.quantum.intrinsic.assertprob
+  summary: 指定された型の指定された qubits を測定すると、特定の確率で特定の結果が許容範囲内にあることをアサートします。
+- uid: microsoft.quantum.intrinsic.ccnot
+  summary: ダブル制御された (CCNOT) ゲートを3つの qubits に適用します。
+- uid: microsoft.quantum.intrinsic.cnot
+  summary: >-
+    制御されていない (CNOT) ゲートを qubits のペアに適用します。
+
+
+    \begin{align} \ \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix}。, \end{align}
+
+
+    ここでは、行と列は、クォンタムの概念ガイドのとおりに並べられています。
+- uid: microsoft.quantum.intrinsic.exp
+  summary: >-
+    マルチ qubit の P# li 演算子の指数を適用します。
+
+
+    \begin{align} e ^ {i \ シータ [P_0/otimes P_1, cドット P_ {N-1}]}, \end{align} where $P _i $ は `paulis`の $ th 要素 $i、where $N = $`Length(paulis)`です。
+- uid: microsoft.quantum.intrinsic.expfrac
+  summary: >-
+    Dyadic の分数で指定された引数を使用して、マルチ qubit の P# li 演算子の指数を適用します。
+
+
+    \begin{align} e ^ {i \ pi k [P_0/otimes P_1 \ cドット P_ {N-1}]/2 ^ N}, \end{align} where $P _i $ は `paulis`の $ th 要素 $i、where $N = $`Length(paulis)`です。
+- uid: microsoft.quantum.intrinsic.h
+  summary: >-
+    Hadamard 変換を1つの qubit に適用します。
+
+
+    \begin{align} H \mathrel{: =} \ frac{1}{\ sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ 1 &-1 \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.i
+  summary: 1つの qubit で id 操作 (no op) を実行します。
+- uid: microsoft.quantum.intrinsic.m
+  summary: >-
+    P$Z $ ベースで1つの qubit の測定を実行します。
+
+
+    出力結果は、distribution \begin{align} (\texttt{Zero} | \ket{\psi}) = \braket{\psi | 0} \braket{0 | \psi}. によって得られます。
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.measure
+  summary: >-
+    指定した基底クラスの1つ以上の qubits の結合測定を実行します。
+
+
+    出力結果は、ディストリビューションによって与えられます。 \begin{align}/Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\ psi \ mid | \ left (\ bold done + P_0/otimes P_1 {N-1}-right) \ mid | \ psi}, P_ ここで、$P \end{align} $ は、の $i $ th 要素です `bases`、where $N = \texttt{Length} (\texttt{bases}) $。
+
+    つまり、測定値が $ (-1) ^ d $ である場合、測定値の eigenvalue が $ (-1) ^ d $ である `Result` $d $ が返されます。
+- uid: microsoft.quantum.intrinsic.r
+  summary: >-
+    指定された P# li 軸についての回転を適用します。
+
+
+    \begin{align} R_ {\ mu} (\ シータ) \mathrel{: =} e ^ {-}/2}, \end{align} where $ \ mu \ in \{I, X, Y, Z\}$ ですが、$。
+- uid: microsoft.quantum.intrinsic.r1
+  summary: >-
+    $ \Ket{1}$ state に関する回転を特定の角度で適用します。
+
+
+    \begin{align} R_1 (\ シータ) \mathrel{: =} \operatorname{diag} (1, e ^ {i/シータ})。
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.r1frac
+  summary: >-
+    $ \Ket{1}$ state に関する回転を、dyadic の分数として指定された角度だけ適用します。
+
+
+    \begin{align} R_1 (n, k) \mathrel{: =} \operatorname{diag} (1, e ^ {i \ pi k/2 ^ n})。
+
+    \end{align}
+
+
+    > [!WARNING]
+
+    > この操作では、@"microsoft.quantum.intrinsic.r"からの**逆**の符号規則を使用します。 @"microsoft.quantum.intrinsic.r1"に含まれる $ 1/2 $ の係数は含まれません。
+- uid: microsoft.quantum.intrinsic.random
+  summary: >-
+    ランダム操作は、入力として double の配列を取得し、ランダムに選択されたインデックスを `Int`として配列に返します。
+
+    特定のインデックスを選択する確率は、そのインデックス位置にある配列要素の値に比例します。
+
+    0に等しい配列要素は無視され、インデックスは返されません。 配列要素が0未満の場合、または配列要素がゼロより大きい場合、操作は失敗します。
+- uid: microsoft.quantum.intrinsic.reset
+  summary: 1つの qubit を指定すると、それを測定し、安全に解放できるように、それが | 0 ⟩状態であることを確認します。
+- uid: microsoft.quantum.intrinsic.resetall
+  summary: Qubits の配列を指定した場合は、それらを測定し、安全に解放できるように、それらが | 0 ⟩状態であることを確認します。
+- uid: microsoft.quantum.intrinsic.rfrac
+  summary: >-
+    指定された P# li 軸に関する回転を、dyadic の分数として指定された角度だけ適用します。
+
+
+    \begin{align} R_ {\ mu} (n, k) \mathrel{: =} e ^ {i \ pi n/sigma_/2 ^ k}, \end{align} where $ \ mu \ in \{I, X, Y, Z\}$。
+
+
+    > [!WARNING]
+
+    > この操作では、@"microsoft.quantum.intrinsic.r"とは**逆**の符号規則を使用します。
+- uid: microsoft.quantum.intrinsic.rx
+  summary: >-
+    指定された角度で $x $ 軸についての回転を適用します。
+
+
+    \begin{align} R_x (-シータ) \mathrel{: =} e ^ {-} = \begin{bmatrix} \frac{\theta}{2} &-\frac{\theta}{2}\\\\-i\ sin \frac{\theta}{2} & \frac{\theta}{2} \end{bmatrix}. です。を実行します。
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.ry
+  summary: >-
+    指定された角度で $y $ 軸についての回転を適用します。
+
+
+    \begin{align} R_y (\ シータ) \mathrel{: =} e ^ {-} = \begin{bmatrix} \frac{\theta}{2} &-\ sin \frac{\theta}{2}\\\\ \ sin \frac{\theta}{2} &、cos \frac{\theta}{2} \end{bmatrix}. を実行します。
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.rz
+  summary: >-
+    指定された角度で $z $ 軸についての回転を適用します。
+
+
+    \begin{align} R_z (\ シータ) \mathrel{: =} e ^ {-} = \begin{bmatrix} e ^ {-i-シータ/2} & 0 \\\\ 0 & e ^ {i/シータ/2} \end{bmatrix}. になります。
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.s
+  summary: >-
+    Π/4 フェーズゲートを1つの qubit に適用します。
+
+
+    \begin{align} S \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 & i \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.swap
+  summary: >-
+    スワップゲートを qubits のペアに適用します。
+
+
+    \begin{align} \ \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{align}
+
+
+    ここでは、行と列は、クォンタムの概念ガイドのとおりに並べられています。
+- uid: microsoft.quantum.intrinsic.t
+  summary: >-
+    1つの qubit にπ/8 ゲートを適用します。
+
+
+    \begin{align} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 & e ^ {i \ pi/4} \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.x
+  summary: >-
+    P# li $X $ gate を適用します。
+
+
+    \begin{align} \mathrel{: =} \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.y
+  summary: >-
+    P# li $Y $ gate を適用します。
+
+
+    \begin{align} \mathrel{: =} \begin{bmatrix} 0 &-i \\\\ i & 0 \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.intrinsic.z
+  summary: >-
+    P# li $Z $ gate を適用します。
+
+
+    \begin{align} \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}.
+
+    \end{align}
+ms.openlocfilehash: a2f80ca98d86e5a1457efb6dad34c60d6ef75a2e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056346"

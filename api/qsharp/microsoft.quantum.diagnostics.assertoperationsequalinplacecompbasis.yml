@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
+name: AssertOperationsEqualInPlaceCompBasis
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: >-
+  演算の `givenU` が、計算ベースのベクターに対してのみ操作の操作をチェックすることによって、指定した入力サイズに `expectedU` 操作と等しいかどうかを確認します。
+
+  これは、2つの unitaries 等しいかどうかについて、十分ではなく、必要な条件です。
+syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
+input:
+  content: '(nQubits: Int、与え u: (Qubit [] = > Unit)、expectedU: (Qubit [] = > Unit は形容詞))'
+  types:
+  - name: nQubits
+    summary: 操作 `givenU` と `expectedU` が動作する、qubits $n $ の数。
+    isPrimitive: true
+    uid: Int
+  - name: 権利
+    summary: $N $ qubits の操作を確認します。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: expectedU
+    summary: '`givenU` を比較する $n $ qubits の参照操作です。'
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: 単位
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066559"

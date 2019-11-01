@@ -1,0 +1,106 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.preparation
+name: Microsoft.Quantum.Preparation
+summary: " # <a name=\"summary\"></a>Summary\n この名前空間には、任意の初期状態に qubits を準備するための関数と操作が含まれています。"
+functions:
+- uid: microsoft.quantum.preparation.blochspherecoordinates
+  summary: >-
+    シングル qubit 状態の Bloch 球座標を計算します。
+
+
+    2つの複素数を $a 0、a1 $ は、qubit 状態を表します。 $a 0 \ket{0} + a1 \ket{1} = r e ^ {it} (e ^ {-i/phi/2}\cos{(\ シータ/2)} \ket{0}+ e ^ {i/phi/2}\sin{(\ シータ/2)} \ket{1}) $ となります。
+- uid: microsoft.quantum.preparation.quantumrom
+  summary: >-
+    は、指定された密度マトリックスを表すために、クォンタム ROM の手法を使用します。
+
+
+    $N $ 係数 $ \alpha_j $ のリストが指定されている場合、この $U 値は、\tilde\rho\sum_{j = 0} ^ {N-1} p_j\ket {j} \ bra {j} $ 密度マトリックス $ purification = j = 0} ^ {N-1} \rho | の \frac{の近似を準備するために、クォンタム ROM の手法を使用します。alpha_j |}{\ sumk | \alpha_k |}\ket{j}\bra{j} $。 この近似値で、$/イプシロン $ というエラーは $ | p_j-\frac{| alpha_j |} となります。{\ sumk | \alpha_k |} |\ le/イプシロン/N $ と $\|\tilde\rho-\rho\|。 つまり、$ $ \begin{align} U\ket{0}^ {\lceil\log_2 N\r ceil} \ k{0}^ {m} = \ sum_ = 0} ^ {N-1} \ sqrt{pnoj} \ket{j}\ket{\text{garbage}_j}.
+
+    \end{align} $ $
+- uid: microsoft.quantum.preparation.quantumromqubitcount
+  summary: '`QuantumROM`によって返された操作に割り当てる必要がある qubits の合計数を返します。'
+- uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
+  summary: >-
+    特定のクォンタム状態を準備する操作を返します。
+
+
+    返された操作 $U $ は、$-qubit コンピューティングベース状態 $ \ket{0...0} $ $n からの複雑な係数 $r j e ^ {i t_j} $ で、任意のクォンタム状態 $ \ket{\psi} $ を準備します。
+
+
+    新しく割り当てられたレジスタに対する U のアクションは、$ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}} によって指定されています。
+
+    \end{align} $ $
+- uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
+  summary: >-
+    指定されたクォンタム状態を準備する操作を返します。
+
+
+    返された操作 $U $ は、$ \alpha_j\ge $0 という正の係数を持つ任意のクォンタム状態 $ \ket{\psi} $ を、$ \ket{0...0} $ $n $ $ から準備します。
+
+
+    新しく割り当てられたレジスタに対する U のアクションは、$ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} \alpha_j \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | \alpha_j | ^ 2}} によって指定されています。
+
+    \end{align} $ $
+operations:
+- uid: microsoft.quantum.preparation.preparearbitrarystate
+  summary: >-
+    指定されたクォンタム状態を準備する操作を返します。
+
+
+    返された操作 $U $ は、$-qubit コンピューティングベース状態 $ \ket{0...0} $ $n からの複雑な係数 $r j e ^ {i t_j} $ で、任意のクォンタム状態 $ \ket{\psi} $ を準備します。
+
+
+    $ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}。
+
+    \end{align} $ $
+- uid: microsoft.quantum.preparation.preparechoistate
+  summary: 指定された操作について、指定された参照およびターゲットレジスタに Jamiłkowski 状態を準備します。
+- uid: microsoft.quantum.preparation.preparechoistatea
+  summary: 指定された参照およびターゲットレジスタに adjoint バリアントを使用して、指定された操作に対して Jamiłkowski 状態を準備します。
+- uid: microsoft.quantum.preparation.preparechoistatec
+  summary: 指定された参照およびターゲットレジスタに制御されるバリアントを持つ特定の操作に対して、[Jamiłkowski] 状態を準備します。
+- uid: microsoft.quantum.preparation.preparechoistateca
+  summary: 指定された参照およびターゲットレジスタに対し、制御されるバリアントと adjoint バリアントの両方を持つ特定の操作に対して、[Jamiłkowski] 状態を準備します。
+- uid: microsoft.quantum.preparation.prepareentangledstate
+  summary: >-
+    2つの qubit レジスタがペアになります。
+
+
+    つまり、2つのレジスタが指定されている場合、各レジスタの qubits の各ペアの間に、下回っあり状態 $/frac{1}{\ sqrt{2}} \ left (\ket{00} + \ket{11}/right) $ を準備します。各レジスタは $ \ket{0\ で始まると想定されます。cdots 0} $ 状態。
+- uid: microsoft.quantum.preparation.prepareidentity
+  summary: >-
+    レジスタが指定されている場合、そのレジスタを下回っ混合状態で準備します。
+
+
+    レジスタは、depolarizing チャネル全体を各 qubit に適用することで、$/bold done/2 ^ N $ 状態で準備されます。ここで $N $ はレジスタの長さです。
+- uid: microsoft.quantum.preparation.preparequbit
+  summary: >-
+    指定された Pauli 演算子の + 1 (`Zero`) eigenstate で qubit を準備します。
+
+    Id 演算子が指定されている場合、qubit は下回っ mixed 状態で準備されます。
+
+
+    Qubit が最初に $ \ket{0}$ state 内にあった場合、この操作では、指定された P下回っ Li 演算子の $ + $1 eigenstate の qubit を準備するか、または、代わりに mixed 状態 (<xref:microsoft.quantum.preparation.preparesinglequbitidentity>を参照) で `PauliI`使用します。
+
+
+    Qubit が $ \ket{0}$ 以外の状態であった場合、この操作は次のゲートを適用します: $H $ for `PauliX`、$HS $ for `PauliY`、$I $ for `PauliZ`、<xref:microsoft.quantum.preparation.preparesinglequbitidentity> の `PauliI`。
+- uid: microsoft.quantum.preparation.preparesinglequbitidentity
+  summary: >-
+    下回っ混合状態で qubit を準備します。
+
+
+    Depolarizing channel $ $ \begin{align}-オメガ (\rho) \mathrel{: =}/frac {4}{1}を適用することによって、指定された qubit を $-/$2 状態で準備します。 \{0、1、2、3\}}、シグマ\_{/mu} \rho/シグマ\_{/mu} ^ {\ダガー}、\end{align} $ $ where $/sigma\_i $ は $i $ th p Li 演算子です。 $ \rho $ は混合状態を表す密度演算子です。
+- uid: microsoft.quantum.preparation.prepareuniformsuperposition
+  summary: >-
+    0から `nIndices`をエンコードする、州を超える uniform 法則を作成します。
+
+
+    つまり、このユニタリ $U $ は、入力状態が $ \ket{0\cdots 0} $ の場合に、すべての数値の州 $0 $ に対して $M-$1 に対して uniform 法則を作成します。 つまり、$ $ \begin{align} U\ket{0}= \ frac{1}{\ sqrt{j = 0} ^ {M-1} \ket{j}. になります。
+
+    \end{align} $ $。
+ms.openlocfilehash: 2b9e3b89a29eb73b9b7417210628fce046c91209
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216018"

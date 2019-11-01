@@ -1,0 +1,74 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.boundc
+name: BoundC
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  1つの入力に対して動作する操作の配列を指定すると、によって、指定された各操作を順番に実行する新しい操作が生成されます。
+
+  修飾子 `C` は、配列内のすべての操作が制御可能であることを示します。
+examples: >-
+  The following are equivalent:
+
+
+  ```qsharp
+
+  let bound = BoundC([U, V]);
+
+  bound(x);
+
+  ```
+
+
+  and
+
+
+  ```qsharp
+
+  U(x); V(x);
+
+  ```
+syntax: "function BoundC (operations : ('T => Unit is Ctl)[]) : ('T => Unit is Ctl)"
+input:
+  content: "(操作: (' t = > Unit is Ctl) [])"
+  types:
+  - name: 操作
+    summary: 指定された入力に対して実行される一連の操作。
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+output:
+  content: (' T = > 単位は Ctl)
+  types:
+  - summary: 入力に基づいて指定された各操作を順番に実行する新しい操作。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: 配列内の各操作が動作するターゲット。
+seeAlso:
+- microsoft.quantum.canon.bound
+ms.openlocfilehash: 46a82065b3a236ad0e0a02894d6b1b3e2a1ceba1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068174"
