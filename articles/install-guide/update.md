@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: fc430a77f88878437e662c5b54507f70f3c6e020
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: ebf1f15d65a12c921cd3f04e4111d463d1060f8e
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185853"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463283"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum Development Kit の更新 (QDK)
 
@@ -19,9 +19,58 @@ Microsoft Quantum Development Kit (QDK) を最新バージョンに更新する�
 
 この記事では、QDK が既にインストールされていることを前提としています。 を初めてインストールする場合は、[インストールガイド](xref:microsoft.quantum.install)を参照してください。
 
-更新手順は、開発環境によって異なります。 次のセクションから環境を選択します。
 
-## <a name="python"></a>Python
+## <a name="updating-q-projects"></a>Q # プロジェクトを更新しています 
+
+1. まず、 [.NET Core SDK 3.0](https://dotnet.microsoft.com/download)の最新バージョンをインストールし、コマンドプロンプトで次のコマンドを実行します。
+```bash
+dotnet --version
+```
+ 出力が3.0.100 以上であることを確認してから、セットアップに応じて次の手順に従います。
+
+### <a name="in-visual-studio"></a>Visual Studio で使用する
+ 
+ 1. 最新バージョンの Visual Studio 2019 に更新する方法について[は、こちら](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019)を参照してください。
+ 2. Visual Studio でソリューションを開く
+ 3. メニューから [ビルド > クリーンソリューション] を選択します。 
+ 4. 各 .csproj ファイルの[ターゲットフレームワーク](https://docs.microsoft.com/visualstudio/ide/visual-studio-multi-targeting-overview?view=vs-2019#change-the-target-framework)を netcoreapp 3.0 (または、ライブラリプロジェクトの場合は netstandard 2.1) に更新します。
+ 5. ソリューション内のすべてのファイルを保存して閉じる
+ 6. ツール > コマンドライン > を選択し開発者コマンドプロンプト
+ 7. ソリューション内の各プロジェクトに対して、次のコマンドを実行します。
+ ```bash
+ dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
+ ```
+プロジェクトで他の Microsoft の Quantum パッケージが使用されている場合は、コマンドも実行します。 
+ 8. コマンドプロンプトを閉じ、[ビルド > ビルド] を選択します (リビルドは最初に失敗するため、[ソリューションのリビルド] を選択しない*でください)* 。
+
+### <a name="in-visual-studio-code"></a>Visual Studio Code
+
+1. Visual Studio Code で、更新するプロジェクトが格納されているフォルダーを開きます。
+1. ターミナル > [新しいターミナル] を選択します。
+1. コマンドラインを使用して更新するための手順に従います。
+
+### <a name="using-the-command-line"></a>コマンドラインの使用
+
+1. プロジェクトファイルが格納されているフォルダーに移動します。
+2. 次のコマンドを実行します。
+```bash
+dotnet clean [project_name].csproj
+```
+
+3. 各 .csproj ファイルの[ターゲットフレームワーク](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)を netcoreapp 3.0 (または、ライブラリプロジェクトの場合は netstandard 2.1) に更新します。
+4. 次のコマンドを実行します。
+```bash
+dotnet add package Microsoft.Quantum.Development.Kit
+```
+プロジェクトで他の Microsoft の Quantum パッケージが使用されている場合は、コマンドも実行します。
+
+5. すべてのファイルを保存して閉じる
+6. プロジェクトの依存関係ごとに1-4 を繰り返し、メインプロジェクトが含まれているフォルダーに戻り、を実行します。
+```bash
+dotnet build [project_name].csproj
+```
+
+## <a name="update-iq-for-python"></a>Python 用の IQ # の更新
 
 1. `iqsharp` カーネルを更新する
 
@@ -39,8 +88,8 @@ Microsoft Quantum Development Kit (QDK) を最新バージョンに更新する�
     次の出力が表示されます。
 
     ```bash
-    iqsharp: 0.9.1909.3002
-    Jupyter Core: 1.1.18837.0
+    iqsharp: 0.10.1911.307
+    Jupyter Core: 1.2.20112.0
     ```
 
 1. `qsharp` パッケージを更新する
@@ -59,14 +108,18 @@ Microsoft Quantum Development Kit (QDK) を最新バージョンに更新する�
 
     ```bash
     Name: qsharp
-    Version: 0.9.1909.3002
+    Version: 0.10.1911.307
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
+    ```
+1. `.qs` ファイルの場所から次のコマンドを実行します。
+    ```bash
+    python -c "import qsharp; qsharp.reload()"
     ```
 
 1. 更新された QDK バージョンを使用して、既存の quantum プログラムを実行できるようになりました。
 
-## <a name="jupyter-notebooks"></a>Jupyter Notebook
+## <a name="update-iq-for-jupyter-notebooks"></a>Jupyter notebook の IQ # を更新する
 
 1. `iqsharp` カーネルを更新する
 
@@ -84,13 +137,17 @@ Microsoft Quantum Development Kit (QDK) を最新バージョンに更新する�
     次の出力が表示されます。
 
     ```bash
-    iqsharp: 0.9.1909.3002
-    Jupyter Core: 1.1.18837.0
+    iqsharp: 0.10.1911.307
+    Jupyter Core: 1.2.20112.0
+    ```
+1. Jupyter Notebook 内のセルから次のコマンドを実行します。
+    ```
+    %workspace reload
     ```
 
 1. これで、既存の Jupyter notebook を開いて、更新された QDK で実行できるようになりました。
 
-## <a name="c-on-windows-using-visual-studio"></a>C#Windows の場合、Visual Studio の使用
+## <a name="update-visual-studio-qdk-extension"></a>Visual Studio QDK 拡張機能の更新
 
 1. Q # Visual Studio 拡張機能を更新する
 
@@ -100,16 +157,7 @@ Microsoft Quantum Development Kit (QDK) を最新バージョンに更新する�
     > [!NOTE]
     > プロジェクトテンプレートは、拡張機能を使用して更新されます。 更新されたテンプレートは、新しく作成されたプロジェクトにのみ適用されます。 拡張機能が更新されても、既存のプロジェクトのコードは更新されません。
 
-1. QDK パッケージを更新する
-
-    - 既存のアプリケーションを開く
-    - ソリューションエクスプローラーでの**依存関係**の選択
-    - **[NuGet パッケージの管理]** を選択します。
-    - Microsoft の Quantum パッケージを最新バージョンに更新し**ます。**
-
-1. これで、最新の QDK でアプリケーションを実行できるようになりました。
-
-## <a name="c-using-vs-code"></a>C#、VS Code の使用
+## <a name="update-vs-code-qdk-extension"></a>QDK 拡張機能を更新 VS Code
 
 1. クォンタム VS Code 拡張機能を更新する
 
@@ -120,23 +168,8 @@ Microsoft Quantum Development Kit (QDK) を最新バージョンに更新する�
 
 1. クォンタムプロジェクトテンプレートを更新します。
 
-   - **ビュー** -> **コマンドパレット**にアクセス
+   - **[表示]**  ->  **[コマンド パレット]** の順に選択します。
    - **[Q #: プロジェクトテンプレートのインストール]** を選択します。
-
-1. VS Code で既存のアプリケーションを開きます。
-
-   - .Csproj ファイルを編集して、新しいバージョンのパッケージを追加します。
-
-    ```xml
-    <ItemGroup>
-        <PackageReference Include="Microsoft.Quantum.Standard" Version="0.9.1909.3002" />
-        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.9.1909.3002" />
-    </ItemGroup>
-    ```
-
-    他の `Microsoft.Quantum` パッケージを使用する場合は、これらも更新します。
-
-1. 更新された QDK でアプリケーションを実行できるようになりました。
 
 ## <a name="c-using-the-dotnet-command-line-tool"></a>C#、`dotnet` コマンドラインツールの使用
 
@@ -145,25 +178,6 @@ Microsoft Quantum Development Kit (QDK) を最新バージョンに更新する�
     ```bash
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
-
-1. 既存のアプリケーションを更新して実行する
-
-    - アプリケーションで QDK パッケージのバージョンを更新する
-
-        ```bash
-        dotnet add package Microsoft.Quantum.Development.Kit
-        dotnet add package Microsoft.Quantum.Standard
-        ```
-
-        アプリケーションで他の `Microsoft.Quantum` パッケージを使用する場合は、これらも更新します。
-
-    - アプリケーションを実行する
-
-        ```bash
-        dotnet run
-        ```
-
-    - 新しいパッケージバージョンでアプリケーションが実行されます。
 
 ## <a name="whats-next"></a>次に、
 

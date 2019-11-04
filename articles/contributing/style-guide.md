@@ -6,27 +6,23 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 56455e9d5cd452b8620ee794f40563d1d3040193
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183847"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463311"
 ---
 # <a name="q-style-guide"></a>Q # スタイルガイド #
 ## <a name="general-conventions"></a>一般的な規則 ##
 
 このガイドで推奨されている規則は、Q&a で記述されたプログラムやライブラリを読みやすく理解しやすくすることを目的としています。
 
-# <a name="guidancetabguidance"></a>[ガイダンス](#tab/guidance)
+## <a name="guidance"></a>ガイダンス
 
 次のことをお勧めします。
 
 - より読みやすくわかりやすいコードをユーザーに提供するために意図的に作成しない限り、規則を無視しないでください。
-
-# <a name="examplestabexamples"></a>[例](#tab/examples)
-
-***
 
 ## <a name="naming-conventions"></a>名前付け規則 ##
 
@@ -67,7 +63,7 @@ Quantum 開発キットの提供では、quantum 開発者が簡単に読むこ�
 | 動詞 | 期待される効果 |
 | ---- | ------ |
 | 適用 | 入力として指定された操作が呼び出されます。 |
-| アサート | シミュレーターによって実行されるクォンタム測定の結果に関する仮説 |
+| Assert | シミュレーターによって実行されるクォンタム測定の結果に関する仮説 |
 | 見積もり | 1つ以上の測定値からの推定値を表す、古典的な値が返されます。 |
 | 計測 | クォンタム測定が実行され、その結果がユーザーに返されます。 |
 | 準備 | 指定された qubits のレジスタは、特定の状態に初期化されます |

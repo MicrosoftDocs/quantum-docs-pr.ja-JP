@@ -1,18 +1,20 @@
 ---
-title: 用語集 |Microsoft Docs
+title: クォンタムコンピューティング用語集 |Microsoft Docs
 description: クォンタム用語の用語集
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: bfa275b3330ea2c2a541b08f137893b63b6213aa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: ce15fee2be68d41f0b806be50320b562a749c3b7
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183626"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442539"
 ---
+# <a name="quantum-computing-glossary"></a>クォンタムコンピューティング用語集
+
 |期間|定義|
 |-------------|----------|
 |Adjoint|操作の複雑な共役の転置。 ユニタリ演算子を実装する操作の場合、adjoint は演算の逆になります。|
@@ -29,7 +31,7 @@ ms.locfileid: "73183626"
 |Measurement|Qubit (または qubit のセット) から古典ビットを取得します。 詳細については、「 [Qubit の概念](xref:microsoft.quantum.concepts.qubit)」を参照してください。|
 |変更可能|値が作成後に変更される可能性がある変数。|
 |名前空間|関連する名前 (通常は操作、関数、型) のコレクションのラベル。 たとえば、名前空間[`Microsoft.Quantum.Preparation`](xref:microsoft.quantum.preparation)は、初期状態の準備に役立つ標準ライブラリで定義されているすべてのシンボルをラベル付けします。|
-|Operation|Q # でのクォンタム実行の基本単位。 これは、C またC++は Python の関数、または Java のC#静的メソッドとほぼ同じです。|
+|Operation|Q # でのクォンタム実行の基本単位。 これは、C や C++、Python の関数、または C# や Java の静的メソッドとほぼ同じものです。|
 |オペレーターアプリケーション|クォンタム操作を実行しています。 通常、これは、現在の状態ベクトルに対して、通常は、ユニタリ行列を適用します。 詳細については、「[クォンタムの概念の概要」を](xref:microsoft.quantum.concepts.intro)参照してください。|
 |Oracle|実行時にクォンタムアルゴリズムにデータ依存の情報を提供するサブルーチン。 通常、目標は、法則内の入力に対応する出力の法則を提供することです。   |
 |部分アプリケーション|すべての必須パラメーターを指定せずに、関数または操作を呼び出します。 は、今後のアプリケーション中に指定された不足パラメーターのみを必要とする新しい呼び出し可能を返します。|

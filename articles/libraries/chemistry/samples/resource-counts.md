@@ -6,16 +6,16 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
-ms.openlocfilehash: b28a27c4c1f1e64644fcfb074a731ff7b65cacb6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: f9311c1987ced4336c4e98bdb984fbee009e9acc
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184085"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442467"
 ---
-## <a name="obtaining-resource-counts"></a>リソース数の取得
+# <a name="obtaining-resource-counts"></a>リソース数の取得
 
-クラシックコンピューターで $n $ qubits をシミュレートするコストは、$n $ を使用して指数関数的に拡大できます。 これにより、完全な状態シミュレーターで実行できる量子化学シミュレーションのサイズが大幅に制限されます。 しかし、大規模な化学インスタンスの場合は、役に立つ情報が得られる可能性があります。 ここでは、[トレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)を使用して、化学をシミュレートするための T ゲートや cnot ゲートの数などのリソースコストを自動で取得する方法について説明します。 このような情報は、quantum のコンピューターがこれらの quantum の化学アルゴリズムを実行するのに十分な大きさであることが通知されます。 参考のために、提供されている `GetGateCount` サンプルを参照してください。
+従来のコンピューターで $n $ qubits をシミュレートするコストは、$n $ を使用して指数関数的に拡大できます。 これにより、完全な状態シミュレーターで実行できる量子化学シミュレーションのサイズが大幅に制限されます。 しかし、大規模な化学インスタンスの場合は、役に立つ情報が得られる可能性があります。 ここでは、[トレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)を使用して、化学をシミュレートするための T ゲートや cnot ゲートの数などのリソースコストを自動で取得する方法について説明します。 このような情報は、quantum のコンピューターがこれらの quantum の化学アルゴリズムを実行するのに十分な大きさであることが通知されます。 参考のために、提供されている `GetGateCount` サンプルを参照してください。
 
 たとえば、「[ファイルからの読み込み](xref:microsoft.quantum.chemistry.examples.loadhamiltonian)」の例で説明したように、Broombridge スキーマから読み込まれた `FermionHamiltonian` インスタンスが既に存在するとします。 
 
@@ -83,7 +83,7 @@ operation RunQubitizationStep (qSharpData: JordanWignerEncodingData) : Double {
 }
 ```
 
-ここで、トレースシミュレーターを構成して、関心のあるリソースを追跡します。 この例では、`usePrimitiveOperationsCounter` フラグを `true`に設定することによって、プリミティブなクォンタム操作をカウントします。 技術的な詳細 `throwOnUnconstraintMeasurement` は `false` に設定されています。これは、Q # コードによって測定結果の probabiltiy が正しくアサートされない場合に、例外が発生しないようにします。
+ここで、トレースシミュレーターを構成して、関心のあるリソースを追跡します。 この例では、`usePrimitiveOperationsCounter` フラグを `true`に設定することによって、プリミティブなクォンタム操作をカウントします。 技術的な詳細 `throwOnUnconstraintMeasurement` は `false` に設定されています。これは、Q # コードによって測定結果の確率が正しくアサートされない場合に発生する例外を回避するためです。
 
 ```csharp
 private static QCTraceSimulator CreateAndConfigureTraceSim()
