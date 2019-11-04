@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.math.cos
+name: Cos
+type: function
+namespace: Microsoft.Quantum.Extensions.Math
+summary: >-
+  > [!WARNING]
+
+  > 不使用
+
+
+  @"microsoft.quantum.math.cos"を使用してください。
+syntax: 'function Cos (theta : Double) : Double'
+input:
+  content: '(theta : Double)'
+  types:
+  - name: theta
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+metadata:
+  ms.openlocfilehash: 73639da65d9f129b17e782af864248fed47a53a0
+  ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/31/2019
+  ms.locfileid: "73224620"

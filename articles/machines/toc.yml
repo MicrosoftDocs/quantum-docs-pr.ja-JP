@@ -1,4 +1,4 @@
-- name: 従来型のマシンとドライバー
+- name: 概要
   href: index.md
 - name: 量子シミュレーター
   href: full-state-simulator.md

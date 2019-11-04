@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.i
+name: I
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: 1つの qubit で id 操作 (no op) を実行します。
+remarks: これは、何の操作も行いません。 これは完全性を実現するために用意されています。また、アルゴリズムで id を呼び出したり、パラメーターとして渡したりすると便利な場合があります。
+syntax: 'operation I (target : Qubit) : Unit'
+input:
+  content: '(target : Qubit)'
+  types:
+  - name: target
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: fd4e9566c6ed1998681385d46643b4f001c6fb6e
+  ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/31/2019
+  ms.locfileid: "73234174"
