@@ -6,16 +6,16 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.intro
-ms.openlocfilehash: d8759b9f043d2e13f4b0c97d54bd824c7e87d6de
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 560926f6f3e05c32a935f01ca5107a614e743ee2
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035274"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442477"
 ---
 # <a name="the-q-programming-language"></a>Q# プログラミング言語
 
-# <a name="introduction"></a>はじめに
+## <a name="introduction"></a>はじめに
 
 量子コンピューティングの自然モデルは、GPU、FPGA、およびその他の補完プロセッサで使用されるものと同様に、量子コンピューターをコプロセッサとして扱います。
 主要な制御ロジックは、従来の "ホスト" コンピューターでクラシック コードを実行します。
@@ -36,7 +36,7 @@ Q# の最上位レベルのコンストラクトは、ユーザー定義型、�
 - [ステートメント](xref:microsoft.quantum.language.statements)
 - [ファイル構造](xref:microsoft.quantum.language.file-structure)
 
-# <a name="conventions"></a>規則
+## <a name="conventions"></a>規則
 
 一般的な句読点がすべての状況で一貫して使用されるようにするために取り組んでいます。
 このような記号は常に同じことを意味し、同じ概念は常に同じ方法で表されるため、Q# が学習しやすく、かつ読みやすくなることが期待されます。

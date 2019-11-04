@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.rest
+name: Rest
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 最初の配列要素が削除される点を除いて、入力配列と等しい配列を作成します。
+syntax: "function Rest (array : 'T[]) : 'T[]"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: 最後の要素が出力配列を形成する配列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: '`array[1..Length(array) - 1]`要素を格納している配列。'
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 配列要素の型。
+metadata:
+  ms.openlocfilehash: 96779f32f93d2d045502b5e7264de1af39affd9f
+  ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/31/2019
+  ms.locfileid: "73218041"

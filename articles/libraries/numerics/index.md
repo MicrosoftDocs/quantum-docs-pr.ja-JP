@@ -6,14 +6,14 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.intro
-ms.openlocfilehash: 0bffe0c2adeacce514fd9985c9206f6f9c3157be
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: efd1a712616534ac281433fc008f0983271881d7
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056431"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442437"
 ---
-# <a name="introduction"></a>はじめに
+# <a name="introduction-to-the-quantum-numerics-library"></a>量子数値ライブラリの概要
 
 多くの量子アルゴリズムは、入力の重ね合わせに対して数学関数を評価する[オラクル](xref:microsoft.quantum.concepts.oracles)に依存しています。
 たとえば、Shor のアルゴリズムの主要なコンポーネントは、固定 $a$ に対して $f(x) = a^x\operatorname{mod} N$ を、数値を因数 $N$ に対して、$x$ a $2n$-qubit 整数を均一の重ね合わせですべての $2n$-bit 文字列に対して、評価します。

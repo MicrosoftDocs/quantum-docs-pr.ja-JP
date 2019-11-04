@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.hy
+name: HY
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Y ベースのアナログを、Z 軸と Y 軸をインターチェンジする Hadamard 変換に適用します。
+
+
+  1つの qubit で Y Hadamard 変換 $H y = S H $ は次のようになります。
+
+
+  \begin{align} H_Y \mathrel{: =} \ frac{1}{\ sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ i &-i \end{bmatrix}.
+
+  \end{align}
+syntax: 'operation HY (target : Qubit) : Unit'
+input:
+  content: '(target : Qubit)'
+  types:
+  - name: target
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 2cbbbe29e3cef42ead1f85c01ffa15ce016e8402
+  ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/31/2019
+  ms.locfileid: "73227833"

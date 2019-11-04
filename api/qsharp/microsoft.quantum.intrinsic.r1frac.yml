@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.r1frac
+name: R1Frac
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  $ \Ket{1}$ state に関する回転を、dyadic の分数として指定された角度だけ適用します。
+
+
+  \begin{align} R_1 (n, k) \mathrel{: =} \operatorname{diag} (1, e ^ {i \ pi k/2 ^ n})。
+
+  \end{align}
+
+
+  > [!WARNING]
+
+  > この操作では、@"microsoft.quantum.intrinsic.r"からの**逆**の符号規則を使用します。 @"microsoft.quantum.intrinsic.r1"に含まれる $ 1/2 $ の係数は含まれません。
+remarks: >-
+  次と同じです。
+
+
+  ```qsharp
+
+  RFrac(PauliZ, -numerator, denominator + 1, qubit);
+
+  RFrac(PauliI, numerator, denominator + 1, qubit);
+
+  ```
+syntax: 'operation R1Frac (numerator : Int, power : Int, qubit : Qubit) : Unit'
+input:
+  content: '(numerator : Int, power : Int, qubit : Qubit)'
+  types:
+  - name: numerator
+    summary: Qubit を回転する角度の、dyadic の分数表現の分子。
+    isPrimitive: true
+    uid: Int
+  - name: power
+    summary: Qubit を回転する角度の分母を指定する2の累乗。
+    isPrimitive: true
+    uid: Int
+  - name: qubit
+    summary: ゲートを適用する qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: c91aa9424abd038fa3a5a22fd23ac92cce171414
+  ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/31/2019
+  ms.locfileid: "73233987"
