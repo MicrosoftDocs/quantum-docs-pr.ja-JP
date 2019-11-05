@@ -1,0 +1,40 @@
+- name: Microsoft Quantum ドキュメント
+  href: index.yml
+- name: 概要
+  href: welcome.md
+- name: クイック スタート
+  items:
+    - name: QDK をインストールする
+      href: install-guide/index.md
+    - name: QDK を更新する
+      href: install-guide/update.md
+    - name: 初めての量子プログラムを作成する
+      href: quickstart.md
+- name: 概念
+  items:
+    - name: 量子開発手法
+      topicHref: techniques/index.md
+      href: techniques/toc.yml
+    - name: 'Q# プログラミング言語'
+      topicHref: language/index.md
+      href: language/toc.yml
+    - name: 'Q# ライブラリ'
+      href: libraries/toc.yml
+    - name: 量子コンピューティングの概念
+      href: concepts/toc.yml
+    - name: 量子コンピューターをホストする方法
+      href: machines/toc.yml
+- name: リソース
+  items:
+    - name: QDK のリリース ノート
+      topicHref: relnotes/index.md
+      href: relnotes/toc.yml
+    - name: QDK への貢献
+      href: contributing/toc.yml
+      topicHref: contributing/index.md
+    - name: 用語集
+      href: Glossary.md
+    - name: BLOB の詳細
+      href: for-more-info.md
+    - name: ライセンス
+      href: license.md

@@ -1,0 +1,14 @@
+- name: 'Q# とファイル構造'
+  href: file-structure.md
+- name: 操作と関数
+  href: operations-and-functions.md
+- name: ローカル変数
+  href: local-variables.md
+- name: 量子ビットの操作
+  href: working-with-qubits.md
+- name: まとめ
+  href: putting-it-all-together.md
+- name: 先に進む
+  href: going-further.md
+- name: テストとデバッグ
+  href: testing-and-debugging.md

@@ -1,0 +1,12 @@
+- name: リファレンス
+  items:
+    - name: 'Q# ライブラリ'
+      href: qsharp/toc.yml
+    - name: .NET ライブラリ
+      items:
+        - name: トレース シミュレーター
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
+        - name: 量子化学
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry'
+    - name: Python ライブラリ
+      href: 'https://docs.microsoft.com/python/qsharp'
