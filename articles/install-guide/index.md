@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 3ec53934436b47908fd4d794a98933010f6059a7
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 090cf98612c6c549c733e54f9dcbf74442b30fbd
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035309"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442265"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum Development Kit (QDK) のインストール
 
@@ -26,11 +26,13 @@ Microsoft Quantum Development Kit (QDK) をインストールする方法につ�
 
 ## <a name="develop-with-python"></a>Python を使用した開発
 
+Python 用の qsharp パッケージを使用すると、Python 内から Q# の演算と関数を簡単にシミュレートできます。 IQ# (発音: アイ キュー シャープ) は主に Jupyter と Python で使用される拡張機能であり、Q# の演算をコンパイルおよびシミュレートするためのコア機能を提供します。
+
 1. 前提条件
 
     - [Python](https://www.python.org/downloads/) 3.6 以降
     - [PIP](https://pip.pypa.io/en/stable/installing) Python パッケージ マネージャー
-    - [.NET Core SDK 2.1 以降](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 以降](https://www.microsoft.com/net/download)
 
 1. `iqsharp` パッケージのインストール
 
@@ -87,11 +89,16 @@ Microsoft Quantum Development Kit (QDK) をインストールする方法につ�
 
 ## <a name="develop-with-jupyter-notebooks"></a>Jupyter Notebook を使用した開発
 
+教育機関向けの設定、科学的研究所、およびオンラインベースのコラボレーション プログラミングで好まれる Jupyter Notebook では、命令、メモ、その他のコンテンツと共に、Q# コードを含むインプレース コード実行が提供されるようになりました。  独自の Q# ノートブックの作成を開始するには、次の手順を実行する必要があります。
+
+IQ# (発音: アイ キュー シャープ) は主に Jupyter と Python で .NET Core SDK に対して使用される拡張機能であり、Q# の演算をコンパイルおよびシミュレートするためのコア機能を提供します。
+
+
 1. 前提条件
 
     - [Python](https://www.python.org/downloads/) 3.6 以降
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [.NET Core SDK 2.1 以降](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 以降](https://www.microsoft.com/net/download)
 
 1. `iqsharp` パッケージのインストール
 
@@ -120,11 +127,22 @@ Microsoft Quantum Development Kit (QDK) をインストールする方法につ�
 
     - Notebook のこのセルを実行します。
 
-        ![Jupyter Notebook のセル](~/media/install-guide-jupyter.png)
+        ![Q# コードを含む Jupyter Notebook セル](~/media/install-guide-jupyter.png)
 
         セルの出力に `SayHello` が表示されます。 Jupyter Notebook で実行すると、Q# コードがコンパイルされ、ノートブックから検出した操作の名前が出力されます。
 
+
+    - 新しいセルで、`%simulate` マジックを使用して、作成した演算の量子コンピューターでの実行をシミュレートします。
+
+        ![%simulate マジックのある Jupyter Notebook セル](~/media/install-guide-jupyter-simulate.png)
+
+        呼び出した演算の結果 (この場合は空) と共に、メッセージが画面に表示されます。
+
+
 ## <a name="develop-with-c-on-windows-using-visual-studio"></a>Visual Studio を使用した Windows での C# の開発
+
+Visual Studio には、開発者がアプリケーションを構築する際にガイドするコード補完や構文の強調表示などの優れた機能が用意されており、Q# プログラムの充実した環境を提供します。  Q# Visual Studio 拡張機能には、構文の強調表示や IntelliSense のサポートに加えて、Q# のファイルおよびプロジェクトのテンプレートが含まれます。
+
 
 1. 前提条件
 
@@ -158,12 +176,16 @@ Microsoft Quantum Development Kit (QDK) をインストールする方法につ�
 > [!NOTE]
 > * 1 つの Visual Studio ソリューションに複数のプロジェクトがある場合は、ソリューションに含まれるすべてのプロジェクトが、ソリューションと同じフォルダーまたはそのサブフォルダーのいずれかに存在する必要があります。  
 
-## <a name="develop-with-c-using-vs-code"></a>VS Code を使用した C# での開発
+## <a name="develop-with-c-using-visual-studio-code"></a>Visual Studio Code を使用した C# での開発
+
+Visual Studio Code (VS Code) には、開発者がアプリケーションを構築する際にガイドするコード補完や構文の強調表示などの優れた機能が用意されており、Windows、Linux、Mac などの複数のコンピューター環境にわたって Q# プログラムの開発用の充実した環境を提供します。  Q# VS Code 拡張機能には、構文の強調表示と Q# コード スニペットが含まれています。
+
+Visual Studio Code (VS Code) には、開発者がアプリケーションを構築する際にガイドするコード補完や構文の強調表示などの優れた機能が用意されており、Windows、Linux、Mac などの複数のコンピューター環境にわたって Q# プログラムの開発用の充実した環境を提供します。  Q# VS Code 拡張機能には、構文の強調表示と Q# コード スニペットが含まれています。
 
 1. 前提条件
 
    - [VS Code](https://code.visualstudio.com/download)
-   - [.NET Core SDK 2.1 以降](https://www.microsoft.com/net/download)
+   - [.NET Core SDK 3.0 以降](https://www.microsoft.com/net/download)
 
 1. Quantum VS Code 拡張機能のインストール
 
@@ -195,9 +217,11 @@ Microsoft Quantum Development Kit (QDK) をインストールする方法につ�
 
 ## <a name="develop-with-c-using-the-dotnet-command-line-tool"></a>`dotnet` コマンド ライン ツールを使用した C# での開発
 
+もちろん、単に .NET Core SDK と QDK プロジェクト テンプレートをインストールして、コマンド ラインから Q# プログラムを構築して実行することもできます。 
+
 1. 前提条件
 
-    - [.NET Core SDK 2.1 以降](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 以降](https://www.microsoft.com/net/download)
 
 1. .NET 用量子プロジェクト テンプレートをインストールします。
 

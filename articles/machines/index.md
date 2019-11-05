@@ -1,19 +1,19 @@
 ---
-title: 量子シミュレーターと従来型のドライバー | Microsoft Docs
+title: 量子シミュレーターとホスト アプリケーション | Microsoft Docs
 description: 従来型のコンピューティング .NET 言語 (通常 C# または Q#) を使用して量子シミュレーターを実行する方法について説明します。
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: 5ac79280669ae0acfe993a1c2ae1c069b0c01848
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 14aed75ed0ed192f88699b1c7dbacfae23f74642
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035113"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442229"
 ---
-# <a name="classical-drivers-and-machines"></a>従来型のドライバーとコンピューター
+# <a name="quantum-simulators-and-host-applications"></a>量子シミュレーターとホスト アプリケーション
 
 ## <a name="what-youll-learn"></a>ここでは、次の内容について学習します
 
@@ -52,7 +52,7 @@ ms.locfileid: "73035113"
 * `QCTraceSimulator` クラスの[トレース ベースのリソース推定機能](xref:microsoft.quantum.machines.qc-trace-simulator.intro)を使用すると、アルゴリズムの呼び出しグラフ全体におけるリソース消費の高度な分析を実行できます。
 * `ToffoliSimulator` クラスの [Toffoli シミュレーター](xref:microsoft.quantum.machines.toffoli-simulator)。
 
-## <a name="writing-a-classical-driver-program"></a>Classical Driver Program を作成する
+## <a name="writing-a-host-application"></a>ホストアプリケーションを作成する
 
 [量子プログラムを記述する方法](xref:microsoft.quantum.write-program)に関する記事では、テレポート アルゴリズムの単純な C# ドライバーを記述しました。 C# ドライバーには主に次の 4 つの目的があります。
 
@@ -94,7 +94,7 @@ Q# にはファイル システムにアクセスするためのメカニズム�
 * 配列は、`Microsoft.Quantum.Simulation.Core.QArray<T>` オブジェクトにラップする必要があります。
     `QArray` クラスには、適切なオブジェクトの順序が付けられたコレクション (`IEnumerable<T>`) を受け取ることができるコンストラクターがあります。
 * Q# で `()` と示される空のタプルは、C# では `QVoid.Instance` で表されます。
-* 空でないタプルは、.NET `ValueType` インスタンスとして表されます。
+* 空でないタプルは、.NET `ValueTuple` インスタンスとして表されます。
 * Q# ユーザー定義型は、基本データ型として渡されます。
 * `Run` メソッドに操作または関数を渡すには、シミュレーターの `Get<>` メソッドを使用して、操作または関数のクラスのインスタンスを取得する必要があります。
 

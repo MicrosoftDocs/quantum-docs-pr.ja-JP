@@ -1,19 +1,19 @@
 ---
-title: 量子コンピューティングの概念
-description: 量子コンピューティングとは
+title: 量子コンピューティングの歴史と背景
+description: 量子コンピューティングの歴史、そのしくみに関する背景、および Microsoft Quantum Development Kit について説明します。
 author: QuantumWriter
-ms.author: nawiebe@microsoft.com
+ms.author: nawiebe
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 37f5181f2d9e4e11efa29811c24116ca7d64f81b
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fb1df9e3460c18d0cdc0ff430fa236192b3aa2fa
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72978950"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442298"
 ---
-# <a name="what-is-quantum-computing"></a>量子コンピューティングとは
+# <a name="quantum-computing-history-and-background"></a>量子コンピューティングの歴史と背景
 
 過去数年で多数の新しいコンピューター テクノロジが登場した中、量子コンピューティングは、開発者にとって最大限のパラダイムシフトとなるテクノロジであると考えられています。  量子コンピューターは、1980年に [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) と [Yuri Manin](https://en.wikipedia.org/wiki/Yuri_Manin) によって提案されました。  量子コンピューティングを推進させたのは、脅威的な科学の進化に立ちはだかった、単純なシステムでさえもモデル化することができないという、物理学史上最も大きな課題の 1 つから来ています。 このように、量子力学は 1900 年から 1925 年の間に開発され、化学、物性物理学、そして最終的にはコンピューター チップから LED ライトに至るテクノロジの基礎となります。  しかし、これらの成功にもかかわらず、量子力学をもってしてもモデル化することができなかった最も単純なシステムもあります。  これは、たった数十個の粒子が相互作用するシステムのシミュレートであっても、従来のコンピューターでは数千年分以上の処理能力が必要になるためです。
 
