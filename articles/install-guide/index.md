@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 090cf98612c6c549c733e54f9dcbf74442b30fbd
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 2a098d89f13278d7137bf182a184a74afb9393be
+ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442265"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462871"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum Development Kit (QDK) のインストール
 
@@ -177,8 +177,6 @@ Visual Studio には、開発者がアプリケーションを構築する際に
 > * 1 つの Visual Studio ソリューションに複数のプロジェクトがある場合は、ソリューションに含まれるすべてのプロジェクトが、ソリューションと同じフォルダーまたはそのサブフォルダーのいずれかに存在する必要があります。  
 
 ## <a name="develop-with-c-using-visual-studio-code"></a>Visual Studio Code を使用した C# での開発
-
-Visual Studio Code (VS Code) には、開発者がアプリケーションを構築する際にガイドするコード補完や構文の強調表示などの優れた機能が用意されており、Windows、Linux、Mac などの複数のコンピューター環境にわたって Q# プログラムの開発用の充実した環境を提供します。  Q# VS Code 拡張機能には、構文の強調表示と Q# コード スニペットが含まれています。
 
 Visual Studio Code (VS Code) には、開発者がアプリケーションを構築する際にガイドするコード補完や構文の強調表示などの優れた機能が用意されており、Windows、Linux、Mac などの複数のコンピューター環境にわたって Q# プログラムの開発用の充実した環境を提供します。  Q# VS Code 拡張機能には、構文の強調表示と Q# コード スニペットが含まれています。
 

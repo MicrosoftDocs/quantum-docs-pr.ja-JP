@@ -1,4 +1,4 @@
-- name: 'Q# とファイル構造'
+- name: 'Q# プログラムの概要'
   href: file-structure.md
 - name: 操作と関数
   href: operations-and-functions.md
