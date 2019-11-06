@@ -54,9 +54,10 @@ typeParameters:
   summary: 適用される最初の関数の出力型と、適用する2番目の関数の入力型。
 - uid: "'V"
   summary: 適用する2番目の関数の出力型。
-ms.openlocfilehash: 69fbd6a4fafbc61a63e41257b7100303fd48d4d4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73223073"
+metadata:
+  ms.openlocfilehash: 69fbd6a4fafbc61a63e41257b7100303fd48d4d4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73223073"

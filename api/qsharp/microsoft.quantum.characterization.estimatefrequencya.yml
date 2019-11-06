@@ -49,9 +49,10 @@ output:
   - summary: $M (P (\ket{00/cドット 0} \bra{00/cドット 0})) $ が `Zero`返された推定 $ \hat{p} $ は、バイアスをかける二項分出し $ \hat{p} = n\_{\uparrow}/n\_{\text{measurements}} $ を使用して取得したものであり、$n\_{\uparrow} $ は、観測される `Zero` の結果の数です。
     isPrimitive: true
     uid: Double
-ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73229176"
+metadata:
+  ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73229176"

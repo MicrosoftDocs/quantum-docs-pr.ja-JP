@@ -20,9 +20,10 @@ output:
   types:
   - summary: 新しい最上位要素として追加された `datum` の `stack`。 新しいスタックの長さは1つ増加します。
     uid: microsoft.quantum.canon.resultstack
-ms.openlocfilehash: 63191d8f9a7649f8b229d1288cb244dfe4fd7293
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73219350"
+metadata:
+  ms.openlocfilehash: 63191d8f9a7649f8b229d1288cb244dfe4fd7293
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73219350"

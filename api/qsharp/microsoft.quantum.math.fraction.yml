@@ -5,9 +5,10 @@ type: newtype
 namespace: Microsoft.Quantum.Math
 summary: '`p/q`フォームの有理数を表します。 要素 `p` は組の最初の要素で、`q` は組の2番目の要素です。'
 syntax: newtype Fraction = (Int, Int);
-ms.openlocfilehash: 5eee4a315cde3e04c93cc7b2a1d558ab9323273c
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73232950"
+metadata:
+  ms.openlocfilehash: 5eee4a315cde3e04c93cc7b2a1d558ab9323273c
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73232950"

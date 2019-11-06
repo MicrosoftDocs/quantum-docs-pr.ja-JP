@@ -6,17 +6,17 @@ namespace: Microsoft.Quantum.Canon
 summary: 指定された操作に対して Trotter – Suzuki インテグレーターを実装する操作を返します。
 syntax: "function DecomposeIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
 references: >-
-  We use the implementation in
+  の実装を使用します。
 
 
-  - [ *D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders* ](https://arxiv.org/abs/quant-ph/0508139)
+  - [*Berry、G. Ahokas、Cleve、サンダース、のよう*になります。](https://arxiv.org/abs/quant-ph/0508139)
 input:
-  content: '((n ステップ: Int, op: ((Int, Double, t) = > Unit is 形容詞 + Ctl)), trotterOrder: Int)'
+  content: "((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int)"
   types:
   - name: nSteps
     isPrimitive: true
     uid: Int
-  - name: ファンド
+  - name: op
     isOperation: true
     input:
       types:
@@ -41,7 +41,7 @@ input:
     isPrimitive: true
     uid: Int
 output:
-  content: ((Double, t) = > 単位は形容詞 + Ctl)
+  content: ((Double, 'T) => Unit is Adj + Ctl)
   types:
   - summary: Trotter – Suzuki インテグレーターを実装するユニタリを返します。最初のパラメーター `Double` は統合ステップサイズで、2番目のパラメーターは操作対象のターゲットです。
     isOperation: true
@@ -61,9 +61,10 @@ output:
 typeParameters:
 - uid: "'T"
   summary: 各時間ステップが動作する型。通常は、`Qubit[]` または `Qubit`ます。
-ms.openlocfilehash: 328db9b314320c724cf03adb19ee59d63a33e56e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067834"
+metadata:
+  ms.openlocfilehash: 328db9b314320c724cf03adb19ee59d63a33e56e
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067834"
