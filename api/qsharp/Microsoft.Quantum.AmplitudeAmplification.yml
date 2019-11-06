@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.amplitudeamplification
-name: AmplitudeAmplification
+name: Microsoft.Quantum.AmplitudeAmplification
 summary: " # <a name=\"summary\"></a>Summary\n この名前空間には、振幅増幅を実行するための関数と操作が含まれています。\n\n # <a name=\"description\"></a>description\n 無関係の部分反射を使用した振幅増幅は、ここで実装されている振幅増幅の最も一般的な形式です。\n\n これは、操作 AmpAmpObliviousByReflectionPhases を通じて呼び出されます。\n\n これには、`ancillaRegister` と `systemRegister`の2つのレジスタがあります。\n\n これは、`ancillaRegister` レジスタでのみ動作する `ReflectionOracle` 型の反射に対して2つの oracles を受け入れます。\n\n これは、両方のレジスタに共同で動作する `ObliviousOracle` 型の無関係振幅増幅を oracle に許可します。\n\n `ancillaRegister` する入力状態は、最初のリフレクション演算子 $I-2 \\ k {s} \\ bra {s} $ という一意の $-$1 eigenstate と想定されます。\n\n ターゲットクォンタムの状態に関する反射は、多くの場合、計算ベース $ \\ket{0\\cdots 0} $ からその状態を準備する oracle へのアクセスを前提として実装されます。\n\n これらの oracles の規則では、2つのレジスタが必要です。1つはシングル qubit `flagQubit` レジスタ、もう1つは、フロントシャードレジスタレジスタに登録します。\n\n 型 `StateOracle` の oracle は、両方のレジスタに共同で動作し、`flagQubit` レジスタ内の $ \\ket{1}$ によってフラグが設定されたターゲット状態を作成します。\n\n このフラグの状態に関するリフレクション `ReflectionOracle` は、`TargetStateReflectionOracle`操作によって生成されます。\n\n `ancillaRegister` する入力状態に関するリフレクション `ReflectionOracle` は、位相を反転することによって生成され、$ \\ket{0\\cdots 0} $ と ReflectionStart () を反映します。\n\n 型 `DeterministicStateOracle` の oracle は、`qubitState` レジスタに対して動作し、フラグなしのターゲット状態を正確に作成します。\n\n `AmpAmpObliviousByOraclePhases` は、反射ではなく oracles `StateOracle` と `ObliviousOracle` を受け入れる無関係振幅増幅のバージョンです。\n\n 振幅増幅は、`ObliviousOracle` が id 演算子で、システム qubits (`systemRegister` が空ではない) の特殊なケースです。\n\n これは、操作 `AmpAmByReflectionPhases` および `AmpAmpByOraclePhases`を通じて呼び出されます。\n\n Grover search の標準的なケースでの部分的な反射のフェーズは、AmpAmpPhasesStandard 関数によって提供されます。\n\n たとえば、AmpAmpByOracle >-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases という依存関係があります。"
 functions:
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
@@ -35,9 +35,10 @@ newtypes:
   summary: 振幅増幅での部分的な反射のシーケンスのフェーズ。
 - uid: microsoft.quantum.amplitudeamplification.rotationphases
   summary: 振幅増幅での単一 qubit 回転のシーケンスのフェーズ。
-ms.openlocfilehash: acec4d085e42811618228c8e120842dc400c50b4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057234"
+metadata:
+  ms.openlocfilehash: acec4d085e42811618228c8e120842dc400c50b4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73057234"

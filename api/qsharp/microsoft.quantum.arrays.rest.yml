@@ -25,8 +25,8 @@ typeParameters:
   summary: 配列要素の型。
 metadata:
   ms.openlocfilehash: 96779f32f93d2d045502b5e7264de1af39affd9f
-  ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/31/2019
+  ms.lasthandoff: 11/05/2019
   ms.locfileid: "73218041"

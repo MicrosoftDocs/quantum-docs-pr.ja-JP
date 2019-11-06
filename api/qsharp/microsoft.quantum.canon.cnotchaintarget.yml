@@ -29,7 +29,7 @@ remarks: >-
   ```
 syntax: 'operation CNOTChainTarget (qubits : Qubit[], targetQubit : Qubit) : Unit'
 input:
-  content: '(qubits: Qubits []、targetQubit: Qubits)'
+  content: '(qubits : Qubit[], targetQubit : Qubit)'
   types:
   - name: qubits
     summary: パリティが計算される qubits の配列。
@@ -41,16 +41,17 @@ input:
     isPrimitive: true
     uid: Qubit
 output:
-  content: 単位
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
 functors:
 - Adjoint
 - Controlled
-ms.openlocfilehash: 26893296ec8fe7ec8d8cc5309e2bd5066f315849
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068038"
+metadata:
+  ms.openlocfilehash: 26893296ec8fe7ec8d8cc5309e2bd5066f315849
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068038"

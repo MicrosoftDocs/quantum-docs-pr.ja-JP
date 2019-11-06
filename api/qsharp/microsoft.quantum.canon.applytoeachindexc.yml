@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.applytoeachindexc
-name: 各 Indexc
+name: ApplyToEachIndexC
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
@@ -9,7 +9,7 @@ summary: >-
   修飾子 `C` は、single qubit 演算が制御可能であることを示します。
 syntax: "operation ApplyToEachIndexC (singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[]) : Unit"
 input:
-  content: '(singleElementOperation: ((Int, t) = > Unit is Ctl)、register: t [])'
+  content: "(singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[])"
   types:
   - name: singleElementOperation
     summary: 各 qubit に適用する操作。
@@ -26,13 +26,13 @@ input:
         uid: Unit
     functors:
     - Controlled
-  - name: registrations
+  - name: register
     summary: 指定された操作を適用する qubits の配列。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
-  content: 単位
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -43,9 +43,10 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applytoeachindex
-ms.openlocfilehash: ca5ba68229968b43d28535e3bf728b2b8a8ef4fb
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068446"
+metadata:
+  ms.openlocfilehash: ca5ba68229968b43d28535e3bf728b2b8a8ef4fb
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068446"

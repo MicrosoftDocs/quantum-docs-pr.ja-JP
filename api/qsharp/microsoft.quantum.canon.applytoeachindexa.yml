@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.applytoeachindexa
-name: Applytoindexa
+name: ApplyToEachIndexA
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
@@ -9,7 +9,7 @@ summary: >-
   修飾子 `A` は、single qubit 操作が adjointable であることを示します。
 syntax: "operation ApplyToEachIndexA (singleElementOperation : ((Int, 'T) => Unit is Adj), register : 'T[]) : Unit"
 input:
-  content: '(singleElementOperation: ((Int, t) = > Unit は形容詞)、register: t [])'
+  content: "(singleElementOperation : ((Int, 'T) => Unit is Adj), register : 'T[])"
   types:
   - name: singleElementOperation
     summary: 各 qubit に適用する操作。
@@ -26,13 +26,13 @@ input:
         uid: Unit
     functors:
     - Adjoint
-  - name: registrations
+  - name: register
     summary: 指定された操作を適用する qubits の配列。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
-  content: 単位
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -43,9 +43,10 @@ functors:
 - Adjoint
 seeAlso:
 - microsoft.quantum.canon.applytoeachindex
-ms.openlocfilehash: 6b99e977120a417780875475b35094a44d1c4e08
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068480"
+metadata:
+  ms.openlocfilehash: 6b99e977120a417780875475b35094a44d1c4e08
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068480"

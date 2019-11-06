@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Simulation
 summary: 2つの `GeneratorSystem`を追加して、新しい `GeneratorSystem`を作成します。
 syntax: 'function AddGeneratorSystems (generatorSystemA : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemB : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
-  content: '(generatorSystemA: GeneratorSystem, generatorSystemB: GeneratorSystem) を実行しています。'
+  content: '(generatorSystemA : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemB : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystemA
     summary: 最初の `GeneratorSystem`。
@@ -15,15 +15,16 @@ input:
     summary: 2番目の `GeneratorSystem`。
     uid: microsoft.quantum.simulation.generatorsystem
 output:
-  content: GeneratorSystem です。
+  content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
   - summary: 入力ジェネレーターシステムの合計であるシステムを表す `GeneratorSystem`。
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
-ms.openlocfilehash: 33155c0af61281bc34b7af5ecb6afe404d3e427d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066066"
+metadata:
+  ms.openlocfilehash: 33155c0af61281bc34b7af5ecb6afe404d3e427d
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066066"

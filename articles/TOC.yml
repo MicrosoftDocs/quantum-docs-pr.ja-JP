@@ -1,15 +1,39 @@
 - name: Microsoft Quantum ドキュメント
   href: index.yml
 - name: 概要
-  href: welcome.md
+  items:
+    - name: 作業開始
+      href: welcome.md
+    - name: 量子コンピューティングに関する 5 つの質問
+      items:
+        - name: 量子コンピューティングとは
+          href: overview/what-is-quantum-computing.md
+        - name: 量子コンピューターでできること
+          href: overview/quantum-computers.md
+        - name: 量子コンピューティングを学ぶ理由
+          href: overview/why-learn-quantum-computing.md
+        - name: 'Q# とは'
+          href: overview/what-is-qsharp.md
+        - name: 量子コンピューティングを学習する方法
+          href: overview/how-to-learn-quantum-computing.md
+    - name: Quantum Katas による学習
+      href: intro-to-katas.md
 - name: クイック スタート
+  items:
+    - name: 量子乱数ジェネレーター
+      href: quickstarts/qrng.md
+    - name: 'Q# を使った量子の基本'
+      href: quickstart.md
+    - name: グローバーの検索アルゴリズムを実装する
+      href: quickstarts/search.md
+- name: ハウツー ガイド
   items:
     - name: QDK をインストールする
       href: install-guide/index.md
     - name: QDK を更新する
       href: install-guide/update.md
-    - name: 初めての量子プログラムを作成する
-      href: quickstart.md
+    - name: 'Q# プロジェクトを作成する'
+      href: how-to-guides/create-qsharp-project.md
 - name: 概念
   items:
     - name: 量子開発手法
@@ -22,7 +46,7 @@
       href: libraries/toc.yml
     - name: 量子コンピューティングの概念
       href: concepts/toc.yml
-    - name: 量子コンピューターをホストする方法
+    - name: 量子シミュレーターとリソース エスティメーター
       href: machines/toc.yml
 - name: リソース
   items:
