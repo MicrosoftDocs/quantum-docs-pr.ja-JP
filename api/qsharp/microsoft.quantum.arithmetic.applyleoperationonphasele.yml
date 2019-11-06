@@ -7,9 +7,9 @@ summary: <xref:microsoft.quantum.arithmetic.littleendian>型のターゲット�
 remarks: レジスタは、<xref:microsoft.quantum.canon.qftle> を使用して `LittleEndian` に変換され、`op`の適用後に元の表現に戻されます。
 syntax: 'operation ApplyLEOperationOnPhaseLE (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
-  content: '(op: (LittleEndian = > Unit)、target: PhaseLittleEndian) のようにしてください。'
+  content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
-  - name: ファンド
+  - name: op
     summary: 適用する操作。
     isOperation: true
     input:
@@ -23,7 +23,7 @@ input:
     summary: 操作が適用されるレジスタ。
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
-  content: 単位
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -31,9 +31,10 @@ seeAlso:
 - microsoft.quantum.canon.applyleoperationonphaselea
 - microsoft.quantum.canon.applyleoperationonphaselea
 - microsoft.quantum.canon.applyleoperationonphaseleca
-ms.openlocfilehash: 9364435896dc43710eb37238b00f8139f9e6b62d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056716"
+metadata:
+  ms.openlocfilehash: 9364435896dc43710eb37238b00f8139f9e6b62d
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056716"

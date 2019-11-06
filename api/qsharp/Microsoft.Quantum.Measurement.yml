@@ -14,9 +14,10 @@ operations:
   summary: '`Z` ベースの1つの qubit を測定し、測定値に従って標準の基本状態 | 0 〉にリセットします。'
 - uid: microsoft.quantum.measurement.multim
   summary: 指定された配列内の各 qubit を標準ベースで測定します。
-ms.openlocfilehash: 872031f8a6ebd77e72cd74e1c98e7347c09ca14a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210986"
+metadata:
+  ms.openlocfilehash: 872031f8a6ebd77e72cd74e1c98e7347c09ca14a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73210986"

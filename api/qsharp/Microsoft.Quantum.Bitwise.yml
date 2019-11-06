@@ -37,9 +37,10 @@ functions:
 - uid: microsoft.quantum.bitwise.zbits
   summary: P# li 演算子の配列の Z ビットを表す整数を返します。
 summary: " # <a name=\"summary\"></a>Summary\n この名前空間には、典型的なデータ型のビットごとの表現を操作するための関数が含まれています。"
-ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210952"
+metadata:
+  ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73210952"

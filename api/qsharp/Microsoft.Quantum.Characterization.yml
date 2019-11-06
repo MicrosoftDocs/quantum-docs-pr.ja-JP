@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.characterization
-name: Microsoft... 特性
+name: Microsoft.Quantum.Characterization
 summary: " # <a name=\"summary\"></a>Summary\n この名前空間には、tomography やフェーズの推定など、クォンタムの状態とプロセスのプロパティを学習するための関数と操作が含まれています。"
 operations:
 - uid: microsoft.quantum.characterization.continuousphaseestimationiteration
@@ -25,9 +25,10 @@ operations:
   summary: 指定された oracle `U` と eigenstate に対して、反復的ではない堅牢なクォンタムフェーズの推定アルゴリズムを実行し、ハイゼンベルグ limit での差異スケールを使用して、フェーズの1つの実際の予測値を提供します。
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: 特定の目的のチャネルを指定して、tomography の単一の qubit プロセス測定を実行します。
-ms.openlocfilehash: f6ca8c97c1e44950fb87da8ed7335c885cabc425
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056939"
+metadata:
+  ms.openlocfilehash: f6ca8c97c1e44950fb87da8ed7335c885cabc425
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056939"

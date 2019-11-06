@@ -6,22 +6,23 @@ namespace: Microsoft.Quantum.Simulation
 summary: '`GeneratorSystem`内の用語の数を取得します。'
 syntax: 'function GetGeneratorSystemNTerms (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : Int'
 input:
-  content: '(generatorSystem: GeneratorSystem) を実行します。'
+  content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystem
     summary: 対象の `GeneratorSystem`。
     uid: microsoft.quantum.simulation.generatorsystem
 output:
-  content: int
+  content: Int
   types:
   - summary: '`GeneratorSystem`内の用語の数。'
     isPrimitive: true
     uid: Int
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
-ms.openlocfilehash: 007ef219bee6184197dde34f4594c2534c33ba6a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067460"
+metadata:
+  ms.openlocfilehash: 007ef219bee6184197dde34f4594c2534c33ba6a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067460"

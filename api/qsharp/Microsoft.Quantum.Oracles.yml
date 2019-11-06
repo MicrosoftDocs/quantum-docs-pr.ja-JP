@@ -72,9 +72,10 @@ newtypes:
     - フラグ qubit $f $ にインデックスを付ける整数。
 
     - 必要なクォンタムの状態 $ \ket{\psi}\_s $ を格納する $s $ がシステムに登録されます。
-ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73216103"
+metadata:
+  ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73216103"

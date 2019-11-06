@@ -9,13 +9,13 @@ summary: >-
   これは、2つの unitaries 等しいかどうかについて、十分ではなく、必要な条件です。
 syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
 input:
-  content: '(nQubits: Int、与え u: (Qubit [] = > Unit)、expectedU: (Qubit [] = > Unit は形容詞))'
+  content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
     summary: 操作 `givenU` と `expectedU` が動作する、qubits $n $ の数。
     isPrimitive: true
     uid: Int
-  - name: 権利
+  - name: givenU
     summary: $N $ qubits の操作を確認します。
     isOperation: true
     input:
@@ -42,13 +42,14 @@ input:
     functors:
     - Adjoint
 output:
-  content: 単位
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
-ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066559"
+metadata:
+  ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066559"

@@ -6,20 +6,21 @@ namespace: Microsoft.Quantum.Research.Chemistry
 summary: Dynamical generator を simulatable ゲートのセットとして表し、拡張を p にします。
 syntax: 'function JordanWignerOptimizedFermionEvolutionSet (parityQubit : Qubit) : Microsoft.Quantum.Simulation.EvolutionSet'
 input:
-  content: '(parityQubit: Qubit)'
+  content: '(parityQubit : Qubit)'
   types:
   - name: parityQubit
     summary: タイム進化の符号を決定する qubit。
     isPrimitive: true
     uid: Qubit
 output:
-  content: EvolutionSet です。
+  content: Microsoft.Quantum.Simulation.EvolutionSet
   types:
   - summary: JWOptimized ベースの `GeneratorIndex` を ' EvolutionUnitary にマップする `EvolutionSet`。
     uid: microsoft.quantum.simulation.evolutionset
-ms.openlocfilehash: 7d39228c91995e38423e2b3b5894952ab3bfa533
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066202"
+metadata:
+  ms.openlocfilehash: 7d39228c91995e38423e2b3b5894952ab3bfa533
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066202"

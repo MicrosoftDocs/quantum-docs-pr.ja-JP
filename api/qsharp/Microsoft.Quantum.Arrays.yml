@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arrays
-name: Microsoft. Quantum. 配列
+name: Microsoft.Quantum.Arrays
 summary: " # <a name=\"summary\"></a>Summary\n この名前空間には、データの配列を作成および操作するための関数が含まれています。"
 functions:
 - uid: microsoft.quantum.arrays.all
@@ -56,9 +56,10 @@ functions:
 operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: 配列と、配列の要素に対して定義されている操作が指定された場合、は、操作の下にある元の配列のイメージで構成される新しい配列を返します。
-ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056978"
+metadata:
+  ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056978"
