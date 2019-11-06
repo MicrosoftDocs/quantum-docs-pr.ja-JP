@@ -12,19 +12,20 @@ summary: >-
   @"microsoft.quantum.intrinsic.reset"を使用してください。
 syntax: 'operation Reset (target : Qubit) : Unit'
 input:
-  content: '(ターゲット: Qubit)'
+  content: '(target : Qubit)'
   types:
   - name: target
     isPrimitive: true
     uid: Qubit
 output:
-  content: 単位
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
-ms.openlocfilehash: 7a68113316bce6183340c96500005b4bc3c5bd27
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066661"
+metadata:
+  ms.openlocfilehash: 7a68113316bce6183340c96500005b4bc3c5bd27
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066661"

@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Convert
 summary: '`Result` 型を `Bool` 型に変換します。 `One` は `true` にマップされ、`Zero` は `false`にマップされます。'
 syntax: 'function ResultAsBool (input : Result) : Bool'
 input:
-  content: '(入力: 結果)'
+  content: '(input : Result)'
   types:
   - name: input
     summary: 変換する `Result`。
@@ -18,9 +18,10 @@ output:
   - summary: '`input`を表す `Bool`。'
     isPrimitive: true
     uid: Bool
-ms.openlocfilehash: 2e6db6cf91e3ded2ec3a1ad73d0d6f7203058d03
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067596"
+metadata:
+  ms.openlocfilehash: 2e6db6cf91e3ded2ec3a1ad73d0d6f7203058d03
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067596"

@@ -98,9 +98,10 @@ operations:
     つまり、このユニタリ $U $ は、入力状態が $ \ket{0\cdots 0} $ の場合に、すべての数値の州 $0 $ に対して $M-$1 に対して uniform 法則を作成します。 つまり、$ $ \begin{align} U\ket{0}= \ frac{1}{\ sqrt{j = 0} ^ {M-1} \ket{j}. になります。
 
     \end{align} $ $。
-ms.openlocfilehash: 2b9e3b89a29eb73b9b7417210628fce046c91209
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73216018"
+metadata:
+  ms.openlocfilehash: 2b9e3b89a29eb73b9b7417210628fce046c91209
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73216018"

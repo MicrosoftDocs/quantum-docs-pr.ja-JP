@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.canon.ccontrolledca
-name: Ccontrol○ Ca
+name: CControlledCA
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
@@ -9,9 +9,9 @@ summary: >-
   修飾子 `CA` は、操作が制御可能であり、adjointable であることを示します。
 syntax: "function CControlledCA (op : ('T => Unit is Ctl + Adj)) : ((Bool, 'T) => Unit is Ctl + Adj)"
 input:
-  content: '(op: (t = > 単位は Ctl + 形容詞)'
+  content: "(op : ('T => Unit is Ctl + Adj))"
   types:
-  - name: ファンド
+  - name: op
     summary: 条件付きで適用する操作。
     isOperation: true
     input:
@@ -26,7 +26,7 @@ input:
     - Adjoint
     - Controlled
 output:
-  content: ((Bool, t) = > 単位は Ctl + 形容詞)
+  content: ((Bool, 'T) => Unit is Ctl + Adj)
   types:
   - summary: 新しい操作。これは、クラシック制御ビットが true の場合の op です。
     isOperation: true
@@ -48,9 +48,10 @@ typeParameters:
   summary: 条件付きで適用される操作の入力型。
 seeAlso:
 - microsoft.quantum.canon.ccontrolled
-ms.openlocfilehash: 918146c6f167050490d3a9047cf75dc66236b004
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068072"
+metadata:
+  ms.openlocfilehash: 918146c6f167050490d3a9047cf75dc66236b004
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068072"

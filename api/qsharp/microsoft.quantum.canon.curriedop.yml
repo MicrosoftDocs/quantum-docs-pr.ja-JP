@@ -26,9 +26,9 @@ remarks: >-
   ```
 syntax: "function CurriedOp (op : (('T, 'U) => Unit)) : ('T -> ('U => Unit))"
 input:
-  content: "(op: ((' U '、' U) = > Unit))"
+  content: "(op : (('T, 'U) => Unit))"
   types:
-  - name: ファンド
+  - name: op
     summary: 入力がペアである操作。
     isOperation: true
     input:
@@ -42,7 +42,7 @@ input:
       - isPrimitive: true
         uid: Unit
 output:
-  content: (> (' U = > Unit))
+  content: ('T -> ('U => Unit))
   types:
   - summary: ペアの最初の要素を受け取り、元の操作の入力の2番目の要素を入力として受け入れる演算を返す操作。
     isFunction: true
@@ -66,9 +66,10 @@ typeParameters:
   summary: ペアで定義された関数の最初のコンポーネントの型。
 - uid: "'U"
   summary: ペアで定義された関数の2番目のコンポーネントの型。
-ms.openlocfilehash: 788648d24ba536926504caba92e768ecb34e001a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067902"
+metadata:
+  ms.openlocfilehash: 788648d24ba536926504caba92e768ecb34e001a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067902"

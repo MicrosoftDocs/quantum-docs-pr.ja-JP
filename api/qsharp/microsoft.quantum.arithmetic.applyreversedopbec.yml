@@ -6,9 +6,9 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: リトルエンディアン入力をリトルエンディアン形式で符号なし整数にエンコードする操作を適用します。
 syntax: 'operation ApplyReversedOpBEC (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
-  content: '(op: (LittleEndian = > Unit is Ctl)、register:) を実行していません。'
+  content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl), register : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
-  - name: ファンド
+  - name: op
     summary: ビッグエンディアンレジスタに対して動作する操作。
     isOperation: true
     input:
@@ -20,11 +20,11 @@ input:
         uid: Unit
     functors:
     - Controlled
-  - name: registrations
+  - name: register
     summary: 変換されるリトルエンディアンレジスタ。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
-  content: 単位
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -34,9 +34,10 @@ seeAlso:
 - applyreversedopbe
 - applyreversedopbea
 - applyreversedopbeca
-ms.openlocfilehash: fcf4110845e43426b7f2e1ec882bce75159ef789
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057276"
+metadata:
+  ms.openlocfilehash: fcf4110845e43426b7f2e1ec882bce75159ef789
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73057276"

@@ -18,9 +18,10 @@ remarks: >-
 
   最初のパラメーターは、$ \ket{0}\_f $ の qubit レジスタのインデックスです。 2番目のパラメーターには、両方のレジスタがあります。
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
-ms.openlocfilehash: 1faa47c21e43355ed036498adf4e823ff3f8a0e4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067222"
+metadata:
+  ms.openlocfilehash: 1faa47c21e43355ed036498adf4e823ff3f8a0e4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067222"

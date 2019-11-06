@@ -11,20 +11,21 @@ remarks: >-
   範囲の定義済みの終了値は、範囲によって指定されたシーケンスの最後の要素と異なる場合があることに注意してください。たとえば、0 ~ の範囲で指定します。 2.. 5最後の要素は4ですが、終了値は5です。
 syntax: 'function RangeEnd (range : Range) : Int'
 input:
-  content: '(範囲: 範囲)'
+  content: '(range : Range)'
   types:
   - name: range
     isPrimitive: true
     uid: Range
 output:
-  content: int
+  content: Int
   types:
   - summary: 指定された範囲の定義済みの終了値。
     isPrimitive: true
     uid: Int
-ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066644"
+metadata:
+  ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066644"

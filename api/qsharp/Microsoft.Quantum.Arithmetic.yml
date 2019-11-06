@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arithmetic
-name: Microsoft. Quantum. 算術
+name: Microsoft.Quantum.Arithmetic
 summary: " # <a name=\"summary\"></a>Summary\n この名前空間には、一貫 compute 算術演算に使用される関数と操作が含まれています。"
 functions:
 - uid: microsoft.quantum.arithmetic.bigendianaslittleendian
@@ -215,9 +215,10 @@ newtypes:
     たとえば、$ \ket{x} $ が計算のために $ $x 整数のリトルエンディアンエンコーディングである場合、$ \ket{x} $ は QFT の $x $ のエンコーディングとして使用されます。
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: リトルエンディアンに格納されている符号付き整数の型 (「LittleEndian」を参照)。
-ms.openlocfilehash: 95a399e09ad5c1617c34a68302f9212a8ec4e0ad
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065148"
+metadata:
+  ms.openlocfilehash: 95a399e09ad5c1617c34a68302f9212a8ec4e0ad
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065148"

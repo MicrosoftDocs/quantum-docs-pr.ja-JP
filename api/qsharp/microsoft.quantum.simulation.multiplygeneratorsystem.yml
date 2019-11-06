@@ -6,9 +6,9 @@ namespace: Microsoft.Quantum.Simulation
 summary: '`GeneratorSystem`内のすべての用語の係数を乗算します。'
 syntax: 'function MultiplyGeneratorSystem (multiplier : Double, generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
-  content: '(乗数: Double、generatorSystem: GeneratorSystem)。'
+  content: '(multiplier : Double, generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
-  - name: ×
+  - name: multiplier
     summary: 係数の乗数。
     isPrimitive: true
     uid: Double
@@ -16,15 +16,16 @@ input:
     summary: 乗算する `GeneratorSystem`。
     uid: microsoft.quantum.simulation.generatorsystem
 output:
-  content: GeneratorSystem です。
+  content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
   - summary: 係数が `multiplier` 係数を持つシステムを表す `GeneratorSystem`。
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
-ms.openlocfilehash: e96870c4e59773542924dcd247aedc498d3f3307
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065454"
+metadata:
+  ms.openlocfilehash: e96870c4e59773542924dcd247aedc498d3f3307
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065454"
