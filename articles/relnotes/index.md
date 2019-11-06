@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 169a8ac31c53f2892624618a227d8bdbdc458458
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 868d256270516cf99c228a757a11c6dc1a6319df
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72958881"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463339"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -20,6 +20,19 @@ ms.locfileid: "72958881"
 インストール手順については、[インストール ガイド](xref:microsoft.quantum.install)を参照してください。
 
 更新手順については、[更新ガイド](xref:microsoft.quantum.update)を参照してください。
+
+## <a name="version-0101911307"></a>バージョン 0.10.1911.307
+
+*リリース日:2019 年 11 月 1 日*
+
+このリリースには、次のものが含まれています。
+
+- 言語サーバーを自己完結型の実行可能ファイルとしてデプロイする、Visual Studio Code および Visual Studio の拡張機能に対する更新。これにより、.NET Core SDK バージョンの依存関係がなくなります。  
+- .NET Core 3.0 への移行
+- 新しい `Fail` メソッドの導入による、Microsoft.Quantum.Simulation.Core.IOperationFactory への破壊的な変更。 SimulatorBase を拡張しないカスタム シミュレーターのみに影響します。 詳細については、[GitHub で pull request を表示](https://github.com/microsoft/qsharp-runtime/pull/59)してください。
+- 非推奨の属性に対する新しいサポート
+
+[ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
 
 ## <a name="version-0919093002"></a>バージョン 0.9.1909.3002
 
@@ -448,7 +461,7 @@ Quantum Development Kit の以前のリリースでは .NET Framework のみが�
 #### <a name="hardware-and-software-requirements"></a>ハードウェアとソフトウェアの要件
 
 - Quantum Development Kit に含まれるシミュレーターでは、Microsoft Windows の 64 ビットのインストール版を実行する必要があります。
-- Quantum Development Kit と共にインストールされる、Microsoft の量子シミュレーターでは Advance Vector Extensions (AVX) が利用され、AVX 対応の CPU が必要です。 Q1 2011 (Sandy Bridge) 以降で出荷された Intel プロセッサでは、AVX がサポートされます。 以前の CPU のサポートは評価中であり、詳細について、後日発表する場合があります。
+- Quantum Development Kit と共にインストールされる、Microsoft の量子シミュレーターでは Advanced Vector Extensions (AVX) が利用され、AVX 対応の CPU が必要です。 Q1 2011 (Sandy Bridge) 以降で出荷された Intel プロセッサでは、AVX がサポートされます。 以前の CPU のサポートは評価中であり、詳細について、後日発表する場合があります。
 
 #### <a name="project-creation"></a>プロジェクトの作成
 
