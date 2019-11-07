@@ -6,16 +6,16 @@ ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.learn
-ms.openlocfilehash: 8967fee11931c6cef4b2d98084b2e319cea55284
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 53682ae8ab9cb31fa0de68832cb3574aa4e30216
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444108"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529971"
 ---
 # <a name="how-to-learn-quantum-computing"></a>量子コンピューティングを学習する方法
 
-量子コンピューティングの学習と、初めてのプログラムの作成に関するガイダンスを入手できます。 これは完全なガイドではありませんが、出発点として適しています。
+量子コンピューティングの学習と、初めてのプログラムの作成に関するガイダンスを入手できます。 このガイドは完全ではありませんが、出発点として適しています。
 
 ## <a name="getting-started-overview"></a>概要
 
@@ -29,7 +29,7 @@ Q# や量子コンピューティングについて学習したり、量子ア�
 
 * [基本的な量子力学](xref:microsoft.quantum.concepts.intro):コーディングを開始するために量子物理学の知識は必要ないと言いました (これは本当です)。 しかし、量子力学とその数学表記に関する基本的な概念は、量子プログラミングの理解に役立ちます。
 
-* **線形代数 (ベクトルと行列)** :量子コンピューティングでは、量子の状態がベクトルによって表されます。量子操作は、これらのベクトルに適用される線形変換となります。  こちらは[線形代数に関する Jupyter Notebook チュートリアル](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)です。  この詳細については、[ベクトルと行列](xref:microsoft.quantum.concepts.vectors)に関する概念ガイドを参照してください。
+* **線形代数 (ベクトルと行列)** :量子コンピューティングでは、量子の状態がベクトルによって表されます。量子操作は、これらのベクトルに適用される線形変換となります。  こちらは[線形代数に関する Jupyter Notebook チュートリアル](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)です。  線形代数については、[ベクトルと行列](xref:microsoft.quantum.concepts.vectors)に関する概念ガイドを参照してください。
 
 * **複雑な算術演算**: 量子状態ベクトルの係数は複素数です。 これを使わなくてもいくつかの基本的な量子コンピューティングの概念を理解することはできますが、そう遠くないうちにこれを量子の道具箱に入れなければならなくなるでしょう。  この[複雑な算術計算についての Jupyter Notebook チュートリアル](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)では、量子コンピューティングを使用するために必要な数学的な背景について説明されています。 
 
@@ -45,8 +45,8 @@ Q# や量子コンピューティングについて学習したり、量子ア�
 
 * [量子コンピューティングの概念](xref:microsoft.quantum.concepts.intro)を説明しているガイドから始めます。これは、量子コンピューティングの基本的な概念をまとめたものです。
 * _Learn Quantum Computing with Python and Q#_ (Sarah C. Kaiser および Christopher E. Granade) は、量子力学の経験がほとんどあるいはまったくないが、いくらかのプログラミングの知識はある方にとって絶好の入門書です。
-* _Quantum Computation and Quantum Information_ (Michael A. Nielsen、Isaac L. Chuang) は、量子コンピューティングの分野で最もよく引用される教科書です。 これは、このテーマにおける標準的な教科書と見なされています。 この書籍は、量子力学とコンピューター サイエンスに関する最小限の経験を前提としています。 このテーマに関する綿密な導入を求めている方にとっても、高度な概念が書かれた参考書を探している方にとっても、絶好の選択肢となります。
-* MIT OpenCourseWare は、Allan Adams による量子力学の基本を学ぶための優れた[オンライン コース](https://www.youtube.com/watch?v=lZ3bPUKo5zc&list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr)を用意しています。 基礎となる物理現象を深く理解したい方に最適です。
+* _Quantum Computation and Quantum Information_ (Michael A. Nielsen、Isaac L. Chuang) は、量子コンピューティングの分野で最もよく引用される教科書で、このテーマにおける標準的な教科書と見なされています。 この書籍は、量子力学とコンピューター サイエンスに関する最小限の経験を前提としています。 このテーマに関する綿密な導入を求めている方にとっても、高度な概念が書かれた参考書を探している方にとっても、絶好の選択肢となります。
+* MIT OpenCourseWare は、Allan Adams による量子力学の基本を学ぶための優れた[オンライン コース](https://www.youtube.com/watch?v=lZ3bPUKo5zc&list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr)を用意しています。 基礎となる物理現象を深く理解したい開発者に最適です。
 
 ## <a name="join-the-quantum-community"></a>量子コミュニティに参加する
 

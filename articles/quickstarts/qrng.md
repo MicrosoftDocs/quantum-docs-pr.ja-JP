@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: a7c077eda3e46430cbe6598cb899adb460451f75
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: c3039b92c4b3235a397d5cf31280ac2673706e9d
+ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443921"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462843"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>クイック スタート:Q# で量子乱数ジェネレーターを実装する
 Q# で記述された量子アルゴリズムの単純な例が量子乱数ジェネレーターです。 このアルゴリズムでは、量子力学の性質を活用し、乱数を生成します。 
@@ -69,4 +69,4 @@ Q# で記述された量子アルゴリズムの単純な例が量子乱数ジ�
 
 <img src="./Measurement2.svg" width="450">
 
-測定の結果は完全にランダムになるため、ランダム ビットが 1 つ取得されました。 この関数を複数回呼び出し、整数を作成できます。 たとえば、関数を 3 回呼び出してランダム ビットを 3 つ取得する場合、ランダムの 3 ビット数 (つまり、0 から 7 までの乱数) を構築できます。
+測定の結果は完全にランダムになるため、ランダム ビットが 1 つ取得されました。 この操作を複数回呼び出し、整数を作成できます。 たとえば、操作を 3 回呼び出してランダム ビットを 3 つ取得する場合、ランダムの 3 ビット数 (つまり、0 から 7 までの乱数) を構築できます。
