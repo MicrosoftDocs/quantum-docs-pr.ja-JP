@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 2a098d89f13278d7137bf182a184a74afb9393be
-ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
+ms.openlocfilehash: 580ac14f2e839d723884a96e9c5fd336ebcb5da0
+ms.sourcegitcommit: 30fcb35986b43388ad65dfb876eb3ad8ad0533ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73462871"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73799159"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum Development Kit (QDK) のインストール
 
@@ -34,17 +34,17 @@ Python 用の qsharp パッケージを使用すると、Python 内から Q# の
     - [PIP](https://pip.pypa.io/en/stable/installing) Python パッケージ マネージャー
     - [.NET Core SDK 3.0 以降](https://www.microsoft.com/net/download)
 
+1. `qsharp` パッケージのインストール
+
+    ```bash
+    pip install qsharp
+    ```
+
 1. `iqsharp` パッケージのインストール
 
     ```bash
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
-    ```
-
-1. `qsharp` パッケージのインストール
-
-    ```bash
-    pip install qsharp
     ```
 
 1. `Hello World` アプリケーションを作成してインストールを確認する
