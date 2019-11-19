@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 868d256270516cf99c228a757a11c6dc1a6319df
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 90fd8ad455702ef4f962e1b3291c650eb0afea2e
+ms.sourcegitcommit: 87dd450cea5bcac76a42f0bdc224bfae712efdde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463339"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74153309"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -20,6 +20,17 @@ ms.locfileid: "73463339"
 インストール手順については、[インストール ガイド](xref:microsoft.quantum.install)を参照してください。
 
 更新手順については、[更新ガイド](xref:microsoft.quantum.update)を参照してください。
+
+## <a name="version-01019111607"></a>バージョン 0.10.1911.1607
+
+*リリース日:2019 年 11 月 17 日*
+
+このリリースには、次のものが含まれています。
+
+- [Quantum Katas](https://github.com/Microsoft/QuantumKatas) と Jupyter ノートブックのパフォーマンスの向上
+
+[ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
+
 
 ## <a name="version-0101911307"></a>バージョン 0.10.1911.307
 
