@@ -24,11 +24,11 @@ P# li 測定を考える方法の詳細について検討する前に、クォ�
 $ $ Z = \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}.
 $$
 
-$Z p固有ベクトル $ マトリックスには、明らかに2つの $ \ket{0}$ と $ \ket{1}$ が含まれています。固有値 $ \ pm $1 です。  したがって、qubit を測定して $ \ket{0}$ を取得した場合、演算子の $ + $1 eig固有ベクトル (正または負の値のみを持つの合計で構成されるすべてのベクトルのセット) に格納されます。 $ \ket{1}$ を測定すると、$-$1 ei になります。$Z $ の genspace。  このプロセスは、"p# li $Z を測定する" という言語では、計算ベースの測定を実行するのとまったく同じです。
+$Z p固有ベクトル $ マトリックスには、明らかに2つの $ \ket{0}$ と $ \ket{1}$ が含まれています。固有値 $ \ pm $1 です。  したがって、qubit を測定して $ \ket{0}$ を取得する場合、演算子の $ + $1 eigspace (正の値または負の値のみを持つ固有ベクトルの合計で構成されるすべてのベクトルのセット) に含まれています。 $ \ket{1}$ を測定すると、$-$1 eigenspace $Z の $-eig  このプロセスは、"p# li $Z を測定する" という言語では、計算ベースの測定を実行するのとまったく同じです。
 
 もちろん、$ 2 \ times $2 行列は $Z $ のユニタリ変換であり、この条件も満たしています。  これは、マトリックス $A = U ^ 固有ベクトル Z U $ を考慮することもできます。これは、すべての $U を、$ pm $1 の測定の2つの結果を定義するマトリックスを提供するために使用されます。  Preferences Li 測定の表記法では、$X、Y、Z $ の測定値を同等の測定値として識別することによって、qubit から情報を取得することができます。  これらの測定値は、便宜上、次のように提供されます。
 
-$ $ & begin{array{2} {| c | c |} \ text{p# li 測定} & U\\\\ Z &/done\\\\ X & H\\\\ Y & HS ^ \ ダガー\\\\ \ end{array} $ $
+$ $ & begin{array {| c | c |} \ text{p# li 測定} & U\\\\ Z &/done\\\\ X & H\\\\ Y & HS ^ \ ダガー\\\\ \ end{array} $ $
 
 つまり、この言語を使用すると、"measure $Y $" は $HS ^ \ ダガー $ を適用し、計算単位で測定することと同じです。 $S $ は、によって指定されるいわゆるフェーズゲートです。
 
@@ -50,9 +50,9 @@ $$
 $ $ Z\begin{bmatrix} = 1 & 0 & 0 & 0\\\\ 0 & 1 & 0 & 0\\\\ 0 & 0 &-1 & 0\\\\ 0 & 0 & 0 &-1 \ 終了 {bmatrix}。
 $$
 
-前と同様に、このようなマトリックスのすべてのユニタリ変換では、$ pm $1 eigenvalues でラベル付けされた2つの半分の空白も記述します。  たとえば、$Z = HXH $ の場合は、id から (zotimes Z) hotimes h $ を $X します (& o)。  1 qubit の場合と同様に、2つの2つのすべての値は、$U ^-ダガー (zotimes \ id) U $ for $ 4 \ times $4 $U $ として書き込むことができます。  次の表に示す変換は、qubits $0 $ と $1 $: $ & {01}\_をスワップするスワップゲートを使用して列挙されています。 (& a) {10}/演算子 name{cnot}\_/演算子 name{CNOT}\_{01}$:
+前と同様に、このようなマトリックスのすべてのユニタリ変換では、$ pm $1 eigenvalues でラベル付けされた2つの半分の空白も記述します。  たとえば、$Z = HXH $ の場合は、id から (zotimes Z) hotimes h $ を $X します (& o)。  1 qubit の場合と同様に、2つの2つのすべての値は、$U ^-ダガー (zotimes \ id) U $ for $ 4 \ times $4 $U $ として書き込むことができます。  ここでは、次の表に示す変換を列挙します。スワップゲートは、qubits $0 $ と $1 $: $-の演算子をスワップします。この場合、&\_{01}/演算子 name{cnot}\_{10}\ 演算子名 {cnot}\_{01}$:
 
-$ $ & begin{array{2} {| c | c |} \ text{p#} & U\\\\/hline zotimes/bold の実行 & otimes/\\ の実行を\\して、{times > & を実行しました。 {/otimes/bold の実行が完了しました。 \\\\otimes/bold 完了\\\\ とその逆の処理を実行します。 Z & を実行します。または、& lt; {swap}\\\\ を実行します。-otimes X & (hotimes-bold done) \ オペレーター名 {swap}\\\\/完了します。オペレーター名 {SWAP}\\\\ zotimes Z &。\_{10}\\\\ X\otimes Z &-演算子名 {cnot}\_{10}(H-otimes-bold done)\\\\ yotimes Z & \ します。オペレーター名 {CNOT}\_{10}(HS ^/dagger\ otimes \ bold 完了)\\\\ zotimes X & \ 演算子名 {cnot}\_{10}(\ bold one/otimes H)\\\\ xotimes X & \ オペレーター名 {cnot}\_@no__t31_ (hotimes H)\\\\ yotimes X &。\_{10}(HS ^/daggero times H)\\\\ zotimes Y & \ 演算子の\_(& a) {10}\\(& a) @no__t_ (& a) (& a)41_ xotimes Y & \ オペレーター名 {cnot}\_{10}(H/otimes HS ^ \ ダガー)\\\\ yotimes Y &-オペレーター名 {cnot}\_{10}(HS ^-dagger/otimes HS ^ \ ダガー)\\\\ \ end{array} $ $
+$ $ \ begin{array{2} {| c | c |} \ text{| c | c |} \ text{r | c |} \ text{r | c |} \ & U\\\\ (hline zo times)\\\\ X/otimes/&\\hotimes \ bold done \\ & & \ dagger-otimes/bold 完了\\\\/bold & & otimes Z \ オペレーター名 {swap}\\\\/の完了/otimes X & (hotimes-bold done) \ オペレーター名 {swap}\\\\/Y & (HS ^/dagger/otimes/bold) \オペレーター名 {SWAP}\\\\ zotimes Z &、\_{10}\\\\ X\otimes Z & (H-otimes-bold done)\_{10}Y/otimes Z\\/演算子の名前を指定します (& o) \\ & しています。\_{10}(HS ^ \ dagger\ otimes-bold done)\\\\ zotimes X &/オペレーター名 {cnot}\_{10}(-bold one/otimes H)\\\\ xotimes X &/演算子名 {cnot}\_{10}(H \otimes H)\\\\ yotimes X &。\_{10}(HS ^/dagger/otimes H)\\\\ zotimes Y &-演算子名 {cnot}\_{10}(\ bold 完了/otimes HS ^ \ ダガー)\\\\ (& a) otimes Y & \ オペレーター名 {cnot}\_{10}(hotimes HS ^ \ ダガー)\\\\ yotimes &-演算子名 {cnot}\_{10}(HS ^-dagger/otimes HS ^ \ ダガー)\\\\ \ end{array} $ $
 
 ここでは、次の理由で、$ &\_{10}$ というゲートが表示されます。  $-Bold 完了 $ matrix を含まない各 P# li の測定値は、上記の理由によって Z $ を $Z するための最大値と同じです。  $Z/otimes Z $ の固有値は、各計算ベースのベクトルを構成する qubits のパリティに依存します。この一覧に表示される制御されていない演算は、このパリティを計算して最初のビットに格納するために提供されます。  その後、最初のビットを測定した後、結果として得られる半分の領域の id を復旧できます。これは、P# li 演算子を測定するのと同じです。
 
@@ -72,11 +72,11 @@ Q # では、このような測定値により $ (-1) ^ j $ という符号の�
 No 複製定理は、このという名前です。
 クォンタムコンピューターによる汎用クォンタム状態の複製は禁止されています。
 定理の証明は、非常に簡単です。
-複製なしの定理の完全な証明は、ここで説明するための技術的なものではありませんが、問題のクォンタムコンピューターに追加の ancilla qubits がない場合の定理の証拠は、そのスコープ内にあります (ancilla qubits はゼロに使用されます)。計算中にスペースを使い、Q # で簡単に使用および管理できます。「<xref:microsoft.quantum.techniques.qubits>)」を参照してください。
+この記事では、複製なしの定理の完全な証明が少し技術的にはありませんが、問題のある quantum コンピューターに追加の ancilla qubits が含まれていない場合の定理は、そのスコープ内に存在していることを <xref:microsoft.quantum.techniques.qubits>確認します (ancilla qubits は計算中にゼロ空間に使用され、Q # で簡単に使用および
 このようなクォンタムコンピューターでは、複製操作は、ユニタリ行列である必要があります。 複製しようとしているクォンタムの状態が破損する可能性があるため、測定は禁止されています。 必要なユニタリ行列には、$ $ U \ket{\psi} \ket{0} = \ket{\psi} \ket{\psi}, $ $ (任意の状態 $ \ket{\psi} $) のプロパティが含まれている必要があります。
 マトリックス乗算の直線性プロパティは、2つ目のクォンタム状態 $ \ket{\phi} $ であることを意味します。
 
-\begin{align} & U-left [\ frac{1}{\ sqrt{2}} \ left (\ket{\phi} + \ket{\psi}-right) () \ket{0}= \ frac{1}{\ sqrt{2}} U\ket {\ phi} \ k{0}+/frac{1}{/sqrt{2}} U\ket {\ psi} \ k{0}\\\\ & \qquad\qquad = \ frac{1}{\ sqrt{2}} \ left (\ket{\phi}\ket{\phi} + \ket{\psi}\ket{\psi}\right)\\\\ & \qquad\qquad\ne/left (-frac{1}{/sqrt{2}} \ left (\ket{\phi} + \ket{\psi} \right)-left (\ frac{1}{\ sqrt{2}} \ left (\ket{\phi} + \ket{\psi})/right) を右に押します。
+\begin{align} & U\ left [/frac{1}{\ sqrt{2}} \ left (\ket{\phi} + \ket{\psi}/right) \ right] \ket{0}= \ frac{1}{\ sqrt{2}} U\ket {\ phi} \ k{0}+/frac{1}{/sqrt{2}} U\ket {\ psi} \ k{0}\\\\ & \qquad\qquad = \ frac{1}{\ sqrt{2}} \ left (\ket{\phi}\ket{\phi} + \ket{\psi}\ket{\psi}\right)\\\\ & \qquad\qquad\ne/left (-frac{1}{/sqrt{2}} \ left (\ket{\phi} + \ket{\psi} \right)-left (\ frac{1}{\ sqrt{2}} \ left (\ket{\phi} + \ket{\psi})/right) を右に押します。
 \end{align}
 
 これにより、複製されていない定理の背後で基本的な直感が得られます。不明なクォンタム状態をコピーするデバイスは、少なくともそのコピーされた状態の中でエラーを誘発する必要があります。  Cloner が入力状態で直線的に動作することを前提として、ancilla と ancilla qubits の測定値を加算することによって違反が発生する可能性がありますが、このような対話によって、測定統計を通じてシステムに関する情報が漏洩し、このような場合は、正確な複製も同様です。  複製なしの定理の詳細については、「」[を](xref:microsoft.quantum.more-information)参照してください。
