@@ -160,7 +160,7 @@ ms.locfileid: "74153309"
 
 [Q# と F# ドライバーを使用するサンプル](https://github.com/Microsoft/Quantum/pull/164)を追加しました。  
 
-**ご協力ありがとうございました。** http://github.com/Microsoft/Quantum にあるオープン コード ベースに投稿していただいた方は、次のとおりです。 これらの投稿内容は、Q# コードの豊富なサンプルにかなり追加されています。
+**ご協力ありがとうございました。** [http://github.com/Microsoft/Quantum](http://github.com/Microsoft/Quantum ) にあるオープン コード ベースに投稿していただいた方は、次のとおりです。 これらの投稿内容は、Q# コードの豊富なサンプルにかなり追加されています。
 
 * Mathias Soeken ([@msoeken](https://github.com/msoeken)):Oracle 関数の合成。 [PR #135](https://github.com/Microsoft/Quantum/pull/135)。
 
@@ -307,7 +307,7 @@ Quantum Development Kit の化学ライブラリの詳細については、[こ�
 
 ### <a name="community-contributions"></a>コミュニティへの投稿
 
-**ご協力ありがとうございました。** http://github.com/Microsoft/Quantum にあるオープン コード ベースに投稿していただいた方は、次のとおりです。 これらの投稿内容は、Q# コードの豊富なサンプルにかなり追加されています。
+**ご協力ありがとうございました。** [http://github.com/Microsoft/Quantum](http://github.com/Microsoft/Quantum ) にあるオープン コード ベースに投稿していただいた方は、次のとおりです。 これらの投稿内容は、Q# コードの豊富なサンプルにかなり追加されています。
 
 * Rolf Huisman ([@RolfHuisman](https://github.com/RolfHuisman)):QASM から Q# への変換プログラムを作成することにより、QASM/Q# 開発者のエクスペリエンスを向上させました。 [PR #58](https://github.com/Microsoft/Quantum/pull/58)。
 
