@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.tuplearrayasnestedarray
+name: TupleArrayAsNestedArray
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 2つのタプルのリストを入れ子になった配列に変換します。
+syntax: "function TupleArrayAsNestedArray (tupleList : ('T, 'T)[]) : 'T[][]"
+input:
+  content: "(tupleList : ('T, 'T)[])"
+  types:
+  - name: tupleList
+    summary: 入れ子になった配列に変換される2組のリスト。
+    isArray: true
+    types:
+    - uid: "'T"
+      isLocal: true
+    - uid: "'T"
+      isLocal: true
+output:
+  content: "'T[][]"
+  types:
+  - summary: >-
+      TupleList に一致する長さの入れ子になった配列。
+
+
+      ## <a name="example"></a>例
+
+
+      ```qsharp
+
+      // The following returns [[2, 3], [4, 5]]
+
+      TupleArrayAsNestedArray([(2, 3), (4, 5)]);
+
+      ```
+    isArray: true
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+metadata:
+  ms.openlocfilehash: edc939bc4ebfe093ec4a97eda24888f6d7810e82
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74866463"

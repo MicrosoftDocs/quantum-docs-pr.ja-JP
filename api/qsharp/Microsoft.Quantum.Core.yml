@@ -3,6 +3,8 @@ uid: microsoft.quantum.core
 name: Microsoft.Quantum.Core
 summary: " # <a name=\"summary\"></a>Summary\n この名前空間には、Q # コア関数と操作が含まれています。\n\n # <a name=\"remarks\"></a>解説\n この名前空間は、Q # コンパイラによって自動的に開かれるので、この名前空間のすべての要素を常に使用できます。"
 functions:
+- uid: microsoft.quantum.core.default
+  summary: 指定された型の既定のインスタンスを返します。
 - uid: microsoft.quantum.core.length
   summary: 配列内の要素数を返します。
 - uid: microsoft.quantum.core.rangeend
@@ -13,10 +15,17 @@ functions:
   summary: 指定された範囲の開始値を定義して返します。
 - uid: microsoft.quantum.core.rangestep
   summary: 範囲の次の値を計算する方法を指定する整数を返します。
+newtypes:
+- uid: microsoft.quantum.core.attribute
+  summary: ユーザー定義型を属性としてマークするために使用される、コンパイラが認識する属性。
+- uid: microsoft.quantum.core.deprecated
+  summary: 型をマークするために使用される、または非推奨として呼び出すことができる、コンパイラが認識する属性。
+- uid: microsoft.quantum.core.entrypoint
+  summary: 実行可能ファイルのエントリポイントをマークするために使用される、コンパイラが認識する属性。
 metadata:
-  ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6391521907deddbf4425b927b1dec12e73f0ee5d
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056886"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858583"

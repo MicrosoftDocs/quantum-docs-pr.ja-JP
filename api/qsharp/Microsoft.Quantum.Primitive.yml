@@ -3,150 +3,66 @@ uid: microsoft.quantum.primitive
 name: Microsoft.Quantum.Primitive
 functions:
 - uid: microsoft.quantum.primitive.message
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.message"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nメッセージは非推奨とされました。 代わりに、@\"microsoft.quantum.intrinsic.message\" を使用してください。\n@\"microsoft.quantum.intrinsic.message\" を使用してください。"
 operations:
 - uid: microsoft.quantum.primitive.assert
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.assert"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nAssert の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.intrinsic.assert\" を使用してください。\n@\"microsoft.quantum.intrinsic.assert\" を使用してください。"
 - uid: microsoft.quantum.primitive.assertprob
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.assertprob"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nAssertProb は非推奨となりました。 代わりに、@\"microsoft.quantum.intrinsic.assertprob\" を使用してください。\n@\"microsoft.quantum.intrinsic.assertprob\" を使用してください。"
 - uid: microsoft.quantum.primitive.ccnot
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.ccnot"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nCCNOT は非推奨とされました。 代わりに、@\"microsoft.quantum.intrinsic.ccnot\" を使用してください。\n@\"microsoft.quantum.intrinsic.ccnot\" を使用してください。"
 - uid: microsoft.quantum.primitive.cnot
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.cnot"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nCNOT は非推奨とされました。 代わりに、@\"microsoft.quantum.intrinsic.cnot\" を使用してください。\n@\"microsoft.quantum.intrinsic.cnot\" を使用してください。"
 - uid: microsoft.quantum.primitive.exp
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.exp"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nExp は非推奨とされました。 代わりに、@\"microsoft.quantum.intrinsic.exp\" を使用してください。\n@\"microsoft.quantum.intrinsic.exp\" を使用してください。"
 - uid: microsoft.quantum.primitive.expfrac
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.expfrac"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nこのような場合は、使用されなくなっています。 代わりに、@\"microsoft.quantum.intrinsic.expfrac\" を使用してください。\n@\"microsoft.quantum.intrinsic.expfrac\" を使用してください。"
 - uid: microsoft.quantum.primitive.h
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.h"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nH は非推奨とされました。 代わりに、@\"microsoft.quantum.intrinsic.h\" を使用してください。\n@\"microsoft.quantum.intrinsic.h\" を使用してください。"
 - uid: microsoft.quantum.primitive.i
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.i"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\n非推奨とされました。 代わりに、@\"microsoft.quantum.intrinsic.i\" を使用してください。\n@\"microsoft.quantum.intrinsic.i\" を使用してください。"
 - uid: microsoft.quantum.primitive.m
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.m"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nM は非推奨となりました。 代わりに、@\"microsoft.quantum.intrinsic.m\" を使用してください。\n@\"microsoft.quantum.intrinsic.m\" を使用してください。"
 - uid: microsoft.quantum.primitive.measure
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.measure"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nメジャーの使用は非推奨とされました。 代わりに、@\"microsoft.quantum.intrinsic.measure\" を使用してください。\n@\"microsoft.quantum.intrinsic.measure\" を使用してください。"
 - uid: microsoft.quantum.primitive.multix
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.canon.applytoeachca"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nMultiX の使用は非推奨とされました。 代わりに、@ \"applyto各 ca (x, _)\" を使用してください。\n@\"microsoft.quantum.canon.applytoeachca\" を使用してください。"
 - uid: microsoft.quantum.primitive.r
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.r"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nR の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.intrinsic.r\" を使用してください。\n@\"microsoft.quantum.intrinsic.r\" を使用してください。"
 - uid: microsoft.quantum.primitive.r1
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.r1"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nR1 は非推奨となりました。 代わりに、@\"microsoft.quantum.intrinsic.r1\" を使用してください。\n@\"microsoft.quantum.intrinsic.r1\" を使用してください。"
 - uid: microsoft.quantum.primitive.r1frac
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.r1frac"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nR1Frac は非推奨となりました。 代わりに、@\"microsoft.quantum.intrinsic.r1frac\" を使用してください。\n@\"microsoft.quantum.intrinsic.r1frac\" を使用してください。"
 - uid: microsoft.quantum.primitive.random
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.random"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nランダムの使用は非推奨とされました。 代わりに、@\"microsoft.quantum.intrinsic.random\" を使用してください。\n@\"microsoft.quantum.intrinsic.random\" を使用してください。"
 - uid: microsoft.quantum.primitive.reset
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.reset"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nリセットは非推奨となりました。 代わりに、@\"microsoft.quantum.intrinsic.reset\" を使用してください。\n@\"microsoft.quantum.intrinsic.reset\" を使用してください。"
 - uid: microsoft.quantum.primitive.resetall
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.resetall"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nResetAll は非推奨とされました。 代わりに、@\"microsoft.quantum.intrinsic.resetall\" を使用してください。\n@\"microsoft.quantum.intrinsic.resetall\" を使用してください。"
 - uid: microsoft.quantum.primitive.rfrac
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.rfrac"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nRFrac の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.intrinsic.rfrac\" を使用してください。\n@\"microsoft.quantum.intrinsic.rfrac\" を使用してください。"
 - uid: microsoft.quantum.primitive.rx
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.rx"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nRx は非推奨となりました。 代わりに、@\"microsoft.quantum.intrinsic.rx\" を使用してください。\n@\"microsoft.quantum.intrinsic.rx\" を使用してください。"
 - uid: microsoft.quantum.primitive.ry
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.ry"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nこの方法は非推奨とされます。 代わりに、@\"microsoft.quantum.intrinsic.ry\" を使用してください。\n@\"microsoft.quantum.intrinsic.ry\" を使用してください。"
 - uid: microsoft.quantum.primitive.rz
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.rz"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nRz は非推奨となりました。 代わりに、@\"microsoft.quantum.intrinsic.rz\" を使用してください。\n@\"microsoft.quantum.intrinsic.rz\" を使用してください。"
 - uid: microsoft.quantum.primitive.s
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.s"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nは非推奨とされます。 代わりに、@\"microsoft.quantum.intrinsic.s\" を使用してください。\n@\"microsoft.quantum.intrinsic.s\" を使用してください。"
 - uid: microsoft.quantum.primitive.swap
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.swap"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nスワップは非推奨となりました。 代わりに、@\"microsoft.quantum.intrinsic.swap\" を使用してください。\n@\"microsoft.quantum.intrinsic.swap\" を使用してください。"
 - uid: microsoft.quantum.primitive.t
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.t"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nT は非推奨とされました。 代わりに、@\"microsoft.quantum.intrinsic.t\" を使用してください。\n@\"microsoft.quantum.intrinsic.t\" を使用してください。"
 - uid: microsoft.quantum.primitive.x
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.x"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nX の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.intrinsic.x\" を使用してください。\n@\"microsoft.quantum.intrinsic.x\" を使用してください。"
 - uid: microsoft.quantum.primitive.y
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.y"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nY の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.intrinsic.y\" を使用してください。\n@\"microsoft.quantum.intrinsic.y\" を使用してください。"
 - uid: microsoft.quantum.primitive.z
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.intrinsic.z"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nZ は非推奨となりました。 代わりに、@\"microsoft.quantum.intrinsic.z\" を使用してください。\n@\"microsoft.quantum.intrinsic.z\" を使用してください。"
 metadata:
-  ms.openlocfilehash: 87dc52b15f7fb17c6e9c3c11ec04a91e775a36ef
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d3eef5b065a00cee2b31ea1a99e8814b5ca11ae0
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216035"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858243"
