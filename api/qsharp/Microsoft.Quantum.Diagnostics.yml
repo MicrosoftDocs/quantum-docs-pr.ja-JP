@@ -40,7 +40,7 @@ operations:
     2つの操作を指定すると、すべての入力状態で同じ動作をするようにアサートされます。
 
 
-    このアサーションは、フォームのすべての状態に対して操作のアクションをチェックすることによって実装されます $V (& o)... \ otimes V_ {n-1} $。ここで $V k $ は、州 $ \ket{0}$、$ \ket{1}$、$ \ket{+} $、$ \ket{i} $ (+ 1 eigenstate of p Li Y operator) のいずれかです。
+    このアサーションは、フォームのすべての状態に対して操作のアクションをチェックすることによって実装されます $V (& o)... \ otimes V_ {n-1} $。ここで $V _k $ は、州 $ \ket{0}$、$ \ket{1}$、$ \ket{+} $、$ \ket{i} $ (+ 1 eigenstate of P# li Y operator) のいずれかです。
 
 
     このアサーションは $n $ qubits を使用し、比較対象の操作の複数の呼び出しを必要とします。
@@ -73,11 +73,14 @@ operations:
     最後の引数は、アサーションが行われる許容範囲を定義します。
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
   summary: Qubit `q` が、指定された許容範囲内の Pauli Z 演算子の予測される eigenstate 内にあることをアサートします。
+newtypes:
+- uid: microsoft.quantum.diagnostics.test
+  summary: 単体テストをマークするために使用される、コンパイラが認識する属性。
 summary: " # <a name=\"summary\"></a>Summary\n この名前空間には、アサート操作や要求関数など、診断の目的に役立つ関数と操作が含まれています。"
 metadata:
-  ms.openlocfilehash: c387a7dc3b2e997d00d54457b0af89a04fa918d3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a633a9555f380e6aa6c6701d277d026c58130ff2
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056854"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858277"

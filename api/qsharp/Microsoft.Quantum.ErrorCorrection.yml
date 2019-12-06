@@ -23,15 +23,9 @@ functions:
   summary: 指定された qubits のレジスタに対する P# li 操作の特定のテーブルに対して、この関数は型 `RecoveryFn` のオブジェクトを返します。このオブジェクトには、指定された P# li 操作の配列に対してテーブル参照のデコードを実行するために必要なすべての情報が含まれています。
 operations:
 - uid: microsoft.quantum.errorcorrection.bitflipdecoder
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.errorcorrection.encodeintobitflipcode"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nBitFlipDecoder は非推奨となりました。 代わりに、@\"microsoft.quantum.errorcorrection.decodefrombitflipcode\" を使用してください。\n@\"microsoft.quantum.errorcorrection.encodeintobitflipcode\" を使用してください。"
 - uid: microsoft.quantum.errorcorrection.bitflipencoder
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.errorcorrection.encodeintobitflipcode"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nBitFlipEncoder は非推奨となりました。 代わりに、@\"microsoft.quantum.errorcorrection.encodeintobitflipcode\" を使用してください。\n@\"microsoft.quantum.errorcorrection.encodeintobitflipcode\" を使用してください。"
 - uid: microsoft.quantum.errorcorrection.decodefrombitflipcode
   summary: '[3, 1, 3]/⟦ 3, 1, 1 ⟧ビットフリップコードからデコードします。'
 - uid: microsoft.quantum.errorcorrection.decodefromfivequbitcode
@@ -45,15 +39,9 @@ operations:
 - uid: microsoft.quantum.errorcorrection.encodeintosteanecode
   summary: エンコードされていないクォンタムレジスタを⟦7、1、3⟧ Steane 量子コードでエンコードされたクォンタムレジスタにマップするエンコーディング操作。
 - uid: microsoft.quantum.errorcorrection.fivequbitcodedecoder
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.errorcorrection.decodefromfivequbitcode"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nFivvldb Bitcodeデコーダーの使用は非推奨とされました。 代わりに、@\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\" を使用してください。\n@\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\" を使用してください。"
 - uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.errorcorrection.encodeintofivequbitcode"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nFivvldb Bitcodeencoder は非推奨となりました。 代わりに、@\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\" を使用してください。\n@\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\" を使用してください。"
 - uid: microsoft.quantum.errorcorrection.injectpi4yrotation
   summary: >-
     `Y`に対してπ/4 回転を実行します。
@@ -75,15 +63,9 @@ operations:
 - uid: microsoft.quantum.errorcorrection.recovercss
   summary: '`CSS` 型で記述されたクォンタムコードによって、1回のエラー修正を実行します。'
 - uid: microsoft.quantum.errorcorrection.steanecodedecoder
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.errorcorrection.decodefromfivequbitcode"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nSteaneCodeDecoder は非推奨となりました。 代わりに、@\"microsoft.quantum.errorcorrection.decodefromsteanecode\" を使用してください。\n@\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\" を使用してください。"
 - uid: microsoft.quantum.errorcorrection.steanecodeencoder
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.errorcorrection.decodefromfivequbitcode"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nSteaneCodeEncoder は非推奨となりました。 代わりに、@\"microsoft.quantum.errorcorrection.encodeintosteanecode\" を使用してください。\n@\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\" を使用してください。"
 newtypes:
 - uid: microsoft.quantum.errorcorrection.css
   summary: エンコーダー、デコーダー、および `X` と `Z` エラーに対するそのより隣人測定手順によって定義された、Calderbank – Shor – Steane (CSS) コードを表します。
@@ -110,9 +92,9 @@ newtypes:
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
   summary: エラー修正コードブロックのより隣人を測定するために使用される操作を表します。
 metadata:
-  ms.openlocfilehash: 6e1ef3ba9f22dac172e4edfb93bf1012e7bb21b4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2f72286018b39e2d51d6e0ffa6babf7ce350d976
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056798"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858363"

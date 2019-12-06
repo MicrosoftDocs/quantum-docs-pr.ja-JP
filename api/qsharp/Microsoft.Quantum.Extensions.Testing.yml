@@ -3,55 +3,25 @@ uid: microsoft.quantum.extensions.testing
 name: Microsoft.Quantum.Extensions.Testing
 operations:
 - uid: microsoft.quantum.extensions.testing.assertallzero
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.diagnostics.assertallzero"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nAssertAllZero は非推奨となりました。 代わりに、@\"microsoft.quantum.diagnostics.assertallzero\" を使用してください。\n@\"microsoft.quantum.diagnostics.assertallzero\" を使用してください。"
 - uid: microsoft.quantum.extensions.testing.assertallzerotol
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.diagnostics.assertallzerowithintolerance"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nAssertAllZeroTol は非推奨となりました。 代わりに、@\"microsoft.quantum.diagnostics.assertallzerowithintolerance\" を使用してください。\n@\"microsoft.quantum.diagnostics.assertallzerowithintolerance\" を使用してください。"
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.diagnostics.assertoperationsequalinplace"を使用してください。
-
-    この操作の引数の順序が変更されていることに注意してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nAssertOperationsEqualInPlace は非推奨となりました。 代わりに、@\"microsoft.quantum.diagnostics.assertoperationsequalinplace\" を使用してください。\n@\"microsoft.quantum.diagnostics.assertoperationsequalinplace\" を使用してください。\nこの操作の引数の順序が変更されていることに注意してください。"
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis"を使用してください。
-
-    この操作の引数の順序が変更されていることに注意してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nAssertOperationsEqualInPlaceCompBasis は非推奨となりました。 代わりに、@\"microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis\" を使用してください。\n@\"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis\" を使用してください。\nこの操作の引数の順序が変更されていることに注意してください。"
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.diagnostics.assertoperationsequalreferenced"を使用してください。
-
-    この操作の引数の順序が変更されていることに注意してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nAssertOperationsEqualReferenced は非推奨となりました。 代わりに、@\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\" を使用してください。\n@\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\" を使用してください。\nこの操作の引数の順序が変更されていることに注意してください。"
 - uid: microsoft.quantum.extensions.testing.assertqubit
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.diagnostics.assertqubit"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nAssertQubit は非推奨となりました。 代わりに、@\"microsoft.quantum.diagnostics.assertqubit\" を使用してください。\n@\"microsoft.quantum.diagnostics.assertqubit\" を使用してください。"
 - uid: microsoft.quantum.extensions.testing.assertqubitstate
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nAssertQubitState は非推奨となりました。 代わりに、@\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\" を使用してください。\n@\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\" を使用してください。"
 - uid: microsoft.quantum.extensions.testing.assertqubittol
-  summary: >-
-    > [!WARNING]
-
-    > 非推奨 @"microsoft.quantum.diagnostics.assertqubitwithintolerance"を使用してください。
+  summary: "\n> [!WARNING]\n> 不使用\n\nAssertQubitTol は非推奨となりました。 代わりに、@\"microsoft.quantum.diagnostics.assertqubitwithintolerance\" を使用してください。\n@\"microsoft.quantum.diagnostics.assertqubitwithintolerance\" を使用してください。"
 metadata:
-  ms.openlocfilehash: 031bbd476ac37f113f9fb692ccd6fca916612ac3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0d06129c66f13c8c5ee9158ef6be41bf447791f9
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210349"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858416"

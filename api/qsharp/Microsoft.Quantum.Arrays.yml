@@ -45,8 +45,12 @@ functions:
   summary: 指定された間隔で整数の配列を取得します。
 - uid: microsoft.quantum.arrays.subarray
   summary: 配列と場所のリストを受け取り、指定した場所に一致する元の配列の要素から新しい配列を作成します。
+- uid: microsoft.quantum.arrays.swapped
+  summary: 配列内の2つの要素のスワップを適用します。
 - uid: microsoft.quantum.arrays.tail
   summary: 配列の最後の要素を返します。
+- uid: microsoft.quantum.arrays.tuplearrayasnestedarray
+  summary: 2つのタプルのリストを入れ子になった配列に変換します。
 - uid: microsoft.quantum.arrays.zip
   summary: 2つの配列を指定すると、は、各ペアに各元の配列の要素が含まれるように、ペアの新しい配列を返します。
 - uid: microsoft.quantum.arrays.zip3
@@ -57,9 +61,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: 配列と、配列の要素に対して定義されている操作が指定された場合、は、操作の下にある元の配列のイメージで構成される新しい配列を返します。
 metadata:
-  ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 12835bef2608d979809027cb9a271f2cda864b10
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056978"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858872"
