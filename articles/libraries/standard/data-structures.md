@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e8b28561f1aba37cb5bf41c6176386d19bfacf06
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 6eb47de84fdfbb9d35fdfc2988883f8e1cffa332
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184510"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864357"
 ---
 # <a name="data-structures-and-modeling"></a>データ構造とモデリング #
 
@@ -20,9 +20,9 @@ ms.locfileid: "73184510"
 また、ユーザー定義型を使用して、クォンタムの概念を表します。また、キャノンシステムの制御に使用される典型的なデータを操作するための操作、関数、および型も提供します。
 たとえば、<xref:microsoft.quantum.arrays.reversed> 関数は、配列を入力として受け取り、同じ配列を逆の順序で返します。
 これは `Qubit[]` 型の配列に対して使用できます。これにより、整数のクォンタム表現間で変換を行うときに、不要な $/演算子名 {swap} $ ゲートが適用されるのを回避できます。
-同様に、前のセクションでは、ランダムアクセスコレクションを表すために `(Int, Int -> T)` フォームの種類を示しています。そのため、<xref:microsoft.quantum.arrays.lookupfunction> 関数は、配列型からこのような型を構築する方法を提供します。
+同様に、前のセクションでは、ランダムアクセスコレクションを表すために `(Int, Int -> T)` フォームの種類を示しています。そのため、<xref:microsoft.quantum.arrays.lookupfunction> 関数は、配列型からこのような型を構築する便利な方法を提供します。
 
-### <a name="pairs"></a>座標 ###
+### <a name="pairs"></a>ペア ###
 
 キャノンは、分解によるタプルへのアクセスを補完する、ペアに対する関数形式の表記をサポートしています。
 
@@ -73,11 +73,11 @@ ApplyToEach(
 多くの場合、このサブルーチンは、他のいくつかのパラメーターに加えて oracle を受け入れるクォンタムアルゴリズムへの入力と考えることができます。また、一連のクォンタム操作を適用し、このクォンタムサブルーチンの呼び出しを基本的なゲートと同様に処理します。
 当然ながら、より大きなアルゴリズムを実際に実装するためには、oracle の根本的な分解を基本的なゲートに提供する必要がありますが、このような分解は、oracle を呼び出すアルゴリズムを理解するためには必要ありません。
 Q # では、この抽象化は、操作がファーストクラスの値であることによって表されます。これにより、操作を、ブラックボックス方式でクォンタムアルゴリズムの実装に渡すことができます。
-さらに、ユーザー定義型を使用して、さまざまな oracle 表現をタイプセーフな方法でラベル付けすることで、異なる種類のブラックボックス操作を誤って混同ことが困難になります。
+さらに、ユーザー定義型を使用して、さまざまな oracle 表現をタイプセーフな方法でラベル付けすることで、さまざまな種類のブラックボックス操作を誤って混同ことが困難になります。
 
 このような oracles は、 [Grover の検索](https://en.wikipedia.org/wiki/Grover%27s_algorithm)やクォンタムシミュレーションアルゴリズムなどの有名な例を含む、さまざまなコンテキストで表示されます。
 ここでは、振幅増幅とフェーズ推定の2つのアプリケーションに必要な oracles に焦点を当てています。
-最初に、進んからフェーズの推定までの振幅増幅の oracles について説明します。
+最初に、振幅増幅の oracles について説明してから、フェーズの推定に進みます。
 
 ### <a name="amplitude-amplification-oracles"></a>振幅増幅 Oracles ###
 
@@ -94,7 +94,7 @@ Oracles は、このようなサブスペースを識別します。これは、
 対象のサブ空間をマークする oracle ($P _1 $) は、まったく同じ形式になります。
 ターゲットのサブ空間内のすべての州 $ \ket{x} $ (つまり、アルゴリズムによって出力されるすべての状態) に対して、$P _1 \ k {x} =-\ket{x} $ を使用します。
 同様に、対象のサブ空間に含まれていないすべての州 $ \ket{y} $ に対して、_1 \ k {y} = \ket{y} $ という $P ます。
-次に $Q、これら2つの反射を組み合わせて、施行 =-P_0 P_1 $ というの1つの手順を実行する演算子を形成します。マイナス記号全体は、制御されたアプリケーションでのみ考慮する必要があります。
+次に、これら2つの反射を結合して、施行 =-P_0 P_1 $ という $Q の1つの手順を実行する演算子を形成します。この場合、マイナス記号全体は、制御されたアプリケーションで考慮する必要があります。
 次に、最初のサブ空間にある $ \ket{\psi} $ という初期状態を取得し、$ \ket{\psi} を実行してから、$ を実行します。
 このような反復処理を実行すると、最初の状態が、マークされたスペースを持つ $ \ sin ^ 2 (-シータ) $ と重複している場合、$ iteration を $m した後、この重複が $ \ sin ^ 2 ([2m + 1] \ シータ) $ になります。
 そのため、通常は $ [2m + 1] \ シータ = \ pi/2 $; のような無料のパラメーターとして $m $ を選択する必要があります。ただし、このような剛体選択は、固定ポイントの振幅増幅など、一部の種類の振幅増幅では重要ではありません。
@@ -145,20 +145,20 @@ is Adj + Ctl {
 }
 ```
 
-次に、これら2つの oracles を組み合わせて、2つの状態と決定的な変換 $ \ket{+} ^ {-otimes n} $ から $ \ket{0}$ に比例する Hadamard ゲートの複数のレイヤーを使用します。これは、$-sqrt{2 ^ n} $ (ie $m/proprt{2 ^ n} $)$ \ket{0}$ の状態を無作為に準備するために必要となる約 $ 2 ^ n $ のレイヤーとは、結果 $0 $ が観測されるまで初期状態を準備して測定することです。
+次に、これら2つの oracles を組み合わせて、2つの状態の間を回転させ、$ \ket{+} ^ {-otimes n} $ を $ \ket{0}$ に変換します。これは、Hadamard ゲートの複数のレイヤーを使用して、$ \ sqrt{2 ^ n} $ に比例します。 (ie $m \、\ sqrt{2 ^ n} $) と約 $ 2 ^ n $ のレイヤーは、$ \ket{0}$ の状態を無作為に準備するために必要となります。これは、結果 $0 $ が観測されるまで、初期状態を準備して測定します。
 
 ### <a name="phase-estimation-oracles"></a>フェーズ推定 Oracles ###
 
 フェーズの推定では、oracles の方がやや自然です。
 フェーズの推定の目的は、ユニタリ行列の固有値からサンプリングできるサブルーチンを設計することです。
-このメソッドは、化学およびマテリアルサイエンスの物理的な問題が多く発生しているため、不可欠の実験では、次のフェーズ図についての重要な情報を提供するクォンタムシステムのグラウンドステート注ぎを提供しています。分子の材料と反力のあるダイナミクス。
+この方法は、化学およびマテリアルサイエンスの物理的な問題が多く発生しているため、この固有値は、次のフェーズ図に関する貴重な情報を提供する、量子システムの注ぎを提供します。分子の材料と反力のあるダイナミクス。
 フェーズ推定のすべてのフレーバーには、入力のユニタリが必要です。
 このユニタリは、2種類の oracles のいずれかで記述された通常です。
 
 > [!TIP]
 > これらのサンプルでは、次に示す oracle の両方の型について説明します。
-> 連続クエリ oracles の詳細については、 [ **PhaseEstimation**サンプル](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation)を参照してください。
-> 離散クエリ oracles の詳細については、 [ **IsingPhaseEstimation**サンプル](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation)を参照してください。
+> 連続クエリ oracles の詳細については、 [ **PhaseEstimation**サンプル](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation)を参照してください。
+> 離散クエリ oracles の詳細については、 [ **IsingPhaseEstimation**サンプル](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)を参照してください。
 
 Oracle の最初の種類は、個別のクエリとして oracle を呼び出し、ユーザー定義型の <xref:microsoft.quantum.oracles.discreteoracle>で表現します。ここでは、単に、インテキスト行列を使用します。
 $U $ が、推定する値を持つユニタリの場合、$U $ の oracle は $U $ を実装するサブルーチンの単なるスタンドアロンです。
@@ -166,8 +166,8 @@ $U $ が、推定する値を持つユニタリの場合、$U $ の oracle は $
 このマトリックスの固有値を使用して、初期状態とターゲット状態の間の重複を推定することができます $ \ sin ^ 2 (quadratically) $。それ以外の場合に必要なサンプルの数を減らすことができます。
 これにより、Grover oracle $Q $ を使用して、振幅推定のモニカーを入力として使用して、フェーズ推定の適用を行うことができます。
 クォンタム metrology で広く使われているもう1つの一般的なアプリケーションでは、小さな回転角度を推定する必要があります。
-言い換えると、$-シータ $ を推定して、フォームの不明な回転ゲート (& z) (\ シータ) $ を $R ます。
-このような場合、ゲートの $ \ シータ $ という固定値を学習するために対話するサブルーチンは、$ $ \begin{align} U & = R_z (\ シータ) \\\\ & = \begin{bmatrix} e ^ {-i-シータ/2} & 0 \\\\ 0 & e ^ {i \シータ/2} \end{bmatrix}.
+つまり、$-シータ $ を推定して、$R _z (\ シータ) $ という形式の不明な回転ゲートを計算します。
+このような場合、ゲートの $ \ シータ $ という固定値を学習するために対話するサブルーチンは、$ $ \begin{align} U & = R_z (-シータ) \\\\ & = \begin{bmatrix} e ^ {-i-シータ/2} & 0 \\\\ 0 & e ^ {i/シータ/2} \end{bmatrix}.
 \end{align} $ $
 
 フェーズ推定で使用される oracle の2つ目の種類は、<xref:microsoft.quantum.oracles.continuousoracle> の種類で表される、oracle の連続クエリです。
@@ -186,7 +186,7 @@ $U (t) $ の固有値は、$H $ の固有値に直接関連付けられていま
 
 この具体的な例として、ゲートの回転角度ではなく、クォンタムシステムの procession 周波数を見積もることの問題について考えてみます。
 このような量子力学を説明するユニタリは $U (t) = R_z (2 \ オメガ t) $ で、進化時間 $t $ および不明な頻度 $ \ オメガ $ です。
-このコンテキストでは、単一 $R z のゲートを使用して、任意の $t $ に対して $U (t) $ をシミュレートできます。そのため、このような場合は、1つのユニタリに対する個別のクエリのみに制限する必要はありません。
+このコンテキストでは、1つの $R _z $ gate を使用して任意の $t $ に対して $U (t) $ をシミュレートできます。そのため、このような場合は、個別のクエリのみを使用して、そのようにする必要はありません。
 このような連続モデルには、対数関数の分岐カットによってマスクされるフェーズ情報があるため、連続したクエリを使用するフェーズ推定プロセスから学習できるプロパティもあります。$t $ の非対応値に対して実行された実験の結果から明らかになります。
 このため、このような連続したクエリモデル (フェーズ推定) の場合、oracle は適切なだけでなく、個別のクエリモデルにも適しています。
 このため、Q # には両方の形式のクエリの機能があり、ユーザーにそのまま残して、ニーズに合わせてフェーズの推定アルゴリズムを決定し、使用可能な oracle の種類を決定します。
@@ -199,17 +199,17 @@ Dynamical シミュレーションの主な目的は、クォンタムコンピ�
 
 $ $ \begin{align} H & = \ sum ^ {d-1} _ {j = 0} H_j, \end{align} $ $
 
-各用語による時間の進化は、クォンタムコンピューターで簡単に実装できます。 たとえば、_1X_2 $ 演算子が、qubit レジスタ `qubits`の1番目と2番目の要素に対して動作する $X $ 演算子で $H ある場合、その $t $ は、署名 `Exp([PauliX,PauliX], t, qubits[1..2])`を持つ操作 `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`を呼び出すことによって簡単に実装できます。 Hamiltonian のシミュレーションで後ほど説明するように、1つの解決策として、$H $ による時間の進化にかかる時間を短縮することがあります。
+各用語による時間の進化は、クォンタムコンピューターで簡単に実装できます。 たとえば、$H _j $ が、qubit レジスタ `qubits`の1番目と2番目の要素に対して動作する、$ 演算子 $X _1X_2 $ 演算子である場合、それによって発生する時間の増加は、シグネチャ $t を持つ操作 `Exp([PauliX,PauliX], t, qubits[1..2])`を呼び出すことによって簡単に実装できます。 Hamiltonian のシミュレーションで後ほど説明するように、1つの解決策として、$H $ による時間の進化にかかる時間を短縮することがあります。
 
-$ $ \begin{align} U (t) & = \ left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r}/cドット e ^ {-iH\_{d-1} t/r} \ 右) ^ {r} + \mathcal{O} (d ^ 2 \) \\|H\_j\\| ^ 2 t ^ 2/r)、\end{align} $ $
+$ $ \begin{align} U (t) & = \ left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r}/cドット e ^ {-iH\_{d-1} t/r} \ 右) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\|H\_j\\| ^ 2 t ^ 2/r)、\end{align} $ $
 
 > $0 の整数 $r では、近似誤差を制御します。
 
 Dynamical generator モデリングライブラリは、単純なジェネレーターの観点から、複雑なジェネレーターを体系的にエンコードするためのフレームワークを提供します。 そのような説明は、シミュレーションライブラリなどに渡すことによって、選択したシミュレーションアルゴリズムによって時間の進化を実装し、多くの詳細情報が自動的に処理されるようにすることができます。
 
 > [!TIP]
-> 以下で説明する dynamical generator ライブラリについては、「」のサンプルを参照してください。 整理モデルに基づく例については、「 [ **isinggenerators**のサンプル](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingGenerators)」を参照してください。
-> 分子 Hydrogen に基づく例については、 [**H2SimulationCmdLine**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine)と[**H2SimulationGUI**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationGUI)のサンプルを参照してください。
+> 以下で説明する dynamical generator ライブラリについては、「」のサンプルを参照してください。 整理モデルに基づく例については、「 [ **isinggenerators**のサンプル](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators)」を参照してください。
+> 分子 Hydrogen に基づく例については、 [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line)と[**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui)のサンプルを参照してください。
 
 ### <a name="complete-description-of-a-generator"></a>ジェネレーターの完全な説明 ###
 
@@ -225,7 +225,7 @@ newtype EvolutionGenerator = (EvolutionSet, GeneratorSystem);
 newtype GeneratorSystem = (Int, (Int -> GeneratorIndex));
 ```
 
-組の最初の要素 `Int` は、$ $d $ という用語の数を Hamiltonian に格納し、2番目の要素 `(Int -> GeneratorIndex)` は、$\{0, 1,..., d-1\}$ の整数インデックスを一意に識別する `GeneratorIndex` ユーザー定義型にマップする関数です。Hamiltonian のプリミティブ用語。 Hamiltonian では、配列 `GeneratorIndex[]`ではなく関数として用語のコレクションを指定することによって、Hamiltonians を多数の用語で記述する場合に特に便利な、`GeneratorIndex` を実行できるようになります。
+組の最初の要素 `Int` は、$ $d $ という用語を Hamiltonian に格納します。2番目の要素 `(Int -> GeneratorIndex)` は、$\{0, 1,..., d-1\}$ の整数インデックスを、Hamiltonian 内の各プリミティブ項を一意に識別する `GeneratorIndex` ユーザー定義型にマップする関数です。 Hamiltonian では、配列 `GeneratorIndex[]`ではなく関数として用語のコレクションを指定することによって、Hamiltonians を多数の用語で記述する場合に特に便利な、`GeneratorIndex` を実行できるようになります。
 
 とてもでは、`GeneratorIndex` によって識別されるプリミティブ用語についての規則を適用することはできません。 たとえば、前に説明したように、プリミティブな用語は PFermionic の演算子にすることができますが、クォンタムの化学シミュレーションで一般的に使用される annihilation や作成演算子にすることもできます。 `GeneratorIndex` は意味がありません。これは、ポイントした期間による時間の進化が、クォンタム回線として実装されている可能性があるためです。
 
@@ -238,13 +238,13 @@ newtype EvolutionSet = (GeneratorIndex -> EvolutionUnitary);
 ### <a name="pauli-operator-generators"></a>P# li 演算子ジェネレーター ###
 
 ジェネレーターの具体例としては、Hamiltonians 演算子の合計であり、それぞれ異なる係数を持つことがあります。
-$ $ \begin{align} H & = \ sum ^ {d-1} _ {j = 0} a_j H_j、\end{align} $ $。各 $ \ hat H_j $ が p Li グループから描画されるようになりました。 このようなシステムでは、`EvolutionSet` 型の `PauliEvolutionSet()` を提供しています。これにより、次のシグネチャを持つ、`GeneratorIndex`によって、Pan Li グループと係数の要素が識別される方法に関する規則が定義されます。
+$ $ \begin{align} H & = \ sum ^ {d-1} _ {j = 0} a_j H_j, \end{align} $ $。各 H_j $ $ $ は、現在、p Li グループから描画されています。 このようなシステムでは、`EvolutionSet` 型の `PauliEvolutionSet()` を提供しています。これにより、次のシグネチャを持つ、`GeneratorIndex`によって、Pan Li グループと係数の要素が識別される方法に関する規則が定義されます。
 
 ```qsharp
 newtype GeneratorIndex = ((Int[], Double[]), Int[]);
 ```
 
-このエンコードでは、最初のパラメーター `Int[]` は、PI\rightarrow Li 文字列を指定します。ここで、$ & hat $0、$、hat X\rightarrow $1、$/hat Y\rightarrow $2、および $/hat Z\rightarrow $3 です。 2番目のパラメーター `Double[]` は、Hamiltonian 内の p Li 文字列の係数を格納します。 この配列の最初の要素のみが使用されていることに注意してください。 3番目のパラメーターは、この P`Int[]` Li 文字列が処理する qubits のインデックスを作成し、重複する要素を持つことはできません。 したがって、Hamiltonian term $0.4 \ hat X_0 \ hat Y_8\hat I_2\hat Z_1 $ は、
+このエンコードでは、最初のパラメーター `Int[]` は、PI\rightarrow Li 文字列を指定します。ここで、$ & hat $0、$、hat X\rightarrow $1、$/hat Y\rightarrow $2、および $/hat Z\rightarrow $3 です。 2番目のパラメーター `Double[]` は、Hamiltonian 内の p Li 文字列の係数を格納します。 この配列の最初の要素のみが使用されていることに注意してください。 3番目のパラメーターは、この P`Int[]` Li 文字列が処理する qubits のインデックスを作成し、重複する要素を持つことはできません。 したがって、Hamiltonian term $0.4 \ hat X_0; hat Y_8/hat I_2/hat Z_1 $ は、
 
 ```qsharp
 let generatorIndexExample = GeneratorIndex(([1,2,0,3], [0.4]]), [0,8,2,1]);

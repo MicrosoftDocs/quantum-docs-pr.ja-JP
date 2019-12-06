@@ -6,18 +6,18 @@ ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.qubits
-ms.openlocfilehash: d1a8ccc9423a9a04e12bc98e3783790232b2f5d8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 477b358c3eba58b62926b4e9094770c9741cac92
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183473"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864255"
 ---
 # <a name="working-with-qubits"></a>Qubits の操作 #
 
 Q # 言語のさまざまな部分を見てきましたが、それについて説明し、qubits 自体を使用する方法を見てみましょう。
 
-## <a name="allocating-qubits"></a>割り当て (Qubits を) ##
+## <a name="allocating-qubits"></a>量子ビットの割り当て ##
 
 まず、Q # で使用できる qubit を取得するために、`using` ブロック内に qubit を*割り当て*ます。
 
@@ -43,7 +43,7 @@ using (register = Qubit[5]) {
 
 1つ目の方法として、1つの $Z $、$Y $、および $ $X、それぞれが型 `Y`を持つ組み込み操作 `X`、`Z`、および `(Qubit => Unit is Adj + Ctl)`によって Q # で表されます。
 「組み込みの[操作と関数](xref:microsoft.quantum.libraries.standard.prelude)」で説明されているように、$X $ と `X` はビットフリップ演算または NOT gate と考えることができます。
-これにより、いくつかのクラシックビット文字列 $s $: で $ \ket{s_0 s_1 \ ドット s_n} $ という形式の状態を準備できます。
+これにより、いくつかのクラシックビット文字列 $s $: で、$ \ket{s_0 s_1 \ ドット s_n} $ という形式の状態を準備できます。
 
 ```qsharp
 operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit 
@@ -72,7 +72,7 @@ operation Example() : Unit {
 > [!TIP]
 > 後で、手動によるフロー制御を必要としない、この操作を記述するよりコンパクトな方法を紹介します。
 
-\Ket transform{0} $ を使用して、$ \ket{+} = \ left (\ket{0} + \ket{1}\ right)//sqrt{2}$ および $ \ket{-} = \ left (\ket{1}-Hadamard{2}-right)//sqrt $H $ などの状態を準備することもできます。: 組み込み操作によって Q # で表される `H : (Qubit => Unit is Adj + Ctl)`:
+また、組み込みの操作によって Q # で表される \Ket transform{0} $ を使用して、$ \ket{+} = \ left (\ket{0} + \ket{1}/\ sqrt{2}$ と $ \ket{-} =-left (\ket{1}-Hadamard{2}-right)//sqrt $H $ などの状態を準備することもできます。
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -90,7 +90,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 
 ## <a name="measurements"></a>測定値 ##
 
-組み込みの非インサム演算である `Measure` 操作を使用すると、`Qubit` 型のオブジェクトから古典的な情報を抽出し、その結果として `Result`予約型を持つ古典的な値を結果として割り当てることができます。クォンタムの状態が長くなります。 `Measure` への入力は、Bloch 球の p Li 軸で、型 `Pauli` のオブジェクト (たとえば、`PauliX`) と `Qubit`型のオブジェクトによって表されます。 
+組み込みの非インサム演算である `Measure` 操作を使用すると、`Qubit` 型のオブジェクトから古典的な情報を抽出し、`Result`予約済みの型を持つ古典的な値を結果として割り当てることができます。これは、結果がクォンタム状態ではなくなっていることを示します。 `Measure` への入力は、Bloch 球の p Li 軸で、型 `Pauli` のオブジェクト (たとえば、`PauliX`) と `Qubit`型のオブジェクトによって表されます。 
 
 単純な例として、$ \ket{0}$ state に1つの qubit を作成し、Hadamard gate ``H`` を適用して、その結果を `PauliZ` ベースで測定する次の操作があります。 
 
@@ -129,7 +129,7 @@ operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
-Q # 言語では、qubits の測定結果に対する従来の制御フローの依存関係が許可されます。 これにより、では、unitaries を実装するための計算コストを削減できる強力なガジェットを実装できるようになります。 例として、Q # ではいわゆる*繰り返し*呼び出しを簡単に実装できます。これは、基本的なゲートの観点から*予想*低コストを確率論的回線ですが、実際の実行と実際のコストは実際の実行に依存します。さまざまな branchings のインターリーブ。 
+Q # 言語では、qubits の測定結果に対する従来の制御フローの依存関係が許可されます。 これにより、では、unitaries を実装するための計算コストを削減できる強力なガジェットを実装できるようになります。 例として、Q # では確率論的の*繰り返し*を実装するのが簡単です。これは、基本ゲートの観点から*予想*される低コストの回線ですが、実際の実行と、考えられるさまざまな branchings の実際のインターリーブに依存します。 
 
 Repeat To Success (RU) パターンを容易にするために、Q # はコンストラクトをサポートしています。
 ```qsharp
@@ -167,7 +167,7 @@ operation RUScircuit (qubit : Qubit) : Unit {
 
 この例では、変更可能な変数 `finished` の使用方法を示しています。これは、反復処理までの繰り返しループ全体のスコープ内にあり、ループの前に初期化され、フィックスアップのステップで更新されます。
 
-最後に、"$ \ket{+} $" 状態から開始して、クォンタムの状態を準備する RU パターンの例を示します。これには、(\ sqrt{2}\ket{0}+ \ket{1}-right) $ というクォンタムの{3}{1}状態が用意されています。 [標準ライブラリで提供されている単体テストのサンプル](https://github.com/Microsoft/Quantum/blob/master/Samples/src/UnitTesting/RepeatUntilSuccessCircuits.qs)も参照してください。 
+最後に、"$ \ket{+} $" 状態から開始して、クォンタムの状態を準備する RU パターンの例を示します。これには、(\ sqrt{2}\ket{0}+ \ket{1}-right) $ というクォンタムの{3}{1}状態が用意されています。 [標準ライブラリで提供されている単体テストのサンプル](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs)も参照してください。 
 
 ```qsharp
 operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
@@ -212,4 +212,4 @@ operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
 }
 ```
  
-この操作に示されている注目すべきプログラム機能は、クォンタム操作を伴うループのより複雑な `fixup` 部分です。また、`AssertProb` ステートメントを使用して、プログラム. `Assert` および `AssertProb` ステートメントの詳細については、「[テストおよびデバッグ](xref:microsoft.quantum.techniques.testing-and-debugging)」も参照してください。 
+この操作に示されている注目すべきプログラム機能は、クォンタム操作を伴うループのより複雑な `fixup` 部分です。また、`AssertProb` ステートメントを使用して、プログラム内の特定の特定のポイントでクォンタムの状態を測定する確率を確認します。 `Assert` および `AssertProb` ステートメントの詳細については、「[テストおよびデバッグ](xref:microsoft.quantum.techniques.testing-and-debugging)」も参照してください。 

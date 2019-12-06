@@ -1,21 +1,21 @@
 ---
 title: 'Q # 標準ライブラリ-applications |Microsoft Docs'
-description: 'Q # 標準ライブラリ'
+description: Q# 標準ライブラリ
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e6eca45dd67b3566340c2a2a4fded0f6e7c3c5c3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ef22460a5bca63ebaf32c0ba21984e103ec8ebdd
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185173"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864391"
 ---
 # <a name="applications"></a>アプリケーション #
 
-## <a name="hamiltonian-simulation"></a>Hamiltonian シミュレーション ##
+## <a name="hamiltonian-simulation"></a>ハミルトニアン シミュレーション ##
 
 クォンタムシステムのシミュレーションは、クォンタム計算の最も優れたアプリケーションの1つです。
 従来のコンピューターでは、クォンタム機構をシミュレートするのが困難です。一般に、ディメンション $N、その状態ベクトル表現の $ を使用してスケーリングします。
@@ -24,13 +24,13 @@ ms.locfileid: "73185173"
 ただし、この状況は、quantum ハードウェアでは大きく異なる可能性があります。 クォンタムシミュレーションの最も一般的なバリエーションは、時間に依存しない Hamiltonian シミュレーションの問題と呼ばれます。 ここには、Hermitian マトリックスである system Hamiltonian $H $ の説明と、クォンタムコンピューター上の $n $ qubits で何らかの基準としてエンコードされた初期クォンタム状態 $ \ket{\psi (0)} $ の説明が含まれています。 クローズされたシステムでのクォンタムの状態は、Schrödinger 式 $ $ \begin{align} i\ket{\psi {d (t)}} {d t} & = H \ket{\psi (t)}、\end{align} $ $ の下で進化しています。この目標は、一定の時間に $t $U て、$,、$ \ket{\psi (t)} = U (t) \ket{\psi (0)} $ は、Schrödinger 式を解決します。
 と同様は、時間に依存する Hamiltonian シミュレーションの問題は同じ方程式を解決しますが、$H (t) $ は time の関数になりました。
 
-Hamiltonian シミュレーションは、他の多くのクォンタムシミュレーションの問題の主要なコンポーネントであり、Hamiltonian シミュレーションの問題の解決策として、おおよそのからに対する一連のプリミティブクォンタムゲートを示すアルゴリズムがあります。エラーが発生した場合 $\\| \tilde{U} (t)\\|([スペクトル標準](xref:microsoft.quantum.concepts.matrix-advanced)では、\ le) これらのアルゴリズムの複雑さは、対象の Hamiltonian の説明が quantum コンピューターからアクセスできるようにする方法に非常に大きく依存しています。 たとえば、最悪の場合、$n $ qubits の $H $ が $ 2 ^ n/times 2 ^ n $ n $ number のリストとして指定された場合 (各マトリックス要素に1つ)、単にデータを読み取るだけで、既に指数関数が必要になります。 最良のケースでは、\ket{t}\ket{\psi (0)} = \ket{t}U (t) \ket{\psi (0)} $ が問題を解決できるように、ブラックボックスのユニタリにアクセスする $O ことを前提としています。 これらの入力モデルはいずれも特に興味深いものではありません。従来のアプローチよりも優れていません。後者の場合は、その実装のプリミティブゲートの複雑さが隠されています。
+Hamiltonian のシミュレーションは、他の多くのクォンタムシミュレーションの問題の主要なコンポーネントであり、Hamiltonian シミュレーションの問題の解決策としては、からのおおよそののシーケンスを表すアルゴリズム (エラー $\\| \tilde{U}-U (t)) があります\\。([スペクトル標準](xref:microsoft.quantum.concepts.matrix-advanced)では、\ le) これらのアルゴリズムの複雑さは、対象の Hamiltonian の説明が quantum コンピューターからアクセスできるようにする方法に非常に大きく依存しています。 たとえば、最悪の場合、$n $ qubits の $H $ が $ 2 ^ n/times 2 ^ n $ n $ number のリストとして指定された場合 (各マトリックス要素に1つ)、単にデータを読み取るだけで、既に指数関数が必要になります。 最良のケースでは、\ket{t}\ket{\psi (0)} = \ket{t}U (t) \ket{\psi (0)} $ が問題を解決できるように、ブラックボックスのユニタリにアクセスする $O ことを前提としています。 これらの入力モデルはいずれも特に興味深いものではありません。従来のアプローチよりも優れていません。後者の場合は、その実装のプリミティブゲートの複雑さが隠されています。
 
 ### <a name="descriptions-of-hamiltonians"></a>Hamiltonians の説明 ###
 
 そのため、入力の形式に関する追加の前提条件が必要です。 現実的な物理システムや興味深い計算の問題の場合や、十分に制限されている入力モデルなど、興味深い Hamiltonians を網羅するような入力モデルの場合は、細かいバランスを取る必要があります。クォンタムコンピューターで効率的に実装できる。 この資料には、さまざまな簡単な入力モデルが含まれている場合があります。 
 
-クォンタム入力モデルの例として、[サンプルベースの Hamiltonian シミュレーション](http://www.nature.com/articles/s41534-017-0013-7)は、密度マトリックス $ \rho $ のコピーを生成するクォンタム操作へのブラックボックスアクセスを想定しています。これは、Hamiltonian $H $ として使用されます。 [ユニタリアクセスモデル](https://arxiv.org/abs/1202.5822)では、Hamiltonian ではなく、unitaries $ $ \begin{align} H & = \ sum ^ {d-1\_} の合計に分解され {j = 0} a\_j \hat{U}\_j, \end{align} $ $ ($a\_j > 0 $ は係数) になります。、$ \hat{U}\_j $ は unitaries います。 次に、1つのには、必要な $ \hat{U}\_j $ を選択する、\_{j = 0} \ket{j}\bra{j}\otimes \hat{U}\_j $、および oracle $A \ket{0}= \ sum ^ {d-1}\_{に対して、ブラックボックス $V のアクセスが含まれていることを前提としています。j = 0} \ sqrt{\_j/\ sum ^ {d-1}\_{k = 0} \ alpha\_j} \ket{j} $。これらの係数をエンコードするクォンタムの状態を作成します。 [スパース Hamiltonian シミュレーション](https://arxiv.org/abs/quant-ph/0301023)の場合、1つは、Hamiltonian がすべての行で $d = \mathcal{O} (\Text{polylog} (N)) $ 0 以外の要素のみを含むスパースマトリックスであることを前提としています。 さらに、これらのゼロ以外の要素の場所とその値を出力する効率的なクォンタム回線があることを前提としています。 [Hamiltonian シミュレーションアルゴリズム](xref:microsoft.quantum.more-information)の複雑さは、これらのブラックボックスに対するクエリ数の観点で評価されます。プリミティブゲートの複雑さは、これらの黒いボックスを実装する難しさに大きく依存します。
+クォンタム入力モデルの例として、[サンプルベースの Hamiltonian シミュレーション](http://www.nature.com/articles/s41534-017-0013-7)は、密度マトリックス $ \rho $ のコピーを生成するクォンタム操作へのブラックボックスアクセスを想定しています。これは、Hamiltonian $H $ として使用されます。 [ユニタリアクセスモデル](https://arxiv.org/abs/1202.5822)では、Hamiltonian ではなく、unitaries $ $ \begin{align} H & = \ sum ^ {d-1}\_{j = 0} a\_j \hat{U}\_j、\end{align} $ $、$a\_j > 0 $ は係数、$ \hat{U}\_j $ は unitaries います。 次に、1つのには、必要な $ \hat{U}\_j $ を選択する、ユニタリ oracle $V = \ sum ^ {d-1}\_{j = 0} \ket{j}\bra{j}\otimes \hat{U}\_j $ への黒いボックスアクセスがあると想定しています。また、oracle $A \ket{0}= \ sum ^ {d-1}\_{j = 0} \ sqrt{A\_j/\ sum ^ {d-1}\_{k = 0} \ alpha\_j} \ket{j} $。これらの係数をエンコードするクォンタム状態が作成されます。 [スパース Hamiltonian シミュレーション](https://arxiv.org/abs/quant-ph/0301023)の場合、1つは、Hamiltonian がすべての行で $d = \mathcal{O} (\Text{polylog} (N)) $ 0 以外の要素のみを含むスパースマトリックスであることを前提としています。 さらに、これらのゼロ以外の要素の場所とその値を出力する効率的なクォンタム回線があることを前提としています。 [Hamiltonian シミュレーションアルゴリズム](xref:microsoft.quantum.more-information)の複雑さは、これらのブラックボックスに対するクエリ数の観点で評価されます。プリミティブゲートの複雑さは、これらの黒いボックスを実装する難しさに大きく依存します。
 
 > [!NOTE]
 > ビッグ I/o 表記は、アルゴリズムの複雑さのスケーリングを説明するためによく使用されます。 2つの実関数 $f g $ では、式 $g (x) = \mathcal{O} (f (x)) $ は、正の正の定数 $x\_0、c > 0 $ を持つことを意味します。これは $g (x) & le c f (x) $ がすべての $x \ ge x\_$0 になります。 
@@ -45,21 +45,21 @@ Hamiltonian シミュレーションは、他の多くのクォンタムシミ�
 
 クォンタムシミュレーションアルゴリズムでは、Hamiltonian の指定された説明を、Hamiltonian と呼ばれるおおよその時間の推移的な一連のプリミティブクォンタムゲートに変換します。
 
-Hamiltonian 分解されが Hermitian パーツの合計になる特殊なケースでは、Trotter Suzuki 分解は、Hamiltonians コンポーネントの合計に分解される Hermitian をシミュレートするための、特にシンプルで直感的なアルゴリズムです。 たとえば、このファミリのファーストオーダーインテグレーターは、$ $ \begin{align} U (t) & = \ left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t を近似します/r} \ cドット e ^ {-iH\_{d-1} t/r} \ right) ^ {r} + \mathcal{O} (d ^ 2 \ max_ j\\|H\_j\\| ^ 2 t ^ 2/r)、\end{align} $ $ $r d $ terms の製品を使用します。 
+Hamiltonian 分解されが Hermitian パーツの合計になる特殊なケースでは、Trotter Suzuki 分解は、Hamiltonians コンポーネントの合計に分解される Hermitian をシミュレートするための、特にシンプルで直感的なアルゴリズムです。 たとえば、このファミリのファーストオーダーインテグレーターは、$ $ \begin{align} U (t) & = \ left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 を概算します。 t/r} \ cドット e ^ {-iH\_{d-1} t/r} \ right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j\\|H\_j\\| ^ 2 t ^ 2/r)、\end{align} $ $ $r d $ terms の製品を使用します。 
 
 > [!TIP]
 > サンプルでは、Trotter-Suzuki シミュレーションアルゴリズムのアプリケーションについて説明します。
-> 各ターゲットコンピューターによって提供される組み込み操作のみを使用する場合は、 [ **simpleising**サンプル](https://github.com/Microsoft/Quantum/tree/master/Samples/src/SimpleIsing)を参照してください。
-> Trotter-Suzuki library コントロール構造体を使用する場合は、 [ **IsingTrotter**サンプル](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingTrotterEvolution)を参照してください。
-> Trotter-Suzuki library コントロール構造体を使用した分子 Hydrogen については、「 [ **H2 シミュレーション**のサンプル](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine)」を参照してください。
+> 各ターゲットコンピューターによって提供される組み込み操作のみを使用する場合は、 [ **simpleising**サンプル](https://github.com/microsoft/Quantum/blob/master/samples/simulation/ising/simple)を参照してください。
+> Trotter-Suzuki library コントロール構造体を使用する場合は、 [ **IsingTrotter**サンプル](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/trotter-evolution)を参照してください。
+> Trotter-Suzuki library コントロール構造体を使用した分子 Hydrogen については、「 [ **H2 シミュレーション**のサンプル](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line)」を参照してください。
 
-多くの場合、シミュレーションアルゴリズムを実装する必要がありますが、その実装の詳細には関心がありません。 たとえば、2番目の命令インテグレーターは、$ $ \begin{align} U (t) & = \ left (e ^ {-iH\_0 t/2r} e ^ {-iH\_1 t/2r} \ cドット e ^ {-iH\_{d-1} t/2r} e ^ {-iH\_{d-1} t/2r} \ cドット e ^ {-iH\_1 t/2r} e ^ {-iH\_0 t/2r} \ 右) ^ {r} + \mathcal{O} (d ^ 3 \ maxj\\|H\_j\\| ^ 3 t ^ 3/r ^ 2)、$ 2rd $ terms の製品を使用する \end{align} $ $。 注文が大きいほど、さらに多くの用語と最適化されたバリエーションが必要になることがあります。その場合、指数には非常に重要な順序が必要になります 他の高度なアルゴリズムでは、中間ステップで ancilla qubits を使用することが必要になる場合もあります。 そのため、ユーザー定義型として、キャノンのシミュレーションアルゴリズムをパッケージ化します。
+多くの場合、シミュレーションアルゴリズムを実装する必要がありますが、その実装の詳細には関心がありません。 たとえば、2番目の命令インテグレーターは、$ $ \begin{align} U (t) & = \ left (e ^ {-iH\_0 t/2r} e ^ {-iH\_1 t/2r} \ cドット e ^ {-iH\_{d-1} t/2r} を近似します。 e ^ {-iH\_{d-1} t/2r} \ cドット e ^ {-iH\_1 t/2r} e ^ {-iH\_0 t/2r} \ 右) ^ {r} + \mathcal{O} (d ^ 3 \ max_j\\|H\_j\\| ^ 3 t ^ 3/r ^ 2)、$ 2rd $ terms の製品を使用する \end{align} $ $。 注文が大きいほど、さらに多くの用語と最適化されたバリエーションが必要になることがあります。その場合、指数には非常に重要な順序が必要になります 他の高度なアルゴリズムでは、中間ステップで ancilla qubits を使用することが必要になる場合もあります。 そのため、ユーザー定義型として、キャノンのシミュレーションアルゴリズムをパッケージ化します。
 
 ```qsharp
 newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => Unit is Adj + Ctl);
 ```
 
-最初のパラメーター `Double` はシミュレーションの時間であり、[データ構造](xref:microsoft.quantum.libraries.data-structures)の Dynamical Generator 表現セクションに記載されている2番目のパラメーター `EvolutionGenerator`は、によってパッケージ化された時間に依存しない Hamiltonian の従来の説明です。Hamiltonian の各用語が、クォンタム回線でシミュレートされる方法について説明します。 このフォームの型では、3番目のパラメーター `Qubit[]`に対して、$e ^ {-iHt} $ のような順番に処理されます。これは、シミュレートされたシステムのクォンタム状態を格納するレジスタです。 時間に依存する場合と同様に、`EvolutionSchedule` 型を使用してユーザー定義型を定義します。これは、時間に依存する Hamiltonian の古典的な説明です。
+最初のパラメーター `Double` はシミュレーションの時間であり、[データ構造](xref:microsoft.quantum.libraries.data-structures)の Dynamical Generator 表現セクションに記載されている2番目のパラメーター `EvolutionGenerator`は、時間に依存しない Hamiltonian の典型的な説明であり、Hamiltonian の各用語は、クォンタム回線によってシミュレートされる方法についての指示と共にパッケージ化されます。 このフォームの型では、3番目のパラメーター `Qubit[]`に対して、$e ^ {-iHt} $ のような順番に処理されます。これは、シミュレートされたシステムのクォンタム状態を格納するレジスタです。 時間に依存する場合と同様に、`EvolutionSchedule` 型を使用してユーザー定義型を定義します。これは、時間に依存する Hamiltonian の古典的な説明です。
 
 ```qsharp
 newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[]) => Unit : Adjoint, Controlled);
@@ -83,13 +83,13 @@ function TimeDependentTrotterSimulationAlgorithm(
 ```
 
 > [!TIP]
-> シミュレーションライブラリのアプリケーションについては、「」のサンプルで説明されています。 `SimulationAlgorithm`を使用した、整理モデルのフェーズの推定については、 [ **IsingPhaseEstimation**サンプル](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation)を参照してください。
-> `TimeDependentSimulationAlgorithm`を使用した adiabatic モデルでの状態の準備の詳細については、 [ **AdiabaticIsing**サンプル](https://github.com/Microsoft/Quantum/tree/master/Samples/src/AdiabaticIsing)を参照してください。
+> シミュレーションライブラリのアプリケーションについては、「」のサンプルで説明されています。 `SimulationAlgorithm`を使用した、整理モデルのフェーズの推定については、 [ **IsingPhaseEstimation**サンプル](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)を参照してください。
+> `TimeDependentSimulationAlgorithm`を使用した adiabatic モデルでの状態の準備の詳細については、 [ **AdiabaticIsing**サンプル](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic)を参照してください。
 
 
 ### <a name="adiabatic-state-preparation--phase-estimation"></a>Adiabatic 状態の準備 & フェーズの推定 ###
 
-Hamiltonian シミュレーションの1つの一般的なアプリケーションは、adiabatic 状態の準備です。 ここでは、2つの Hamiltonians $H\_{\ text{startno} $ と $H\_{\ text{endnono$ と、開始 Hamiltonian $H {\ text{start{2} $ のグラウンド状態であるクォンタム状態 $ \ket{\psi (0)} $ を使用して提供されています。 通常、$H\_{\ text{startno} $ が選択されているため、$ \ket{\psi (0)} $ はコンピューティングベースの状態 $ \ket{0\cdots 0} $ から簡単に準備できます。 時間に依存するシミュレーションの問題でこれらの Hamiltonians の間を補間することで、sufficientl の最終的な Hamiltonian $H\_{\ text{end{2} $ という大きな確率で終了する可能性があります。 Hamiltonian のグランド州の適正な概算を準備することで、時間に依存する Hamiltonian シミュレーションアルゴリズムでサブルーチンとしてを呼び出すことによって、この方法で処理を進めることができますが、その他の概念的に異なる手法があります。eigensolver が可能です。
+Hamiltonian シミュレーションの1つの一般的なアプリケーションは、adiabatic 状態の準備です。 ここでは、2つの Hamiltonians $H\_{\ text{startno} $ と $H\_{\ text{endnono$ と、開始 Hamiltonian $H {\ text{start{2} $ のグラウンド状態であるクォンタム状態 $ \ket{\psi (0)} $ を使用して提供されています。 通常、$H\_{\ text{startno} $ が選択されているため、$ \ket{\psi (0)} $ はコンピューティングベースの状態 $ \ket{0\cdots 0} $ から簡単に準備できます。 時間に依存するシミュレーションの問題でこれらの Hamiltonians の間を十分にゆっくりと補間することで、最終的な Hamiltonian $H\_{\ text{end{2} $ という最終的な状態になる可能性が高くなります。 Hamiltonian のグランド州の適正な概算を準備することで、時間に依存する Hamiltonian シミュレーションアルゴリズムでサブルーチンとしてを呼び出すことによって、この方法で処理を進めることができますが、その他の概念的に異なる手法があります。eigensolver が可能です。
 
 しかし、量子化学に存在する別のアプリケーションは、化学の反応の中間手順を表す Hamiltonians のグラウンドステートエネルギーを推定することです。 たとえば、このようなスキームでは、adiabatic 状態の準備に依存してグラウンド州を作成し、時間に依存しない Hamiltonian シミュレーションをフェーズの推定特性のサブルーチンとして組み込んで、有限のエラーでこのエネルギーを抽出し、成功の確率。 
 
@@ -128,11 +128,11 @@ operation AdiabaticStateEnergyEstimate(
 `nQubits` は、クォンタムの初期状態をエンコードするために使用される qubits の数です。 `statePrepUnitary` は、計算基準 $ \ket{0\cdots 0} $ から開始状態を準備します。 `adiabaticUnitary` は、`InterpolatedEvolution` 関数によって生成されるなど、adiabatic 状態の準備を実装する、ユニタリ操作です。 `qpeUnitary` は、結果として得られるクォンタムの状態に対してフェーズ推定を実行するために使用される、ユニタリ操作です。 `phaseEstAlgorithm` は、フェーズ推定アルゴリズムを選択することです。
 
 > [!TIP]
-> Adiabatic の状態準備のアプリケーションについては、「」のサンプルで説明されています。 Adiabatic の状態準備の手動実装と `AdiabaticEvolution` 関数の使用を使用する場合は、 [ **AdiabaticIsing**サンプル](https://github.com/Microsoft/Quantum/tree/master/Samples/src/AdiabaticIsing)を参照してください。
-> Adiabatic モデルでのフェーズの推定と状態の準備については、 [ **IsingPhaseEstimation**サンプル](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation)を参照してください。
+> Adiabatic の状態準備のアプリケーションについては、「」のサンプルで説明されています。 Adiabatic の状態準備の手動実装と `AdiabaticEvolution` 関数の使用を使用する場合は、 [ **AdiabaticIsing**サンプル](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic)を参照してください。
+> Adiabatic モデルでのフェーズの推定と状態の準備については、 [ **IsingPhaseEstimation**サンプル](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)を参照してください。
 
 > [!TIP]
-> [分子 Hydrogen のシミュレーション](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine)は、興味深い簡単なサンプルです。 O'Malley で報告されるモデルと実験結果[。](https://arxiv.org/abs/1512.06860) は、Pforce Li マトリックスのみを必要とし、$ \ hat H = g\_{0}I\_0I\_1 + g\_1 {Z\_0} + g\_2 {Z\_1} + g\_3 {Z\_0} {Z\_1} + g\_4 {Y\_0} {Y\_1} + g\_5 {X\_0} {X\_1} $。 これは、2つの Hydrogen アトムの間の距離 $R $ から計算される定数 $g $ が2つの qubits のみを必要とする有効な Hamiltonian です。 キャノン関数を使用すると、Paulis は unitaries に変換され、その後、Suzuki 分解を使用して短時間に進化します。 _2 $ グラウンドの状態に $H 対しては、adiabatic 状態の準備を使用せずに作成することができます。そのため、キャノンからのフェーズの推定を利用して、グラウンドの状態エネルギーを直接見つけることができます。
+> [分子 Hydrogen のシミュレーション](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line)は、興味深い簡単なサンプルです。 O'Malley で報告されるモデルと実験結果[。](https://arxiv.org/abs/1512.06860) は、Ponly Li マトリックスのみを必要とし、$ \ hat H = g\_{0}I\_0I\_1 + g\_1 {Z\_0} + g\_2 {Z\_1} + g\_3 {Z\_0} {Z\_1} + g\_4 {Y\_0} {Y\_1} + g\_5 {X\_0} {X\_1} $。 これは、2つの Hydrogen アトムの間の距離 $R $ から計算される定数 $g $ が2つの qubits のみを必要とする有効な Hamiltonian です。 キャノン関数を使用すると、Paulis は unitaries に変換され、その後、Suzuki 分解を使用して短時間に進化します。 _2 $ グラウンドの状態に $H 対しては、adiabatic 状態の準備を使用せずに作成することができます。そのため、キャノンからのフェーズの推定を利用して、グラウンドの状態エネルギーを直接見つけることができます。
 
 ## <a name="shors-algorithm"></a>Shor のアルゴリズム ##
 Shor のアルゴリズムは、quantum コンピューターを使用して重要なクラシックデプロイ困難問題を解決できることを示しているため、クォンタムコンピューティングにおける最も重要な開発の1つです。
@@ -151,8 +151,8 @@ Shor のアルゴリズムは、ハイブリッドアルゴリズムと考える
 
 $ と $N $ $a 2 つの整数が指定されています。ここで $a < N $ の場合は、期間を検索することを目標と_してい_ます。 n $ の場合、$r $ は $a $ {mod {Mod} N $ の最小正の整数として定義されます。  
 
-クォンタムコンピューターを使用して注文を検索するには、$U 次の U_a\ket に適用されているフェーズ推定アルゴリズムを使用できます。 (& a) $: $ $ {x} \equiv \ket{(ax) \ text{mod} N}。 $ $ $U ドルの固有ベクトルは、整数 $s $ および $ 0 \ $1 leq になります。, $ $ \ket{x_s} \equiv 1/\ sqrt{r} \ sum\_{k = 0} ^ {r-1} e ^ {\frac{-2\pi i sk} {r}} \ket{a ^ k\ text {mod} N}、$ $ は $U $ の_eigenstates_です。
-$U ドルの固有値 $ $ U\_\ket{x\_s} = e ^ {2 \ pi i s/r} \ket{x\_s} です。 $$
+クォンタムコンピューターを使用して注文を検索するには、次の数値演算に適用されているフェーズ推定アルゴリズムを使用できます。 $U _a $: $ $ U_a \ket{x} \equiv \ket{(ax) \ text{mod} N}。 $ $ $U の固有ベクトルは、整数 _a $ および $ 0 \ $1 leq になります。 $ $ \ket{x_s} \equiv 1/\ sqrt{r} \ sum\_{k = 0} ^ {r-1} e ^ {\frac{-2\pi i sk} {r}} \ket{a ^ k\ text {mod} N}、$ $ は $U _a $ の_eigenstates_です。
+$U _a $ の固有値は $ $ U\_a \ket{x\_s} = e ^ {2 \ pi i s/r} \ket{x\_s} です。 $$
 
 フェーズの推定では、固有値 $e ^ {2 \ pi i s/r} $ が出力されます。この場合、$r $ は $s/r $ の[継続分数](https://en.wikipedia.org/wiki/Continued_fraction)を使用して効率的に学習できます。
 
@@ -162,14 +162,14 @@ $U ドルの固有値 $ $ U\_\ket{x\_s} = e ^ {2 \ pi i s/r} \ket{x\_s} です�
 
 $ 2n $ qubits は $ \ket{0}$ に初期化され $n $ qubits は $ \ket{1}$ に初期化されます。
 また、リーダーは、eigenstates を保持するクォンタムレジスタが $ \ket{1}$ に初期化される理由を気にする可能性があります。
-$R $ の順序が事前にわからないため、実際に $ \ket{x_s} $ の状態を直接準備することはできません。
+$R $ の順序が事前にわからないため、実際には $ \ket{x_s} $ の状態を直接準備することはできません。
 さいわい、$ 1/\ sqrt {r} \ sum\_{s = 0} ^ {r-1} \ket{x\_s} = \ket{1}$ ということがわかりました。
 実際に $ \ket{x} $! を準備する必要はありません。
 状態が $ \ket{1}$ の $n $ qubits のクォンタムレジスタを準備するだけで済みます。 
 
 回路には、QFT および複数の制御されたゲートが含まれています。
 QFT ゲートについては[既](xref:microsoft.quantum.libraries.standard.algorithms)に説明しました。
-Control qubit が $ \ket{1}$ の場合、制御された $U $ gate は $ \ket{x} $ を $ \ket{(ax) \ text{mod} N} $ にマップし、それ以外の場合は $ \ket{x} $ を $ \ket{x} $ にマップします。
+制御 $U _a $ gate マップ $ \ket{x} $ to $ \ket{(ax) \ text{mod} N} $ (コントロール qubit が $ \ket{1}$ の場合)。それ以外の場合は $ \ket{x} $ を $ \ket{x} $ にマップします。
 
 $ (A ^ nx) \ text{mod} N $ を実現するには、制御された $U _ {a ^ N} $ を適用します。ここで、$a ^ n \ text{mod} N $ クラシックデプロイを計算して、quantum 回線に接続します。  
 このようなモジュール式を実現する回路は、「[クォンタムの算術ドキュメント](./algorithms.md#arithmetic)」で説明されています。具体的には、制御された $U\_{a ^ i} $ 操作を実装するには、モジュール式の累乗回路が必要です。

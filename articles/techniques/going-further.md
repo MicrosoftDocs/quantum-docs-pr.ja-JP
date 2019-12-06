@@ -5,18 +5,17 @@ author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4677b0f9c4f64a9c1bc46d34e8a883dc006ba8f0
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c079364f8808304e0132fa2a4226cd6400e81339
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183303"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863148"
 ---
-# <a name="going-further"></a>さらに進める #
+# <a name="going-further"></a>追加情報 #
 
 ここでは、興味深いクォンタムプログラムを Q # で記述する方法について説明しました。このセクションでは、さらに高度なトピックをいくつか紹介します。
 
-<!-- Moved Debugging and Testing Quantum Programs section to a separate article -->
 
 ## <a name="generic-operations-and-functions"></a>一般的な操作と関数 ##
 
@@ -24,7 +23,7 @@ ms.locfileid: "73183303"
 > このセクションでは、の[ジェネリックC# ](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/introduction-to-generics) [、 F#のジェネリック、 ](https://docs.microsoft.com/dotnet/fsharp/language-reference/generics/) [ C++テンプレート](https://docs.microsoft.com/cpp/cpp/templates-cpp)、または他の言語のメタプログラミングに関する同様のアプローチに関する基本的な知識を前提としています。
 
 定義する関数や操作の多くは、実際には入力の型にあまり依存していませんが、他の関数や演算を介して暗黙的に型を使用するだけではありません。
-たとえば、多くの関数言語に共通する*マップ*の概念を考えてみます。関数 $f (x) $ と値 $\{x_1、x_2、\ ドット、x_n\}$ のコレクションが指定されている場合、map は新しいコレクション $\{f (x_1)、f (x_2)、\ ドット、f (x_n)\}$ を返します。
+たとえば、多くの関数言語に共通する*マップ*の概念を考えてみます。関数 $f (x) $ および値のコレクション $\{x_1、x_2、\ ドット、x_n\}$ を指定すると、map は新しいコレクション $\{f (x_1)、f (x_2)、\ ドット、f (x_n)\}$ を返します。
 これを Q # に実装するには、その関数を最初のクラスとして利用できます。
 ここでは、★をプレースホルダーとして使用し、必要な型を確認しながら、`Map`の簡単な例を記述します。
 
@@ -119,7 +118,7 @@ function Compose(outerFn : (B -> C), innerFn : (A -> B)) : (A -> C) {
 
 ここでは、`A`、`B`、および `C` を正確に指定して、新しい `Compose` 関数のユーティリティを大幅に制限する必要があります。
 結局のところ、`Compose` は `innerFn` と `outerFn`を*使用*して `A`、`B`、および `C` にのみ依存しています。
-別の方法として、`Compose` に型パラメーターを追加して、`A`、`B`、および `C`で動作することを示すことができます。ただし、*これらのパラメーター*が `innerFn` によって想定されているものと一致している必要があり `outerFn`:
+別の方法として、`Compose` に型パラメーターを追加して、`A`、`B`、および `C`で動作することを示すことができます。ただし、*これらのパラメーター*が `innerFn` と `outerFn`によって想定されているものと一致している必要があります。
 
 ```qsharp
 function ComposeImpl<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B), input : 'A) : 'C {
@@ -178,6 +177,6 @@ is Adj + Ctl {
 }
 ```
 
-`With` 連結子は、adjoint をサポートする操作に適用される形式で---連結されていることに注意してください。つまり、この例では `WithA`---、`With` を含む構造体にコントロールを追加するのに適したプログラミングスタイルです。コントロールを内部操作に伝達します。 また、ここでは、操作の `body` に加えて、`controlled auto` ステートメントを実行するのではなく、操作の `controlled` 本体の実装が明示的に指定されていることに注意してください。 その理由は、サーキットの構造からわかるということです。これは、`body`内の各ゲートにコントロールを追加することに比べて、役に立つコントロールを簡単に追加する方法です。 
+`With` 連結子は、adjoint をサポートする操作に適用できる形式で---連結されていることに注意してください。つまり、この例では `WithA`---は、内部操作に対して制御を伝達するだけである構造 `With` 体にコントロールを追加するのが適切なプログラミングスタイルです。 また、ここでは、操作の `body` に加えて、`controlled auto` ステートメントを実行するのではなく、操作の `controlled` 本体の実装が明示的に指定されていることに注意してください。 その理由は、サーキットの構造からわかるということです。これは、`body`内の各ゲートにコントロールを追加することに比べて、役に立つコントロールを簡単に追加する方法です。 
 
 このコードを別のキャノン `MultiControlledXClean` 関数と比較することができます。これは、`using` メカニズムを使用していくつかの clean qubits を使用する、乗算制御 `X` 演算を実装するのと同じ目標を達成します。 

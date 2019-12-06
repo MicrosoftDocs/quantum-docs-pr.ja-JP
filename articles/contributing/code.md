@@ -1,19 +1,19 @@
 ---
 title: 貢献するコード |Microsoft Docs
-description: 貢献コード
+description: コードの投稿
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: cca50e6c63d4bb982aa5f0a59fc19d08ecbec508
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3ff15a744bf15924564d5a8fee54f4fbce4c04ee
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185904"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864425"
 ---
-# <a name="contributing-code"></a>貢献コード #
+# <a name="contributing-code"></a>コードの投稿 #
 
 問題の報告とドキュメントの改善に加えて、quantum 開発キットへのコードの投稿は、quantum プログラミングコミュニティでの同僚を支援する非常に直接的な方法である可能性があります。
 コードを投稿することで、問題の修正、新しい例の提供、既存のライブラリの使いやすさの向上、またはまったく新しい機能の追加を行うことができます。
@@ -30,13 +30,14 @@ ms.locfileid: "73185904"
 
 キャノンなどのライブラリを構成する Q # 関数、操作、およびユーザー定義型は、 [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/)リポジトリでの開発の一部として自動的にテストされます。
 たとえば、新しいプル要求が開かれたときに、 [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/)構成によって、クォンタムプログラミングコミュニティが依存している既存の機能が、プル要求の変更によって中断されていないことが確認されます。
-これらのテストは、 [xunit](https://xunit.github.io/)フレームワークのテストとして Q # の関数と操作を公開する、 [Microsoft の Quantum](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/)パッケージを使用して作成されます。
 
-[`Standard/tests/Standard.Tests.csproj`](https://github.com/microsoft/QuantumLibraries/blob/master/Standard/tests/Standard.Tests.csproj)は、この xunit 統合を使用して、`Test`で終了するすべての関数または操作を実行します。
-たとえば、次の関数を使用すると、<xref:microsoft.quantum.canon.fst> と <xref:microsoft.quantum.canon.snd> 関数が両方とも代表的な例で正しい出力を返すようになります。
+最新の Q # バージョンでは、`@Test("QuantumSimulator")` 属性を使用して単体テストが定義されます。 引数には、"QuantumSimulator"、"ToffoliSimulator"、"TraceSimulator"、または実行ターゲットを指定する完全修飾名のいずれかを指定できます。 さまざまな実行ターゲットを定義するいくつかの属性が、同じ呼び出し可能にアタッチされる場合があります。 一部のテストでは、使用されなくなったすべての Q # 関数と `Test` 操作を[xunit](https://xunit.github.io/)フレームワークに公開する、非推奨の[Microsoft Quantum](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/)パッケージを使用しています。 単体テストを定義するために、このパッケージは不要になりました。 
+
+次の関数は、<xref:microsoft.quantum.canon.fst> と <xref:microsoft.quantum.canon.snd> 関数が両方とも代表的な例で正しい出力を返すようにするために使用されます。
 `Fst` または `Snd` の出力が正しくない場合は、`fail` ステートメントを使用してテストが失敗します。
 
 ```qsharp
+@Test("QuantumSimulator")
 function PairTest () : Unit {
     let pair = (12, PauliZ);
 
@@ -56,6 +57,7 @@ function PairTest () : Unit {
 たとえば、次のテストでは、<xref:microsoft.quantum.canon.applywith> によって呼び出された `H(q); X(q); H(q);` が `Z(q)`と同じものであることを確認します。
 
 ```qsharp
+@Test("QuantumSimulator")
 operation WithTest () : Unit {
     let actual = ApplyWith(H, X, _);
     let expected = Z;

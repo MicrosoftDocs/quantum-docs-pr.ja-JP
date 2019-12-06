@@ -5,12 +5,12 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: b59f91b660281167eab182529b415b6d379e3d63
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d5889b8d5a92801b0ada65f7a17c655c959fc57f
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184493"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864340"
 ---
 # <a name="diagnostics"></a>Diagnostics #
 
@@ -42,7 +42,7 @@ Message($"About to rotate by an angle of {angle}...");
 
 ## <a name="facts-and-assertions"></a>ファクトとアサーション ##
 
-「[テストおよびデバッグ](xref:microsoft.quantum.techniques.testing-and-debugging)」で説明したように、シグネチャ `Unit -> Unit` または `Unit => Unit`を持つ関数または操作は、それぞれ*単体テスト*として呼び出すことができます。
+「[テストおよびデバッグ](xref:microsoft.quantum.techniques.testing-and-debugging)」で説明したように、シグネチャ `Unit -> Unit` または `Unit => Unit`を持つ関数または操作は、それぞれ*単体テスト*としてマークできます。
 各単体テストは、通常、小さいクォンタムプログラムと、そのプログラムの正確性をチェックする1つ以上の条件で構成されます。
 これらの条件は、入力の値を確認する_ファクト_、または入力として渡された1つ以上の qubits の状態をチェックする_アサーション_のいずれかの形式で指定できます。
 
@@ -109,7 +109,7 @@ using (register = Qubit()) {
 したがって、予想される状態をアサートするために、互いに独立した3つのアサーションを指定する必要があります。
 これを行うには、指定された $-alpha $ および $-beta $ に対して `Zero` を観察する確率を調べ、それぞれを独立してアサートします。
 $、$Y $、および $z $ を $x して、それぞれ P# li $X $、$Y $、および $Z $ の測定値を `Result` します。
-次に、クォンタム測定に尤度関数を使用して、\begin{align} \ Pr (x = \texttt{Zero} | \ alpha, \ ベータ) & = \frac12 + a\_r b\_r + a\_i b\_i \\\\ (y = \texttt{Zero} |-alpha, \ ベータ) & = \frac12 + a\_r b\_i-a\_i b\_r \\\\ \ Pr (z = \texttt{Zero} | \ alpha, \ ベータ) & = \frac12\left (1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_i ^ 2 \ 右)。
+次に、クォンタム測定に対して尤度関数を使用して、\begin{align} \ Pr (x = \texttt{Zero} | \ alpha, \ ベータ) & = \frac12 + a\_r b\_r + a\_i b\_i \\\\ (y = \texttt{Zero} | \ アルファ) \ ベータ) & = \frac12 + a\_r b\_i-a\_i b\_r \\\\ \ Pr (z = \texttt{Zero} | \ alpha, \ ベータ) & = \frac12\left (1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_i ^ 2 \ 右)。
 \end{align}
 
 <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> 操作では、型 <xref:microsoft.quantum.math.complex>の値として $ \ alpha $ と $ \ beta $ の表現を指定して、これらのアサーションを実装します。
@@ -129,7 +129,7 @@ $T $ が進化時間を表している場合は、期待どおりに ^ & $U ^ (t
 
 > [!NOTE]
 > 前述した参照されているアサーションは、 [Jamiłkowski isomorphism](https://en.wikipedia.org/wiki/Channel-state_duality)に基づいて動作します。このフレームワークでは、$ 2n $ qubits で $n $ qubits に対する操作が関連付けられています。
-> 特に、$n $ qubits での id 操作は、ありの州 $ \ket{\beta_{00}} \mathrel{: =} (\ket{00} + \ket{11})//sqrt{2}$ の $n $ コピーによって表されます。
+> 特に、$n $ qubits での id 操作は、あり状態 $ \ket{\ beta_{00}} \mathrel{: =} (\ket{00} + \ket{11})//sqrt{2}$ の $n $ コピーによって表されます。
 > 操作 <xref:microsoft.quantum.preparation.preparechoistate> は、この isomorphism を実装し、指定された操作を表す状態を準備します。
 
 大まかに言えば、これらの戦略は時間と領域のトレードオフによって区別されます。

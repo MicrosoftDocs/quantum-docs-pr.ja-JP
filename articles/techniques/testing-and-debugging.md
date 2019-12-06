@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 25679331f1bed9f98b86c6eb20f511c891bac1af
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d352ffa315b654cfcf8991fa116465d3dad49f0a
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183490"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864272"
 ---
 # <a name="testing-and-debugging"></a>テストとデバッグ
 
@@ -30,7 +30,7 @@ Q # は、クォンタムプログラムの単体テストの作成をサポー�
 #### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Visual Studio 2019 を開きます。 `File` メニューにアクセスし、[`New` > `Project...`] を選択します。
-プロジェクトテンプレートエクスプローラーの `Installed` > `Visual C#`で、`Q# Test Project` テンプレートを選択します。
+右上隅にある `Q#`を検索し、`Q# Test Project` テンプレートを選択します。
 
 #### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
 
@@ -43,12 +43,13 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-どちらの場合も、新しいプロジェクトに2つのファイルが開かれます。
-最初のファイル `Tests.qs`は、新しい Q # の単体テストを定義するための便利な場所です。
-初期状態では、このファイルには1つのサンプル単体テスト `AllocateQubitTest` が含まれています。これは、新しく割り当てられた qubit が $ \ket{0}$ 状態であることを確認し、メッセージを出力します。
+新しいプロジェクトには、新しい Q # の単体テストを定義するための便利な場所を提供する、1つのファイル `Tests.qs`があります。
+初期状態では、このファイルには1つのサンプル単体テスト `AllocateQubit` が含まれています。これは、新しく割り当てられた qubit が $ \ket{0}$ 状態であることを確認し、メッセージを出力します。
 
 ```qsharp
-    operation AllocateQubitTest () : Unit {
+    @Test("QuantumSimulator")
+    operation AllocateQubit () : Unit {
+
         using (q = Qubit()) {
             Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
@@ -57,28 +58,16 @@ $ code . # To open in Visual Studio Code
     }
 ```
 
-`(Unit -> Unit)` と互換性のある型 `(Unit => Unit)` または関数と互換性のある Q # 操作は、単体テストとして実行できます。 
-
-2番目のファイル `TestSuiteRunner.cs` には、Q # の単体テストを検出して実行するメソッドが含まれています。 これは `OperationDriver` 属性で注釈が付けられた `TestTarget` メソッドです。
-`OperationDriver` 属性は、Xunit 拡張機能ライブラリの一部であり、"、" です。
-単体テストフレームワークは、検出されたすべての Q # 単体テストに対して `TestTarget` メソッドを呼び出します。
-フレームワークは `op` 引数を使用して、単体テストの説明をメソッドに渡します。 次のコード行を実行します。
-```csharp
-op.TestOperationRunner(sim);
+: new: `Unit` 型の引数を受け取り、`Unit` を返すすべての Q # 操作または関数は、`@Test("...")` 属性を使用して単体テストとしてマークできます。 上記の `"QuantumSimulator"` 属性の引数は、テストを実行するターゲットを指定します。 1つのテストを複数のターゲットで実行できます。 たとえば、`AllocateQubit`の上に `@Test("ResourcesEstimator")` 属性を追加します。 
+```qsharp
+    @Test("QuantumSimulator")
+    @Test("ResourcesEstimator")
+    operation AllocateQubit () : Unit {
+        ...
 ```
-`QuantumSimulator`で単体テストを実行します。
+ファイルを保存し、すべてのテストを実行します。 ここで、2つの単体テストがあります。1つは、QuantumSimulator で AllocateQubit が実行され、もう1つは ResourceEstimator で実行されます。 
 
-既定では、単体テストの検出メカニズムは、次のプロパティを満たすすべての Q # 関数または互換性のある型の操作を検索します。
-* `OperationDriver` 属性で注釈が付けられたメソッドと同じアセンブリ内にあります。
-* `OperationDriver` 属性で注釈が付けられたメソッドと同じ名前空間にあります。
-* には `Test`で終わる名前があります。
-
-アセンブリ、名前空間、および単体テスト関数と操作のサフィックスは、`OperationDriver` 属性の省略可能なパラメーターを使用して設定できます。
-* `AssemblyName` パラメーターは、テスト用に検索されるアセンブリの名前を設定します。
-* `TestNamespace` パラメーターは、テスト用に検索される名前空間の名前を設定します。
-* 単体テストと見なされる操作名または関数名のサフィックスを `Suffix` 設定します。
-
-また、`TestCasePrefix` 省略可能なパラメーターを使用すると、テストケースの名前のプレフィックスを設定できます。 操作名の前にあるプレフィックスが、テストケースの一覧に表示されます。 たとえば、`TestCasePrefix = "QSim:"` によって `AllocateQubitTest` が検出されたテストの一覧に `QSim:AllocateQubitTest` として表示されます。 これは、たとえば、テストの実行に使用されるシミュレーターを示すのに便利です。
+Q # コンパイラは、組み込みのターゲット "QuantumSimulator"、"ToffoliSimulator"、および "ResourcesEstimator" を単体テストの有効な実行ターゲットとして認識します。 また、任意の完全修飾名を指定して、カスタム実行ターゲットを定義することもできます。 
 
 ### <a name="running-q-unit-tests"></a>Q # の単体テストの実行
 
@@ -90,7 +79,7 @@ op.TestOperationRunner(sim);
 > Visual Studio の既定のプロセッサアーキテクチャ設定は、各ソリューションのソリューションオプション (`.suo`) ファイルに格納されます。
 > このファイルを削除する場合は、プロセッサのアーキテクチャとして [`X64`] を選択する必要があります。
 
-プロジェクトをビルドし、[`Test`] メニューにアクセスして、[`Windows` > `Test Explorer`] を選択します。 `Not Run Tests` グループ内のテストの一覧に `AllocateQubitTest` が表示されます。 `Run All` を選択するか、この個別のテストを実行して、合格する必要があります。
+プロジェクトをビルドし、[`Test`] メニューにアクセスして、[`Windows` > `Test Explorer`] を選択します。 `Not Run Tests` グループ内のテストの一覧に `AllocateQubit` が表示されます。 `Run All` を選択するか、この個別のテストを実行して、合格する必要があります。
 
 #### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
 
@@ -122,30 +111,17 @@ Test Run Successful.
 Test execution time: 1.9607 Seconds
 ```
 
+単体テストは、名前や実行ターゲットに応じてフィルター処理できます。
+
+```bash 
+$ dotnet test --filter "Target=QuantumSimulator"
+$ dotnet test --filter "Name=AllocateQubit"
+```
+
+
 ***
 
-## <a name="logging-and-assertions"></a>ログとアサーション
-
-Q # の関数には副作用がないという事実が1つあります。これは、出力の種類が空の `()` タプルである関数を実行した場合の影響は、Q # プログラム内からは確認できないということです。
-つまり、ターゲットコンピューターは、この省略によって次の Q # コードの動作が変更されないことを保証して `()` を返す関数を実行しないことを選択できます。
-これにより、アサーションを埋め込み、デバッグロジックを Q # プログラムに組み込むための便利なツール `()` を返す関数が作成されます。 
-
-### <a name="logging"></a>ログ記録
-
 組み込み関数 <xref:microsoft.quantum.intrinsic.message> 型 `(String -> Unit)` で、診断メッセージを作成できます。
-
-`QuantumSimulator` の `onLog` アクションを使用して、Q # コードが `Message`を呼び出すときに実行されるアクションを定義できます。 既定では、ログに記録されたメッセージは標準出力に出力されます。
-
-単体テストスイートを定義する場合、ログに記録されたメッセージをテスト出力に送ることができます。 プロジェクトが Q # Test プロジェクトテンプレートから作成されると、このリダイレクトはスイート用に事前構成され、既定では次のように作成されます。
-
-```qsharp
-using (var sim = new QuantumSimulator())
-{
-    // OnLog defines action(s) performed when Q# test calls operation Message
-    sim.OnLog += (msg) => { output.WriteLine(msg); };
-    op.TestOperationRunner(sim);
-}
-```
 
 #### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
@@ -156,11 +132,15 @@ using (var sim = new QuantumSimulator())
 #### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
 
 各テストの成功/失敗の状態は、`dotnet test`によってコンソールに出力されます。
-失敗したテストについては、上記の `output.WriteLine(msg)` 呼び出しの結果として記録された出力もコンソールに出力され、エラーの診断に役立ちます。
+失敗したテストの場合は、エラーの診断に役立つ出力もコンソールに出力されます。
 
 ***
 
-### <a name="assertions"></a>表明
+## <a name="assertions"></a>アサーション
+
+Q # の関数には_論理的_な副作用がないため、出力の種類が空のタプルである関数を実行した場合の_その他の種類_の効果は、q # プログラム内からは観察されません `()`。
+つまり、ターゲットコンピューターは、この省略によって次の Q # コードの動作が変更されないことを保証して `()` を返す関数を実行しないことを選択できます。
+これにより、アサーションを埋め込み、デバッグロジックを Q # プログラムに組み込むための便利なツール `()` を返す関数が作成されます。 
 
 同じロジックを、アサーションの実装にも適用できます。 単純な例を考えてみましょう。
 
@@ -203,7 +183,7 @@ using (register = Qubit())
 
 ### <a name="dumpmachine"></a>DumpMachine
 
-Quantum 開発キットの一部として配布された完全な状態のクォンタムシミュレーターは、ファセットの1次元配列として、クォンタムシステム全体の[wave 関数](https://en.wikipedia.org/wiki/Wave_function)をファイルに書き込みます。各要素は、計算基準の状態を測定する確率 $ \ket{n} $ ($ \ket{n} = \ket{b_{n-1}...)b_1b_0} $ for bits $\{b_i\}$。 たとえば、2つの qubits が割り当てられていて、クォンタム状態が $ $ \begin{align} \ket{\psi}{2}{1}= \ket{00}-\frac{(1 + i)}{2} \ket{10}であるコンピューターでは、\end{align} $ $ の呼び出し <xref:microsoft.quantum.diagnostics.dumpmachine> はこの出力を生成します:
+Quantum 開発キットの一部として配布された完全な状態のクォンタムシミュレーターは、クォンタムシステム全体の[wave 関数](https://en.wikipedia.org/wiki/Wave_function)を、1次元の複素数の配列としてファイルに書き込みます。各要素は、コンピューティングベースの状態を測定する確率の振幅 ($ \ket{n} = \ket{b_ {n-1}...) を表します。b_1b_0} $ for bits $\{b_i\}$。 たとえば、2つの qubits のみが割り当てられていて、クォンタム状態が $ $ \begin{align} \ket{\psi}{2}{1}= \ket{00}-\frac{(1 + i)}{2} \ket{10}であるコンピューターでは、\end{align} $ $ が <xref:microsoft.quantum.diagnostics.dumpmachine> を呼び出すと、次の出力が生成されます。
 
 ```
 # wave function for qubits with ids (least to most significant): 0;1
@@ -333,7 +313,7 @@ namespace Samples {
 
 <xref:microsoft.quantum.diagnostics.dumpregister> は <xref:microsoft.quantum.diagnostics.dumpmachine>のように機能しますが、情報の量を対応する qubits にのみ制限するために、qubits の配列を受け取る点が異なります。
 
-<xref:microsoft.quantum.diagnostics.dumpmachine>と同様に、<xref:microsoft.quantum.diagnostics.dumpregister> によって生成される情報はターゲットコンピューターによって異なります。 完全な状態のクォンタムシミュレーターでは、ファイルに書き込みます。これは、指定された qubits によって生成されるクォンタムサブシステムのグローバルフェーズまで、wave 関数を <xref:microsoft.quantum.diagnostics.dumpmachine>と同じ形式で作成します。  たとえば、2つの qubits が割り当てられ、クォンタム状態が $ $ \begin{align} \ket{\psi} = \ frac{1}{\ sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10} =-e ^ {-i \ pi/4} ((\ frac{1}{/sqrt{2}} \) のコンピューターを再度実行します。k{0}-\frac{(1 + i)}{2} \ket{1}) \ otimes \frac{-(1 + i)} {\ sqrt{2}} \ket{0})、\end{align} $ $ <xref:microsoft.quantum.diagnostics.dumpregister> を呼び出すと、この出力が生成されます。
+<xref:microsoft.quantum.diagnostics.dumpmachine>と同様に、<xref:microsoft.quantum.diagnostics.dumpregister> によって生成される情報はターゲットコンピューターによって異なります。 完全な状態のクォンタムシミュレーターでは、ファイルに書き込みます。これは、指定された qubits によって生成されるクォンタムサブシステムのグローバルフェーズまで、wave 関数を <xref:microsoft.quantum.diagnostics.dumpmachine>と同じ形式で作成します。  たとえば、2つの qubits のみが割り当てられ、クォンタム状態が $ $ \begin{align} \ket{\psi} = \ frac{1}{\ sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10} =-e ^ {-であるマシンをもう一度実行します。 i \ pi/4} ((\ket{0}-\frac{(1 + i)}{2} \ket{1})、otimes \frac{-(1 + i)} {\ sqrt{2}} \ket{0})、、およびです。{2}{1}\end{align} $ $ `qubit[0]` の <xref:microsoft.quantum.diagnostics.dumpregister> を呼び出すと、この出力が生成されます:
 
 ```
 # wave function for qubits with ids (least to most significant): 0
@@ -382,7 +362,6 @@ namespace app
 
 ## <a name="debugging"></a>デバッグ
 
-`Assert` と `Dump` の関数と操作の上で、Q # は標準の Visual Studio デバッグ機能のサブセットをサポートします。コードの[ブレークポイントの設定](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)、 [F10 を使用したコードのステップ実行](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)、および[クラシック変数の値の検査](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)は、シミュレーターでのコードの実行中に可能です。
+`Assert` および `Dump` 関数と操作の上で、Q # は標準の Visual Studio デバッグ機能のサブセットをサポートしています。[行のブレークポイントの設定](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)、 [F10 を使用](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)したコードのステップ実行、および[クラシック変数の値の検査](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)は、シミュレーターでのコードの実行中に可能です。
 
-Visual Studio Code でのデバッグはまだサポートされていません。
-
+Visual Studio Code でのデバッグでは、 C# OmniSharp による Visual Studio Code 拡張機能によって提供されるデバッグ機能を活用し、[最新バージョン](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)をインストールする必要があります。 
