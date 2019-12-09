@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 90fd8ad455702ef4f962e1b3291c650eb0afea2e
-ms.sourcegitcommit: 87dd450cea5bcac76a42f0bdc224bfae712efdde
+ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74153309"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863165"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -20,6 +20,18 @@ ms.locfileid: "74153309"
 インストール手順については、[インストール ガイド](xref:microsoft.quantum.install)を参照してください。
 
 更新手順については、[更新ガイド](xref:microsoft.quantum.update)を参照してください。
+
+## <a name="version-01019120501"></a>バージョン 0.10.1912.0501
+
+*リリース日:2019 年 12 月 5 日*
+
+このリリースには、次のものが含まれています。
+
+- Q# の単体テスト用の新しい Test 属性。更新された API ドキュメント ([こちら](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test)) および更新されたテストとデバッグのガイド ([こちら](xref:microsoft.quantum.techniques.testing-and-debugging)) を参照してください
+- Q# プログラムの実行エラーが発生した場合にスタック トレースを追加しました
+- [OmniSharp C# Visual Studio Code 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)の更新により、Visual Studio Code 内のブレークポイントがサポートされるようになります
+
+[ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
 
 ## <a name="version-01019111607"></a>バージョン 0.10.1911.1607
 
@@ -205,7 +217,7 @@ Quantum Development Kit のバージョン 0.5 の既存の Q# プロジェク�
 
 - Jupyter Notebook のサポートが追加されます。これにより、Q# について学習するための優れた方法が提供されます。  [新しい Jupyter Notebook のサンプルを確認し、独自のノートブックを作成する方法を学習してください](xref:microsoft.quantum.install)。 
 
-- Quantum Canon ライブラリに整数の加算器算術が追加されます。  [新しい整数の加算器を使用する方法が説明されている](https://github.com/Microsoft/Quantum/blob/master/Samples/src/Arithmetic/Adder%20Example.ipynb)、Jupyter Notebook も参照してください。
+- Quantum Canon ライブラリに整数の加算器算術が追加されます。  [新しい整数の加算器を使用する方法が説明されている](https://github.com/microsoft/Quantum/blob/master/samples/arithmetic/AdderExample.ipynb)、Jupyter Notebook も参照してください。
 
 - コミュニティによって報告された DumpRegister に関する問題 ([#148](https://github.com/Microsoft/Quantum/issues/148)) のバグ修正。
 
