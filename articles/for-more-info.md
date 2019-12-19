@@ -23,7 +23,7 @@ ms.locfileid: "73442522"
 ## <a name="basic-quantum-computing"></a>基本的なクォンタムコンピューティング ##
 
 + これは、M. A です。 & 語, I. L. (2010)、 クォンタムの計算とクォンタムの情報。 クォンタムの計算とクォンタムの情報、英国: ケンブリッジ大学プレス、2010。
-+ Kitaev、A. Y.、Shen、A.、& Vyalyi、M. N。 (2002)。 古典およびクォンタム計算 (Vol. 47)。 Providence: アメリカの数学的社会。
++ Kitaev、A. Y.、Shen、A.、& Vyalyi、M. N。 (2002)。 古典およびクォンタム計算 (Vol. 47)。 Providence: アメリカ合衆国の数学的社会。
 + Kaye、P.、Laflamme、R.、& Mosca、M. (2007)。 クォンタムコンピューティングの概要。 Oxford 大学のプレス。
 + Rieffel、、& Polak、W. H。 (2011)。 クォンタムコンピューティング: 簡単に紹介します。 MIT Press。
 
