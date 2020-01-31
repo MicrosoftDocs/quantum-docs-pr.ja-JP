@@ -1,44 +1,66 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.amplitudeamplification
 name: Microsoft.Quantum.AmplitudeAmplification
-summary: " # <a name=\"summary\"></a>Summary\n この名前空間には、振幅増幅を実行するための関数と操作が含まれています。\n\n # <a name=\"description\"></a>description\n 無関係の部分反射を使用した振幅増幅は、ここで実装されている振幅増幅の最も一般的な形式です。\n\n これは、操作 AmpAmpObliviousByReflectionPhases を通じて呼び出されます。\n\n これには、`ancillaRegister` と `systemRegister`の2つのレジスタがあります。\n\n これは、`ancillaRegister` レジスタでのみ動作する `ReflectionOracle` 型の反射に対して2つの oracles を受け入れます。\n\n これは、両方のレジスタに共同で動作する `ObliviousOracle` 型の無関係振幅増幅を oracle に許可します。\n\n `ancillaRegister` する入力状態は、最初のリフレクション演算子 $I-2 \\ k {s} \\ bra {s} $ という一意の $-$1 eigenstate と想定されます。\n\n ターゲットクォンタムの状態に関する反射は、多くの場合、計算ベース $ \\ket{0\\cdots 0} $ からその状態を準備する oracle へのアクセスを前提として実装されます。\n\n これらの oracles の規則では、2つのレジスタが必要です。1つはシングル qubit `flagQubit` レジスタ、もう1つは、フロントシャードレジスタレジスタに登録します。\n\n 型 `StateOracle` の oracle は、両方のレジスタに共同で動作し、`flagQubit` レジスタ内の $ \\ket{1}$ によってフラグが設定されたターゲット状態を作成します。\n\n このフラグの状態に関するリフレクション `ReflectionOracle` は、`TargetStateReflectionOracle`操作によって生成されます。\n\n `ancillaRegister` する入力状態に関するリフレクション `ReflectionOracle` は、位相を反転することによって生成され、$ \\ket{0\\cdots 0} $ と ReflectionStart () を反映します。\n\n 型 `DeterministicStateOracle` の oracle は、`qubitState` レジスタに対して動作し、フラグなしのターゲット状態を正確に作成します。\n\n `AmpAmpObliviousByOraclePhases` は、反射ではなく oracles `StateOracle` と `ObliviousOracle` を受け入れる無関係振幅増幅のバージョンです。\n\n 振幅増幅は、`ObliviousOracle` が id 演算子で、システム qubits (`systemRegister` が空ではない) の特殊なケースです。\n\n これは、操作 `AmpAmByReflectionPhases` および `AmpAmpByOraclePhases`を通じて呼び出されます。\n\n Grover search の標準的なケースでの部分的な反射のフェーズは、AmpAmpPhasesStandard 関数によって提供されます。\n\n たとえば、AmpAmpByOracle >-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases という依存関係があります。"
+summary: " # <a name=\"summary\"></a>概要\n この名前空間には、振幅増幅を実行するための関数と操作が含まれています。\n\n # <a name=\"description\"></a>Description\n 無関係の部分反射を使用した振幅増幅は、ここで実装されている振幅増幅の最も一般的な形式です。\n\n これは、操作 AmpAmpObliviousByReflectionPhases を通じて呼び出されます。\n\n これには、`ancillaRegister` と `systemRegister`の2つのレジスタがあります。\n\n これは、`ancillaRegister` レジスタでのみ動作する `ReflectionOracle` 型の反射に対して2つの oracles を受け入れます。\n\n これは、両方のレジスタに共同で動作する `ObliviousOracle` 型の無関係振幅増幅を oracle に許可します。\n\n `ancillaRegister` する入力状態は、最初のリフレクション演算子 $I-2 \\ k {s} \\ bra {s} $ という一意の $-$1 eigenstate と想定されます。\n\n ターゲットクォンタムの状態に関する反射は、多くの場合、計算ベース $ \\ket{0\\cdots 0} $ からその状態を準備する oracle へのアクセスを前提として実装されます。\n\n これらの oracles の規則では、2つのレジスタが必要です。1つはシングル qubit `flagQubit` レジスタ、もう1つは、フロントシャードレジスタレジスタに登録します。\n\n 型 `StateOracle` の oracle は、両方のレジスタに共同で動作し、`flagQubit` レジスタ内の $ \\ket{1}$ によってフラグが設定されたターゲット状態を作成します。\n\n このフラグの状態に関するリフレクション `ReflectionOracle` は、`TargetStateReflectionOracle`操作によって生成されます。\n\n `ancillaRegister` する入力状態に関するリフレクション `ReflectionOracle` は、位相を反転することによって生成され、$ \\ket{0\\cdots 0} $ と ReflectionStart () を反映します。\n\n 型 `DeterministicStateOracle` の oracle は、`qubitState` レジスタに対して動作し、フラグなしのターゲット状態を正確に作成します。\n\n `AmpAmpObliviousByOraclePhases` は、反射ではなく oracles `StateOracle` と `ObliviousOracle` を受け入れる無関係振幅増幅のバージョンです。\n\n 振幅増幅は、`ObliviousOracle` が id 演算子で、システム qubits (`systemRegister` が空ではない) の特殊なケースです。\n\n これは、操作 `AmpAmByReflectionPhases` および `AmpAmpByOraclePhases`を通じて呼び出されます。\n\n Grover search の標準的なケースでの部分的な反射のフェーズは、AmpAmpPhasesStandard 関数によって提供されます。\n\n たとえば、AmpAmpByOracle >-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases という依存関係があります。"
 functions:
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
-  summary: 標準の振幅増幅アルゴリズム
+  summary: "\n> [!WARNING]\n> 不使用\n\nAmpAmpByOracle は非推奨となりました。 代わりに @\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\" を使用してください。\n@\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\"を使用してください。"
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
-  summary: 部分的な反射のための oracles による振幅増幅。
-- uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionsphases
-  summary: 部分的な反射による振幅増幅。
+  summary: "\n> [!WARNING]\n> 不使用\n\nAmpAmpByOraclePhases は非推奨となりました。 代わりに @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\" を使用してください。\n@\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\"を使用してください。"
+- uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionphases
+  summary: "\n> [!WARNING]\n> 不使用\n\nAmpAmpByReflectionPhases は非推奨となりました。 代わりに @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\" を使用してください。\n@\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\"を使用してください。"
 - uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyoraclephases
-  summary: 部分的な反射のために oracles による振幅増幅を無関係します。
+  summary: "\n> [!WARNING]\n> 不使用\n\nAmpAmpObliviousByOraclePhases は非推奨となりました。 代わりに @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\" を使用してください。\n@\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\"を使用してください。"
 - uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyreflectionphases
-  summary: 部分的な反射にを指定して、無関係の振幅増幅を実装するユニタリを返します。
+  summary: "\n> [!WARNING]\n> 不使用\n\nAmpAmpObliviousByReflectionPhases は非推奨となりました。 代わりに @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\" を使用してください。\n@\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\"を使用してください。"
 - uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
-  summary: 固定小数点の振幅増幅の部分的なリフレクションフェーズを計算します。
+  summary: "\n> [!WARNING]\n> 不使用\n\nAmpAmpPhasesFixedPoint は非推奨となりました。 代わりに @\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\" を使用してください。\n@\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\"を使用してください。"
 - uid: microsoft.quantum.amplitudeamplification.ampampphasesstandard
-  summary: 標準の振幅増幅の部分的なリフレクションフェーズを計算します。
+  summary: "\n> [!WARNING]\n> 不使用\n\nAmpAmpPhasesStandard は非推奨となりました。 代わりに @\"microsoft.quantum.amplitudeamplification.standardreflectionphases\" を使用してください。\n@\"microsoft.quantum.amplitudeamplification.standardreflectionphases\"を使用してください。"
 - uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
-  summary: シングル qubit 回転として指定されたフェーズを部分反射として指定されたフェーズに変換します。
+  summary: "\n> [!WARNING]\n> 不使用\n\nAmpAmpRotationToReflectionPhases は非推奨となりました。 代わりに @\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\" を使用してください。\n@\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\"を使用してください。"
+- uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections
+  summary: 部分的な反射による振幅増幅。
+- uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation
+  summary: 部分的な反射のための oracles による振幅増幅。
+- uid: microsoft.quantum.amplitudeamplification.fixedpointreflectionphases
+  summary: 固定小数点の振幅増幅の部分的なリフレクションフェーズを計算します。
+- uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections
+  summary: 部分的な反射にを指定して、無関係の振幅増幅を実装するユニタリを返します。
+- uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation
+  summary: 部分的な反射のために oracles による振幅増幅を無関係します。
 - uid: microsoft.quantum.amplitudeamplification.reflectionstart
   summary: 振幅増幅に対する一般的な入力状態である、すべてゼロの string | 0... 0 〉に関する反射を構築します。
+- uid: microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases
+  summary: シングル qubit 回転として指定されたフェーズを部分反射として指定されたフェーズに変換します。
+- uid: microsoft.quantum.amplitudeamplification.standardamplitudeamplification
+  summary: 標準の振幅増幅アルゴリズム
+- uid: microsoft.quantum.amplitudeamplification.standardreflectionphases
+  summary: 標準の振幅増幅の部分的なリフレクションフェーズを計算します。
 - uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
   summary: >-
     フラグ qubit で一意にマークされた対象の状態に関する `ReflectionOracle` を構築します。
 
 
-    対象の状態では、1つの qubit が1に設定され、それ以外の場合は 0: $ \ket{1}_ $ になります。
+    対象の状態では1つの qubit が1に設定され、それ以外の場合は 0: $ \ket{1}_f $ になります。
 operations:
 - uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
+  summary: "\n> [!WARNING]\n> 不使用\n\nAmpAmpRUSByOracle は非推奨となりました。 代わりに @\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\" を使用してください。\n@\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\"を使用してください。"
+- uid: microsoft.quantum.amplitudeamplification.applyamplitudeamplification
+  summary: 指定された一連のフェーズと oracles を使用して、指定されたレジスタに振幅増幅を適用し、初期状態と最終状態を反映します。
+- uid: microsoft.quantum.amplitudeamplification.applyfixedpointamplification
   summary: 固定小数点振幅増幅アルゴリズム
+- uid: microsoft.quantum.amplitudeamplification.applyobliviousamplitudeamplification
+  summary: 部分的な反射を指定することによって、振幅増幅を無関係します。
 newtypes:
 - uid: microsoft.quantum.amplitudeamplification.reflectionphases
   summary: 振幅増幅での部分的な反射のシーケンスのフェーズ。
 - uid: microsoft.quantum.amplitudeamplification.rotationphases
   summary: 振幅増幅での単一 qubit 回転のシーケンスのフェーズ。
 metadata:
-  ms.openlocfilehash: acec4d085e42811618228c8e120842dc400c50b4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7b6aec2bd2300a84550f92740e24f33ce243ea7c
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73057234"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870384"

@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applycnotchainwithtarget
+name: ApplyCNOTChainWithTarget
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Qubits の配列のパリティをターゲットの qubits に計算します。
+
+
+  配列の初期状態が $ \ket{q_0} \ket{q_1} \ket{の場合は q_ {\ text{target{1}} $, 最終的な状態は、$ \ket{q_0} \ket{q_1 \ oplus q_0} \ cドット \ket{q_ {n-1} \ oplus/cドット \ oplus q_0 {/text{target{1}} $ によって指定されます。
+remarks: >-
+  同等のものを次に示します。
+
+
+  ```qsharp
+
+  ApplyCNOTChainWithTarget(Most(qs), Last(qs));
+
+  ```
+
+
+  および
+
+
+  ```qsharp
+
+  ApplyCNOTChain(qs);
+
+  ```
+syntax: 'operation ApplyCNOTChainWithTarget (qubits : Qubit[], targetQubit : Qubit) : Unit'
+input:
+  content: '(qubits : Qubit[], targetQubit : Qubit)'
+  types:
+  - name: qubits
+    summary: パリティが計算される qubits の配列。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targetQubit
+    summary: "' Qubit ' のパリティが Xor される最後の qubit。"
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: ec55fd89e8ef836439b58c8dc0cf4fa21b12ef23
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76873058"

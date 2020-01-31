@@ -6,19 +6,19 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: 283cc7d7d88f731f40fa396c38ae5ea8dd90537f
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 093937346488725eacb69ef7da6affde764ec5c1
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863182"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820880"
 ---
-# <a name="invalidated-qubits-use-checker"></a><span data-ttu-id="d9a34-103">無効になった Qubits 使用チェッカー</span><span class="sxs-lookup"><span data-stu-id="d9a34-103">Invalidated Qubits Use Checker</span></span>
+# <a name="invalidated-qubits-use-checker"></a><span data-ttu-id="4a07c-103">無効になった Qubits 使用チェッカー</span><span class="sxs-lookup"><span data-stu-id="4a07c-103">Invalidated Qubits Use Checker</span></span>
 
-<span data-ttu-id="d9a34-104">`Invalidated Qubits Use Checker` は、コード内の潜在的なバグを検出するように設計された quantum コンピューター [TraceSimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の一部です。</span><span class="sxs-lookup"><span data-stu-id="d9a34-104">The `Invalidated Qubits Use Checker` is a part of the quantum computer [TraceSimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) designed for detecting potential bugs in the code.</span></span> <span data-ttu-id="d9a34-105">`Invalidated Qubits Use Checker`によって検出された問題を示すために、次の Q # コードを考えてみましょう。</span><span class="sxs-lookup"><span data-stu-id="d9a34-105">Consider the following piece of Q# code to illustrate the issues detected by the `Invalidated Qubits Use Checker`.</span></span>
+<span data-ttu-id="4a07c-104">`Invalidated Qubits Use Checker` は、コード内の潜在的なバグを検出するように設計された quantum コンピューター [TraceSimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の一部です。</span><span class="sxs-lookup"><span data-stu-id="4a07c-104">The `Invalidated Qubits Use Checker` is a part of the quantum computer [TraceSimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) designed for detecting potential bugs in the code.</span></span> <span data-ttu-id="4a07c-105">`Invalidated Qubits Use Checker`によって検出された問題を示すために、次の Q # コードを考えてみましょう。</span><span class="sxs-lookup"><span data-stu-id="4a07c-105">Consider the following piece of Q# code to illustrate the issues detected by the `Invalidated Qubits Use Checker`.</span></span>
 
 ```qsharp
-operation UseReleasedQubit () : Unit {
+operation UseReleasedQubit() : Unit {
     mutable q = new Qubit[1];
     using (ans = Qubit()) {
         set q w/= 0 <- ans;
@@ -27,12 +27,12 @@ operation UseReleasedQubit () : Unit {
 }
 ```
 
-<span data-ttu-id="d9a34-106">`H` が `q[0]` に適用されると、既に解放されている qubit を指します。</span><span class="sxs-lookup"><span data-stu-id="d9a34-106">When `H` is applied to `q[0]` it points to an already released qubit.</span></span> <span data-ttu-id="d9a34-107">これにより、未定義の動作が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="d9a34-107">This can cause undefined behavior.</span></span> <span data-ttu-id="d9a34-108">`Invalidated Qubits Use Checker` が有効になっている場合、既に解放されている qubit に操作が適用されると、例外 `InvalidatedQubitsUseCheckerException` がスローされます。</span><span class="sxs-lookup"><span data-stu-id="d9a34-108">When the `Invalidated Qubits Use Checker` is enabled, the exception `InvalidatedQubitsUseCheckerException` will be thrown if an operation is applied to an already released qubit.</span></span> <span data-ttu-id="d9a34-109">詳細については、 [InvalidatedQubitsUseCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException)の API ドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d9a34-109">See the API documentation on [InvalidatedQubitsUseCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException) for more details.</span></span>
+<span data-ttu-id="4a07c-106">`H` が `q[0]` に適用されると、既に解放されている qubit を指します。</span><span class="sxs-lookup"><span data-stu-id="4a07c-106">When `H` is applied to `q[0]` it points to an already released qubit.</span></span> <span data-ttu-id="4a07c-107">これにより、未定義の動作が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="4a07c-107">This can cause undefined behavior.</span></span> <span data-ttu-id="4a07c-108">`Invalidated Qubits Use Checker` が有効になっている場合、既に解放されている qubit に操作が適用されると、例外 `InvalidatedQubitsUseCheckerException` がスローされます。</span><span class="sxs-lookup"><span data-stu-id="4a07c-108">When the `Invalidated Qubits Use Checker` is enabled, the exception `InvalidatedQubitsUseCheckerException` will be thrown if an operation is applied to an already released qubit.</span></span> <span data-ttu-id="4a07c-109">詳細については、 [InvalidatedQubitsUseCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException)の API ドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="4a07c-109">See the API documentation on [InvalidatedQubitsUseCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException) for more details.</span></span>
 
-## <a name="using-the-invalidated-qubits-use-checker-in-your-c-program"></a><span data-ttu-id="d9a34-110">無効化された Qubits を使用しC#てプログラムで使用する</span><span class="sxs-lookup"><span data-stu-id="d9a34-110">Using the Invalidated Qubits Use Checker in your C# Program</span></span>
+## <a name="using-the-invalidated-qubits-use-checker-in-your-c-program"></a><span data-ttu-id="4a07c-110">無効化された Qubits を使用しC#てプログラムで使用する</span><span class="sxs-lookup"><span data-stu-id="4a07c-110">Using the Invalidated Qubits Use Checker in your C# Program</span></span>
 
-<span data-ttu-id="d9a34-111">次に、`Invalidated Qubits Use Checker` が有効C#になっているクォンタムコンピューター `Trace
-Simulator` を使用するためのドライバーコードの例を示します。</span><span class="sxs-lookup"><span data-stu-id="d9a34-111">The following is an example of C# driver code for using the quantum computer `Trace
+<span data-ttu-id="4a07c-111">次に、`Invalidated Qubits Use Checker` が有効C#になっているクォンタムコンピューター `Trace
+Simulator` を使用するためのドライバーコードの例を示します。</span><span class="sxs-lookup"><span data-stu-id="4a07c-111">The following is an example of C# driver code for using the quantum computer `Trace
 Simulator` with the `Invalidated Qubits Use Checker` enabled:</span></span> 
 
 ```csharp
@@ -57,8 +57,8 @@ namespace Quantum.MyProgram
 }
 ```
 
-<span data-ttu-id="d9a34-112">クラス `QCTraceSimulatorConfiguration` には、クォンタムコンピューターのトレースシミュレーターの構成が格納され、`QCTraceSimulator` コンストラクターの引数として指定できます。</span><span class="sxs-lookup"><span data-stu-id="d9a34-112">The class `QCTraceSimulatorConfiguration` stores the configuration of the quantum computer trace simulator and can be provided as an argument for the `QCTraceSimulator` constructor.</span></span> <span data-ttu-id="d9a34-113">`useInvalidatedQubitsUseChecker` が true に設定されている場合、`Invalidated Qubits Use Checker` が有効になります。</span><span class="sxs-lookup"><span data-stu-id="d9a34-113">When `useInvalidatedQubitsUseChecker` is set to true the `Invalidated Qubits Use Checker` is enabled.</span></span> <span data-ttu-id="d9a34-114">詳細については、 [Qctracesimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)および[Qctracesimulatorconfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration)に関する API ドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d9a34-114">See the API documentation on [QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) and [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) for more details.</span></span>
+<span data-ttu-id="4a07c-112">クラス `QCTraceSimulatorConfiguration` には、クォンタムコンピューターのトレースシミュレーターの構成が格納され、`QCTraceSimulator` コンストラクターの引数として指定できます。</span><span class="sxs-lookup"><span data-stu-id="4a07c-112">The class `QCTraceSimulatorConfiguration` stores the configuration of the quantum computer trace simulator and can be provided as an argument for the `QCTraceSimulator` constructor.</span></span> <span data-ttu-id="4a07c-113">`useInvalidatedQubitsUseChecker` が true に設定されている場合、`Invalidated Qubits Use Checker` が有効になります。</span><span class="sxs-lookup"><span data-stu-id="4a07c-113">When `useInvalidatedQubitsUseChecker` is set to true the `Invalidated Qubits Use Checker` is enabled.</span></span> <span data-ttu-id="4a07c-114">詳細については、 [Qctracesimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)および[Qctracesimulatorconfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration)に関する API ドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="4a07c-114">See the API documentation on [QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) and [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) for more details.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d9a34-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="d9a34-115">See also</span></span> ##
+## <a name="see-also"></a><span data-ttu-id="4a07c-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="4a07c-115">See also</span></span> ##
 
-- <span data-ttu-id="d9a34-116">クォンタムコンピューターの[トレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の概要。</span><span class="sxs-lookup"><span data-stu-id="d9a34-116">The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="4a07c-116">クォンタムコンピューターの[トレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の概要。</span><span class="sxs-lookup"><span data-stu-id="4a07c-116">The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>

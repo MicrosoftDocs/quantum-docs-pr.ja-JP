@@ -3,7 +3,11 @@ uid: microsoft.quantum.arithmetic.greaterthan
 name: GreaterThan
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: は、qubit レジスタ xs および y でエンコードされた、$ および $y $ $x 2 つの整数の比較を厳密に上回る比較を実行します。 $X > y $ の場合は、結果の qubit が反転されます。それ以外の場合は、その状態を保持します。
+summary: >-
+  Qubit レジスタにエンコードされた2つの整数の間で、比較の結果に基づいてターゲットの qubit を反転させることにより、より大きい比較を適用します。
+
+
+  は、qubit レジスタ xs および y でエンコードされた、$ および $y $ $x 2 つの整数の比較を厳密に上回る比較を実行します。 $X > y $ の場合は、結果の qubit が反転されます。それ以外の場合、結果の qubit はその状態を保持します。
 remarks: は、-y = (x ' + y) ' $ の $x を使用します。ここで、' は1の補数を表します。
 syntax: 'operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
 references: >-
@@ -33,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6961a6a4f22d2290a264298a3be3b15f7bdb0ac7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 062d892ad66b8ab41e8ad0bbd2fce6e1eaff0baa
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214947"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870854"

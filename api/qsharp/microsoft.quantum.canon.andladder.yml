@@ -4,10 +4,10 @@ name: AndLadder
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  ターゲット qubits に対して、制御された ' AND はしご ' を実行します。
+  ターゲット qubits のレジスタで、制御された "AND はしご" を実行します。
 
 
-  これにより、計算ベースのベクトルの次のマップで指定された周期が適用されます: $ $ \begin{align} \ket{x\_1, \ ドット, x\_n} \ket{y\_1, \ ドット, y\_{n-1}} \ map\ket{x\_1,、\ ドット, x\_n} \ket{y\_1 \ oplus (x\_1 \ 横 x\_2), \ ドット, y\_{n-1} \ oplus (x\_1 \ 陸 x\_2 \ \ ドット/陸 x\_{n-1}},、\end{align} $ $ where $ \ket{x\_1, \ ドット, x\_n} $ は `controls`の計算ベースの状態を表し、$ \ket{y\_1, \ ドット, y\_{n-1}} $ は `targets`の計算基盤の状態を示します。
+  この操作では、計算基準の次のマッピングによって記述された変換を適用します $ $ \begin{align} \ket{x\_1, \ ドット, x\_n} \ket{y\_1, \ ドット, y\_{n-1}} \ map\ket{x\_1, \ ドット, x\_n} \ket{y\_1 \ oplus (x\_1 \ 陸 x\_2)、\ 点、y\_{n-1} \ oplus (x\_1 \ 陸 x\_2 \\_{n-1}},、\end{align} $ $ where $ \ket{x\_1, \ ドット, x\_n} $ は `controls`の計算ベースの状態を表し、$ \ket{y\_1, \ ドット, y\_{n-1}} $ は `targets`の計算基盤の状態を示します。
 remarks: >-
   - <xref:microsoft.quantum.canon.applymulticontrolledc> と <xref:microsoft.quantum.canon.applymulticontrolledca>の一部として使用されます。
 
@@ -43,9 +43,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 2970f9c783ea233f2f1ceb4089802320efe82602
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bf5b262ca55bea542218356918cf36eb95502967
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217718"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871041"

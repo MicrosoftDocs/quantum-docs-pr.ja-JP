@@ -4,12 +4,14 @@ name: CompareUsingRippleCarry
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: >-
-  このユニタリは、2つの整数 `x` と `y` が等しいサイズの qubit レジスタに格納されているかどうかをテストします `x > y`を満たしています。 True の場合、1は出力 qubit に Xor ます。 それ以外の場合、0は出力 qubit に Xor されます。
+  この操作では、qubits のレジスタによって表される整数がもう1つの整数より大きいかどうかをテストして、結果の XOR を出力 qubits に適用します。
 
 
-  言い換えると、このユニタリ $U $: $ $ \begin{align} U\ket {x} \ k {y} \ k {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)} です。
+  2つの整数 `x` と `y` 同じサイズの qubit レジスタに格納されている場合、この操作は `x > y`を満たしているかどうかを確認します。 True の場合、1は出力 qubit に Xor ます。 それ以外の場合、0は出力 qubit に Xor されます。
 
-  \end{align} $ $。
+  言い換えると、この操作は、ユニタリ $ $ \begin{align} U\ket {x} \ k {y} \ k {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)} で表すことができます。
+
+  \end{align} $ $
 syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
 references: '- 新しいクォンタム ripple は、Cuccaro、Draper、Samuel Kutin、David Petrie e を追加しています。これは、'
 input:
@@ -34,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: fa3db99da28f96e1cb42dd03e465440e015722fa
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1ef346a9fd33859abffe9c30b14b5ea95068169d
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221101"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871126"

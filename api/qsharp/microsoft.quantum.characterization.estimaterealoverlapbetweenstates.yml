@@ -1,0 +1,79 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
+name: EstimateRealOverlapBetweenStates
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: それぞれの状態のコピーを準備する2つの操作を実行すると、各操作によって準備された状態間の重複部分が推定されます。
+remarks: この操作では、Hadamard テストを使用して、$ $ \begin{align} \braket{\psi | の実数部を検索します。V ^ {\ dagger} U |\psi} \end{align} $ $ ここで、$ \ket{\psi} $ は `commonPreparation`によって準備された状態 $U $ は `preparation1`のアクションのユニタリ表現であり、$V $ は `preparation2`に対応します。
+syntax: 'operation EstimateRealOverlapBetweenStates (commonPreparation : (Qubit[] => Unit is Adj), preparation1 : (Qubit[] => Unit is Adj + Ctl), preparation2 : (Qubit[] => Unit is Adj + Ctl), nQubits : Int, nMeasurements : Int) : Double'
+references: '- Aharonov ** [/0511096 のように](https://arxiv.org/abs/quant-ph/0511096)なります。'
+input:
+  content: '(commonPreparation : (Qubit[] => Unit is Adj), preparation1 : (Qubit[] => Unit is Adj + Ctl), preparation2 : (Qubit[] => Unit is Adj + Ctl), nQubits : Int, nMeasurements : Int)'
+  types:
+  - name: commonPreparation
+    summary: 固定の入力状態を準備する操作。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: preparation1
+    summary: 比較する2つの状態準備操作の最初の。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: preparation2
+    summary: 比較する2つの状態準備操作の2番目の。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: nQubits
+    summary: '`commonPreparation`、`preparation1`、`preparation2` all が作用する qubits の数。'
+    isPrimitive: true
+    uid: Int
+  - name: nMeasurements
+    summary: 重複の推定に使用する測定値の数。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+seeAlso:
+- microsoft.quantum.characterization.estimateimagoverlapbetweenstates
+- microsoft.quantum.characterization.estimateoverlapbetweenstates
+metadata:
+  ms.openlocfilehash: a491288789ceabea6a9fe47b9667eeab026724c7
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872837"
