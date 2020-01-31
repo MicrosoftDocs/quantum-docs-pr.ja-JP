@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1eb48da9d4ae2a730019e2707dcb2c69b998491e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864374"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870351"
 ---
 # <a name="quantum-characterization-and-statistics"></a>クォンタムの特性と統計 #
 
@@ -106,7 +106,7 @@ $X = \ket{+} \ ロウ {+}-\ket{-}\bra{-}$ であることに注意してくだ�
 
 堅牢なフェーズの推定の最も重要な機能は、他の多くの便利なバリエーションと共有されています。 $ \hat{\phi} $ の再構築の品質は、意味のあるハイゼンベルグに限定されています。 つまり、true 値から $ \hat{\phi} $ の偏差が $-シグマ $ の場合、$/シグマ $ はクエリの合計数に反比例しています。これは、制御された $U $ (つまり、$ \ シグマ = \mathcal{O} (1/Q) $) に対して作成された $Q クエリの合計数に比例します。 現在、偏差の定義は、異なる推定アルゴリズムによって異なります。 場合によっては、$ \mathcal{O} (1) の確率が少なくとも、推定エラー $ | \hat{\phi}-\phi | であることを意味することがあります。いくつかの循環メジャー ($ \circ\le $) で、-シグマ $ を\_します。 堅牢なフェーズの推定では、差異は正確には、差異は $-シグマ ^ 2 = \mathbb{E}\_\hat{\phi} [(\ mod\_{2 \ pi} (\hat{\phi}-\phi +-pi)--pi) ^ 2] $ になります。これは、周期的なフェーズを1つの有限の間隔 $ (-\ pi, lt pi] $ にラップ解除 より正確に言えば、堅牢なフェーズの推定の標準偏差は、不等ず $ $ \begin{align} 2.0 \ pi/Q/\end{align} $ {n}/le 10.7 \ pi/Q, $ $ に適合します。下限は asymptotically large $Q $ の上限に達し、上限は小さいサンプルサイズでも保証されます。  `bitsPrecision` 入力によって選択された $ $n、暗黙的に $Q $ を定義することに注意してください。
 
-関連するその他の詳細には、たとえば、$1 $ ancilla qubit だけの小さな領域のオーバーヘッド、またはプロシージャが非アダプティブであることを意味します。つまり、必要なクォンタム実験のシーケンスは、中間測定結果に依存しません。 この後の例では、選択したフェーズの推定アルゴリズムが重要であるため、@"microsoft.quantum.canon.robustphaseestimation" やその実装の詳細については、参照されているパブリケーションなどのドキュメントを参照する必要があります。
+関連するその他の詳細には、たとえば、$1 $ ancilla qubit だけの小さな領域のオーバーヘッド、またはプロシージャが非アダプティブであることを意味します。つまり、必要なクォンタム実験のシーケンスは、中間測定結果に依存しません。 この後の例では、選択したフェーズの推定アルゴリズムが重要であるため、@"microsoft.quantum.characterization.robustphaseestimation" やその実装の詳細については、参照されているパブリケーションなどのドキュメントを参照する必要があります。
 
 > [!TIP]
 > 堅牢なフェーズ推定を使用するサンプルは多数あります。 さまざまな物理システムのグラウンドステートエネルギーを抽出するフェーズの推定については、「 [ **H2 シミュレーション**のサンプル](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line)」、「 [ **simpleising**サンプル](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)」、および「" [**モデルのモデル**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)化" サンプルを参照してください。
@@ -119,7 +119,7 @@ $X = \ket{+} \ ロウ {+}-\ket{-}\bra{-}$ であることに注意してくだ�
 これは、不連続の場合よりも弱いステートメントです。固定の $ \ デルタ t $ に対して $t = m\,を制限して、<xref:microsoft.quantum.oracles.discreteoracle> を作成できるためです。
 $U (t) = \ exp (i H t) $ in a operator $H $ ($ \ exp $[は、](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups) [「高度なマトリックス](xref:microsoft.quantum.concepts.matrix-advanced)」で説明されているマトリックス指数)。
 $H $ の eigenstate $ \ket{\phi} $ ($H \ket{\phi} = \ phi \ket{\phi} $ は、すべて $t $, \ begin{\ket{\phi}.} U (t) \ket{\phi} = e ^ {i \ phi t} に対して $U (t) $ という eigenstate も使用されます。
-\end{equation}
+& # {2}
 
 [ベイジアンフェーズの推定](#bayesian-phase-estimation)について説明したのとまったく同じ分析を適用できます。また、尤度関数は、このより一般的な oracle モデルとまったく同じです。 $ $ \ Pr (\texttt{Zero} | \ phi; t,-シータ) = \ cos ^ 2 \ left (\frac{t [\ phi-\ シータ]}{2})。
 さらに、$ $ $U $ は、 [Hamiltonian シミュレーション](xref:microsoft.quantum.libraries.applications#hamiltonian-simulation)の場合と同様に、$/phi $ をエネルギーとして解釈します。
@@ -154,25 +154,27 @@ operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, ei
 
 ```qsharp
 operation H2EstimateEnergy(
-    idxBondLength : Int, 
+    idxBondLength : Int,
     trotterStepSize : Double,
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
 : Double
 ```
 
-これらの多様なフェーズの推定アルゴリズムは、さまざまなプロパティと入力パラメーターに対して最適化されています。これは、ターゲットアプリケーションに最適な選択を行うために理解する必要があります。 たとえば、一部のフェーズ推定アルゴリズムはアダプティブです。つまり、将来の手順は、前の手順の測定結果によってクラシックデプロイ制御されます。 一部の機能では、任意の実数の累乗によってブラックボックスの exponentiate を計算する機能が必要であり、他のユーザーは整数の累乗のみを必要としますが、フェーズ推定剰余 $ 2 \ pi $ のみを解決できます。 多くの補助 qubits が必要であり、その他には1つしか必要ありません。
+これらの多様なフェーズの推定アルゴリズムは、さまざまなプロパティと入力パラメーターに対して最適化されています。これは、ターゲットアプリケーションに最適な選択を行うために理解する必要があります。 たとえば、一部のフェーズ推定アルゴリズムはアダプティブです。つまり、将来の手順は、前の手順の測定結果によってクラシックデプロイ制御されます。 一部の機能では、任意の実数の累乗によってブラックボックスの exponentiate を計算する機能が必要であり、他のユーザーは整数の累乗のみを必要としますが、フェーズ推定剰余 $ 2 \ pi $ のみを解決できます。 多くの補助 qubits が必要であり、他のユーザーには1つしか必要ありません。
 
 同様に、ランダムウォークフェーズの推定の使用は、キャノンで提供される他のアルゴリズムとほぼ同じように行われます。
 
 ```qsharp
-operation ExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : Unit
-is Adj + Ctl {
+operation ApplyExampleOracle(
+    eigenphase : Double,
+    time : Double,
+    register : Qubit[])
+: Unit is Adj + Ctl {
     Rz(2.0 * eigenphase * time, register[0]);
 }
 
-operation BayesianPhaseEstimationCanonSample(eigenphase : Double) : Double {
-
-    let oracle = ContinuousOracle(ExampleOracle(eigenphase, _, _));
+operation EstimateBayesianPhase(eigenphase : Double) : Double {
+    let oracle = ContinuousOracle(ApplyExampleOracle(eigenphase, _, _));
     using (eigenstate = Qubit()) {
         X(eigenstate);
         // The additional inputs here specify the mean and variance of the prior, the number of

@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 10b1048501c2de055f5711fc0fdbc4bac76e8f77
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 5fa32f14291fa2070b49e4bb3b720cbf31ee614b
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864408"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819894"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>開発環境で Q # プロジェクトを作成する
 
@@ -23,16 +23,16 @@ Q # プロジェクトには、クォンタムコードを含む Q # ファイ�
 以下のセクションで、開発環境と言語を選択します。
 
 * [Python](#create-a-python-project)
-* [Jupyter notebooks](#create-a-jupyter-notebook-project)
+* [Q # Jupyter notebook](#create-a-q-jupyter-notebook-project)
 * [C#Visual Studio を使用する](#create-a-c-project-on-windows-using-visual-studio)
 * [C#VS Code](#create-a-c-project-using-vs-code)
 * [C#コマンドラインを使用する](#create-a-c-project-using-the-dotnet-command-line-tool)
 
-## <a name="create-a-python-project"></a>Python プロジェクトの作成
+## <a name="create-a-python-project"></a>Python プロジェクトを作成する
 
 1. 前提条件
 
-     * [Python 用 Quantum 開発キット](xref:microsoft.quantum.install#develop-with-python)
+     * [Python 用 Quantum 開発キット](xref:microsoft.quantum.install.python)をインストールする
 
 1. プロジェクトのフォルダーを作成し、そのフォルダーに移動します。
 
@@ -75,11 +75,11 @@ Q # プロジェクトには、クォンタムコードを含む Q # ファイ�
 
 これで、quantum プログラムの開発を続けることができます。
 
-## <a name="create-a-jupyter-notebook-project"></a>Jupyter Notebook プロジェクトを作成する
+## <a name="create-a-q-jupyter-notebook-project"></a>Q # Jupyter Notebook プロジェクトを作成する
 
 1. 前提条件
 
-    * [Jupyter notebook 用 Quantum 開発キット](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
+    * [Jupyter notebook 用の Quantum 開発キットを](xref:microsoft.quantum.install.jupyter)インストールする
 
 1. 次のコマンドを実行して、Notebook サーバーを起動します。
 
@@ -115,7 +115,7 @@ Q # プロジェクトには、クォンタムコードを含む Q # ファイ�
 
 1. 前提条件
 
-    * [Visual Studio の Quantum 開発キット](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
+    * [Visual Studio 用の Quantum Development Kit 拡張機能](xref:microsoft.quantum.install.cs)をインストールする
 
 1. 新しい Q# アプリケーションを作成する
 
@@ -130,7 +130,7 @@ Q # プロジェクトには、クォンタムコードを含む Q # ファイ�
 
     2 つのファイルが作成されていることがわかります。`Driver.cs` は C# ホスト アプリケーションで、`Operation.qs` は、コンソールにメッセージを出力する簡単な操作を定義する Q# プログラムです。
 
-1. アプリケーションを実行する
+1. アプリケーションの実行
 
     * **[デバッグ]**  ->  **[デバッグなしで開始]** の順に選択します。
     * テキスト `Hello quantum world!` がコンソール ウィンドウに出力されます。
@@ -144,7 +144,7 @@ Visual Studio を使用して、量子開発を続けることができるよう
 
 1. 前提条件
 
-    * [VS Code 用の Quantum 開発キット](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
+    * [VS Code 用の Quantum Development Kit 拡張機能](xref:microsoft.quantum.install.cs)をインストールする
 
 1. 新しいプロジェクトを作成します。
 
@@ -169,7 +169,7 @@ Visual Studio Code を使用して、quantum の開発を続けることがで�
 
 1. 前提条件
 
-    * [コマンドライン用の Quantum 開発キット](xref:microsoft.quantum.install#develop-with-c-using-the-dotnet-command-line-tool)
+    * [コマンドライン用の Quantum 開発キット](xref:microsoft.quantum.install.cs)をインストールする
 
 1. 新しいアプリケーションを作成する
 
@@ -185,7 +185,7 @@ Visual Studio Code を使用して、quantum の開発を続けることがで�
 
     アプリケーションのプロジェクト ファイルと共に、Q# ファイル (`Operation.qs`) と C# ホスト ファイル (`Driver.cs`) の 2 つのファイルが作成されていることがわかります。
 
-1. アプリケーションを実行する
+1. アプリケーションの実行
 
     ```bash
     dotnet run

@@ -1,17 +1,17 @@
 ---
-title: 'Q # の手法-テストとデバッグ |Microsoft Docs'
-description: 'Q # の手法-テストとデバッグ'
+title: 'テストとデバッグ-Q # の手法 |Microsoft Docs'
+description: 'テストとデバッグ-Q # の手法'
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d352ffa315b654cfcf8991fa116465d3dad49f0a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: cfc71f08be0f190d9f5f4a48796e3d0ad06d6107
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864272"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820115"
 ---
 # <a name="testing-and-debugging"></a>テストとデバッグ
 
@@ -50,8 +50,8 @@ $ code . # To open in Visual Studio Code
     @Test("QuantumSimulator")
     operation AllocateQubit () : Unit {
 
-        using (q = Qubit()) {
-            Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+        using (qubit = Qubit()) {
+            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");
@@ -136,7 +136,7 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 ***
 
-## <a name="assertions"></a>アサーション
+## <a name="assertions"></a>表明
 
 Q # の関数には_論理的_な副作用がないため、出力の種類が空のタプルである関数を実行した場合の_その他の種類_の効果は、q # プログラム内からは観察されません `()`。
 つまり、ターゲットコンピューターは、この省略によって次の Q # コードの動作が変更されないことを保証して `()` を返す関数を実行しないことを選択できます。

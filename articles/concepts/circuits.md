@@ -1,17 +1,17 @@
 ---
 title: クォンタム回線 |Microsoft Docs
-description: クォンタム回線
+description: 量子回路
 author: QuantumWriter
 uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7c2afa58fd70d893529cf794ae07df480466aaec
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fe845aa0dde7c780ea6721dfe2559119e90b4aa5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210691"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820795"
 ---
 # <a name="quantum-circuits"></a>クォンタム回線
 ここでは、ユニタリ変換 $ \ text{CNOT} _{01}(hotimes 1) $ について考えてみます。
@@ -39,7 +39,7 @@ $ $ \mathrm{CNOT}_{01}(hotimes 1) \ket{00} = \ frac{1}{\ sqrt{2}} \ left (\ket{0
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_2.png)
 
-[Hadamard](xref:microsoft.quantum.primitive.h)ゲートは、シングル qubit レジスタに対して動作します。
+[Hadamard](xref:microsoft.quantum.intrinsic.h)ゲートは、シングル qubit レジスタに対して動作します。
 
 クォンタムゲートは、ゲートが最初に qubits に適用されたときの左端のゲートと共に、時系列順に並べられます。
 つまり、回線をクォンタム状態のままにしている場合、ワイヤは図の各ゲートを通じて、左から右にクォンタムの状態を取り込みます。
@@ -72,7 +72,7 @@ $ $ \mathrm{CNOT}_{01}(hotimes 1) \ket{00} = \ frac{1}{\ sqrt{2}} \ left (\ket{0
 
 ## <a name="controlled-gates"></a>制御ゲート
 マルチ qubit クォンタム回路図に組み込まれているもう1つのコンストラクトは制御です。
-クォンタム片制御ゲートのアクション ($-ラムダ (G) $ を示しています)。ここでは、1つの qubit の値が $G $ のアプリケーションを制御しています。この例では、製品の状態入力 $ & ラムダ (G) (\ alpha \ket{0} + \ \ket) の次の例を参照してください{1}) \ket{\psi} = \ alpha \ket{0} \ket{\psi} + \ \ket{1} G\ket {\ psi} $。
+クォンタム片制御ゲートのアクション。 $-ラムダ (G) $ が指定されています。ここでは、1つの qubit の値が $G $ のアプリケーションを制御しています。この例では、製品状態入力 $-ラムダ (G) (\ alpha \ket{0} +/ベータ{1}) \ket{\psi} = \ alpha \ket{0} \ket{\psi} + \ beta \ket{1} G\ket {\ psi}
 つまり、制御されたゲートが $ \ psi $ を含むレジスタに $ $G を適用するのは、コントロールの qubit が値 $1 $ を受け取る場合のみです。
 一般に、このような制御された操作を回路図に記述します。
 
@@ -81,7 +81,7 @@ $ $ \mathrm{CNOT}_{01}(hotimes 1) \ket{00} = \ frac{1}{\ sqrt{2}} \ left (\ket{0
 ![](~/media/concepts_5.png)
 
 ここで、黒い円はゲートが制御されているクォンタムビットを表し、垂直方向のワイヤは、コントロール qubit が値 $1 $ を受け取るときに適用されるユニタリを表します。
-$G = X $ および $G = Z $ の特殊なケースでは、ゲートの制御されたバージョンを記述するために次の表記が導入されます (制御された X ゲートは[$CNOT $ gate](xref:microsoft.quantum.primitive.cnot)であることに注意してください)。
+$G = X $ および $G = Z $ の特殊なケースでは、ゲートの制御されたバージョンを記述するために次の表記が導入されます (制御された X ゲートは[$CNOT $ gate](xref:microsoft.quantum.intrinsic.cnot)であることに注意してください)。
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -106,7 +106,7 @@ is Ctl { // Auto-generate the controlled specialization of the operation
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![測定回路](~/media/concepts_7.png)
 
-Q # この目的のために[メジャー演算子](xref:microsoft.quantum.primitive.measure)を実装します。
+Q # この目的のために[メジャー演算子](xref:microsoft.quantum.intrinsic.measure)を実装します。
 詳細については、[測定に関するセクション](xref:microsoft.quantum.libraries.standard.prelude#measurements)を参照してください。
 
 同様に、サブサーキット

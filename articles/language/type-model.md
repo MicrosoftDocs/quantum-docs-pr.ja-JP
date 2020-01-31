@@ -1,17 +1,17 @@
 ---
 title: 'Q # 型モデル |Microsoft Docs'
-description: 'Q # 型モデル'
+description: Q# 型モデル
 author: QuantumWriter
 uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4e251053d1b8306bf8956314d8099e95c56bce55
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 0aabb144779da301b71ad215c8e975cc29b4dcce
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184748"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871636"
 ---
 # <a name="the-type-model"></a>型モデル
 
@@ -120,7 +120,7 @@ Q # には、作成されたタプルの内容を変更する機構が用意さ�
 
 Q # ファイルでは、任意の有効な型の単一の値を含む新しい名前付きの型を定義できます。
 `T`タプル型の場合、`newtype` ステートメントを使用して `T` のサブタイプである新しいユーザー定義型を宣言できます。
-たとえば、@"microsoft.quantum.canon" 名前空間では、複素数はユーザー定義型として定義されます。
+たとえば、@"microsoft.quantum.math" 名前空間では、複素数はユーザー定義型として定義されます。
 
 ```qsharp
 newtype Complex = (Double, Double);
@@ -141,7 +141,7 @@ newtype Nested = (Double, (ItemName : Int, String));
 名前付き項目には、アクセス演算子 `::`から直接アクセスできるという利点があります。 
 
 ```qsharp
-function Addition (c1 : Complex, c2 : Complex) : Complex {
+function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
     return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
 }
 ```
@@ -151,7 +151,7 @@ function Addition (c1 : Complex, c2 : Complex) : Complex {
 このような "ラップ解除" 式の型は、ユーザー定義型の基になる型です。 
 
 ```qsharp
-function PrintMsg (value : Nested) : Unit {
+function PrintedMessage(value : Nested) : Unit {
     let (d, (_, str)) = value!;
     Message ($"{str}, value: {d}");
 }
@@ -227,7 +227,7 @@ newtype Polar = (Radius : Double, Phase : Double);
 ## <a name="operation-and-function-types"></a>操作と関数の型
 
 Q #_操作_は、クォンタムサブルーチンです。
-つまり、クォンタム操作を含む呼び出し可能なルーチンです。
+つまり、量子操作を含む呼び出し可能なルーチンです。
 
 Q #_関数_は、クォンタムアルゴリズム内で使用される古典的なサブルーチンです。
 これには、従来のコードが含まれていても、クォンタム操作は含まれません。
@@ -286,27 +286,28 @@ Q # は、入力の型に関して反変です。入力と同じ結果型の呼�
 つまり、次の定義を指定します。
 
 ```qsharp
-operation Invertible (qs : Qubit[]) : Unit 
+operation Invert(qubits : Qubit[]) : Unit 
 is Adj {...} 
-operation Unitary (qs : Qubit[]) : Unit 
+
+operation ApplyUnitary(qubits : Qubit[]) : Unit 
 is Adj + Ctl {...} 
 
-function ConjugateInvertibleWith (
-   inner: (Qubit[] => Unit is Adj),
-   outer : (Qubit[] => Unit is Adj))
+function ConjugateInvertWith(
+    inner : (Qubit[] => Unit is Adj),
+    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj) {...}
 
-function ConjugateUnitaryWith (
-   inner: (Qubit[] => Unit is Adj + Ctl),
-   outer : (Qubit[] => Unit is Adj))
+function ConjugateUnitaryWith(
+    inner : (Qubit[] => Unit is Adj + Ctl),
+    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj + Ctl) {...}
 ```
 
 次のことが当てはまります。
 
-- 操作 `ConjugateInvertibleWith` は `Invertible` または `Unitary`のいずれかの `inner` 引数を使用して呼び出すことができます。
-- 操作 `ConjugateUnitaryWith` は `Unitary`の `inner` 引数を使用して呼び出すことができますが、`Invertible`は呼び出せません。
-- `ConjugateInvertibleWith`から `(Qubit[] => Unit is Adj + Ctl)` 型の値が返される場合があります。
+- 関数 `ConjugateInvertWith` は `Invert` または `ApplyUnitary`のいずれかの `inner` 引数を使用して呼び出すことができます。
+- 関数 `ConjugateUnitaryWith` は `ApplyUnitary`の `inner` 引数を使用して呼び出すことができますが、`Invert`は使用できません。
+- `ConjugateInvertWith`から `(Qubit[] => Unit is Adj + Ctl)` 型の値が返される場合があります。
 
 > [!IMPORTANT]
 > Q # 0.3 では、ユーザー定義型の動作に大きな違いがあります。
@@ -377,14 +378,12 @@ Q # では、制御されたバージョンは常に制御 qubits の配列を�
 ```qsharp
 /// # Summary
 /// Prepares a state and measures it in the Pauli-Z basis.
-operation MeasureOneQubit () : Result {
+operation MeasureOneQubit() : Result {
         mutable result = Zero;
 
         using (qubit = Qubit()) { // Allocate a qubit
             H(qubit);               // Use a quantum operation on that qubit
-
             set result = M(qubit);      // Measure the qubit
-
             if (result == One) {    // Reset the qubit so that it can be released
                 X(qubit);
             }
@@ -396,12 +395,11 @@ operation MeasureOneQubit () : Result {
 
 この関数の例は、 [PhaseEstimation](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation)サンプルを基にしています。 純粋にクラシックコードを含みます。 上記の例とは異なり、qubits は割り当てられず、クォンタム操作は使用されません。
 
-
 ```qsharp
 /// # Summary
 /// Given two arrays, returns a new array that is the pointwise product
 /// of each of the given arrays.
-function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
+function PointwiseProduct(left : Double[], right : Double[]) : Double[] {
     mutable product = new Double[Length(left)];
 
     for (idxElement in IndexRange(left)) {
@@ -417,7 +415,10 @@ function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
 /// # Summary
 /// Translate MCT masks into multiple-controlled Toffoli gates (with single
 /// targets).
-function GateMasksToToffoliGates (qubits : Qubit[], masks : MCMTMask[]) : MCTGate[] {
+function GateMasksToToffoliGates(
+    qubits : Qubit[], 
+    masks : MCMTMask[]) 
+: MCTGate[] {
 
     mutable result = new MCTGate[0];
     let n = Length(qubits);

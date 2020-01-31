@@ -1,17 +1,17 @@
 ---
 title: 貢献するコード |Microsoft Docs
-description: コードの投稿
+description: 貢献コード
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: 3ff15a744bf15924564d5a8fee54f4fbce4c04ee
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: f9e0f0d9540102331aea64a1245cbaa4833e1e02
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864425"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819962"
 ---
 # <a name="contributing-code"></a>コードの投稿 #
 
@@ -58,7 +58,7 @@ function PairTest () : Unit {
 
 ```qsharp
 @Test("QuantumSimulator")
-operation WithTest () : Unit {
+operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
     let expected = Z;
     AssertOperationsEqualReferenced(ApplyToEach(actual, _), ApplyToEachA(expected, _), 4);
@@ -98,7 +98,7 @@ operation WithTest () : Unit {
 私たちは、現在のすばらしい多様性の中でも、今後もさらに包括的になるように、共同作業がクォンタムコンピューティングコミュニティ全体に提供されるようにしたいと考えています。
 この目標を達成するための支援を歓迎します。
 
-## <a name="next-steps"></a>次のステップ ##
+## <a name="next-steps"></a>次の手順 ##
 
 Quantum 開発キットを利用して、quantum プログラミングコミュニティ全体にとって優れたリソースを作成しようとしていただき、誠にありがとうございます。
 詳細については、Q # のスタイルに関する次のガイドを参照してください。

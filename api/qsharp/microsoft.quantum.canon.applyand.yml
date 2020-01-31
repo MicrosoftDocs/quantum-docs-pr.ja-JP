@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyand
+name: ApplyAnd
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  測定を使用して adjoint 演算を実行し、両方のコントロール qubit が1の状態である場合にのみ、指定されたターゲット qubit を反転します。
+
+
+  両方のコントロールが1である場合にのみ `target` を反転します。ただし、`target` の状態が0であることを前提としています。  この操作には、T カウント4、T 深度2があり、ヘルパー qubit は必要ないため、`target` が0であることがわかっている場合は、CCNOT 操作に適している可能性があります。  この操作の adjoint は測定ベースであり、T ゲートは必要ありません。
+
+
+  この操作の制御されたアプリケーションでは、ヘルパー qubit、`2^c` `Rz` ゲートは不要であり、深さに対して最適化されていません。 `c` は、`ApplyAnd` 操作の2つのコントロールを含むコントロールの全体の数です。  Adjoint 制御アプリケーションでは、`Rz` ゲート (非 adjoint 操作のサイズの2倍の角度を持つ) を `2^c - 1` 必要があります。ヘルパー qubit はなく、深度に対して最適化されていません。
+syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
+references: >-
+  - Cody Jones: 「fault トレラントな Toffoli ゲートのための斬新構造」、「Phys 87、022328、2013 [Arxiv: 1212.5069](https://arxiv.org/abs/1212.5069) doi: 10.1103/PhysRevA
+
+  - Gidney: "半分に of クォンタムの追加", Quantum 2, ページ 74, 2018 [Arxiv: 1709.06648](https://arxiv.org/abs/1709.06648) doi: 10.1103/PhysRevA. 85.044302
+
+  - Mathias Soeken: "クォンタム Oracle 回線とクリスマスツリーパターン"、 [2019 のブログ記事](https://msoeken.github.io/blog_qac.html)(注: 複数の制御された構築について説明します)
+input:
+  content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
+  types:
+  - name: control1
+    summary: 最初のコントロールの qubit
+    isPrimitive: true
+    uid: Qubit
+  - name: control2
+    summary: 2番目のコントロール qubit
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: ターゲット補助 qubit;状態は0である必要があります
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 7cde3dbbd33ff482609bbaaccb15e4c7b1bc536e
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872990"

@@ -7,26 +7,26 @@ summary: >-
   Oracle から特定の状態に関するリフレクションを構築します。
 
 
-  型が <xref:microsoft.quantum.oracles.deterministicstateoracle>の oracle $O $ を指定した場合、この関数の結果は、$O \ket{0} = \ket{\psi} $ という州 $ \ket{\psi} $ の周りのリフレクションになります。
+  この関数の結果は、ミリ秒 $O 行列で表される \ket{\psi} の状態準備 oracle を指定すると、oracle $O $; によって準備された状態 $ $ を中心にリフレクションを適用する oracle になります。つまり、$O \ket{0} = \ket{\psi} $ のような状態 $ \ket{\psi} $ です。
 syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
   types:
   - name: oracle
-    summary: "\"DeterministicStateOracle\" 型の Oracle"
+    summary: $ \Ket{\psi} $ の状態のコピーを準備する oracle。
     uid: microsoft.quantum.oracles.deterministicstateoracle
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: 状態 $ \ket{\psi} $ を反映する `ReflectionOracle`。
+  - summary: 状態 $ \ket{\psi} $ を反映する oracle。
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
-- deterministicstateoracle
-- reflectionoracle
+- microsoft.quantum.oracles.deterministicstateoracle
+- microsoft.quantum.oracles.reflectionoracle
 metadata:
-  ms.openlocfilehash: c48c9259b4b3c122a8d7551db6d326ea523dd2a0
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 604c0dab70979e3f429b58168a969a7557e2a0de
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73050328"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76868936"

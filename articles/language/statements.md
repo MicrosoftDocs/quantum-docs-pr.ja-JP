@@ -6,16 +6,16 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5bcbee868c76aaf53d0b7969e6e634da62689aaa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184867"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821067"
 ---
 # <a name="statements-and-other-constructs"></a>ステートメントとその他の構成体
 
-## <a name="comments"></a>説明
+## <a name="comments"></a>コメント
 
 コメントは、2つのスラッシュ (`//`) で始まり、行の終わりまで続きます。
 Q # ソースファイル内の任意の場所にコメントが表示される場合があります。
@@ -29,7 +29,7 @@ Q # ソースファイル内の任意の場所にコメントが表示される�
 Markdown の拡張機能として、Q # の操作、関数、ユーザー定義型への相互参照は、`@"<ref target>"`を使用して含めることができます。 `<ref target>` は参照されるコードオブジェクトの完全修飾名に置き換えられます。
 必要に応じて、ドキュメントエンジンで追加の Markdown 拡張機能をサポートすることもできます。
 
-次に例を示します。
+例えば次が挙げられます。
 
 ```qsharp
 /// # Summary
@@ -54,8 +54,7 @@ Markdown の拡張機能として、Q # の操作、関数、ユーザー定義�
 ///
 /// # See Also
 /// - Microsoft.Quantum.Intrinsic.H
-operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit
-{
+operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
     op(target);
     op(target);
 }
@@ -90,7 +89,6 @@ Q # は、他の .NET 言語として名前を付ける場合と同じ規則に�
 
 ```qsharp
 namespace NS {
-
     open Microsoft.Quantum.Intrinsic; // opens the namespace
     open Microsoft.Quantum.Math as Math; // defines a short name for the namespace
 }
@@ -181,7 +179,7 @@ for (i in 1 .. 2 .. 10) {
 左辺の型が式の型と一致するすべての二項演算子に対して、同様のステートメントを使用できます。 これにより、たとえば、値を累積する便利な方法が提供されます。
 ```qsharp
 mutable results = new Result[0];
-for (q in qubits) {
+for (qubit in qubits) {
     set results += [M(q)];
     // ...
 }
@@ -193,7 +191,7 @@ for (q in qubits) {
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function AddAll (reals : Double[], ims : Double[]) : Complex[] {
+function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -209,19 +207,17 @@ function AddAll (reals : Double[], ims : Double[]) : Complex[] {
 配列の場合、標準ライブラリには、多くの一般的な配列の初期化と操作に必要なツールが含まれているため、最初の場所で配列項目を更新する必要がなくなります。 必要に応じて、更新ステートメントと再割り当てステートメントで代替手段を提供します。
 
 ```qsharp
-operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
-
+operation GenerateRandomInts(max : Int, nSamples : Int) : Int[] {
     mutable samples = new Double[0];
-    for (i in 1 .. nrSamples) {
-        set samples += [RandomInt(maxInt)];
+    for (i in 1 .. nSamples) {
+        set samples += [RandomInt(max)];
     }
     return samples;
 }
 
-operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
-
-    let normalization = 1. / IntAsDouble(prec);
-    mutable samples = RandomInts(prec, nrSamples);
+operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
+    let normalization = 1. / IntAsDouble(nSteps);
+    mutable samples = GenerateRandomInts(nSteps, nSamples);
     
     for (i in IndexRange(samples) {
         let value = IntAsDouble(samples[i]);
@@ -236,10 +232,9 @@ operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
 
 関数
 ```qsharp
-function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
-{
-    mutable pauliArray = new Pauli[n];
-    for (index in 0 .. n - 1) {
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    mutable pauliArray = new Pauli[length];
+    for (index in 0 .. length - 1) {
         set pauliArray w/= index <- 
             index == location ? pauli | PauliI;
     }    
@@ -249,15 +244,15 @@ function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
 たとえば、`Microsoft.Quantum.Arrays`の関数 `ConstantArray` を使用して単純化し、コピーと更新の式を返すことができます。
 
 ```qsharp
-function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
-    return ConstantArray(n, PauliI) w/ i <- pauli;
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    return ConstantArray(length, PauliI) w/ location <- pauli;
 }
 ```
 
 ### <a name="binding-scopes"></a>スコープのバインド
 
 一般に、シンボルバインドはスコープ外に出、ステートメントブロックの最後では動作しなくなります。
-この規則には、次の2つの例外があります。
+このルールには次の 2 つの例外があります。
 
 - `for` ループのループ変数のバインドは、for ループの本体のスコープ内にありますが、ループの終了後には適用されません。
 - `repeat`/`until` ループ (本文、テスト、および修正) の3つの部分はすべて1つのスコープとして扱われるので、本文にバインドされているシンボルはテストとフィックスアップで使用できます。
@@ -278,7 +273,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-と
+および
 
 ```qsharp
 if (a == b) {
@@ -330,8 +325,8 @@ if (a == b) {
 
 ```qsharp
 // ...
-for (qb in qubits) { // qubits contains a Qubit[]
-    H(qb);
+for (qubit in qubits) { // qubits contains a Qubit[]
+    H(qubit);
 }
 
 mutable results = new (Int, Results)[Length(qubits)];
@@ -359,13 +354,13 @@ for ((index, measured) in results) {
 ```qsharp
 mutable iter = 1;
 repeat {
-    ProbabilisticCircuit(qs);
-    let success = ComputeSuccessIndicator(qs);
+    ProbabilisticCircuit(qubits);
+    let success = ComputeSuccessIndicator(qubits);
 }
 until (success || iter > maxIter)
 fixup {
     iter += 1;
-    ComputeCorrection(qs);
+    ComputeCorrection(qubits);
 }
 ```
 
@@ -374,25 +369,25 @@ fixup {
 修正の実行を完了すると、ステートメントのスコープが終了します。これにより、本体またはフィックスアップ中に作成されたシンボルバインドは、後続の繰り返しでは使用できなくなります。
 
 たとえば、次のコードは、Hadamard と T ゲートを使用して、重要な回転ゲート $V (& 3)、(確率論的 + 2 i Z)/\ sqrt{5}$ を実装する、中心となる回路です。
-ループは平均で8/5 回繰り返されます。
+ループは $-frac{8}で終了し、平均で $ 繰り返し {5}ます。
 詳細については、「繰り返し-成功するまで」を参照してください。 [*1 つの qubit unitaries 非決定的分解*](https://arxiv.org/abs/1311.1074)(paetznick と svore 2014) を参照してください。
 
 ```qsharp
-using (anc = Qubit()) {
+using (qubit = Qubit()) {
     repeat {
-        H(anc);
-        T(anc);
-        CNOT(target,anc);
-        H(anc);
-        Adjoint T(anc);
-        H(anc);
-        T(anc);
-        H(anc);
-        CNOT(target,anc);
-        T(anc);
+        H(qubit);
+        T(qubit);
+        CNOT(target, qubit);
+        H(qubit);
+        Adjoint T(qubit);
+        H(qubit);
+        T(qubit);
+        H(qubit);
+        CNOT(target, qubit);
+        T(qubit);
         Z(target);
-        H(anc);
-        let result = M(anc);
+        H(qubit);
+        let result = M(qubit);
     } until (result == Zero);
 }
 ```
@@ -480,7 +475,7 @@ return ();
 return (results, qubits);
 ```
 
-### <a name="fail"></a>不合格
+### <a name="fail"></a>失敗
 
 Fail ステートメントは、操作の実行を終了し、呼び出し元にエラー値を返します。
 これは、キーワード `fail`と、その後に続く文字列と終端のセミコロンで構成されます。
@@ -519,15 +514,15 @@ Qubits は、ステートメントブロックの最後にある計算 `Zero` �
 たとえば、次のように入力します。
 
 ```qsharp
-using (q = Qubit()) {
+using (qubit = Qubit()) {
     // ...
 }
-using ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+using ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
 
-### <a name="dirty-qubits"></a>ダーティ Qubits
+### <a name="borrowed-qubits"></a>借りた Qubits
 
 `borrowing` ステートメントは、一時的な使用のために qubits を取得するために使用されます。 このステートメントは、キーワード `borrowing`で構成され、始めかっこ `(`、バインド、終わりかっこ `)`、および qubits が使用可能になるステートメントブロックで構成されます。
 バインディングは、`using` ステートメントと同じパターンおよび規則に従います。
@@ -535,10 +530,10 @@ using ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
 たとえば、次のように入力します。
 
 ```qsharp
-borrowing (q = Qubit()) {
+borrowing (qubit = Qubit()) {
     // ...
 }
-borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+borrowing ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
@@ -547,8 +542,7 @@ borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
 借り手は、貸し出しされたときと同じ状態に qubits を残すことをコミットします。つまり、ステートメントブロックの先頭と末尾の状態は同じであると想定されます。
 特に、この状態は必ずしも古典的な状態ではありません。ほとんどの場合、借りているスコープには測定値を含めないでください。 
 
-このような qubits は、"ダーティ ancilla" と呼ばれることがよくあります。
-Dirty ancilla use の例については、「 [*2n + 2 qubits と Toffoli ベースのモジュール乗算*](https://arxiv.org/abs/1611.07995)(、Roetteler、および svore 2017) を使用したファクタリング」を参照してください。
+借り qubits の使用例については、「 [*2n + 2 qubits と Toffoli ベースのモジュール乗算 2017 (ベースのモジュール型乗算) を使用したファクタリング*](https://arxiv.org/abs/1611.07995)」を参照してください。
 
 Qubits を借りている場合、システムはまず、使用中であるが、`borrowing` ステートメントの本体ではアクセスされない qubits から要求を入力しようとします。
 このような qubits が不足している場合は、要求を完了するために新しい qubits が割り当てられます。

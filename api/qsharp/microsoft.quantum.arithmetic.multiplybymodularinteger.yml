@@ -7,7 +7,9 @@ summary: >-
   Qubit レジスタで整数定数を使ってモジュール乗算を実行します。
 
 
-  剰余を N で、をによって指定した場合、この操作では、計算ベースで次のマップによって定義された周期を実装します。 | y ⟩↦ | a ⋅ y (mod N) ⟩ (0 から N-1 までのすべての y)
+  $ `constMultiplier` $N、$ $a によって `modulus` を示します。
+
+  次に、この操作では、計算基準に基づいて、次のマップによって定義される、"$ $ \begin{align} \ket{y} \ket{(a-cdot y)" $1 $N & \end{align}} N} $ $ $0 $y を実装します。
 remarks: >-
   - 回路図と説明については、arXiv のページ8の図7を参照してください[: quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)
 
@@ -21,14 +23,14 @@ input:
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: 乗算演算が実行され `modulus`
+    summary: 乗算演算は `modulus`剰余が行われます。
     isPrimitive: true
     uid: Int
   - name: multiplier
     summary: >-
       定数を乗算した数値。
 
-      これは、リトルエンディアンのビット順で整数を表す qubits の配列です。
+      これは、リトルエンディアン形式で整数をエンコードする qubits の配列です。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -39,9 +41,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4a99aff903b22ad4edcd96f2a980bd65c740025f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 49d46d1dda5afaf4a35667ec98d24aeb51beba1f
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218755"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871381"

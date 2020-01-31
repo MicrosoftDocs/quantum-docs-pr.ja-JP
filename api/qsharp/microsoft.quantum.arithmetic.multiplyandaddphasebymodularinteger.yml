@@ -3,11 +3,11 @@ uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 name: MultiplyAndAddPhaseByModularInteger
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: ModularAddProductLE と同じですが、summand では整数が QFT ベースでエンコードされることを前提としています。
+summary: MultiplyAndAddByModularInteger と同じですが、summand が QFT ベースで整数をエンコードすることを前提としています。
 remarks: >-
   `phaseSummand` のビットが0に設定されていることを前提としています。
 
-  また、`phaseSummand` の値が N 未満であることを前提としています。
+  また、`phaseSummand` の値が $N $ より小さいことを前提としています。
 syntax: 'operation MultiplyAndAddPhaseByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
@@ -16,11 +16,14 @@ input:
     isPrimitive: true
     uid: Int
   - name: modulus
+    summary: に関して、加算と乗算が行われる剰余 $N $。
     isPrimitive: true
     uid: Int
   - name: multiplier
+    summary: '`summand`の各基準状態ラベルに値を追加する符号なし整数を表すクォンタムレジスタ。'
     uid: microsoft.quantum.arithmetic.littleendian
   - name: phaseSummand
+    summary: この操作のターゲットとして使用する符号なし整数を表すクォンタムレジスタ。
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -31,11 +34,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- microsoft.quantum.canon.modularaddproductle
+- microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
 metadata:
-  ms.openlocfilehash: f4dab26f55a61d0f3cbaf0b9b17fe4615f74356a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3728e95ad26768d486af79e7c4158a2a2715bbd2
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214845"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871398"

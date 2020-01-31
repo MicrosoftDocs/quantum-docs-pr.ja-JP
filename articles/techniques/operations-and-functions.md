@@ -1,17 +1,17 @@
 ---
-title: 'Q # の手法-操作と関数 |Microsoft Docs'
-description: 'Q # の手法-操作と関数'
+title: '操作と関数-Q # の手法 |Microsoft Docs'
+description: '操作と関数-Q # の手法'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 06da09dc9c6e0ba0331db6bc0cd3d2ddeb287113
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183456"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820778"
 ---
 # <a name="q-operations-and-functions"></a>Q # 操作と関数
 
@@ -66,7 +66,7 @@ operation Superdense(here : Qubit, there : Qubit) : (Result, Result) {
 これらの特殊化の存在は、次の例の `is Adj + Ctl` 操作シグネチャの一部として宣言できます。 そのような暗黙的に宣言された各特殊化の対応する実装が、コンパイラによって生成されます。 
 
 ```qsharp
-operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit {
+operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit
 is Adj + Ctl { // implies the existence of an adjoint, a controlled, and a controlled adjoint specialization
     H(here);
     CNOT(here, there);
@@ -111,7 +111,7 @@ is Ctl + Adj {
     controlled adjoint invert; 
 }
 ```
-上の例では、`adjoint invert;` は、本体の実装を反転することによって adjoint の特殊化が生成されることを示し、`controlled adjoint invert;` は、の指定された実装を反転することによって、制御された adjoint 特殊化が生成されることを示します。制御された特殊化。
+上の例では、`adjoint invert;` は、本体の実装を反転することによって adjoint の特殊化が生成されることを示し、`controlled adjoint invert;` は、制御された特殊化の実装を反転することによって、制御された adjoint 特殊化が生成されることを示します。
 
 これについては、上位の[制御フロー](xref:microsoft.quantum.concepts.control-flow)でさらに例を紹介します。
 
@@ -163,7 +163,7 @@ operation U(target : Qubit) : Unit {
 
 `U` が呼び出されるたびに、`target`に対して異なる操作が行われます。
 特に、`adjoint auto` 特殊化宣言を `U`に追加した場合、`U(target); Adjoint U(target);` は id として機能することを保証できません (つまり、非 op)。
-これは、[ベクトルとマトリックス](xref:microsoft.quantum.concepts.vectors)で見た adjoint の定義に違反しています。これにより、<xref:microsoft.quantum.math.randomreal> 操作を呼び出したときに、コンパイラによって提供される保証が損なわれるような操作で adjoint 特殊化を自動生成できるようになります。;<xref:microsoft.quantum.math.randomreal> は、adjoint または制御されたバージョンが存在しない操作です。
+これは、[ベクターとマトリックス](xref:microsoft.quantum.concepts.vectors)で見た adjoint の定義に違反しています。これにより、が <xref:microsoft.quantum.math.randomreal> 操作を呼び出したときに、コンパイラによって提供される保証を損なうことがある操作で adjoint 特殊化を自動生成できるようになります。<xref:microsoft.quantum.math.randomreal> は、adjoint または制御されたバージョンが存在しない操作です。
 
 一方、`Square` などの関数呼び出しを許可しても安全です。そのため、コンパイラは、出力を安定した状態に保つために、`Square` への入力を保持するだけで済みます。
 したがって、できるだけ多くの従来のロジックを関数に分離することにより、他の関数や操作でそのロジックを簡単に再利用できるようになります。

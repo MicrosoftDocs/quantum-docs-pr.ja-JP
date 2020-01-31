@@ -1,23 +1,23 @@
 ---
-title: 'Q # の手法-すべてをまとめる |Microsoft Docs'
-description: 'Q # の手法-まとめ'
+title: 'すべてをまとめておく-Q # テクニック |Microsoft Docs'
+description: 'まとめ: Q # の手法'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f65b3e260f98a7a90da13b62edd6cc63d200f5af
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183269"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820166"
 ---
 # <a name="putting-it-all-together-teleportation"></a>すべてをまとめます。 #
 「[クォンタム回線](xref:microsoft.quantum.concepts.circuits)」で定義されている例に戻りましょう。 これまでに学習した概念を説明するために、これを使用します。 ここでは、理論に習熟している方について説明し、その後に Q # でのコード実装のチュートリアルを示します。 
 
 ## <a name="quantum-teleportation-theory"></a>クォンタムの受付: 理論
-Quantum の電話は、特定の場所の qubit から別の場所にある qubit に ('__message__' と呼ばれる) 不明なクォンタムの状態を送信する手法です (これらの qubit を '__ここ__'__と ' the ' と__呼びます)。それぞれ)。 Dirac 表記を使用して、__メッセージ__をベクトルとして表すことができます。 
+"__メッセージ__" と呼ばれる不明なクォンタムの状態を、ある場所の qubit から別の場所にある qubit に送信するための手法です (これらの qubit はそれぞれ ' ここ ' と '__ここ__ __' と__呼ばれています)。 Dirac 表記を使用して、__メッセージ__をベクトルとして表すことができます。 
 
 $ $ \ket{\psi} = \alpha\ket{0} + \beta\ket{1} $ $
 
@@ -56,7 +56,7 @@ $ \ket{1}$  | $ \ frac{1}{\ sqrt{2}} (\ket{0}-\ket{1}) $
 
 上記の出力の各用語の最初の qubit に Hadamard ゲートを適用すると、次の結果が得られます。
 
-$ $ \frac{\alpha}{\sqrt{2}} (\ frac{1}{\ sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\ frac{1}{\ sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{\ sqrt{2}} (\ frac{1}{\ sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\ frac{1}{\ sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
+$ $ \frac{\alpha}{\sqrt{2}} (\ frac{1}{\ sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\ frac{1}{\ sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{\sqrt{2}} (\ frac{1}{\ sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (-frac{1}{\ sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
 
 各用語には $2/frac{1}{/sqrt{2}} $ 要因があることに注意してください。 次の結果を返すことができます。
 
@@ -64,7 +64,7 @@ $ $ \frac{\alpha}{2}(\ket{0} + \ket{1}) \ket{00} + \frac{\alpha}{2}(\ket{0} + \k
 
 $ & Frac{1}{2}$ factor は各用語に共通であるため、角かっこの外側に移動できます。
 
-$ $ \ frac{1}{2}\ big [\ alpha (\ket{0} + \ket{1}) \ket{00} +-alpha (\ket{0} + \ket{1}) \ket{11} +/beta (\ket{0}-\ket{1}) \ket{10} + \ ベータ (\ket{0}-\ket{1}) \ket{01}\ big] $ $
+$ $ \ frac{1}{2}big [\ alpha (\ket{0} + \ket{1}) \ket{00} + \ アルファ (\ket{0} + \ket{1}) \ket{11} + \ beta (\ket{0}-\ket{1}) \ket{10} + \ beta (\ket{0}-\ket{1}) \ket{01}
 
 次に、各用語の角かっこを掛けて、次のようにします。
 
@@ -94,7 +94,7 @@ $ $ \ket{\psi} = \alpha\ket{0} + \beta\ket{1} $ $
 
 まとめると、測定し、最初の qubit が1の場合、Z ゲートが適用されます。 測定し、2番目の qubit が1の場合、NOT gate が適用されます。
 
-### <a name="summary"></a>Summary
+### <a name="summary"></a>概要
 次に示すのは、電話を実装するテキスト帳のクォンタム回線です。 左から右に移動すると、次のように表示されることがあります。
 - 手順 1: Hadamard ゲートと CNOT gate を適用__して、__ __ここ__に Entangling します。
 - 手順 2: CNOT ゲートと Hadamard gate を使用して__メッセージ__を送信する。
@@ -125,7 +125,7 @@ operation Teleport(msg : Qubit, there : Qubit) : Unit {
 ```
 
 ### <a name="step-1-create-an-entangled-state"></a>手順 1: ありの状態を作成する
-次に、@"microsoft.quantum.primitive.h" と @"microsoft.quantum.primitive.cnot" の操作を使用して、`here` と `there` の間にありのペアを作成できます。
+次に、@"microsoft.quantum.intrinsic.h" と @"microsoft.quantum.intrinsic.cnot" の操作を使用して、`here` と `there` の間にありのペアを作成できます。
 
 ```qsharp
         H(here);
@@ -141,7 +141,7 @@ operation Teleport(msg : Qubit, there : Qubit) : Unit {
 ```
 
 ### <a name="step-3--4-measuring-and-interpreting-the-result"></a>手順 3 & 4: 結果の測定と解釈
-最後に、`if` ステートメントで示されているように、@"microsoft.quantum.primitive.m" を使用して測定を実行し、必要なゲート操作を実行して目的の状態を取得します。
+最後に、`if` ステートメントで示されているように、@"microsoft.quantum.intrinsic.m" を使用して測定を実行し、必要なゲート操作を実行して目的の状態を取得します。
 
 ```qsharp
         // Measure out the entanglement

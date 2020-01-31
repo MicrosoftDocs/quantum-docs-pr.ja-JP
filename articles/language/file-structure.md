@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 40b2e7ddf5def6285250dffe130b152429dce1f8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185190"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821084"
 ---
 # <a name="file-structure"></a>ファイル構造
 
@@ -84,13 +84,13 @@ newtype PairOfInts = (Int, Int);
 
 操作名は名前空間内で一意である必要があり、型および関数名と競合しない可能性があります。
 
-操作の宣言は、キーワード `operation`、その後に操作の名前であるシンボル、操作の引数を定義する型指定された識別子のタプル、コロン `:`、操作の結果の型を記述する型の注釈で構成されます。必要に応じて、操作特性、左中かっこ `{`、操作宣言の本体、および最後の右中かっこ `}`を含む注釈。
+操作の宣言は、キーワード `operation`、その後に操作の名前であるシンボル、操作の引数を定義する型指定された識別子のタプル、コロン `:`、操作の結果の型を記述する型の注釈、オプションで、操作の特性、始めかっこ `{`、操作宣言の本体、および最後の右中かっこ `}`で構成されます。
 
 操作宣言の本体は、既定の実装または特殊化のリストのいずれかで構成されます。
 既定の本体の特殊化の実装のみを明示的に指定する必要がある場合は、既定の実装を宣言内で直接指定できます。
 この場合、宣言の操作特性を持つ注釈を使用すると、コンパイラが既定の実装に基づいて他の特殊化を自動生成するのに役立ちます。 
 
-たとえば、次のように入力します。 
+次に例を示します。 
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -138,7 +138,7 @@ is Ctl + Adj {
 }
 ```
 
-上の例では、`adjoint invert;` は、本体の実装を反転することによって adjoint の特殊化が生成されることを示し、`controlled adjoint invert;` は、の指定された実装を反転することによって、制御された adjoint 特殊化が生成されることを示します。制御された特殊化。
+上の例では、`adjoint invert;` は、本体の実装を反転することによって adjoint の特殊化が生成されることを示し、`controlled adjoint invert;` は、制御された特殊化の実装を反転することによって、制御された adjoint 特殊化が生成されることを示します。
 
 `Adjoint` または `Controlled` ファンクタのアプリケーションをサポートする操作の場合、その戻り値の型を必ず `Unit`する必要があります。 
 
@@ -187,12 +187,12 @@ Q # 操作には、次の明示的特殊化宣言を含めることができま�
 既定の本体以外の1つ以上の特殊化を明示的に宣言する必要がある場合は、既定の本体の実装を適切な特殊化宣言にもラップする必要があります。
 
 ```qsharp
-operation CountOnes(qs: Qubit[]) : Int {
+operation CountOnes(qubits: Qubit[]) : Int {
 
     body (...) // default body specialization
     {
         mutable n = 0;
-        for (q in qs) {
+        for (qubit in qubits) {
             set n += M(q) == One ? 1 | 0;
         }
         return n;
@@ -208,7 +208,7 @@ Adjoint なしで操作を指定することはできます。たとえば、測
 操作は、宣言に adjoint 特殊化の暗黙的または明示的な宣言が含まれている場合、`Adjoint` のファンクタをサポートします。
 明示的に宣言された制御済み adjoint 特殊化は、adjoint の特殊化が存在することを意味します。 
 
-操作の場合、本文に繰り返しループのループ、set ステートメント、測定、return ステートメント、または `Adjoint` ファンクタをサポートしていないその他の操作への呼び出しが含まれています。この場合、`invert` に続く adjoint 特殊化が自動生成され `auto` ディレクティブは使用できません。
+操作に対して、繰り返しのループ、set ステートメント、測定、return ステートメント、または `Adjoint` ファンクタをサポートしていないその他の操作への呼び出しが含まれている操作の場合、`invert` または `auto` ディレクティブの後に adjoint の特殊化を自動生成することはできません。
 
 ### <a name="controlled"></a>た
 
@@ -236,7 +236,7 @@ Adjoint なしで操作を指定することはできます。たとえば、測
 操作の宣言は、次のように単純なものにすることができます。これにより、プリミティブな P# li X 操作が定義されます。
 
 ```qsharp
-operation X (q : Qubit) : Unit
+operation X (qubit : Qubit) : Unit
 is Adj + Ctl {
     body intrinsic;
     adjoint self;
@@ -282,7 +282,7 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
 関数は、Q # の純粋な古典ルーチンです。
 各 Q # ソースファイルでは、任意の数の関数を定義できます。
 
-関数宣言は、キーワード `function`、その後に関数の名前、型指定された識別子の組、関数の戻り値の型を記述する型の注釈、およびの実装を記述するステートメントブロックで構成されます。プロシージャ.
+関数宣言は、キーワード `function`、その後に関数の名前、型指定された識別子の組、関数の戻り値の型を記述する型の注釈、および関数の実装を記述するステートメントブロックで構成されます。
 
 関数を定義するステートメントブロックは `{` で囲み、他のステートメントブロックと同様に `}` する必要があります。
 

@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 591e306b3001934bd81342a533e3f6ca25129781
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 960fda3dade7648f9cd24496c3a49fd11d6f807a
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184986"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820863"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>ResourcesEstimator ターゲットコンピューター
 
@@ -97,37 +97,37 @@ namespace Quantum.MyProgram
 * __Qubitclifford__: 実行された1つの Qubit clifフォードおよび P# li ゲートの数。
 * __Measure__: 実行された測定値の数。
 * __R__: 実行された1つの qubit ローテーション (T、Clifford、および P# li を除く) の数。
-* __T__: t ゲート、T_x = .H、T_y = hy、実行された t ゲート、および = hy. t .h を含む、t ゲートとその数。
+* __T__: t ゲート、T_x = .h、T_y = hy. t .h を含む t ゲートとその活用の数が実行されました。
 * __Depth__: Q # 操作によって実行されるクォンタム回線の深さ。 既定では、T ゲートのみが深さでカウントされます。詳細については、「[深度カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) 」を参照してください。
 * __Width__: Q # 操作の実行中に割り当てられた qubits の最大数。
 * __BorrowedWidth__: Q # 操作内で借用される qubits の最大数。
 
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a>測定結果の確率を提供する
+## <a name="providing-the-probability-of-measurement-outcomes"></a>測定結果の確率を指定する
 
-<xref:microsoft.quantum.primitive> 名前空間の <xref:microsoft.quantum.primitive.assertprob> を使用すると、Q # プログラムの実行を促進するために、測定の予想される確率に関する情報を提供できます。 次の例を使って説明します。
+<xref:microsoft.quantum.intrinsic> 名前空間の <xref:microsoft.quantum.intrinsic.assertprob> を使用すると、Q # プログラムの実行を促進するために、測定の予想される確率に関する情報を提供できます。 次の例を使って説明します。
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
+operation Teleport(source : Qubit, target : Qubit) : Unit {
 
-    using (ancilla = Qubit()) {
+    using (qubit = Qubit()) {
 
-        H(ancilla);
-        CNOT(ancilla, target);
+        H(q);
+        CNOT(qubit, target);
 
-        CNOT(source, ancilla);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [qubit], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(qubit) == One) { X(target); X(qubit); }
     }
 }
 ```
 
-`ResourcesEstimator` が検出されると `AssertProb` `source` の測定 `PauliZ` を記録し、`ancilla` 確率が0.5 の `Zero` の結果を指定する必要があります。 後で `M` を実行すると、結果の確率の記録された値が検出され、`M` は `Zero` または確率が0.5 の `One` を返します。
+`ResourcesEstimator` が検出されると `AssertProb` `source` の測定 `PauliZ` を記録し、`q` 確率が0.5 の `Zero` の結果を指定する必要があります。 後で `M` を実行すると、結果の確率の記録された値が検出され、`M` は `Zero` または確率が0.5 の `One` を返します。
 
 
 ## <a name="see-also"></a>関連項目

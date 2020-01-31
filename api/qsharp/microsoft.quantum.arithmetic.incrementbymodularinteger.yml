@@ -7,22 +7,27 @@ summary: >-
   整数定数によって、qubit レジスタのモジュール単位インクリメントを実行します。
 
 
-  `target` で y によってエンコードされた N と整数の `modulus` によって `increment` を示します。その後、操作は次の変換を実行します: \begin{align} \ket{y}-mapare \ket{y + 1 > \end{align} 整数はリトルエンディアン形式でエンコードされます。
-remarks: Target の値が N 未満であることを前提としています。 <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> は同じ操作を実装しますが、`PhaseLittleEndian` 単位で実装されることに注意してください。
+  $ $N `modulus` $a $、および `target` でエンコードされた整数 ($) を使用して `increment` を示します。
+
+  その後、次の変換が実行されます。 \begin{align} \ket{y} \ mapare \ket{(y + a) \ 演算子名 {mod} N} \end{align} 整数はリトルエンディアン形式でエンコードされます。
+remarks: >-
+  Target の初期値が $N $ より小さく、$ $a $ が $N $ より小さいことを前提としています。
+
+  <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> は、`PhaseLittleEndian` ベースで同じ操作を実装することに注意してください。
 syntax: 'operation IncrementByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: increment
-    summary: Y に加算されるを加算した値。
+    summary: $Y $ に加算する $ $a 整数値。
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: Y + a を mods する整数 N。
+    summary: Mods $y + a $ の整数 $N $。
     isPrimitive: true
     uid: Int
   - name: target
-    summary: '`increment` を `LittleEndian` 形式の整数 y がに追加されます。'
+    summary: $ がに追加される $a `increment` `LittleEndian` 形式の整数 $y $。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -33,11 +38,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- incrementphasebymodularinteger
+- microsoft.quantum.arithmetic.incrementphasebymodularinteger
 metadata:
-  ms.openlocfilehash: 9b61ed007a08d176d1754a7c1cd6cd2d9edce7d2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 975d4548eadbc61f8174b6719d067ffed32797dd
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219061"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871602"

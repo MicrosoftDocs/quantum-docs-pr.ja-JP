@@ -1,18 +1,19 @@
 ---
-title: 'Q # の手法-さらに進める |Microsoft Docs'
-description: 'Q # の手法-詳細'
+title: '詳細-Q # のテクニック |Microsoft Docs'
+description: '詳細-Q # の手法'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: c079364f8808304e0132fa2a4226cd6400e81339
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+uid: microsoft.quantum.techniques.going-further
+ms.openlocfilehash: bd2b799d4001e280baccb04158247891b9cbb5bc
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863148"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820200"
 ---
-# <a name="going-further"></a>追加情報 #
+# <a name="going-further"></a>さらに進める #
 
 ここでは、興味深いクォンタムプログラムを Q # で記述する方法について説明しました。このセクションでは、さらに高度なトピックをいくつか紹介します。
 

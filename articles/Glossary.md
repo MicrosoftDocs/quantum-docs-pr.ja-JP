@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: ce15fee2be68d41f0b806be50320b562a749c3b7
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 5c7f2c4a572f6194ee846f056016a25b8c5303a2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442539"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820761"
 ---
 # <a name="quantum-computing-glossary"></a>クォンタムコンピューティング用語集
 
@@ -19,7 +19,7 @@ ms.locfileid: "73442539"
 |-------------|----------|
 |Adjoint|操作の複雑な共役の転置。 ユニタリ演算子を実装する操作の場合、adjoint は演算の逆になります。|
 |呼び出し可能|操作と関数は、総称して*呼び出し*を実行できるものとして知られています。|
-|標準|準備で定義されているロジックに基づいて、Q # で定義された操作と関数。 標準ライブラリの実装は、ターゲットコンピューターに対しては依存しません。|
+|Standard|準備で定義されているロジックに基づいて、Q # で定義された操作と関数。 標準ライブラリの実装は、ターゲットコンピューターに対しては依存しません。|
 |Clifford グループ|Bloch 球の octants を占有する操作のセット。 これには、`X`、`Y`、`Z`、`H`、および `S`|
 |た|ターゲット操作のイネーブラーとして1つ以上の qubits を受け取るクォンタム操作。|
 |Dirac 表記|クォンタム状態の短縮形。 詳細については、「 [Dirac 表記](xref:microsoft.quantum.concepts.dirac)」を参照してください。|
@@ -39,10 +39,9 @@ ms.locfileid: "73442539"
 |準備|Q # レベルではなく、個々のターゲットコンピューターによって定義されたプリミティブおよび従来の操作と関数のセット。|
 |クォンタム回線|クォンタムコンピューターのプログラムの表現。 詳細については、<xref:microsoft.quantum.concepts.circuits> に関するセクションを参照してください。|
 |クォンタムの状態|システム内の qubits の表現。 これは、通常、複合列ベクターとして表されます。 詳細については、<xref:microsoft.quantum.concepts.vectors> を参照してください。 |
-|qubit|クォンタムストレージの単位。 詳細については、<xref:microsoft.quantum.concepts.qubit> に関するセクションを参照してください。|
+|Qubit|クォンタムストレージの単位。 詳細については、<xref:microsoft.quantum.concepts.qubit> に関するセクションを参照してください。|
 |繰り返し-成功まで|見込みが成功するクォンタムアルゴリズム。 エラーが発生すると、ルーチンは成功するまで (または制限に達した時点で) 再試行します。 |
-|ソフトウェアスタック|全古典および quantum ソフトウェアの完全なセットに加えて、quantum コンピューターを運用するために必要なコンパイラ、シミュレーター、およびランタイムがあります。 詳細については、<xref:microsoft.quantum.concepts.software-stack> に関するセクションを参照してください。 |
 |ターゲットコンピューター|ハードウェアまたはシミュレーションの抽象的なクォンタムプログラムを下げるコンパイルターゲット。 これには通常、ゲートの置換、エラー修正のためのエンコード、ジオメトリレイアウトなど、さまざまな目的のための再書き込みが含まれます。|
-|タプル|コンマで区切られた型は、かっこを使用してグループ化されます。 |
+|Tuple|コンマで区切られた型は、かっこを使用してグループ化されます。 |
 |ユーザー定義型|1つの単位として参照される組み込みまたは以前に定義された型のコレクション。|
 

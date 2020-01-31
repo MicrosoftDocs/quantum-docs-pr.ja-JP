@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: ef22460a5bca63ebaf32c0ba21984e103ec8ebdd
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864391"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868970"
 ---
 # <a name="applications"></a>アプリケーション #
 
@@ -69,15 +69,16 @@ newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[])
 
 ```qsharp
 function TrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : SimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: SimulationAlgorithm {
     ...
 }
+
 function TimeDependentTrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : TimeDependentSimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: TimeDependentSimulationAlgorithm {
     ...
 }
 ```
@@ -99,11 +100,11 @@ Hamiltonian シミュレーションの1つの一般的なアプリケーショ�
 
 ```qsharp
 function InterpolatedEvolution(
-        interpolationTime: Double, 
-        evolutionGeneratorStart: EvolutionGenerator,
-        evolutionGeneratorEnd: EvolutionGenerator,
-        timeDependentSimulationAlgorithm: TimeDependentSimulationAlgorithm)
-        : (Qubit[] => Unit is Adj + Ctl) {
+        interpolationTime : Double, 
+        evolutionGeneratorStart : EvolutionGenerator,
+        evolutionGeneratorEnd : EvolutionGenerator,
+        timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm)
+: (Qubit[] => Unit is Adj + Ctl) {
         ...
 }
  
@@ -114,13 +115,13 @@ function InterpolatedEvolution(
 また、一般的な量子化学実験のすべての手順を自動的に実行する便利な操作も定義します。 たとえば、次のものがあります。これにより、adiabatic 状態の準備によって生成された状態のエネルギー見積もりが返されます。
 
 ```qsharp
-operation AdiabaticStateEnergyEstimate( 
-    nQubits : Int, 
-    statePrepUnitary: (Qubit[] => Unit),
-    adiabaticUnitary: (Qubit[] => Unit),
+operation EstimateAdiabaticStateEnergy(
+    nQubits : Int,
+    statePrepUnitary : (Qubit[] => Unit),
+    adiabaticUnitary : (Qubit[] => Unit),
     qpeUnitary: (Qubit[] => Unit is Adj + Ctl),
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
-    : Double {
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
+: Double {
 ...
 }
 ```
@@ -174,7 +175,7 @@ QFT ゲートについては[既](xref:microsoft.quantum.libraries.standard.algo
 $ (A ^ nx) \ text{mod} N $ を実現するには、制御された $U _ {a ^ N} $ を適用します。ここで、$a ^ n \ text{mod} N $ クラシックデプロイを計算して、quantum 回線に接続します。  
 このようなモジュール式を実現する回路は、「[クォンタムの算術ドキュメント](./algorithms.md#arithmetic)」で説明されています。具体的には、制御された $U\_{a ^ i} $ 操作を実装するには、モジュール式の累乗回路が必要です。
 
-上記の回線は[クォンタムフェーズ推定](xref:microsoft.quantum.characterization.quantumphaseestimation)に対応しており、順序の検索を明示的に有効にすると、必要な qubits の数を減らすことができます。 [ArXiv: quant-ph/0205095v3 のページ8で](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)説明されているように、Beauregard の方法に従うか、または Microsoft の Quantum で利用可能なフェーズの推定ルーチンのいずれかを使用します。 たとえば、[堅牢なフェーズの推定](xref:microsoft.quantum.characterization.robustphaseestimation)では、1つの追加の qubit も使用します。
+上記の回線は[クォンタムフェーズ推定](xref:microsoft.quantum.characterization.quantumphaseestimation)に対応しており、順序の検索を明示的に有効にすると、必要な qubits の数を減らすことができます。 [ArXiv: quant-ph/0205095v3 のページ8で](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)説明されているように、Beauregard の方法に従うか、または Microsoft の Quantum で利用可能なフェーズの推定ルーチンの1つを使用できます。 たとえば、[堅牢なフェーズの推定](xref:microsoft.quantum.characterization.robustphaseestimation)では、1つの追加の qubit も使用します。
  
 ### <a name="factoring"></a>取り入れる ###
 要素をファクタリングする目的は、$ $N 整数の2つの素要因を決定することです。 $ は、$ ビットの $n で $N $ です。  

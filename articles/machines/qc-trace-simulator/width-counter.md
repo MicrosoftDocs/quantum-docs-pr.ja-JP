@@ -6,23 +6,22 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: ae0c0ec2e677be03dc8dc1497dc62ad9034295a4
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 9c3601e74eec17bd6b463e90f8f3085c959d6f95
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442412"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820370"
 ---
 # <a name="width-counter"></a>幅カウンター
 
 `Width Counter` は、各操作によって割り当てられて借用される qubits の数をカウントします。
-`Microsoft.Quantum.Primitive` 名前空間のすべての操作は、単一の qubit 回転、T ゲート、単一の qubit Clifford ゲート、CNOT ゲート、およびマルチ qubit Pobservable Li の測定値で表現されます。 一部のプリミティブ操作では、追加の qubits を割り当てることができます。 たとえば、制御された `X` ゲートまたは制御された `T` ゲートを乗算します。 制御された複数の `X` ゲートの実装によって割り当てられた追加の qubits を計算してみましょう。
+`Microsoft.Quantum.Intrinsic` 名前空間のすべての操作は、単一の qubit 回転、T ゲート、単一の qubit Clifford ゲート、CNOT ゲート、およびマルチ qubit Pobservable Li の測定値で表現されます。 一部のプリミティブ操作では、追加の qubits を割り当てることができます。 たとえば、制御された `X` ゲートまたは制御された `T` ゲートを乗算します。 制御された複数の `X` ゲートの実装によって割り当てられた追加の qubits を計算してみましょう。
 
 ```qsharp
-open Microsoft.Quantum.Primitive;
+open Microsoft.Quantum.Intrinsic;
 open Microsoft.Quantum.Arrays;
-operation MultiControlledXDriver( numberOfQubits : Int ) : Unit {
-
+operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
     using(qubits = Qubit[numberOfQubits]) {
         Controlled X (Rest(qubits), Head(qubits));
     } 
@@ -38,20 +37,20 @@ var config = new QCTraceSimulatorConfiguration();
 config.useWidthCounter = true;
 var sim = new QCTraceSimulator(config);
 int totalNumberOfQubits = 5;
-var res = MultiControlledXDriver.Run(sim, totalNumberOfQubits).Result;
+var res = ApplyMultiControlledX.Run(sim, totalNumberOfQubits).Result;
 
 double allocatedQubits = 
-    sim.GetMetric<Primitive.X, MultiControlledXDriver>(
+    sim.GetMetric<Primitive.X, ApplyMultiControlledX>(
         WidthCounter.Metrics.ExtraWidth,
         functor: OperationFunctor.Controlled); 
 
 double inputWidth =
-    sim.GetMetric<Primitive.X, MultiControlledXDriver>(
+    sim.GetMetric<Primitive.X, ApplyMultiControlledX>(
         WidthCounter.Metrics.InputWidth,
         functor: OperationFunctor.Controlled);
 ```
 
-プログラムの最初の部分は `MultiControlledXDriver`を実行します。 2番目の部分では、メソッド `QCTraceSimulator.GetMetric` を使用して、割り当てられた qubits の数と、制御 `X` が入力として受け取った qubits の数を取得します。 
+プログラムの最初の部分は `ApplyMultiControlledX`を実行します。 2番目の部分では、メソッド `QCTraceSimulator.GetMetric` を使用して、割り当てられた qubits の数と、制御 `X` が入力として受け取った qubits の数を取得します。 
 
 最後に、width カウンターによって収集されたすべての統計を CSV 形式で出力するには、次のようにします。
 ```csharp
