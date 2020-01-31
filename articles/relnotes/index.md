@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863165"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871619"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -20,6 +20,19 @@ ms.locfileid: "74863165"
 インストール手順については、[インストール ガイド](xref:microsoft.quantum.install)を参照してください。
 
 更新手順については、[更新ガイド](xref:microsoft.quantum.update)を参照してください。
+
+## <a name="version-01020012831"></a>バージョン 0.10.2001.2831
+
+*リリース日:2020 年 1 月 29 日*
+
+このリリースには、次のものが含まれています。
+
+- 新しい Microsoft.Quantum.SDK NuGet パッケージの詳細については、[README](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md) を参照してください。
+- .NET Core 3.1 のサポートが追加されました。古い .NET Core SDK バージョンでビルドすると、問題が発生する可能性があるため、バージョン 3.1.100 をインストールすることを強くお勧めします。
+- Microsoft.Quantum.QsCompiler.Experimental 下で新しいコンパイラ変換を使用できます
+- IQ# で HTML として出力状態ベクターを公開する新しい機能
+- Hadamard および SWAP テスト用の EstimateFrequencyA から Microsoft.Quantum.Characterization のサポートを追加しました
+- AmplitudeAmplification 名前空間で Q# スタイル ガイドが使用されるようになりました
 
 ## <a name="version-01019120501"></a>バージョン 0.10.1912.0501
 
@@ -351,7 +364,7 @@ Rohit Gupta ([@guptarohit](https://github.com/guptarohit)、[PR #90](https://git
 
 *リリース日:2018 年 6 月 22 日*
 
-このリリースには、改善されたデバッグ エクスペリエンスとパフォーマンスだけでなく、いくつかのコミュニティへの投稿が含まれています。  具体的には次の処理が行われます。
+このリリースには、改善されたデバッグ エクスペリエンスとパフォーマンスだけでなく、いくつかのコミュニティへの投稿が含まれています。  具体的な内容は次のとおりです。
 
 * QuantumSimulator ターゲット コンピューターの小規模のシミュレーションと大規模のシミュレーションの両方のパフォーマンスの向上。
 * デバッグ機能の改善。
@@ -433,7 +446,7 @@ dotnet clean
 
 *リリース日:2018 年 2 月 26 日*
 
-このリリースでは、より多くのプラットフォームでの開発、言語の相互運用性、およびパフォーマンスの強化がサポートされています。 具体的には次の処理が行われます。
+このリリースでは、より多くのプラットフォームでの開発、言語の相互運用性、およびパフォーマンスの強化がサポートされています。 具体的な内容は次のとおりです。
 
 - macOS および Linux ベースの開発のサポート。 
 - .NET Core との互換性。これには、プラットフォーム間での Visual Studio Code のサポートが含まれます。

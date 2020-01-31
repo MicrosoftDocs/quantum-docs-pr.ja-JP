@@ -2,7 +2,7 @@
   href: index.yml
 - name: 概要
   items:
-    - name: 作業開始
+    - name: はじめに
       href: welcome.md
     - name: 量子コンピューティングに関する 5 つの質問
       items:
@@ -18,7 +18,7 @@
           href: overview/how-to-learn-quantum-computing.md
     - name: Quantum Katas による学習
       href: intro-to-katas.md
-- name: クイック スタート
+- name: クイックスタート
   items:
     - name: 量子乱数ジェネレーター
       href: quickstarts/qrng.md
@@ -26,10 +26,18 @@
       href: quickstart.md
     - name: グローバーの検索アルゴリズムを実装する
       href: quickstarts/search.md
-- name: ハウツー ガイド
+- name: 操作方法ガイド
   items:
     - name: QDK をインストールする
-      href: install-guide/index.md
+      items:
+        - name: インストールの概要
+          href: install-guide/index.md
+        - name: 'Q# + C#'
+          href: install-guide/csinstall.md
+        - name: 'Q# + Python'
+          href: install-guide/pyinstall.md
+        - name: 'Q# Jupyter ノートブック'
+          href: install-guide/qjupyter.md
     - name: QDK を更新する
       href: install-guide/update.md
     - name: 'Q# プロジェクトを作成する'
@@ -58,7 +66,7 @@
       topicHref: contributing/index.md
     - name: 用語集
       href: Glossary.md
-    - name: BLOB の詳細
+    - name: 詳細情報
       href: for-more-info.md
     - name: ライセンス
       href: license.md

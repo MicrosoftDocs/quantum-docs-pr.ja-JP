@@ -1,24 +1,25 @@
 ---
-title: Quantum 開発手法の概要 |Microsoft Docs
-description: クォンタム開発手法の概要
+title: 'Q # プログラムの概要-Q # テクニック |Microsoft Docs'
+description: 'Q # プログラムの概要-Q # の手法'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 702d23293a1c340ddd3d7032d0e05294345469b2
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+uid: microsoft.quantum.techniques.file-structure
+ms.openlocfilehash: e8f52e6b0d4382331665a8e845ef19a3a1beabf9
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442569"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820829"
 ---
-# <a name="q-program-overview"></a>Q # プログラムの概要
+# <a name="q-program-overview"></a>Q# プログラムの概要
 
 Q # は、クォンタムコンピューティング用のスケーラブルでマルチパラダイムのドメイン固有のプログラミング言語です。 Q # は、クォンタムコンピューターで命令を実行する方法を説明するために使用できるクォンタムプログラミング言語です。 対象となる可能性のあるマシンは、シミュレーターから実際の量子ハードウェアまで多岐に適用されます。 Q # はスケーラブルです。これを使用すると、いくつかの qubits で実行されるテレポートなどの単純なデモンストレーションプログラムを作成できます。また、数百万の qubits を持つ大規模なコンピューターを必要とする複雑な分子のシミュレーションなど、大規模な高度なプログラムの作成もサポートされます。 大規模な物理マシンが今後も使用されている場合でも、Q # ではプログラマが複雑なクォンタムアルゴリズムをプログラミングできます。 さらに、Q # は、デバッグ、プロファイリング、リソースの推定、特定の特別な目的のシミュレーションなどのさまざまなタスクをスケーラブルな方法でサポートしています。 
 
 技術的な観点からは、クォンタムプログラムは特定の一連のクラシック関数として認識されます。これを呼び出すと、その副作用としてクォンタム回線が生成されます。 このビューの重要な結果として、Q # で記述されたプログラムは、qubits 自体を直接モデル化するのではなく、従来のコントロールコンピューターがその qubits とどのようにやり取りするかを説明します。
 仕様により、Q # はクォンタムの状態やその他の量子機構のプロパティを直接定義するのではなく、言語で定義されたさまざまなサブルーチンのアクションを通じて間接的に実行します。
-たとえば、「[クォンタムコンピューティングの概念](xref:microsoft.quantum.concepts.intro)」ガイドで説明されているように、"$ \ket{+} = \ left (\ket{0} + \ket{1}]/\ sqrt{2}$" という状態を検討してください。
+たとえば、「[クォンタムコンピューティングの概念](xref:microsoft.quantum.concepts.intro)」ガイドで説明されているように、"$ \ket{+} = \ left (\ket{0} + \ket{1})/\ sqrt{2}$" という状態を検討してください。
 この状態を Q # で準備するには、qubits が $ \ket{0}$ state で初期化され、$ \ket{+} = H\ket{0}$ というファクトを使用します。ここで、$H $ は Hadamard transform です。
 
 ```qsharp
