@@ -1,21 +1,21 @@
 ### YamlMime:Landing
-title: Microsoft Quantum ドキュメント
-summary: Microsoft Quantum Developer Kit と、量子アルゴリズム用の言語である Q# を使用する方法について説明します。 主要な概念を学び、最初の量子プログラムを記述します。
+title: Microsoft Quantum 開発キット
+summary: Microsoft Quantum 開発キットと、量子アルゴリズム プログラミング用の言語である Q# を使用する方法について説明します。
 metadata:
-  title: Microsoft Quantum ドキュメント - Q# API リファレンス
-  description: Microsoft Quantum Developer Kit と、量子プログラミング用の言語である Q# を使用する方法について説明します。 主要な概念を学び、最初の量子プログラムを記述します。  QDK の豊富なツールとライブラリの詳細を確認します。
+  title: Microsoft Quantum 開発キット - Q# API リファレンス
+  description: Microsoft Quantum 開発キットと、量子アルゴリズム プログラミング用の言語である Q# を使用する方法について説明します。 主要な概念を学び、最初の量子プログラムを記述します。  QDK の豊富なツールとライブラリの詳細を確認します。
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 10/21/2019
-  ms.openlocfilehash: f757c99b1f5b1a821c9c341c442e1080378949a8
-  ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+  ms.openlocfilehash: 53ee7b0a1ba7a83fb943f18afd27b5c699f848b2
+  ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/02/2019
-  ms.locfileid: "73442506"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76820727"
 landingContent:
 - title: Microsoft Quantum の概要
   linkLists:
@@ -44,9 +44,9 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Python のインストール
-      url: install-guide/index.md#develop-with-python
+      url: install-guide/pyinstall.md
     - text: Jupyter のインストール
-      url: install-guide/index.md#develop-with-jupyter-notebooks
+      url: install-guide/qjupyter.md
   - linkListType: how-to-guide
     links:
     - text: Python を使用した Q# サンプル
@@ -60,9 +60,9 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Visual Studio のインストール
-      url: install-guide/index.md#develop-with-c-on-windows-using-visual-studio
+      url: install-guide/csinstall.md
     - text: Visual Studio Code のインストール
-      url: install-guide/index.md#develop-with-c-using-visual-studio-code
+      url: install-guide/csinstall.md
 - title: Q# サンプル
   linkLists:
   - linkListType: how-to-guide
