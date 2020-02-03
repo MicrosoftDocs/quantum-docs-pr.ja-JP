@@ -6,12 +6,12 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 75028a1dc29abe5fbea2e789d896563f3d6331c9
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: c1fd578fdb3d56a7b48972e6ccc9b1605047fe36
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443938"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820353"
 ---
 # <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>クイック スタート:Q# でグローバーの検索アルゴリズムを実装する
 
@@ -43,11 +43,11 @@ ms.locfileid: "73443938"
 
 1. 新しいプロジェクトで次のコードを `Operations.qs` ファイルに追加します。
 
-    [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs?highlight=5,27)]
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-23" highlight="5,27":::
 
 1. 検索するリストを定義するために、新しいファイル `Reflections.qs` を作成し、次のコードに貼り付けます。
 
-    [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/Reflections.qs)]
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/Reflections.qs" range="4-70":::
 
     `ReflectAboutMarked` 操作では、検索対象としてマークが付けられた入力を定義します。これは、0 と 1 の交互の文字列です。 このサンプルにより、マークされた入力はハードコードされます。サンプルは他の入力を検索するために拡張したり、任意の入力用に一般化したりできます。
 
@@ -57,7 +57,7 @@ ms.locfileid: "73443938"
 
     Python から新しい Q# プログラムを実行するには、次のコードを `host.py` として保存します。
 
-    [!code-python[](~/quantum/samples/algorithms/simple-grover/host.py)]
+    :::code language="python" source="~/quantum/samples/algorithms/simple-grover/host.py" range="9-14":::
 
     次に、コマンド ラインから Python ホスト プログラムを実行できます。
 
@@ -75,7 +75,7 @@ ms.locfileid: "73443938"
 
     C# から新しい Q# プログラムを実行するには、次の C# コードを含めるように `Driver.cs` を変更します。
 
-    [!code-csharp[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
 
     次に、コマンド ラインから C# ホスト プログラムを実行できます。
 
@@ -94,7 +94,7 @@ ms.locfileid: "73443938"
 
     Visual Studio で C# から新しい Q# プログラムを実行するには、次の C# コードを含めるように `Driver.cs` を変更します。
 
-    [!code-csharp[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
 
     F5 キーを押すと、プログラムは実行を開始し、新しいポップアップ ウィンドウに次の結果が表示されます。 
 
@@ -112,7 +112,7 @@ ms.locfileid: "73443938"
 
     `ReflectAboutMarked` 操作は 4 回だけ呼び出され、Q# プログラムにより $2^{5} = 32$ の入力で "01010" の入力を見つけることができました。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 クイックスタートをお読みいただきありがとうございます。Q# を使用して独自の量子アプリケーションを記述する方法の詳細について、次のリソースもご覧ください。
 
