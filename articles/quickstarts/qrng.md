@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: c3039b92c4b3235a397d5cf31280ac2673706e9d
-ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
+ms.openlocfilehash: 134617455b720cc755b9ee9fb68fb59e624d3f1a
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73462843"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820924"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>クイック スタート:Q# で量子乱数ジェネレーターを実装する
 Q# で記述された量子アルゴリズムの単純な例が量子乱数ジェネレーターです。 このアルゴリズムでは、量子力学の性質を活用し、乱数を生成します。 
@@ -33,10 +33,10 @@ Q# で記述された量子アルゴリズムの単純な例が量子乱数ジ�
         open Microsoft.Quantum.Intrinsic;
 
         operation QuantumRandomNumberGenerator() : Result {
-            using(q = Qubit())  { // Allocate a qubit.
-                H(q);             // Put the qubit to superposition. It now has a 50% chance of being 0 or 1.
-                let r = M(q);     // Measure the qubit value.
-                Reset(q);
+            using(qubit = Qubit())  { // Allocate a qubit.
+                H(qubit);             // Put the qubit to superposition. It now has a 50% chance of being 0 or 1.
+                let r = M(v);     // Measure the qubit value.
+                Reset(qubit);
                 return r;
             }
         }
@@ -55,18 +55,61 @@ Q# で記述された量子アルゴリズムの単純な例が量子乱数ジ�
 
 ### <a name="visualizing-the-code-with-the-bloch-sphere"></a>ブロッホ球でコードを視覚化する
 
-ブロッホ球では、北極は古典的理論値 **0** を表わし、南極は古典的理論値 **1** を表わします。 重ね合わせは球上の点で表わすことができます (矢印で表わされています)。 矢印の端が極に近づけば近づくほど、測定時、その極に割り当てられる古典的理論値にキュービットがなる確率が高くなります。 たとえば、下の赤い矢印で表わされているキュービットの状態では、測定したとき、値 **0** が与えられる可能性が高くなります。
+ブロッホ球では、北極は古典的な値 **0** を表し、南極は古典的な値 **1** を表します。 重ね合わせは球上の点で表わすことができます (矢印で表わされています)。 矢印の端が極に近づけば近づくほど、測定時、その極に割り当てられる古典的な値にキュービットがなる確率が高くなります。 たとえば、下の赤い矢印で表わされているキュービットの状態では、測定したとき、値 **0** が与えられる可能性が高くなります。
 
-<img src="./Bloch.svg" width="175">
+<img src="~/media/qrng-Bloch.png" width="175">
 
 この表現を利用し、コードの動作を視覚化できます。
 
 * まず、状態 **0** で初期化されたキュービットから始め、`H` を適用し、**0** と **1** の確率が同じになる重ね合わせを作成します。
 
-<img src="./H.svg" width="450">
+<img src="~/media/qrng-H.png" width="450">
 
 * 次に、キュービットを測定し、出力を保存します。
 
-<img src="./Measurement2.svg" width="450">
+<img src="~/media/qrng-meas.png" width="450">
 
 測定の結果は完全にランダムになるため、ランダム ビットが 1 つ取得されました。 この操作を複数回呼び出し、整数を作成できます。 たとえば、操作を 3 回呼び出してランダム ビットを 3 つ取得する場合、ランダムの 3 ビット数 (つまり、0 から 7 までの乱数) を構築できます。
+
+## <a name="creating-a-complete-random-number-generator-using-a-host-program"></a>ホスト プログラムを使用した完全な乱数ジェネレーターを作成する
+
+ランダム ビットを生成する Q # 操作ができたので、それを使用して、ホスト プログラムを使用した完全な量子乱数ジェネレーターを作成できます。
+
+ ### <a name="python-with-visual-studio-code-or-the-command-linetabtabid-python"></a>[Visual Studio Code またはコマンド ラインを使用した Python](#tab/tabid-python)
+ 
+ Python から新しい Q# プログラムを実行するには、次のコードを `host.py` として保存します。
+ 
+:::code language="python" source="~/quantum/samples/getting-started/qrng/host.py" range="11-30":::
+
+ 次に、コマンド ラインから Python ホスト プログラムを実行できます。
+ ```bash
+ $ python host.py
+ Preparing Q# environment...
+ ..The random number generated is 42
+ ```
+ ### <a name="c-with-visual-studio-code-or-the-command-linetabtabid-csharp"></a>[Visual Studio Code またはコマンド ラインを使用した C#](#tab/tabid-csharp)
+ 
+ C# から新しい Q# プログラムを実行するには、次の C# コードを含めるように `Driver.cs` を変更します。
+ 
+ :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
+ 
+ 次に、コマンド ラインから C# ホスト プログラムを実行できます。
+ 
+ ```bash
+ $ dotnet run
+ The random number generated is 42
+ ```
+
+ ### <a name="c-with-visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019 を使用した C#](#tab/tabid-vs2019)
+
+ Visual Studio で C# から新しい Q# プログラムを実行するには、次の C# コードを含めるように `Driver.cs` を変更します。
+
+ :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
+
+ その後、F5 キーを押すと、プログラムは実行を開始し、乱数が生成されている新しいウィンドウがポップアップ表示されます。 
+
+ ```bash
+ $ dotnet run
+ The random number generated is 42
+ ```
+ ***

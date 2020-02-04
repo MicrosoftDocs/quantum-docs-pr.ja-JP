@@ -6,16 +6,18 @@ author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
-ms.openlocfilehash: 8fb3b7181632bd6f2b562735546adbf4b461a1b6
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: 4308bf7e0e48e5735419fab836e479641455e9a5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73530015"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819929"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Quantum Development Kit (QDK) の概要
 
-Microsoft Quantum Development Kit にようこそ。  ここでは、Q# を使用した量子プログラミングについて学習するために必要なすべてのツールを紹介します。  Q# を使用して量子コンピューティングを学習する方法を説明するために、ファースト ステップ ガイドを提供します。このガイドは、量子プログラムのコーディングを開始したい方と、まだコーディングを始める準備はできていないものの Q# や量子プログラミングについて学びたい方の両方を対象としています。
+Microsoft Quantum Development Kit にようこそ。  ここでは、Q# を使用した量子プログラミングについて学習するために必要なすべてのツールを紹介します。  Q# を使用して量子コンピューティングを学習する方法を説明するために、このファースト ステップ ガイドを提供します。このガイドは、量子プログラムのコーディングを始めたい方や、まだコーディングを始める準備はできていないものの Q# や量子プログラミングについて学びたい方を対象としています。 
+
+コーディングを開始する準備ができたら、[今すぐ QDK をインストール](xref:microsoft.quantum.install)してください。
 
 ## <a name="questions-about-quantum-computing"></a>量子コンピューティングに関する質問
 
@@ -43,7 +45,7 @@ Q# と Quantum Development Kit には、コンピューティングにおいて�
 
 * Q# ライブラリを使用して量子プログラムをビルドする方法の詳細については、[ビデオ](https://www.microsoft.com/videoplayer/embed/RE2JOJf) をご覧ください。  QDK には、これらのソリューションの開発に役立つ強力なコンピューティングの抽象化を提供する Q# 標準ライブラリおよび数値ライブラリが付属しています。 また、量子化学ライブラリも用意されています。これは、量子レベルで化学プロセスをモデリングするための Q# ライブラリです。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これらのファースト ステップ ガイドと記事は、プログラマと非プログラマの両方に量子コンピューティングと Q# の概要を説明するためのものです。  Q# を使った量子コンピューター プログラミングの今後の学習方法について説明します。
 
@@ -54,9 +56,8 @@ Q# と Quantum Development Kit には、コンピューティングにおいて�
 * [Q# のサンプル](https://docs.microsoft.com/samples/browse/?languages=qsharp)を参照して、量子コンピューティングで解決できる問題を見つけます。
 
 * 任意のホスト プログラミング言語と開発環境を使用して、ローカル コンピューターで開発します。
-  * [Python](xref:microsoft.quantum.install#develop-with-python) を使用した開発
-  * [Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio) を使用した開発
-  * [Visual Studio Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code) を使用した開発
-  * [Jupyter Notebook](xref:microsoft.quantum.install#develop-with-jupyter-notebooks) を使用した開発
+  * [Q# と Python](xref:microsoft.quantum.install.python) を使用した開発
+  * [Q# と C#](xref:microsoft.quantum.install.cs) を使用した開発
+  * [Q# 用の Jupyter Notebook](xref:microsoft.quantum.install.jupyter) を使用した開発
 
 * [QDK](xref:microsoft.quantum.contributing) オープンソース プロジェクトに貢献して、Microsoft Quantum コミュニティに参加します。
