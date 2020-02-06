@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 9a6f5d53ec21090d0c13f4369e0270d264cd1e9b
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821067"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036493"
 ---
 # <a name="statements-and-other-constructs"></a>ステートメントとその他の構成体
 
@@ -29,7 +29,7 @@ Q # ソースファイル内の任意の場所にコメントが表示される�
 Markdown の拡張機能として、Q # の操作、関数、ユーザー定義型への相互参照は、`@"<ref target>"`を使用して含めることができます。 `<ref target>` は参照されるコードオブジェクトの完全修飾名に置き換えられます。
 必要に応じて、ドキュメントエンジンで追加の Markdown 拡張機能をサポートすることもできます。
 
-例えば次が挙げられます。
+例 :
 
 ```qsharp
 /// # Summary
@@ -191,7 +191,7 @@ for (qubit in qubits) {
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
+function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -273,7 +273,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-および
+and
 
 ```qsharp
 if (a == b) {
@@ -433,7 +433,7 @@ if (result == One) {
 } 
 ```
 
-または
+or
 
 ```qsharp
 if (i == 1) {
@@ -463,13 +463,13 @@ Return ステートメントは、操作または関数の実行を終了し、�
 return 1;
 ```
 
-または
+or
 
 ```qsharp
 return ();
 ```
 
-または
+or
 
 ```qsharp
 return (results, qubits);
@@ -490,7 +490,7 @@ Fail ステートメントは、操作の実行を終了し、呼び出し元に
 fail $"Impossible state reached";
 ```
 
-または
+or
 
 ```qsharp
 fail $"Syndrome {syn} is incorrect";

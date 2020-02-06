@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870351"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036255"
 ---
 # <a name="quantum-characterization-and-statistics"></a>クォンタムの特性と統計 #
 
@@ -88,7 +88,7 @@ $X = \ket{+} \ ロウ {+}-\ket{-}\bra{-}$ であることに注意してくだ�
 
 反復フェーズの推定確率関数からの `Result` を観察した後、Bayes のルールを使用して、その観測に従っていると判断する必要があることを規定することができます。
 具体的に、\ begin{\frac{\Pr} \ pr (-phi | d) = (d | \ phi) \ pr (\ phi)} {\ int \ pr (d | \ phi) \ pr (& phi) {\mathrm d} \phi}/pr (¥ phi)、\ end{\texttt{Zero}, \texttt{One}\\} $ の $d \ は `Result`で、$ \ Pr (& phi) $ は、前の信条についてのについて説明します。 \\
-これにより、反復フェーズ推定の反復的な性質が明示的になります。事後 distribution $ \ Pr (-phi | d) $ は、次の `Result`の監視の直前にある信条について説明します。
+これにより、反復的なフェーズ推定の反復的な性質が明示的になります。これは、事後 distribution $ \ Pr (& phi | d) $ が、次の `Result`の監視の直前に信条を説明するためです。
 
 この手順のどの時点でも、クラシックコントローラーによって推論されたフェーズ $ \hat{\phi} $ を、\hat{\phi} \mathrel{として報告できます。 =} \ 期待 [\ phi | \ text{data}] = \ int \ phi \ Pr (\ phi | \ text{data}) {\mathrm d}/phi, \ end{の場合、$ \ text{data} $ は取得されたすべての `Result` 値のレコード全体を表します。
 
@@ -119,7 +119,7 @@ $X = \ket{+} \ ロウ {+}-\ket{-}\bra{-}$ であることに注意してくだ�
 これは、不連続の場合よりも弱いステートメントです。固定の $ \ デルタ t $ に対して $t = m\,を制限して、<xref:microsoft.quantum.oracles.discreteoracle> を作成できるためです。
 $U (t) = \ exp (i H t) $ in a operator $H $ ($ \ exp $[は、](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups) [「高度なマトリックス](xref:microsoft.quantum.concepts.matrix-advanced)」で説明されているマトリックス指数)。
 $H $ の eigenstate $ \ket{\phi} $ ($H \ket{\phi} = \ phi \ket{\phi} $ は、すべて $t $, \ begin{\ket{\phi}.} U (t) \ket{\phi} = e ^ {i \ phi t} に対して $U (t) $ という eigenstate も使用されます。
-& # {2}
+& #
 
 [ベイジアンフェーズの推定](#bayesian-phase-estimation)について説明したのとまったく同じ分析を適用できます。また、尤度関数は、このより一般的な oracle モデルとまったく同じです。 $ $ \ Pr (\texttt{Zero} | \ phi; t,-シータ) = \ cos ^ 2 \ left (\frac{t [\ phi-\ シータ]}{2})。
 さらに、$ $ $U $ は、 [Hamiltonian シミュレーション](xref:microsoft.quantum.libraries.applications#hamiltonian-simulation)の場合と同様に、$/phi $ をエネルギーとして解釈します。

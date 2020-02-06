@@ -6,12 +6,12 @@ ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: fd43c783fa82c7219e143a57759919606fdd197f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: de13d1814821c612ed74a347dc8ffb5881063576
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184204"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036476"
 ---
 # <a name="chemistry-library-installation-and-validation"></a>化学ライブラリのインストールと検証
 
@@ -51,18 +51,18 @@ Install-Package Microsoft.Quantum.Chemistry
 
 **コマンドラインまたは Visual Studio Code:** コマンドラインを単独で、または Visual Studio Code 内から使用する場合は、`dotnet` コマンドを使用して NuGet パッケージ参照をプロジェクトに追加できます。
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.Quantum.Chemistry
 ```
 
 ## <a name="verifying-your-installation"></a>インストールの確認 
 
 Quantum 開発キットの残りの部分と同様に、量子化学ライブラリには、すぐに起動して実行するのに役立つ、完全にドキュメント化されたサンプルがいくつか付属しています。
-これらのサンプルを使用してインストールをテストするには、[メインサンプルリポジトリ](https://github.com/Microsoft/Quantum)を複製し、サンプルのいずれかを実行します。  たとえば、 [`MolecularHydrogen`](https://github.com/Microsoft/Quantum/tree/master/Chemistry/MolecularHydrogen)サンプルを実行するには、次のようにします。
+これらのサンプルを使用してインストールをテストするには、[メインサンプルリポジトリ](https://github.com/Microsoft/Quantum)を複製し、サンプルのいずれかを実行します。  たとえば、 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen)サンプルを実行するには、次のようにします。
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Chemistry/MolecularHydrogen
+cd Quantum/samples/chemistry/MolecularHydrogen
 dotnet run
 ```
 
@@ -78,11 +78,11 @@ dotnet run
 
 MolecularHydrogen サンプルでは、手動で構成された分子入力データを使用します。  これは、小さな例では問題ありませんが、大規模な量子化学には、何百万または十億の Hamiltonians が必要です。 スケーラブルな計算化学パッケージによって生成された Hamiltonians は、手動でインポートするには大きすぎます。 
 
-Quantum 開発キットの quantum 化学ライブラリは、コンピューティング化学パッケージで適切に動作するように設計されています。これは、特に、環境分子サイエンス研究所が開発した[**Nwchem**](http://www.nwchem-sw.org/)計算化学プラットフォームです (EMSL) (太平洋北西国立研究室)
+Quantum 開発キットの quantum 化学ライブラリは、計算化学パッケージで適切に動作するように設計されています。特に、環境分子サイエンス研究所 (EMSL) によって開発された、太平洋北西国立研究所で作成された[**Nwchem**](http://www.nwchem-sw.org/)計算化学プラットフォームです。
 特に、`Microsoft.Quantum.Chemistry` パッケージには、 [Broombridge スキーマ](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)に示されている量子化学シミュレーションの問題のインスタンスを読み込むためのツールが用意されています。これは、最近のバージョンの NWChem のエクスポートでもサポートされています。
 
 Quantum 開発キットと共に NWChem を使用して稼働させるには、次のいずれかの方法をお勧めします。
-- 「統合[Aldata/YAML](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML)」でサンプルに用意されている既存の Broombridge ファイルの使用を開始します。
+- 「統合[Aldata/YAML](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)」でサンプルに用意されている既存の Broombridge ファイルの使用を開始します。
 - 新しい Broombridge 形式の分子入力ファイルを生成するには、 [Microsoft Quantum Development Kit 用の Emsl 矢印ビルダー](https://arrows.emsl.pnnl.gov/api/qsharp_chem)を使用します。これは、NWChem の web ベースのフロントエンドです。  
 - PNNL によって提供される[Docker イメージ](https://hub.docker.com/r/nwchemorg/nwchem-qc/)を使用して、NWChem を実行します。
 - お使いのプラットフォームに対して[NWChem をコンパイル](http://www.nwchem-sw.org/index.php/Compiling_NWChem)します。
@@ -90,9 +90,10 @@ Quantum 開発キットと共に NWChem を使用して稼働させるには、�
 NWChem を使用して、量子化モデルを使用して分析する方法の詳細については、「 [nwchem でのエンドツーエンド](xref:microsoft.quantum.chemistry.examples.endtoend)」を参照してください。
 
 ### <a name="getting-started-using-broombridge-files-provided-with-the-samples"></a>サンプルで提供されている Broombridge ファイルの使用を開始する
-Quantum 開発キットのサンプルリポジトリの統合[Aldata/YAML](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML)フォルダーには、Broombridge 形式の分子データファイルが含まれています。  
 
-簡単な例として、化学ライブラリサンプル[GetGateCount](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount)を使用して、Broombridge ファイルの1つから Hamiltonian を読み込み、クォンタムシミュレーション algorigthms のゲート推定を実行します。
+Quantum 開発キットのサンプルリポジトリの統合[Aldata/YAML](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)フォルダーには、Broombridge 形式の分子データファイルが含まれています。  
+
+簡単な例として、化学ライブラリサンプル[GetGateCount](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/GetGateCount)を使用して、Broombridge ファイルの1つから Hamiltonian を読み込み、クォンタムシミュレーション algorigthms のゲート推定を実行します。
 
 ```bash
 cd Quantum/Chemistry/GetGateCount
@@ -171,5 +172,3 @@ PowerShell の組み込みヘルプ機能を使用して、詳細情報を取得
 Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
 ```
-
-

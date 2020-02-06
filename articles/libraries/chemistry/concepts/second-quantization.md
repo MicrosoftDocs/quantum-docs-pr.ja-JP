@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.secondquantization
-ms.openlocfilehash: b3cc7eb8139d2df6e02de371ccf7a423e58ea76d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 4b7b5a6be6d0c1f3520128609e6b9fa83e5460d5
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210414"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036425"
 ---
 # <a name="second-quantization"></a>2番目の量子化
 
@@ -153,7 +153,7 @@ n_i \ket{1}_i & = \ket{1}_i。
 上記の `FermionTerm` 例と同様に、この数値演算子は次のように構成されます。
 ```csharp
     // Let us use a new method to compactly create a sequence of ladder
-    // operators. Note that we have ommitted specifying whether the 
+    // operators. Note that we have omitted specifying whether the 
     // operators are raising or lowering. In this case, the first half
     // will be raising operators, and the second half will be lowering 
     // operators.
@@ -221,7 +221,7 @@ $ $ このような演算子は ' commute ' $i と呼ばれます。 j $ dagger_
 
 \begin{align} h\_{pqrs} & = \ int\_{-\ infty} ^ \ inf-int\_{-\ inf} ^\_(x\*1) \ psi\_q ^\_(x) | (x)\_2) \ 左 (\ frac{1}{| x_1-x_2 |} \ 右) \ psi\_r (x\_2) \ psi\_s (x\_1) \mathrm{d} ^ 3x\_1 \ mathrm {d} ^ 3x\_2。 \ ラベル {eq: 積分} \end{align}\*
 
-このようなすべての用語には単一の原子が含まれていますが、同様に $h\_{pqrs} $ は2つの電子積分であるため、{pq} $\_$h という用語は1対1の積分として呼ばれます。
+このようなすべての用語には単一の原子が関係していますが、同様に $h\_{pqrs} $ は2つの電子積分であるため、{pq} $\_$h という用語は1対1の積分と呼ばれます。
 これらの係数の値を計算するには整数が必要であるため、これらは "積分" と呼ばれます。
 1つの電子項は、個々の原子の kinetic エネルギーと、nuclei の電気フィールドとの相互作用を示しています。
 もう一方の2つの電子積分は、原子間の相互作用を記述します。

@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.pauli
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 0a3ee595022ec389ecadcab081ccd126cb3252ae
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 300a1ebcfd5d7bca8b025c69adebaad03106433d
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819911"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036604"
 ---
 # <a name="pauli-measurements"></a>P# li 測定
 
@@ -101,7 +101,7 @@ $ $ \begin{align} Z/\begin{bmatrix} done = 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\
 1 qubit の場合と同様に、2つの2つのすべての値は、$U ^-ダガー (zotimes \ id) U $ for $ 4 \ times $4 $U $ として書き込むことができます。 次の表に示す変換を列挙します。
 
 > [!NOTE]
-> 次の表で、$ \begin{matrix} を使用して、$ $ \begin{align}/name{swap} & = \ left (1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \end{matrix}\right) \end{align} $ $ を使用して組み込み操作をシミュレートしています。 [\\](xref:microsoft.quantum.intrinsic)。
+> 次の表で、$ \begin{matrix} を使用して、$ $ \begin{align}/name{swap} & = \ left (1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \end{matrix}\right) \end{align} $ $ を使用して組み込み操作をシミュレートしています。 [\\](xref:microsoft.quantum.intrinsic)。\\`SWAP`
 
 |P# li 測定     |ユニタリ変換  |
 |----------------------|------------------------|
@@ -129,7 +129,7 @@ $Z/otimes Z $ の固有値は、各計算ベースのベクトルを構成する
 
 追加の注意点として、$Z/otimes Z $ が連続して $Z 測定されていることを想定していることもあります。これは、\mathbb{1}$ と $ \mathbb{1}/otimes Z $ の順に測定した場合、この想定は false になります。
 その理由は、Z $ $Z 測定すると、これらの演算子の $ + $1 または $-$1 eigenstate にクォンタムの状態が射影されます。
-\Mathbb{1}$ を測定してから $ \mathbb{1} & otimes Z $ を $Z 計測すると、最初にクォンタムの状態ベクターを $Z の半分の空白に射影してから、$ \mathbb{1}/otimes Z $ の半分の領域に \mathbb します。
+\Mathbb{1}$ を測定してから $ \mathbb{1} & otimes Z $ を $Z 計測すると、最初にクォンタムの状態ベクターを $Z の半分の空白に射影してから、$ \mathbb{1}/otimes Z $ の半分の領域に \mathbb します。{1}
 計算ベースのベクトルが4つあるため、両方の測定を実行すると、状態が4分の1に減少し、1つの計算ベースのベクトルに縮小されます。
 
 ## <a name="correlations-between-qubits"></a>Qubits 間の相関関係

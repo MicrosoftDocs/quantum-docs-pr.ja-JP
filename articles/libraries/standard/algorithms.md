@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 91f65b05c83367c2d2ece93212369dc448d8c2a8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1c45808207a2020f603448eba05900cdc40b4916
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821016"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036357"
 ---
 # <a name="quantum-algorithms"></a>クォンタムアルゴリズム #
 
@@ -37,7 +37,7 @@ Q # では、無関係の振幅増幅の特殊化として振幅増幅が導入�
 
 前述のように、従来の振幅増幅は、これらのルーチンの特殊なケースにすぎません。 `ObliviousOracle` が id 演算子で、システム qubits (つまり `systemRegister` が空) ではありません。 部分的な反射 (Grover 検索など) のフェーズを取得する場合は、関数 `AmpAmpPhasesStandard` を使用できます。 Grover のアルゴリズムの実装例については、`DatabaseSearch.qs` を参照してください。
 
-この記事では、 [G.H. Low, 語](https://arxiv.org/abs/1707.05391)によって説明されているように、単一の qubit 回転フェーズをリフレクション演算子フェーズに関連付けています。 使用されている固定ポイントフェーズは、[語、低、および](https://arxiv.org/abs/1409.3305)語の各フェーズと共に、[最低でも](https://arxiv.org/abs/1603.03996)でも詳しく説明しています。
+G.H. の [記事で説明されているように、単一の qubit 回転フェーズをリフレクション演算子のフェーズに関連付けます。低、I. L。語](https://arxiv.org/abs/1707.05391)。 使用されている固定ポイントフェーズは、[語、低、および](https://arxiv.org/abs/1409.3305)語の各フェーズと共に、[最低でも](https://arxiv.org/abs/1603.03996)でも詳しく説明しています。
 
 背景については、[標準の振幅増幅](https://arxiv.org/abs/quant-ph/0005055)から開始し、無関係の[振幅増幅](https://arxiv.org/abs/1312.1414)の概要に進み、最後に[低と語](https://arxiv.org/abs/1610.06546)で示されている一般化を行うことができます。 この領域全体 (Hamiltonian シミュレーションに関連する) のわかりやすい概要が[Dominic Berry](http://www.dominicberry.org/presentations/Durban.pdf)によって提供されています。
 
@@ -48,15 +48,16 @@ Q # では、無関係の振幅増幅の特殊化として振幅増幅が導入�
 
 QFT のおおよその汎化として、目的のアルゴリズムの精度に対して厳密には必要のない回転を排除することにより、さらなる最適化を可能にする <xref:microsoft.quantum.canon.approximateqft> 操作を提供します。
 おおよその QFT には、dyadic $Z $ ローテーション操作 <xref:microsoft.quantum.intrinsic.rfrac> および <xref:microsoft.quantum.intrinsic.h> 操作が必要です。
-入力と出力はビッグエンディアンエンコーディングでエンコードされると想定されます (最下位ビット/qubit は[k 表記](xref:microsoft.quantum.concepts.dirac)と同じです)。
-近似パラメーター $a $ は、$ ローテーション $Z の排除レベルを決定します。つまり、[0. n] $ に $a ます。
+入力と出力はビッグエンディアン---エンコーディングでエンコードされていると想定されています。つまり、インデックス `0` を持つ qubit は、バイナリ整数表現の左端 (最上位) でエンコードされます。
+これは、 [k 表記](xref:microsoft.quantum.concepts.dirac)と整合して{1}います。これは、state $ \ket{100}$ の3つの qubits のレジスタとして、$q _1 $ と $q _2 $ の両方が state $ \ket{0}$ にある $q に対応します。
+近似パラメーター $a $ は、$ ローテーション $Z の排除レベルを決定します。つまり、[0.. n] $ に $a ます。
 この例では、$ $Z $ ローテーション $ 2 \ pi/2 ^ k $ として $k > $ が QFT 回線から削除されます。
 $K \ log_2 (n) + \ log_2 (1//イプシロン) + $3 であることがわかっています。 $\\| をバインドできます。\ オペレーター名 {qft}-& # {\\|</イプシロン $。
 ここで、$\\| \ cdot\\| $ は演算子の基準です。ここでは、この例では、$ (\ operator name{qft}-\ operator name{qft}-\ operator name{ [% の演算子](xref:microsoft.quantum.concepts.matrix-advanced)) の平方根として使用されます。
 
 ## <a name="arithmetic"></a>算術 ##
 
-算術演算が従来のコンピューティングで中心的な役割を果たしているのと同じように、クォンタムコンピューティングにも不可欠があります。  Shor のファクタリングアルゴリズム、クォンタムシミュレーションメソッド、および多くの oracular アルゴリズムなどのアルゴリズムは、一貫した算術演算に依存しています。  クォンタムを作成するためのほとんどの方法は、クォンタムを作成することです。  最も単純な追加では、$b $ という従来の入力を受け取り、整数 $ \ket{a} $ を保持するクォンタム状態に値を追加します。  数学的には、追加の追加 (従来の入力 $b $) に対して $-演算子を使用することを意味します。このプロパティは、
+算術演算が従来のコンピューティングで中心的な役割を果たしているのと同じように、クォンタムコンピューティングにも不可欠です。  Shor のファクタリングアルゴリズム、クォンタムシミュレーションメソッド、および多くの oracular アルゴリズムなどのアルゴリズムは、一貫した算術演算に依存しています。  クォンタムを作成するためのほとんどの方法は、クォンタムを作成することです。  最も単純な追加では、$b $ という従来の入力を受け取り、整数 $ \ket{a} $ を保持するクォンタム状態に値を追加します。  数学的には、追加の追加 (従来の入力 $b $) に対して $-演算子を使用することを意味します。このプロパティは、
 
 $ $ \ 演算子名 {add} (b) \ket{a} = \ket{a + b}。
 $ $ この基本的な追加回線は、追加の incrementer よりも大きくなります。
@@ -95,7 +96,7 @@ Beauregard 追加は、Draper 追加を使用します。または、より具�
 
 この例では、ゲート $ \ phi\\\!\ 演算子名 {add} $ は、$ + phi\\\!/演算子名 {add} $ と同じ形式になります。ただし、このコンテキストでは、入力はクォンタムではなく古典です。  これにより、$/Phi\\\!の制御されたフェーズをフェーズゲートに置き換えることができます。これは、1つのゲートビットの数と、追加に必要なゲートの数の両方を減らすために、より少数の操作にまとめることができます。
 
-詳細については、Beth と[d.](https://arxiv.org/abs/quant-ph/0201067) [Roetteler](http://doi.org/10.1007/s00200-008-0072-2 )を参照してください。
+詳細については、[M. Roetteler (Th) を参照してください。Beth](http://doi.org/10.1007/s00200-008-0072-2 ) と[d. Coppersmith](https://arxiv.org/abs/quant-ph/0201067)。
 
 ### <a name="quantum-phase-estimation"></a>量子位相推定 ###
 
@@ -110,7 +111,7 @@ $V $ が $U $ の制御されたアプリケーションであると仮定しま
 そのため、この説明の残りの部分では、$R _1 (\ phi) $ の観点からフェーズの推定について説明します。これは、いわゆる*フェーズ kickback*を使用して実装します。
 
 このプロセスの後、コントロールとターゲットのレジスタは untangled のままであるため、$ \ket{\phi} $ を $U ^ $2 の制御されたアプリケーションのターゲットとして再利用して、2番目のコントロール qubit $R _1 (2 + phi) \ket{+} $ にすることができます。
-この方法では、\begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j-phi) \ket{+} の形式のレジスタを取得できます \\。 \\ {j = 0} ^ {n} \ 左 (\ket & + \ exp です。 (i 2 ^ {j} \ phi) \ket{1} \\\\ & \ sum_ {k = 0} ^ {2 ^ n-1} \ exp (i-phi k) \ket{k} \end{align}。ここで $n $ は、必要な精度のビット数です。また、${}/propto {}$ を使用して、正規化係数 $ が抑制されていることを示しています。1/\ sqrt{2 ^ n} $。
+このようにして次のようにして、\begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j-phi) \ket{+} の形式のレジスタを取得できます \\。 \\ {j = 0} ^ {n} \ 左 (\ket & + \ exp (i 2 ^-{j¥} \ phi) \ket{1} \\\\ & \ propto \ sum_ {k = 0} ^ {2 ^ n-1} \ exp (i-phi k) \ket{k} \end{align}。ここで $n $ は、必要な精度のビット数です。また、${}/propto {}$ を使用して、正規化係数 $ が抑制されていることを示しています。1/\ sqrt{2 ^ n} $。
 
 $-Phi = 2-pi p/2 ^ k $ が整数 $p $ であると仮定した場合、$ \ket{\psi} = p_1 p_0 \ket{p_n} $ として認識されます。ここで、$p _j $ は $j ^ {\t extrm{th} $ bit of $2/phi $ です。
 クォンタムのフーリエ変換の adjoint を適用するため、クォンタムの状態としてエンコードされたフェーズのバイナリ表現を取得します。
