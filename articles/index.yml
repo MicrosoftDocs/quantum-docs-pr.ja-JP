@@ -1,122 +1,96 @@
 ### YamlMime:Landing
-title: Microsoft Quantum 開発キット
-summary: Microsoft Quantum 開発キットと、量子アルゴリズム プログラミング用の言語である Q# を使用する方法について説明します。
+title: Microsoft Quantum ドキュメント
+summary: Microsoft Quantum Developer Kit と、量子アルゴリズム用の言語である Q# を使用する方法について説明します。 主要な概念を学び、最初の量子プログラムを記述します。
 metadata:
-  title: Microsoft Quantum 開発キット - Q# API リファレンス
-  description: Microsoft Quantum 開発キットと、量子アルゴリズム プログラミング用の言語である Q# を使用する方法について説明します。 主要な概念を学び、最初の量子プログラムを記述します。  QDK の豊富なツールとライブラリの詳細を確認します。
+  title: Microsoft Quantum ドキュメント - Q# API リファレンス
+  description: Microsoft Quantum 開発キットと、量子プログラミング用の言語である Q# を使用する方法について説明します。 主要な概念を学び、最初の量子プログラムを記述します。  QDK の豊富なツールとライブラリの詳細を確認します。
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 10/21/2019
-  ms.openlocfilehash: 53ee7b0a1ba7a83fb943f18afd27b5c699f848b2
-  ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+  ms.openlocfilehash: a39b230bc3b740afd23f0050b9c45df6094bea4e
+  ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76820727"
+  ms.lasthandoff: 02/06/2020
+  ms.locfileid: "77036578"
 landingContent:
 - title: Microsoft Quantum の概要
   linkLists:
   - linkListType: overview
     links:
-    - text: 量子コンピューティングに関する 5 つの質問
+    - text: Quantum 開発キット
       url: welcome.md
-  - linkListType: get-started
+  - linkListType: learn
+    links:
+    - text: 量子コンピューティングとは
+      url: overview/what-is-quantum-computing.md
+    - text: 量子コンピューターでできること
+      url: overview/quantum-computers.md
+    - text: 量子コンピューティングを学ぶ理由
+      url: overview/why-learn-quantum-computing.md
+    - text: Q# とは
+      url: overview/what-is-qsharp.md
+    - text: 量子コンピューティングを学ぶ方法
+      url: overview/how-to-learn-quantum-computing.md
+- title: Quantum 開発キットを入手する
+  linkLists:
+  - linkListType: download
+    links:
+    - text: QDK をインストールする
+      url: install-guide/index.md
+    - text: QDK を更新する
+      url: install-guide/update.md
+- title: クイックスタート
+  linkLists:
+  - linkListType: quickstart
     links:
     - text: 量子乱数ジェネレーターの作成
       url: quickstarts/qrng.md
     - text: Q# を使った量子の基本
       url: quickstart.md
-    - text: Q# での影響力の強い量子プログラムについて
+    - text: 量子加速:グローバーの検索アルゴリズム
       url: quickstarts/search.md
-    - text: 化学における最大の課題の解決について学ぶ
-      url: https://cloudblogs.microsoft.com/quantum/2018/12/04/simulating-nature-with-the-new-microsoft-quantum-development-kit-chemistry-library/
-  - linkListType: learn
-    links:
-    - text: Quantum Katas による学習
-      url: intro-to-katas.md
-    - text: Q# サンプルの参照
-      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
-- title: Q#、Python、または Jupyter ノートブックを使った開発
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Python のインストール
-      url: install-guide/pyinstall.md
-    - text: Jupyter のインストール
-      url: install-guide/qjupyter.md
-  - linkListType: how-to-guide
-    links:
-    - text: Python を使用した Q# サンプル
-      url: https://docs.microsoft.com/samples/browse/?languages=python&products=qdk
-    - text: Jupyter Notebook でのテレポート Q#
-      url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
-    - text: Q# 用の Jupyter Notebook を作成する方法
-      url: https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/
-- title: Q# 開発環境
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Visual Studio のインストール
-      url: install-guide/csinstall.md
-    - text: Visual Studio Code のインストール
-      url: install-guide/csinstall.md
-- title: Q# サンプル
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: 3 つの単純なアルゴリズム
-      url: https://docs.microsoft.com/samples/microsoft/quantum/simple-quantum-algorithms
-    - text: Grover のアルゴリズムを使用した検索
-      url: https://docs.microsoft.com/samples/microsoft/quantum/searching-with-grovers-algorithm
-    - text: 量子テレポーテーション
-      url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
-    - text: すべてのサンプル
-      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
-- title: Q# 言語と開発手法
-  linkLists:
-  - linkListType: learn
-    links:
-    - text: Q# 言語の紹介
-      url: language/index.md
-  - linkListType: how-to-guide
-    links:
-    - text: 量子シミュレーターとホスト アプリケーション
-      url: machines/index.md
-  - linkListType: how-to-guide
-    links:
-    - text: Q# プログラムの概要
-      url: techniques/file-structure.md
-    - text: 操作と関数
-      url: techniques/operations-and-functions.md
-    - text: ローカル変数
-      url: techniques/local-variables.md
-    - text: 量子ビットの操作
-      url: techniques/working-with-qubits.md
-    - text: 併せてお読みください。テレポーテーション
-      url: techniques/putting-it-all-together.md
 - title: 量子コンピューティングの概念
   linkLists:
   - linkListType: concept
     links:
     - text: 量子コンピューティングの概念
       url: concepts/index.md
-    - text: 用語集
-      url: Glossary.md
-- title: Q# アルゴリズムとアプリケーション
+- title: Q# プログラミング言語
   linkLists:
-  - linkListType: reference
+  - linkListType: learn
     links:
-    - text: 振幅増幅
-      url: libraries/standard/algorithms.md
-    - text: 量子位相推定
-      url: libraries/standard/algorithms.md#quantum-phase-estimation
-    - text: Shor のアルゴリズム
-      url: libraries/standard/applications.md#shors-algorithm
-    - text: ハミルトニアン シミュレーション
-      url: libraries/standard/applications.md
+    - text: Q# 言語の紹介
+      url: language/index.md
+    - text: Q# 開発手法
+      url: techniques/index.md
+- title: ターゲット コンピューター
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 量子シミュレーターとホスト アプリケーション
+      url: machines/index.md
+  - linkListType: architecture
+    links:
+    - text: 完全状態シミュレーター
+      url: machines/full-state-simulator.md
+    - text: リソース推定
+      url: machines/resources-estimator.md
+    - text: トレース シミュレーター
+      url: machines/qc-trace-simulator/index.md
+    - text: トフォリ シミュレーター
+      url: machines/toffoli-simulator.md
+- title: Q# 学習用のリソース
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Quantum Katas による学習
+      url: intro-to-katas.md
+    - text: Q# コード サンプルの参照
+      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
 - title: Q# ライブラリ
   linkLists:
   - linkListType: reference
@@ -129,14 +103,18 @@ landingContent:
       url: libraries/chemistry/index.md
     - text: 化学の概念
       url: libraries/chemistry/concepts/quantum-dynamics.md
-  - linkListType: how-to-guide
+- title: Q# アルゴリズムとアプリケーション (標準ライブラリより)
+  linkLists:
+  - linkListType: reference
     links:
-    - text: Q# の数値サンプル
-      url: libraries/numerics/numerics.md
-    - text: Q# の化学の例
-      url: libraries/chemistry/samples/index.md
-    - text: NWChem を使用したエンド ツー エンド
-      url: libraries/chemistry/samples/end-to-end.md
+    - text: 振幅増幅
+      url: libraries/standard/algorithms.md
+    - text: 量子位相推定
+      url: libraries/standard/algorithms.md#quantum-phase-estimation
+    - text: Shor のアルゴリズム
+      url: libraries/standard/applications.md#shors-algorithm
+    - text: ハミルトニアン シミュレーション
+      url: libraries/standard/applications.md
 - title: コミュニティとコントリビューション
   linkLists:
   - linkListType: how-to-guide

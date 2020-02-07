@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: b209f0b600d973c3870c66060e1b484ec519322f
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 0e9dd1c74316eeb1fa7bbbf657d2e78231ee4294
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820710"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036510"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum Development Kit (QDK) のインストール
 
@@ -19,7 +19,7 @@ Microsoft Quantum Development Kit (QDK) をインストールする方法につ�
 
 - Q# プログラミング言語
 - Q# の複雑な機能を抽象化するライブラリのセット
-- Python および .NET 言語用 API (つまり、C#、F#、VB.NET) (Q# で記述された量子プログラムの実行用)
+- Python および .NET 言語用 API (C#、F#、VB.NET) (Q# で記述された量子プログラムの実行用)
 - 開発を容易にするツール
 
 Q# プログラムは、多くの場合、.NET 言語 (通常 C#) または Python で記述されたホスト プログラムとペアになります。 これにより、従来のプログラム内から量子演算を呼び出すことができます。
