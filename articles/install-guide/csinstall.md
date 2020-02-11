@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 1fd829c684502092bb7491b0f46b5f690320c941
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 7803846279f230f5fc0ee8424bd39be735a650ca
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831020"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036289"
 ---
 # <a name="develop-with-q--c"></a>Q # + を使用した開発C#
 
@@ -23,7 +23,7 @@ Q # は、.NET 言語 (特C#に) を使用して適切に動作するように�
 - [Visual Studio Code を使用C#した Q # + (Windows、Linux、Mac)](#VSC)
 - [Q # + C# `dotnet` コマンドラインツールの使用](#command)
 
-## Visual Studio を使用しC#た Q # + を使用した開発<a name="VS"></a>
+## Visual Studio を使用しC#た Q # + を使用した開発 <a name="VS"></a>
 
 Visual Studio には、Q # プログラムを開発するための豊富な環境が用意されています。 Q # Visual Studio 拡張機能には、Q # のファイルとプロジェクトのテンプレートに加え、構文の強調表示、コード補完、IntelliSense のサポートが含まれています。
 
@@ -59,7 +59,7 @@ Visual Studio には、Q # プログラムを開発するための豊富な環�
 > [!NOTE]
 > * 1 つの Visual Studio ソリューションに複数のプロジェクトがある場合は、ソリューションに含まれるすべてのプロジェクトが、ソリューションと同じフォルダーまたはそのサブフォルダーのいずれかに存在する必要があります。  
 
-## Visual Studio Code を使用したC# Q # + を使用した開発<a name="VSC"></a>
+## Visual Studio Code を使用したC# Q # + を使用した開発 <a name="VSC"></a>
 
 Visual Studio Code (VS Code) は、Windows、Linux、および Mac で Q # プログラムを開発するための豊富な環境を提供します。  Q # の VS Code 拡張機能には、Q # 構文の強調表示、コード補完、Q # コードスニペットのサポートが含まれています。
 
@@ -111,7 +111,7 @@ Visual Studio Code (VS Code) は、Windows、Linux、および Mac で Q # プ�
 
 1. .NET 用量子プロジェクト テンプレートをインストールします。
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
@@ -121,8 +121,8 @@ Visual Studio Code (VS Code) は、Windows、Linux、および Mac で Q # プ�
 
     - 新しいアプリケーションを作成する
 
-       ```bash
-       dotnet new console -lang Q# -o runSayHello
+       ```dotnetcli
+       dotnet new console -lang "Q#" -o runSayHello
        ```
 
     - 新しいアプリケーション ディレクトリに移動します。
@@ -135,13 +135,13 @@ Visual Studio Code (VS Code) は、Windows、Linux、および Mac で Q # プ�
 
     - アプリケーションの実行
 
-        ```bash
+        ```dotnetcli
         dotnet run
         ```
 
         `Hello quantum world!` という出力が表示されます。
 
     
-## <a name="whats-next"></a>次に、
+## <a name="whats-next"></a>次の操作
 
 これで、使用している環境に Quantum Development Kit がインストールされたので、[最初の量子プログラム](xref:microsoft.quantum.write-program)を作成して実行することができます。
