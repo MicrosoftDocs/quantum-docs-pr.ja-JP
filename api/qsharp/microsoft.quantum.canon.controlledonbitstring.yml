@@ -3,18 +3,73 @@ uid: microsoft.quantum.canon.controlledonbitstring
 name: ControlledOnBitString
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: 制御レジスタの状態が指定したビットマスクに対応する場合に、ターゲットレジスタに oracle を適用する、ユニタリ演算子を返します。
+summary: >-
+  制御レジスタの状態が指定したビットマスクに対応する場合に、ターゲットレジスタに oracle を適用する、ユニタリ演算子を返します。
+
+
+  この関数の出力は、\begin{align} U \ket{b_0 b_1/cドット b_ {n-1}} \ket{\psi} = \ket{b_0 b_1/cドット b_ {n-1}} \ otimes \begin{cases} によっ $U て表すことができます。 V \ket{\psi} & \t extrm{if} (b_0 b_1 \ cドット b_ {n-1}) = \texttt{bits} \\\\ \ket{\psi} & \textrm{otherwise} \end{cases}、\end{align} ここで $V $ は `oracle` 操作のアクションを表すミリ秒変換です。
+remarks: >-
+  `bits` と `controlRegister` の長さは同じである必要があります。
+
+
+  ブール型の配列 `bits` と、`oracle`の処理を指定した場合、この関数の出力は、次の手順を実行する操作になります。
+
+
+  * `bits`の `false` 要素に対応する、コントロールレジスタの各 qubit に `X` 操作を適用します。
+
+  * コントロールとターゲットレジスタに `Controlled oracle` を適用します。
+
+  * `bits` の `false` 要素に対応するコントロールレジスタの各 qubit に `X` 操作を適用し、コントロールレジスタを元の状態に戻します。
+
+
+  `Controlled` ファンクタの出力は、`bits` が `[true, ..., true]`と等しい `ControlledOnBitString` の特殊なケースです。
+examples: >-
+  次のコードスニペットは同等です。
+
+
+  ```qsharp
+
+  (ControlledOnBitString(bits, oracle))(controlRegister, targetRegister);
+
+  ```
+
+
+  and
+
+
+  ```qsharp
+
+  within {
+      ApplyPauliFromBitString(PauliX, false, bits, controlRegister);
+  } apply {
+      Controlled oracle(controlRegister, targetRegister);
+  }
+
+  ```
+
+
+  次のコードでは、状態 $ \ frac{1}{2}(\ket{00}-\ket{01} + \ket{10} + \ket{11}) $ を準備します。
+
+
+  ```qsharp
+
+  using (register = Qubit[2]) {
+      ApplyToEach(H, register);
+      (ControlledOnBitString([false], Z))(register[0..0], register[1]);
+  }
+
+  ```
 syntax: "function ControlledOnBitString (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)"
 input:
   content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl))"
   types:
   - name: bits
-    summary: ブール型の配列。
+    summary: 指定されたユニタリ演算子を制御するビット文字列。
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: oracle
-    summary: ユニタリ演算子。
+    summary: ターゲットレジスタに適用されるユニタリ演算子。
     isOperation: true
     input:
       types:
@@ -47,9 +102,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 1abe0f1abcbab06aa9821c52878cf85b03d2c592
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dde246a6eb0cf5e278cd079ff52c3a0b0ff71120
+  ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227391"
+  ms.lasthandoff: 02/18/2020
+  ms.locfileid: "77441048"
