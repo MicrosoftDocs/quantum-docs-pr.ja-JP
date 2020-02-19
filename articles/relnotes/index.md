@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: be1eff8127be9fb024a1dc2de3ec82952ac2dc2b
+ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76871619"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77441042"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -21,13 +21,14 @@ ms.locfileid: "76871619"
 
 更新手順については、[更新ガイド](xref:microsoft.quantum.update)を参照してください。
 
+
 ## <a name="version-01020012831"></a>バージョン 0.10.2001.2831
 
 *リリース日:2020 年 1 月 29 日*
 
 このリリースには、次のものが含まれています。
 
-- 新しい Microsoft.Quantum.SDK NuGet パッケージの詳細については、[README](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md) を参照してください。
+- 新しい Microsoft.Quantum.SDK NuGet パッケージ
 - .NET Core 3.1 のサポートが追加されました。古い .NET Core SDK バージョンでビルドすると、問題が発生する可能性があるため、バージョン 3.1.100 をインストールすることを強くお勧めします。
 - Microsoft.Quantum.QsCompiler.Experimental 下で新しいコンパイラ変換を使用できます
 - IQ# で HTML として出力状態ベクターを公開する新しい機能
