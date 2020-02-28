@@ -1,17 +1,17 @@
 ---
-title: 'Q # ステートメント |Microsoft Docs'
-description: 'Q # ステートメント'
+title: 'Q # ステートメント'
+description: '関数と操作の宣言、変数の宣言と代入、操作の呼び出しなど、Q # でのステートメントの正しい使用方法について説明します。'
 author: QuantumWriter
 uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9a6f5d53ec21090d0c13f4369e0270d264cd1e9b
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: e801a5fdd24b973f47d23d2aca6f11bbebf333d4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036493"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904674"
 ---
 # <a name="statements-and-other-constructs"></a>ステートメントとその他の構成体
 

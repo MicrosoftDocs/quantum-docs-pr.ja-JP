@@ -1,24 +1,24 @@
 ---
-title: Quantum 開発キットリソースの推定機能 |Microsoft Docs
-description: Microsoft の Quantum 開発キットリソースの概要
+title: Quantum 開発キットリソースの推定機能
+description: 'リソースの推定について説明します。この推定値は、クォンタムコンピューターで Q # 操作の特定のインスタンスを実行するために必要なリソースを見積もります。'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 960fda3dade7648f9cd24496c3a49fd11d6f807a
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 37c901e5a861f0e8a10cdc911ad1d84ddd3e6e00
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820863"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907054"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>ResourcesEstimator ターゲットコンピューター
 
 名前が示すように、`ResourcesEstimator` は、クォンタムコンピューターで Q # 操作の特定のインスタンスを実行するために必要なリソースを推定します。
 これを実現するには、実際にクォンタムコンピューターの状態をシミュレートせずに、クォンタム操作を実行します。このため、数千個の qubits を使用する Q # 操作のリソースを見積もることができます。
 
-## <a name="usage"></a>使用量
+## <a name="usage"></a>使用法
 
 `ResourcesEstimator` は別の種類のターゲットマシンであるため、任意の Q # 操作を実行するために使用できます。 
 
@@ -130,7 +130,7 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 `ResourcesEstimator` が検出されると `AssertProb` `source` の測定 `PauliZ` を記録し、`q` 確率が0.5 の `Zero` の結果を指定する必要があります。 後で `M` を実行すると、結果の確率の記録された値が検出され、`M` は `Zero` または確率が0.5 の `One` を返します。
 
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 `ResourcesEstimator` は、quantum コンピューターの[トレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の上に構築されています。これにより、豊富なメトリックセットが提供されます。また、完全な呼び出しグラフでメトリックをレポートする機能や、Q # プログラムでのバグの検出に役立つ[distinct 入力チェッカー](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs)などの機能が提供されます。 詳細については、 [trace シミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)のドキュメントを参照してください。
 

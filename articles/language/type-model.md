@@ -1,17 +1,17 @@
 ---
-title: 'Q # 型モデル |Microsoft Docs'
-description: Q# 型モデル
+title: 'Q # データ型'
+description: 'Q # プログラミング言語で使用されるさまざまな型について説明します。これには、組み込み型、配列、組、演算、関数、ユーザー定義型などが含まれます。'
 author: QuantumWriter
 uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 0aabb144779da301b71ad215c8e975cc29b4dcce
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: 1fc4c0b3fed9277c7f9f3ac421330df03c1b30e4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76871636"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904657"
 ---
 # <a name="the-type-model"></a>型モデル
 
@@ -160,7 +160,7 @@ function PrintedMessage(value : Nested) : Unit {
 ラップ解除演算子は、ラップのレイヤーを1つだけラップ解除します。
 複数のラップ解除演算子は、乗算された値にアクセスするために使用できます。
 
-その例をご紹介します。
+次に例を示します。
 
 ```qsharp
 newtype WrappedInt = Int;

@@ -1,17 +1,17 @@
 ---
-title: 'テストとデバッグ-Q # の手法 |Microsoft Docs'
-description: 'テストとデバッグ-Q # の手法'
+title: 'Q # プログラムのテストとデバッグ'
+description: 単体テスト、ファクトとアサーション、およびダンプ関数を使用して、クォンタムプログラムをテストおよびデバッグする方法について説明します。
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: cfc71f08be0f190d9f5f4a48796e3d0ad06d6107
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 3df8df8defabcc9cc87d59f543f425c882b001e0
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820115"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907683"
 ---
 # <a name="testing-and-debugging"></a>テストとデバッグ
 
@@ -27,12 +27,12 @@ Q # は、クォンタムプログラムの単体テストの作成をサポー�
 
 ### <a name="creating-a-test-project"></a>テストプロジェクトの作成
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Visual Studio 2019 を開きます。 `File` メニューにアクセスし、[`New` > `Project...`] を選択します。
 右上隅にある `Q#`を検索し、`Q# Test Project` テンプレートを選択します。
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
 
 お気に入りのコマンドラインから、次のコマンドを実行します。
 ```bash
@@ -71,7 +71,7 @@ Q # コンパイラは、組み込みのターゲット "QuantumSimulator"、"To
 
 ### <a name="running-q-unit-tests"></a>Q # の単体テストの実行
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 ソリューションごとの1回限りの設定として、`Test` メニューにアクセスし、[`Test Settings` > `Default Processor Architecture` > `X64`] を選択します。
 
@@ -81,7 +81,7 @@ Q # コンパイラは、組み込みのターゲット "QuantumSimulator"、"To
 
 プロジェクトをビルドし、[`Test`] メニューにアクセスして、[`Windows` > `Test Explorer`] を選択します。 `Not Run Tests` グループ内のテストの一覧に `AllocateQubit` が表示されます。 `Run All` を選択するか、この個別のテストを実行して、合格する必要があります。
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
 
 テストを実行するには、プロジェクトフォルダー (`Tests.csproj`を含むフォルダー) に移動し、次のコマンドを実行します。
 
@@ -123,29 +123,29 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 組み込み関数 <xref:microsoft.quantum.intrinsic.message> 型 `(String -> Unit)` で、診断メッセージを作成できます。
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 テストエクスプローラーでテストを実行し、テストをクリックすると、テストの実行に関する情報がパネルに表示されます (成功/失敗の状態、経過時間、および "出力" リンク)。 [出力] リンクをクリックすると、新しいウィンドウでテスト出力が開きます。
 
 ![テスト出力](~/media/unit-test-output.png)
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
 
 各テストの成功/失敗の状態は、`dotnet test`によってコンソールに出力されます。
 失敗したテストの場合は、エラーの診断に役立つ出力もコンソールに出力されます。
 
 ***
 
-## <a name="assertions"></a>表明
+## <a name="facts-and-assertions"></a>ファクトとアサーション
 
 Q # の関数には_論理的_な副作用がないため、出力の種類が空のタプルである関数を実行した場合の_その他の種類_の効果は、q # プログラム内からは観察されません `()`。
 つまり、ターゲットコンピューターは、この省略によって次の Q # コードの動作が変更されないことを保証して `()` を返す関数を実行しないことを選択できます。
-これにより、アサーションを埋め込み、デバッグロジックを Q # プログラムに組み込むための便利なツール `()` を返す関数が作成されます。 
+これにより、`()` (つまり `Unit`) を返す関数が、アサーションの埋め込みや、Q # プログラムへのデバッグロジックに便利なツールになります。 
 
-同じロジックを、アサーションの実装にも適用できます。 単純な例を考えてみましょう。
+単純な例を考えてみましょう。
 
 ```qsharp
-function AssertPositive(value : Double) : Unit 
+function PositivityFact(value : Double) : Unit 
 {
     if (value <= 0) 
     {
@@ -156,11 +156,31 @@ function AssertPositive(value : Double) : Unit
 
 ここで、キーワード `fail` は、計算が続行されないことを示し、Q # プログラムを実行しているターゲットコンピューターで例外が発生します。
 定義上、Q # 内では、この種のエラーを確認することはできません。これは、`fail` ステートメントに達した後に、それ以上の Q # コードが実行されないためです。
-したがって、`AssertPositive`の呼び出しを続けて実行した場合は、入力が肯定的であることが保証されます。
+したがって、`PositivityFact`の呼び出しを続けて実行した場合は、入力が肯定的であることが保証されます。
+
+<xref:microsoft.quantum.diagnostics> 名前空間の[`Fact`](xref:microsoft.quantum.diagnostics.fact)関数を使用して `PositivityFact` と同じ動作を実装できることに注意してください。
+
+```qsharp
+    Fact(value <= 0, "Expected a positive number.");
+```
+
+一方、*アサーション*はファクトと同様に使用されますが、ターゲットコンピューターの状態に依存する場合があります。 それに応じて、これらは操作として定義されますが、ファクトは関数として定義されます (上記のように)。
+この違いを理解するには、アサーション内で次のファクトを使用することを検討してください。
+
+```qsharp
+operation AssertQubitsAreAvailable() : Unit
+{
+     Fact(GetQubitsAvailableToUse() > 0, "No qubits were actually available");
+}
+```
+
+ここでは、操作 <xref:microsoft.quantum.environment.getqubitsavailabletouse> を使用して、使用可能な qubits の数を返します。
+これは、プログラムとその実行環境のグローバルな状態によって明確に依存しますが、`AssertQubitsAreAvailable` の定義も操作である必要があります。
+ただし、そのグローバル状態を使用して、`Fact` 関数への入力として単純な `Bool` 値を生成することができます。
 
 これらのアイデアを基にして、準備には、`()`に対する操作としてモデル化さ[れた](xref:microsoft.quantum.libraries.standard.prelude)、<xref:microsoft.quantum.intrinsic.assert> と <xref:microsoft.quantum.intrinsic.assertprob> の2つの便利なアサーションが用意されています。 これらのアサーションは、特定の対象測定、測定を実行するクォンタムレジスタ、および仮定の結果を記述する P# li オペレーターを受け取ります。
 シミュレーションによって動作するターゲットコンピューターでは、[複製なしの定理](https://en.wikipedia.org/wiki/No-cloning_theorem)によってバインドされていないため、このようなアサーションに渡されたレジスタに支障をきたすことなく、このような測定を実行できます。
-シミュレーターは、上記の `AssertPositive` 関数と同様に、実際の結果が実際に観察されない場合に計算を中止できます。
+シミュレーターは、上記の `PositivityFact` 関数と同様に、実際の結果が実際に観察されない場合に計算を中止できます。
 
 ```qsharp
 using (register = Qubit()) 
@@ -265,7 +285,7 @@ Quantum 開発キットの一部として配布された完全な状態のクォ
   > Qubit の id は実行時に割り当てられ、必ずしも qubit が割り当てられた順序、または qubit レジスタ内の位置に一致するとは限りません。
 
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
   > [!TIP]
   > コードにブレークポイントを配置し、qubit 変数の値を調べることで、Visual Studio で qubit id を調べることができます。次に例を示します。
@@ -274,7 +294,7 @@ Quantum 開発キットの一部として配布された完全な状態のクォ
   >
   > `register2` のインデックス `0` を持つ qubit の id =`3`、インデックス `1` の qubit には id =`2`が使用されています。
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
 
   > [!TIP]
   > <xref:microsoft.quantum.intrinsic.message> 関数を使用し、メッセージに qubit 変数を渡すことによって、qubit id を確認できます。次に例を示します。

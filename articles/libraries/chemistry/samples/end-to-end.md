@@ -1,23 +1,23 @@
 ---
-title: NWChem を使用したエンドツーエンド |Microsoft Docs
-description: NWChem Docs を使用したエンドツーエンドの
+title: NWChem クォンタムプログラムのサンプル
+description: NWChem 入力デッキを使用して、量子化学シミュレーションのゲート数を取得する例を紹介します。
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 8f727ea4599e06b41ced561c624c4e773b9887d9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185819"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906510"
 ---
-# <a name="end-to-end-with-nwchem"></a>NWChem を使用したエンドツーエンドの #
+# <a name="end-to-end-with-nwchem"></a>NWChem を使用したエンド ツー エンド #
 
 このページでは、Nw化学シミュレーションのゲート数を取得する例を、 [Nwchem](http://www.nwchem-sw.org/index.php/Main_Page)入力デッキから順に見ていきます。
 この例に進む前に、Docker がインストールされていることを確認してください。[インストールと検証のガイド](xref:microsoft.quantum.chemistry.concepts.installation)に従ってください。
 
-詳細情報
+詳細:
 - [NWChem 入力デッキの構造](https://github.com/nwchemgit/nwchem/wiki/Getting-Started#input-file-structure)
     - [Quantum 開発キットで使用する入力デックコマンド](https://github.com/nwchemgit/nwchem/tree/master/contrib/quasar)
 - [化学ライブラリと依存関係のインストール](xref:microsoft.quantum.chemistry.concepts.installation)
@@ -25,7 +25,7 @@ ms.locfileid: "73185819"
 
 > [!NOTE]
 > この例では、Windows PowerShell Core を実行する必要があります。
-> Windows、macOS、または Linux 用の PowerShell Core を https://github.com/PowerShell/PowerShell でダウンロードします。
+> Windows、macOS、または Linux 用の PowerShell Core を https://github.com/PowerShell/PowerShellでダウンロードします。
 
 ## <a name="importing-required-powershell-modules"></a>必要な PowerShell モジュールのインポート ##
 

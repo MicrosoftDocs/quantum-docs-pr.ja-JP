@@ -1,17 +1,17 @@
 ---
-title: 高度なマトリックスの概念 |Microsoft Docs
-description: 高度なマトリックスの概念
+title: 高度な行列の概念
+description: クォンタムアルゴリズムの記述とシミュレーションに使用される基本的なツールである固有ベクトル、eigenvalues、および matrix 指数について説明します。
 author: QuantumWriter
 uid: microsoft.quantum.concepts.matrix-advanced
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f87b3bcd19d2f98fea2a9724a280781a78c4cbb9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a83911e01ad758bbcb7f701000fd58b4f1c91cd2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183762"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907581"
 ---
 # <a name="advanced-matrix-concepts"></a>高度なマトリックスの概念 #
 
@@ -32,14 +32,14 @@ $$
 
 ベクター
 
-$ $ \begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}、\begin{bmatrix}0 \\\\ 1 \\\\ 0 \ end {bmatrix} および \begin{bmatrix}0 \\\\ 0 \\\\1 \ 終了 {bmatrix} $ $
+$ $ \begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}、\begin{bmatrix}0 \\\\ 1 \\\\ 0 \ 終了 {bmatrix} および \begin{bmatrix}0 \\\\ 0 \\\\ 1 \ 終了 {bmatrix} $ $
 
 このマトリックスの固有ベクトルは、固有値 $d _1 $、$d _2 $、および $d/3 $ にそれぞれ含まれています。 $D _1 $、$d _2 $、$d、3 $ が個別の数値の場合、これらのベクトル (およびそのマルチプル) は $D マトリックスの $ $ の唯一の固有ベクトルです。 一般に、対角線マトリックスの場合は、固有値と固有ベクトルを簡単に読み取ることができます。 固有値は、対角線に表示されるすべての数値であり、それぞれの固有ベクトルは、1つのエントリが $1 $、残りのエントリが $0 $ に等しい単位ベクトルです。
 
-上の例では、$D $ の固有ベクトルが $ 3 $ 次元ベクターのベースになっていることに注意してください。 ベースはベクターのセットであり、ベクターを線形の組み合わせとして書き込むことができます。 より明示的には、$v _1 $、$v _2 $、および $v、3 $ $v 任意の数値を $v = a_1 v_1 + a_2 v_2 + a_3 v_3 $ として書き込むことができます (たとえば、_1 $、$a _2 $、$a)。
+上の例では、$D $ の固有ベクトルが $ 3 $ 次元ベクターのベースになっていることに注意してください。 ベースはベクターのセットであり、ベクターを線形の組み合わせとして書き込むことができます。 より明示的には、$v _1 $、$v _2 $、および $v は、$v $ を $v = a_1 v_1 + a_2 v_2 + a_3 v_3 $ として書き込むことができます (たとえば、_1 $、$a _2 $、$a)。
 
 Hermitian matrix (自己 adjoint とも呼ばれます) は、独自の複雑な共役に相当する複雑な正方形行列であることを思い出してください。これに対して、1つのユニタリ行列は複雑な共役と同じ逆の四角形行列です。
-Hermitian およびユニタリマトリックスの場合は、基本的に、クォンタムコンピューティングで検出された唯一のマトリックスである、[*スペクトル定理*](https://en.wikipedia.org/wiki/Spectral_theorem)と呼ばれる一般的な結果があります。これは、次のことをアサートします。 Hermitian または行列 $M $ の場合は、$M = U ^-ダガー D U $ (対角線のあるマトリックスの $D $) を $U するために、'% ' を使用します。 さらに、$D $ の対角線のエントリは $M $ の固有値になります。
+Hermitian およびユニタリマトリックスの場合は、実質的に、クォンタムコンピューティングで検出された唯一のマトリックスである、[*スペクトル定理*](https://en.wikipedia.org/wiki/Spectral_theorem)と呼ばれる一般的な結果があります。これは、次のことをアサートします。 Hermitian または行列 $M $ の場合 $U、$M = U ^-ダガー D U $ が斜めの行列 $D $ になります。 さらに、$D $ の対角線のエントリは $M $ の固有値になります。
 
 $D $ のように、対角線行列の固有値と固有ベクトルを計算する方法は既にわかっています。 この定理を使用すると、$ が $D $ の eigenvector (eigenvalue $c $、つまり $Dv = cv $) である $v 場合、$U ^ eigenvector は eigenvalue $M $ で $c $ のになります。 これは、
 
@@ -55,7 +55,7 @@ $ $ e ^ A = \ bold 完了 + A + \frac{A ^ 2} {2!}+ \frac{A ^ 3} {3!}+ \ cドッ�
 
 マトリックスの指数を計算する方法を理解する最も簡単な方法は、そのマトリックスの固有値と固有ベクトルを使用することです。  具体的には、前に説明したスペクトル定理は、すべての Hermitian またはマトリックスに $A $ と、$A = U ^ \ ダガー D U $ のような、$ $D $ という斜線行列が $U 存在することを示しています。  Unitarity のプロパティが原因で、^ 2 = U ^ \ ダガー D ^ 2 U $ $A、任意のパワー $p $ $A ^ p = U ^ \ ダガー D ^ p U $ と同様になりました。  これを演算子指数の演算子定義に置き換えると、次のようになります。
 
-$ $ e ^ A = U ^ \ ← \ left (\ bold done + D + \frac{D ^ 2} {2!}+/cdpi-right) U = U ^ \ ダガー \begin{bmatrix}\exp (D_{11}) & 0 & & 0\\\\ 0 & \ exp (D_{22}) &/cドット & 0\\\\ \ vドット & \ vドット & \ dドット & \ vドット\\\\ 0& 0 &/cドット & \ exp (D_ {NN}) \end{bmatrix} U $ $
+$ $ e ^ A = U ^ \ ← \ left (\ bold done + D + \frac{D ^ 2} {2!}+/cドット \ 右) U = U ^ \ ダガー \begin{bmatrix}\exp (D_{11}) & 0 &/cドット & 0\\\\ 0 & \ exp (D_{22}) & 0\\\\ \ vドット & \ vドット & \ dドット & \ vドット\\\\ 0 & 0 & \ ドット & \ exp (D_ {NN}) \end{bmatrix} U。 $ $
 
 つまり、マトリックスの eigenbasis に変換する場合 $A $ の後に行列指数を計算することは、マトリックスの eigenbasis の通常の指数を計算することと同じです。  クォンタムコンピューティングにおける多くの操作には、matrix 指数の実行が含まれています。そのため、マトリックスの eigenbasis に変換することで、演算子指数の実行が簡単になり、次のような多くのクォンタムアルゴリズムの基礎となります。Trotter –このガイドの後半で説明する Suzuki のクォンタムシミュレーション方法。
 

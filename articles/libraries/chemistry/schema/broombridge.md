@@ -1,16 +1,17 @@
 ---
 title: Broombridge-量子化学スキーマ
+description: Microsoft Quantum Development Kit で実際の化学の問題をモデル化するために使用される Broombridge quantum の化学スキーマの概要。
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.broombridge
-ms.openlocfilehash: c2a7636d0b3f07419e3312e04da5d811229ad854
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a746b63055bb1b2c1168b89993a7459ca9597f86
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185326"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907819"
 ---
 # <a name="broombridge-quantum-chemistry-schema"></a>Broombridge 量子化学スキーマ # 
 
@@ -23,9 +24,8 @@ YAML ベースで、Broombridge は、電子的な構造の問題を表す、ユ
 - 作成シーケンスを使用して、グラウンドと興奮の状態を表示できます。
 - エネルギーレベルの上限と下限を指定できます。
 
-データ形式は、NWChem から簡単に生成することができます。たとえば、NWChem のフルインストールから、[ここで](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests)提供されているような化学デッキを実行したり、実行の一環として docker 経由で Broombridge を出力したりするさまざまな方法が用意されています。Broombridge を化学デッキから生成するために使用することもできる NWchem の画像。 最後に、化学ソフトウェアをインストールしなくても、計算化学をすばやく開始するための視覚的な方法は、NWChem への[Emsl 矢印](https://arrows.emsl.pnnl.gov/api/qsharp_chem)インターフェイスによって提供されます。 
+データ形式は、NWChem から簡単に生成できます。たとえば、NWChem のフルインストールから、[この例](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests)のようなさまざまな方法を使用できます。また、Broombridge の一部として実行の一部として出力されます。これは、Broombridge を化学デッキから生成するためにも使用できます。 最後に、化学ソフトウェアをインストールしなくても、計算化学をすばやく開始するための視覚的な方法は、NWChem への[Emsl 矢印](https://arrows.emsl.pnnl.gov/api/qsharp_chem)インターフェイスによって提供されます。 
 
-大まかに言えば、nwchem と Microsoft Quantum Development Kit 間の相互作用は次のように視覚化できます。 ![化学スタック](~/media/broombridge.png) 青色で網掛けされたボックスは Broombridge スキーマを表し、灰色の影が付いたさまざまなボックスは他の内部を表します。現実世界の化学の問題に基づいて計算化学のクォンタムアルゴリズムを表現し、処理するために選択されたデータ表現。 
+大まかに言えば、NWChem と Microsoft Quantum Development Kit 間のクロスプレイは次のように視覚化できます。 ![化学スタック](~/media/broombridge.png) 青い網掛けされたボックスは Broombridge スキーマを表し、灰色のさまざまなボックスは、実際の化学の問題に基づいて計算化学のクォンタムアルゴリズムを表すために選択されたその他の内部データ表現を表します。 
 
 Broombridge スキーマを使用して定義されている複数の化学表現が[ここ](https://github.com/microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML)に記載されています。
-

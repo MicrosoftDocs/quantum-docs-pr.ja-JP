@@ -1,17 +1,17 @@
 ---
-title: 深さカウンター |クォンタムコンピューターのトレースシミュレーター |Microsoft Docs
-description: 量子コンピューターのトレース シミュレーターの概要
+title: 深さカウンター
+description: クォンタムプログラムで呼び出されたすべての操作の深さのカウントを収集する Microsoft QDK の深さカウンターについて説明します。
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: 07f927c794e2c62e53e4e053b5bc683d24bbed8d
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: d532a9f512b8c87d83d62ed26e3bb67e1b6f668b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820472"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906102"
 ---
 # <a name="depth-counter"></a>深さカウンター
 
@@ -37,7 +37,7 @@ operation ApplySampleWithCCNOT() : Unit {
 
 `CCNOT` に `T` 深度5があり、`ApplySampleWithCCNOT` に `T` 深さ6があることを確認するC#には、次のコードを使用します。
 
-```csharp 
+```csharp
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
@@ -61,6 +61,6 @@ double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Dept
 string csvSummary = sim.ToCSV()[MetricsCountersNames.depthCounter];
 ```
 
-## <a name="see-also"></a>関連項目 ##
+## <a name="see-also"></a>参照 ##
 
 - クォンタムコンピューターの[トレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の概要。

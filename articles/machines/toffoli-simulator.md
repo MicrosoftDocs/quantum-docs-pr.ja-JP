@@ -1,17 +1,17 @@
 ---
-title: Quantum Development Kit Toffoli シミュレーター |Microsoft Docs
-description: Microsoft の Quantum 開発キット Toffoli シミュレーターの概要
+title: Quantum Development Kit Toffoli シミュレーター
+description: Microsoft QDK Toffoli シミュレーターについて説明します。これは、何百万もの qubits で使用できる特殊な用途のクォンタムシミュレーターです。
 author: alan-geller
 ms.author: ageller@microsoft.com
 ms.date: 01/16/2019
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
-ms.openlocfilehash: 26940d1a8fe31f1035e2d23a68940cd999517c6b
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 8a29caaa0fa058600a74e7d130e644374cbfa19c
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442362"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907020"
 ---
 # <a name="quantum-development-kit-toffoli-simulator"></a>Quantum Development Kit Toffoli シミュレーター
 
@@ -46,7 +46,7 @@ Toffoli シミュレーターは何百万もの qubits と共に使用できま�
 アルゴリズムにこの値以上が必要な場合は、コンストラクターに `qubitCount` パラメーターの値を指定して、qubit カウントを変更できます。
 追加の qubit には、追加のメモリが必要であるため、必要な qubit の数を過剰に見積もることには大きなコストはかかりません。
 
-例えば次が挙げられます。
+例 :
 
 ```csharp
     var sim = new ToffoliSimulator(qubitCount: 1000000);

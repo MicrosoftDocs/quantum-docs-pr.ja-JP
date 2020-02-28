@@ -1,17 +1,17 @@
 ---
-title: Dirac 表記 |Microsoft Docs
-description: Dirac 表記
+title: ディラックの記法
+description: Dirac 表記を使用して、クォンタムの状態を表し、クォンタム操作をシミュレートする方法について説明します。
 author: QuantumWriter
 uid: microsoft.quantum.concepts.dirac
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 33d964d079c94bd947e35d2c09516b29df1bba11
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 204e56cc97fe28f9c52dcfb882aadec7e09bb2dc
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184765"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907564"
 ---
 # <a name="dirac-notation"></a>Dirac 表記
 
@@ -62,7 +62,7 @@ $ $ \ big | \braket{1 | \psi}\big | ^ 2 = \ left | \ frac{3}{5}\braket{1 | 1} + 
 ### <a name="tensor-product-notation"></a>その他の製品表記
 Dirac 表記には、その中に、暗黙的な、または製品構造も含まれています。  これは、クォンタムコンピューティングでは、2つの非相関クォンタムレジスタによって記述された状態ベクトルが2つの状態ベクトルの3つの状態ベクトルに含まれるため、重要です。  クォンタムの計算について説明する場合は、その製品構造を簡潔に説明したり、その構造を簡潔に記述したりすることが重要です。  このように、"\ket{\psi}" という構造は、任意の2つのクォンタム状態ベクトル $ \ phi $ と $-psi $ を $ \ket{\phi} $ として書き込み、$ \ket{\psi}/otimes \ket{\phi} $ として明示的に記述することもできます。ただし、慣例では $ otimes $ と記述します。ベクターは不要です。  たとえば、2つの qubits がゼロ状態に初期化された状態は、
 
-$ $ \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}。 otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \ket{0} \otimes \ket{0}= \ket{0} \ket{0}。
+$ $ \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \ket{0}/otimes \ket{0}= \ket{0} \ket{0}。
 $$
 
 同様に、整数 $p $ の state $ \ket{p} $ は、バイナリ表現でエンコードされるクォンタム状態を表します。これは、整数 $p $ です。  たとえば、符号なしのバイナリエンコーディングを使用して数値 $5 $ を表現する場合は、次のように表現することもできます。
@@ -78,7 +78,7 @@ $$
 ### <a name="example-describing-superposition-with-dirac-notation"></a>例: Dirac 表記で法則を記述する
 Dirac 表記を使用してクォンタムの状態を記述するもう1つの例として、法則の可能性のあるすべてのビット文字列に対して同等のクォンタム状態を記述する次の同等の方法を検討してください $n $
 
-$ $ H ^ {\ otimes n} \ket{0} = \ frac{1}{2 ^ {n/2}} & # {n = 0} ^ {2 ^ n-1} \ket{j} = \ket{+} ^ {/otimes n}。
+$ $ H ^ {\ otimes n} \ket{0} = \ frac{1}{2 ^ {n/2}} \ sum_ {j = 0} ^ {2 ^ n-1} \ket{j} = \ket{+} ^ {/otimes n}。
 $$
 
 ここでは、合計が $0 $ から $ 2 ^ {n}-$1 ($n $ bit) になる理由を不思議に思うかもしれません。  まず、$ 2 ^ {n} $ 異なる構成 $n $ bits で使用できることに注意してください。  これは、1つのビットが $2 $ の値を取り、2つのビットが $4 $ の値を受け取ることができることに注目してください。 一般に、これは、$ 2 ^ n $ 異なる可能性のあるビット文字列ですが、$ 1 \ cdots 1 = 2 ^ n-$1 でエンコードされた最大値であるため、合計の上限になります。
@@ -93,9 +93,9 @@ $ $ (\ alpha \ket{\psi} + \beta\ket{\phi}) \ otimes (\ gamma \ket{\chi} + \ delt
 
 Bra ベクターは、k ベクターと同様の規則に従います。  たとえば、vector $ \bra{\psi}\bra{\phi} $ は、state vector $ \ psi ^ \ ダガー-otimes/phi ^ \ ダガー = (\psi\otimes/phi) ^ \ ダガー $ と同等です。 K vector $ \ket{\psi} $ が $ \ alpha \ket{0} + \ ベータ \ket{1}$ の場合、ベクターの bra vector バージョンは $ \bra{\psi} = \ket{\psi} ^ \ ダガー = (\bra{0}\ alpha ^ * + \bra{1}\ beta ^ *) $ になります。
 
-例として、州 $ \ket{\psi} = \ frac{3}{5} \ket{1} +-frac{4}{5} \ket{0}$ を測定するためのクォンタムプログラムを使用して、状態を $ \ket{+} $ または $ \ket に測定することを考えてみます。{-}$。 デバイスが出力する確率は、状態が $ \ket{-}$ であることを示します。 
+例として、状態を $ \ket{+} $ または $ \ket {5} $ として測定するクォンタムプログラムを使用して、state $ \ket{\psi} = \ frac{3}{5} \ket{1} +-frac{4}{0}\ket{-}$ を測定する確率を計算するとします。 デバイスが出力する確率は、状態が $ \ket{-}$ であることを示します。 
 
-$ $ | \braket{-| \psi} | ^ 2 = \ left | \ frac{1}{\ sqrt{2}} (\bra{0}-\bra{1}) (\ frac{3}{5} \ket{1}) & right | ^ 2 = \ left |-\ frac{4}{5 \ sqrt {5}} +/frac{4}{5 \ sqrt{2}} \ 右 | ^ 2 = \ frac{1}{50}. $ $
+$ $ | \braket{-| \psi} | ^ 2 = \ left | \ frac{1}{\ sqrt{2}} (\bra{0}-\bra{1}) (-frac{3}{5} \ket{1} +/frac{4}{5} \ket{0}) \ right | ^ 2 = \ left |-\ frac{3}{5 \ sqrt{2}} + \ frac{4}{5 \ sqrt{2}} \ right | ^ 2 = \ frac{1}{50}。 $ $
 
 確率の計算で負の符号が表示されるのは、クォンタムの干渉の取り組みです。これは、クォンタムコンピューティングが古典的なコンピューティングよりも優れているというメカニズムの1つです。
 
@@ -132,7 +132,7 @@ $$
 
 これは、列ベクトル表記を使用する multiqubit の likelihoods の測定値についての説明と一致していることがわかります。
 
-$ $ P (\ text1> 最初の qubit = 1}) = \ psi ^ \ ダガー (e\_{10}e\_{10}^ \ ダガー + e\_{11}e\_{11}^-ダガー)-psi = | e\_{10}^-ダガー | ^ 2 + | e\_{11}^ \ダガー | ^ 2、$ $
+$ $ P (\ text{最初の qubit = 1}) = \ psi ^ \ ダガー (e\_{10}e\_{10}^ \ ダガー + e\_{11}e\_{11}^-ダガー)-psi = | e\_{10}^-ダガー/psi | ^ 2 + | e\_{11}^ \ ダガー/psi | ^ 2、$ $
 
 これは、multi-factor bit の測定に関する議論に一致します。  ただし、この結果をマルチ qubit ケースに汎化することは、列ベクトル表記よりも Dirac 表記法を使用する方が少し単純で、前の処理とまったく同じです。
 
@@ -146,4 +146,3 @@ Dirac 表記を使用して表すもう1つの便利な演算子は、*密度演
 
 ## <a name="q-gate-sequences-equivalent-to-quantum-states"></a>"クォンタム" 状態に相当する Q # ゲートシーケンス
 クォンタム表記と Q # プログラミング言語については、最後に説明します。このドキュメントでは、クォンタムの状態がクォンタムコンピューティングにおける情報の基本的なオブジェクトであることを説明しました。  その後、Q # では、クォンタム状態の概念がないことが不思議になるかもしれません。  すべての状態は、その準備に使用された操作によってのみ記述されます。  前の例は、このことを示す優れた図解です。  レジスタ内のすべてのクォンタムビット文字列に対して uniform 法則を表現するのではなく、結果を ^ {\ otimes n} \ket{0}$ $H として表すことができます。  これは、その理由をクラシックデプロイことができるという利点だけでなく、アルゴリズムを実装するためにソフトウェアスタックを通じて伝達される必要がある操作を簡潔に定義することもできます。  このため、Q # はクォンタムの状態ではなくゲートシーケンスを生成するように設計されています。ただし、理論的なレベルでは、2つのパースペクティブは同等です。
-

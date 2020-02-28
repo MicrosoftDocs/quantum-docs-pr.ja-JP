@@ -1,17 +1,17 @@
 ---
-title: クォンタム回線 |Microsoft Docs
-description: 量子回路
+title: 量子回路
+description: クォンタム回路図を使用して単純で複雑なクォンタム操作を視覚的に表現する方法について説明します。
 author: QuantumWriter
 uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: fe845aa0dde7c780ea6721dfe2559119e90b4aa5
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 8ba4648f1837065d15957a01ab4ca8dd2d490a42
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820795"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77905150"
 ---
 # <a name="quantum-circuits"></a>クォンタム回線
 ここでは、ユニタリ変換 $ \ text{CNOT} _{01}(hotimes 1) $ について考えてみます。
@@ -24,7 +24,7 @@ $ $ \mathrm{CNOT}_{01}(hotimes 1) \ket{00} = \ frac{1}{\ sqrt{2}} \ left (\ket{0
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/Concepts1.png)
+下回っありの2つの状態の ![回路図](~/media/Concepts1.png)
 
 ## <a name="quantum-circuit-diagram-conventions"></a>クォンタム回路図の表記規則
 このクォンタム操作のビジュアル言語は、クォンタム回線を表現するための規則を理解した後に、同等のマトリックスを書き出すよりも簡単に消化できます。
@@ -37,9 +37,9 @@ $ $ \mathrm{CNOT}_{01}(hotimes 1) \ket{00} = \ frac{1}{\ sqrt{2}} \ left (\ket{0
 
 <!--- ![](.\media\2.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_2.png)
+シングル qubit レジスタ](~/media/concepts_2.png) に対して動作する Hadamard 操作の ![シンボル
 
-[Hadamard](xref:microsoft.quantum.intrinsic.h)ゲートは、シングル qubit レジスタに対して動作します。
+は、シングル qubit レジスタに対して動作する[Hadamard](xref:microsoft.quantum.intrinsic.h)操作です。
 
 クォンタムゲートは、ゲートが最初に qubits に適用されたときの左端のゲートと共に、時系列順に並べられます。
 つまり、回線をクォンタム状態のままにしている場合、ワイヤは図の各ゲートを通じて、左から右にクォンタムの状態を取り込みます。
@@ -47,7 +47,7 @@ $ $ \mathrm{CNOT}_{01}(hotimes 1) \ket{00} = \ frac{1}{\ sqrt{2}} \ left (\ket{0
 
 <!--- ![](.\media\3.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_3.png)
+![のクォンタムゲートの図が左から右に適用されてい](~/media/concepts_3.png)
 
 は、$CBA が $ であることを示します。
 行列乗算は反対の規則に従います。最初に右端の行列が適用されます。 ただし、量子回線図では、最初に一番左のゲートが適用されます。
@@ -65,7 +65,7 @@ $ $ \mathrm{CNOT}_{01}(hotimes 1) \ket{00} = \ frac{1}{\ sqrt{2}} \ left (\ket{0
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_4.png)
+2つの "](~/media/concepts_4.png)" の ![のを持つサーキットダイアグラム
 
 また、回線が使用されているコンテキストに応じて、2 1-qubit レジスタではなく、1つの2つの2つのビットレジスタに対するアクションを持つ $B $ を表示することもできます。 このような抽象回路図の中で最も役に立つのは、複雑なクォンタムアルゴリズムを高いレベルで記述し、基本ゲートにコンパイルする必要がない場合などです。
 これは、アルゴリズム内の各サブルーチンがどのように機能するかについてすべての詳細を理解しなくても、大規模なクォンタムアルゴリズムのデータフローに関する直感を取得できることを意味します。
@@ -78,14 +78,14 @@ $ $ \mathrm{CNOT}_{01}(hotimes 1) \ket{00} = \ frac{1}{\ sqrt{2}} \ left (\ket{0
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_5.png)
+単一制御ゲート](~/media/concepts_5.png) の ![サーキットダイアグラム
 
 ここで、黒い円はゲートが制御されているクォンタムビットを表し、垂直方向のワイヤは、コントロール qubit が値 $1 $ を受け取るときに適用されるユニタリを表します。
 $G = X $ および $G = Z $ の特殊なケースでは、ゲートの制御されたバージョンを記述するために次の表記が導入されます (制御された X ゲートは[$CNOT $ gate](xref:microsoft.quantum.intrinsic.cnot)であることに注意してください)。
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_6.png)
+制御ゲートの特殊なケースの ![回路図](~/media/concepts_6.png)
 
 Q # は、操作の制御されたバージョンを自動的に生成するメソッドを提供します。これにより、プログラマは、これらの操作を手作業でコードに渡す必要がなくなります。 この例を次に示します。
 
@@ -104,7 +104,7 @@ is Ctl { // Auto-generate the controlled specialization of the operation
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![測定回路](~/media/concepts_7.png)
+測定演算を表す ![シンボル](~/media/concepts_7.png)
 
 Q # この目的のために[メジャー演算子](xref:microsoft.quantum.intrinsic.measure)を実装します。
 詳細については、[測定に関するセクション](xref:microsoft.quantum.libraries.standard.prelude#measurements)を参照してください。
@@ -113,7 +113,7 @@ Q # この目的のために[メジャー演算子](xref:microsoft.quantum.intri
 
 <!--- ![](.\media\8.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_8.png)
+制御された操作を表す回路図 ![](~/media/concepts_8.png)
 
 クラシックデプロイ制御ゲートを提供します。 $G $ は、$1 $ という従来の制御ビットで条件付きで適用されます。
 
@@ -125,4 +125,4 @@ Q # この目的のために[メジャー演算子](xref:microsoft.quantum.intri
 次に、クォンタムの例を示します。また、クォンタム回線の読み取り方法を示すために、回路の注釈付きバージョンも提供します。
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
-![](~/media/concepts_tp2.png)
+![クォンタムの接続](~/media/concepts_tp2.png)

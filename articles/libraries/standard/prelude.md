@@ -1,17 +1,17 @@
 ---
-title: 'Q # 標準ライブラリ-準備 |Microsoft Docs'
-description: 'Q # 標準ライブラリ-準備'
+title: QDK の組み込みの操作と関数
+description: QDK の組み込みの操作と関数について説明します。これには、従来の関数、ユニタリ、ローテーション、測定演算が含まれます。
 author: QuantumWriter
 uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: dddb3d4a5ebcdca16da41a5ae5520d98ea900a7f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: b1c26c632f36b6c254d940a89b13638f7592ab80
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73183235"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907207"
 ---
 # <a name="the-prelude"></a>準備 #
 
@@ -27,7 +27,7 @@ ms.locfileid: "73183235"
 - 測定を実装する操作。
 
 Clifford + $T $ gate セットは、クォンタムコンピューティングでは[universal](xref:microsoft.quantum.concepts.multiple-qubits)であるため、これらの操作では negligibly 小規模エラーの中で、クォンタムアルゴリズムをほぼ実装することができます。
-また、回転を提供することにより、プログラマは単一の qubit のユニタリおよび CNOT gate ライブラリ内で作業できるようになります。 このライブラリは、プログラマが Clifford + $T $ 分解を直接表現する必要がなく、1つの qubit unitaries を Clifford および $T $ ゲートにコンパイルするための非常に効率的なメソッドが存在するため、より簡単に考えることができます ([こちら](xref:microsoft.quantum.more-information)を参照してください)。を参照してください)。
+また、回転を提供することにより、プログラマは単一の qubit のユニタリおよび CNOT gate ライブラリ内で作業できるようになります。 このライブラリは、プログラマが Clifford + $T $ 分解を直接表現する必要がないため、また、1つの qubit unitaries を Clifford および $T $ ゲートにコンパイルするための非常に効率的なメソッドが存在するため、より簡単に考えることができます (詳細について[は、こちら](xref:microsoft.quantum.more-information)を参照してください)。
 
 可能であれば、qubits で動作する準備に定義されている操作によって、ターゲットコンピューターが適切な分解を実行するように `Controlled` variant を適用できます。
 
@@ -96,17 +96,17 @@ Hadamard ゲートは、$ \ket{0}$ と $ \ket{1}$ states の法則を作成す�
 \ begin{FIXME} \begin{bmatrix} 1 & 0 \\\\%: 現在、quadwhack ハックが使用されています。
 0 & i \end{bmatrix} です。
 
-#### <a name="rotations"></a>中心 ####
+#### <a name="rotations"></a>回転 ####
 
 上記の P準備 Li および Clifford 操作に加えて、Q # のには、回転を表すさまざまな方法が用意されています。
 「[シングル qubit 操作](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)」で説明されているように、ローテーションすることは、クォンタムアルゴリズムにとって重要です。
 
-最初に、$H $ と $T $ ゲートを使用して任意の1つのシングル qubit 操作を表すことができることを呼び出します。ここで、$H $ は Hadamard 操作、where は \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\% FIXME: 現在はクワッドバックを使用します。たたくハック。
+最初に、$H $ と $T $ ゲートを使用して任意の1つのシングル qubit 操作を表すことができることを呼び出します。 $H ここで、$ は Hadamard 操作、where は \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\% FIXME: 現在は quad back たたくハックを使用します。
 0 & e ^ {i \ pi/4} \end{bmatrix} です。これは、$T ^ 2 = S $ のような <xref:microsoft.quantum.intrinsic.s> 操作の平方根です。
 $T $ gate は、<xref:microsoft.quantum.intrinsic.t> 操作によって実装されています。また、`(Qubit => Unit is Adj + Ctl)`シグネチャがあります。これは、これが単一の qubit に対する1回の処理であることを示しています。
 
 これは、任意のシングル qubit 操作を記述するのに十分な原理ですが、準備にはさまざまな方法があるため、さまざまなターゲットマシンで Pauthentication Li 演算子についての回転をより効率的に行うことができます。このような回転を高速にします。
-これらの最も基本的な操作は、<xref:microsoft.quantum.intrinsic.r> 操作です。指定された P\mathrel{の軸の周りの回転を実装する、\ begin{? ation} R (-σ、\ phi): =} \ exp (-i/phi/シグマ/2)、\ end{の場合は、$/シグマ $ は、角度、$、および $\ exp $ は、行列指数を表します。
+これらの最も基本的な操作は、指定された P# li 軸を中心とした回転を実装する <xref:microsoft.quantum.intrinsic.r> 操作です。 \mathrel{: =} \ exp (-i/phi/シグマ/2),、\ end{の場合は、$/シグマ $ は角度、$ \、$ $ $ exp $ は指数を表します。 $/を指定します (& a) (& a)。
 これには `((Pauli, Double, Qubit) => Unit is Adj + Ctl)`のシグネチャがあります。ここで、入力の最初の2つの部分は、$R (-シグマ, \ phi) $ のように、最も前の引数 $-シグマ $ と $/phi $ を表します。
 $-シグマ $ と $/phi $ を部分的に適用して、1つの型が単一の qubit の読み込み操作を取得することができます。
 たとえば、`R(PauliZ, PI() / 4, _)` には `(Qubit => Unit is Adj + Ctl)`型があります。
@@ -155,7 +155,7 @@ Bloch 球にマップされた (このインスタンスの p Li $Z $ axis を�
 
 準備では、上記のシングル qubit 操作に加えて、複数のマルチ qubit 操作も定義します。
 
-最初に、<xref:microsoft.quantum.intrinsic.cnot> 操作は、標準の制御された`NOT` ゲート \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 を実行しています。\\\\ 0 & 0 & 1 & 0 \end{bmatrix}.
+まず、<xref:microsoft.quantum.intrinsic.cnot> 操作は、標準の制御された`NOT` ゲートを実行します。 \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix}.
 & # {unitarily} には、`((Qubit, Qubit) => Unit is Adj + Ctl)`シグネチャがあります。これは、$-name{cnot} $ が2つの個別の qubits で動作することを表します。
 `CNOT(q1, q2)` は `(Controlled X)([q1], q2)`と同じです。
 `Controlled` のファンクタではレジスタの制御が可能であるため、配列リテラル `[q1]` を使用して、1つのコントロールのみが必要であることを示します。
@@ -165,7 +165,7 @@ Bloch 球にマップされた (このインスタンスの p Li $Z $ axis を�
 `CCNOT(q1, q2, q3)` は `(Controlled X)([q1, q2], q3)`と同じです。
 
 <xref:microsoft.quantum.intrinsic.swap> 操作は、2つの qubits のクォンタム状態を交換します。
-つまり、このメソッドは、ユニタリ行列を実装します。 \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 になり &0 & 0 & 1 \end{bmatrix}.
+つまり、このメソッドは、ユニタリ行列を実装します。 \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}. になります。
 & end{の場合は、署名 `((Qubit, Qubit) => Unit is Adj + Ctl)`ます。
 `SWAP(q1,q2)` は、`CNOT(q1, q2)` の後に `CNOT(q2, q1)` を付けてから `CNOT(q1, q2)`することと同じです。
 
@@ -176,7 +176,7 @@ Bloch 球にマップされた (このインスタンスの p Li $Z $ axis を�
 > Fredkin gate とも呼ばれる、制御されたスワップゲートは、すべての従来の計算を含めるのに十分な性能を備えています。
 
 最後に、準備には、マルチ qubit の指数演算子を表す2つの操作が用意されています。
-<xref:microsoft.quantum.intrinsic.exp> 操作は、P# li マトリックスのすべての製品に基づいて回転を実行します。マルチ qubit の検索によって表されるようになりました。-\mathrel{: =} \ (\ vec{-sigma}, \ phi): =} > を実行しています (& o) (& a) (&)、cdots/otimes \sigma_n)、\ end{\sigma_n) $ ここで、$-vec{/sigma} = (-sigma/0, \ sigma_1, \ ドット,) $ は、シングル qubit の p Li 演算子のシーケンスであり、$ + phi $ は角度です。
+<xref:microsoft.quantum.intrinsic.exp> 操作では、複数の Pforce Li マトリックスの製品に基づいて回転を実行します。これには、マルチ qubit の場合は、(-vec{/sigma}) という形式で表されます。 \ phi) \mathrel{: =} \ left (i/phi \ sigma_0/otimes \ sigma_1 \ sigma_n)、\ end{-& lt; & lt; & lt; & lt; & lt; & lt; & lt; & lt; & lt; & lt; & lt; $ & lt; sigma_0 \ sigma_1, \ ドット, \ sigma_n) $ は、single qubit の一連の演算子で、$ \ phi $ は角度を表します。
 `Exp` ローテーションは、シグネチャ `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`を持つように、`Pauli` 要素の配列として $ \ vec{{sigma} $ を表します。
 
 <xref:microsoft.quantum.intrinsic.expfrac> 操作では、上で説明した dyadic の小数点表記法を使用して、同じローテーションを実行します。
@@ -186,7 +186,7 @@ Bloch 球にマップされた (このインスタンスの p Li $Z $ axis を�
 > 指数演算子のすべての操作は、指数または p Li オペレーターのの製品と同じではありません。
 > つまり、$e ^ {i (Z/otimes Z) \phi} \n e e ^ {i Z \phi}/otimes e ^ {i Z \phi} $。
 
-### <a name="measurements"></a>測定値 ###
+### <a name="measurements"></a>測定 ###
 
 測定する場合、測定される演算子の + 1 eigenvalue は、`Zero` の結果に対応し、-1 eigenvalue が `One` の結果になります。
 
@@ -204,7 +204,7 @@ P# li 配列と qubit 配列の長さが異なる場合、操作は失敗しま�
 ジョイント測定は、各 qubit を個別に測定するのと同じではないことに注意してください。
 たとえば、state $ \ket{11} = \ket{1} \ otimes \ket{1} = xotimes X \ket{00}$ とします。
 各 $Z 0 $ と $Z _1 $ を個別に測定すると、$r 0 = $1 および $r _1 = $1 の結果が得られます。
-ただし $Z 0 Z_1 $ を測定すると、1つの結果 $r _ {\textrm{joint}} = $0 となります。これは、$ \ket{11}$ の pairity が正であることを表します。
+$Z 0 Z_1 $ を測定すると、1つの結果 $r _ {\textrm{joint}} = $0 となり、$ \ket{11}$ の pairity が正であることを表します。
 異なる形式で、$ (-1) ^ {r_0 + r_1} = (-1) ^ r_ {\textrm{joint}}) $ と指定します。
 非常に大きなことですが、この測定からはパリティを学習する*だけ*なので、法則に示されている、正のパリティの 2 2-qubit の状態間のクォンタム情報 ($ \ket{00}$ と $ \ket{11}$) は保持されます。
 このプロパティは、エラー修正について説明するため、後で必要になります。
@@ -235,7 +235,7 @@ Quantum 開発キットによって提供される実装では、従来の .NET 
 これによってローカルシミュレーターに問題が発生することはありませんが、リモートシミュレーターまたは実際のハードウェアをターゲットコンピューターとして使用すると、パフォーマンスの問題が発生する可能性があります。
 ただし、個々のターゲットコンピューターは、このような操作を特定のシステムにとってより効率的なバージョンで上書きすることによって、このパフォーマンスへの影響を軽減することができます。
 
-### <a name="math"></a>数値演算 ###
+### <a name="math"></a>算術 ###
 
 <xref:microsoft.quantum.extensions.math> 名前空間には、.NET 基本クラスライブラリの[`System.Math` クラス](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)の便利な関数が多数用意されています。
 これらの関数は、他の Q # 関数と同じ方法で使用できます。

@@ -1,17 +1,17 @@
 ---
-title: 'Q # スタイルガイド |Microsoft Docs'
-description: 'Q # スタイルガイド'
+title: 'Microsoft Q # スタイルガイド'
+description: 'Q # プログラムおよびライブラリの名前付け、入力、ドキュメント、および書式設定の規則について説明します。'
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 3c8e432378ec563a197a5b87000c3e90cadb8e18
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463311"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907445"
 ---
 # <a name="q-style-guide"></a>Q # スタイルガイド #
 ## <a name="general-conventions"></a>一般的な規則 ##
@@ -49,7 +49,7 @@ Quantum 開発キットの提供では、quantum 開発者が簡単に読むこ�
 > その観点からは、ユーザー定義型に名詞という名前を付けて、型自体とコンストラクター関数の名前が一貫している必要があります。
 
 適切であれば、操作の名前は、操作によって行われた効果を明確に示す動詞で始まることを確認してください。
-例えば次が挙げられます。
+例 :
 
 - `MeasureInteger`
 - `EstimateEnergy`
@@ -65,9 +65,9 @@ Quantum 開発キットの提供では、quantum 開発者が簡単に読むこ�
 | 適用 | 入力として指定された操作が呼び出されます。 |
 | Assert | シミュレーターによって実行されるクォンタム測定の結果に関する仮説 |
 | 見積もり | 1つ以上の測定値からの推定値を表す、古典的な値が返されます。 |
-| 計測 | クォンタム測定が実行され、その結果がユーザーに返されます。 |
+| Measure | クォンタム測定が実行され、その結果がユーザーに返されます。 |
 | 準備 | 指定された qubits のレジスタは、特定の状態に初期化されます |
-| サンプル (英語) | 古典的な値は、ある分布からランダムに返されます。 |
+| サンプル | 古典的な値は、ある分布からランダムに返されます。 |
 
 関数の場合は、一般的な名詞を優先して動詞を使用しないことをお勧めします (以下の適切な名詞に関するガイダンスを参照してください)。または形容詞:
 
@@ -80,7 +80,7 @@ Quantum 開発キットの提供では、quantum 開発者が簡単に読むこ�
 この名前には、以下で説明するように、組み込みの `Controlled` ファンクタのセマンティクスと照合するという追加の利点があります。
 同様に、_エージェント名詞_を使用して、`Encode`に厳密に関連付けられた UDT の名前 `Encoder` の場合のように、操作名から関数名や UDT 名を作成できます。
 
-# <a name="guidancetabguidance"></a>[ガイダンス](#tab/guidance)
+# <a name="guidance"></a>[ガイダンス](#tab/guidance)
 
 次のことをお勧めします。
 
@@ -91,9 +91,9 @@ Quantum 開発キットの提供では、quantum 開発者が簡単に読むこ�
 - すべてのローカル変数に対して、`CamelCase`、`snake_case`、または `ANGRY_CASE`に `pascalCase` を使用します。 特に、ローカル変数の先頭が小文字であることを確認します。
 - 関数名と操作名にアンダースコア `_` を使用しないようにします。階層の追加レベルが必要な場合は、名前空間と名前空間のエイリアスを使用します。
 
-# <a name="examplestabexamples"></a>[例](#tab/examples)
+# <a name="examples"></a>[使用例](#tab/examples)
 
-|   | EnableAdfsAuthentication | description |
+|   | Name | 説明 |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | 操作の効果を示すには、動詞 ("リフレクト") の使用をクリアします。 |
 | ☒ | <s>`operation XRotation`</s> | 名詞句の使用は、操作ではなく、関数を提案します。 |
@@ -132,7 +132,7 @@ is Adj + Ctl {
 }
 ```
 
-# <a name="guidancetabguidance"></a>[ガイダンス](#tab/guidance)
+# <a name="guidance"></a>[ガイダンス](#tab/guidance)
 
 次のことをお勧めします。
 
@@ -141,9 +141,9 @@ is Adj + Ctl {
 - 短い (2 文字) 頭字語と頭字語には大文字を使用します。
 - `CamelCase` は、頭字語と頭字語を長く (3 文字以上) 使用します。
 
-# <a name="examplestabexamples"></a>[例](#tab/examples)
+# <a name="examples"></a>[使用例](#tab/examples)
 
-|   | EnableAdfsAuthentication | description |
+|   | Name | 説明 |
 |---|------|-------------|
 | ☑ | `X` | 「$X $ transformation の適用」の短縮形 |
 | ☑ | `CNOT` | "制御された-NOT" の短縮形 |
@@ -168,17 +168,17 @@ While we must maintain the history and intellectual provenance of concepts in qu
 具体的な例として、1つの制御されていないスワップとダブル制御されていない操作は、教育機関の資料では "Fredkin" および "Toffoli" 操作と呼ばれますが、主に Q # では `CSWAP` と `CCNOT`として識別されます。
 どちらの場合も、API ドキュメントコメントは、適切な名詞に基づいて、適切なすべての引用文と同義の名前を提供します。
 
-この設定は、適切な名詞の一部の使用が常に必要であるという点で特に重要です。 Q # は、多くの従来の言語で設定されているようになります。また、はブール型のロジックへの参照で `Bool` 型を表します。(ジョージ Boole)
+この設定は、適切な名詞の一部の使用が常に必要であるという点で特に重要です。 Q # は、多くの従来の言語で設定されているようになります。また、は、ブール型のロジックを参照する `Bool` 型を表します。
 同様に、いくつかのクォンタムの概念も同様の方法で名前が付けられます。これには、Q # 言語に組み込まれている `Pauli` 型も含まれます。
 適切な名詞の使用を最小限に抑えて、そのような用途が重要ではない場合は、適切な名詞があまり避けられないような影響を軽減します。
 
-# <a name="guidancetabguidance"></a>[ガイダンス](#tab/guidance) 
+# <a name="guidance"></a>[ガイダンス](#tab/guidance) 
 
 次のことをお勧めします。
 
 - 名前には適切な名詞を使用しないようにしてください。
 
-# <a name="examplestabexamples"></a>[例](#tab/examples)
+# <a name="examples"></a>[使用例](#tab/examples)
 
 ***
 
@@ -188,19 +188,19 @@ Q # は厳密かつ厳密に型指定された言語であるため、1つの型
 これは、値が暗黙的に型を変更できるようにする言語 (例: 型の上位変換)、またはキャストを使用した場合とは対照的です。
 その結果、型変換関数は、Q # ライブラリ開発で重要な役割を果たし、名前付けに関してよく発生する決定の1つを構成します。
 ただし、型変換は常に_決定的_であるため、関数として記述することができます。そのため、上記のアドバイスに従ってください。
-具体的には、型変換関数を動詞 (例: `ConvertToX`) または副詞 prepositional フレーズ (`ToX`) として指定しないことをお勧めしますが、変換元と変換先の型を示す形容詞 prepositional 指定語句として名前を付けることをお勧めします (`XAsY`)。
+具体的には、型変換関数を動詞 (例: `ConvertToX`) または副詞 prepositional フレーズ (`ToX`) として指定しないことをお勧めします。ただし、ソースと宛先の型 (`XAsY`) を示す形容詞 prepositional 指定語句として名前を付けることをお勧めします。
 型変換関数の名前で配列の型を一覧表示する場合は、短縮 `Arr`をお勧めします。
 例外的な状況を発生させないように、すべての型変換関数には `As` を使用して名前を付け、迅速に識別できるようにすることをお勧めします。
 
-# <a name="guidancetabguidance"></a>[ガイダンス](#tab/guidance)
+# <a name="guidance"></a>[ガイダンス](#tab/guidance)
 
 次のことをお勧めします。
 
 - 関数が `X` 型の値を `Y`型の値に変換する場合は、`AsY` または `XAsY`のいずれかの名前を使用します。
 
-# <a name="examplestabexamples"></a>[例](#tab/examples)
+# <a name="examples"></a>[使用例](#tab/examples)
 
-|   | EnableAdfsAuthentication | description |
+|   | Name | 説明 |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | 前置詞 "to" は、関数ではなく操作を示す動詞句を生成します。 |
 | ☒ | <s>`AsDouble`</s> | 入力の型は、関数名からは明確ではありません。 |
@@ -215,22 +215,22 @@ Q # は厳密かつ厳密に型指定された言語であるため、1つの型
 関数や操作に名前を付けて、内部のみのコードに誤った依存関係が明らかになるようにする場合は、このことを明確に示すことをお勧めします。
 操作または関数が直接使用するためのものではなく、部分的なアプリケーションによって動作する一致する呼び出し元によって使用される必要がある場合は、部分的に適用される呼び出し可能な `_` で始まる名前を使用することを検討してください。
 
-# <a name="guidancetabguidance"></a>[ガイダンス](#tab/guidance)
+# <a name="guidance"></a>[ガイダンス](#tab/guidance)
 
 次のことをお勧めします。
 
 - 関数、操作、またはユーザー定義型が Q # ライブラリまたはプログラムのパブリック API の一部ではない場合は、その名前が先頭のアンダースコア (`_`) で始まることを確認します。
 
-# <a name="examplestabexamples"></a>[例](#tab/examples)
+# <a name="examples"></a>[使用例](#tab/examples)
 
-|   | EnableAdfsAuthentication | description |
+|   | Name | 説明 |
 |---|------|-------------|
 | ☒ | <s>`ApplyDecomposedOperation_`</s> | アンダースコア `_` は、名前の末尾には記述できません。 |
 | ☑ | `_ApplyDecomposedOperation` | 先頭にあるアンダースコア `_` は、この操作が内部でのみ使用されることを明確に示しています。 |
 
 ***
 
-### <a name="variants"></a>△ ###
+### <a name="variants"></a>バリエーション ###
 
 この制限は、Q # の将来のバージョンでは保持されない場合がありますが、現在のところ、関連する操作のグループ、またはその入力がサポートしている機能や、引数の具象型によって区別される関数のグループが存在することがあります。
 これらのグループは、同じルート名を使用し、そのバリアントを示す 1 ~ 2 文字で区別できます。
@@ -244,14 +244,14 @@ Q # は厳密かつ厳密に型指定された言語であるため、1つの型
 | `D` | 入力または入力の型が `Double` |
 | `L` | 入力または入力の型が `BigInt` |
 
-# <a name="guidancetabguidance"></a>[ガイダンス](#tab/guidance)
+# <a name="guidance"></a>[ガイダンス](#tab/guidance)
 
 次のことをお勧めします。
 
 - 関数または演算が、入力の型およびファンクタのサポートによって類似の関数や操作に関連付けられていない場合は、サフィックスを使用しないでください。
 - 関数または演算が、入力の型およびファンクタのサポートによって類似の関数または演算に関連付けられている場合は、上記の表のようにサフィックスを使用して、バリアントを区別します。
 
-# <a name="examplestabexamples"></a>[例](#tab/examples)
+# <a name="examples"></a>[使用例](#tab/examples)
 
 ***
 
@@ -261,7 +261,7 @@ Q # は厳密かつ厳密に型指定された言語であるため、1つの型
 同様に、入力と型引数の名前は、指定された関数または引数の使用方法を伝達する必要があります。
 
 
-# <a name="guidancetabguidance"></a>[ガイダンス](#tab/guidance)
+# <a name="guidance"></a>[ガイダンス](#tab/guidance)
 
 次のことをお勧めします。
 
@@ -276,7 +276,7 @@ Q # は厳密かつ厳密に型指定された言語であるため、1つの型
   特に、1文字の変数名をインデックスとして使用するのは避けてください。少なくとも `idx` を使用することを検討してください。
 - 配列の長さを保持するために使用される変数は `n` で始まる必要があります (例: `nThings`)。
 
-# <a name="examplestabexamples"></a>[例](#tab/examples)
+# <a name="examples"></a>[使用例](#tab/examples)
 
 ***
 
@@ -285,7 +285,7 @@ Q # は厳密かつ厳密に型指定された言語であるため、1つの型
 ユーザー定義型の名前付き項目には、UDT コンストラクターへの入力でも `CamelCase`として名前を付ける必要があります。
 これは、アクセサー表記 (例: `callable::Apply`) やコピーと更新の表記 (`set arr w/= Data <- newData`) を使用する場合に、名前付き項目をローカルスコープ変数への参照から明確に分離するために役立ちます。
 
-# <a name="guidancetabguidance"></a>[ガイダンス](#tab/guidance)
+# <a name="guidance"></a>[ガイダンス](#tab/guidance)
 
 次のことをお勧めします。
 
@@ -294,9 +294,9 @@ Q # は厳密かつ厳密に型指定された言語であるため、1つの型
 - 操作に解決されない名前付きの項目には、名詞句として名前を付ける必要があります。
 - 操作をラップする Udt の場合は、`Apply` という名前の単一の項目を定義する必要があります。
 
-# <a name="examplestabexamples"></a>[例](#tab/examples)
+# <a name="examples"></a>[使用例](#tab/examples)
 
-|   | 短い | description |
+|   | 短い | 説明 |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | 名前 `Apply` は、名前付きの項目が操作であることを示す、`CamelCase`形式の動詞の語句です。 |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | 名前付き項目の先頭は大文字である必要があります。 |
@@ -342,7 +342,7 @@ operation ApplyPhaseEstimationIteration(
 たとえば、`ControlledOnInt<'T>` の型が `(Int, ('T => Unit is Adj + Ctl)) => ((Qubit[], 'T) => Unit is Adj + Ctl)`の場合、`ControlledOnInt<Qubit[]>(5, _)` は `Controlled` のファンクタと同じように動作しますが、コントロールレジスタが state $ \ket{5} = \ket{101}$ を表しているという条件に基づいています。
 したがって、開発者は、呼び出し可能なが最後に変換されるように `ControlledOnInt` 入力を要求し、結果として得られる操作は、`Controlled` のファンクタの出力の後に入力 `(Qubit[], 'T)` と同じ順序で---する必要があります。
 
-# <a name="guidancetabguidance"></a>[ガイダンス](#tab/guidance)
+# <a name="guidance"></a>[ガイダンス](#tab/guidance)
 
 次のことをお勧めします。
 
@@ -350,7 +350,7 @@ operation ApplyPhaseEstimationIteration(
 - 組み込みのファンクターと一貫性のある入力順序を使用します。
 - すべての古典入力をクォンタム入力の前に配置します。
 
-# <a name="examplestabexamples"></a>[例](#tab/examples)
+# <a name="examples"></a>[使用例](#tab/examples)
 
 ***
 
@@ -358,7 +358,7 @@ operation ApplyPhaseEstimationIteration(
 
 Q # 言語では、特別に書式設定されたドキュメントコメントを使用して、操作、関数、およびユーザー定義型にドキュメントを添付できます。
 これらのドキュメントコメントは、3つのスラッシュ (`///`) で表され、各操作、関数、およびユーザー定義型の目的、それぞれに必要な入力、およびなどを記述するために使用できる小さな[Docfx-Flavored Markdown](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)ドキュメントです。
-Quantum Development Kit に用意されているコンパイラは、これらのコメントを抽出し、それらのコメントを使用して、 https://docs.microsoft.com/quantum 時と同様の横組みドキュメントを作成します。
+Quantum Development Kit に用意されているコンパイラは、これらのコメントを抽出し、それらのコメントを使用して、 https://docs.microsoft.com/quantum時と同様の横組みドキュメントを作成します。
 同様に、Quantum 開発キットで提供されている言語サーバーは、これらのコメントを使用して、ユーザーが Q # コード内のシンボルにマウスポインターを置いたときにヘルプを提供します。
 ドキュメントコメントを使用すると、このドキュメントの他の規則を使用して簡単には表現できない詳細情報を提供することで、ユーザーがコードを理解するのに役立ちます。
 
@@ -368,14 +368,14 @@ Quantum Development Kit に用意されているコンパイラは、これら�
 
 この機能を効果的に使用してユーザーを支援するには、ドキュメントコメントを記述する際に注意することをお勧めします。
 
-# <a name="guidancetabguidance"></a>[ガイダンス](#tab/guidance)
+# <a name="guidance"></a>[ガイダンス](#tab/guidance)
 
 次のことをお勧めします。
 
 - 各パブリック関数、操作、およびユーザー定義型は、ドキュメントコメントの直前に記述する必要があります。
 - 各ドキュメントコメントには、少なくとも次のセクションが含まれている必要があります。
-    - Summary
-    - Input (入力)
+    - 要約
+    - 入力
     - 出力 (該当する場合)
 - すべての概要が2文以下であることを確認します。 より多くの領域が必要な場合は、`# Summary` の直後に `# Description` のセクションを入力します。詳細については、こちらを参照してください。
 - すべてのクライアントが概要で TeX 表記をサポートするわけではないため、適切な場合は、集計に数値を含めないでください。 Prose ドキュメント (TeX や Markdown など) を書き込む場合は、長い行の長さを使用することをお勧めします。
@@ -388,7 +388,7 @@ Quantum Development Kit に用意されているコンパイラは、これら�
 - 演算または関数が、ファンクタバリアントによって他の操作や関数に関連付けられている場合は、[`# See Also`] セクションで他のバリアントを箇条書きとして一覧表示します。
 - レベル 1 (`/// #`) のセクション間に空白のコメント行を残しておきますが、レベル 2 (`/// ##`) のセクションの間に空白行を入れないでください。
 
-# <a name="examplestabexamples"></a>[例](#tab/examples)
+# <a name="examples"></a>[使用例](#tab/examples)
 
 #### <a name=""></a>☑ ####
 
@@ -434,7 +434,7 @@ is Adj + Ctl {
 それでも、コラボレーターのグループ内では一貫した書式指定規則を維持することをお勧めします。また、Quantum 開発キット自体などの大規模な Q # プロジェクトの場合は特にそうです。
 これらの規則は、Q # コンパイラと統合された書式設定ツールを使用して自動的に適用できます。
 
-# <a name="guidancetabguidance"></a>[ガイダンス](#tab/guidance) 
+# <a name="guidance"></a>[ガイダンス](#tab/guidance) 
 
 次のことをお勧めします。
 
@@ -451,9 +451,9 @@ is Adj + Ctl {
 - 関数、操作、または UDT の名前の後、または属性宣言の `@` 後にスペースを使用しないでください。
 - 各属性の宣言は、独自の行に配置する必要があります。
 
-# <a name="examplestabexamples"></a>[例](#tab/examples)
+# <a name="examples"></a>[使用例](#tab/examples)
 
-|   | 短い | description |
+|   | 短い | 説明 |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | バイナリ演算子の前後にスペースを使用します。 |
 | ☒ | <s>`target:Qubit`</s> | 注釈のコロンを囲むにはスペースを使用します。 |

@@ -1,16 +1,17 @@
 ---
-title: Broombridge スキーマの仕様
+title: Broombridge スキーマ仕様 (ver 0.2)
+description: Microsoft quantum 化学ライブラリの Broombridge 量子化学スキーマ v 0.2 の仕様について詳しく説明します。
 author: guanghaolow
 ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
-ms.openlocfilehash: 2f4be96bc6f1e8e6fe21b93bc0d9ab2aa367fd53
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: df7e651b7d32e672c6e83346ff603132bd55c1a2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185309"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907275"
 ---
 # <a name="broombridge-specification-v02"></a>Broombridge Specification v 0.2 #
 
@@ -18,7 +19,7 @@ ms.locfileid: "73185309"
 
 見出しが "NOTE"、"情報"、または "警告" のサイドバーは役に立つものです。
 
-## <a name="introduction"></a>はじめる ##
+## <a name="introduction"></a>はじめに ##
 
 このセクションは有益です。
 
@@ -35,7 +36,7 @@ YAML にシリアル化されたオブジェクトには、値が `"https://raw.
 
 特に明記されていない限り、このドキュメントで明示的に指定されている以外のプロパティをオブジェクトに追加することはできません。
 
-## <a name="additional-definitions"></a>用語の追加定義 ##
+## <a name="additional-definitions"></a>追加の定義 ##
 
 このセクションは non-normative です。
 
@@ -129,14 +130,14 @@ Broombridge オブジェクトには、値が JSON 配列であるプロパテ�
 
 ### <a name="hamiltonian-section"></a>Hamiltonian セクション ###
 
-#### <a name="overview"></a>ユーザーとグループ ####
+#### <a name="overview"></a>概要 ####
 
 このセクションは有益です。
 
 各問題説明オブジェクトの [`hamiltonian`] プロパティには、1つまたは2つの単語の項を実数の疎配列として一覧表示することによって、特定の量子化学の問題の Hamiltonian が記述されています。
 各問題の説明オブジェクトによって記述される Hamiltonian 演算子は、
 
-$ $ H = \ sum\_\{i、j\}\ sum\_{/sigma\ in\\{\uparrow, ij\\\_}} H \{\}\{a ^\}/ダガー \_{i,、\ sigma} a\_{j, \ sigma} + \ frac{1}{2}-sum\_\{i, j, k, l\}\ sum\_{-シグマ, \r ho-in\\{\uparrow, \ downarrow\\}} h\_{ijkl} a ^-ダガー\_{i, \ sigma} a ^ ダガー\_{k, \r ho} a\_{l, \r ho} a\_{j, \ sigma}, $ $
+$ $ H = \ sum\_\{i、j\}\ sum\_{/sigma\ in\\{\uparrow, ij\\\_}} H \{\}\{a ^\}/ダガー \_{i, \ sigma} a\_{j, \ sigma} +-frac{1}{2}-sum\_\{i、j、k、l\}-sum\_{/σ、\r ho\ in\\{\uparrow, \ downarrow\\}} H\_{ijkl} a ^\_{i, \ sigma} a ^ ダガー\_{k, \r ho} a\_{l, \r ho} a\_{j, \ sigma}, $ $
 
 ここでは、Mulliken 規約で _ {ijkl} = (ij | kl ダイバージェンス) $ を $h します。
 
@@ -146,7 +147,7 @@ $ $ h_ {ij} = \ int {\mathrm d} x \ psi ^ *\_i (x) \ 左 (\ frac{1}{2}\n abla ^ 
 
 そして、次の2つの用語があります。
 
-$ $ h\_\{ijkl\} = \ iint \{\mathrm d\}x ^ 2 \ psi ^\{\*\}\_i (x\_1) \ psi\_j (x\_1) & frac\{1\}\{\|x\_1-x\_2\|\}\ psi\_k ^\{\*\}(x\_2) \ psi\_l (x\_2)。
+$ $ h\_\{ijkl\} = \ iint \{\mathrm d\}x ^ 2 \ psi ^\{\*\}\_i (x\_1) \ psi\_j (x\_1) \ frac\{1\}\{\|x\_1-x\_2\|\}\ psi\_k ^\{\*\}(x\_2) \ psi\_l (x\_2)。
 $$
 
 `integral_sets` プロパティの各要素の[`basis_set` プロパティ](#basis-set-object)について説明したように、使用されるベース関数が実際の値であることをさらに明示的に想定しています。
@@ -156,7 +157,7 @@ $ $ h_ {ijkl} = h_ {ijlk} = h_ {jikl} = h_ {jilk} = h_ {klij} = h_ {klji} = h_ {
 $$
 
 
-#### <a name="contents"></a>目次 ####
+#### <a name="contents"></a>内容 ####
 
 このセクションは non-normative です。
 
@@ -181,7 +182,7 @@ Hamiltonian オブジェクトの `one_electron_integrals` プロパティは、
 
 このセクションは有益です。
 
-次の疎配列の量は、Hamiltonian $ $ H = \ left (-5.0 (a ^\{\}\_{1, \uparrow} a\_{1, \uparrow} + a ^\{/ダガー\}\_{1, \ down←} a\_{1 を表します。、\ down\uparrow}}) + 0.17 (a ^\{\}\_{2, a\_{1, \uparrow} + a ^\{\}{1, \uparrow} a \_{2, \uparrow} + a ^\_\ ダガー\{\}{2, \ down←} a\_{1, \ down←} + a ^\{\ ダガー\}\_{1, \ down←} a\_{2, \ down←}), \mathrm{Ha}.
+次の疎配列の量は、Hamiltonian $ $ H = \ left (-5.0 (a ^\{\}\_{1, \uparrow} a\_{1, \uparrow} + a ^\{\ ダガー\}\_{1, \uparrow}\{\}{2, \uparrow} a \_{1, + a ^\_/ダガー\{\}{1, \uparrow} a \_{2, 0.17\_\uparrow} + a ^\_/ダガー\{\}{2。 \_{1, a {2, \ down←} a\_{1, \ down←} + a ^\{\ ダガー\}\_{1, \ down←} a\_{2, \ down←}), \mathrm{Ha}.\\
 $$
 
 ```yaml
@@ -206,7 +207,7 @@ Hamiltonian オブジェクトの `two_electron_integrals` プロパティは、
 
 各 `two_electron_integrals` プロパティには、`index_convention` プロパティが必要です。
 `index_convention` プロパティの値は、表1に示されている許可された値のいずれかである必要があります。
-`index_convention` の値が `mulliken`の場合、`two_electron_integrals` スパース配列の数量の各要素に対して、Broombridge ドキュメントを読み込むパーサーは、2-3-電子 $h オペレーター (_ {i, j, k, l} a ^ \dagger_i a ^ & daggera_k a_l $) と等しい Hamiltonian term をインスタンス化する必要があります。$i、$、$j $、$k $、および $l $ は、少なくとも1の整数値である必要があります。また、$h _ {i, j, k, l} $ は、疎配列の量の要素 `[i, j, k, l, h(i, j, k, l)]` です。
+`index_convention` の値が `mulliken`の場合、`two_electron_integrals` sparse 配列の数量の各要素に対して、Broombridge ドキュメントを読み込むパーサーは、2-3-電子オペレーター $h _ {i, j, k, l} a ^ \ dagger_i a ^ \ dagger_j a_k a_l $。ここで $i $、$j $、$k $、および $l $ は少なくとも1の値の整数である必要があります。 $h _ {i, j, k, l} $ は、疎配列の量の要素 `[i, j, k, l, h(i, j, k, l)]` です。
 
 ###### <a name="symmetries"></a>Symmetries ######
 
@@ -234,7 +235,7 @@ Hamiltonian オブジェクトの `two_electron_integrals` プロパティは、
 
 次のオブジェクトは、Hamiltonian を指定します。
 
-$ $ H = \frac12 \ sum\_{/シグマ, \r ho\ in\\{\uparrow,-downarrow\\}} \ biggr (1.6 a ^ {-dagger}\_{1, \ sigma} a ^ {-dagger}\_{1, \r ho} a\_{1, \r ho} a\_{1, \ sigma{1}-0.1 a ^ {-dagger}\_{6, \ sigma} a ^ {\ dagger}\_{1, \r ho} a\_{3, \r ho} a\_{2, \ sigma\_a ^ {-dagger}\_{6, \ sigma} a ^ {-0.1 dagger} a ^ {1, \r ho} a\_{2, \r ho}\_a {3,、\ sigma{1}-0.1 a ^ {\ dagger}\_{1, \ sigma} a ^ {-dagger}\_{6, \r ho} a\_{3, \r ho} a\_{3, \r ho} a ^ {1, \ sigma} a ^ {1, 0.1 \ sigma} a ^ {\_/dagger}\_{6, \r ho} a\_{2, \r ho} a\_{3, \ sigma} $ $ $ $-0.1 a ^ {\ dagger}\_{3, \ sigma} a ^ {-dagger}\_{2, \r ho} a\_{6, \r ho} a\_{1,/sigma} a ^ {-dagger}\_{3, \ sigma} a ^ {& dagger}\_{2 0.1, \r ho} a\_{1, \r ho} a\_{6,-sigma{1}-0.1 a ^ {-dagger}\_{2,/sigma} a ^ {-dagger}\_{3, \r ho} a\_{6, \r ho} a\_{1, \ sigma} a\_{1,-sigma} {2 0.1,、\ sigma} a ^ {-dagger}\_{3, \r ho} a\_{1, \r ho} a\_{6, \ sigma{1} \ biggr)\\, \T extrm{ha{2}.
+$ $ H = \frac12 \ sum\_{/シグマ, \r ho\ in\\{\uparrow, (& a)\\}} \ biggr (1.6 a ^ {\ dagger}\_{1, \ sigma} a ^ {-dagger} a ^ {1, \r ho} a\_{1, \r ho} a\_{\_1, \ sigma-0.1 a ^ {-dagger}\_{6, \ sigma} a ^ {-dagger}\_{1, \r ho} a\_{3, \r ho} a\_{3, \r ho} a ^ {6, \ sigma} a ^ {6, \ sigma} a ^ {/dagger}\_{1, \r ho} a\_{2 0.1\_, \r ho} a\_{3, \ sigma-0.1 a ^ {-dagger}\_{1, \ sigma} a ^ {\ dagger}\_{6, \r ho} a\_{3, \r ho} a\_{2, \ sigma} a ^ {-dagger}\_{1,-sigma} a ^ {-dagger}\_0.1 {6, \r ho} a\_{2, \r ho} a\_{3, \ sigma} $ $ $ $-0.1 a ^ {-dagger}\_{3, \ sigma} a ^ {\ dagger}\_{2, \r ho} a\_{6, \r ho} a\_{1, \ sigma-0.1 a ^ {-dagger}\_{3,、\ sigma} a ^ {\ dagger}\_{2, \r ho} a\_{1, \r ho} a\_{1, \r ho} a {6, \ sig\_0.1 ma} a ^ {2,-sigma} a ^ {& dagger}\_{3, \r ho} a\_{6, \r ho} a\_{1,/sigma\_-0.1 a ^ {-dagger}\_{2,/sigma} a ^ {-dagger}\_{3, \r ho} a {1, \r ho} a\_{6,/sigma/biggr)\\, \T extrm{ha$。
 $$
 
 ```yaml
@@ -263,7 +264,7 @@ two_electron_integrals:
 
 `method` プロパティの値が `sparse_multi_configurational`場合、状態オブジェクトには、ベース状態の配列とその正規化されていない振幅を含む `superposition` プロパティが必要です。
 
-たとえば、初期状態 $ $ \ket{G0} = \ket{G1} = \ket{G2} = (a ^ {-dagger}\_{1, \uparrow}a ^ {\ dagger}\_{2, \uparrow}a ^ {\ dagger}\_{2,}) \ket{0} $ $ $ $ \ket{E} = \frac{0.1 (a ^ {-dagger}\_{1, \uparrow}a ^ {\ dagger}\_{2, \uparrow}a ^ {\ dagger}\_{2, \ down\uparrow}a}) + 0.2 (a ^ {-dagger}\_{1, ^ {\ dagger}\_{3, \uparrow}a ^ {\ dagger}\_{2, \ket})} {\ sqrt{| 0.1 | ^ 2 + | 0.2 | ^ 2}}{0}$ $ $ $ \ket{E} $ がエネルギー $0.987 \T extrm{ha} $ を持つ $ $ は、によって表されます。
+たとえば、初期状態 $ $ \ket{G0} = \ket{G1} = \ket{G2} = (a ^ {\ dagger}\_{1, \uparrow}a ^ {\ dagger}\_{2, \uparrow}a ^ {\ dagger}\_{2, \ket}){0} $ $ $ $ \ket{E} = \frac{0.1 (a ^ {-dagger}\_{1, \uparrow}a ^ {\ dagger}\_{2, \uparrow}a ^ {\ dagger}\_{2, \ down\_}) + 0.2 (a ^ {/dagger} {1, \uparrow}a ^ {\ dagger}\_{3, \uparrow}a ^ {\ dagger}\_{2, \ down})} {\ sqrt{| 0.1 | ^ 2 + | 0.2 | ^ 2}} \ket{0}$ $ $ $ \ket{E} $ がエネルギー $0.987 \T extrm{ha} $ を持つ $ $ は、によって表されます。
 ```yaml
 initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
   - label: "|G0>"
@@ -296,7 +297,7 @@ JSON オブジェクトには、2つの本体のクラスター演算子とそ�
 
 $ $ \ket{\text{UCCSD}} = e ^ {T-T ^ \dagger}\ket{\text{reference}}, $ $
 
-$ $ T = 0.1 a ^ {\ dagger}\_{3, \uparrow}a\_{2, \ down\_} + 0.2 a ^ {\ dagger} {2, \uparrow}a\_{2, \ down}-0.3 a ^ {-dagger}\_{1, \uparrow}a ^ {/dagger}\_{3, {3、\uparrow}a\_{2, \ down} $ $ はによって表されます。
+$ $ T = 0.1 a ^ {\ dagger}\_{3, \uparrow}a\_{2, \ down\uparrow}a} + 0.2 a ^ {-dagger}\_{2,\_{2, \ down}-0.3 a ^ {-dagger}\_{1, \uparrow}a ^ {/dagger}\_{3, \uparrow}a\_{2, \ down} $ $ はによって表されます\_
 ```yaml
 initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
   - label: "UCCSD"
@@ -325,7 +326,7 @@ initial_state_suggestions: # optional. If not provided, spin-orbitals will be fi
 
 ## <a name="tables-and-lists"></a>テーブルとリスト ##
 
-### <a name="table-1-allowed-physical-units"></a>表 1 許可される物理ユニット ###
+### <a name="table-1-allowed-physical-units"></a>テーブル 1。 許可される物理ユニット ###
 
 このセクションは non-normative です。
 
@@ -341,7 +342,7 @@ initial_state_suggestions: # optional. If not provided, spin-orbitals will be fi
 - {"units": "ev", "value": 27.2113831301723}
 ```
 
-### <a name="table-2-allowed-index-conventions"></a>表 2 許可されるインデックスの規則 ###
+### <a name="table-2-allowed-index-conventions"></a>表 2. 許可されるインデックスの規則 ###
 
 このセクションは non-normative です。
 

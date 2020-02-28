@@ -1,17 +1,17 @@
 ---
-title: Distinct 入力チェッカー |クォンタムコンピューターのトレースシミュレーター |Microsoft Docs
-description: 量子コンピューターのトレース シミュレーターの概要
+title: Distinct 入力チェッカー
+description: 'Microsoft QDK の入力チェッカーについて説明します。このチェッカーは、Q # コードで共有 qubits との競合の可能性を確認します。'
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 3c21a54f5da83bf1ea0792e79cc773be5fba71e8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 11a0573242c8afb12f242aa3be5f9cff18290452
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820965"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907105"
 ---
 # <a name="distinct-inputs-checker"></a>Distinct 入力チェッカー
 
@@ -71,6 +71,6 @@ namespace Quantum.MyProgram
 
 クラス `QCTraceSimulatorConfiguration` には、クォンタムコンピューターのトレースシミュレーターの構成が格納され、`QCTraceSimulator` コンストラクターの引数として指定できます。 `useDistinctInputsChecker` が true に設定されている場合、`Distinct Inputs Checker` が有効になります。 詳細については、 [Qctracesimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)および[Qctracesimulatorconfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?)に関する API ドキュメントを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - クォンタムコンピューターの[トレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の概要。

@@ -1,17 +1,17 @@
 ---
-title: 'Q # 標準ライブラリ-applications |Microsoft Docs'
-description: Q# 標準ライブラリ
+title: 'Q # 標準ライブラリ内のアプリケーション'
+description: クォンタムコンピューティングの2つの基本的なアプリケーション (Hamiltonian シミュレーションと Shor の検索アルゴリズム) について説明します。
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: b7c46b634c6d691c067c0dd995301395408c85ca
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868970"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907224"
 ---
 # <a name="applications"></a>アプリケーション #
 
@@ -90,7 +90,7 @@ function TimeDependentTrotterSimulationAlgorithm(
 
 ### <a name="adiabatic-state-preparation--phase-estimation"></a>Adiabatic 状態の準備 & フェーズの推定 ###
 
-Hamiltonian シミュレーションの1つの一般的なアプリケーションは、adiabatic 状態の準備です。 ここでは、2つの Hamiltonians $H\_{\ text{startno} $ と $H\_{\ text{endnono$ と、開始 Hamiltonian $H {\ text{start{2} $ のグラウンド状態であるクォンタム状態 $ \ket{\psi (0)} $ を使用して提供されています。 通常、$H\_{\ text{startno} $ が選択されているため、$ \ket{\psi (0)} $ はコンピューティングベースの状態 $ \ket{0\cdots 0} $ から簡単に準備できます。 時間に依存するシミュレーションの問題でこれらの Hamiltonians の間を十分にゆっくりと補間することで、最終的な Hamiltonian $H\_{\ text{end{2} $ という最終的な状態になる可能性が高くなります。 Hamiltonian のグランド州の適正な概算を準備することで、時間に依存する Hamiltonian シミュレーションアルゴリズムでサブルーチンとしてを呼び出すことによって、この方法で処理を進めることができますが、その他の概念的に異なる手法があります。eigensolver が可能です。
+Hamiltonian シミュレーションの1つの一般的なアプリケーションは、adiabatic 状態の準備です。 ここでは、2つの Hamiltonians $H\_{\ text{startno} $ と $H\_{\ text{endnono$ と、開始 Hamiltonian $H {\ text{start $ のグラウンド状態であるクォンタム状態 $ \ket{\psi (0)} $ を使用して提供されています。\_ 通常、$H\_{\ text{startno} $ が選択されているため、$ \ket{\psi (0)} $ はコンピューティングベースの状態 $ \ket{0\cdots 0} $ から簡単に準備できます。 時間に依存するシミュレーションの問題でこれらの Hamiltonians の間を十分にゆっくりと補間することで、最終的な Hamiltonian $H\_{\ text{end $ という最終的な状態になる可能性が高くなります。 Hamiltonian のグランド州の適正な概算を準備することで、時間に依存する Hamiltonian シミュレーションアルゴリズムでサブルーチンとしてを呼び出すことによって、この方法で処理を進めることができますが、その他の概念的に異なる手法があります。eigensolver が可能です。
 
 しかし、量子化学に存在する別のアプリケーションは、化学の反応の中間手順を表す Hamiltonians のグラウンドステートエネルギーを推定することです。 たとえば、このようなスキームでは、adiabatic 状態の準備に依存してグラウンド州を作成し、時間に依存しない Hamiltonian シミュレーションをフェーズの推定特性のサブルーチンとして組み込んで、有限のエラーでこのエネルギーを抽出し、成功の確率。 
 
@@ -159,7 +159,7 @@ $U _a $ の固有値は $ $ U\_a \ket{x\_s} = e ^ {2 \ pi i s/r} \ket{x\_s} で�
 
 クォンタム期間を検索するためのサーキットダイアグラムは次のとおりです。
 
-![](./../../media/QPE.svg)
+![クォンタム期間の検索のサーキットダイアグラム](./../../media/QPE.svg)
 
 $ 2n $ qubits は $ \ket{0}$ に初期化され $n $ qubits は $ \ket{1}$ に初期化されます。
 また、リーダーは、eigenstates を保持するクォンタムレジスタが $ \ket{1}$ に初期化される理由を気にする可能性があります。

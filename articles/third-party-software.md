@@ -1,18 +1,18 @@
 ---
-title: Microsoft Quantum Development Kit Third Party Software |Microsoft Docs
-description: Microsoft Quantum Development Kit Third Party Software
+title: Microsoft Quantum Development Kit Third Party Software
+description: サードパーティのソフトウェアに関する通知と情報を Microsoft Quantum Development Kit します。
 services: service-name-with-dashes-AZURE-ONLY
 keywords: SEO チャンプを確認せずに、キーワードを追加または編集しないでください。
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
-ms.openlocfilehash: 85bade791c0744d6636d60fe4f7c9b8f7749c7c6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 84d83bf65b3c01a630d98210a5ac3fe322fa501f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184374"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906816"
 ---
 # <a name="third-party-software-notices-and-information"></a>サードパーティ製ソフトウェアに関する通知および情報
 
@@ -20,7 +20,7 @@ ms.locfileid: "73184374"
 
 1. YamlDotNet バージョン 4.2.2 (https://www.nuget.org/packages/YamlDotNet.Signed/4.2.2)
 2. xunit 2.3.1 (https://www.nuget.org/packages/xunit.runner.visualstudio/2.3.1)
-3. xunit ランナー. console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1 )
+3. xunit ランナー. console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1)
 4. xunit. 拡張性. execution 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
 5. xunit. 拡張性. core 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.core/2.3.1)
 6. xunit. core 2.3.1 (https://www.nuget.org/packages/xunit.core/2.3.1)
@@ -180,7 +180,7 @@ Microsoft パブリックライセンス (Ms-PL)
 
 (A) 著作権付与-このライセンスの条項 (セクション3のライセンス条件と制限事項を含む) については、各共同作成者は、非排他的で世界規模の著作権のない著作権ライセンスを付与し、その貢献を再現し、生物を準備します。貢献度を活用し、作成した投稿や派生物を配布します。
 
-(B) 特許付与-このライセンス条項 (セクション3のライセンス条件と制限事項を含む) については、各共同作成者は、ライセンスされている特許を使用して、非限定で世界規模のライセンスを付与します。本ソフトウェアまたは派生物における製品の販売、インポート、またはその他の処分は、本ソフトウェアの貢献によって行われます。
+(B) 特許付与-このライセンスの条項に従います。セクション3に記載されているライセンスの条件と制限事項を含め、各共同作成者は、本ソフトウェアにおける本ソフトウェアまたは本ソフトウェアの派生物における本ソフトウェアまたはその他の影響について、本ライセンスの特許を取得、使用、販売、販売、販売、インポート、または譲渡することを許可します。
 
 3. 条件と制限事項
 
@@ -192,7 +192,7 @@ Microsoft パブリックライセンス (Ms-PL)
 
 (D) 本ソフトウェアの一部をソースコード形式で頒布する場合、本ライセンスの完全なコピーを配布物と共に含めることによってのみ、本ライセンスに基づいて配布できます。 本ソフトウェアの一部をコンパイル済みまたはオブジェクトコード形式で頒布する場合は、本ライセンスに準拠したライセンスでのみ使用できます。
 
-(E) 本ソフトウェアは "現状有姿" でライセンス供与されます。 お客様は、本ソフトウェアの使用に関するリスクを負うものとします。 共同作成者は、明示的な保証、保証、または条件を提供しません。 このライセンスは変更できない、お客様の地域の法律による追加の消費者権限がある場合があります。 お客様の地域の法律下で許容される範囲において、商品性、特定目的に対する適合性、非侵害性に関する黙示の保証は、共同作成者によって除外されます。
+(E) 本ソフトウェアは "現状有姿" でライセンス供与されます。 お客様ご自身の責任において使用してください。 共同作成者は、明示的な保証、保証、または条件を提供しません。 このライセンスは変更できない、お客様の地域の法律による追加の消費者権限がある場合があります。 お客様の地域の法律下で許容される範囲において、商品性、特定目的に対する適合性、非侵害性に関する黙示の保証は、共同作成者によって除外されます。
 
 ## <a name="fsharpcore-notices-and-information"></a>Fsharp.core の通知と情報
 ---------------------------------------
@@ -238,13 +238,13 @@ Copyright (c) 2008-2014、Kurt Thelfthout
 
 All rights reserved.
 
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+ソースおよびバイナリの形式での再頒布および使用は、改変の有無にかかわらず、以下の条件に合致する場合に許諾されます。
 
-* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+* ソース コードの再頒布には、上記の著作権の通知、この条件の一覧、および以下の免責事項を明記する必要があります。
+* バイナリ形式での再頒布では、上記の著作権の通知、この条件の一覧、および以下の免責事項をドキュメントおよびその他の資料、またはそのいずれかの形式で複製し、共に頒布する必要があります。
 * FsCheck とその共同作成者の名前はどちらも、事前の書面による特定のアクセス許可なしに、このソフトウェアから派生した製品を裏書または昇格するために使用することはできません。
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+本ソフトウェアは、著作権者およびコントリビューターによって「現状有姿」で提供されており、明示であると黙示であるとを問わず、商品性や特定目的に対する適合性などに関する暗黙の保証も含めて、どのような保証もされないものとします。 IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## <a name="argu-notices-and-information"></a>Argu の通知と情報
 ---------------------------------------
@@ -273,9 +273,9 @@ Doc フォルダー内のドキュメントは、Creative Commons の‐ NonComm
 
 Copyright (c) 2007 \ u20122017、Lavavej Tolksdorf。 All rights reserved.
 
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 
-* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. 
+ソースおよびバイナリの形式での再頒布および使用は、改変の有無にかかわらず、以下の条件に合致する場合に許諾されます。 
+* ソース コードの再頒布には、上記の著作権の通知、この条件の一覧、および以下の免責事項を明記する必要があります。
+* バイナリ形式での再頒布では、上記の著作権の通知、この条件の一覧、および以下の免責事項をドキュメントおよびその他の資料、またはそのいずれかの形式で複製し、共に頒布する必要があります。 
 
 このソフトウェアは、著作権者によって "現状有姿" で提供されます。また、特定目的に対する商品性と適合性に関する黙示の保証は「現状です。 どのような場合でも、著作権者は、直接、間接、付随的、特別、模範的、または付随的損害 (代替商品やサービスの調達、使用量、データ、利益の損失など) について責任を負わないものとします。ただし、このような損害の可能性があると考えられる場合でも、本契約、厳格責任、不法 (過失を含む)、または本ソフトウェアを使用しないいかなる方法で発生するかにかかわらず、一切の責任を負いかねません。 
 

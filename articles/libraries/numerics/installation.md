@@ -1,17 +1,17 @@
 ---
-title: 数値ライブラリのインストールと検証 |Microsoft Docs
-description: 数値ライブラリのインストールと検証
+title: Microsoft 量子数値ライブラリ-インストールと検証
+description: Microsoft Quantum の数値ライブラリを Visual Studio 2019 以降のインストールに追加する方法について説明します。
 author: thomashaener
 ms.author: thhaner
 ms.date: 05/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.installation
-ms.openlocfilehash: c41bb73ea484271689eea2ca1b59ce6639dc15a7
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: cb0d00a509b3986b605dd7f15f9bccc0661bb894
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036459"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906340"
 ---
 # <a name="numerics-library-installation-and-validation"></a>数値ライブラリのインストールと検証
 
@@ -33,7 +33,7 @@ Quantum 開発キットでは、 [`Microsoft.Quantum.Numerics`](https://www.nuge
 
 または、パッケージマネージャーコンソールを使用して、コマンドラインインターフェイスを使用して数値ライブラリをプロジェクトに追加することもできます。
 
-![](../../media/vs2017-nuget-console-menu.png)
+![コマンドラインからのパッケージマネージャーコンソールの使用](../../media/vs2017-nuget-console-menu.png)
 
 パッケージマネージャーコンソールで、次のように実行します。
 

@@ -1,17 +1,17 @@
 ---
-title: 無効になった qubits use checker |クォンタムコンピューターのトレースシミュレーター |Microsoft Docs
-description: 量子コンピューターのトレース シミュレーターの概要
+title: 無効な量子ビット使用チェッカー
+description: 'Microsoft QDK で無効になっている Qubits 使用チェッカーについて説明します。これにより、Q # コードに無効な qubits があるかどうかがチェックされます。'
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: 093937346488725eacb69ef7da6affde764ec5c1
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e2bbb12448e27f28db030a0084302fb24f46f26b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820880"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907071"
 ---
 # <a name="invalidated-qubits-use-checker"></a>無効になった Qubits 使用チェッカー
 
@@ -58,6 +58,6 @@ namespace Quantum.MyProgram
 
 クラス `QCTraceSimulatorConfiguration` には、クォンタムコンピューターのトレースシミュレーターの構成が格納され、`QCTraceSimulator` コンストラクターの引数として指定できます。 `useInvalidatedQubitsUseChecker` が true に設定されている場合、`Invalidated Qubits Use Checker` が有効になります。 詳細については、 [Qctracesimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)および[Qctracesimulatorconfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration)に関する API ドキュメントを参照してください。
 
-## <a name="see-also"></a>関連項目 ##
+## <a name="see-also"></a>参照 ##
 
 - クォンタムコンピューターの[トレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の概要。

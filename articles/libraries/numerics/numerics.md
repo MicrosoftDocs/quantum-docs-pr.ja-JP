@@ -1,17 +1,17 @@
 ---
-title: 数値ライブラリを使用する |Microsoft Docs
-description: 数値ライブラリの使用
+title: 'Microsoft Q # 数値ライブラリの使用'
+description: Microsoft Quantum の数値ライブラリで使用できる型と操作について説明します。
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821033"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907258"
 ---
 # <a name="using-the-numerics-library"></a>数値ライブラリの使用
 
@@ -36,7 +36,7 @@ open Microsoft.Quantum.Arithmetic;
 1. **`SignedLittleEndian`** : 2 の補数に格納されている符号付き整数を表す点を除いて、`LittleEndian` と同じです。
 1. **`FixedPoint`** : qubit 配列 `qArr2 : Qubit[]` とバイナリポイント位置 `pos`で構成される実数を表します。これは、バイナリポイントの左側にあるバイナリの桁数をカウントします。 `qArr2` は `SignedLittleEndian`と同じ方法で格納されます。
 
-## <a name="operations"></a>Operations
+## <a name="operations"></a>運用
 
 上記の3種類のそれぞれに対して、さまざまな操作を実行できます。
 

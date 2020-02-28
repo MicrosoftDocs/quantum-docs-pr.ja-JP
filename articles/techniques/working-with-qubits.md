@@ -1,17 +1,17 @@
 ---
 title: Qubits の操作
-description: 'Qubits の使用-Q # 手法'
+description: Qubits を割り当てる方法、操作と関数でそれらを使用する方法、および結果を測定する方法について説明します。
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.qubits
-ms.openlocfilehash: dc6db93dadc37534aece9624fe516125d919f8cd
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1aa2432996dda61d099e3b5bb4db78379ce43d97
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819996"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907649"
 ---
 # <a name="working-with-qubits"></a>Qubits の操作
 
@@ -72,7 +72,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > 後で、手動によるフロー制御を必要としない、この操作を記述するよりコンパクトな方法を紹介します。
 
-また、組み込みの操作によって Q # で表される \Ket transform{0} $ を使用して、$ \ket{+} = \ left (\ket{0} + \ket{1}/\ sqrt{2}$ と $ \ket{-} =-left (\ket{1}-Hadamard{2}-right)//sqrt $H $ などの状態を準備することもできます。
+また、組み込みの操作によって Q # で表される \Ket transform{0} $ を使用して、$ \ket{+} = \ left (\ket{0} + \ket{1}/\ sqrt{2}$ と $ \ket{-} =-left (\ket{1}-Hadamard{2}-right)//sqrt $H $ などの状態を準備することもできます。`H : (Qubit => Unit is Adj + Ctl)`
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {

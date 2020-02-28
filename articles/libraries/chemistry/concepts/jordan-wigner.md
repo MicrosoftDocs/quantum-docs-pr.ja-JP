@@ -1,17 +1,17 @@
 ---
-title: ヨルダン-Wigner 表現 |Microsoft Docs
-description: ヨルダン-Wigner 表現概念ドキュメント
+title: ヨルダン-Wigner 表現
+description: ヨルダン Hamiltonian 表現について説明します。これにより、クォンタムコンピューターでより簡単に実装できるように、その演算子が、より簡単に実装できるようになります。
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: 5d9038e440a2022547395e889e149a531a7ef818
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 17cb473c6d33e3356d5da886f47985c3828d4d1f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820540"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904521"
 ---
 # <a name="jordan-wigner-representation"></a>ヨルダン-Wigner 表現
 
@@ -37,7 +37,7 @@ $X $ と $Y $ は、$a ^ \ ダガー $、$a $ はありません。
 
 残っている問題の1つは、上記の構築が1つのスピン回転に対して機能していても、2つ以上のスピン/ビットがあるシステムでは失敗することです。
 Antisymmetic は、^ \ dagger_j ^ \ dagger_k =-a ^ \ dagger_k a ^ \ dagger_j $、$j $、$k $ という $a があることがわかっています。
-ただし、$ $ \ left (\frac{X_j-iY_j}{2}→) \ left (\frac{X_k-iY_k}{2}\ right) = \ left (\frac{X_k} iY_k} 右)、left (\frac{{2}-X_j} iY_j) です。
+ただし、$ $ \ left (\frac{X_j-iY_j}{2}→) \ left (\frac{X_k-iY_k}{2}\ right) = \ left (\frac{X_k} iY_k} 右)、left (\frac{{2}-X_j} iY_j) です。{2}
 $ $ つまり、2つの作成演算子は、必要に応じて commute を実行しません。
 これは、inelegant 方法では簡単に解決できます。
 この問題を解決するには、Pcommute の演算子は自然なアンチフィックスを持つことに注意してください。
@@ -50,7 +50,7 @@ $ $ つまり、2つの作成演算子は、必要に応じて commute を実行
 また、演算子として、数値演算子 $n _j $ を表すのも便利です。
 さいわいにも、$Z $ operators (ヨルダン-Wigner 文字列) の文字列は、この置換が行われた後にキャンセルされます。
 これを実行した後 ($X _jY_j = iZ_j $) をリコールした後は、& lt; の n_j = a ^ \ dagger_j a_j = \frac{(1-Z_j)}{2}があります。
-& # {2}
+& #
 
 
 ## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>ヨルダン-Wigner 表現でのの構築

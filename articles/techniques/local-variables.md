@@ -1,22 +1,22 @@
 ---
-title: 'ローカル変数-Q # テクニック |Microsoft Docs'
-description: 'ローカル変数-Q # の手法'
+title: 'ローカル変数-Q # の手法'
+description: 'Q # でローカル変数を定義して操作する方法について説明します。'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.local-variables
-ms.openlocfilehash: 8b1de5c096210fb36a81c127a8bbbe1b39522741
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: cb6c662137c31a13c3dd6e9ca3f67879c469f788
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820183"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906867"
 ---
 # <a name="local-variables"></a>ローカル変数 #
 
 Q # の任意の型の値を変数に代入して、`let` キーワードを使用して操作または関数内で再利用することができます。
-その例をご紹介します。
+次に例を示します。
 
 ```qsharp
 let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];

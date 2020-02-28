@@ -1,17 +1,17 @@
 ---
-title: 貢献するコード |Microsoft Docs
-description: 貢献コード
+title: Microsoft QDK にコードを投稿する
+description: サンプルおよびライブラリコードを Microsoft Quantum Development Kit (QDK) に投稿する方法について説明します。
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: f9e0f0d9540102331aea64a1245cbaa4833e1e02
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1882e640dacf3987745ed225fef18636726f70a8
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819962"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907479"
 ---
 # <a name="contributing-code"></a>コードの投稿 #
 
@@ -98,7 +98,7 @@ operation TestApplyWith() : Unit {
 私たちは、現在のすばらしい多様性の中でも、今後もさらに包括的になるように、共同作業がクォンタムコンピューティングコミュニティ全体に提供されるようにしたいと考えています。
 この目標を達成するための支援を歓迎します。
 
-## <a name="next-steps"></a>次の手順 ##
+## <a name="next-steps"></a>次のステップ: ##
 
 Quantum 開発キットを利用して、quantum プログラミングコミュニティ全体にとって優れたリソースを作成しようとしていただき、誠にありがとうございます。
 詳細については、Q # のスタイルに関する次のガイドを参照してください。

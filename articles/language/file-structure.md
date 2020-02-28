@@ -1,17 +1,17 @@
 ---
-title: ファイル構造 |Microsoft Docs
-description: 'Q # ファイル構造'
+title: 'Q # ファイル構造'
+description: '名前空間、操作、関数、およびユーザー定義型の宣言を Q # のプログラムとライブラリで構造化する方法について説明します。'
 author: QuantumWriter
 uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: b4bb7d4d70677dbd5d921a9f68313760499a56a1
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821084"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907394"
 ---
 # <a name="file-structure"></a>ファイル構造
 
@@ -66,7 +66,7 @@ Q # は、ユーザーが新しいユーザー定義型を宣言する方法を�
 
 ユーザー定義型の宣言は、キーワード `newtype`で構成され、その後にユーザー定義型の名前、`=`、有効な型指定、および終端のセミコロンが続きます。
 
-例えば次が挙げられます。
+例 :
 
 ```qsharp
 newtype PairOfInts = (Int, Int);

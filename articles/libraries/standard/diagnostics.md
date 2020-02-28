@@ -1,18 +1,18 @@
 ---
-title: 'Q # 標準ライブラリ-diagnostics |Microsoft Docs'
-description: 'Q # 標準ライブラリ-診断'
+title: 'Q # 標準ライブラリの診断'
+description: 'クォンタムプログラムで間違いやエラーをキャッチするために使用される、Q # 標準ライブラリの診断関数と操作について説明します。'
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 67ec6780d8cbbda7223d46026a9df97cebc92b33
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ba2f248327bb3db4ee895f8e65ea31c17e42b5f4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820982"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906238"
 ---
-# <a name="diagnostics"></a>Diagnostics #
+# <a name="diagnostics"></a>診断 #
 
 従来の開発と同様に、クォンタムプログラムで間違いやエラーを診断できることが重要です。
 Q # 標準ライブラリには、<xref:microsoft.quantum.techniques.testing-and-debugging>で詳しく説明されているように、クォンタムプログラムの正確性を確保するためのさまざまな方法が用意されています。
@@ -146,7 +146,7 @@ $T $ が進化時間を表している場合は、期待どおりに ^ & $U ^ (t
 これらのテストはどちらも、クォンタムプログラムの正確性を確保するために役立ちます。
 
 
-## <a name="further-reading"></a>参考情報 ##
+## <a name="further-reading"></a>参考資料 ##
 
 - <xref:microsoft.quantum.techniques.testing-and-debugging>
 - <xref:microsoft.quantum.diagnostics>

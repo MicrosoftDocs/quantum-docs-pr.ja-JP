@@ -1,17 +1,17 @@
 ---
-title: Width カウンタ |クォンタムコンピューターのトレースシミュレーター |Microsoft Docs
-description: 量子コンピューターのトレース シミュレーターの概要
+title: 幅カウンター
+description: クォンタムプログラムの各操作によって割り当てられた qubits の数をカウントする Microsoft QDK Width カウンターについて説明します。
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: 9c3601e74eec17bd6b463e90f8f3085c959d6f95
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: a76292222950310acc90dded02980e4a5b792e76
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820370"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907088"
 ---
 # <a name="width-counter"></a>幅カウンター
 
@@ -57,6 +57,6 @@ double inputWidth =
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a>関連項目 ##
+## <a name="see-also"></a>参照 ##
 
 - クォンタムコンピューターの[トレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の概要。

@@ -1,17 +1,17 @@
 ---
-title: 'すべてをまとめておく-Q # テクニック |Microsoft Docs'
-description: 'まとめ: Q # の手法'
+title: 'Q # の手法-まとめ'
+description: クォンタムの電話を示す基本的な Q&a プログラムについて説明します。
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 6c988f77ef6e433945dbf21dfb41204c74bdda3e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820166"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906833"
 ---
 # <a name="putting-it-all-together-teleportation"></a>すべてをまとめます。 #
 「[クォンタム回線](xref:microsoft.quantum.concepts.circuits)」で定義されている例に戻りましょう。 これまでに学習した概念を説明するために、これを使用します。 ここでは、理論に習熟している方について説明し、その後に Q # でのコード実装のチュートリアルを示します。 
@@ -41,7 +41,7 @@ $ $ \ket{\psi}\ket{\phi ^ +} = \frac{\alpha}{\sqrt{2}} \ket{000} + \frac{\alpha}
 
 なお、コントロール qubit が1の場合、CNOT gate はターゲットの qubit を反転します。 たとえば、$ \ket{000}$ を入力すると、最初の qubit (コントロール) は0になり、変更は行われません。 ただし、最初の qubit が 1 (たとえば、$ \ket{100}$ の入力) である場合は、 このインスタンスでは、2番目の qubit (ターゲット) が CNOT gate によって反転されているため、出力は $ \ket{110}$ になります。
 
-ここでは、CNOT gate が前述の入力を操作した後の出力について考えてみましょう。 結果は次のとおりです。
+ここでは、CNOT gate が前述の入力を操作した後の出力について考えてみましょう。 その結果は次のようになります。
 
 $ $ \frac{\alpha}{\sqrt{2}} \ket{000} + \frac{\alpha}{\sqrt{2}} \ket{011} + \frac{\beta}{\sqrt{2}} \ket{110} + \frac{\beta}{\sqrt{2}} \ket{101} $ $
 
@@ -49,7 +49,7 @@ __メッセージ__を送信する次の手順では、Hadamard gate を__メッ
 
 リマインダーとして、Hadamard ゲートは次のことを行います。
 
-Input (入力) | 出力
+入力 | 出力
 ---------------------------| ---------------------------------------------------------------
 $ \ket{0}$  | $ \ frac{1}{\ sqrt{2}} (\ket{0} + \ket{1}) $
 $ \ket{1}$  | $ \ frac{1}{\ sqrt{2}} (\ket{0}-\ket{1}) $
@@ -94,7 +94,7 @@ $ $ \ket{\psi} = \alpha\ket{0} + \beta\ket{1} $ $
 
 まとめると、測定し、最初の qubit が1の場合、Z ゲートが適用されます。 測定し、2番目の qubit が1の場合、NOT gate が適用されます。
 
-### <a name="summary"></a>概要
+### <a name="summary"></a>要約
 次に示すのは、電話を実装するテキスト帳のクォンタム回線です。 左から右に移動すると、次のように表示されることがあります。
 - 手順 1: Hadamard ゲートと CNOT gate を適用__して、__ __ここ__に Entangling します。
 - 手順 2: CNOT ゲートと Hadamard gate を使用して__メッセージ__を送信する。

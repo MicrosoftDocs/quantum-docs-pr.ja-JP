@@ -1,17 +1,17 @@
 ---
-title: '操作と関数-Q # の手法 |Microsoft Docs'
-description: '操作と関数-Q # の手法'
+title: 'Q # 操作と関数'
+description: 'Q # の操作と関数、およびそれらがクォンタムプログラムにどのように適用されるかについて説明します。'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 43f0cf2da192a607e514d0c7de57a9bdd067faf7
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820778"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907666"
 ---
 # <a name="q-operations-and-functions"></a>Q # 操作と関数
 
@@ -141,7 +141,7 @@ operation Superdense(here : Qubit, there : Qubit) : (Result, Result) {
 これにより、Q # コンパイラは、操作の特殊化を生成するときに関数が呼び出される方法とタイミングを安全に並べ替えることができます。
 
 関数の定義は、操作を定義する場合と同様に機能します。ただし、関数に対して adjoint または制御された特殊化を定義することはできません。
-その例をご紹介します。
+次に例を示します。
 
 ```qsharp
 function Square(x : Double) : (Double) {
@@ -231,7 +231,7 @@ operation ApplyTwice(op : (Qubit => Unit), target : Qubit) : Unit {
 
 この例では、型 `(Qubit => Unit)` に表示される `=>` 矢印は、入力フィールド `op` が `Qubit` 型の入力としてを受け取り、その出力として空のタプルを生成する操作であることを示しています。
 また、サポートされている動作に関する情報を含む、その操作の種類の特性を指定します。
-`(Qubit => Unit)` 型の操作では、`Adjoint` と `Controlled` のファンクタのどちらもサポートされていません。 その型の操作が `Adjoint` のファンクタなどをサポートする必要があることを示すには、それを adjointable として宣言する必要があります。 これを行うには、型に `is Adj` 注釈を使用します。 同様に、`(Qubit => Unit is Ctl)` は、その型の操作が `Controlled` のファンクタをサポートしていることを示します。 この詳細については、「Q # での型」 (xref: microsoft. quantum..................................
+`(Qubit => Unit)` 型の操作では、`Adjoint` と `Controlled` のファンクタのどちらもサポートされていません。 その型の操作が `Adjoint` のファンクタなどをサポートする必要があることを示すには、それを adjointable として宣言する必要があります。 これを行うには、型に `is Adj` 注釈を使用します。 同様に、`(Qubit => Unit is Ctl)` は、その型の操作が `Controlled` のファンクタをサポートしていることを示します。 ここでは、一般的に[Q # で型に](xref:microsoft.quantum.language.type-model)ついて説明します。
 
 ここでは、操作を出力の一部として返すこともできることを強調しています。これは、一部の種類のクラシック条件ロジックを、操作の形式でクォンタムプログラムの説明を返す従来の関数として分離できるようにするためです。
 簡単な例として、2ビットの古典的なメッセージを受信するパーティがメッセージを使用して、qubit を適切なテレポートの状態にデコードする必要がある場合の例を考えてみます。

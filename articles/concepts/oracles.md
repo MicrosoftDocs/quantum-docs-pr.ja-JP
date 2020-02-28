@@ -1,24 +1,24 @@
 ---
-title: クォンタム oracles |Microsoft Docs
-description: Quantum oracles
+title: 量子オラクル
+description: 別のアルゴリズムへの入力として使用される、クォンタム oracles、ブラックボックス操作の操作方法と定義方法について説明します。
 author: cgranade
 uid: microsoft.quantum.concepts.oracles
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 07/11/2018
 ms.topic: article
-ms.openlocfilehash: 96949b371a3a5a1135d624690933a48ea0214a2e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1d1d0b0903db8e994166c3e8a5798f70742a1c7e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184714"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904929"
 ---
 # <a name="quantum-oracles"></a>Quantum Oracles
 
 Oracle $O $ は、別のアルゴリズムへの入力として使用される "ブラックボックス" 操作です。
 多くの場合、このような操作は従来の関数 $f を使用して定義されています: \\{0, 1\\} ^ n \ \\{0, 1\\} ^ m $ に $n $ bit バイナリ入力を取得し、$m $ bit バイナリ出力を生成します。
-これを行うには、特定のバイナリ入力 $x = (x_{0}, x_{1}, \ ドット, x_ {n-1}) $ と考えてください。
-Qubit 州には、$ \ket{\vec{x}} = \ket{x_{0}} \ otimes \ket{x_{1}}/otimes/cドット/otimes \ket{x_{n-1}} $ というラベルを付けることができます。
+これを行うには、特定のバイナリ入力 $x = (x_{0}、x_{1}、\ ドット、x_ {n-1}) $ を考慮してください。
+Qubit 状態には、$ \ket{\vec{x}} = \ket{x_{0}}/otimes \ket{x_{1}}/otimes/cドット/otimes \ket{x_ {n-1}} $ というラベルを付けることができます。
 
 最初に $O $ を定義しようとします。これにより、$O \ket{x} = \ket{f (x)} $ になりますが、これにはいくつかの問題があります。
 まず、$ $f には、入力と出力のサイズが異なる場合があります ($n \n e m $)。 $O $ を適用すると、レジスタの qubits の数が変更されます。
@@ -43,16 +43,16 @@ $ $ \begin{align} O (\ket{x}/otimes \ket{y}) = \ket{x} \ otimes \ket{y \ oplus f
 Hadamard 操作を考えてみます。たとえば、$H \ket{0} = \ket{+} $ および $H \ket{1} = \ket{-}$ によって定義されているとします。
 $ \Ket{+} $ に対して $ act を $H 方法を知りたい場合は、$ is linear $H を使用できます。
 
-$ $ \begin{align} H\ket {+} & = \ frac{1}{\ sqrt{2}} H (\ket{0} + \ket{1}) = \ frac{1}{\ sqrt{2}} (H\ket{0} + H\ket{1}) \\\\ & = \ frac{1}{\ sqrt{2}} (\k {+} + \ket{-}) = \frac12 (\ket{0} + \ket{1} + \ket{0}-\ket{1}) = \ket{0}。
+$ $ \begin{align} H\ket {+} & = \ frac{1}{\ sqrt{2}} H (\ket{0} + \ket{1}) = \ frac{1}{\ sqrt{2}} (H\ket{0} + H\ket{1}) \\\\ & = \ frac{1}{\ sqrt{2}} (\ket{+} + \ket{-}) = \frac12 (\ket{0} + \ket{1} + \ket{0}-\ket{1}) = \ket{0}です。
 \end{align} $ $
 
 Oracle $O $ を定義する場合は、次のように、任意の状態 $ \ket{\psi} $ on $n + m $ qubits を使用することもできます。
 
-$ $ \begin{align} \ket{\psi} & = \ket{x} \\{0, 1\\} ^ n, y \ in \\{0, 1\\} ^ m} \ alpha (x, y) \ket{y} \end{align} $ $。
+$ $ \begin{align} \ket{\psi} & = \ sum_ {x \ \\{0, 1\\} ^ n, y \ \\{0, 1\\} ^ m} \ alpha (x, y) \ket{x} \ket{y} \end{align} $ $
 
 $-alpha: \\{0, 1\\} ^ n 回 \\{0, 1\\} ^ m-to \mathbb{C} $ は、状態 $ \ket{\psi} $ の係数を表します。 したがって
 
-$ $ \begin{align} O \ket{\psi} & = O/\\sum {0, 1\\} ^ n, y \ in \\{0, 1\\} ^ m} \ alpha (x, y) \ket{x} \ket{y} \\\\ & = {0 のようになりました。, 1\\} ^ n, y \ \\{0, 1\\} ^ m} \ alpha (x, y) O \ket{x} \ket{y} \\\\ & = {0, 1 \\} ^ n, y \\\{0 になりました。, 1\\} ^ m} \ alpha (x, y) \ket{x} \ket{y f (x)}。
+$ $ \begin{align} O \ket{\psi} & = O \ sum_ {x \ \\{0, 1\\} ^ n, y \ \\{0, 1\\} ^ m} \ アルファ (x, y) \ket{x} \ket{y} \\\\ & = \ sum_ {x \ \\{0, 1\\} ^ n, y \ \\{0, 1\\} ^ m} \ alpha (x, y) O \ket{x} \ket{y} \\\\ & = \ sum_ {x \ \\{0, 1\\} ^ n, y \ \\{0, 1\\} ^ m} \ alpha (x, y) \ket{x} \ket{y/oplus f (x)}。
 \end{align} $ $
 
 ## <a name="phase-oracles"></a>フェーズ oracles
@@ -60,8 +60,8 @@ $ $ \begin{align} O \ket{\psi} & = O/\\sum {0, 1\\} ^ n, y \ in \\{0, 1\\} ^ m} 
 たとえば、$ $ \begin{align} O \ket{x} = (-1) ^ {f (x)} \ket{x}. という $O $ を定義する場合があります。
 \end{align} $ $ 計算ベースの状態が "$ \ket{x} $" である場合、このフェーズはグローバルフェーズであるため、監視できません。
 ただし、このような oracle は、法則または制御された操作として適用される場合、非常に強力なリソースになります。
-たとえば、1つの-qubit 関数 $f $ のフェーズ orcale $O _ $ について考えてみます。
-次に、$ $ \begin{align} O_f \ket{+} & = O_f (\ket{0} + \ket{1})//sqrt{2} \\\\ & = ((-1) ^ {f (0)} \ket{0} + (-1) ^ {f (1)} \ket{1})//sqrt{2} \\\\ & = (-1) ^ {f (0)} (\ket{0} + (-1) ^ {f (1)-f (0)} \ket{1})//sqrt{2} \\\\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} \ket{+}。
+たとえば、$ という1つの単一の qubit $f 関数に対して _f $ $O フェーズ orcale を考えてみます。
+次に、$ $ \begin{align} O_f \ket{+} & = O_f (\ket{0} + \ket{1})/\ sqrt{2} \\\\ & = ((-1) ^ {f (0)} \ket{0} + (-1) ^ {f (1)} \ket{1})//sqrt{2} \\\\ & = (-1) ^ {f (0)} (\ket{0} + (-1) ^ {f (1)-f (0)} \ket{1})/\ sqrt{2} \\\\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} \ket{+}。
 \end{align} $ $
 
 一般的には、oracles の両方のビューを拡大して、1ビットだけではなく実数を返す古典関数を表すことができます。
