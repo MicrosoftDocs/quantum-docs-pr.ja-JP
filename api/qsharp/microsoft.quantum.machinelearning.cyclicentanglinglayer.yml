@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.cyclicentanglinglayer
+name: CyclicEntanglingLayer
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: 指定された軸に沿って1つの制御された回転の配列を返します。 qubits のレジスタで周期的に配置され、個別のモデルパラメーターによってパラメーター化されます。
+examples: >-
+  同等のものを次に示します。
+
+
+  ```Q#
+
+  let layer = CyclicEntanglingLayer(3, PauliX, 2);
+
+  let layer = [
+      ControlledRotation((0, [2]), PauliX, 0),
+      ControlledRotation((1, [0]), PauliX, 1),
+      ControlledRotation((2, [1]), PauliX, 2)
+  ];
+
+  ```
+syntax: 'function CyclicEntanglingLayer (nQubits : Int, axis : Pauli, stride : Int) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
+input:
+  content: '(nQubits : Int, axis : Pauli, stride : Int)'
+  types:
+  - name: nQubits
+    summary: 指定したレイヤーによって操作された qubits の数。
+    isPrimitive: true
+    uid: Int
+  - name: axis
+    summary: 指定されたレイヤー内の各回転の回転軸。
+    isPrimitive: true
+    uid: Pauli
+  - name: stride
+    summary: 各回転のターゲットと制御のインデックスを分離する。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
+  types:
+  - summary: '`nQubits` qubit のレジスタ全体で周期的に配置された2つの qubit 制御された回転の配列。'
+    isArray: true
+    uid: microsoft.quantum.machinelearning.controlledrotation
+metadata:
+  ms.openlocfilehash: 64f64fcfe2cbb969a0d16fba07ca39d64b53cbd4
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908737"

@@ -1,0 +1,15 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.sequentialmodel
+name: SequentialModel
+type: newtype
+namespace: Microsoft.Quantum.MachineLearning
+summary: 一連のパラメーター化および制御された回転、回転角度の割り当て、およびモデルによって認識される2つのクラス間のバイアスで構成される、クォンタム分類器モデルについて説明します。
+syntax: newtype SequentialModel = (Microsoft.Quantum.MachineLearning.ControlledRotation[], Double[], Double);
+references: '- [arXiv: 1804.00633](https://arxiv.org/abs/1804.00633)'
+metadata:
+  ms.openlocfilehash: 90e54e3eb5a23acdfde262f72ef3d6ccac1ff6c4
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909060"

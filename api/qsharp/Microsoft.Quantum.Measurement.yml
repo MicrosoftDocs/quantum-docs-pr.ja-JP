@@ -16,10 +16,12 @@ operations:
   summary: '`Z` ベースの1つの qubit を測定し、測定値に従って標準の基本状態 | 0 〉にリセットします。'
 - uid: microsoft.quantum.measurement.multim
   summary: 指定された配列内の各 qubit を標準ベースで測定します。
+- uid: microsoft.quantum.measurement.settobasisstate
+  summary: Qubit を測定し、必要に応じてビットフリップを適用することによって、指定された計算基準の状態に qubit を設定します。
 metadata:
-  ms.openlocfilehash: 7964ab7b090fdff8f1a8af556e901dbab68cff9f
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: dc74db43b60728bf9924c05346bae4c6b329a265
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870032"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905762"

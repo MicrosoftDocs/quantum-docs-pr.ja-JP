@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
+name: TrainSequentialClassifierAtModel
+type: operation
+namespace: Microsoft.Quantum.MachineLearning
+summary: シーケンシャルな分類子の構造に基づいて、特定のモデルから始まる特定のラベル付けされたトレーニングセットで分類器をトレーニングします。
+syntax: 'operation TrainSequentialClassifierAtModel (model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : (Microsoft.Quantum.MachineLearning.SequentialModel, Int)'
+input:
+  content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
+  types:
+  - name: model
+    summary: トレーニングの開始点として使用されるシーケンシャルモデル。
+    uid: microsoft.quantum.machinelearning.sequentialmodel
+  - name: samples
+    summary: トレーニングを実行するために使用される、ラベル付けされたトレーニングデータのセット。
+    isArray: true
+    uid: microsoft.quantum.machinelearning.labeledsample
+  - name: options
+    summary: トレーニング時に使用する構成詳細については、@"microsoft.quantum.machinelearning.trainingoptions" と @"microsoft.quantum.machinelearning.defaulttrainingoptions" を参照してください。
+    uid: microsoft.quantum.machinelearning.trainingoptions
+  - name: trainingSchedule
+    summary: トレーニング手順でトレーニングデータからサンプルを選択するときに使用するサンプリングスケジュール。
+    uid: microsoft.quantum.machinelearning.samplingschedule
+  - name: validationSchedule
+    summary: 最適な分類子スコアが生成された開始点を選択するときにトレーニングデータからサンプルを選択するときに使用するサンプリングスケジュール。
+    uid: microsoft.quantum.machinelearning.samplingschedule
+output:
+  content: (Microsoft.Quantum.MachineLearning.SequentialModel, Int)
+  types:
+  - summary: >-
+      - 指定された分類子のパラメーター化と、2つのクラス間のバイアス。これらは、指定された各開始点からの最適な結果に対応しています。
+
+      - 最適な分類子モデルで観測されたミスの数。
+    types:
+    - uid: microsoft.quantum.machinelearning.sequentialmodel
+    - isPrimitive: true
+      uid: Int
+seeAlso:
+- microsoft.quantum.machinelearning.trainsequentialclassifier
+- microsoft.quantum.machinelearning.validatesequentialclassifier
+metadata:
+  ms.openlocfilehash: 5b574d72115518389124d850a96f9fbcd669bd4e
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909043"

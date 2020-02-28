@@ -1,10 +1,10 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.applydiagonalunitary
-name: ApplyDiagonalUnitary
+uid: microsoft.quantum.canon.approximatelyapplydiagonalunitary
+name: ApproximatelyApplyDiagonalUnitary
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  複雑なフェーズの配列を、qubits のレジスタの数値ベースの状態に適用します。
+  複雑なフェーズの配列を、qubits のレジスタの数値ベースの状態に適用し、指定された許容範囲に従って小さな回転角度を切り捨てます。
 
 
   この操作では、$n $ qubit number $ \ket{j} $ に $e ^ {i \ theta_j} $ という複雑なフェーズを適用する斜線を実装します。
@@ -16,11 +16,15 @@ summary: >-
 
   \end{align} $ $
 remarks: $ 2 ^ n $ よりも小さい場合、`coefficients` には $ \ theta_j = $0.0 要素が埋め込まれます。
-syntax: 'operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation ApproximatelyApplyDiagonalUnitary (tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: '- クォンタムロジック回線の合成、Shende、Stephen、、Igor または Markov の https://arxiv.org/abs/quant-ph/0406176'
 input:
-  content: '(coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  content: '(tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
+  - name: tolerance
+    summary: 小さい係数が切り捨てられる公差。
+    isPrimitive: true
+    uid: Double
   - name: coefficients
     summary: $ 2 ^ n $ 係数 $ \ theta_j $ までの配列。 $J $ th 係数は、リトルエンディアン形式でエンコードされた数値の状態 $ \ket{j} $ にインデックスを付けます。
     isArray: true
@@ -37,11 +41,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- approximatelyapplydiagonalunitary
+- applydiagonalunitary
 metadata:
-  ms.openlocfilehash: a98bdfc2503f7acf4e5cb145df6d6de528fc3f4f
+  ms.openlocfilehash: 9d2ee3254a3cd7c182ae6b4a57a6c48a993fa679
   ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: ja-JP
   ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905271"
+  ms.locfileid: "77907955"

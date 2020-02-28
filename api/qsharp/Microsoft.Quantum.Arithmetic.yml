@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arithmetic
 name: Microsoft.Quantum.Arithmetic
-summary: " # <a name=\"summary\"></a>概要\n この名前空間には、一貫 compute 算術演算に使用される関数と操作が含まれています。"
+summary: " # <a name=\"summary\"></a>要約\n この名前空間には、一貫 compute 算術演算に使用される関数と操作が含まれています。"
 functions:
 - uid: microsoft.quantum.arithmetic.bigendianaslittleendian
   summary: Qubit の順序を逆にして、`BigEndian` qubit レジスタを `LittleEndian` qubit レジスタに変換します。
@@ -139,6 +139,8 @@ operations:
   summary: 符号付き整数の `xs` を符号付き整数 `ys` で乗算し、結果を `result`に格納します。最初はゼロである必要があります。
 - uid: microsoft.quantum.arithmetic.preparefxp
   summary: クォンタム固定小数点数を古典定数に初期化します。
+- uid: microsoft.quantum.arithmetic.reflectaboutinteger
+  summary: 指定された古典的な整数に関するクォンタムレジスタを反映します。
 - uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
   summary: 元に戻すことができ、2つの整数がインプレース適用されます。
 - uid: microsoft.quantum.arithmetic.ripplecarryadderd
@@ -177,9 +179,9 @@ newtypes:
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: リトルエンディアンに格納されている符号付き整数の型 (「LittleEndian」を参照)。
 metadata:
-  ms.openlocfilehash: f4bdca1f7b6339079cd1e13cfafc2de4e592901a
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 905bac104c15881be6b2e600bd090ff650d63e0e
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870444"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77904555"

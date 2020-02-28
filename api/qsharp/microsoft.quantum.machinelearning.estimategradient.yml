@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.estimategradient
+name: EstimateGradient
+type: operation
+namespace: Microsoft.Quantum.MachineLearning
+summary: 特定のモデルのシーケンシャル分類器のトレーニンググラデーションと、エンコードされた入力を推定します。
+remarks: この操作では、Hadamard テストとパラメーターシフト手法を一緒に使用して、グラデーションを見積もります。
+syntax: 'operation EstimateGradient (model : Microsoft.Quantum.MachineLearning.SequentialModel, encodedInput : Microsoft.Quantum.MachineLearning.StateGenerator, nMeasurements : Int) : Double[]'
+input:
+  content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, encodedInput : Microsoft.Quantum.MachineLearning.StateGenerator, nMeasurements : Int)'
+  types:
+  - name: model
+    summary: グラデーションを推定するシーケンシャルモデル。
+    uid: microsoft.quantum.machinelearning.sequentialmodel
+  - name: encodedInput
+    summary: 状態準備操作にエンコードされたシーケンシャル分類子への入力。
+    uid: microsoft.quantum.machinelearning.stategenerator
+  - name: nMeasurements
+    summary: グラデーションの推定に使用する測定値の数。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double[]
+  types:
+  - summary: 指定された入力パラメーターとモデルパラメーターにおけるトレーニンググラデーションの見積もり。
+    isArray: true
+    isPrimitive: true
+    uid: Double
+metadata:
+  ms.openlocfilehash: 05f80d57bc84e937e3a2580e9941a50ec60eab56
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909417"

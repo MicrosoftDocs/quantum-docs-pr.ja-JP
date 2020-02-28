@@ -4,10 +4,10 @@ name: ControlledOnBitString
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  制御レジスタの状態が指定したビットマスクに対応する場合に、ターゲットレジスタに oracle を適用する、ユニタリ演算子を返します。
+  制御レジスタの状態が指定したビットマスクに対応する場合に、ターゲットレジスタに oracle を適用する、ユニタリ操作を返します。
 
 
-  この関数の出力は、\begin{align} U \ket{b_0 b_1/cドット b_ {n-1}} \ket{\psi} = \ket{b_0 b_1/cドット b_ {n-1}} \ otimes \begin{cases} によっ $U て表すことができます。 V \ket{\psi} & \t extrm{if} (b_0 b_1 \ cドット b_ {n-1}) = \texttt{bits} \\\\ \ket{\psi} & \textrm{otherwise} \end{cases}、\end{align} ここで $V $ は `oracle` 操作のアクションを表すミリ秒変換です。
+  この関数の出力は、\begin{align} U \ket{b_0 b_1/cドット b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \ cドット b_ {n-1}} というように、U によっ $U て表すことができる演算です。 times \begin{cases} V \ket{\psi} & \t extrm{if} (b_0 b_1 \ cドット b_ {n-1}) = \texttt{bits} \\\\ \ket{\psi} & \textrm{otherwise} \end{cases}, \end{align} ここで $V $ は、`oracle` 操作のアクションを表すミリ秒変換です。
 remarks: >-
   `bits` と `controlRegister` の長さは同じである必要があります。
 
@@ -64,12 +64,12 @@ input:
   content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl))"
   types:
   - name: bits
-    summary: 指定されたユニタリ演算子を制御するビット文字列。
+    summary: 指定されたユニタリ操作を制御するビット文字列。
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: oracle
-    summary: ターゲットレジスタに適用されるユニタリ演算子。
+    summary: ターゲットレジスタに適用されるユニタリ操作。
     isOperation: true
     input:
       types:
@@ -85,7 +85,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: コントロールの登録状態がビットマスク `bits`に対応している場合に、ターゲットレジスタに `oracle` 適用される、ユニタリ演算子。
+  - summary: コントロールの登録状態がビットマスク `bits`に対応している場合に、ターゲットのレジスタに `oracle` 適用される、一連の処理。
     isOperation: true
     input:
       types:
@@ -102,9 +102,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: dde246a6eb0cf5e278cd079ff52c3a0b0ff71120
-  ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+  ms.openlocfilehash: e6f7f8980b2b9b8305df12da41e30fc563e54ad1
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/18/2020
-  ms.locfileid: "77441048"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77906527"
