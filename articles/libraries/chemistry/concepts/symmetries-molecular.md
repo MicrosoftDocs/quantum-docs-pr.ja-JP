@@ -1,24 +1,24 @@
 ---
-title: Symmetries 分子積分 |Microsoft Docs
-description: 分子の Symmetries の概念に関するドキュメント
+title: Symmetries 分子の積分
+description: 'Q # OrbitalIntegral 型を使用して分子 symmetries を列挙する方法について説明します。'
 author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
-ms.openlocfilehash: 041d600bc8d65e7d67f5fe7d61a69426fb42ffbc
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: b7e7b79af17af544c4a784eff08500498afc9f67
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442384"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904470"
 ---
 # <a name="symmetries-of-molecular-integrals"></a>Symmetries 分子の積分
 
-クーロン Hamiltonian の本質的な対称性は、[電子システムの Quantum モデル](xref:microsoft.quantum.chemistry.concepts.quantummodels)で指定された Hamiltonian であり、相互にやり取りする原子と nuclei について説明しています。これは、Hamiltonian の用語を圧縮するために悪用されます。
-一般に、基本関数 $ \psi_j $ に関してこれ以上の仮定が行われていない場合は、次のようにします。これは、[のクォンタムモデルの積分からすぐにわかるように、h_ {pqrs} = h_ {qpsr}、\ tag{★} です。](xref:microsoft.quantum.chemistry.concepts.quantummodels)$P、q $ および $r、s $ が交換と交換された場合、その値は同じままです。
+クーロン Hamiltonian の固有の対称性は、[電子システムの Quantum モデル](xref:microsoft.quantum.chemistry.concepts.quantummodels)で指定された Hamiltonian であり、相互にやり取りする原子と nuclei について説明しています。これにより、symmetries 内の用語を圧縮するために利用できる多くの Hamiltonian が得られます。
+一般に、基本関数 $ \ psi_j $ についてこれ以上の仮定が行われていない場合は、次のよう h_ にして、{pqrs} = h_ {qpsr} を実行するだけで済みます。 \ tag{★} \ label{eq: hpqrs} \ end{/end{の値は、$p、q $ および $r、s $ が交換から交換された場合、その値が同一であることに注意して、[電子システムの Quantum モデル](xref:microsoft.quantum.chemistry.concepts.quantummodels)の積分からすぐに見ることができます。
 
-スピン orbitals が実際の値であると想定した場合 (ガウス回転ベースの場合)、h_ {pqrs} = h_ {qpsr} が追加されます。 = h_ {srqp} = h_ {rspq} = h_ {rqps} = h_ {psrq} = h_ {spqr} = h_ {qrsp} .\tag {★} \ label{eq: hpqrsreal} \ end{式} このような仮定がある場合は、上記の symmetries を使用して、Hamiltonian のマトリックス要素を格納するために必要なデータを $8 $ の係数で減らすことができます。ただし、これにより、一貫性のある方法でデータを簡単にインポートできるようになります。
+スピン orbitals が実際の値であると想定した場合 (ガウス回転ベースの場合)、次の h_ ようにします。 {pqrs} = h_ {qpsr} = h_ {srqp} = h_ {rspq} = h_ {rqps} = h_ {psrq} = h_ {spqr} = h_ {qrsp} {★} \ label{eq: hpqrsreal} \ end{式} このような仮定がある場合は、上記の symmetries を使用して、Hamiltonian のマトリックス要素を格納するために必要なデータを $8 $ の係数で減らすことができます。ただし、これにより、一貫性のある方法でデータを簡単にインポートできるようになります。
 幸いなことに、Hamiltonian シミュレーションライブラリには、 [LIQUI $ | \rangle $](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/)から、または[nwchem](http://www.nwchem-sw.org/index.php/Main_Page)から直接、整数ファイルをインポートするために使用できるサブルーチンがあります。
 
 分子回転の積分 ($h\_{pq} $ と $h\_{pqrs} $ terms) は、この対称を表現するために役立つ多くの関数を提供する `OrbitalIntegral` 型を使用して表されます。

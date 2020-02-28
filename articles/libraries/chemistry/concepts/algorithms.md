@@ -1,17 +1,17 @@
 ---
-title: Hamiltonian Dynamics をシミュレートする |Microsoft Docs
-description: Hamiltonian Dynamics の概念説明ドキュメントをシミュレートする
+title: Hamiltonian Dynamics のシミュレーション
+description: Trotter-Suzuki の数式と qubitization を使用して Hamiltonian のシミュレーションを操作する方法について説明します。
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: 69c7923ea447af320a413889df54716abd5475ea
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e3ce76f5ddcca497adb519eece959c9dd5dec92f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820642"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904640"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics のシミュレーション
 
@@ -146,7 +146,7 @@ Select 操作では、各 Hamiltonian terms _j $H にアクセスする手段が
         \ket{x} & \text{otherwise} \end{cases}.
 $$
 
-$ & Qubitization} $ 操作は、直接には使用されません。しかし、$-\begin{align} R &amp; = 1-2 \ 演算子名 {Prepare} \ket{0}\bra{0}、\\\\ = \ オペレーター名 {} ^ &amp; を作成する状態{-1} に関するリフレクションを実装するために使用されますが、このような場合はを使用します。
+$ & Qubitization} $ 操作は、直接には使用されません。しかし、$-\begin{align} R &amp; = 1-2 \ 演算子名 {Prepare} \ket{0}\bra{0}、\\\\ = \ オペレーター名 {} ^ &amp; を作成する状態{-1} に関するリフレクションを実装するために使用されますが、このような場合はを使用します。{-1}
 \end{align} $ $
 
 ウォーク演算子 $W $ は、$ & operator name{select} $ および $R $ operation as $ $ W = \ operator name{select} R, $ $ として表すことができます。これにより、同じ (アイソメトリック) と $e 同等の演算子を実装することができます。これは、^ {/pm i-cos ^{-1}(H/| H | _1)

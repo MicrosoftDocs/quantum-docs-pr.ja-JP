@@ -1,22 +1,22 @@
 ---
-title: ファイルから Hamiltonian を読み込んでいます |Microsoft Docs
-description: ファイルからの Hamiltonian の読み込みに関するドキュメント
+title: ファイルからのハミルトニアンの読み込み
+description: Broombridge スキーマを使用して大規模な Hamiltonian を自動的に生成する方法について説明します。
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
-ms.openlocfilehash: 18f257efe8d53d2a22af4840bd8d17ab6b80a503
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 715dbcefc10ecc5af45f2bdd228890f1cb28886b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442334"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907292"
 ---
 # <a name="loading-a-hamiltonian-from-file"></a>ファイルからのハミルトニアンの読み込み
 以前は、個別の用語を追加して Hamiltonians を構築していました。 これは、小さな例では問題ありませんが、大規模な量子化学には、何百万または十億の Hamiltonians が必要です。 NWChem などの化学パッケージによって生成された Hamiltonians は、大きすぎて手動でインポートすることができません。 このサンプルでは、 [Broombridge スキーマ](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)によって表される分子から、`FermionHamiltonian` インスタンスが自動的に生成される方法を説明します。 参考のために、提供されている `LithiumHydrideGUI` サンプルまたは `RunSimulation` サンプルを調べることができます。 [LIQUi | >](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/)で使用される形式からのインポートについても、制限付きサポートを利用できます。
 
-サンプルリポジトリの `IntegralData/YAML` フォルダーに用意されている Nitrogen 分子の例を考えてみましょう。 `Broombridge` スキームの読み込み方法は簡単です。
+サンプルリポジトリの `IntegralData/YAML` フォルダーに用意されている Nitrogen 分子の例を考えてみましょう。 `Broombridge` スキーマを読み込むためのメソッドは簡単です。
 
 ```csharp
 // This is the name of the file we want to load

@@ -1,17 +1,17 @@
 ---
-title: 複数の qubits |Microsoft Docs
-description: 複数の量子ビット
+title: 複数の量子ビット
+description: 2つ以上の qubits に対して操作を実行する方法について説明します。
 author: QuantumWriter
 uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e9c043f4ee41a878b9544a27d5ea052fce29f06e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863218"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907547"
 ---
 # <a name="multiple-qubits"></a>複数の Qubits
 
@@ -27,7 +27,7 @@ ms.locfileid: "74863218"
 
 ## <a name="representing-two-qubits"></a>2つの Qubits を表す
 2つの状態の間の主な違いは、2つの値が2次元ではなく4次元であることです。
-これは、2つの状態の計算基準が、1つの "1 つの" 状態のすべての製品によって形成されているためです。  たとえば、\begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}、\qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}、\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & \\\begin{bmatrix}0 \\\\0 \\\\1 \\ \\0 \end{bmatrix}、\qquad 11 \equiv \begin{bmatrix}0 \\ \\1 \end{bmatrix}\otimes \begin{bmatrix}0 \\ \\1 \end{bmatrix} = \begin{bmatrix}0 \\\\0 \\ @no__ 0t_40_ \\ 1 \end{bmatrix}.
+これは、2つの状態の計算基準が、1つの "1 つの" 状態のすべての製品によって形成されているためです。  たとえば、\begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}、\qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}、\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & \\\begin{bmatrix}0 \\\\0 \\\\1 \\ \\0 \end{bmatrix}、\qquad 11 \equiv \begin{bmatrix}0 \\ \\1 \end{bmatrix}\otimes \begin{bmatrix}0 \\ \\1 \end{bmatrix} = \begin{bmatrix}0 \\\\0 \\ @no__ 0t_40_ \\ 1 \end{bmatrix}.\\
 \end{align}
 
 この構築を使用して、$n $ qubits のクォンタムの状態がディメンション $ 2 ^ n $ の単位ベクトルで表されることがよくわかります。  ベクター
@@ -38,7 +38,7 @@ $ $ \begin{bmatrix} \ alpha_{00} \\\\ \ alpha_{01} \\\\ \ alpha_{10} \\\\ \ alph
 
 2つの独立した qubits が指定されている場合、1つは状態 $ \begin{bmatrix} \ alpha \\\\ \ ベータ \end{bmatrix} $、2番目の qubits が state $ \begin{bmatrix} \ gamma \\\\ \ delta \end{bmatrix} $
 
-$$ \begin{bmatrix} \alpha \\\\  \beta \end{bmatrix} \otimes \begin{bmatrix} \gamma \\\\  \delta \end{bmatrix} =\begin{bmatrix} \alpha \begin{bmatrix} \gamma \\\\  \delta \end{bmatrix} \\\\ \beta \begin{bmatrix}\gamma \\\\  \delta \end{bmatrix} \end{bmatrix} = \begin{bmatrix} \alpha\gamma \\\\  \alpha\delta \\\\  \beta\gamma \\\\  \beta\delta \end{bmatrix}, $$
+$ $ \begin{bmatrix}-alpha \\\\ \ ベータ \end{bmatrix} \begin{bmatrix} \ \\\\-delta \end{bmatrix} = \begin{bmatrix}-alpha \begin{bmatrix}-gamma \\\\ \end{bmatrix} \begin{bmatrix}\gamma \end{bmatrix} \\\\ \end{bmatrix} \begin{bmatrix} \\\\ \alpha\gamma \\\\ \alpha\delta \\\\ \beta\gamma \beta\delta を \\して \\ \end{bmatrix}, $$
 
 操作 $ otimes $ は、ベクターの Kronecker (または製品) と呼ばれます。 2つの single qubit 状態の最新の状態を常に取得し、2つの1つの状態を形成することはできますが、2つの単一 qubit 状態のすべての状態を2つの1つの状態のままにして書き込むことはできません。
 たとえば、状態が $ \ psi = \begin{bmatrix}-alpha \\\\ \ ベータ \end{bmatrix} $ および $ \ phi = \begin{bmatrix}/gamma \\\\-delta \end{bmatrix} $ ではなく、その状態は 
@@ -59,7 +59,7 @@ $$
 
 2つの qubit クォンタム状態の1つの qubit だけを測定することもできます。 Qubits の1つだけを測定する場合、測定の影響はわずかに異なります。これは、状態全体が1つのサブシステムにのみ折りたたまれるのではなく、すべての状態が計算ベースの状態に折りたたまれないためです。  言い換えると、1つの qubit だけを測定すると、サブシステムの1つだけが折りたたまれますが、すべてが折りたたまれるわけではありません。  
 
-これを確認するには、次の状態の最初の qubit を測定することを検討します。これは、Hadamard 変換を適用することによって形成されます。これは、最初に "0" 状態に設定される2つの qubit の $H $ です。 $ $ H ^ {\ otimes 2} \ left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix}) = \ frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 & 1 & 1 &-1 \\\\ 1 & 1 &-1 &-1 \\\\ 1 &-1 &-1 & 1 \end{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ 終了 {bmatrix} = \ frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ 終了 {bmatrix} \ map\end{bmatrix} \begin{cases}\text{outcome} = 0 &{1}1{2}\\0 \\\\0 \\\\ \ \begin{bmatrix}0} = 1 & \end{cases}.{1}{\ sqrt{2}}\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\
+これを確認するには、次の状態の最初の qubit を測定することを検討します。これは、Hadamard 変換を適用することによって形成されます。これは、最初に "0" 状態に設定される2つの qubit の $H $ です。 $ $ H ^ {\ otimes 2} \ left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix}) = \ frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 & 1 & 1 &-1 \\\\ 1 & 1 &-1 &-1 \\\\ 1 &-1 &-1 & 1 \end{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ 終了 {bmatrix} = \ frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ 終了 {bmatrix} \ map\end{bmatrix} \begin{cases}\text{outcome} = 0 &{1}1{2}\\0 \\\\0 \\\\ \ \begin{bmatrix}0} = 1 & \end{cases}.{1}{\ sqrt{2}}\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\\\\\\\
 $ $ 両方の結果が50% の確率で発生しています。  両方に対して50% の確率の結果を intuited にすることができます。これは、最初の量子状態ベクトルが、最初の qubit の $0 $ と $1 $ のスワップで不変であるという事実です。
 
 最初または2番目の qubit を測定するための数学的規則は単純です。  _K $ を $k ^ {\ rm th} $ の計算ベースベクターに $e する場合は $S $ を $e $ の値に $1 $ として指定します。これにより、は _k $ の値に $ の値を取ります。  たとえば、最初の qubit の測定に関心がある場合、$S $ は $e _2 \ http-equiv $10 と $e http-equiv $11 で構成されます。  同様に、2番目の qubit $S に関心がある場合、$ は $e _1 \ http-equiv $1 および $e 3 \equiv $11 で構成されます。  次に、選択した qubit を $1 $ に測定する確率を、state vector $ \ psi $ に対して指定します。
@@ -101,11 +101,11 @@ $ $ \ オペレーター名 {cnot} = \begin{bmatrix} 1 \ 0 \ 0 \ 0 \\\\ 0 \ 1 \ 
 
 両方の qubit にシングル qubit ゲートを適用して、2つの qubit ゲートを形成することもできます。 たとえば、ゲートを適用する場合は、 
 
-$$ \begin{bmatrix} a\ b\\\\ c\ d \end{bmatrix} $$
+$ $ \begin{bmatrix} a \ b\\\\ c \ d \end{bmatrix} $ $
 
-および
+and
 
-$$\begin{bmatrix} e\ f\\\\ g\ h \end{bmatrix} $$
+$ $ \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} $ $
 
 1番目と2番目の qubits に対して、これは、次のようになります。 $ $ \begin{bmatrix} a \ b\\\\ c \ d \end{bmatrix}/otimes \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} = \begin{bmatrix} ae \ af \ a \ bf \\\\ ag \ ah \ bg \ bh \\\\ ce \ cf \ de \ df \\\\ cg \ ch \ dg \ dh \end{bmatrix}. $ $ であるため、既知のシングル qubits ゲートの最新の製品を使用して2つの qubits ゲートを形成できます。 2つの qubit ゲートの例としては、H $、$X-otimes、$H $、$X/otimes Z $ などがあります。
 
@@ -125,7 +125,7 @@ $$
 ## <a name="many-qubit-systems"></a>多対ビットシステム
 ここでは、2つのビットケースで調査したのとまったく同じパターンに従って、小規模なシステムから多数の qubit クォンタムの状態を構築します。  このような状態は、より小さい状態の製品を作成することによって構築されます。  たとえば、クォンタムコンピューターにビット文字列 $1011001 $ をエンコードすることを検討してください。  これを次のようにエンコードできます。
 
-$$ 1011001 \equiv \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\  0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\  1 \end{bmatrix}.
+$ $1011001 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}/otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}.
 $$
 
 クォンタムゲートは、まったく同じ方法で動作します。  たとえば、最初の qubit に $X $ gate を適用し、2番目と3番目の qubit の間で CNOT を実行する場合は、この変換を次のように表現することができます。

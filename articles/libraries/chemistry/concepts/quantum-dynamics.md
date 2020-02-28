@@ -1,17 +1,17 @@
 ---
-title: クォンタム Dynamics |Microsoft Docs
-description: Quantum Dynamics の概念ドキュメント
+title: クォンタム Dynamics
+description: Quantum dynamics とクラシック dynamics の類似点と相違点について説明します。
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantumdynamics
-ms.openlocfilehash: 0fd27e59921fdf8429bf164c4c64cfa3b8e44160
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9cb74ccd4b7806a90c0701300860d777fa8e5d75
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185343"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904487"
 ---
 # <a name="quantum-dynamics"></a>クォンタム Dynamics
 
@@ -22,7 +22,7 @@ ms.locfileid: "73185343"
 クラシック dynamics では、ここでは、$F (x, t) = ma = m& frac {\ dd ^ 2} {\ dd t ^ 2} {x} (t) $ に従ってパーティクルの位置が変化することを示します。ここで、$F (x, t) $ は force、$m $ は質量、$a $ は加速します。
 次に、初期位置 $x (0) $、進化時間 $t $、およびパーティクルに作用するフォースの説明を指定した後、$x (t) $ のニュートンの式で指定された差分式を解決して、$x (t) $ を検索できます。
 この方法で強制を指定することは、少しの問題です。
-そのため、システムのエネルギーに関しては、force を使用することがよくあります。これは、$--partialx V (x, t) = m \frac{\dd ^ 2} {\ dd t ^ 2} {x} (t) $ です。
+そのため、システムのエネルギーに関しては、その力が、$-\ partial_x V (x, t) = m \frac{\dd ^ 2} {\ dd t ^ 2} {x} (t) $ という意味で表現されることがよくあります。
 このため、パーティクルの場合、システムのダイナミクスは、潜在的エネルギー関数、パーティクル質量、および進化時間によってのみ指定されます。
 
 多くの場合、より幅広い言語が、$F = ma $ を超える古典的なダイナミクスに導入されています。
@@ -30,7 +30,7 @@ ms.locfileid: "73185343"
 Hamiltonian 力学では、システムの総エネルギーおよび (一般化された) 位置と momenta は、任意のクラシックオブジェクトの動きを示すために必要なすべての情報を提供します。
 具体的には、$f (x, p, t) $ は、システムの $ と momenta $p $ $x の一般化された位置のいくつかの関数であり、$H (x, p, t) $ を Hamiltonian 関数にします。
 たとえば、$f (x, p, t) = x (t) $ および $H (x, p, t) = p ^ 2 (t)/2m-V (x, t) $ を取得した場合、上記の例の Newtonian dynamics が復旧されます。
-一般性では、\begin{align} \frac{d}{dt} f & = \ partial_t f-(\ partial_t x H\partial_p f + \partial_p h x f)\\\\ &-defeq/partial_t f + \\{f, H\\} になります。
+一般性では、\begin{align} \frac{d}{dt} f & = \ partial_t f-(\ partial_x H \ partial_p f + \ partial_p H \ partial_x f)\\\\ & \ defeq \ partial_t f + \\{f, H\\} です。
 ここで \end{align} $\\{f, H\\} $ は、[ポワソンかっこ](https://en.wikipedia.org/wiki/Poisson_bracket)と呼ばれ、dynamics の定義時に中心的な役割を果たすことが原因で、古典力学で随所として表示されます。
 
 クォンタム dynamics は、まったく同じ言語で記述できます。
@@ -47,13 +47,13 @@ Hamiltonian (または総エネルギー) によって、すべての閉鎖さ�
 クォンタムの位置と勢いのアナログを演算子で置き換える必要があるのと同様に、Hamiltonian 関数は演算子でも同様に置き換える必要があります。
 たとえば、フリースペースのパーティクルの場合、$H (x, p) = p ^ 2/2m $ を使用します。量子力学では、Hamiltonian operator $ \hat{H} $ は $ \hat{H} = \hat{p} ^ 2/2m $ で、$ \hat{p} $ は勢い演算子です。
 この観点からは、クラシックから quantum dynamics に移行するときに、通常の dynamics で使用される変数を演算子で置き換えるだけで済みます。
-通常の古典 Hamiltonian を quantum 言語に変換することによって Hamiltonian 演算子を構築した後、任意のクォンタムの機械的な量 (つまり、クォンタム機械的演算子) の力学を、(例: クォンタム機械的演算子) $ \hat{f} (t) $ via \ begin{align} \frac{d}{dt} \hat{f} = \ partial_t \hat{f} + [\hat{f}, \hat{H}], \end{align} ここで、$ [f, H] = fH-Hf $ は commutator と呼ばれています。
+通常の古典 Hamiltonian を quantum 言語に変換することによって Hamiltonian 演算子を構築した後、任意のクォンタムの機械的な量 (つまり、クォンタム機械的演算子) の力学を、(例: クォンタム機械的演算子) $ \hat{f} (t) $ via \ begin{align} \frac{d}{dt} \hat{f} = \ partial_t \hat{f} + [\hat{f}, \hat{H}], \end{align} where $ [f, H] = fH-Hf $ は commutator と呼ばれています。
 この式は、前に示した古典式とよく似ていますが、ポアソンかっこ $\\{f, H\\} $ は、$f $ と $H $ の間の commutator に置き換えられています。
 このプロセスを使用して、古典的な Hamiltonian を取得し、それを使用して quantum Hamiltonian を見つけることが、クォンタムの用語では正規の量子化と呼ばれています。
 
 最も関心があるのは $ $f 演算子  これに対する答えは、解決する必要がある問題によって異なります。
 多くの場合、最も役に立つ数量は、クォンタム状態オペレーターです。これは、前述の概念説明のドキュメントで説明したように、dynamics について学習するすべてのものを抽出するために使用できます。
-この操作を行った後 (また、一方が純粋な状態の場合の結果を簡単にするため)、クォンタムの状態の Schrödinger 式は \begin{align} i\ partial_t \ket{\psi (t)} = \hat{H} (t) \ket{\psi (t)} にあります。
+この操作を行った後 (また、一方が純粋な状態の場合の結果を簡単にするため)、クォンタム状態の Schrödinger 式は \begin{align} i \ partial_t \ket{\psi (t)} = \hat{H} (t) \ket{\psi (t)} となります。
 \end{align}
 
 この式は、前述のほど直感的ではないかもしれませんが、おそらく、クォンタムまたはクラシックコンピューターでクォンタム dynamics をシミュレートする方法を理解するための最も単純な式です。
