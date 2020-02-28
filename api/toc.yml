@@ -1,4 +1,4 @@
-- name: リファレンス
+- name: API リファレンス
   items:
     - name: 'Q# ライブラリ'
       href: qsharp/toc.yml

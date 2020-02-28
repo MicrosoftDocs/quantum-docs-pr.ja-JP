@@ -1,5 +1,3 @@
-- name: OSS ライセンス
-  href: licensing.md
 - name: 準備
   href: prelude.md
 - name: 従来型の計算
@@ -20,3 +18,5 @@
   href: error-correction.md
 - name: '[アプリケーション]'
   href: applications.md
+- name: OSS ライセンス
+  href: licensing.md
