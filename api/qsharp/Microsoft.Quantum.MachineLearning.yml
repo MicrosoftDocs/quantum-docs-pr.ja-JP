@@ -1,0 +1,72 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.machinelearning
+name: Microsoft.Quantum.MachineLearning
+summary: " # <a name=\"summary\"></a>要約\n この名前空間は、クォンタム機械学習アプリケーションで使用される関数と操作を提供します。\n\n # <a name=\"references\"></a>参照\n - Alex Bocharov、Krysta Svore、Nathan Wiebe、\"サーキット中心のクォンタム分類子\"、https://arxiv.org/abs/1804.00633。"
+functions:
+- uid: microsoft.quantum.machinelearning.approximateinputencoder
+  summary: 係数と許容範囲が指定されている場合、は、指定された許容範囲に対して、計算ベース状態の対応する振幅として各係数を準備する状態準備操作を返します。
+- uid: microsoft.quantum.machinelearning.combinedstructure
+  summary: 1つ以上の制御された回転を指定した場合、は、モデルパラメーターのインデックスをシフトして1つのレイヤーを返します。これにより、異なるレイヤーが個別のモデルパラメーターによってパラメーター化されます。
+- uid: microsoft.quantum.machinelearning.cyclicentanglinglayer
+  summary: 指定された軸に沿って1つの制御された回転の配列を返します。 qubits のレジスタで周期的に配置され、個別のモデルパラメーターによってパラメーター化されます。
+- uid: microsoft.quantum.machinelearning.defaulttrainingoptions
+  summary: トレーニング分類子の既定のオプションセットを返します。
+- uid: microsoft.quantum.machinelearning.featureregistersize
+  summary: 特定の特徴ベクターをエンコードするために必要な qubits の数を返します。
+- uid: microsoft.quantum.machinelearning.inferredlabel
+  summary: 分類の確率とバイアスが指定されている場合、はその確率から推論されたラベルを返します。
+- uid: microsoft.quantum.machinelearning.inferredlabels
+  summary: 分類確率の配列とバイアスを指定すると、各確率から推論されたラベルが返されます。
+- uid: microsoft.quantum.machinelearning.inputencoder
+  summary: 係数と許容範囲を指定すると、は、各係数を計算ベース状態の対応する振幅として準備する状態準備操作を返します。
+- uid: microsoft.quantum.machinelearning.localrotationslayer
+  summary: 指定された軸に沿って非制御 (単 qubit) の回転の配列を返します。レジスタ内の qubit ごとに1つの回転があり、個別のモデルパラメーターによってパラメーター化されます。
+- uid: microsoft.quantum.machinelearning.misclassifications
+  summary: 一連の推定ラベルと一連の正しいラベルが指定されている場合、ラベルの各セットが異なる場所のインデックスを返します。
+- uid: microsoft.quantum.machinelearning.nmisclassifications
+  summary: 一連の推定ラベルと一連の正しいラベルが指定されると、によって、各ラベルのセットが異なるインデックスの数が返されます。
+- uid: microsoft.quantum.machinelearning.nqubitsrequired
+  summary: 指定されたシーケンシャル分類子を適用するために必要な qubits の数を返します。
+- uid: microsoft.quantum.machinelearning.partialrotationslayer
+  summary: 個別のモデルパラメーターによってパラメーター化された、指定した軸に沿った単一の qubit 回転の配列を返します。
+- uid: microsoft.quantum.machinelearning.sampled
+  summary: 指定されたスケジュールを使用して、指定された配列をサンプリングします。
+- uid: microsoft.quantum.machinelearning.schedulelength
+  summary: 指定されたサンプリングスケジュール内の要素の数を返します。
+operations:
+- uid: microsoft.quantum.machinelearning.applysequentialclassifier
+  summary: 連続した分類子の構造とパラメーター化を指定した場合、は、分類子を qubits のレジスタに適用します。
+- uid: microsoft.quantum.machinelearning.estimateclassificationprobabilities
+  summary: 一連のサンプルと連続した分類子を指定すると、は各サンプルの分類子の出力を繰り返し測定することで、これらのサンプルの分類確率を推定します。
+- uid: microsoft.quantum.machinelearning.estimateclassificationprobability
+  summary: サンプルとシーケンシャル分類子が指定されている場合、は、指定されたサンプルの分類子の出力を繰り返し測定することで、そのサンプルの分類確率を推定します。
+- uid: microsoft.quantum.machinelearning.estimategradient
+  summary: 特定のモデルのシーケンシャル分類器のトレーニンググラデーションと、エンコードされた入力を推定します。
+- uid: microsoft.quantum.machinelearning.trainsequentialclassifier
+  summary: シーケンシャル分類子の構造に基づいて、指定されたラベル付きトレーニングセットで分類器をトレーニングします。
+- uid: microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
+  summary: シーケンシャルな分類子の構造に基づいて、特定のモデルから始まる特定のラベル付けされたトレーニングセットで分類器をトレーニングします。
+- uid: microsoft.quantum.machinelearning.validatesequentialclassifier
+  summary: 指定された一連のラベル付きサンプルに対して、特定のシーケンシャル分類子を検証します。
+newtypes:
+- uid: microsoft.quantum.machinelearning.controlledrotation
+  summary: ターゲットと制御のインデックス、回転軸、およびモデルパラメーターベクターへのインデックスに関して、制御されたローテーションについて説明します。
+- uid: microsoft.quantum.machinelearning.labeledsample
+  summary: このサンプルが属するクラスでラベル付けされたサンプル。
+- uid: microsoft.quantum.machinelearning.samplingschedule
+  summary: 一連のサンプルからバッチを描画するためのスケジュール。
+- uid: microsoft.quantum.machinelearning.sequentialmodel
+  summary: 一連のパラメーター化および制御された回転、回転角度の割り当て、およびモデルによって認識される2つのクラス間のバイアスで構成される、クォンタム分類器モデルについて説明します。
+- uid: microsoft.quantum.machinelearning.stategenerator
+  summary: 指定された入力をシーケンシャルな分類子に準備する操作を記述します。
+- uid: microsoft.quantum.machinelearning.trainingoptions
+  summary: トレーニングクォンタム分類子で使用されるオプションのコレクション。
+- uid: microsoft.quantum.machinelearning.validationresults
+  summary: 一連のサンプルに対して分類子が検証された結果。
+metadata:
+  ms.openlocfilehash: be0c17b6f3e42c03bacadbf02c693980f89cbe39
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908312"

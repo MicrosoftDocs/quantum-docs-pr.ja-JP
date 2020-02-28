@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.logical
 name: Microsoft.Quantum.Logical
-summary: " # <a name=\"summary\"></a>Summary\n 論理式およびブール型ロジックを操作するための関数が含まれています。"
+summary: " # <a name=\"summary\"></a>要約\n 論理式およびブール型ロジックを操作するための関数が含まれています。"
 functions:
 - uid: microsoft.quantum.logical.and
   summary: 2つの値のブール値の組み合わせを返します。
@@ -45,6 +45,8 @@ functions:
   summary: 数値が別の数値以下の場合にのみ true を返します。
 - uid: microsoft.quantum.logical.lessthanorequall
   summary: 数値が別の数値以下の場合にのみ true を返します。
+- uid: microsoft.quantum.logical.nearlyequald
+  summary: 2つの入力がほぼ等しい場合 (つまり、許容範囲が 1e-12 の範囲内) の場合にのみ true を返します。
 - uid: microsoft.quantum.logical.not
   summary: 値のブール型の否定を返します。
 - uid: microsoft.quantum.logical.notequalb
@@ -61,14 +63,16 @@ functions:
   summary: 2つの入力が等しくない場合にのみ true を返します。
 - uid: microsoft.quantum.logical.notequalr
   summary: 2つの入力が等しくない場合にのみ true を返します。
+- uid: microsoft.quantum.logical.notnearlyequald
+  summary: 2つの入力がほぼ等しくない場合 (つまり、許容範囲が 1e-12 の範囲内にない場合) にのみ、true を返します。
 - uid: microsoft.quantum.logical.or
   summary: 2つの値の論理和を返します。
 - uid: microsoft.quantum.logical.xor
   summary: 2つの値のブール型の排他的和を返します。
 metadata:
-  ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 356a31be888d7ed3a96e219f8f7b31151179d3eb
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056273"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905898"

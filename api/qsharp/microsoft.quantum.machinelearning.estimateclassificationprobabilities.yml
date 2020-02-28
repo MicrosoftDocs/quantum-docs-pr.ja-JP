@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.estimateclassificationprobabilities
+name: EstimateClassificationProbabilities
+type: operation
+namespace: Microsoft.Quantum.MachineLearning
+summary: 一連のサンプルと連続した分類子を指定すると、は各サンプルの分類子の出力を繰り返し測定することで、これらのサンプルの分類確率を推定します。
+syntax: 'operation EstimateClassificationProbabilities (tolerance : Double, model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Double[][], nMeasurements : Int) : Double[]'
+input:
+  content: '(tolerance : Double, model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Double[][], nMeasurements : Int)'
+  types:
+  - name: tolerance
+    summary: サンプルを状態準備操作にエンコードするときに許容される許容範囲。
+    isPrimitive: true
+    uid: Double
+  - name: model
+    summary: 指定されたサンプルの分類確率の推定に使用されるシーケンシャルモデル。
+    uid: microsoft.quantum.machinelearning.sequentialmodel
+  - name: samples
+    summary: 分類する各サンプルの特徴ベクトルの配列。
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Double
+  - name: nMeasurements
+    summary: 分類確率の推定に使用する measusrements の数。
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double[]
+  types:
+  - summary: 指定された各サンプルの分類確率の見積もりの配列。
+    isArray: true
+    isPrimitive: true
+    uid: Double
+metadata:
+  ms.openlocfilehash: 83f3e35d0ef60d7925f8d62727d40d202220b851
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908669"

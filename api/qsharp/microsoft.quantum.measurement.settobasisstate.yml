@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.settobasisstate
+name: SetToBasisState
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: Qubit を測定し、必要に応じてビットフリップを適用することによって、指定された計算基準の状態に qubit を設定します。
+remarks: この操作の不変性として、`SetToBasisState(result, q)` の直後に `M(q)` を呼び出すと `result`が返されます。
+syntax: 'operation SetToBasisState (desired : Result, target : Qubit) : Unit'
+input:
+  content: '(desired : Result, target : Qubit)'
+  types:
+  - name: desired
+    summary: Qubit を設定する基準の状態。
+    isPrimitive: true
+    uid: Result
+  - name: target
+    summary: 状態が設定される qubit。
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+metadata:
+  ms.openlocfilehash: 977d0d5b55a9372a6e45e08cb89804e213ddd72c
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908431"

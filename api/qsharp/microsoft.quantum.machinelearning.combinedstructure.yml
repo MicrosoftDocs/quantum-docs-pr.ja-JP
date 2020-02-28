@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.combinedstructure
+name: CombinedStructure
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: 1つ以上の制御された回転を指定した場合、は、モデルパラメーターのインデックスをシフトして1つのレイヤーを返します。これにより、異なるレイヤーが個別のモデルパラメーターによってパラメーター化されます。
+examples: >-
+  同等のものを次に示します。
+
+
+  ```Q#
+
+  let structure = CombinedStructure([
+      LocalRotationLayer(2, PauliY),
+      CyclicEntanglingLayer(3, PauliX, 2)
+  ]);
+
+  let structure = [
+      ControlledRotation((0, new Int[0]), PauliY, 0),
+      ControlledRotation((1, new Int[0]), PauliY, 1),
+      ControlledRotation((0, [2]), PauliX, 2),
+      ControlledRotation((1, [0]), PauliX, 3),
+      ControlledRotation((2, [1]), PauliX, 4)
+  ];
+
+  ```
+syntax: 'function CombinedStructure (layers : Microsoft.Quantum.MachineLearning.ControlledRotation[][]) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
+input:
+  content: '(layers : Microsoft.Quantum.MachineLearning.ControlledRotation[][])'
+  types:
+  - name: layers
+    summary: 結合するレイヤー。
+    isArray: true
+    types:
+    - isArray: true
+      uid: microsoft.quantum.machinelearning.controlledrotation
+output:
+  content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
+  types:
+  - summary: 他のすべてのレイヤーの連結を表す、制御された回転の1つのレイヤー。
+    isArray: true
+    uid: microsoft.quantum.machinelearning.controlledrotation
+metadata:
+  ms.openlocfilehash: 484aef85795ab27aba90dcde89fbf4a0de43ab5a
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908720"

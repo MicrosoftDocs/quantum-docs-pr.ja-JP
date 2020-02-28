@@ -4,6 +4,8 @@ name: Microsoft.Quantum.Diagnostics
 functions:
 - uid: microsoft.quantum.diagnostics.allequalityfactb
   summary: ブール値の2つの配列が等しいことをアサートします。
+- uid: microsoft.quantum.diagnostics.allequalityfacti
+  summary: 整数値の2つの配列が等しいことをアサートします。
 - uid: microsoft.quantum.diagnostics.dumpmachine
   summary: 現在のターゲットコンピューターの状態をダンプします。
 - uid: microsoft.quantum.diagnostics.dumpregister
@@ -76,11 +78,11 @@ operations:
 newtypes:
 - uid: microsoft.quantum.diagnostics.test
   summary: 単体テストをマークするために使用される、コンパイラが認識する属性。
-summary: " # <a name=\"summary\"></a>Summary\n この名前空間には、アサート操作や要求関数など、診断の目的に役立つ関数と操作が含まれています。"
+summary: " # <a name=\"summary\"></a>要約\n この名前空間には、アサート操作や要求関数など、診断の目的に役立つ関数と操作が含まれています。"
 metadata:
-  ms.openlocfilehash: a633a9555f380e6aa6c6701d277d026c58130ff2
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 353750a6714b1cdd54ff866657a39bb825e34425
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858277"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905915"

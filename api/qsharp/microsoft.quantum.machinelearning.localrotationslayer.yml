@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.localrotationslayer
+name: LocalRotationsLayer
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: 指定された軸に沿って非制御 (単 qubit) の回転の配列を返します。レジスタ内の qubit ごとに1つの回転があり、個別のモデルパラメーターによってパラメーター化されます。
+syntax: 'function LocalRotationsLayer (nQubits : Int, axis : Pauli) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
+input:
+  content: '(nQubits : Int, axis : Pauli)'
+  types:
+  - name: nQubits
+    summary: 指定したレイヤーによって操作された qubits の数。
+    isPrimitive: true
+    uid: Int
+  - name: axis
+    summary: 指定されたレイヤー内の各回転の回転軸。
+    isPrimitive: true
+    uid: Pauli
+output:
+  content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
+  types:
+  - summary: 指定された軸についての制御された回転の配列。1つは `nQubits` qubits です。
+    isArray: true
+    uid: microsoft.quantum.machinelearning.controlledrotation
+metadata:
+  ms.openlocfilehash: 51883447aedaf43b5134d9adec6a6fafbe1bf399
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909281"
