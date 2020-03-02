@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 30135fa8a123e52a92b7187218f9980ba3cdbd2d
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442202"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906731"
 ---
 # <a name="quantum-basics-with-q"></a>Q# を使った量子の基本
 
@@ -30,7 +30,7 @@ QDK をインストールしなくても、説明を読み進めることで Q# 
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Q# を使った量子ビットの動作のデモ
 
-簡単な[量子ビットの定義](xref:microsoft.quantum.overview.what#the-qubit)を思い出してください。  従来のビットでは単一のバイナリ値 (0、1 など) が保持されるのに対し、量子ビットの状態は同時に 0 と 1 の**重ね合わせ**になることができます。  概念的には、量子ビットは空間内の方向 (ベクトルとも呼ばれます) と考えられます。  量子ビットは、任意の方向にすることができます。 2 つの**従来の状態**とは、0 を測定する確率が 100% になる方向と、1 を測定する確率が 100% になる方向のことです。  この表現は、[ブロッホ球](/quantum/concepts/the-qubit?view=qsharp-preview#visualizing-qubits-and-transformations-using-the-bloch-sphere)によってより正式に視覚化されます。
+簡単な[量子ビットの定義](xref:microsoft.quantum.overview.what#the-qubit)を思い出してください。  従来のビットでは単一のバイナリ値 (0、1 など) が保持されるのに対し、量子ビットの状態は同時に 0 と 1 の**重ね合わせ**になることができます。  概念的には、量子ビットは空間内の方向 (ベクトルとも呼ばれます) と考えられます。  量子ビットは、任意の方向にすることができます。 2 つの**従来の状態**とは、0 を測定する確率が 100% になる方向と、1 を測定する確率が 100% になる方向のことです。  この表現は、[ブロッホ球](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)によってより正式に視覚化されます。
 
 
 測定の動作により、2 進法の結果が生成され、量子ビットの状態が変わります。 測定では、0 または 1 のバイナリ値が生成されます。  量子ビットは重ね合わせ (あらゆる方向にある) の状態から古典的状態のいずれかになります。  その後、介在する操作なしで同じ測定を繰り返すと、同じ 2 進数の結果が生成されます。  
@@ -46,7 +46,7 @@ Microsoft の Quantum Development Kit を使用して開発されたアプリケ
 1. 1 つ以上の量子アルゴリズム。Q# 量子プログラミング言語を使用して実装します。
 1. ホストプログラム。Python や C# などのプログラミング言語で実装します。メイン エントリ ポイントとして機能し、Q# 操作を呼び出して量子アルゴリズムを実行します。
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. アプリケーションを格納する場所を選択します。
 
@@ -54,7 +54,7 @@ Microsoft の Quantum Development Kit を使用して開発されたアプリケ
 
 1. `host.py`という名前でファイルを作成します。 このファイルには、Python ホスト コードが含まれます。
 
-#### <a name="c-command-linetabtabid-csharp"></a>[C# コマンド ライン](#tab/tabid-csharp)
+#### <a name="c-command-line"></a>[C# コマンド ライン](#tab/tabid-csharp)
 
 1. 新しい Q# プロジェクトを作成する
 
@@ -71,7 +71,7 @@ Microsoft の Quantum Development Kit を使用して開発されたアプリケ
     mv Operation.qs Bell.qs
     ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
 
 1. 新しいプロジェクトを作成する
 
@@ -177,7 +177,7 @@ Q# 操作は、量子のサブルーチンです。 つまり、量子操作を�
 
 ## <a name="create-the-host-application-code"></a>ホスト アプリケーション コードの作成
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. `host.py` ファイルを開き、次のコードを追加します。
 
@@ -195,7 +195,7 @@ Q# 操作は、量子のサブルーチンです。 つまり、量子操作を�
       print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 1. `Driver.cs` ファイルの内容を次のコードに置き換えます。
 
@@ -237,7 +237,7 @@ Q# 操作は、量子のサブルーチンです。 つまり、量子操作を�
 
 ### <a name="about-the-host-application-code"></a>ホスト アプリケーション コードについて
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 Python ホスト アプリケーションには、次の 3 つの部分があります。
 
@@ -245,7 +245,7 @@ Python ホスト アプリケーションには、次の 3 つの部分があり
 * インポートした Q# 操作の `simulate()` メソッドを呼び出し、量子アルゴリズムを実行します。
 * 操作の結果を処理します。 この例では、`res` が操作の結果を受け取ります。 ここでの結果は、シミュレーターが測定した 0 の数 (`num_zeros`) と 1 の数 (`num_ones`) のタプルになります。 2 つのフィールドを取得するためにタプルを分解し、結果を出力します。
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 C# ホスト アプリケーションには、次の 4 つの部分があります。
 
@@ -260,7 +260,7 @@ C# ホスト アプリケーションには、次の 4 つの部分がありま�
 
 ## <a name="build-and-run"></a>ビルドおよび実行
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. ターミナルで次のコマンドを実行します。
 
@@ -277,7 +277,7 @@ Init:0    0s=1000 1s=0
 Init:1    0s=0    1s=1000
 ```
 
-#### <a name="command-line--visual-studio-codetabtabid-csharp"></a>[コマンドライン/Visual Studio Code](#tab/tabid-csharp)
+#### <a name="command-line--visual-studio-code"></a>[コマンドライン/Visual Studio Code](#tab/tabid-csharp)
 
 1. ターミナルで次のように実行します。
 
@@ -299,7 +299,7 @@ Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
 
 1. `F5` を押すだけで、プログラムがビルドされて実行されます。
 
@@ -445,7 +445,7 @@ Set(Zero, q1);
 
 新しい戻り値 (`agree`) は、最初の量子ビットの測定値が 2 番目の量子ビットの測定値と一致した回数を追跡します。 また、ホスト アプリケーションを適切に更新する必要があります。
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 ```python
 import qsharp
@@ -461,7 +461,7 @@ for i in initials:
     print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
 ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 ```csharp
             using (var qsim = new QuantumSimulator())
@@ -496,7 +496,7 @@ Init:One  0s=490  1s=510  agree=1000
 
 これで、最初の量子プログラムが作成できました。
 
-## <a name="whats-next"></a>次の手順
+## <a name="whats-next"></a>次の操作
 
 [グローバーの検索](xref:microsoft.quantum.quickstarts.search)のクイックスタートでは、最も人気のある量子コンピューティング アルゴリズムの 1 つである、グローバーの検索をビルドして実行する方法を示しています。また、量子コンピューティングに関する実際の問題を解決するために使用できる Q# プログラムの優れた例を提示しています。  
 
