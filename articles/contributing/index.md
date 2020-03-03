@@ -1,17 +1,17 @@
 ---
-title: Quantum Development Kit に貢献する | Microsoft Docs
-description: Quantum Development Kit に貢献する
+title: Microsoft Quantum 開発キットに貢献する
+description: Microsoft Quantum 開発キットと量子開発コミュニティに貢献する方法について説明します。
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 3f27f7502c83574e6bd8f950d7e17ee481e44a3c
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 63c6f90a511c7bd14435b2e593af0d8615c18519
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819860"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904878"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit に貢献する #
 
@@ -79,4 +79,3 @@ Quantum Development Kit コミュニティに参加していただき、あり�
 
 > [!div class="nextstepaction"]
 > [プル要求を開く方法](xref:microsoft.quantum.contributing.pulls)
-

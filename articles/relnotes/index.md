@@ -1,17 +1,17 @@
 ---
 title: Quantum Development Kit のプレビュー リリース ノート
-description: Quantum Development Kit のプレビュー リリース ノート
+description: Microsoft Quantum 開発キット プレビューの最新の更新について説明します。
 author: natke
 ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: be1eff8127be9fb024a1dc2de3ec82952ac2dc2b
-ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+ms.openlocfilehash: f4bc69e5b14833dea0d61106a9eb368d7d7f5663
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77441042"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906935"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -22,18 +22,32 @@ ms.locfileid: "77441042"
 更新手順については、[更新ガイド](xref:microsoft.quantum.update)を参照してください。
 
 
+## <a name="version-01020022610"></a>バージョン 0.10.2002.2610
+
+*リリース日:2020 年 2 月 27 日*
+
+このリリースには、次のものが含まれています。
+
+- 新しい Quantum Machine Learning Library。詳細については、[QML ドキュメント ページ](https://docs.microsoft.com/quantum/libraries/machine-learning/?view=qsharp-preview)を参照してください
+- IQ# のバグの修正。これにより、NuGet パッケージの読み込み時のパフォーマンスが最大 10 から 20 倍向上します
+
+[ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
+
 ## <a name="version-01020012831"></a>バージョン 0.10.2001.2831
 
 *リリース日:2020 年 1 月 29 日*
 
 このリリースには、次のものが含まれています。
 
-- 新しい Microsoft.Quantum.SDK NuGet パッケージ
+- 新規プロジェクトの作成時に Microsoft.Quantum.Development.Kit NuGet パッケージに代わって使用される新しい Microsoft.Quantum.SDK NuGet パッケージ。 Microsoft.Quantum.Development.Kit NuGet パッケージは、既存のプロジェクトで引き続きサポートされます。 
+- 新しい Microsoft.Quantum.SDK NuGet パッケージで有効になる Q# コンパイラ拡張機能のサポート。詳しくは、[Github のドキュメント](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler)、[コンパイラ拡張機能のサンプル](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions)、および [Q# 開発ブログ](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/)を参照してください
 - .NET Core 3.1 のサポートが追加されました。古い .NET Core SDK バージョンでビルドすると、問題が発生する可能性があるため、バージョン 3.1.100 をインストールすることを強くお勧めします。
 - Microsoft.Quantum.QsCompiler.Experimental 下で新しいコンパイラ変換を使用できます
 - IQ# で HTML として出力状態ベクターを公開する新しい機能
 - Hadamard および SWAP テスト用の EstimateFrequencyA から Microsoft.Quantum.Characterization のサポートを追加しました
 - AmplitudeAmplification 名前空間で Q# スタイル ガイドが使用されるようになりました
+
+[ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
 
 ## <a name="version-01019120501"></a>バージョン 0.10.1912.0501
 

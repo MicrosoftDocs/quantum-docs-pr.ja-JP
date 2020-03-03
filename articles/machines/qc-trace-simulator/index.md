@@ -1,17 +1,17 @@
 ---
-title: 量子コンピューターのトレース シミュレーター | Microsoft Docs
-description: 量子コンピューターのトレース シミュレーターの概要
+title: 量子コンピューターのトレース シミュレーター
+description: Microsoft 量子コンピューターのトレース シミュレーターを使用して、従来型のコードをデバッグし、量子プログラムのリソース要件を見積もる方法について説明します。
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: 929745a6da6034599e97d2f573190308fde6eb75
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 72c259933d2df8f79319e6c0c65ae181a9f9cff3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820438"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906085"
 ---
 # <a name="quantum-trace-simulator"></a>量子トレース シミュレーター
 
@@ -81,6 +81,6 @@ namespace Quantum.MyProgram
 
 これらの各コンポーネントは、`QCTraceSimulatorConfiguration` で適切なフラグを設定することによって有効にすることができます。 これらの各コンポーネントの使用方法の詳細については、対応する参照ファイルを参照してください。 具体的な詳細については [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) に関する API ドキュメントを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 量子コンピューターの[トレース シミュレーター](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)向け C# リファレンス 
 

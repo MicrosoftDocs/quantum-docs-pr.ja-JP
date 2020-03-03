@@ -1,18 +1,18 @@
 ---
-title: 量子開発手法 | Microsoft Docs
-description: 量子開発手法
+title: 量子開発手法
+description: Q# プログラム開発の基礎を学び、演算、関数、変数、量子ビットを操作し、簡単な量子プログラムを作成します。
 keywords: SEO チャンプを確認せずに、キーワードを追加または編集しないでください。
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 9/20/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.techniques.intro
-ms.openlocfilehash: c1263edb75f903702ab3c16cec0443857150b662
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e5b7fbde18afbc0333d89f70c5e4596848e30f4f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820812"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907717"
 ---
 # <a name="quantum-development-techniques"></a>量子開発手法
 

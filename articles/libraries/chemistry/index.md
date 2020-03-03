@@ -1,17 +1,17 @@
 ---
-title: 量子化学パッケージの概要 | Microsoft Docs
-description: 量子化学パッケージの概要
+title: 量子化学ライブラリの概要
+description: Microsoft Quantum Chemistry Library と、それを使用して量子コンピューターの電子構造問題をシミュレートする方法について説明します。
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.intro
-ms.openlocfilehash: e5a9dd70874f1ae0baf4b781346278195a980a7e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 4268eafa5e53c0a026d179503ac6db88652a8f90
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960418"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907326"
 ---
 # <a name="introduction-to-the-quantum-chemistry-library"></a>量子化学ライブラリの概要
 
