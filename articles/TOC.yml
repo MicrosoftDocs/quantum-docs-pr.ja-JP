@@ -1,23 +1,21 @@
 - name: Microsoft Quantum ドキュメント
   href: index.yml
-- name: 概要
+- name: 量子コンピューティングの概要
   items:
-    - name: はじめに
+    - name: 量子コンピューティングとは
+      href: overview/what-is-quantum-computing.md
+    - name: 量子コンピューターでできること
+      href: overview/quantum-computers.md
+    - name: 量子コンピューティングを学ぶ理由
+      href: overview/why-learn-quantum-computing.md
+    - name: 'Q# および QDK とは'
+      href: overview/what-is-qsharp.md
+    - name: 詳しく学ぶには
+      href: overview/how-to-learn-quantum-computing.md
+- name: Quantum 開発キットを入手する
+  items:
+    - name: QDK の概要
       href: welcome.md
-    - name: 量子コンピューティングに関する 5 つの質問
-      items:
-        - name: 量子コンピューティングとは
-          href: overview/what-is-quantum-computing.md
-        - name: 量子コンピューターでできること
-          href: overview/quantum-computers.md
-        - name: 量子コンピューティングを学ぶ理由
-          href: overview/why-learn-quantum-computing.md
-        - name: 'Q# とは'
-          href: overview/what-is-qsharp.md
-        - name: 量子コンピューティングを学習する方法
-          href: overview/how-to-learn-quantum-computing.md
-- name: インストールと更新
-  items:
     - name: QDK をインストールする
       items:
         - name: インストールの概要
@@ -30,15 +28,23 @@
           href: install-guide/qjupyter.md
     - name: QDK を更新する
       href: install-guide/update.md
-- name: クイックスタート
+    - name: 'Q# プロジェクトを作成する方法'
+      href: how-to-guides/create-qsharp-project.md
+- name: 'Q# 学習用のリソース'
   items:
-    - name: 量子乱数ジェネレーター
-      href: quickstarts/qrng.md
-    - name: 'Q# を使った量子の基本'
-      href: quickstart.md
-    - name: グローバーの検索アルゴリズムを実装する
-      href: quickstarts/search.md
-- name: 概念
+    - name: クイックスタート
+      items:
+        - name: 量子乱数ジェネレーター
+          href: quickstarts/qrng.md
+        - name: 'Q# でのもつれの確認'
+          href: quickstart.md
+        - name: グローバーの検索アルゴリズムを実装する
+          href: quickstarts/search.md
+    - name: 'Quantum Katas を使用して Q# を学ぶ'
+      href: intro-to-katas.md
+    - name: 'Q# コード サンプル'
+      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
+- name: QDK の詳細
   items:
     - name: 量子開発手法
       topicHref: techniques/index.md
@@ -46,33 +52,17 @@
     - name: 'Q# プログラミング言語'
       topicHref: language/index.md
       href: language/toc.yml
-    - name: 'Q# ライブラリ'
-      href: libraries/toc.yml
     - name: 量子シミュレーターとリソース エスティメーター
       href: machines/toc.yml
-    - name: 量子コンピューティングの概念
-      href: concepts/toc.yml
-- name: 操作方法ガイド
-  items:
-    - name: 'Q# プロジェクトを作成する'
-      href: how-to-guides/create-qsharp-project.md
-- name: 'Q# 学習用のリソース'
-  items:
-    - name: Quantum Katas による学習
-      href: intro-to-katas.md
-    - name: 'Q# サンプル'
-      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
-- name: リソース
-  items:
-    - name: 用語集
-      href: Glossary.md
-    - name: 関連項目
-      href: for-more-info.md
-    - name: QDK のリリース ノート
-      topicHref: relnotes/index.md
-      href: relnotes/toc.yml
-    - name: QDK への貢献
-      href: contributing/toc.yml
-      topicHref: contributing/index.md
-    - name: ライセンス
-      href: license.md
+- name: 'Q# ライブラリ'
+  href: libraries/toc.yml
+- name: 量子コンピューティングの概念
+  href: concepts/toc.yml
+- name: 関連項目
+  href: for-more-info.md
+- name: QDK への貢献
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
+- name: QDK のリリース ノート
+  topicHref: relnotes/index.md
+  href: relnotes/toc.yml
