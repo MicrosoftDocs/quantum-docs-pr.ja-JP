@@ -1,17 +1,17 @@
 ---
-title: 'Q # プログラムの概要-Q # テクニック |Microsoft Docs'
-description: 'Q # プログラムの概要-Q # の手法'
+title: Q# プログラムの概要
+description: クォンタムプログラムの基本的な構造と、クォンタムの状態の変換を表す方法について説明します。
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.file-structure
-ms.openlocfilehash: e8f52e6b0d4382331665a8e845ef19a3a1beabf9
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 5c75bb5499efac2c49cbfc4555fd15b3e072181c
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820829"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907700"
 ---
 # <a name="q-program-overview"></a>Q# プログラムの概要
 
@@ -19,7 +19,7 @@ Q # は、クォンタムコンピューティング用のスケーラブルで�
 
 技術的な観点からは、クォンタムプログラムは特定の一連のクラシック関数として認識されます。これを呼び出すと、その副作用としてクォンタム回線が生成されます。 このビューの重要な結果として、Q # で記述されたプログラムは、qubits 自体を直接モデル化するのではなく、従来のコントロールコンピューターがその qubits とどのようにやり取りするかを説明します。
 仕様により、Q # はクォンタムの状態やその他の量子機構のプロパティを直接定義するのではなく、言語で定義されたさまざまなサブルーチンのアクションを通じて間接的に実行します。
-たとえば、「[クォンタムコンピューティングの概念](xref:microsoft.quantum.concepts.intro)」ガイドで説明されているように、"$ \ket{+} = \ left (\ket{0} + \ket{1})/\ sqrt{2}$" という状態を検討してください。
+たとえば、「[クォンタムコンピューティングの概念](xref:microsoft.quantum.concepts.intro)」ガイドで説明されているように、"$ \ket{+} = \ left (\ket{0} + \ket{1}/\ sqrt{2}$" という状態を検討してください。
 この状態を Q # で準備するには、qubits が $ \ket{0}$ state で初期化され、$ \ket{+} = H\ket{0}$ というファクトを使用します。ここで、$H $ は Hadamard transform です。
 
 ```qsharp
