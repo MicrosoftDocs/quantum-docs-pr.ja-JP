@@ -1,17 +1,17 @@
 ---
 title: 量子コンピューティングを学ぶ理由
-description: ''
+description: 量子コンピューティングにおける課題に対するインスピレーションとやりがいを見出します。
 author: natke
 ms.author: nakersha
 ms.date: 10/16/2019
 ms.topic: article
 uid: microsoft.quantum.overview.why
-ms.openlocfilehash: 389b745a9f19caa6272e7d537e3ee5f884cec36b
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: abf8804dc772a82126d432348cc6d2bc1c77f1f7
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529906"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906969"
 ---
 # <a name="why-learn-quantum-computing"></a>量子コンピューティングを学ぶ理由
 
@@ -35,7 +35,7 @@ ms.locfileid: "73529906"
 
 ここまでで説明した現実世界に与える影響に加えて、量子コンピューティングは楽しいものであると考えています。 量子コンピューティングを学習することは、未来のテクノロジの構築に役立つ最先端の知識とスキルを得ることができる、やりがいのあるエクスペリエンスです。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 * [Q# とは](xref:microsoft.quantum.overview.qsharp)
 * [Microsoft Quantum 開発キットの概要](xref:microsoft.quantum.welcome)

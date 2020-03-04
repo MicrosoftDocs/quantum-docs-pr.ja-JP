@@ -1,19 +1,19 @@
 ---
 title: Q# で量子コンピューティングを学習する方法
-description: ''
+description: 量子コンピューティングを開始する際に役立つ基本的な数学と物理学の知識のリソース。
 author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.learn
-ms.openlocfilehash: 53682ae8ab9cb31fa0de68832cb3574aa4e30216
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: 17fc4e7a73f93a86d981996bf8b59309bccb6e67
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529971"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907751"
 ---
-# <a name="how-to-learn-quantum-computing"></a>量子コンピューティングを学習する方法
+# <a name="how-to-learn-about-quantum-computing"></a>量子コンピューティングを学習する方法
 
 量子コンピューティングの学習と、初めてのプログラムの作成に関するガイダンスを入手できます。 このガイドは完全ではありませんが、出発点として適しています。
 

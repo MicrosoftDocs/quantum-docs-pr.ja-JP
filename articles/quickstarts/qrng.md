@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: d1ad2c1153814e2fa19a38307b2c668c77eae4e3
-ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+ms.openlocfilehash: b9c8592b1296a7de1b9ad5d0538ad1972ec25e31
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77441073"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906986"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>クイック スタート:Q# で量子乱数ジェネレーターを実装する
 Q# で記述された量子アルゴリズムの単純な例が量子乱数ジェネレーターです。 このアルゴリズムでは、量子力学の性質を活用し、乱数を生成します。 
@@ -44,17 +44,18 @@ Q# で記述された量子アルゴリズムの単純な例が量子乱数ジ�
 
 ブロッホ球では、北極は古典的な値 **0** を表し、南極は古典的な値 **1** を表します。 重ね合わせは球上の点で表わすことができます (矢印で表わされています)。 矢印の端が極に近づけば近づくほど、測定時、その極に割り当てられる古典的な値にキュービットがなる確率が高くなります。 たとえば、下の赤い矢印で表わされているキュービットの状態では、測定したとき、値 **0** が与えられる可能性が高くなります。
 
-<img src="~/media/qrng-Bloch.png" width="175">
+<img src="~/media/qrng-Bloch.png" width="175" alt="A qubit state with a high probability of measuring zero">
 
 この表現を利用し、コードの動作を視覚化できます。
 
 * まず、状態 **0** で初期化されたキュービットから始め、`H` を適用し、**0** と **1** の確率が同じになる重ね合わせを作成します。
 
-<img src="~/media/qrng-H.png" width="450">
+<img src="~/media/qrng-H.png" width="450" alt="Preparing a qubit in superposition">
+
 
 * 次に、キュービットを測定し、出力を保存します。
 
-<img src="~/media/qrng-meas.png" width="450">
+<img src="~/media/qrng-meas.png" width="450" alt="Measuring a qubit and saving the output">
 
 測定の結果は完全にランダムになるため、ランダム ビットが 1 つ取得されました。 この操作を複数回呼び出し、整数を作成できます。 たとえば、操作を 3 回呼び出してランダム ビットを 3 つ取得する場合、ランダムの 3 ビット数 (つまり、0 から 7 までの乱数) を構築できます。
 

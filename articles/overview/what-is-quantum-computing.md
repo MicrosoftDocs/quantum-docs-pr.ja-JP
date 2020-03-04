@@ -1,17 +1,17 @@
 ---
 title: 量子コンピューティングとは
-description: 量子コンピューティングとは何かと、量子コンピューターでできることについて説明します。
+description: 量子コンピューティングの機能、アルゴリズムとハードウェア、および Microsoft Quantum 開発キット (QDK) の概要。
 author: natke
 ms.author: nakersha
 ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.what
-ms.openlocfilehash: 2f3b64b00a0a9552e52e34cb1e3652810b266eab
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: 668df50882272bfa56541f178e2f4d5fb35efcf5
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529929"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906782"
 ---
 # <a name="what-is-quantum-computing"></a>量子コンピューティングとは
 
@@ -67,7 +67,7 @@ Microsoft の量子プログラムは、システムの個々のすべてのコ�
 
 量子プログラミングとアルゴリズムの開発をより簡単にするため、オープンソースの Quantum Development Kit (QDK) が導入されています。 高レベルのプログラミング言語である Q# では、量子プログラミングの課題が対処されています。  Q# は、アルゴリズムとアプリケーションの開発に重点を置いた、高レベルの量子対応プログラミング言語として設計されました。 Q# コンパイラはソフトウェア スタックに統合されており、量子アルゴリズムを量子コンピューターの基本処理にコンパイルできます。  ある程度のスケール (量子ビットの数) までは、従来のコンピューターで量子コンピューティングをシミュレートできます。 シミュレーションを行うことで、将来の量子ハードウェアで実行できる量子プログラムの作成を、今すぐ開始できます。  また、量子プログラミングを簡単に開始できるように、Q# とサンプル、ライブラリ、学習演習を組み合わせたものが用意されています。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 * [量子コンピューターでできること](xref:microsoft.quantum.overview.computers)
 * [Microsoft Quantum 開発キットの概要](xref:microsoft.quantum.welcome)
