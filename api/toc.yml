@@ -1,9 +1,14 @@
 - name: API リファレンス
   items:
+    - name: API リファレンス
+      href: index.md
     - name: 'Q# ライブラリ'
+      topicHref: qsharp/index.md
       href: qsharp/toc.yml
     - name: .NET ライブラリ
       items:
+        - name: .NET ライブラリ
+          href: dot-net-libraries.md
         - name: トレース シミュレーター
           href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
         - name: 量子化学
