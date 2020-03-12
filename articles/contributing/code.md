@@ -6,27 +6,27 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: 1882e640dacf3987745ed225fef18636726f70a8
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907479"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022469"
 ---
-# <a name="contributing-code"></a>コードの投稿 #
+# <a name="contributing-code"></a>コードの投稿
 
 問題の報告とドキュメントの改善に加えて、quantum 開発キットへのコードの投稿は、quantum プログラミングコミュニティでの同僚を支援する非常に直接的な方法である可能性があります。
 コードを投稿することで、問題の修正、新しい例の提供、既存のライブラリの使いやすさの向上、またはまったく新しい機能の追加を行うことができます。
 
 このガイドでは、プル要求をレビューして、投稿を最大限に活用するために役立つ情報について少し詳しく説明します。
 
-## <a name="what-we-look-for"></a>検索対象 ##
+## <a name="what-we-look-for"></a>検索対象
 
 優れたコードの投稿物は、問題の修正、既存の機能の拡張、またはリポジトリのスコープ内にある新機能の追加を行うために、Quantum 開発キットリポジトリの既存の作業に基づいています。
 コードの投稿を受け入れると、Quantum 開発キット自体の一部になります。これは、新しい機能がリリースされ、保持され、残りの Quantum 開発キットと同じ方法で開発されるようになります。
 このため、投稿物によって追加された機能が十分にテストされ、文書化されている場合に便利です。
 
-### <a name="unit-tests"></a>単体テスト ###
+### <a name="unit-tests"></a>単体テスト
 
 キャノンなどのライブラリを構成する Q # 関数、操作、およびユーザー定義型は、 [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/)リポジトリでの開発の一部として自動的にテストされます。
 たとえば、新しいプル要求が開かれたときに、 [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/)構成によって、クォンタムプログラミングコミュニティが依存している既存の機能が、プル要求の変更によって中断されていないことが確認されます。
@@ -56,7 +56,7 @@ function PairTest () : Unit {
 より複雑な条件を確認するには、「標準ライブラリ」ガイドの[「テスト」セクション](xref:microsoft.quantum.libraries.diagnostics)の手法を使用します。
 たとえば、次のテストでは、<xref:microsoft.quantum.canon.applywith> によって呼び出された `H(q); X(q); H(q);` が `Z(q)`と同じものであることを確認します。
 
-```qsharp
+```Q#
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
@@ -79,7 +79,8 @@ operation TestApplyWith() : Unit {
 
 ### Citations and References ### -->
 
-## <a name="when-well-reject-a-pull-request"></a>プル要求を却下する場合 ##
+
+## <a name="when-well-reject-a-pull-request"></a>プル要求を却下する場合
 
 場合によっては、投稿のプル要求を拒否することがあります。
 このような状況が発生したとしても、特定の貢献を受け入れることができない理由がいくつかあるので、これは悪いことではありません。
@@ -98,10 +99,15 @@ operation TestApplyWith() : Unit {
 私たちは、現在のすばらしい多様性の中でも、今後もさらに包括的になるように、共同作業がクォンタムコンピューティングコミュニティ全体に提供されるようにしたいと考えています。
 この目標を達成するための支援を歓迎します。
 
-## <a name="next-steps"></a>次のステップ: ##
+## <a name="next-steps"></a>次のステップ
 
 Quantum 開発キットを利用して、quantum プログラミングコミュニティ全体にとって優れたリソースを作成しようとしていただき、誠にありがとうございます。
 詳細については、Q # のスタイルに関する次のガイドを参照してください。
 
 > [!div class="nextstepaction"]
 > [Q # スタイルのガイドラインについて学習する](xref:microsoft.quantum.contributing.style)
+
+投稿しようとしているコードの種類によっては、投稿を可能な限りコミュニティにとって優れたものにするために役立つ場合があります。
+
+> [!div class="nextstepaction"]
+> [貢献するサンプルについて学習する](xref:microsoft.quantum.contributing.samples)

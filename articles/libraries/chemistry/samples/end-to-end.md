@@ -5,16 +5,16 @@ author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 7605676e05ee352e47791657eeaafceef5dbb493
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906510"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022492"
 ---
 # <a name="end-to-end-with-nwchem"></a>NWChem を使用したエンド ツー エンド #
 
-このページでは、Nw化学シミュレーションのゲート数を取得する例を、 [Nwchem](http://www.nwchem-sw.org/index.php/Main_Page)入力デッキから順に見ていきます。
+この記事では、Nw化学シミュレーションのゲート数を取得する例を、 [Nwchem](http://www.nwchem-sw.org/index.php/Main_Page)入力デッキから順に見ていきます。
 この例に進む前に、Docker がインストールされていることを確認してください。[インストールと検証のガイド](xref:microsoft.quantum.chemistry.concepts.installation)に従ってください。
 
 詳細:
@@ -62,7 +62,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 次に、 **GetGateCount**サンプルに用意されている `Get-GateCount` コマンドをインポートします。
-詳細については、「」の[サンプルに記載されている手順](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount)を参照してください。
+詳細については、「」の[サンプルに記載されている手順](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount)を参照してください。
 次に、オペレーティングシステムに応じて、次のように実行し、`win10-x64`、`osx-x64`、または `linux-x64`を使用して `<runtime>` を置き換えます。
 
 ```powershell
@@ -112,7 +112,7 @@ set tce:qelb  9
 
 ## <a name="producing-and-consuming-broombridge-output-from-nwchem"></a>NWChem からの Broombridge 出力の生成と使用 ##
 
-Broombridge ドキュメントを生成して使用するために必要なすべてのものが揃っています。
+これで、Broombridge ドキュメントを生成して使用するために必要なものがすべて揃いました。
 NWChem を実行し、`h4_sto6g_0.000.nw` 入力デッキの Broombridge ドキュメントを生成するには、`Convert-NWChemToBroombridge`を実行します。
 
 > [!NOTE]
@@ -164,7 +164,7 @@ ElapsedMilliseconds : 721
 - さまざまな定義済みの入力デッキを試してみてください。たとえば、`h4_sto6g_alpha.nw`でパラメーター `alpha` を変えることで、 
 - (例: さまざまな選択のために `STO-nG` モデルを調査するなど)、NWChem デッキを直接編集して、デッキを変更してみましょう。 
 - `nwchem/qa/chem_library_tests`で利用可能なその他の定義済みの NWChem 入力デッキを試してみてください。
-- NWChem から生成された定義済みの Broombridge YAML ベンチマークのスイートを試してみてください。 [Microsoft/Quantum リポジトリ](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML)の一部として入手できます。 これらのベンチマークは次のとおりです。 
+- NWChem から生成された定義済みの Broombridge YAML ベンチマークのスイートを試してみてください。 [Microsoft/Quantum リポジトリ](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)の一部として入手できます。 これらのベンチマークは次のとおりです。 
     - 分子 hydrogen (H2)、Beryllium (Be)、リチウム水素 (LiH) などの小さな分子
     - ozone (O3)、carotene、cytosine などのより大きな分子。 
 - Microsoft Quantum Development Kit のインターフェイスを特徴とするグラフィカルフロントエンドの[Emsl 矢印](https://arrows.emsl.pnnl.gov/api/qsharp_chem)を試してみてください。 

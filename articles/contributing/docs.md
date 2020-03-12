@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: d244a7841b4093031d6225230a6cbefb22cc6a39
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904895"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022628"
 ---
-# <a name="improving-documentation"></a>ドキュメントの改善 #
+# <a name="improving-documentation"></a>ドキュメントの改善
 
 Quantum 開発キットのドキュメントでは、さまざまな形式を採用しています。これは、クォンタム開発者が情報をすぐに利用できるようにするためのものです。
 
@@ -28,7 +28,7 @@ Quantum 開発キットのドキュメントでは、さまざまな形式を採
 - **API リファレンス**は、各 Q # 関数、操作、およびユーザー定義型のページのセットであり、 https://docs.microsoft.com/qsharp/api/に発行されます。 これらのページでは、それぞれの呼び出しに対する入力と操作、および例と詳細情報へのリンクが文書化されています。 API リファレンスは、各リリースの一部として Q # ソースコードの小規模な DFM ドキュメントから自動的に抽出されます。
 - 各サンプルに含まれている**README<!---->の md**ファイルと kata は、そのサンプルまたは kata の使用方法、使用方法、およびその他の Quantum 開発キットにどのように関連しているかを説明しています。 これらのファイルは、 [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/)を使用して記述されています。これは、コードリポジトリに直接ドキュメントを添付する場合によく使用される dfm に代わるものです。
 
-## <a name="contributing-to-the-conceptual-documentation"></a>概念説明のドキュメントに貢献する ##
+## <a name="contributing-to-the-conceptual-documentation"></a>概念説明のドキュメントに貢献する
 
 概念説明または README ドキュメントの改善に寄与するために、は、必要に応じて、microsoft [**docs/QuantumKatas-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr/
 )、 [**microsoft/quantum**](https://github.com/Microsoft/Quantum)、または[**microsoft/** ](https://github.com/Microsoft/QuantumKatas)にプル要求を開始します。
@@ -41,7 +41,18 @@ Quantum 開発キットのドキュメントでは、さまざまな形式を採
 - Quantum プログラミングコミュニティの多くのメンバーは、学術研究者であり、主にコミュニティへの投稿のために引用文献を通じて認識されています。 読者が追加の資料を見つけられるようにするだけでなく、論文、講演、ブログの投稿、ソフトウェアツールなどの教育機関の出力を適切に提案することで、教育者はコミュニティの向上に最適な作業を行うことができます。
 - Quantum プログラミングコミュニティは、広範でて多様なコミュニティです。 サードパーティの例では、gendered 代名詞を使用します (例: "user..........................." など)。 引用とリンクに含まれる人々の名前が cognizant されていて、非 ASCII 文字を正しく含めることにより、メンバーに対してコミュニティの多様性を示すことができます。 同様に、英語の単語の多くは、技術的なドキュメントでの使用によって、個々の閲覧者とコミュニティの両方に害を及ぼす可能性があるため、hateful よって使用されることがよくあります。
 
-## <a name="contributing-to-the-api-references"></a>API リファレンスへの貢献 ##
+### <a name="referencing-sample-code-from-conceptual-articles"></a>概念説明の記事からサンプルコードを参照する
+
+[サンプルリポジトリ](https://github.com/Microsoft/Quantum)のコードを追加する場合は、特殊な Docfx-Flavored Markdown コマンドを使用して実行できます。
+
+```markdown
+:::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
+```
+
+このコマンドでは、 [`chsh-game` サンプルから](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)4 ~ 8 行の`Game.qs` ファイルをインポートし、構文の強調表示を目的として Q # コードとしてマークします。
+このコマンドを使用すると、概念説明の記事とサンプルリポジトリ間でコードが重複しないようにすることができます。これにより、ドキュメント内のサンプルコードは常に最新の状態になります。
+
+## <a name="contributing-to-the-api-references"></a>API リファレンスへの貢献
 
 API 参照の向上を促進するために、ドキュメントに記載されているコードでプル要求を直接開くと最も役立ちます。
 各関数、操作、またはユーザー定義型は、ドキュメントコメントをサポートしています (`//`ではなく `///` で示されています)。
@@ -123,6 +134,7 @@ Quantum 開発キットの各リリースをコンパイルするときに、こ
      return ControlledOnBitStringImpl(bits, oracle, _, _);
  }
 ```
+
 上記のコードの表示されているバージョンは、 [`ControlledOnBitString` 関数の API ドキュメント](xref:microsoft.quantum.canon.controlledonbitstring)に表示されます。
 
 ドキュメント作成の一般的なプラクティスに加えて、API ドキュメントのコメントを記述する際には、次の点に注意してください。
