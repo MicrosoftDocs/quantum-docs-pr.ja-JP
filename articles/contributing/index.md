@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 63c6f90a511c7bd14435b2e593af0d8615c18519
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904878"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022474"
 ---
-# <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit に貢献する #
+# <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit に貢献する
 
 Quantum Development Kit は、量子プログラムを作成するための単なるツールの集まりではありません。
 これは、量子コンピューティングの研究、量子アルゴリズムを使用した調査、量子デバイス向けの新しいアプリケーションの開発、および量子プログラミングを最大限に活用するためのその他の作業を行う人々の広範囲のコミュニティの一部です。
@@ -23,7 +23,7 @@ Microsoft は、皆さんのコントリビューション、そして皆さん�
 
 このガイドでは、より広い量子プログラミング コミュニティへのコントリビューションを可能な限り有益なものにする方法に関するアドバイスを提供します。
 
-## <a name="building-community"></a>コミュニティの構築 ##
+## <a name="building-community"></a>コミュニティの構築
 
 コントリビューションを行うときは、まず自分が貢献しているコミュニティを常に念頭に置く必要があります。
 量子プログラミング コミュニティだけでなく、より広い範囲の仲間に対して礼儀正しく専門的に行動することで、皆さんの努力で最善の最も有効的なコミュニティを構築することができます。
@@ -31,7 +31,7 @@ Microsoft は、皆さんのコントリビューション、そして皆さん�
 この取り組みの一環として、すべての Quantum Development Kit プロジェクトは、[Microsoft オープンソースの倫理規定](https://opensource.microsoft.com/codeofconduct/)を採用しています。
 詳しくは、[倫理規定についてよくある質問](https://opensource.microsoft.com/codeofconduct/faq/)に関する記事を参照するか、[opencode@microsoft.com](mailto:opencode@microsoft.com) 宛てに質問またはコメントをお送りください。
 
-## <a name="what-kinds-of-contributions-help-the-community"></a>どのようなコントリビューションがコミュニティに役立ちますか。 ##
+## <a name="what-kinds-of-contributions-help-the-community"></a>どのようなコントリビューションがコミュニティに役立ちますか。
 
 コントリビューションを通じて、量子プログラミング コミュニティを支援する方法はさまざまです。
 このガイドでは、Quantum Development Kit に特に関連する 3 つの方法に焦点を当てます。
@@ -45,7 +45,7 @@ Microsoft は、皆さんのコントリビューション、そして皆さん�
 このようなさまざまな種類のコントリビューションは、すべて非常に価値があり、高く評価されます。
 このガイドの残りの部分では、各種コントリビューションを行う方法についてのアドバイスを提供します。
 
-## <a name="where-do-contributions-go"></a>コントリビューションはどこで行いますか。 ##
+## <a name="where-do-contributions-go"></a>コントリビューションはどこで行いますか。
 
 Quantum Development Kit には、量子プログラムを作成するためのプラットフォームを実現するために連携する多くの構成要素が含まれています。
 これらの各構成要素は別々のリポジトリに存在しているため、最初に行うべきことの 1 つが各コントリビューションに最適な場所がどこかを整理することです。
@@ -66,7 +66,7 @@ Quantum Development Kit には、量子プログラムを作成するための�
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty):Q# 構文の LaTeX 形式サポート。
 - [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019):2019 年のインターン ワークショップで行われた Deutsch–Jozsa チュートリアルの IQ# Notebook
 
-## <a name="next-steps"></a>次のステップ ##
+## <a name="next-steps"></a>次のステップ
 
 Quantum Development Kit コミュニティに参加していただき、ありがとうございます。ぜひご協力ください。
 コントリビューションの詳細については、次のいずれかのガイドを参照してください。
