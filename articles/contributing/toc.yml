@@ -1,6 +1,6 @@
 - name: バグのレポート
   href: reporting-bugs.md
-- name: ドキュメントの投稿
+- name: ドキュメントの改善
   href: docs.md
 - name: pull request を開く
   href: pull-requests.md
