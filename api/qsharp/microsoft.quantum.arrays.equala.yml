@@ -1,0 +1,76 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.equala
+name: EqualA
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 同じ型の2つの配列と、配列の要素のペアに対して定義されている述語を指定すると、配列が等しいかどうかがチェックされます。
+remarks: >-
+  この関数は、ジェネリック型に対して定義されています。つまり、`'T[]` と関数 `equal: ('T, 'T) -> Bool`の2つの配列がある場合、この関数は、配列が等しいかどうかを示す `Bool` 値を返します。
+
+  2つの配列が等しいと見なされるには、長さが同じで、配列内の同じ位置にある要素が等しい必要があります。
+examples: >-
+  次のコードは、配列の異なるペアが等しいかどうかを確認します。
+
+
+  ```qsharp
+
+  open Microsoft.Quantum.Arrays;
+
+  open Microsoft.Quantum.Logical;
+
+
+  function EqualADemo() : Unit {
+      let equalArrays = EqualA(EqualI, [2, 3, 4], [2, 3, 4]);
+      let differentLength = EqualA(EqualD, [2.0, 3.0, 4.0], [2.0, 3.0]);
+      let differentElements = EqualA(EqualR, [One, Zero], [One, One]);
+      Message($"Equal arrays are {equalArrays ? "equal" | "not equal"}");
+      Message($"Arrays of different length are {differentLength ? "equal" | "not equal"}");
+      Message($"Arrays of the same length with different elements are {differentElements ? "equal" | "not equal"}");
+  }
+
+  ```
+syntax: "function EqualA (equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[]) : Bool"
+input:
+  content: "(equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[])"
+  types:
+  - name: equal
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array1
+    summary: 比較する最初の配列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+  - name: array2
+    summary: 比較する2番目の配列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Bool
+  types:
+  - summary: >-
+      値は、`array1` と `array2` が等しい場合にのみ `true` ます。
+
+      つまり、両方の配列の長さが同じで、すべての要素が `equal`によって定義されたとおりに等しい場合。
+    isPrimitive: true
+    uid: Bool
+typeParameters:
+- uid: "'T"
+  summary: 各配列の要素の型。
+metadata:
+  ms.openlocfilehash: 466078fa243e2f394fa42dff15845ae5f1cd73df
+  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 03/26/2020
+  ms.locfileid: "80321608"
