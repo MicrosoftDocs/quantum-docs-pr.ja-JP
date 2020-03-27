@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.pauli
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: fcd30c171859f96c3f9cc74664ecba8df0a02855
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 08babbcb0d6c6c4d83622489bc4ecc811e64829a
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907513"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320867"
 ---
 # <a name="pauli-measurements"></a>P# li 測定
 
@@ -61,7 +61,7 @@ Preferences Li 測定の表記は、$X、Y、Z $ の測定値を等価の測定�
 $ $ \begin{align} S = \begin{bmatrix} 1 & 0 \\\\ 0 & i \end{bmatrix}.
 \end{align} $ $
 
-また、クォンタム状態ベクターに $HS ^-ダガー $ を適用し、次の演算が `Measure([PauliY], [q]])`と同じになるように $Z $ を測定することと同じです。
+また、クォンタム状態ベクターに $HS ^-ダガー $ を適用し、次の演算が `Measure([PauliY], [q])`と同じになるように $Z $ を測定することと同じです。
 
 ```Q#
 operation MeasureY(qubit : Qubit) : Result {

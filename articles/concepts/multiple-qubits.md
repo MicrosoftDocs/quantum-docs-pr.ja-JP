@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 239073b7e7edafc49bc65cb60c9f45cf0af83dbe
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907547"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320884"
 ---
 # <a name="multiple-qubits"></a>複数の Qubits
 
@@ -27,7 +27,7 @@ ms.locfileid: "77907547"
 
 ## <a name="representing-two-qubits"></a>2つの Qubits を表す
 2つの状態の間の主な違いは、2つの値が2次元ではなく4次元であることです。
-これは、2つの状態の計算基準が、1つの "1 つの" 状態のすべての製品によって形成されているためです。  たとえば、\begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}、\qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}、\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & \\\begin{bmatrix}0 \\\\0 \\\\1 \\ \\0 \end{bmatrix}、\qquad 11 \equiv \begin{bmatrix}0 \\ \\1 \end{bmatrix}\otimes \begin{bmatrix}0 \\ \\1 \end{bmatrix} = \begin{bmatrix}0 \\\\0 \\ @no__ 0t_40_ \\ 1 \end{bmatrix}.\\
+これは、2つの状態の計算基準が、1つの "1 つの" 状態のすべての製品によって形成されているためです。  たとえば、\begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}、\qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}、\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}、\qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0\\\\ 1 \end{bmatrix}.
 \end{align}
 
 この構築を使用して、$n $ qubits のクォンタムの状態がディメンション $ 2 ^ n $ の単位ベクトルで表されることがよくわかります。  ベクター
@@ -59,13 +59,16 @@ $$
 
 2つの qubit クォンタム状態の1つの qubit だけを測定することもできます。 Qubits の1つだけを測定する場合、測定の影響はわずかに異なります。これは、状態全体が1つのサブシステムにのみ折りたたまれるのではなく、すべての状態が計算ベースの状態に折りたたまれないためです。  言い換えると、1つの qubit だけを測定すると、サブシステムの1つだけが折りたたまれますが、すべてが折りたたまれるわけではありません。  
 
-これを確認するには、次の状態の最初の qubit を測定することを検討します。これは、Hadamard 変換を適用することによって形成されます。これは、最初に "0" 状態に設定される2つの qubit の $H $ です。 $ $ H ^ {\ otimes 2} \ left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix}) = \ frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 & 1 & 1 &-1 \\\\ 1 & 1 &-1 &-1 \\\\ 1 &-1 &-1 & 1 \end{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ 終了 {bmatrix} = \ frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ 終了 {bmatrix} \ map\end{bmatrix} \begin{cases}\text{outcome} = 0 &{1}1{2}\\0 \\\\0 \\\\ \ \begin{bmatrix}0} = 1 & \end{cases}.{1}{\ sqrt{2}}\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\\\\\\\
+これを確認するには、次の状態の最初の qubit を測定することを検討します。これは、Hadamard 変換を適用することによって形成されます。これは、最初に "0" 状態に設定される2つの qubit の $H $ です。 $ $ H ^ {\ otimes 2} \ left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix}) = \ frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 & 1 & 1 &-1 \\\\ 1 & 1 &-1 &-1 \\\\ 1 &-1 &-1 & 1 \end {bmatrix} \begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ 終了 {bmatrix} = \ frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ end {bmatrix} \ map\begin{cases}\text{outcome} = 0 & \ frac{1}{\ sqrt{2}} \begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ 結果} = 1 &/frac{1}{/sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{cases}.
 $ $ 両方の結果が50% の確率で発生しています。  両方に対して50% の確率の結果を intuited にすることができます。これは、最初の量子状態ベクトルが、最初の qubit の $0 $ と $1 $ のスワップで不変であるという事実です。
 
-最初または2番目の qubit を測定するための数学的規則は単純です。  _K $ を $k ^ {\ rm th} $ の計算ベースベクターに $e する場合は $S $ を $e $ の値に $1 $ として指定します。これにより、は _k $ の値に $ の値を取ります。  たとえば、最初の qubit の測定に関心がある場合、$S $ は $e _2 \ http-equiv $10 と $e http-equiv $11 で構成されます。  同様に、2番目の qubit $S に関心がある場合、$ は $e _1 \ http-equiv $1 および $e 3 \equiv $11 で構成されます。  次に、選択した qubit を $1 $ に測定する確率を、state vector $ \ psi $ に対して指定します。
+最初または2番目の qubit を測定するための数学的規則は単純です。  _K $ を $k ^ {\ rm th} $ の計算ベースベクターに $e する場合は $S $ を $e $ の値に $1 $ として指定します。これにより、は _k $ の値に $ の値を取ります。  たとえば、最初の qubit の測定に関心がある場合、$S $ は $e _1 \ http-equiv $10 と $e http-equiv $11 で構成されます。  同様に、2番目の qubit $S に関心がある場合、$ は $e _2 \ http-equiv $1 と $e 3 \equiv $11 で構成されます。  次に、選択した qubit を $1 $ に測定する確率を、state vector $ \ psi $ に対して指定します。
 
 $ $ P (\text{outcome} = 1) = \ sum_ {e_k \ text{in set} S} \ psi ^ \ ダガー e_k e_k ^、ダガー \psi.
 $$
+
+> [!NOTE]
+> このドキュメントでは、リトルエンディアン形式を使用して計算のラベルを付けています。 リトルエンディアンフォーマットでは、最下位ビットが最初に表示されます。 たとえば、リトルエンディアン形式の4番目の数値は、ビット001の文字列で表されます。
 
 各 qubit 測定では $0 $ または $1 $ のみが生成されるため、$0 $ を測定する確率は単に $1-P (\text{outcome} = 1) $ となります。  これは、$1 $ を測定する確率の式のみを明示的に指定するためです。
 
@@ -79,7 +82,7 @@ $$
 
 前に示した uniform state vector に $-psi $ を使用して、最初の qubit の測定に関心がある場合は、 
 
-$ $ P (-最初の qubit} = 1) = (\ psi ^ \ ダガー e_2) (e_2 ^-ダガー/psi) + (-psi e_3 e_3 ^-ダガー) = | e_2 ^-ダガー/psi | ^ 2 + | e_3 ^/ダガー | ^ 2 の値を持ちます。
+$ $ P (-最初の qubit} = 1) = (\ psi ^ \ ダガー e_1) (e_1 ^-ダガー/psi) + (-psi e_3 e_3 ^-ダガー) = | e_1 ^-ダガー/psi | ^ 2 + | e_3 ^/ダガー | ^ 2 の値を持ちます。
 $$
 
 これは、結果を測定するために期待される2つの確率の合計のみであることに注意してください $10 $ と $11 $ は、測定されるすべての qubits でした。
@@ -90,12 +93,13 @@ $$
 
 これは、直感がどのような確率を示すかということに完全に一致します。  同様に、状態はとして書き込むことができます。
 
-$ $ \frac{\frac{e_2}{2}+ \frac{e_3}{2}} {\ sqrt{\ frac{1}{2}}} = \ frac{1}{\ sqrt{2}} \begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1 \ end {bmatrix} $ $
+$ $ \frac{\frac{e_1}{2}+ \frac{e_3}{2}} {\ sqrt{\ frac{1}{2}}} = \ frac{1}{\ sqrt{2}} \begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1 \ end {bmatrix} $ $
 
 ここでも、直感に従っています。
 
 ## <a name="two-qubit-operations"></a>2つの Qubit 操作
-シングル qubit の場合と同様に、すべてのユニタリ変換は、qubit で有効な操作です。 一般に、$n $ qubits では、{-1} のサイズが $ 2 ^ n \ times 2 ^ n $ (サイズが $ 2 ^ n $ のベクトルで動作するように、$ 2 ^ n \ $U) の $U $ n $ となります。 たとえば、CNOT (制御された) ゲートは、一般的に使用される2つの qubit ゲートであり、次のような種類の表で表されています。
+シングル qubit の場合と同様に、すべてのユニタリ変換は、qubit で有効な操作です。 一般に、$n $ qubits では、{-1} のサイズが $ 2 ^ n \ times 2 ^ n $ (サイズが $ 2 ^ n $ のベクトルで動作するように、$ 2 ^ n \ $U) の $U $ n $ となります。
+たとえば、CNOT (制御された) ゲートは、一般的に使用される2つの qubit ゲートであり、次のような種類の表で表されています。
 
 $ $ \ オペレーター名 {cnot} = \begin{bmatrix} 1 \ 0 \ 0 \ 0 \\\\ 0 \ 1 \ 0 \ 0 \\\\ 0 \ 0 \ 0 \ 1 \\\\ 0 \ 0 \ 1 \ 0 \end{bmatrix} $ $
 
