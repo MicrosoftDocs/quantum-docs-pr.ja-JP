@@ -5,6 +5,29 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 配列と、配列の要素に対して定義された述語が指定されている場合、は述語を満たす要素で構成される配列を返します。
 remarks: 関数は、ジェネリック型に対して定義されます。つまり、配列 `'T[]` があり、述語 `'T -> Bool` て、要素をフィルター処理できます。
+examples: >-
+  次のコードは、"Filtered" 関数を示しています。
+
+  述語は、@"microsoft.quantum.logical.greaterthani" 関数を使用して定義されます。
+
+
+  ```qsharp
+
+  open Microsoft.Quantum.Arrays;
+
+  open Microsoft.Quantum.Logical;
+
+
+  function FilteredDemo() : Unit {
+     let predicate = GreaterThanI(_, 5);
+     let filteredArray = Filtered(predicate, [2, 5, 9, 1, 8]);
+     Message($"{filteredArray}");
+  }
+
+  ```
+
+
+  この例で期待される結果は、5より大きい数値の配列になります。
 syntax: "function Filtered (predicate : ('T -> Bool), array : 'T[]) : 'T[]"
 input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
@@ -36,9 +59,9 @@ typeParameters:
 - uid: "'T"
   summary: '`array` 要素の型。'
 metadata:
-  ms.openlocfilehash: f2749f204c6276a0a43ac67bdee9c4cda0de049e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8ce7f84c2243a5194b5a2223884fb68304767dbf
+  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218364"
+  ms.lasthandoff: 03/26/2020
+  ms.locfileid: "80320748"
