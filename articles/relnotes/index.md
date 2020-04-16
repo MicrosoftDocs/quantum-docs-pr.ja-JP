@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 61a91278ee2c77972ff12ed77b4f20c837b02643
-ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+ms.openlocfilehash: 4fbb740568ff6cdc99e4f6a813802ed8d4234ab4
+ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80320693"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81269388"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -21,6 +21,17 @@ ms.locfileid: "80320693"
 
 更新手順については、[更新ガイド](xref:microsoft.quantum.update)を参照してください。
 
+
+## <a name="version-01120032506"></a>バージョン 0.11.2003.2506
+
+*リリース日:2020 年 3 月 26 日*
+
+このリリースには、次のものが含まれています。
+
+- Q# のアクセス修飾子が新しくサポートされています。詳細については、「[ファイル構造](xref:microsoft.quantum.language.file-structure)」を参照してください。
+- .NET Core SDK 3.1 に更新されました
+
+[ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
 
 ## <a name="version-01020022610"></a>バージョン 0.10.2002.2610
 
