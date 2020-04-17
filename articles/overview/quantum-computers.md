@@ -7,10 +7,10 @@ ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
 ms.openlocfilehash: 9d8ba90a504f298f9465ebf564c43625a4d43168
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "73529949"
 ---
 # <a name="what-can-a-quantum-computer-do"></a>量子コンピューターでできること
@@ -29,7 +29,7 @@ ms.locfileid: "73529949"
 
 化学分子は量子システムであるため、この方法で分析できます。 このような特定の化学に "_ニトロゲナーゼ_" 酵素があります。その性質を深く理解すると、これには、現在の肥料によるエネルギー消費と温室効果ガスの排出を削減できる可能性があります。
 
-## <a name="cryptography"></a>暗号化
+## <a name="cryptography"></a>Cryptography
 
 量子コンピューターの応用で最も有名なものはおそらく暗号化です。1994 年に Peter Shor が、広く利用されているあらゆる暗号化手法をスケーラブルな量子コンピューターで破れることを見せました。  古典的な暗号化手法は、大きな数を 2 つの素数に因数分解するなど、大きな数に対する演算の至難性に依存します。
 
@@ -37,7 +37,7 @@ ms.locfileid: "73529949"
 
 Microsoft には、ポスト量子暗号とセキュリティを上げる量子耐性アルゴリズムで世界をリードするチームがあります。
 
-## <a name="optimization"></a>最適化
+## <a name="optimization"></a>Optimization
 
 最適化は、特定の費用関数を最小限に抑えるソリューションを探して、高次元空間で大規模な検索を実行するタスクです。   量子コンピューターでは、最適化アルゴリズムを高速化し、他の方法では不可能な解決策を見つけることができます。 応用範囲には、輸送とロジスティクス、医療、診断、材料工学などがあります。 このような産業で効率性を上げる方法に大きな影響を与える可能性があります。
 
@@ -59,7 +59,7 @@ Microsoft には、ポスト量子暗号とセキュリティを上げる量子�
 
 量子の影響を受けたアルゴリズムは、医療研究に適用されつつあります。 たとえば、核磁気共鳴画像法 (MRI) の精度を高めるために使用されています。 量子の影響を受けたコンピューティングは、特定の病気の識別のため、MRI マシンの構成を最適化するために採用されています。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 * [量子コンピューティングを学習する理由](xref:microsoft.quantum.overview.why)
 * [Microsoft Quantum 開発キットの概要](xref:microsoft.quantum.welcome)
