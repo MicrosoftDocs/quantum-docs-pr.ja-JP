@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 7a080f82e586f06d40e9d793ee05932db4c3ccef
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 84e5db17ab8d963a75c72da38d3e4487b89abc9d
+ms.sourcegitcommit: b6b8459eb654040f1e19f66411b29fc9e48e95c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81481415"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82030601"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -21,6 +21,11 @@ ms.locfileid: "81481415"
 
 更新手順については、[更新ガイド](xref:microsoft.quantum.update)を参照してください。
 
+## <a name="version-01120033107"></a>バージョン 0.11.2003.3107
+
+*リリース日:2020 年 3 月 31 日*
+
+このリリースには、バージョン 0.11.2003.2506 の軽微なバグ修正が含まれています。
 
 ## <a name="version-01120032506"></a>バージョン 0.11.2003.2506
 
