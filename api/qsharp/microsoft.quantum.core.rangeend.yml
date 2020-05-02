@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Core
 summary: 指定された範囲の定義済みの終了値を返します。これは必ずしもシーケンスの最後の要素ではありません。
 remarks: >-
-  範囲式の最初の要素が `start`、2番目の要素が `start+step`、3番目の要素が `start+step+step`など、`end` が渡されるまで続きます。
+  範囲式の最初の要素は`start`で、2番目`start+step`の要素は、 `start+step+step`3 番目の要素`end`はなどです。が渡されるまで、が渡されます。
 
 
   範囲の定義済みの終了値は、範囲によって指定されたシーケンスの最後の要素と異なる場合があることに注意してください。たとえば、0 ~ の範囲で指定します。 2.. 5最後の要素は4ですが、終了値は5です。
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 85e9006f73cd5f7b5a78b57148cbd7ad5b764878
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066644"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657631"

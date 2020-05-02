@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Core
 summary: 指定された範囲の開始値を定義して返します。
 remarks: >-
-  範囲式の最初の要素が `start`、2番目の要素が `start+step`、3番目の要素が `start+step+step`など、`end` が渡されるまで続きます。
+  範囲式の最初の要素は`start`で、2番目`start+step`の要素は、 `start+step+step`3 番目の要素`end`はなどです。が渡されるまで、が渡されます。
 
 
   範囲で空のシーケンスが指定されていない限り、範囲の定義済みの開始値が、シーケンスの最初の要素と同じであることに注意してください (例: 2.. 1)。
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0d618a26d71a5b41e6ea6b73503e9f099b18f129
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a5a5240da851b459e732c78f7be94b8a2d02b1f1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231760"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657249"
