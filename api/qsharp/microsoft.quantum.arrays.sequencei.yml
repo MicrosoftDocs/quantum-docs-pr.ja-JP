@@ -28,20 +28,20 @@ input:
     isPrimitive: true
     uid: Int
   - name: to
-    summary: '`from`よりも小さい、期間の包括終了インデックス。'
+    summary: より`from`小さくない間隔の包括終了インデックス。
     isPrimitive: true
     uid: Int
 output:
   content: Int[]
   types:
-  - summary: '`from`、`from + 1`、`to`の数値のシーケンスを格納している配列。'
+  - summary: 数値`from`のシーケンス ( `from + 1`,...) `to`を格納している配列。
     isArray: true
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 7ff3ee1eaabb17fbc4e3736d993a8cc5ac1ccaf1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0efe1b4c3980c808cd89e56fd4948e06218cab66
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214233"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680830"

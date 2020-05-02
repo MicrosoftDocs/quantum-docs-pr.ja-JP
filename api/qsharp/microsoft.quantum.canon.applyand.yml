@@ -7,10 +7,10 @@ summary: >-
   測定を使用して adjoint 演算を実行し、両方のコントロール qubit が1の状態である場合にのみ、指定されたターゲット qubit を反転します。
 
 
-  両方のコントロールが1である場合にのみ `target` を反転します。ただし、`target` の状態が0であることを前提としています。  この操作には、T カウント4、T 深度2があり、ヘルパー qubit は必要ないため、`target` が0であることがわかっている場合は、CCNOT 操作に適している可能性があります。  この操作の adjoint は測定ベースであり、T ゲートは必要ありません。
+  両方`target`のコントロールが1で、が状態が0である`target`と想定している場合にのみ、を反転させます。  この操作には、T カウント4、T 深度2があり、ヘルパー qubit は必要ないため、が0であることがわかって`target`いる場合は、ccnot 操作に適している可能性があります。  この操作の adjoint は測定ベースであり、T ゲートは必要ありません。
 
 
-  この操作の制御されたアプリケーションでは、ヘルパー qubit、`2^c` `Rz` ゲートは不要であり、深さに対して最適化されていません。 `c` は、`ApplyAnd` 操作の2つのコントロールを含むコントロールの全体の数です。  Adjoint 制御アプリケーションでは、`Rz` ゲート (非 adjoint 操作のサイズの2倍の角度を持つ) を `2^c - 1` 必要があります。ヘルパー qubit はなく、深度に対して最適化されていません。
+  この操作の制御されたアプリケーションでは、ヘルパー `2^c` `Rz` qubit、ゲートは不要であり、 `c`深さに対して最適化されていません。は、 `ApplyAnd`操作の2つのコントロールを含むコントロールの全体の数です。  Adjoint の制御され`2^c - 1` `Rz`たアプリケーションでは、ゲート (非 adjoint 操作のサイズの2倍の角度)、ヘルパー qubit、および深度に対して最適化されていないゲートが必要です。
 syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: >-
   - Cody Jones: 「fault トレラントな Toffoli ゲートのための斬新構造」、「Phys 87、022328、2013 [Arxiv: 1212.5069](https://arxiv.org/abs/1212.5069) doi: 10.1103/PhysRevA
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7cde3dbbd33ff482609bbaaccb15e4c7b1bc536e
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 973f7f618154720396be0bb4a01b52d763ccdd1c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872990"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680539"

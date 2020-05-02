@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: Int
   - name: amount
-    summary: '`value` を左にシフトするときに使用するビット数。'
+    summary: を左にシフトするとき`value`に使用するビット数。
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: '`value`の値。 `amount` ビットで左にシフトされます。'
+  - summary: ビットで`amount`左`value`にシフトされたの値。
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: d260f2d39e94d0448df739f324f9760013d9bbd3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e63653304eced80526b26e0ad05d1e4ed4aeb682
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214097"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680687"

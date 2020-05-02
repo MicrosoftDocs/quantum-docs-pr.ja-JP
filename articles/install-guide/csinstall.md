@@ -1,147 +1,101 @@
 ---
-title: 'Q # + を使用した開発C#'
+title: Q# と C# を使用した開発
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 7803846279f230f5fc0ee8424bd39be735a650ca
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 5bcb036b0b32e64d43f90e9a068d9dcc237890ba
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036289"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82680164"
 ---
-# <a name="develop-with-q--c"></a><span data-ttu-id="5afa0-102">Q # + を使用した開発C#</span><span class="sxs-lookup"><span data-stu-id="5afa0-102">Develop with Q# + C#</span></span>
+# <a name="using-q-with-c-and-f"></a><span data-ttu-id="f1233-102">Q # を C\#および F と共に使用する\#</span><span class="sxs-lookup"><span data-stu-id="f1233-102">Using Q# with C\# and F\#</span></span>
 
-<span data-ttu-id="5afa0-103">Q # 操作を呼び出すホストC#プログラムを開発するには、qdk をインストールします。</span><span class="sxs-lookup"><span data-stu-id="5afa0-103">Install the QDK to develop C# host programs to call Q# operations.</span></span>
+<span data-ttu-id="f1233-103">Q # は、C# や F # などの .NET 言語で適切に動作するように構築されています。</span><span class="sxs-lookup"><span data-stu-id="f1233-103">Q# is built to play well with .NET languages such as C# and F#.</span></span>
+<span data-ttu-id="f1233-104">このガイドでは、.NET 言語で記述されたホストプログラムで Q # を使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="f1233-104">In this guide, we'll demonstrate how to use Q# with a host program written in a .NET language.</span></span>
 
-<span data-ttu-id="5afa0-104">Q # は、.NET 言語 (特C#に) を使用して適切に動作するように構築されています。</span><span class="sxs-lookup"><span data-stu-id="5afa0-104">Q# is built to play well with .NET languages--specifically C#.</span></span> <span data-ttu-id="5afa0-105">この組み合わせは、さまざまな開発環境で使用できます。</span><span class="sxs-lookup"><span data-stu-id="5afa0-105">You can work with this pairing inside different development environments:</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="f1233-105">[前提条件]</span><span class="sxs-lookup"><span data-stu-id="f1233-105">Prerequisites</span></span>
 
-- [<span data-ttu-id="5afa0-106">Visual Studio をC#使用した Q # + (Windows)</span><span class="sxs-lookup"><span data-stu-id="5afa0-106">Q# + C# using Visual Studio (Windows)</span></span>](#VS)
-- [<span data-ttu-id="5afa0-107">Visual Studio Code を使用C#した Q # + (Windows、Linux、Mac)</span><span class="sxs-lookup"><span data-stu-id="5afa0-107">Q# + C# using Visual Studio Code (Windows, Linux and Mac)</span></span>](#VSC)
-- [<span data-ttu-id="5afa0-108">Q # + C# `dotnet` コマンドラインツールの使用</span><span class="sxs-lookup"><span data-stu-id="5afa0-108">Q# + C# using the `dotnet` command-line tool</span></span>](#command)
+- <span data-ttu-id="f1233-106">[Q # コマンドラインプロジェクトで使用するための](xref:microsoft.quantum.install.standalone)Quantum 開発キットをインストールします。</span><span class="sxs-lookup"><span data-stu-id="f1233-106">Install the Quantum Development Kit [for use with Q# command-line projects](xref:microsoft.quantum.install.standalone).</span></span>
 
-## <span data-ttu-id="5afa0-109">Visual Studio を使用しC#た Q # + を使用した開発 <a name="VS"></a></span><span class="sxs-lookup"><span data-stu-id="5afa0-109">Develop with Q# + C# using Visual Studio <a name="VS"></a></span></span>
+## <a name="creating-a-q-library-and-a-net-host"></a><span data-ttu-id="f1233-107">Q # ライブラリと .NET ホストの作成</span><span class="sxs-lookup"><span data-stu-id="f1233-107">Creating a Q# library and a .NET host</span></span>
 
-<span data-ttu-id="5afa0-110">Visual Studio には、Q # プログラムを開発するための豊富な環境が用意されています。</span><span class="sxs-lookup"><span data-stu-id="5afa0-110">Visual Studio offers a rich environment for developing Q# programs.</span></span> <span data-ttu-id="5afa0-111">Q # Visual Studio 拡張機能には、Q # のファイルとプロジェクトのテンプレートに加え、構文の強調表示、コード補完、IntelliSense のサポートが含まれています。</span><span class="sxs-lookup"><span data-stu-id="5afa0-111">The Q# Visual Studio extension contains templates for Q# files and projects as well as syntax highlighting, code completion and IntelliSense support.</span></span>
+<span data-ttu-id="f1233-108">最初の手順では、Q # ライブラリのプロジェクトを作成し、Q # ライブラリで定義されている操作と関数を呼び出す .NET ホストを作成します。</span><span class="sxs-lookup"><span data-stu-id="f1233-108">The first step is to create projects for your Q# library, and for the .NET host that will call into the operations and functions defined in your Q# library.</span></span>
 
+### <a name="visual-studio-2019"></a>[<span data-ttu-id="f1233-109">Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="f1233-109">Visual Studio 2019</span></span>](#tab/tabid-vs2019)
 
-1. <span data-ttu-id="5afa0-112">前提条件</span><span class="sxs-lookup"><span data-stu-id="5afa0-112">Pre-requisites</span></span>
+- <span data-ttu-id="f1233-110">新しい Q # ライブラリを作成する</span><span class="sxs-lookup"><span data-stu-id="f1233-110">Create a new Q# library</span></span>
+  - <span data-ttu-id="f1233-111">**ファイル** -> の**新しい** -> **プロジェクト**にアクセス</span><span class="sxs-lookup"><span data-stu-id="f1233-111">Go to **File** -> **New** -> **Project**</span></span>
+  - <span data-ttu-id="f1233-112">検索ボックスに「Q #」と入力します。</span><span class="sxs-lookup"><span data-stu-id="f1233-112">Type "Q#" in the search box</span></span>
+  - <span data-ttu-id="f1233-113">**Q # ライブラリ**を選択します</span><span class="sxs-lookup"><span data-stu-id="f1233-113">Select **Q# Library**</span></span>
+  - <span data-ttu-id="f1233-114">**次**を選択</span><span class="sxs-lookup"><span data-stu-id="f1233-114">Select **Next**</span></span>
+  - <span data-ttu-id="f1233-115">ライブラリの名前と場所を選択します</span><span class="sxs-lookup"><span data-stu-id="f1233-115">Choose a name and location for your library</span></span>
+  - <span data-ttu-id="f1233-116">[プロジェクトとソリューションを同じディレクトリに配置する] が**オフ**になっていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="f1233-116">Make sure that "place project and solution in same directory" is **unchecked**</span></span>
+  - <span data-ttu-id="f1233-117">**[作成]**</span><span class="sxs-lookup"><span data-stu-id="f1233-117">Select **Create**</span></span>
+- <span data-ttu-id="f1233-118">新しい C# または F # ホストプログラムを作成する</span><span class="sxs-lookup"><span data-stu-id="f1233-118">Create a new C# or F# host program</span></span>
+  - <span data-ttu-id="f1233-119">**ファイル**にジャンプ→ [**新規**] → [**プロジェクト**]</span><span class="sxs-lookup"><span data-stu-id="f1233-119">Go to **File** → **New** → **Project**</span></span>
+  - <span data-ttu-id="f1233-120">C# または F に対して [Console App (.NET Core)] を選択します。#</span><span class="sxs-lookup"><span data-stu-id="f1233-120">Select "Console App (.NET Core")" for either C# or F#</span></span>
+  - <span data-ttu-id="f1233-121">**次**を選択</span><span class="sxs-lookup"><span data-stu-id="f1233-121">Select **Next**</span></span>
+  - <span data-ttu-id="f1233-122">[*ソリューション*] で、[ソリューションに追加] を選択します。</span><span class="sxs-lookup"><span data-stu-id="f1233-122">Under *solution*, select "add to solution"</span></span>
+  - <span data-ttu-id="f1233-123">ホストプログラムの名前を選択してください</span><span class="sxs-lookup"><span data-stu-id="f1233-123">Choose a name for your host program</span></span>
+  - <span data-ttu-id="f1233-124">**[作成]**</span><span class="sxs-lookup"><span data-stu-id="f1233-124">Select **Create**</span></span>
 
-    - <span data-ttu-id="5afa0-113">.NET Core クロス プラットフォーム開発ワークロードが有効な [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3</span><span class="sxs-lookup"><span data-stu-id="5afa0-113">[Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3, with the .NET Core cross-platform development workload enabled</span></span>
+### <a name="visual-studio-code-or-command-line"></a>[<span data-ttu-id="f1233-125">Visual Studio Code またはコマンドライン</span><span class="sxs-lookup"><span data-stu-id="f1233-125">Visual Studio Code or Command Line</span></span>](#tab/tabid-cmdline)
 
-1. <span data-ttu-id="5afa0-114">Q# Visual Studio 拡張機能のインストール</span><span class="sxs-lookup"><span data-stu-id="5afa0-114">Install the Q# Visual Studio extension</span></span>
+- <span data-ttu-id="f1233-126">新しい Q # ライブラリを作成する</span><span class="sxs-lookup"><span data-stu-id="f1233-126">Create a new Q# library</span></span>
 
-    - <span data-ttu-id="5afa0-115">[Visual Studio 拡張機能](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)をダウンロードしてインストールする</span><span class="sxs-lookup"><span data-stu-id="5afa0-115">Download and install the [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)</span></span>
+  ```dotnetcli
+  dotnet new classlib -lang Q# -o quantum
+  ```
 
-1. <span data-ttu-id="5afa0-116">`Hello World` アプリケーションを作成してインストールを確認する</span><span class="sxs-lookup"><span data-stu-id="5afa0-116">Verify the installation by creating a `Hello World` application</span></span>
+- <span data-ttu-id="f1233-127">新しい C# または F # コンソールプロジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="f1233-127">Create a new C# or F# console project</span></span>
 
-    - <span data-ttu-id="5afa0-117">新しい Q# アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="5afa0-117">Create a new Q# application</span></span>
+  ```dotnetcli
+  dotnet new console -lang C# -o host  
+  ```
 
-        - <span data-ttu-id="5afa0-118">**[ファイル]**  ->  **[新規]**  ->  **[プロジェクト]** の順に移動します。</span><span class="sxs-lookup"><span data-stu-id="5afa0-118">Go to **File** -> **New** -> **Project**</span></span>
-        - <span data-ttu-id="5afa0-119">検索ボックスに、「`Q#`」と入力します</span><span class="sxs-lookup"><span data-stu-id="5afa0-119">Type `Q#` in the search box</span></span>
-        - <span data-ttu-id="5afa0-120">**[Q# Application]\(Q# アプリケーション\)** を選択します</span><span class="sxs-lookup"><span data-stu-id="5afa0-120">Select **Q# Application**</span></span>
-        - <span data-ttu-id="5afa0-121">**[次へ]** を選択します</span><span class="sxs-lookup"><span data-stu-id="5afa0-121">Select **Next**</span></span>
-        - <span data-ttu-id="5afa0-122">アプリケーションの名前と格納する場所を選択します</span><span class="sxs-lookup"><span data-stu-id="5afa0-122">Choose a name and location for your application</span></span>
-        - <span data-ttu-id="5afa0-123">**[作成]**</span><span class="sxs-lookup"><span data-stu-id="5afa0-123">Select **Create**</span></span>
+- <span data-ttu-id="f1233-128">ホストプログラムからの参照として Q # ライブラリを追加する</span><span class="sxs-lookup"><span data-stu-id="f1233-128">Add your Q# library as a reference from your host program</span></span>
 
-    - <span data-ttu-id="5afa0-124">プロジェクトの確認</span><span class="sxs-lookup"><span data-stu-id="5afa0-124">Inspect the project</span></span>
+  ```dotnetcli
+  cd host
+  dotnet add reference ../quantum/quantum.csproj
+  ```
 
-        <span data-ttu-id="5afa0-125">2 つのファイルが作成されていることがわかります。`Driver.cs` は C# ホスト アプリケーションで、`Operation.qs` は、コンソールにメッセージを出力する簡単な操作を定義する Q# プログラムです。</span><span class="sxs-lookup"><span data-stu-id="5afa0-125">You should see that two files have been created: `Driver.cs`, which is the C# host application; and `Operation.qs`, which is a Q# program that defines a simple operation to print a message to the console.</span></span>
+- <span data-ttu-id="f1233-129">Optional両方のプロジェクトのソリューションを作成する</span><span class="sxs-lookup"><span data-stu-id="f1233-129">[Optional] Create a solution for both projects</span></span>
 
-    - <span data-ttu-id="5afa0-126">アプリケーションの実行</span><span class="sxs-lookup"><span data-stu-id="5afa0-126">Run the application</span></span>
+  ```dotnetcli
+  dotnet new sln -n quantum-dotnet
+  dotnet sln quantum-dotnet.sln add ./quantum/quantum.csproj
+  dotnet sln quantum-dotnet.sln add ./host/host.csproj
+  ```
 
-        - <span data-ttu-id="5afa0-127">**[デバッグ]**  ->  **[デバッグなしで開始]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="5afa0-127">Select **Debug** -> **Start Without Debugging**</span></span>
-        - <span data-ttu-id="5afa0-128">テキスト `Hello quantum world!` がコンソール ウィンドウに出力されます。</span><span class="sxs-lookup"><span data-stu-id="5afa0-128">You should see the text `Hello quantum world!` printed to a console window.</span></span>
+***
 
-> [!NOTE]
-> * <span data-ttu-id="5afa0-129">1 つの Visual Studio ソリューションに複数のプロジェクトがある場合は、ソリューションに含まれるすべてのプロジェクトが、ソリューションと同じフォルダーまたはそのサブフォルダーのいずれかに存在する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5afa0-129">If you have multiple projects within one Visual Studio solution, all projects contained in the solution need to be in the same folder as the solution, or in one of its subfolders.</span></span>  
+## <a name="calling-into-q-from-net"></a><span data-ttu-id="f1233-130">.NET から Q # への呼び出し</span><span class="sxs-lookup"><span data-stu-id="f1233-130">Calling into Q# from .NET</span></span>
 
-## <span data-ttu-id="5afa0-130">Visual Studio Code を使用したC# Q # + を使用した開発 <a name="VSC"></a></span><span class="sxs-lookup"><span data-stu-id="5afa0-130">Develop with Q# + C# using Visual Studio Code <a name="VSC"></a></span></span>
+<span data-ttu-id="f1233-131">上記の手順に従ってプロジェクトを設定したら、.NET コンソールアプリケーションから Q # を呼び出すことができます。</span><span class="sxs-lookup"><span data-stu-id="f1233-131">Once you have your projects set up following the above instructions, you can call into Q# from your .NET console application.</span></span>
+<span data-ttu-id="f1233-132">Q # コンパイラは、各 Q # 操作に対して .NET クラスを作成し、シミュレーターでクォンタムプログラムを実行できるようにします。</span><span class="sxs-lookup"><span data-stu-id="f1233-132">The Q# compiler will create .NET classes for each Q# operation and function that allow you to run your quantum programs on a simulator.</span></span>
 
-<span data-ttu-id="5afa0-131">Visual Studio Code (VS Code) は、Windows、Linux、および Mac で Q # プログラムを開発するための豊富な環境を提供します。</span><span class="sxs-lookup"><span data-stu-id="5afa0-131">Visual Studio Code (VS Code) offers a rich environment for developing Q# programs on Windows, Linux and Mac.</span></span>  <span data-ttu-id="5afa0-132">Q # の VS Code 拡張機能には、Q # 構文の強調表示、コード補完、Q # コードスニペットのサポートが含まれています。</span><span class="sxs-lookup"><span data-stu-id="5afa0-132">The Q# VS Code extension includes support for Q# syntax highlighting, code completion, and Q# code snippets.</span></span>
+<span data-ttu-id="f1233-133">たとえば、 [.net 相互運用性のサンプル](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet)には、Q # 操作の次の例が含まれています。</span><span class="sxs-lookup"><span data-stu-id="f1233-133">For example, the [.NET interoperability sample](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet) includes the following example of a Q# operation:</span></span>
 
-1. <span data-ttu-id="5afa0-133">前提条件</span><span class="sxs-lookup"><span data-stu-id="5afa0-133">Pre-requisites</span></span>
+:::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-   - [<span data-ttu-id="5afa0-134">VS Code</span><span class="sxs-lookup"><span data-stu-id="5afa0-134">VS Code</span></span>](https://code.visualstudio.com/download)
-   - [<span data-ttu-id="5afa0-135">.NET Core SDK 3.1 以降</span><span class="sxs-lookup"><span data-stu-id="5afa0-135">.NET Core SDK 3.1 or later</span></span>](https://www.microsoft.com/net/download)
+<span data-ttu-id="f1233-134">クォンタムシミュレーターで .NET からこの操作を呼び出すには、Q # コンパイラ`Run`によって`RunAlgorithm`生成された .net クラスのメソッドを使用できます。</span><span class="sxs-lookup"><span data-stu-id="f1233-134">To call this operation from .NET on a quantum simulator, you can use the `Run` method of the `RunAlgorithm` .NET class generated by the Q# compiler:</span></span>
 
-1. <span data-ttu-id="5afa0-136">Quantum VS Code 拡張機能のインストール</span><span class="sxs-lookup"><span data-stu-id="5afa0-136">Install the Quantum VS Code extension</span></span>
+### <a name="c"></a>[<span data-ttu-id="f1233-135">C#</span><span class="sxs-lookup"><span data-stu-id="f1233-135">C#</span></span>](#tab/tabid-csharp)
 
-    - <span data-ttu-id="5afa0-137">[VS Code 拡張機能](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)をインストールする</span><span class="sxs-lookup"><span data-stu-id="5afa0-137">Install the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)</span></span>
+:::code language="csharp" source="~/quantum/samples/interoperability/dotnet/csharp/Host.cs" range="4-":::
 
-1. <span data-ttu-id="5afa0-138">量子プロジェクト テンプレートをインストールします。</span><span class="sxs-lookup"><span data-stu-id="5afa0-138">Install the Quantum project templates:</span></span>
+### <a name="f"></a>[<span data-ttu-id="f1233-136">F#</span><span class="sxs-lookup"><span data-stu-id="f1233-136">F#</span></span>](#tab/tabid-fsharp)
 
-   - <span data-ttu-id="5afa0-139">**[表示]**  ->  **[コマンド パレット]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="5afa0-139">Go to **View** -> **Command Palette**</span></span>
-   - <span data-ttu-id="5afa0-140">**[Q #: プロジェクトテンプレートのインストール]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="5afa0-140">Select **Q#: Install project templates**</span></span>
+:::code language="fsharp" source="~/quantum/samples/interoperability/dotnet/fsharp/Host.fs" range="4-":::
 
-    <span data-ttu-id="5afa0-141">これで、Quantum Development Kit がインストールされ、使用しているアプリケーションとライブラリで使用できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="5afa0-141">You now have the Quantum Development Kit installed and ready to use in your own applications and libraries.</span></span>
-
-1. <span data-ttu-id="5afa0-142">`Hello World` アプリケーションを作成してインストールを確認する</span><span class="sxs-lookup"><span data-stu-id="5afa0-142">Verify the installation by creating a `Hello World` application</span></span>
-
-    - <span data-ttu-id="5afa0-143">新しいプロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="5afa0-143">Create a new project:</span></span>
-
-        - <span data-ttu-id="5afa0-144">**[表示]**  ->  **[コマンド パレット]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="5afa0-144">Go to **View** -> **Command Palette**</span></span>
-        - <span data-ttu-id="5afa0-145">**[Q #: 新しいプロジェクトの作成]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="5afa0-145">Select **Q#: Create New Project**</span></span>
-        - <span data-ttu-id="5afa0-146">**スタンドアロンコンソールアプリケーション**の選択</span><span class="sxs-lookup"><span data-stu-id="5afa0-146">Select **Standalone console application**</span></span>
-        - <span data-ttu-id="5afa0-147">アプリケーションの作成先となるファイル システム上の場所に移動します。</span><span class="sxs-lookup"><span data-stu-id="5afa0-147">Navigate to the location on the file system where you would like to create the application</span></span>
-        - <span data-ttu-id="5afa0-148">プロジェクトが作成されたら、 **[Open new project...]\(新しいプロジェクトを開く...\)** ボタンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="5afa0-148">Click on the **Open new project...** button, once the project has been created</span></span>
-
-    - <span data-ttu-id="5afa0-149">VS Code のC#拡張機能をまだインストールしていない場合は、ポップアップが表示されます。</span><span class="sxs-lookup"><span data-stu-id="5afa0-149">If you don't already have the C# extension for VS Code installed, a pop-up will appear.</span></span> <span data-ttu-id="5afa0-150">拡張機能をインストールします。</span><span class="sxs-lookup"><span data-stu-id="5afa0-150">Install the extension.</span></span> 
-
-    - <span data-ttu-id="5afa0-151">アプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="5afa0-151">Run the application:</span></span>
-
-        - <span data-ttu-id="5afa0-152">**ターミナル** -> **新しいターミナル**にアクセスする</span><span class="sxs-lookup"><span data-stu-id="5afa0-152">Go to **Terminal** -> **New Terminal**</span></span>
-        - <span data-ttu-id="5afa0-153">「`dotnet run`」と入力します</span><span class="sxs-lookup"><span data-stu-id="5afa0-153">Enter `dotnet run`</span></span>
-        - <span data-ttu-id="5afa0-154">出力ウィンドウに `Hello quantum world!` というテキストが表示されます。</span><span class="sxs-lookup"><span data-stu-id="5afa0-154">You should see the following text in the output window `Hello quantum world!`</span></span>
-
-
-> [!NOTE]
-> * <span data-ttu-id="5afa0-155">複数のルート フォルダーを持つワークスペースは、Visual Studio Code の拡張機能では現在サポートされていません。</span><span class="sxs-lookup"><span data-stu-id="5afa0-155">Workspaces with multiple root folders are not currently supported by the Visual Studio Code extension.</span></span> <span data-ttu-id="5afa0-156">1 つの VS Code ワークスペース内に複数のプロジェクトがある場合は、すべてのプロジェクトが同じルート フォルダー内に含まれている必要があります。</span><span class="sxs-lookup"><span data-stu-id="5afa0-156">If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.</span></span>
-
-## <span data-ttu-id="5afa0-157">`dotnet` コマンドラインツールをC#使用した Q # + を使用した開発<a name="command"></a></span><span class="sxs-lookup"><span data-stu-id="5afa0-157">Develop with Q# + C# using the `dotnet` command-line tool <a name="command"></a></span></span>
-
-<span data-ttu-id="5afa0-158">もちろん、単に .NET Core SDK と QDK プロジェクト テンプレートをインストールして、コマンド ラインから Q# プログラムを構築して実行することもできます。</span><span class="sxs-lookup"><span data-stu-id="5afa0-158">Of course, you can also build and run Q# programs from the command line by simply installing the .NET Core SDK and the QDK project templates.</span></span> 
-
-1. <span data-ttu-id="5afa0-159">前提条件</span><span class="sxs-lookup"><span data-stu-id="5afa0-159">Pre-requisites</span></span>
-
-    - [<span data-ttu-id="5afa0-160">.NET Core SDK 3.1 以降</span><span class="sxs-lookup"><span data-stu-id="5afa0-160">.NET Core SDK 3.1 or later</span></span>](https://www.microsoft.com/net/download)
-
-1. <span data-ttu-id="5afa0-161">.NET 用量子プロジェクト テンプレートをインストールします。</span><span class="sxs-lookup"><span data-stu-id="5afa0-161">Install the Quantum project templates for .NET</span></span>
-
-    ```dotnetcli
-    dotnet new -i Microsoft.Quantum.ProjectTemplates
-    ```
-
-    <span data-ttu-id="5afa0-162">これで、Quantum Development Kit がインストールされ、使用しているアプリケーションとライブラリで使用できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="5afa0-162">You now have the Quantum Development Kit installed and ready to use in your own applications and libraries.</span></span>
-
-1. <span data-ttu-id="5afa0-163">`Hello World` アプリケーションを作成してインストールを確認する</span><span class="sxs-lookup"><span data-stu-id="5afa0-163">Verify the installation by creating a `Hello World` application</span></span>
-
-    - <span data-ttu-id="5afa0-164">新しいアプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="5afa0-164">Create a new application</span></span>
-
-       ```dotnetcli
-       dotnet new console -lang "Q#" -o runSayHello
-       ```
-
-    - <span data-ttu-id="5afa0-165">新しいアプリケーション ディレクトリに移動します。</span><span class="sxs-lookup"><span data-stu-id="5afa0-165">Navigate to the new application directory</span></span>
-
-       ```bash
-       cd runSayHello
-       ```
-
-    <span data-ttu-id="5afa0-166">アプリケーションのプロジェクト ファイルと共に、Q# ファイル (`Operation.qs`) と C# ホスト ファイル (`Driver.cs`) の 2 つのファイルが作成されていることがわかります。</span><span class="sxs-lookup"><span data-stu-id="5afa0-166">You should see that two files have been created, along with the project files of the application: a Q# file (`Operation.qs`) and a C# host file (`Driver.cs`).</span></span>
-
-    - <span data-ttu-id="5afa0-167">アプリケーションの実行</span><span class="sxs-lookup"><span data-stu-id="5afa0-167">Run the application</span></span>
-
-        ```dotnetcli
-        dotnet run
-        ```
-
-        <span data-ttu-id="5afa0-168">`Hello quantum world!` という出力が表示されます。</span><span class="sxs-lookup"><span data-stu-id="5afa0-168">You should see the following output: `Hello quantum world!`</span></span>
-
+***
     
-## <a name="whats-next"></a><span data-ttu-id="5afa0-169">次の操作</span><span class="sxs-lookup"><span data-stu-id="5afa0-169">What's next?</span></span>
+## <a name="whats-next"></a><span data-ttu-id="f1233-137">次の内容</span><span class="sxs-lookup"><span data-stu-id="f1233-137">What's next?</span></span>
 
-<span data-ttu-id="5afa0-170">これで、使用している環境に Quantum Development Kit がインストールされたので、[最初の量子プログラム](xref:microsoft.quantum.write-program)を作成して実行することができます。</span><span class="sxs-lookup"><span data-stu-id="5afa0-170">Now that you have installed the Quantum Development Kit in your preferred environment, you can write and run [your first quantum program](xref:microsoft.quantum.write-program).</span></span>
+<span data-ttu-id="f1233-138">これで、2つのコマンドラインプログラムに対してクォンタム開発キットがセットアップされました。また、.NET との相互運用性のために、[最初のクォンタムプログラム](xref:microsoft.quantum.write-program)を記述して実行することができます。</span><span class="sxs-lookup"><span data-stu-id="f1233-138">Now that you have Quantum Development Kit set up for both Q# command-line programs, and for interoperability with .NET, you can write and run [your first quantum program](xref:microsoft.quantum.write-program).</span></span>

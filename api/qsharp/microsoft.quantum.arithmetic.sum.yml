@@ -3,8 +3,8 @@ uid: microsoft.quantum.arithmetic.sum
 name: Sum
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: 元に戻すことができない合計ゲートを実装します。 Qubit `carryIn` でエンコードされたキャリービットと `summand1` と `summand2`でエンコードされた2つの summand ビットがある場合、は、qubit `summand1` 内の `carryIn`、`summand2`、および `summand2`のビットごとの xor を計算します。
-remarks: '`Carry` 操作とは異なり、この操作では、キャリービットは計算されません。'
+summary: 元に戻すことができない合計ゲートを実装します。 Qubit `carryIn` `summand1`でエンコードされたキャリービットと、と`summand2`でエンコードされた2つの summand ビットを`carryIn`指定`summand1`する`summand2`と、との`summand2`ビットごとの xor を計算します。
+remarks: 操作と`Carry`は異なり、この操作では、キャリービットは計算されません。
 syntax: 'operation Sum (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit) : Unit'
 input:
   content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit)'
@@ -18,7 +18,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: summand2
-    summary: 2番目の summand qubit は、`summand1` と `summand2`の合計の下位ビットに置き換えられます。
+    summary: 2番目の summand qubit は、と`summand1` `summand2`の合計の下位ビットに置き換えられます。
     isPrimitive: true
     uid: Qubit
 output:
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 125ee44b5debf5d8c83d7fb5176c4298bd702563
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d72ec97c01944b73ed459afcddbdfb3aa1cf3c49
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218398"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681047"
