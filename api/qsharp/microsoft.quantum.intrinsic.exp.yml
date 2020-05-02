@@ -7,7 +7,7 @@ summary: >-
   マルチ qubit の P# li 演算子の指数を適用します。
 
 
-  \begin{align} e ^ {i \ シータ [P_0/otimes P_1, cドット P_ {N-1}]}, \end{align} where $P _i $ は `paulis`の $ th 要素 $i、where $N = $`Length(paulis)`です。
+  \begin{align} e ^ {i/シータ [P_0/otimes P_1/cドット P_ {N-1}]}, \end{align} ここで $P _i $ はの`paulis`$i $ th 要素、where $N = $`Length(paulis)`です。
 syntax: 'operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], theta : Double, qubits : Qubit[])'
@@ -35,9 +35,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d301f6281d5c8a07479417fab1e25c66e2251a25
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d66b1b03a751be2629d2c363f538d9afa0310c73
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067324"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683822"

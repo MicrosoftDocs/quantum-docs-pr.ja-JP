@@ -11,14 +11,14 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: より隣人測定 `Result[]` を受け取り、検出されたエラーを修正する `Pauli[]` 操作を返す `RecoveryFn` 型の関数。
+  - summary: より隣人の測定`RecoveryFn`値`Result[]`を受け取り、検出された`Pauli[]`エラーを修正する操作を返す型の関数。
     uid: microsoft.quantum.errorcorrection.recoveryfn
 seeAlso:
 - microsoft.quantum.canon.recoveryfn
 metadata:
-  ms.openlocfilehash: 6b9446f55e47cc96fe0af194b956c51282ae0f1b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aeb20fcef86b26fd61f3bbe2594547f1ae212b4c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233596"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683885"

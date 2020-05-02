@@ -7,21 +7,21 @@ summary: >-
   シングル qubit 状態の Bloch 球座標を計算します。
 
 
-  2つの複素数を $a 0、a1 $ は、qubit 状態を表します。 $a 0 \ket{0} + a1 \ket{1} = r e ^ {it} (e ^ {-i/phi/2}\cos{(\ シータ/2)} \ket{0}+ e ^ {i/phi/2}\sin{(\ シータ/2)} \ket{1}) $ となります。
+  2つの複素数を $a 0、a1 $ は qubit 状態を表し、\ket{0}が 0 + a1 \ket{1} = r e ^ {it} (e ^ {-i/phi/2}\cos{(\ シータ/2)} \ket{0}+ e ^ {i/phi/2}\sin{(\ シータ/2)} \ket{1}) $ $a というように計算されます。
 syntax: 'function BlochSphereCoordinates (a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar) : (Microsoft.Quantum.Math.ComplexPolar, Double, Double)'
 input:
   content: '(a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar)'
   types:
   - name: a0
-    summary: 州 $ \ket{0}$ の複合係数。
+    summary: 状態 $ \ket{0}$ の複合係数。
     uid: microsoft.quantum.math.complexpolar
   - name: a1
-    summary: 州 $ \ket{1}$ の複合係数。
+    summary: 状態 $ \ket{1}$ の複合係数。
     uid: microsoft.quantum.math.complexpolar
 output:
   content: (Microsoft.Quantum.Math.ComplexPolar, Double, Double)
   types:
-  - summary: '`(ComplexPolar(r, t), phi, theta)`を含むタプル。'
+  - summary: を含む`(ComplexPolar(r, t), phi, theta)`タプル。
     types:
     - uid: microsoft.quantum.math.complexpolar
     - isPrimitive: true
@@ -29,9 +29,9 @@ output:
     - isPrimitive: true
       uid: Double
 metadata:
-  ms.openlocfilehash: fc9dbef764c9d95de2183b9b093e00f20dfb0697
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 98d543849be177941a0c346c1de6b5b6930e783e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228139"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683221"
