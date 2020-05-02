@@ -7,7 +7,7 @@ summary: >-
   Dyadic の分数で指定された引数を使用して、マルチ qubit の P# li 演算子の指数を適用します。
 
 
-  \begin{align} e ^ {i \ pi k [P_0/otimes P_1 \ cドット P_ {N-1}]/2 ^ N}, \end{align} where $P _i $ は `paulis`の $ th 要素 $i、where $N = $`Length(paulis)`です。
+  \begin{align} e ^ {i \ pi k [P_0/otimes P_1/cドット P_ {N-1}]/2 ^ N}、\end{align} where $P _i $ はの`paulis`$i $ th 要素、where $N = $`Length(paulis)`です。
 syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
@@ -39,9 +39,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d02f48d695db3dd2d7012df5bbf22718ffe41b74
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 61bd52b3bcce87c6bcbf61ebeb52f720e96fe0f0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223770"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683802"

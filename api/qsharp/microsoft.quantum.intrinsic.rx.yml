@@ -3,13 +3,7 @@ uid: microsoft.quantum.intrinsic.rx
 name: Rx
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: >-
-  指定された角度で $x $ 軸についての回転を適用します。
-
-
-  \begin{align} R_x (-シータ) \mathrel{: =} e ^ {-} = \begin{bmatrix} \frac{\theta}{2} &-\frac{\theta}{2}\\\\-i\ sin \frac{\theta}{2} & \frac{\theta}{2} \end{bmatrix}. です。を実行します。
-
-  \end{align}
+summary: "指定された角度で $x $ 軸についての回転を適用します。\n\n\\begin{align} R_x (-シータ) \\mathrel{: =} e ^ {-i \\ シータ \\ sigma_x/2} = \\begin{bmatrix}/cos \\frac{\\theta}{2} &-i\\ sin{2} \\\\ \\\\ \\frac{\\theta}-i\\ sin \\frac{\\theta}{2} & \\ cos \\frac{\\theta}{2} \\end{bmatrix}.  \n\\end{align}"
 remarks: >-
   次と同じです。
 
@@ -40,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: f34879cef60d33bbf260031c1b39572081027f2f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7a205e787e79743cad3f40e978f459d0f42a8100
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216443"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683675"

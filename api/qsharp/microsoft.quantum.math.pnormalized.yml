@@ -4,10 +4,10 @@ name: PNormalized
 type: function
 namespace: Microsoft.Quantum.Math
 summary: >-
-  `L(p)` 基準で `Double`s のベクターを正規化します。
+  `L(p)`標準での`Double`ベクトルを正規化します。
 
 
-  つまり、`Double[]`型の配列 $x $ を指定すると、すべての要素が $p $-基準 $\|x\|_p $ で除算された配列が返されます。
+  つまり、$ $x 型`Double[]`の配列を指定すると、すべての要素が $p $-基準 $\|x\|_p $ で除算された配列が返されます。
 syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
 input:
   content: '(p : Double, array : Double[])'
@@ -23,16 +23,16 @@ input:
 output:
   content: Double[]
   types:
-  - summary: $-$P $\|x\|_p $ によって正規化された配列 $x $。
+  - summary: 配列は、$-$p $\|x\|_p $ で $x $ 正規化されています。
     isArray: true
     isPrimitive: true
     uid: Double
 seeAlso:
 - pnorm
 metadata:
-  ms.openlocfilehash: 5fd219b866b14d3d6faf58cdf4f1ce2b9fbadf9d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 68697fe159fecfeed0078f95de8d91f825125f41
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067290"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684025"
