@@ -13,15 +13,15 @@ operations:
 - uid: microsoft.quantum.measurement.mresety
   summary: Y 単位で1つの qubit を測定し、測定値に従って標準の基本状態 | 0 〉にリセットします。
 - uid: microsoft.quantum.measurement.mresetz
-  summary: '`Z` ベースの1つの qubit を測定し、測定値に従って標準の基本状態 | 0 〉にリセットします。'
+  summary: は、 `Z` 1 つの qubit をベースとして測定し、測定値に従って標準の状態 | 0 〉にリセットします。
 - uid: microsoft.quantum.measurement.multim
   summary: 指定された配列内の各 qubit を標準ベースで測定します。
 - uid: microsoft.quantum.measurement.settobasisstate
   summary: Qubit を測定し、必要に応じてビットフリップを適用することによって、指定された計算基準の状態に qubit を設定します。
 metadata:
-  ms.openlocfilehash: dc74db43b60728bf9924c05346bae4c6b329a265
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 8e0910bf53734ffe65aa12b06321ec9b3403133f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905762"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673139"

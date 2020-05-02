@@ -3,23 +3,23 @@ uid: microsoft.quantum.extensions.bitwise
 name: Microsoft.Quantum.Extensions.Bitwise
 functions:
 - uid: microsoft.quantum.extensions.bitwise.and
-  summary: "\n> [!WARNING]\n> 不使用\n\nとは非推奨とされます。 代わりに、@\"microsoft.quantum.bitwise.and\" を使用してください。\n@\"microsoft.quantum.bitwise.and\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nとは非推奨とされます。 代わりに、@\"microsoft.quantum.bitwise.and\" を使用してください。\n@\"microsoft.quantum.bitwise.and\" を使用してください。"
 - uid: microsoft.quantum.extensions.bitwise.not
-  summary: "\n> [!WARNING]\n> 不使用\n\nNot は非推奨とされます。 代わりに、@\"microsoft.quantum.bitwise.not\" を使用してください。\n@\"microsoft.quantum.bitwise.not\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nNot は非推奨とされます。 代わりに、@\"microsoft.quantum.bitwise.not\" を使用してください。\n@\"microsoft.quantum.bitwise.not\" を使用してください。"
 - uid: microsoft.quantum.extensions.bitwise.or
-  summary: "\n> [!WARNING]\n> 不使用\n\nまたはが非推奨とされました。 代わりに、@\"microsoft.quantum.bitwise.or\" を使用してください。\n@\"microsoft.quantum.bitwise.or\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nまたはが非推奨とされました。 代わりに、@\"microsoft.quantum.bitwise.or\" を使用してください。\n@\"microsoft.quantum.bitwise.or\" を使用してください。"
 - uid: microsoft.quantum.extensions.bitwise.parity
-  summary: "\n> [!WARNING]\n> 不使用\n\nパリティは非推奨となりました。 代わりに、@\"microsoft.quantum.bitwise.parity\" を使用してください。\n@\"microsoft.quantum.bitwise.parity\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nパリティは非推奨となりました。 代わりに、@\"microsoft.quantum.bitwise.parity\" を使用してください。\n@\"microsoft.quantum.bitwise.parity\" を使用してください。"
 - uid: microsoft.quantum.extensions.bitwise.xbits
-  summary: "\n> [!WARNING]\n> 不使用\n\nXBits の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.bitwise.xbits\" を使用してください。\n@\"microsoft.quantum.bitwise.xbits\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nXBits の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.bitwise.xbits\" を使用してください。\n@\"microsoft.quantum.bitwise.xbits\" を使用してください。"
 - uid: microsoft.quantum.extensions.bitwise.xor
-  summary: "\n> [!WARNING]\n> 不使用\n\nXor は非推奨とされました。 代わりに、@\"microsoft.quantum.bitwise.xor\" を使用してください。\n@\"microsoft.quantum.bitwise.xor\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nXor は非推奨とされました。 代わりに、@\"microsoft.quantum.bitwise.xor\" を使用してください。\n@\"microsoft.quantum.bitwise.xor\" を使用してください。"
 - uid: microsoft.quantum.extensions.bitwise.zbits
-  summary: "\n> [!WARNING]\n> 不使用\n\nZBits は非推奨となりました。 代わりに、@\"microsoft.quantum.bitwise.zbits\" を使用してください。\n@\"microsoft.quantum.bitwise.zbits\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nZBits は非推奨となりました。 代わりに、@\"microsoft.quantum.bitwise.zbits\" を使用してください。\n@\"microsoft.quantum.bitwise.zbits\" を使用してください。"
 metadata:
-  ms.openlocfilehash: 69399e7aa3c7173b1173f278a79046e639db71d6
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 9c5cdc98558deeff0ae92c86abfca1840c568233
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858399"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673313"

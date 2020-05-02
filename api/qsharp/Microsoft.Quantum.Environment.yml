@@ -1,19 +1,19 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.environment
 name: Microsoft.Quantum.Environment
-summary: " # <a name=\"summary\"></a>Summary\n これらの関数は、クォンタムの計算が発生している環境に関する情報を提供します。"
+summary: " # <a name=\"summary\"></a>まとめ\n これらの関数は、クォンタムの計算が発生している環境に関する情報を提供します。"
 operations:
 - uid: microsoft.quantum.environment.getqubitsavailabletoborrow
   summary: >-
     現在借用で使用可能な qubits の数を返します。
 
-    これには未使用の qubits が含まれます。つまり、これには `GetQubitsAvailableToUse`によって返される qubits が含まれます。
+    これには未使用の qubits が含まれます。つまり、これにはによって`GetQubitsAvailableToUse`返される qubits が含まれます。
 - uid: microsoft.quantum.environment.getqubitsavailabletouse
   summary: 現在使用できる qubits の数を返します。
 metadata:
-  ms.openlocfilehash: 50e5cfb7c1b9a4075c25b2705d00b435a09e159e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bd6d442aabb179f4c5fea0a0f48efaa472ec00cf
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056826"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673344"
