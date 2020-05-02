@@ -14,12 +14,12 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.EvolutionUnitary
   types:
-  - summary: "' GeneratorIndex ' で参照される期間による時間の進化を表す `EvolutionUnitary`。"
+  - summary: "' `EvolutionUnitary` GeneratorIndex ' で参照されている用語による時間の推移を表す。"
     uid: microsoft.quantum.simulation.evolutionunitary
 metadata:
-  ms.openlocfilehash: d8d0bd7f396e7a096f6ddecfbf115f10704e824e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2156f656dfff7663113ae63a625e0ce81955b65e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228632"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82667294"
