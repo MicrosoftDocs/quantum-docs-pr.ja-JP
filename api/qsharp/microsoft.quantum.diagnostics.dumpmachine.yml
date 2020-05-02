@@ -7,10 +7,10 @@ summary: 現在のターゲットコンピューターの状態をダンプし�
 remarks: >-
   このメソッドを使用すると、ターゲットコンピューターの現在の状態に関する情報をファイルまたはその他の場所にダンプできます。
 
-  生成される実際の情報と `location` のセマンティクスは、各ターゲットコンピューターに固有です。 ただし、空の組を位置 (`()`) として指定したり、`location` パラメーターを省略するだけでは、通常、出力をコンソールに生成することになります。
+  生成される実際の情報との`location`セマンティクスは、各ターゲットコンピューターに固有です。 ただし、空のタプルを場所として`()`指定する () か`location` 、パラメーターを省略するだけで、通常はコンソールに出力を生成します。
 
 
-  Quantum 開発キットの一部として配布されたローカルの完全な状態シミュレーターでは、このメソッドでは、wave 関数を1次元の複素数の配列として書き込むファイルへのパスを含む文字列が想定されます。各要素は、対応する状態を測定する確率の振幅。
+  Quantum 開発キットの一部として配布されたローカルの完全な状態シミュレーターでは、このメソッドは、wave 関数を1次元の複素数の配列として書き込むファイルのパスを含む文字列を想定しています。各要素は、対応する状態を測定する確率の振幅を表します。
 syntax: "function DumpMachine (location : 'T) : Unit"
 input:
   content: "(location : 'T)"
@@ -26,9 +26,9 @@ output:
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 7d268127c56dc5554e7c99494ae90b2bc14b336c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7511e0bdded689c84cb90794860dd79e48950414
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227068"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82656573"
