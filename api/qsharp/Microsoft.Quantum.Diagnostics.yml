@@ -34,21 +34,21 @@ functions:
   summary: 古典的な浮動小数点値が、最小の許容範囲 (1e-10) までの予測値を持つことをアサートします。
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: 指定された qubits のアサートはすべて $ \ket{0}$ state です。
+  summary: 指定された qubits はすべて $ \ket{0}$ 状態です。
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: 指定された qubits のアサートはすべて $ \ket{0}$ state で、指定された許容範囲になります。
+  summary: 指定された qubits のアサートはすべて{0}、指定された許容範囲内の $ \ket $ 状態にあります。
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     2つの操作を指定すると、すべての入力状態で同じ動作をするようにアサートされます。
 
 
-    このアサーションは、フォームのすべての状態に対して操作のアクションをチェックすることによって実装されます $V (& o)... \ otimes V_ {n-1} $。ここで $V _k $ は、州 $ \ket{0}$、$ \ket{1}$、$ \ket{+} $、$ \ket{i} $ (+ 1 eigenstate of P# li Y operator) のいずれかです。
+    このアサーションは、フォームのすべての状態に対して操作のアクションを確認することによって実装されます。 $V 0/otimes V_ {n-1} $ です。 $V _k $ は、状態 ${0}\ket $、${1}\ket $、$ \ket{+} $、$ \ket{i} $ (+ 1 eigenstate of pauli Y 演算子) です
 
 
     このアサーションは $n $ qubits を使用し、比較対象の操作の複数の呼び出しを必要とします。
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
   summary: >-
-    演算の `givenU` が、計算ベースのベクターに対してのみ操作の操作をチェックすることによって、指定した入力サイズに `expectedU` 操作と等しいかどうかを確認します。
+    演算の操作`givenU`が、指定された`expectedU`入力サイズに対する演算と等しいかどうかをチェックします。演算の操作は、計算ベースのベクターに対してのみ操作のアクションをチェックします。
 
     これは、2つの unitaries 等しいかどうかについて、十分ではなく、必要な条件です。
 - uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
@@ -62,27 +62,29 @@ operations:
 
     このアサーションを使用して、最適化されたバージョンの操作がその単純な実装と同じように動作すること、またはクォンタム以外の入力の範囲に対して動作する操作が既知のケースと一致することを確認できます。
 - uid: microsoft.quantum.diagnostics.assertqubit
-  summary: Qubit `q` が、Pauli Z 演算子の予期される eigenstate にあることをアサートします。
+  summary: Qubit `q`が Pauli Z 演算子の予期される eigenstate にあることをアサートします。
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
   summary: >-
     予期される状態の qubit をアサートします。
 
 
-    `expected` は、$ \ket{\psi} = \begin{bmatrix}a & B\mathrm{T}} $ という複雑なベクトルを表します。
+    `expected`複合ベクター、$ \ket{\psi} = \begin{bmatrix}a & b\ end {bmatrix} ^ {\mathrm{T}} $ を表します。
 
     各 $a $、$b $ を表す組の最初の要素は複素数の実数部ですが、2番目の要素は虚数部です。
 
     最後の引数は、アサーションが行われる許容範囲を定義します。
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
-  summary: Qubit `q` が、指定された許容範囲内の Pauli Z 演算子の予測される eigenstate 内にあることをアサートします。
+  summary: 指定された許容`q`範囲を上限として、Pauli Z 演算子の予期される eigenstate に qubit があることをアサートします。
 newtypes:
+- uid: microsoft.quantum.diagnostics.enabletestingvianame
+  summary: 型を読み込むとき、またはテスト目的で呼び出すことができる代替名を定義できる、コンパイラで認識される属性。
 - uid: microsoft.quantum.diagnostics.test
   summary: 単体テストをマークするために使用される、コンパイラが認識する属性。
-summary: " # <a name=\"summary\"></a>要約\n この名前空間には、アサート操作や要求関数など、診断の目的に役立つ関数と操作が含まれています。"
+summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、アサート操作や要求関数など、診断の目的に役立つ関数と操作が含まれています。"
 metadata:
-  ms.openlocfilehash: 353750a6714b1cdd54ff866657a39bb825e34425
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905915"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676974"

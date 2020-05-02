@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 指定された値と等しいすべての要素を使用して、指定された長さの配列を作成します。
 examples: >-
-  次のコードでは、3つのブール値の配列を作成します。それぞれが `true`に相当します。
+  次のコードでは、3つのブール値の配列が`true`作成されます。それぞれが次の値に等しくなります。
 
 
   ```qsharp
@@ -28,14 +28,14 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: すべての要素が `value`れるように、`length`長さの新しい配列。
+  - summary: すべての要素が`length` `value`である、長さの新しい配列。
     isArray: true
     uid: "'T"
     isLocal: true
 metadata:
-  ms.openlocfilehash: 3eb9380a9bf3c2229b936941d31041ef2adcce06
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: e989c80b27c3ce0d90a564181c0bcae2f892ada0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905422"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676531"

@@ -7,7 +7,7 @@ summary: >-
   元に戻すことができ、インプレースリップは実行されずに2つの整数を追加します。
 
 
-  LittleEndian レジスタ `xs` と `ys`でエンコードされた $n $ bit 整数が2つある場合、演算は2つの整数剰余 $ 2 ^ n $ の合計を計算します。ここで、$n $ は入力 `xs` と `ys`のビットサイズです。 実行ビットは計算されません。
+  LittleEndian レジスタ`xs`および`ys`でエンコードされた2つの $n $ bit 整数が指定されている場合、この操作は2つの整数剰余 $ 2 ^ n $ の合計を`xs`計算`ys`します。ここで $n $ は入力とのビットサイズです。 実行ビットは計算されません。
 remarks: この操作には RippleCarryAdderTTK と同じ機能がありますが、キャリービットは返されません。
 syntax: 'operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: >-
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 5147d6d78582ad3f45587938f1b4cf3f8a2dd506
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: cf6855325edc354d22b0324f5949a435a11ce8bb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871058"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676677"

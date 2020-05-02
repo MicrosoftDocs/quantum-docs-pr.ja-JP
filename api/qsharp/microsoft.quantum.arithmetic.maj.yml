@@ -7,7 +7,7 @@ summary: >-
   これにより、インプレースマジョリティ操作が3つの qubits に適用されます。
 
 
-  ターゲットの qubit を $ \ket{z} $ として、入力 qubit の入力状態を $ \ket{x} $ および $ \ket{y} $ として示す場合、この操作では、$ \ket{xyz} \rightarrow \ket{x/oplus z} \ket{y/oplus z} \ket{\operatorname{MAJ} (x、y、z)} $。
+  ターゲットの qubit を $ \ket{z} $ として、入力 qubit の入力状態を $ \ket{x} $ および $ \ket{y} $ として示す場合、この操作では次の変換が実行されます: $ \ket{xyz} \rightarrow \ket{x、oplus z} \ket{y/oplus z} \ket{\operatorname{MAJ} (x, y, z)} $。
 syntax: 'operation MAJ (input0 : Qubit, input1 : Qubit, target : Qubit) : Unit'
 input:
   content: '(input0 : Qubit, input1 : Qubit, target : Qubit)'
@@ -33,9 +33,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 253b6f6ee152f2aa5326a06fab120433b75a5f0b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 946ac81b0673cb7ea65aac0bc1a6df26ba09d8eb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218806"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676808"

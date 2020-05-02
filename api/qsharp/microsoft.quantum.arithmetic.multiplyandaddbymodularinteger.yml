@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: multiplier
-    summary: '`summand`の各基準状態ラベルに値を追加する符号なし整数を表すクォンタムレジスタ。'
+    summary: の`summand`各 basis 状態ラベルに値を追加する符号なし整数を表すクォンタムレジスタ。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: summand
     summary: この操作のターゲットとして使用する符号なし整数を表すクォンタムレジスタ。
@@ -40,9 +40,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 metadata:
-  ms.openlocfilehash: d0f3a28df20b6dd3a353a445bb9a6130e6100f99
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 38efb2840406fc82b7ae24640bec6641f048a5b2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871432"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676744"
