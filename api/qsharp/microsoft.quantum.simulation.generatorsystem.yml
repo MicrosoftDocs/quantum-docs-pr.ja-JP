@@ -4,18 +4,18 @@ name: GeneratorSystem
 type: newtype
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  `GeneratorIndex`es のコレクションを表します。
+  Es の`GeneratorIndex`コレクションを表します。
 
 
   このコレクションを1つのインデックス整数を使用して繰り返し処理します。コレクションのサイズは既知であると見なされます。
-remarks: <xref:microsoft.quantum.arrays.lookupfunction> 関数を使用すると、`GeneratorSystem` のインスタンスを簡単に定義できます。
+remarks: 関数を`GeneratorSystem`使用すると、 <xref:microsoft.quantum.arrays.lookupfunction>のインスタンスを簡単に定義できます。
 syntax: newtype GeneratorSystem = (Int, (Int -> Microsoft.Quantum.Simulation.GeneratorIndex));
 seeAlso:
 - microsoft.quantum.canon.lookupfunction
 metadata:
-  ms.openlocfilehash: 61312eb42da1e9bb67b5d2a79350c39e23aa0dac
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: eaa4d1d30f34cc987857e2cec7f11ef313266cac
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067018"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82655059"
