@@ -7,7 +7,7 @@ summary: >-
   従来の結果値に対する条件付き操作を0に適用します。
 
 
-  `op` 操作と結果値 `result`を指定した場合、`result` が `Zero`場合、は `target` に `op` を適用します。 `One`した場合、`target`には何も起こりません。
+  が`op` `result` `target` `op`の場合`result` 、操作と結果の値がに適用され`Zero`ます。 の`One`場合、には`target`何も起こりません。
 syntax: "operation ApplyIfZero (result : Result, (op : ('T => Unit), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit), target : 'T))"
@@ -44,9 +44,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: c9d524a4be9c3ce6179f59d59c8a83819a611966
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: def6af6461ea91bc1df4ce347a1a35c6fb31cb8a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213638"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672630"

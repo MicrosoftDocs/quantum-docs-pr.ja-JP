@@ -7,7 +7,7 @@ summary: >-
   指定されたターゲットの qubit が、両方のコントロール qubit が1状態 (T 深度 1) である場合にのみ、測定を使用して adjoint 操作を実行します。
 
 
-  両方のコントロールが1である場合にのみ `target` を反転します。ただし、`target` の状態が0であることを前提としています。  この操作には、T カウント4、T 深度1があり、1つのヘルパー qubit が必要です。したがって、`target` が0であることがわかっている場合は、CCNOT 操作を使用することをお勧めします。  この操作の adjoint は測定ベースであり、T ゲートを必要とせず、ヘルパー qubit も必要としません。
+  両方`target`のコントロールが1で、が状態が0である`target`と想定している場合にのみ、を反転させます。  この操作には、T カウント4、T 深度1があり、1つのヘルパー qubit が必要です。このため、が0で`target`あることがわかっている場合は、ccnot 操作に適している可能性があります。  この操作の adjoint は測定ベースであり、T ゲートを必要とせず、ヘルパー qubit も必要としません。
 syntax: 'operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: >-
   - Cody Jones: 「fault トレラントな Toffoli ゲートのための斬新構造」、「Phys 87、022328、2013 [Arxiv: 1212.5069](https://arxiv.org/abs/1212.5069) doi: 10.1103/PhysRevA
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 060a4b2241f231a9d164bdcce2beb2a3315d96f9
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 14f70cf11cad542f137cee99d5d2a62cedeb4e72
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872939"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672564"

@@ -7,9 +7,9 @@ summary: >-
   古典的な結果値に対して条件付きの、ゼロを指定した、ユニタリ操作を適用します。
 
 
-  `op` 操作と結果値 `result`を指定した場合、`result` が `Zero`場合、は `target` に `op` を適用します。 `One`した場合、`target`には何も起こりません。
+  が`op` `result` `target` `op`の場合`result` 、操作と結果の値がに適用され`Zero`ます。 の`One`場合、には`target`何も起こりません。
 
-  サフィックス `CA` は、適用される操作が、ユニタリ (制御可能および adjointable) であることを示します。
+  サフィックス`CA`は、適用される操作が、ユニタリ (制御可能および adjointable) であることを示します。
 syntax: "operation ApplyIfZeroCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
@@ -52,9 +52,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: 9ec05f688c3895b2d68fc3f4717401e127fbe641
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 64e35b2fc198e7c3df862681e8c16870399f58c7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213604"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672585"

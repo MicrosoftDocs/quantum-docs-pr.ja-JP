@@ -5,12 +5,12 @@ type: operation
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: 部分的な反射を指定することによって、振幅増幅を無関係します。
 remarks: >-
-  特定の補助開始状態が指定されている場合 $ \ket{\text{start}}\_$, 特定の補助ターゲットの状態 $ \ket{\text{target}}\_$、および任意のシステム状態 $ \ket{\psi}\_s $ の場合、\begin{align} O\ket {\ text {start}}\_a\ket {\ psi}\_s = \lambda\ket{\text{target}}\_、いくつかの一部のに対して U \ket{\psi}\_s + \sqrt{1-| \ lambda | ^ 2} \ket{\text{target} ^/perp}\_a\end{align} です
+  特定の補助開始状態が指定さ\_れている場合 $ \ket{\text{start}} a $, 特定\_の補助ターゲットの状態 $ \ket{\text{target}} a $\_、および任意のシステム状態 $ \ket{\psi} s $ では、一部\_の $U $ につい\_て、\begin{align}\_O\ket {\\_Text {start}} a\ket {\ psi} s = \lambda\ket{\text{target}} a U \ket{\psi}\_s + \sqrt{1-| a \ket{\text{target} とします。
 
-  `signalOracle` とその adjoint のアプリケーションによってインターリーブされる補助レジスタの開始状態とターゲット状態に関する一連の反射によって、U を適用する成功確率が変更される可能性があります。
+  の`signalOracle`アプリケーションとその adjoint によってインターリーブされる補助レジスタの開始状態とターゲット状態に関する一連の反射によって、U を適用する成功確率が変更される可能性があります。
 
 
-  ほとんどの場合、`auxiliaryRegister` は $ \ket{\text{start}}\_$ という状態で初期化されます。
+  ほとんどの場合、 `auxiliaryRegister`は、$ \ket{\text{start}}\_a $ という状態で初期化されます。
 syntax: 'operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit'
 references: >-
   参照先
@@ -32,7 +32,7 @@ input:
     summary: 補助レジスタのターゲット状態に関するリフレクション演算子
     uid: microsoft.quantum.oracles.reflectionoracle
   - name: signalOracle
-    summary: 補助レジスタとシステムレジスタに対して共同で動作する `ObliviousOracle` 型の、oracle $O $ の型入力です。
+    summary: 補助レジスタとシステムレジスタに`ObliviousOracle`共同で動作する型の、oracle $O $ のユニタリ。
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: auxiliaryRegister
     summary: 補助レジスタ
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3ed252d38ebe32900a7ac22079f46eaf04f2018d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 7452686a76d9ff89c0eb79290e7dae23347778ac
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872548"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672959"

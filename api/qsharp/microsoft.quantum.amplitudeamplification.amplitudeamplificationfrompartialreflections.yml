@@ -7,7 +7,7 @@ summary: 部分的な反射による振幅増幅。
 remarks: >-
   振幅増幅は、システム qubits がなく、無関係 oracle が id に設定されている無関係の振幅増幅の特殊なケースです。
 
-  ほとんどの場合、`startQubits` は `startStateReflection`の $-$1 eigenstate という状態で、$ \ket{\text{start}}\_$1 に初期化されます。
+  ほとんどの場合、 `startQubits`は、の\_ `startStateReflection`$-$1 eigenstate という状態で、$ \ket{\text{start}} $1 状態で初期化されます。
 syntax: 'function AmplitudeAmplificationFromPartialReflections (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle)'
@@ -39,9 +39,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 8fd7ecce6a7623158e26ec4db6732daf114490af
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 4dae118f99c8a2e7cf933a378ed38d414a94fef4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872310"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672999"
