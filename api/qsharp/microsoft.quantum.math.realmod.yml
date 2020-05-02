@@ -7,7 +7,7 @@ summary: 2つの実数の間の剰余を計算します。
 remarks: >-
   この関数は、単位の円に関する実際の線をラップし、入力に対応する単位の円の角度を検索することによって、実数の剰余を計算します。
 
-  `minValue` 入力では、実際には、単位の円を切り取る場所を指定します。
+  入力`minValue`によって、実際には、単位の円を切り取る場所が指定されます。
 examples: >-
   ```qsharp
       // Returns 3 π / 2.
@@ -38,9 +38,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 9430ce172fec2bf10d64aa111d5a788c574a9566
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0a35628198ae5d496b093b98542daeac16aced9b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232372"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681491"

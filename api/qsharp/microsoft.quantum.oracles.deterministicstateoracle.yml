@@ -12,14 +12,14 @@ summary: >-
 
   - 目的のクォンタム状態 $ \ket{\psi}\_s $ を格納するレジスタ。
 remarks: >-
-  $O \ket{0}= \ket{\psi} $ によって定義されたこの oracle は、コンピューティングベースの状態 $ \ket{0}$ で動作し、状態 $ \ket{\psi} $ を作成します。
+  $O \ket{0}= \ket{\psi} $ によって定義されたこの oracle は、コンピューティングベース{0}の状態 $ \ket $ で動作し、状態 $ \ket{\psi} $ を作成します。
 
   最初のパラメーターは $ \ket{\psi} $ の qubit レジスタです。
 syntax: newtype DeterministicStateOracle = (Qubit[] => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: bc10b84502866d1f5e19b28e77e54c1b10d01b28
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 35d4b0243fac954c483a81ae1cccb46b44759ca0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231131"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681307"

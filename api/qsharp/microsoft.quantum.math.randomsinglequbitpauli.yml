@@ -4,7 +4,7 @@ name: RandomSingleQubitPauli
 type: operation
 namespace: Microsoft.Quantum.Math
 summary: シングル qubit の1つの演算子をランダムに一様に返します。
-remarks: この関数は <xref:microsoft.quantum.intrinsic.random>を呼び出します。そのため、`Random`の実装によってはランダムに変化します。
+remarks: この関数は<xref:microsoft.quantum.intrinsic.random>を呼び出します。そのため、の`Random`実装によってはがランダムになります。
 syntax: 'operation RandomSingleQubitPauli () : Pauli'
 input:
   content: ()
@@ -12,13 +12,13 @@ input:
 output:
   content: Pauli
   types:
-  - summary: '`[PauliI, PauliX, PauliY, PauliZ]`の1つである `Pauli` 演算子。'
+  - summary: の`Pauli` `[PauliI, PauliX, PauliY, PauliZ]`1 つである演算子。
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 564e6c78859d5f74e0fc4ca9c5467e806742b7b2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e0065244d20a9f9c6850a23625ecc3bbb73ace0f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219945"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681508"

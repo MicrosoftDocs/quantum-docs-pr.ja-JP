@@ -12,16 +12,16 @@ summary: >-
 
   - $ Act $O ancilla register $a $。
 
-  - システム登録 $s $ が適用されています。 $ という $a\_$ は、レジスタ $ に $U $ が適用されます。
+  - システム登録 $s $ は、必要な $U $ が適用され、レジスタ $a $ が状態 $ \ket{t}\_a $ にあることを示しています。
 remarks: >-
-  この oracle で定義されている $ $ O\ket {s}\_a\ket {\ psi}\_s = \lambda\ket{t}\_U \ket{\psi}\_s + \sqrt{1-| \ lambda | ^ 2} \ket{t ^ \ perp}\_a\ cドット $ $ は ancilla state $ \ket{s}\_a $ to任意のシステム状態 $ \ket{\psi}\_s $ と、$ \ket{t}\_$ というフラグが付けられたベースで、任意のシステム状態の $U $ に対して、を実装します。
+  この oracle で定義されている $ $\_O\ket {s} a\ket\_{\ psi\_} s =\_\lambda\ket{t} a U \ket{\psi} s + \sqrt{1-| \ ラムダ | ^ 2} \ket{t ^\_\ perp} a\ cドット $ $ \ket{t}\_\_\_a $ でフラグが設定されたベースで、任意のシステム状態 $ \ket{\psi} s $ に対して、ancilla state $ \ket{s} a $ を使用して、任意のシステム状態 $ s $ に対して、を実装します。 $U
 
-  最初のパラメーターは $ \ket{s}\_$ の qubit レジスタです。 2番目のパラメーターは、$ \ket{\psi}\_s $ の qubit レジスタです。
+  最初のパラメーターは、$ \ket{s}\_a $ の qubit レジスタです。 2番目のパラメーターは、$ \ket{\psi}\_s $ の qubit レジスタです。
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: f06527701dfad61843df66faca5dd265525b6aa6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9d7a799a9069e6d7eb3470d62322f803a68eb2e6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231063"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681250"
