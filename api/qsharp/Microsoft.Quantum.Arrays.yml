@@ -20,7 +20,7 @@ functions:
 - uid: microsoft.quantum.arrays.filtered
   summary: 配列と、配列の要素に対して定義された述語が指定されている場合、は述語を満たす要素で構成される配列を返します。
 - uid: microsoft.quantum.arrays.fold
-  summary: 配列 `array`を通じて関数 `f` を反復処理し、`f(f(f(initialState, array[0]), array[1]), ...)`を返します。
+  summary: 配列`f` `array`を使用して関数を反復`f(f(f(initialState, array[0]), array[1]), ...)`処理し、を返します。
 - uid: microsoft.quantum.arrays.head
   summary: 配列の最初の要素を返します。
 - uid: microsoft.quantum.arrays.indexof
@@ -69,9 +69,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: 配列と、配列の要素に対して定義されている操作が指定された場合、は、操作の下にある元の配列のイメージで構成される新しい配列を返します。
 metadata:
-  ms.openlocfilehash: 422564f632efd7a6d093d78358a15ee012f918f8
-  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.openlocfilehash: a9088a037953f62ab7193ea525a6e71d43fe2fb2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/26/2020
-  ms.locfileid: "80320732"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673404"

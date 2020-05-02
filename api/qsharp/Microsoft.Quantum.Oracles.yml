@@ -1,18 +1,18 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.oracles
 name: Microsoft.Quantum.Oracles
-summary: " # <a name=\"summary\"></a>概要\n この名前空間は、フェーズの推定や振幅増幅などのクォンタムアルゴリズムでの用途によって、さまざまな種類の oracles を装飾するためのユーザー定義型を提供します。"
+summary: " # <a name=\"summary\"></a>まとめ\n この名前空間は、フェーズの推定や振幅増幅などのクォンタムアルゴリズムでの用途によって、さまざまな種類の oracles を装飾するためのユーザー定義型を提供します。"
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
-  summary: '`StateOracle` 型の oracle を `DeterministicStateOracle`に変換します。'
+  summary: 型`StateOracle`の oracle をに`DeterministicStateOracle`変換します。
 - uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
-  summary: Oracles `DeterministicStateOracle` と `ObliviousOracle`を結合します。
+  summary: Oracles `DeterministicStateOracle`とを`ObliviousOracle`結合します。
 - uid: microsoft.quantum.oracles.oracletodiscrete
   summary: "\"ブラックボックス\" oracle を表す操作が指定された場合、は、\"ブラックボックス\" の oracle が複数回繰り返されている不連続タイム oracle を返します。"
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
   summary: Oracle から特定の状態に関するリフレクションを構築します。
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
-  summary: '`DeterministicStateOracle` 型の oracle を `StateOracle`に変換します。'
+  summary: 型`DeterministicStateOracle`の oracle をに`StateOracle`変換します。
 newtypes:
 - uid: microsoft.quantum.oracles.continuousoracle
   summary: >-
@@ -45,7 +45,7 @@ newtypes:
 
     - $ Act $O ancilla register $a $。
 
-    - システム登録 $s $ が適用されています。 $ という $a\_$ は、レジスタ $ に $U $ が適用されます。
+    - システム登録 $s $ は、必要な $U $ が適用され、レジスタ $a $ が状態 $ \ket{t}\_a $ にあることを示しています。
 - uid: microsoft.quantum.oracles.reflectionoracle
   summary: >-
     リフレクション oracle を表します。
@@ -69,9 +69,9 @@ newtypes:
 
     - 必要なクォンタムの状態 $ \ket{\psi}\_s $ を格納する $s $ がシステムに登録されます。
 metadata:
-  ms.openlocfilehash: 7e582286b69563bc4baa856f5236e5c2bd292ae0
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: c1f364d74aab6d318e7b6db078d5532aeae57bcd
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870005"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673106"

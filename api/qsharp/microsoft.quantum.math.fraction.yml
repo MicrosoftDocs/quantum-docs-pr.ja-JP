@@ -3,12 +3,12 @@ uid: microsoft.quantum.math.fraction
 name: Fraction
 type: newtype
 namespace: Microsoft.Quantum.Math
-summary: '`p/q`フォームの有理数を表します。 要素 `p` は組の最初の要素で、`q` は組の2番目の要素です。'
+summary: フォーム`p/q`の有理数を表します。 Integer `p`は組の最初の要素で、 `q`は組の2番目の要素です。
 syntax: newtype Fraction = (Int, Int);
 metadata:
-  ms.openlocfilehash: 5eee4a315cde3e04c93cc7b2a1d558ab9323273c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3059bc8bfb8e5f0cd92f373bc3999e25374dd777
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232950"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673809"
