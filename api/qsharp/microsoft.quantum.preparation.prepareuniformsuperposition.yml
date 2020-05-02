@@ -4,14 +4,14 @@ name: PrepareUniformSuperposition
 type: operation
 namespace: Microsoft.Quantum.Preparation
 summary: >-
-  0から `nIndices`をエンコードする、州を超える uniform 法則を作成します。
+  0 ~ をエンコードする州に対して`nIndices`一様な法則を作成します。
 
 
-  つまり、このユニタリ $U $ は、入力状態が $ \ket{0\cdots 0} $ の場合に、すべての数値の州 $0 $ に対して $M-$1 に対して uniform 法則を作成します。 つまり、$ $ \begin{align} U\ket{0}= \ frac{1}{\ sqrt{j = 0} ^ {M-1} \ket{j}. になります。
+  つまり、このユニタリ $U $ は、入力状態が $ \ket{0\cdots 0} $ の場合に、すべての数値の州 $0 $ に対して $M-$1 に対して uniform 法則を作成します。 つまり、$ $ \begin{align} U\ket{0}= \ frac{1}{\ sqsum_ rt{\ket{j}. {j = 0} ^ {m.-1}
 
   \end{align} $ $。
 examples: >-
-  次の例では、$3 $ qubits 上で、$-frac{1}{\ sqrt{6}}-sumj = 0} ^{5}\ket{j} $ の状態を準備します。
+  次の例では、$3 $ qubits{1}で、${6}& frac {\ sqrt} \ sum_{5}{j = 0} ^ \ket{j} $ の状態を準備します。
 
 
   ```Q#
@@ -33,7 +33,7 @@ input:
     uid: Int
   - name: indexRegister
     summary: >-
-      数値の状態を `LittleEndian` 形式で格納する qubit レジスタ。
+      数値の状態を形式で`LittleEndian`格納する qubit レジスタ。
 
       このレジスタは $M-$1 の数値を格納できる必要があり、$ \ket{0\cdots 0} $ という状態で初期化されると想定されています。
     uid: microsoft.quantum.arithmetic.littleendian
@@ -46,9 +46,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4bb7c83382f8d48f132fbd91acfd2184a570aea4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a697f4d410ed47c8be3908e2206080a9393260f7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226490"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686527"

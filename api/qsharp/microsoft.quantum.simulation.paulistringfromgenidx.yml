@@ -3,18 +3,18 @@ uid: microsoft.quantum.simulation.paulistringfromgenidx
 name: PauliStringFromGenIdx
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: '`GeneratorIndex`によって記述された、psystem.string Li 文字列とその qubit インデックスを抽出します。'
+summary: によって記述される psystem.string li 文字列とその qubit インデックスを抽出し`GeneratorIndex`ます。
 syntax: 'function PauliStringFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : (Pauli[], Int[])'
 input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
   - name: generatorIndex
-    summary: P`GeneratorIndex` Li 用語をエンコードする型。
+    summary: '`GeneratorIndex`Pをエンコードする型。'
     uid: microsoft.quantum.simulation.generatorindex
 output:
   content: (Pauli[], Int[])
   types:
-  - summary: '`GeneratorIndex`によって記述された用語の Psystem.string Li 文字列と、その処理を行う qubits へのインデックス。'
+  - summary: によって`GeneratorIndex`記述された用語の P# li 文字列と、その処理を行う qubits へのインデックス。
     types:
     - isArray: true
       isPrimitive: true
@@ -23,9 +23,9 @@ output:
       isPrimitive: true
       uid: Int
 metadata:
-  ms.openlocfilehash: e94fd2ddf1b6c18890cc0e4c82cef9d648808661
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 585cac037696e370f3fc3ca4364db6f753b2c642
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221662"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687028"

@@ -4,11 +4,11 @@ name: BlockEncodingByLCU
 type: function
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  対象の演算子を `BlockEncoding`にエンコードします。
+  対象の演算子をにエンコード`BlockEncoding`します。
 
 
-  これにより、一部の $H 演算子をエンコードする `BlockEncoding` の $U = pcdot V\ cdot P ^/ダガー $ が構築されます。U_j $ の関心は、unitaries います。 通常、$P $ は、$P \ket{0}\_a = \ sum_j\sqrt {\ alpha_j/\|\ vec-alpha\|\_2} \ket{j}\_$、$V = \sum_{j}\ket{j}\bra{j}\_aotimes U_ のような状態準備のためのものです。j $。
-remarks: この `BlockEncoding` 実装は、`BlockEncodingReflection`のプロパティを提供します。
+  これにより`BlockEncoding` 、一部の演算子 $H = \ sum_ {j} | \ alpha_j | をエンコードする、$U = P\ cdot V\ Cdot P ^/ダガー $ が構築されます。U_j $ は、unitaries います。 通常、$P $ は、$P{0}\_\ket a = \ sum_j \ sqrt{\ alpha_j\|/\ vec-alpha\|\_2} \ket{j}\_a $、$V = \ sum_ {j} \ket{j}\bra{j}\_aotimes U_j $ という状態の準備を行うためのものです。
+remarks: この`BlockEncoding`実装は、 `BlockEncodingReflection`のプロパティを提供します。
 syntax: "function BlockEncodingByLCU (statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl)) : (('T, 'S) => Unit is Adj + Ctl)"
 input:
   content: "(statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl))"
@@ -46,7 +46,7 @@ input:
 output:
   content: (('T, 'S) => Unit is Adj + Ctl)
   types:
-  - summary: '`a` レジスタに対して共同で動作する $U $ と `s` $H $ をブロックエンコードし、$U ^-ダガー = U $ を満たすことができます。'
+  - summary: $U $ はレジスタ`a`に対して共同で`s`動作し、$H $ をブロックエンコードし、$U ^ ダガー = U $ を満たすことができます。
     isOperation: true
     input:
       types:
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: b2a107a8497e6fdd24f5d6511d61541ce932ec6c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 581170f33001b0fef6606a39085b36c7f9559ac0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227867"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686906"

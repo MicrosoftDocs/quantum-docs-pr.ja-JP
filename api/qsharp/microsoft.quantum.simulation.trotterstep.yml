@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.trotterstep
 name: TrotterStep
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: Trotter – Suzuki 分解を使用して `EvolutionGenerator` で説明されているシステムによって、時間の経過を1回だけ実行する時間のステップを実装します。
+summary: Trotter – Suzuki 分解を使用して、 `EvolutionGenerator` 「」で説明されているシステムによる時間の短縮の単一の時間ステップを実装します。
 remarks: Trotter – Suzuki 分解の詳細については、「[時間順序の構成](/quantum/libraries/control-flow#time-ordered-composition)」を参照してください。
 syntax: 'function TrotterStep (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double) : (Qubit[] => Unit is Adj + Ctl)'
 input:
@@ -23,7 +23,7 @@ input:
 output:
   content: (Qubit[] => Unit is Adj + Ctl)
   types:
-  - summary: '`trotterStepSize`期間の1ステップの進化を近似するための、時間の短縮操作。'
+  - summary: 時間の短縮の1つのステップに近似する、期間`trotterStepSize`の単一のステップを近似する、ユニタリ操作。
     isOperation: true
     input:
       types:
@@ -38,9 +38,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 0605c7de832286b8b7a11b82af50b528d233d18c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7059972ad5494e7d2cd86c943314005f620ad60f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065216"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687224"

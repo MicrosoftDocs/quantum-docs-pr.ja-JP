@@ -4,7 +4,7 @@ name: Random
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  ランダム操作は、入力として double の配列を取得し、ランダムに選択されたインデックスを `Int`として配列に返します。
+  ランダム操作は、入力として double の配列を取得し、ランダムに選択されたインデックスを`Int`として配列に返します。
 
   特定のインデックスを選択する確率は、そのインデックス位置にある配列要素の値に比例します。
 
@@ -21,13 +21,13 @@ input:
 output:
   content: Int
   types:
-  - summary: $ $I 確率が $ \ Pr (i) = p_i/\sum_i p_i $ の整数を指定します。ここで $p _i $ は `probs`の $i $ th 要素です。
+  - summary: 確率が $ \ Pr (i) = p_i/\ sum_i p_i $ の整数 $i $。ここで $p _i $ は、の`probs`$i $ th 要素です。
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: b2a5f6a0b1d2584e385bfa4de2b2c43fc1cf6509
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b269b780b5e8ad048d1563e3dca98524a5ed63d2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233936"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686820"

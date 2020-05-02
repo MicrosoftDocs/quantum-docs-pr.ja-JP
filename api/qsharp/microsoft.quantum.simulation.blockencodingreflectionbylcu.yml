@@ -4,11 +4,11 @@ name: BlockEncodingReflectionByLCU
 type: function
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  対象の演算子を `BlockEncodingReflection`にエンコードします。
+  対象の演算子をにエンコード`BlockEncodingReflection`します。
 
 
-  これにより、一部の $H 演算子をエンコードする `BlockEncodingReflection` の $U = pcdot V\ cdot P ^/ダガー $ が構築されます。U_j $ の関心は、unitaries います。 通常、$P $ は、$P \ket{0}\_U_ {\ alpha_j/\|-vec\ket{j}\|\_2}\_$、および $V = \sum_{j}\ket{j}\bra{j}\_a/otimes という状態の準備を行うためのものです。j $。
-remarks: この `BlockEncoding` 実装は、`BlockEncodingReflection`のプロパティを提供します。
+  これにより`BlockEncodingReflection` 、一部の演算子 $H = \ sum_ {j} | \ alpha_j | をエンコードする、$U = P\ cdot V\ Cdot P ^/ダガー $ が構築されます。U_j $ は、unitaries います。 通常、$P $ は、$P{0}\_\ket a \ sum_j \ sqrt{\ alpha_j\|/\ vec-alpha\|\_2} \ket{j}\_a $、$V = \ sum_ {j} \ket{j}\bra{j}\_aotimes U_j $ という状態の準備を行うためのものです。
+remarks: この`BlockEncoding`実装は、 `BlockEncodingReflection`のプロパティを提供します。
 syntax: 'function BlockEncodingReflectionByLCU (statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
 input:
   content: '(statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl))'
@@ -49,15 +49,15 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.BlockEncodingReflection
   types:
-  - summary: レジスタに対して共同で動作する $U $ の `a` と `s` は $H $ をブロックエンコードし、$U ' ^{-1} = U $ を満たすことができます。
+  - summary: レジスタ`a` `s`に対して共同で動作し、$H $ をブロックエンコードし、$U ' ^{-1} = U $ を満たす $U の、1つのユニタリです。
     uid: microsoft.quantum.simulation.blockencodingreflection
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: a092068a61d860074ace150b0c7872eb064a63b9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8fe23d346a09e245d41f2a0c242462b5300561e1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219163"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687108"
