@@ -5,7 +5,7 @@ type: newtype
 namespace: Microsoft.Quantum.MachineLearning
 summary: トレーニングクォンタム分類子で使用されるオプションのコレクション。
 remarks: >-
-  この UDT を直接作成することはできませんが、代わりに @"microsoft.quantum.machinelearning.defaulttrainingoptions" を呼び出し、`w/` 演算子を使用して異なる既定値をオーバーライドすることによって指定する必要があります。
+  この UDT を直接作成することはできません。代わりに、を@"microsoft.quantum.machinelearning.defaulttrainingoptions"呼び出し、 `w/`演算子を使用して異なる既定値をオーバーライドすることによって指定する必要があります。
 
 
   たとえば、10万の測定値と最大8個のトレーニングエポックを使用するには、次のようにします。
@@ -20,9 +20,9 @@ remarks: >-
 syntax: newtype TrainingOptions = (Double, Double, Int, Int, Int, Int, Double, Int, (String -> Unit));
 references: '- [arXiv: 1804.00633](https://arxiv.org/abs/1804.00633)'
 metadata:
-  ms.openlocfilehash: adc7056880a32c369a0fc594b68f5f2d9f4015f5
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: b8a24b0a9e036c0a6c1eea229ca76d62e400fde8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77909026"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684332"

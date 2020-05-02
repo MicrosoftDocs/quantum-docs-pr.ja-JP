@@ -3,12 +3,12 @@ uid: microsoft.quantum.math.bigfraction
 name: BigFraction
 type: newtype
 namespace: Microsoft.Quantum.Math
-summary: '`p/q`フォームの有理数を表します。 要素 `p` は組の最初の要素で、`q` は組の2番目の要素です。'
+summary: フォーム`p/q`の有理数を表します。 Integer `p`は組の最初の要素で、 `q`は組の2番目の要素です。
 syntax: newtype BigFraction = (BigInt, BigInt);
 metadata:
-  ms.openlocfilehash: 641939304a0846c6de4b200f87c28546278005e6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d9da825f0317e9c51dd78f90ec7ee5b087d5dd43
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230213"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684228"

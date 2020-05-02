@@ -5,7 +5,7 @@ type: newtype
 namespace: Microsoft.Quantum.ErrorCorrection
 summary: エラー修正コードブロックのより隣人を測定するために使用される操作を表します。
 remarks: >-
-  署名 `(LogicalRegister => Syndrome)` は、`LogicalRegister` 内の qubits と一部の補助 qubits に対して共同で実行される操作を表します。その後、補助 qubits の測定値によって、これらの測定値の `Result[]` を表す `Syndrome` 値が抽出されます。
+  このシグネチャ`(LogicalRegister => Syndrome)`は、の`LogicalRegister` qubits と一部の補助 qubits に対して共同で動作する操作を表し、その後に補助 qubits `Syndrome`の測定値`Result[]`を指定して、これらの測定値を表す値を抽出します。
 
 
   ### <a name="examples"></a>例
@@ -24,9 +24,9 @@ seeAlso:
 - logicalregister
 - syndrome
 metadata:
-  ms.openlocfilehash: 75f0fee569475e887b97d9969c9e92285809f1cb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aa324e8e149ba9418082145ed982236c473c1a4d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232236"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684825"

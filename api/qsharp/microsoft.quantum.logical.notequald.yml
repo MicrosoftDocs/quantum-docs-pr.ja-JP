@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`a` が `b`と等しくない場合にのみ `true` します。'
+  - summary: '`true``a`がと等しくない場合に`b`のみ。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 9087b87027982e1b34661e9c37c002354179f582
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c98abf0eb08c4f07345bd9debe16dcdf2302f200
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235296"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684529"

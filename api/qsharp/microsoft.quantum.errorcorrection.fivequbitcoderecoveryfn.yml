@@ -7,7 +7,7 @@ summary: ⟦5、1、3⟧量子コードのテーブル参照によって、エ�
 remarks: >-
   Weight $1 $ のすべてのエラーを反復処理することで、合計で $ 3 を5倍にすることができます。これは、可能な非単純な syndromes です。
 
-  Id と共に、エラーのテーブルと対応するより隣人が構築されます。 5 qubit コードの場合、このテーブルは次の方法で与えられます: $X\_1: (0, 0, 0, 1);X\_2: (1, 0, 0, 0);X\_3: (1, 1, 0, 0);X\_4: (0, 1, 1, 0);X\_5: (0、0、1、1) $、$Z\_1: (1, 0, 1, 0);Z\_2: (0, 1, 0, 1);Z\_3: (0, 0, 1, 0);Z\_4: (1, 0, 0, 1);Z\_5: (0, 1, 0, 0) $ $X _i $ と $Z _i $ syndromes を追加することによって、$Y _i $ を取得します。 テーブル参照復旧の順序付けは、bitvectors を整数 (リトルエンディアンを使用) に変換することによって与えられます。
+  Id と共に、エラーのテーブルと対応するより隣人が構築されます。 5 qubit コードの場合、このテーブルは $X\_1: (0, 0, 0, 1); によって指定されます。X\_2: (1, 0, 0, 0);X\_3: (1, 1, 0, 0);X\_4: (0, 1, 1, 0);X\_5: (0, 0, 1, 1) $, $Z\_1: (1, 0, 1, 0);Z\_2: (0, 1, 0, 1);Z\_3: (0, 0, 1, 0);Z\_4: (1, 0, 0, 1);Z\_5: (0, 1, 0, 0) $ $Y _i $ $X _i $ および $Z _i $ syndromes を追加して取得します。 テーブル参照復旧の順序付けは、bitvectors を整数 (リトルエンディアンを使用) に変換することによって与えられます。
 syntax: 'function FiveQubitCodeRecoveryFn () : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
   content: ()
@@ -15,14 +15,14 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: より隣人測定 `Result[]` を受け取り、検出されたエラーを修正する `Pauli[]` 演算子を返す `RecoveryFn` 型の関数。
+  - summary: より隣人の測定`RecoveryFn`値`Result[]`を受け取り、検出された`Pauli[]`エラーを修正する演算子を返す型の関数。
     uid: microsoft.quantum.errorcorrection.recoveryfn
 seeAlso:
 - recoveryfn
 metadata:
-  ms.openlocfilehash: efeabbeb6595d1440882eef73f152610a3ac74c5
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8de748ddaf446cfcf7b8694079bd84bfc171211c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211632"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684901"
