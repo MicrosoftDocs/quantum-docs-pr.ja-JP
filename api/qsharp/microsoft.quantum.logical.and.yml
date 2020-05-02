@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Logical
 summary: 2つの値のブール値の組み合わせを返します。
 remarks: >-
-  `and` 演算子とは異なり、この関数はショートサーキットではなく、両方の入力が完全に評価されます。
+  `and`演算子とは異なり、この関数はショートサーキットではなく、両方の入力が完全に評価されます。
 
 
   ショートサーキットの動作は、次のようになります。
@@ -33,13 +33,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`a` と `b` の両方が `true`場合にのみ、`true` します。'
+  - summary: '`true``a`と`b`の両方`true`がである場合にのみ。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 22e884f8041ecd66aba875c38f0b8af234aee0e5
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 01c26ef3804d484d2cfbd6f54261ad80b8f66594
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233375"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674087"

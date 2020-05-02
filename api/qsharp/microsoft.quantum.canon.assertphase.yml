@@ -7,21 +7,21 @@ summary: >-
   等しい法則状態のフェーズに予期される値があることをアサートします。
 
 
-  具体的には、任意の real t に対して $ \frac{e ^ {i t}} {\ sqrt{2}} (e ^{0} {k} \ k{1}) $ として表現されるクォンタムの状態のフェーズ $ \ phi $ が、予期される値を持つことをアサートします。
+  具体的には、任意の real t に対して $ \frac{e ^ {i t}} {\ sqrt{2}} (e ^ {{0} k} \ k{1}) $ として表現されるクォンタムの状態のフェーズ $ \ phi $ が、予期される値を持つことをアサートします。
 examples: >-
-  次のアサートは成功しました。 `qubit` は、状態が $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2} \ k{0}+ e ^ {i 0.5} \ sqrt {1/2} \ k{1}$;
+  次のアサートが成功`qubit`しました: is in state $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/{0}2} \ k + e ^ {i 0.5} \ sqrt {1/{1}2} \ k $;
 
 
   - `AssertPhase(0.0,qubit,10e-10);`
 
 
-  `qubit` は、状態が $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2} \ k{0}+ e ^ {-i 0.5} \ sqrt {1/2} \ k{1}$;
+  `qubit`状態は、$ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2} \ k{0}+ e ^ {-i 0.5} \ sqrt {1/2} \ k{1}$; です
 
 
   - `AssertPhase(0.5,qubit,10e-10);`
 
 
-  `qubit` は、状態が $ \ket{\psi} = e ^ {-i 2.2} \ sqrt {1/2} \ k{0}+ e ^ {i 0.2} \ sqrt {1/2} \ k{1}$;
+  `qubit`状態は、$ \ket{\psi} = e ^ {-i 2.2} \ sqrt {1/2} \ k{0}+ e ^ {i 0.2} \ sqrt {1/2} \ k{1}$; です
 
 
   - `AssertPhase(-1.2,qubit,10e-10);`
@@ -47,9 +47,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 2eaeb042f68a2a5c0cff65918653c37f26ab8d4b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ecfc39806fb1ffe504c76889fb36949b4fee2ed4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212244"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674314"

@@ -15,9 +15,9 @@ summary: >-
   $ $ \begin{align} U = \ sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}/otimes e ^ {i Z \ theta_j}。
 
   \end{align} $ $
-remarks: $ 2 ^ n $ よりも小さい場合、`coefficients` には $ \ theta_j = $0.0 要素が埋め込まれます。
+remarks: '`coefficients`$ 2 ^ n $ 未満の値が指定されている場合は、$ \ theta_j = $0.0 という要素が埋め込まれます。'
 syntax: 'operation ApproximatelyMultiplexZ (tolerance : Double, coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
-references: '- クォンタムロジック回線の合成、Shende、Stephen、、Igor または Markov の https://arxiv.org/abs/quant-ph/0406176'
+references: '- クォンタムロジック回線の合成、Shende、Stephen、Igor、igor または Markovhttps://arxiv.org/abs/quant-ph/0406176'
 input:
   content: '(tolerance : Double, coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
@@ -48,9 +48,9 @@ functors:
 seeAlso:
 - multiplexz
 metadata:
-  ms.openlocfilehash: 8ca9463a4444ce205cdeeeb3098d47eeab34d8e9
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 0c544983871e9b88acb87ddf387700edf0ad7024
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77907921"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674432"

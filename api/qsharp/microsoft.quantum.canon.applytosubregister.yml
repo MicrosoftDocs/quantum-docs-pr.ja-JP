@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: インデックスの配列によって指定された qubits を使用して、レジスタのサブレジスタに操作を適用します。
 examples: >-
-  3つの qubit 状態を作成します。 $ \ frac{1}{\ sqrt{2}} \ket{0}\_2 (\ket{0}\_1 \ k{0}{1}3 + \ket \_{1}1 \ k) $:
+  次の3つの qubit 状態を{1}作成します{2}。 ${0}\_\ frac{0}\_{\ sqrt{0}} \ket 2 ({1}\_\ket 1 \{1}k (3 + \ket 1 \ k) $:
 
 
   ```qsharp
@@ -49,9 +49,9 @@ seeAlso:
 - applytosubregisterc
 - applytosubregisterca
 metadata:
-  ms.openlocfilehash: e4f6e6bb2cc0e13b1edcea07ad2af32b10b31f48
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 89c488fd593e6f81a1c811e0b507a69a9f891be9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213060"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674564"

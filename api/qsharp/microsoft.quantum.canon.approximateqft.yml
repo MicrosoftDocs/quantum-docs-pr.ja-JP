@@ -22,7 +22,7 @@ input:
       QFT 回線で発生する制御された Z 回転を排除するレベルを決定する近似パラメーター。
 
 
-      近似パラメーター a は、Z 回転の排除レベルを決定します。つまり、∈ {0.. n} と Z 回転 2π/2k (k > a が QFT 回線から削除される) です。 K > = log ₂ (n) + log ₂ (1/ε) + 3 をバインドできることがわかっています。QFT-アク FT | |εを < します。
+      近似パラメーター a は、Z 回転の排除レベルを決定します。つまり、∈ {0.. n} と Z 回転 2π/2k (k>a が QFT 回線から削除される) です。 K >= log ₂ (n) + log ₂ (1/ε) + 3 をバインドできることがわかっています。QFT-アク FT | |Εを<します。
     isPrimitive: true
     uid: Int
   - name: qs
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6d650d4c1d80e747df7560c630543189513d252a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 44d6a5937924f13cab04137bd3d0eb81396824c9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212533"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674404"
