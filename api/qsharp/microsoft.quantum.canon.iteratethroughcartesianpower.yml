@@ -7,9 +7,9 @@ summary: >-
   整数範囲のデカルト乗の各インデックスに演算を適用します。
 
 
-  `0..(bound - 1)`範囲のデカルト乗の各要素に対して操作を反復的に適用します。
+  範囲`0..(bound - 1)`のデカルト乗の各要素に対して、反復的に操作を適用します。
 examples: >-
-  `op`操作を指定すると、次の2つのスニペットが同等になります。
+  操作`op`を指定した場合、次の2つのスニペットは同等です。
 
 
   ```Q#
@@ -39,7 +39,7 @@ input:
   content: '(power : Int, bound : Int, op : (Int[] => Unit))'
   types:
   - name: power
-    summary: 範囲 `0..(bound - 1)` を発生させる必要があるデカルト指数。
+    summary: 範囲`0..(bound - 1)`が発生する必要があるデカルト指数。
     isPrimitive: true
     uid: Int
   - name: bound
@@ -66,9 +66,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.iteratethroughcartesianproduct
 metadata:
-  ms.openlocfilehash: 4679e1b569dab167eecbb22947543ab993d7fa8d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: a6f2d0e1f99c6cf7038803271af974a1c5fca465
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870939"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679069"

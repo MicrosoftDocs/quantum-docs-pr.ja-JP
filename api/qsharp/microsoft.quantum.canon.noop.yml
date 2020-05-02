@@ -11,10 +11,10 @@ summary: >-
 
   これは、操作の種類の入力が必要な場合には常に役立ちますが、アクションを実行する必要はありません。
 
-  たとえば、特定のエラー修正より隣人によってエラーが発生していないことが示された場合は、`NoOp<Qubit[]>` 正しい回復手順である可能性があります。
+  たとえば、特定のエラー修正より隣人によってエラーが発生してい`NoOp<Qubit[]>`ないことが示された場合は、適切な回復手順である可能性があります。
 
-  同様に、操作で状態の準備手順を入力と想定している場合は、`NoOp<Qubit[]>` を使用して、状態 $ \ket{0 \ cドット 0} $ を準備できます。
-remarks: ほとんどの場合、`NoOp` の型パラメーターを明示的に指定する必要があります。 たとえば、`NoOp<Qubit>` は <xref:microsoft.quantum.intrinsic.i>と同じです。
+  同様に、操作で状態の準備手順を入力と想定`NoOp<Qubit[]>`している場合は、を使用して、状態 $ \ket{0 \ cドット 0} $ を準備できます。
+remarks: ほとんどの場合、の`NoOp`型パラメーターは明示的に指定する必要があります。 たとえば、 `NoOp<Qubit>`はと同じです<xref:microsoft.quantum.intrinsic.i>。
 syntax: "operation NoOp (input : 'T) : Unit"
 input:
   content: "(input : 'T)"
@@ -34,9 +34,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.i
 metadata:
-  ms.openlocfilehash: 8752eb93c1fba59065518ffd4665ea6f110ce1cc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 74c85340e065929feabb81d7e97339f80255c0f6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73222682"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678715"
