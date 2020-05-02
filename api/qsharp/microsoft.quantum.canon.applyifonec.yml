@@ -7,9 +7,9 @@ summary: >-
   古典的な結果値が1であるという制御可能な操作を適用します。
 
 
-  `op` 操作と結果値 `result`を指定した場合、`result` が `One`場合、は `target` に `op` を適用します。 `Zero`した場合、`target`には何も起こりません。
+  が`op` `result` `target` `op`の場合`result` 、操作と結果の値がに適用され`One`ます。 の`Zero`場合、には`target`何も起こりません。
 
-  サフィックス `C` は、適用される操作が制御可能であることを示します。
+  サフィックス`C`は、適用される操作が制御可能であることを示します。
 syntax: "operation ApplyIfOneC (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Ctl), target : 'T))"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 51388c63a15b9f8244b49cc145297faef11bf5cc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e42bb11c3f3f8cf740bbd619b4388f23c77ed8a5
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220778"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672672"

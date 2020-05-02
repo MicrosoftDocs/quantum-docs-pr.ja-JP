@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   1つの操作の制御された複数のバージョンを適用します。
 
-  修飾子 `CA` は、single qubit 操作が制御可能で adjointable であることを示します。
+  修飾子`CA`は、single qubit 操作が制御可能で adjointable であることを示します。
 remarks: >-
   この操作では、clean ancilla qubits のみを使用します。
 
@@ -23,7 +23,7 @@ input:
 
       操作の引数の最初の qubit はコントロールであると想定され、残りはターゲット qubit と見なされます。
 
-      `ApplyMultiControlled` は常に、長さが1以上の引数を使用して `singlyControlledOp` を呼び出します。
+      `ApplyMultiControlled`は常`singlyControlledOp`に、長さが1以上の引数を使用してを呼び出します。
     isOperation: true
     input:
       types:
@@ -41,14 +41,14 @@ input:
     uid: microsoft.quantum.canon.ccnotop
   - name: controls
     summary: >-
-      `singlyControlledOp` が制御される qubits。
+      で制御される`singlyControlledOp` qubits。
 
-      `controls` の長さは1以上である必要があります。
+      の`controls`長さは1以上である必要があります。
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targets
-    summary: '`singlyControlledOp` が動作するターゲットの qubits。'
+    summary: に対して動作する`singlyControlledOp`ターゲットの qubits。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -63,9 +63,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applymulticontrolledc
 metadata:
-  ms.openlocfilehash: d9b0f2b18d025d0ce60bbb02a9559546539eaecd
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1cb239c8c49ff4f4f8f991d6ad81374f0dd23f7f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220710"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672525"

@@ -7,17 +7,17 @@ summary: >-
   クラシック結果の値に応じて、制御可能な2つの操作のいずれかを適用します。
 
 
-  結果 `result`が指定された場合、`result` が `Zero`である場合は `zeroInput` と共に操作 `zeroOp` を入力として適用し、`oneOp(oneInput)` 時に `result == One`を適用します。
+  `result`結果が返された場合、 `zeroOp`は`zeroInput` 、がと等しい`result` `Zero`ときにを入力とし`oneOp(oneInput)`て`result == One`操作を適用し、when にを適用します。
 syntax: "operation ApplyIfElseRC (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U))"
   types:
   - name: result
-    summary: '`zeroOp` または `oneOp` が適用されているかどうかを判断するために使用される測定結果。'
+    summary: また`oneOp`はが適用されて`zeroOp`いるかどうかを判断するために使用される測定結果。
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: '`result == Zero`時に適用される制御可能操作。'
+    summary: に`result == Zero`適用される制御可能操作。
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Controlled
   - name: zeroInput
-    summary: '`result == Zero`ときに `zeroOp` に提供される入力。'
+    summary: 時`zeroOp` `result == Zero`に提供される入力。
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: '`result == One`時に適用される制御可能操作。'
+    summary: に`result == One`適用される制御可能操作。
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: oneInput
-    summary: '`result == One`ときに `oneOp` に提供される入力。'
+    summary: 時`oneOp` `result == One`に提供される入力。
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: 条件付きで適用する操作 `zeroOp` の入力型。
+  summary: 条件付きで適用される`zeroOp`操作の入力型。
 - uid: "'U"
-  summary: 条件付きで適用する操作 `oneOp` の入力型。
+  summary: 条件付きで適用される`oneOp`操作の入力型。
 functors:
 - Controlled
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: e2dd871aa42ed22ba088e6eaad9d9705dfb26254
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aeb4c7f86ac1f41140bb14436d9dee39b4c4d98b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220931"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672737"

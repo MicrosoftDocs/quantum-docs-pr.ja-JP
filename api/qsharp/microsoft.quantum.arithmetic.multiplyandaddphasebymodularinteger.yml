@@ -5,9 +5,9 @@ type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: MultiplyAndAddByModularInteger と同じですが、summand が QFT ベースで整数をエンコードすることを前提としています。
 remarks: >-
-  `phaseSummand` のビットが0に設定されていることを前提としています。
+  は、 `phaseSummand`の最上位ビットが0に設定されていることを前提としています。
 
-  また、`phaseSummand` の値が $N $ より小さいことを前提としています。
+  また、の`phaseSummand`値が $N $ 未満であることを前提としています。
 syntax: 'operation MultiplyAndAddPhaseByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
@@ -20,7 +20,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: multiplier
-    summary: '`summand`の各基準状態ラベルに値を追加する符号なし整数を表すクォンタムレジスタ。'
+    summary: の`summand`各 basis 状態ラベルに値を追加する符号なし整数を表すクォンタムレジスタ。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: phaseSummand
     summary: この操作のターゲットとして使用する符号なし整数を表すクォンタムレジスタ。
@@ -36,9 +36,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
 metadata:
-  ms.openlocfilehash: 3728e95ad26768d486af79e7c4158a2a2715bbd2
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 029ff8fb767ae018b7462f19a5fe09e83e606c6e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871398"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672798"
