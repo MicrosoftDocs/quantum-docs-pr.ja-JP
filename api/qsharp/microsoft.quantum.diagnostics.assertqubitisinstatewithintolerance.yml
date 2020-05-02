@@ -7,7 +7,7 @@ summary: >-
   予期される状態の qubit をアサートします。
 
 
-  `expected` は、$ \ket{\psi} = \begin{bmatrix}a & B\mathrm{T}} $ という複雑なベクトルを表します。
+  `expected`複合ベクター、$ \ket{\psi} = \begin{bmatrix}a & b\ end {bmatrix} ^ {\mathrm{T}} $ を表します。
 
   各 $a $、$b $ を表す組の最初の要素は複素数の実数部ですが、2番目の要素は虚数部です。
 
@@ -37,7 +37,7 @@ remarks: >-
   ```
 
 
-  許容範囲は、$ \langle\psi | \psi\rangle = x\_1 I + x\_2 X + x\_3 Y + x\_4 Z $ と実数 vector (Y ₂) によって定義された3次元実数ベクター (x ₂, x ₃, x ₄) 間の $L\_{\ infty} $ 距離です。、y ₃、y ₄) で定義された複素数 = y ₁ I + y ₂ X + y ₃ Y + y ₄ Z (複素数は、レジスタの状態に対応する密度マトリックス)。
+  許容範囲\_は $L、3次元の実数ベクトル (x ₂) 間の {\ infty} $ 距離です。 x ₃、x ₄) で定義され\_ている $ \langle\psi\_| \psi\rangle = x\_1 I + x\_2 x + x 3 Y + x 4 Z $ および実数ベクトル (y ₂、y ₃、y ₄) によって定義された複素数 = Y ₁ I + y ₂ x + y ₃ y + y ₄ Z
 
   これは、Tr (複素数) と Tr (| ψ⟩⟨ψ |) が両方とも 1 (たとえば、x ₁ = 1/2、y ₁ = 1/2) であることを前提としています。
 
@@ -81,9 +81,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 8b43bac19173c5ae5a11ff6879a03209c32e7c76
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 77d28c122a44f39924242dedb6bd6163974e18c1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227119"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82656604"
