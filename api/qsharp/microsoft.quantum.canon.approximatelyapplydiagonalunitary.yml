@@ -15,9 +15,9 @@ summary: >-
   $ $ \begin{align} U = \ sum ^ {2 ^ n-1} _ {j = 0} e ^ {i \ theta_j} \ket{j}\bra{j}.
 
   \end{align} $ $
-remarks: $ 2 ^ n $ よりも小さい場合、`coefficients` には $ \ theta_j = $0.0 要素が埋め込まれます。
+remarks: '`coefficients`$ 2 ^ n $ 未満の値が指定されている場合は、$ \ theta_j = $0.0 という要素が埋め込まれます。'
 syntax: 'operation ApproximatelyApplyDiagonalUnitary (tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
-references: '- クォンタムロジック回線の合成、Shende、Stephen、、Igor または Markov の https://arxiv.org/abs/quant-ph/0406176'
+references: '- クォンタムロジック回線の合成、Shende、Stephen、Igor、igor または Markovhttps://arxiv.org/abs/quant-ph/0406176'
 input:
   content: '(tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - applydiagonalunitary
 metadata:
-  ms.openlocfilehash: 9d2ee3254a3cd7c182ae6b4a57a6c48a993fa679
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: ec183b0a42a3e2382a395a4711390c2ab8e9eb85
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77907955"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674462"
