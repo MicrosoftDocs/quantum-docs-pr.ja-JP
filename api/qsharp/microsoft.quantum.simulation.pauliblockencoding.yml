@@ -7,14 +7,14 @@ summary: >-
   Hamiltonian のブロックエンコードのユニタリを作成します。
 
 
-  Hamiltonian $H = \sum_{j}\alpha_j P_j $ は、j $ $P の合計によって記述されており、それぞれに実際の係数 $ \alpha_j $ が含まれています。
-remarks: これを取得するには、状態 $ \ sum_ {j} \ sqrt {\ alpha_j/\ alpha} \ k {j} $ を準備して準備を解除し、乗算制御された <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> と <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>を構築します。
+  Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $ は、$ $ \ $P $ という実数の合計によって記述されます。
+remarks: これを取得するには、状態 $ \ sum_ {j} \ sqrt{\ alpha_j/\alpha}\ket{j} $ を準備して準備を解除し、乗算<xref:microsoft.quantum.preparation.statepreparationpositivecoefficients>に<xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>よって制御されるユニタリおよびを構築します。
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystem
-    summary: $ $H を、P# li 用語の合計として記述する `GeneratorSystem`
+    summary: $ `GeneratorSystem` $H を、P# li 用語の合計として記述する。
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
@@ -23,21 +23,21 @@ output:
       ## <a name="first-parameter"></a>最初のパラメーター
 
 
-      係数 $-alpha = \alpha_j | $ の1つの基準になります。
+      係数 $ \ alpha = \ sum_ {j} | \ alpha_j | $ の1つの基準です。
 
 
       ## <a name="second-parameter"></a>2番目のパラメーター
 
 
-      Hamiltonian $H $ の `BlockEncodingReflection` のユニタリ $U $。 このユニタリは $U ^ 2 = I $ に一致するので、リフレクションでもあります。
+      Hamiltonian `BlockEncodingReflection` $H $ の1つの $U ($) です。 このユニタリは $U ^ 2 = I $ に一致するので、リフレクションでもあります。
     types:
     - isPrimitive: true
       uid: Double
     - uid: microsoft.quantum.simulation.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 75b614fa23f2e00a3a960224d79905106fb06070
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216137"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682541"

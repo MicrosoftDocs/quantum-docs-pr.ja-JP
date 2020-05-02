@@ -11,12 +11,12 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.QECC
   types:
-  - summary: '`QECC` 型を指定することによって、クォンタムエラー修正コードの実装を返します。'
+  - summary: 型を`QECC`指定して、クォンタムエラー修正コードの実装を返します。
     uid: microsoft.quantum.errorcorrection.qecc
 metadata:
-  ms.openlocfilehash: bd9fdd54cf79610fa83ed99f4c94c89b7218c2c6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3fb7c03f36a75d98238bbacfd7eb2a207894bb90
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230417"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682370"
