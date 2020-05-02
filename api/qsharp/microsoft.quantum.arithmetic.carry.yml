@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.carry
 name: Carry
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: 元に戻す伝達ゲートを実装します。 Qubit `carryIn` でエンコードされたキャリービットと `summand1` と `summand2`でエンコードされた2つの summand ビットがある場合、は、qubit `summand1` 内の `carryIn`、`summand2`、および `summand2` のビットごとの xor を計算し、キャリーは qubit `carryOut`に対して xor になります。
+summary: 元に戻す伝達ゲートを実装します。 Qubit `carryIn`でエンコードされたキャリービットと、および`summand1` `summand2`でエンコードされた2つの summand ビットが`carryIn`ある`summand1`場合`summand2` 、はのビット`summand2`ごとの xor を計算し、qubit では`carryOut`xor は qubit に対してになります。
 syntax: 'operation Carry (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit) : Unit'
 input:
   content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit)'
@@ -17,7 +17,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: summand2
-    summary: 2番目の summand qubit は、`summand1` と `summand2`の合計の下位ビットに置き換えられます。
+    summary: 2番目の summand qubit は、と`summand1` `summand2`の合計の下位ビットに置き換えられます。
     isPrimitive: true
     uid: Qubit
   - name: carryOut
@@ -33,9 +33,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6736bc62db7d8ac1952bf74617bd8764702bd8b3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3fa18b56fb242e76a88a23af02b3ebe7e5cc57d4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221339"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679849"

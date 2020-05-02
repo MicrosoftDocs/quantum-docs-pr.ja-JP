@@ -7,12 +7,12 @@ summary: 振幅増幅での単一 qubit 回転のシーケンスのフェーズ�
 remarks: >-
   1つ目のパラメーターは、反射のフェーズの配列であり、単 qubit 回転の積として表現されます。
 
-  [ G.H. 低、I. L。 語、https://arxiv.org/abs/1707.05391]。
+  [ G.H. 低、I. L。 語, https://arxiv.org/abs/1707.05391] を入力します。
 syntax: newtype RotationPhases = Double[];
 metadata:
-  ms.openlocfilehash: 1ad6a80a10cc3880122303a7bbd708087976f906
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bcf8502387a5f4479730bcbb41eaf03fa7925f87
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215457"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680090"

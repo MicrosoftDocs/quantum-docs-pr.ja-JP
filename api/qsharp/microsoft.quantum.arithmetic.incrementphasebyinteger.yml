@@ -7,7 +7,7 @@ summary: >-
   フェーズ回転を使用して、古典的な整数によって署名されていないクォンタムレジスタをインクリメントします。
 
 
-  `target` は、リトルエンディアンエンコードで $ $x $ の符号なし整数をエンコードし、`increment` が $a $ と等しいとします。
+  は、 `target`リトルエンディアンエンコーディングで $ $x $ の符号なし整数をエンコードし、$a $ と等しいとします。 `increment`
 
   次に、この操作では、ユニタリ $ \ket{x} \ map\ket{x + a} $ を実装します。この場合、加算は $ 2 ^ n $ という剰余が実行されます。ここで、$n = \texttt{Length (target!)}$.
 remarks: >-
@@ -21,7 +21,7 @@ input:
   content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: increment
-    summary: '`target` のインクリメントに使用する整数。'
+    summary: の`target`インクリメントに使用する整数。
     isPrimitive: true
     uid: Int
   - name: target
@@ -39,9 +39,9 @@ seeAlso:
 - incrementbyintegerbe
 - incrementbyintegerle
 metadata:
-  ms.openlocfilehash: 379e643826ca54e123c8b855f4bba48a9d79a137
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2893d432b4043bbacb425f3ae42cbbdd3d4dc225
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219044"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679514"

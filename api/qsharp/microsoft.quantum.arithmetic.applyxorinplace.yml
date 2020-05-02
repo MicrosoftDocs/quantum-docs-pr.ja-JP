@@ -7,10 +7,10 @@ summary: >-
   古典的な整数と、qubits のレジスタによって表される整数の間のビットごとの XOR 演算を適用します。
 
 
-  整数内の1ビットに基づいて、リトルエンディアンレジスタの qubits に `X` 操作を適用します。
+  整数`X`内の1ビットに基づいて、リトルエンディアンレジスタの qubits に操作を適用します。
 
 
-  によって `value` を示し、y が `target`でエンコードされた符号なし整数であることを示し、`InPlaceXorLE` は $ \ket{y}\rightarrow \ket{y\oplus a} $ というマップによって指定された操作を実行します。 $ \ oplus $ はビットごとの排他的 OR 演算子です。
+  `value` A と y は、で`target`エンコードされた符号なし整数であることを示し、$ \ket{y}\rightarrow \ket{y\oplus a} $ というマップによって指定された操作を実行し`InPlaceXorLE`ます。 $-oplus $ はビットごとの排他的 or 演算子です。
 syntax: 'operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -20,7 +20,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: リトルエンディアンエンコーディングで `value` を格納するために使用されるクォンタムレジスタ。
+    summary: リトルエンディアンエンコーディングで格納`value`するために使用されるクォンタムレジスタ。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9d3d837d92537cc5d51a80e8e1c83c230b7acc28
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 27568274d343242f3b3bd0eef8de6e48d546de1f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871177"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679910"
