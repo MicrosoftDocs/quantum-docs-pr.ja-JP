@@ -7,7 +7,7 @@ summary: >-
   下回っ混合状態で qubit を準備します。
 
 
-  Depolarizing channel $ $ \begin{align}-オメガ (\rho) \mathrel{: =}/frac {4}{1}を適用することによって、指定された qubit を $-/$2 状態で準備します。 \{0、1、2、3\}}、シグマ\_{/mu} \rho/シグマ\_{/mu} ^ {\ダガー}、\end{align} $ $ where $/sigma\_i $ は $i $ th p Li 演算子です。 $ \rho $ は混合状態を表す密度演算子です。
+  Depolarizing channel $ $ \begin{align}/オメガ (\rho) \mathrel{を適用して、指定された qubit を $-bold done/$2 状態で準備します。{1} {4} =} & lt ac \ sum_ \{{\ mu \ in 0,\}1, 2\_, 3}-シグマ {\rho\_} ^ {-dagger}, \end{align} $ $ ここで\_、$ \rho $ は混合状態を表す密度演算子で、$ $ は、混合の状態を表しています。 $i
 remarks: >-
   混合状態 $ \ bold done/$2 では、この操作を状態に適用した結果を示していますが、この操作で行われたランダムな選択に対する期待値が暗黙的に記述されています。
 
@@ -28,9 +28,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 944178e3a8473b2206de037031bd8def546425b8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4dd07e9e59575d60bca81c996ad5fc1a3a82b16d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226524"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686506"

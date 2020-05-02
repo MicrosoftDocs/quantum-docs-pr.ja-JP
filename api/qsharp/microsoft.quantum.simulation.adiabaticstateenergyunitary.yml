@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.adiabaticstateenergyunitary
 name: AdiabaticStateEnergyUnitary
 type: operation
 namespace: Microsoft.Quantum.Simulation
-summary: 入力状態に `statePrepUnitary` を適用することによって状態の準備を実行し、次に `adiabaticUnitary`を使用した adiabatic 状態の準備を行います。最後に、`phaseEstAlgorithm`を使用して結果の状態に `qpeUnitary`に関するフェーズの推定を行います。
+summary: を使用して状態の`statePrepUnitary`準備を実行し、その後、を使用して`adiabaticUnitary`adiabatic 状態の準備を行い`phaseEstAlgorithm`ます。 `qpeUnitary`最後に、を使用して、結果の状態に関してフェーズの推定を行います。
 syntax: 'operation AdiabaticStateEnergyUnitary (statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[]) : Double'
 input:
   content: '(statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[])'
@@ -33,7 +33,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: この oracle では、dynamical ジェネレーターでの時間 $ \ket{\phi} $ およびグラウンドステートエネルギー $E = \ phi\\, \ delta t $ を使用して、時間 $ \ デルタ t $ の進化を表す $ $U します。
+    summary: この oracle では、dynamical ジェネレーターでの時間 $ \ デルタ t $ の進化を表す $ (グランドステート $ \ket{\phi} $ およびグラウンドステートエネルギー $E = \ phi\\, \ デルタ t $) を $U 表す oracle。
     isOperation: true
     input:
       types:
@@ -75,9 +75,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 747e9f6d926863ce1add86d183ca2ed1dc43c8a4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2e8e3917b6f3f741fba3f03aeb467a8785b5325c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232032"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687115"

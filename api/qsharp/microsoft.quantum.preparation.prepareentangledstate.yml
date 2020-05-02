@@ -7,7 +7,7 @@ summary: >-
   2つの qubit レジスタがペアになります。
 
 
-  つまり、2つのレジスタが指定されている場合、各レジスタの qubits の各ペアの間に、下回っあり状態 $/frac{1}{\ sqrt{2}} \ left (\ket{00} + \ket{11}/right) $ を準備します。各レジスタは $ \ket{0\ で始まると想定されます。cdots 0} $ 状態。
+  つまり、2つのレジスタが指定されている場合、各レジスタの{1}qubits の{2}各ペアの間に{00} 、${11} \ket{0\cdots 0} $ 状態で各レジスタが開始されたと仮定して、下回っありの状態 $ \ frac {\ sqrt} \ left (\ket + \ket/right) $ を準備します。
 syntax: 'operation PrepareEntangledState (left : Qubit[], right : Qubit[]) : Unit'
 input:
   content: '(left : Qubit[], right : Qubit[])'
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 8bbd7a3a87a55a930fda18669f75dc9a98aee981
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c761362c8793e4e08e7e702b2909f0253b8723d6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226626"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686539"

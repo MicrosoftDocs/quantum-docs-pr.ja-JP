@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 82af3b5123588cc06882f746ffcb0402ad3f0f2e
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907462"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82686846"
 ---
 # <a name="opening-pull-requests"></a>pull request を開く #
 
@@ -39,7 +39,7 @@ Git と GitHub を一緒に使用することで、Quantum 開発キットで幅
 Git を使用する場合、変更は、変更前にリポジトリの状態にどのように関連しているかを説明する_コミット_として表されます。
 多くの場合、前のコミットからの矢印を持つ円としてコミットが描画される図を描画します。
 
-`feature`という_分岐_で貢献を開始したとします。
+という`feature`_分岐_で投稿を開始したとします。
 その後、 **Microsoft/クォンタム**のフォークは次のようになります。
 
 ![GitHub の作業ブランチ](~/media/git-workflow-step0.png)
@@ -60,9 +60,9 @@ Git を使用する場合、変更は、変更前にリポジトリの状態に�
 
 ## <a name="how-to-make-a-pull-request"></a>プル要求を作成する方法 ##
 
-プル要求を行うには、主に2つの方法があります。
-1つのファイルにのみ影響を与える小さな変更については、GitHub web インターフェイスを使用してプル要求を完全にオンラインにすることができます。
-より複雑な投稿の場合、最初にローカルコンピューターを使用してプル要求を準備する方が簡単です。
+プル要求を行うには、主に2つの方法があります。  
+1つのファイルにのみ影響を与える小さな変更については、GitHub web インターフェイスを使用してプル要求を完全にオンラインにすることができます。 編集するファイルに移動して、編集アイコンを使用するだけです。  
+より複雑な投稿については、ほとんどの場合、ローカルコンピューターにリポジトリを複製して、最初にプル要求を準備する方が簡単です。
 
 <!--
 ### Using the Web Interface ###
@@ -84,7 +84,7 @@ This way, you can edit your personal fork to your heart's content before making 
 
 -->
 
-## <a name="next-steps"></a>次のステップ: ##
+## <a name="next-steps"></a>次のステップ ##
 
 Git を使用して、Quantum 開発キットコミュニティをご利用いただき、ありがとうございます。
 コードを投稿する方法の詳細については、次のガイドを参照してください。

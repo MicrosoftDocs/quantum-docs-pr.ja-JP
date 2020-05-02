@@ -7,12 +7,12 @@ summary: >-
   シミュレーションアルゴリズムを実装するために簡単に実装して使用できるゲートのセットを表します。
 
 
-  セット内の要素は、<xref:microsoft.quantum.simulation.generatorindex>によってインデックスが作成されます。各セットは、`GeneratorIndex` から <xref:microsoft.quantum.simulation.evolutionunitary>までの関数によって記述されます。これは、時間を表す実数によってパラメーター化された操作です。
+  セット内の要素は、によっ<xref:microsoft.quantum.simulation.generatorindex>てインデックスが作成され、各セットは`GeneratorIndex`から<xref:microsoft.quantum.simulation.evolutionunitary>の関数によって記述されます。これは、時間を表す実数によってパラメーター化された操作です。
 syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
 metadata:
-  ms.openlocfilehash: 2e3e717ca219f5e575f750a32f640215142b170c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0db782c1909c6121078f251f34bbffd5b49a4d8e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211088"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686995"

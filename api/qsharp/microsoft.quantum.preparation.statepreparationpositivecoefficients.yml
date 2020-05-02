@@ -7,15 +7,15 @@ summary: >-
   指定されたクォンタム状態を準備する操作を返します。
 
 
-  返された操作 $U $ は、$ \alpha_j\ge $0 という正の係数を持つ任意のクォンタム状態 $ \ket{\psi} $ を、$ \ket{0...0} $ $n $ $ から準備します。
+  返された操作 $U $ は、$ \ket{0...0} $ という $n から正の係数 $ \ $0 alpha_j を含む任意のクォンタム状態 $ \ket{\psi} $ を準備します。
 
 
-  新しく割り当てられたレジスタに対する U のアクションは、$ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} \alpha_j \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | \alpha_j | ^ 2}} によって指定されています。
+  新しく割り当てられたレジスタの U のアクションは、$ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}} によって指定されます。
 
   \end{align} $ $
-remarks: 負の入力係数 $ \alpha_j < $0 は、値 $ | \alpha_j | $ を持つ正の値として処理されます。 $ 2 ^ n $ 未満の値が指定されている場合、`coefficients` には要素 $ \alpha_j = $0.0 が埋め込まれます。
+remarks: 負の入力係数 $ \ alpha_j < $0 は、$ | \ alpha_j | $ という値を持つ正の値として処理されます。 `coefficients`$ 2 ^ n $ 未満の値が指定されている場合は、$ \ alpha_j = $0.0 という要素が埋め込まれます。
 examples: >-
-  次のスニペットでは、qubit レジスタ `qubitsLE`に、クォンタムの状態 $ \ket{\psi} = \ sqrt {1/8} \ k{0}+ \ sqrt {7/8} \ k{2}$ を準備します。
+  次のスニペットでは、qubit レジスタ{0}{2} `qubitsLE`で、クォンタムの状態が $ \ket{\psi} = \ sqrt {1/8} \ k + \ sqrt {7/8} \ k $ に準備されています。
 
 
   ```qsharp
@@ -35,7 +35,7 @@ input:
   content: '(coefficients : Double[])'
   types:
   - name: coefficients
-    summary: $ 2 ^ n $ 係数 $ \alpha_j $ までの配列。 $J $ th 係数は、リトルエンディアン形式でエンコードされた数値の状態 $ \ket{j} $ にインデックスを付けます。
+    summary: $ 2 ^ n $ 係数 $ \ alpha_j $ までの配列。 $J $ th 係数は、リトルエンディアン形式でエンコードされた数値の状態 $ \ket{j} $ にインデックスを付けます。
     isArray: true
     isPrimitive: true
     uid: Double
@@ -55,9 +55,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 2a31449781d4b3bab1f2af40083df78bf6cc2083
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d419fd88ed037001cc51dbd354b5c89dbe334246
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226371"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686459"

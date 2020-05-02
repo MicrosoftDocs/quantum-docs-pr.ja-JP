@@ -3,8 +3,8 @@ uid: microsoft.quantum.math.modulusl
 name: ModulusL
 type: function
 namespace: Microsoft.Quantum.Math
-summary: '`value` モジュロ `modulus`の正規の residue を計算します。'
-remarks: 'この関数は、および Q # でC#の演算子 `%` の動作とは異なり、値が負の場合でも、結果は常に 0 ~ `modulus - 1`の正の整数になります。'
+summary: 剰余`value` `modulus`の正規の residue を計算します。
+remarks: 'この関数は、演算子`%`が C# および Q # で動作する方法とは異なり、値が負の場合でも`modulus - 1`、結果は常に 0 ~ の正の整数になります。'
 syntax: 'function ModulusL (value : BigInt, modulus : BigInt) : BigInt'
 input:
   content: '(value : BigInt, modulus : BigInt)'
@@ -20,13 +20,13 @@ input:
 output:
   content: BigInt
   types:
-  - summary: '`value - r` が剰余によって割り切れれるように、0から `modulus - 1` までの整数 $r $'
+  - summary: 0から、 `modulus - 1`剰余で割り切れた`value - r`整数 $r $
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 14ef3669e4c59912129c9ffac6ecbf1a2ed25534
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c4a9403cc5c2bf62e43b5cc248fb9502f15818e8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232457"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686625"
