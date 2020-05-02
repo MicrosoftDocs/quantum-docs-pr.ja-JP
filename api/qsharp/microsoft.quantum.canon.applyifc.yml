@@ -7,11 +7,11 @@ summary: >-
   クラシックビットで条件付きの制御可能な操作を適用します。
 
 
-  操作 `op` とビット値 `bit`を指定すると、`bit` が `true`の場合、`target` に `op` が適用されます。 `false`した場合、`target`には何も起こりません。
+  `op`操作`bit`とビット値を指定した場合`op`は、 `target`が`bit` `true`の場合はに適用されます。 の`false`場合、には`target`何も起こりません。
 
-  サフィックス `C` は、適用される操作が制御可能であることを示します。
+  サフィックス`C`は、適用される操作が制御可能であることを示します。
 examples: >-
-  次の例では、`Bool` 値の配列として指定された古典的なビット文字列によって表される計算基準の状態に qubits のレジスタを準備します。
+  次の例では、値の`Bool`配列として指定された古典的なビット文字列によって表される計算基準の状態に qubits のレジスタを準備します。
 
 
   ```Q#
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: 166f61f877a282578a71419a74fea6361cc2cac3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a41eea8aafeabd5bda6bcc55b958598e58f52184
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217582"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680485"

@@ -7,15 +7,15 @@ summary: >-
   任意の演算子が左上のブロックでエンコードされる場合の、その中の任意の演算子を指定します。
 
 
-  つまり、`BlockEncoding` は、$U $ というです。この場合、システムレジスタ `s` に作用する任意の演算子 $H $ は、補助型 $ \ket{0}* $ に対応する左上のブロックでエンコードされます。 それです
+  `BlockEncoding` $U つまり、は、$H $ \ket _a $ に対応する、任意の演算子を、システムレジスタ`s`に対して作用する、${0}$ という補助型の上位左ブロックにエンコードすることを意味します。 つまり、以下のようになります。
 
 
-  $ $ \begin{align} (\bra{0}/a \ otimes I_s) U (\ket{0}\ otimes I_s) = H \end{align} $ $。
+  $ $ \begin{align} (\bra{0}_a \ otimes I_s) U (\ket{0}_a/otimes I_s) = H \end{align} $ $。
 syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 0991b1b54cdd8e908f60fc104edf588ae08e12e7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 400173be551747127198f8cee52390a2694dbfe4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066032"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681094"

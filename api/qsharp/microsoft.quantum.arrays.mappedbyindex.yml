@@ -15,7 +15,7 @@ examples: >-
   ```
 
 
-  および
+  and
 
 
   ```qsharp
@@ -28,7 +28,7 @@ input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: 要素とそのインデックスをマップするために使用される `'U` に `(Int, 'T)` の関数。
+    summary: 要素とその`(Int, 'T)`インデックス`'U`をマップするために使用されるからへの関数。
     isFunction: true
     input:
       types:
@@ -41,28 +41,28 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: "`'T`上の要素の配列。"
+    summary: 上`'T`の要素の配列。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: "`mapper` 関数によってマップされる要素の配列 `'U[]`。"
+  - summary: 関数によってマップされる要素の配列`'U[]` `mapper`
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array` 要素の型。'
+  summary: 要素の`array`型。
 - uid: "'U"
-  summary: '`mapper` 関数の結果の型。'
+  summary: '`mapper`関数の結果の型。'
 seeAlso:
 - mapped
 metadata:
-  ms.openlocfilehash: 08dacd9b53b151d5cadcef16db8b460d4326d746
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 64741df4a3d7b7937f13614ffc9c7c7ec1aa3f7b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214284"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680930"

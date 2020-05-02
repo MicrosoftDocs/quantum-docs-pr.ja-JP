@@ -4,7 +4,7 @@ name: XBits
 type: function
 namespace: Microsoft.Quantum.Bitwise
 summary: P# li 演算子の配列の X ビットを表す整数を返します。
-remarks: '`paulis` 配列の長さが63より大きい場合、関数はをスローします。'
+remarks: 配列の`paulis`長さが63より大きい場合、関数はをスローします。
 syntax: 'function XBits (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -17,15 +17,15 @@ input:
 output:
   content: Int
   types:
-  - summary: 整数 $x $ とバイナリ表現 $ (p_{62}\,p_{61}\,\ ドット\,p_0) $。 $p が `paulis[i]` の場合は _i = $0、`PauliI` の場合は `PauliZ` _i = $1 に $pまたは `PauliY`。
+  - summary: '{62}\,$ をバイナリ表現 $ (p_{61}\,p_ \ ドット\,p_0) $ に $x 整数を指定`paulis[i]` `PauliI` `PauliZ`します。がまたはの場合は $p _i = $0、 `paulis[i]`が`PauliX`また`PauliY`はの場合は $p _i = $1 になります。'
     isPrimitive: true
     uid: Int
 seeAlso:
 - zbits
 metadata:
-  ms.openlocfilehash: 9319e664aaa7af3ea500bd5bee78c09a92d9573b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0dccf94d895984b3661790b44f10455fce35331d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217735"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680583"

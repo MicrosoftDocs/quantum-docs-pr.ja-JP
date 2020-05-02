@@ -4,13 +4,13 @@ name: Mapped
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 配列と、配列の要素に対して定義されている関数を指定すると、関数の下にある元の配列のイメージで構成される新しい配列を返します。
-remarks: "関数は、ジェネリック型に対して定義されます。つまり、配列 `'T[]` と関数 `mapper: 'T -> 'U` は、配列の要素をマップし、`'U[]`型の新しい配列を生成できます。"
+remarks: "関数は、ジェネリック型に対して定義されます。つまり、配列`'T[]`と関数`mapper: 'T -> 'U`がある場合は、配列の要素をマップし、型`'U[]`の新しい配列を生成できます。"
 syntax: "function Mapped (mapper : ('T -> 'U), array : 'T[]) : 'U[]"
 input:
   content: "(mapper : ('T -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: 要素をマップするために使用される `'U` に `'T` の関数。
+    summary: 要素をマップ`'T`する`'U`ために使用されるからへの関数。
     isFunction: true
     input:
       types:
@@ -21,26 +21,26 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: "`'T`上の要素の配列。"
+    summary: 上`'T`の要素の配列。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: "`mapper` 関数によってマップされる要素の配列 `'U[]`。"
+  - summary: 関数によってマップされる要素の配列`'U[]` `mapper`
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array` 要素の型。'
+  summary: 要素の`array`型。
 - uid: "'U"
-  summary: '`mapper` 関数の結果の型。'
+  summary: '`mapper`関数の結果の型。'
 metadata:
-  ms.openlocfilehash: 3e9262d3d2b294ccfafac24b2b080b124c9e319c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 877899dad82374281090e189c727c2a662f12b7b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218126"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680944"

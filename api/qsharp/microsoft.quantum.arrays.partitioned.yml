@@ -29,16 +29,16 @@ input:
 output:
   content: "'T[][]"
   types:
-  - summary: 1番目の配列が `arr` の最初の `nElements[0]` で、2番目の配列が `arr` などの次の `nElements[1]` である複数の配列。最後の配列には、残りのすべての要素が含まれます。
+  - summary: 1番目の`nElements[0]`配列がの`arr`最初の配列で、2番目の配列`nElements[1]`が`arr`次の配列である場合は、複数の配列。最後の配列には、残りのすべての要素が含まれます。
     isArray: true
     types:
     - isArray: true
       uid: "'T"
       isLocal: true
 metadata:
-  ms.openlocfilehash: 6e26d4d49f50c8e9ee4c18681f88272a45d2ef20
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 319147f72f0ef13a942ab5440a51f60d6f2bae1f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218092"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680878"
