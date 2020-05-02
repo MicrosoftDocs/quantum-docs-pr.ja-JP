@@ -7,9 +7,9 @@ summary: >-
   従来のビットで条件付き操作を適用します。
 
 
-  操作 `op` とビット値 `bit`を指定すると、`bit` が `true`の場合、`target` に `op` が適用されます。 `false`した場合、`target`には何も起こりません。
+  `op`操作`bit`とビット値を指定した場合`op`は、 `target`が`bit` `true`の場合はに適用されます。 の`false`場合、には`target`何も起こりません。
 examples: >-
-  次の例では、`Bool` 値の配列として指定された古典的なビット文字列によって表される計算基準の状態に qubits のレジスタを準備します。
+  次の例では、値の`Bool`配列として指定された古典的なビット文字列によって表される計算基準の状態に qubits のレジスタを準備します。
 
 
   ```Q#
@@ -59,9 +59,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: 8493200e8c87fc423bee6754f50f0f5c6b7cdd5c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b3a573c55d461eb3c1a2af0cb7bacd0a4cfecbe5
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217650"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676362"

@@ -3,23 +3,23 @@ uid: microsoft.quantum.chemistry
 name: Microsoft.Quantum.Chemistry
 functions:
 - uid: microsoft.quantum.chemistry.htermstogenidx
-  summary: インデックスを `HTerm[]` データ形式の Hamiltonian term から GeneratorIndex に変換します。
+  summary: インデックスをデータ形式の`HTerm[]` Hamiltonian Term から GeneratorIndex に変換します。
 - uid: microsoft.quantum.chemistry.htermstogensys
-  summary: '`HTerm[]` データ形式の Hamiltonian を GeneratorSystem に変換します。'
+  summary: データ形式の`HTerm[]` Hamiltonian を GeneratorSystem に変換します。
 - uid: microsoft.quantum.chemistry.htermtogenidx
-  summary: '`HTerm` データ形式の Hamiltonian term を GeneratorIndex に変換します。'
+  summary: データ形式の`HTerm` Hamiltonian Term を GeneratorIndex に変換します。
 - uid: microsoft.quantum.chemistry.isnotzero
-  summary: '`Double` 数が約0でないかどうかを確認します。'
+  summary: 数値が約`Double` 0 以外であるかどうかを確認します。
 newtypes:
 - uid: microsoft.quantum.chemistry.hterm
   summary: >-
-    Hamiltonian の用語を表すC#ためにから Q # に渡されるデータの形式。
+    Hamiltonian の用語を表すために、C# から Q # に渡されるデータの形式。
 
     表されるデータの意味は、それを受け取るアルゴリズムによって決まります。
 metadata:
-  ms.openlocfilehash: 78d6e9f54c25f9d1a6af32c157d23069b8a4872b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fda6e5c8daebeae115046771e85e0e49d057e666
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210918"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677018"

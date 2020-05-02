@@ -5,69 +5,69 @@ functions:
 - uid: microsoft.quantum.canon.asqubitarray
   summary: "\n> [!WARNING]\n> 非推奨\n\nAsQubitArray は非推奨となりました。\nこの関数は削除されました。"
 - uid: microsoft.quantum.canon.assertalmostequal
-  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertAlmostEqual は非推奨となりました。 代わりに @\"microsoft.quantum.diagnostics.nearequalityfactd\" を使用してください。\n代わりに @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertAlmostEqual は非推奨となりました。 代わりに、@\"microsoft.quantum.diagnostics.nearequalityfactd\" を使用してください。\n代わりに、@\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" を使用してください。"
 - uid: microsoft.quantum.canon.assertalmostequaltol
-  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertAlmostEqualTol は非推奨となりました。 代わりに @\"microsoft.quantum.diagnostics.equalitywithintolerancefact\" を使用してください。\n代わりに @\"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertAlmostEqualTol は非推奨となりました。 代わりに、@\"microsoft.quantum.diagnostics.equalitywithintolerancefact\" を使用してください。\n代わりに、@\"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact\" を使用してください。"
 - uid: microsoft.quantum.canon.assertboolarrayequal
-  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertBoolArrayEqual は非推奨となりました。 代わりに @\"microsoft.quantum.diagnostics.allequalityfactb\" を使用してください。\n代わりに @\"Microsoft.Quantum.Diagnostics.AllEqualityFactB\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertBoolArrayEqual は非推奨となりました。 代わりに、@\"microsoft.quantum.diagnostics.allequalityfactb\" を使用してください。\n代わりに、@\"Microsoft.Quantum.Diagnostics.AllEqualityFactB\" を使用してください。"
 - uid: microsoft.quantum.canon.assertboolequal
-  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertBoolEqual は非推奨となりました。 代わりに @\"microsoft.quantum.diagnostics.equalityfactb\" を使用してください。\n代わりに @\"Microsoft.Quantum.Diagnostics.EqualityFactB\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertBoolEqual は非推奨となりました。 代わりに、@\"microsoft.quantum.diagnostics.equalityfactb\" を使用してください。\n代わりに、@\"Microsoft.Quantum.Diagnostics.EqualityFactB\" を使用してください。"
 - uid: microsoft.quantum.canon.assertintequal
-  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertIntEqual は非推奨となりました。 代わりに @\"microsoft.quantum.diagnostics.equalityfacti\" を使用してください。\n代わりに @\"Microsoft.Quantum.Diagnostics.EqualityFactI\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertIntEqual は非推奨となりました。 代わりに、@\"microsoft.quantum.diagnostics.equalityfacti\" を使用してください。\n代わりに、@\"Microsoft.Quantum.Diagnostics.EqualityFactI\" を使用してください。"
 - uid: microsoft.quantum.canon.assertresultequal
-  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertResultEqual は非推奨となりました。 代わりに @\"microsoft.quantum.diagnostics.equalityfactr\" を使用してください。\n代わりに @\"Microsoft.Quantum.Diagnostics.EqualityFactR\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertResultEqual は非推奨となりました。 代わりに、@\"microsoft.quantum.diagnostics.equalityfactr\" を使用してください。\n代わりに、@\"Microsoft.Quantum.Diagnostics.EqualityFactR\" を使用してください。"
 - uid: microsoft.quantum.canon.bigendiantolittleendian
-  summary: "\n> [!WARNING]\n> 非推奨\n\nBigEndianToLittleEndian は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.bigendianaslittleendian\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nBigEndianToLittleEndian は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.bigendianaslittleendian\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\" を使用してください。"
 - uid: microsoft.quantum.canon.bind
-  summary: "\n> [!WARNING]\n> 非推奨\n\nBind の使用は非推奨とされました。 代わりに @\"microsoft.quantum.canon.bound\" を使用してください。\n@\"microsoft.quantum.canon.bound\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nBind の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.canon.bound\" を使用してください。\n@\"microsoft.quantum.canon.bound\" を使用してください。"
 - uid: microsoft.quantum.canon.binda
-  summary: "\n> [!WARNING]\n> 非推奨\n\nビン Da の使用は非推奨とされました。 代わりに @\"microsoft.quantum.canon.bounda\" を使用してください。\n@\"microsoft.quantum.canon.bounda\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nビン Da の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.canon.bounda\" を使用してください。\n@\"microsoft.quantum.canon.bounda\" を使用してください。"
 - uid: microsoft.quantum.canon.bindc
-  summary: "\n> [!WARNING]\n> 非推奨\n\nビン Dc の使用は非推奨とされました。 代わりに @\"microsoft.quantum.canon.boundc\" を使用してください。\n@\"microsoft.quantum.canon.boundc\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nビン Dc の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.canon.boundc\" を使用してください。\n@\"microsoft.quantum.canon.boundc\" を使用してください。"
 - uid: microsoft.quantum.canon.bindca
-  summary: "\n> [!WARNING]\n> 非推奨\n\nBindCA の使用は非推奨とされました。 代わりに @\"microsoft.quantum.canon.boundca\" を使用してください。\n@\"microsoft.quantum.canon.boundca\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nBindCA の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.canon.boundca\" を使用してください。\n@\"microsoft.quantum.canon.boundca\" を使用してください。"
 - uid: microsoft.quantum.canon.bitsize
-  summary: "\n> [!WARNING]\n> 非推奨\n\nBitSize の使用は非推奨とされました。 代わりに @\"microsoft.quantum.math.bitsizei\" を使用してください。\n@\"microsoft.quantum.math.bitsizei\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nBitSize の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.math.bitsizei\" を使用してください。\n@\"microsoft.quantum.math.bitsizei\" を使用してください。"
 - uid: microsoft.quantum.canon.boolarrfrompositiveint
-  summary: "\n> [!WARNING]\n> 非推奨\n\nBoolArrFromPositiveInt は非推奨となりました。 代わりに @\"microsoft.quantum.convert.intasboolarray\" を使用してください。\n@\"microsoft.quantum.convert.intasboolarray\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nBoolArrFromPositiveInt は非推奨となりました。 代わりに、@\"microsoft.quantum.convert.intasboolarray\" を使用してください。\n@\"microsoft.quantum.convert.intasboolarray\" を使用してください。"
 - uid: microsoft.quantum.canon.boolarrfromresultarr
-  summary: "\n> [!WARNING]\n> 非推奨\n\nブール Arrfromresultarr の使用は非推奨とされました。 代わりに @\"microsoft.quantum.convert.resultarrayasboolarray\" を使用してください。\n@\"microsoft.quantum.convert.resultarrayasboolarray\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nブール Arrfromresultarr の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.convert.resultarrayasboolarray\" を使用してください。\n@\"microsoft.quantum.convert.resultarrayasboolarray\" を使用してください。"
 - uid: microsoft.quantum.canon.boolfromresult
-  summary: "\n> [!WARNING]\n> 非推奨\n\nブール Fromresult は非推奨とされました。 代わりに @\"microsoft.quantum.convert.resultasbool\" を使用してください。\n@\"microsoft.quantum.convert.resultasbool\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nブール Fromresult は非推奨とされました。 代わりに、@\"microsoft.quantum.convert.resultasbool\" を使用してください。\n@\"microsoft.quantum.convert.resultasbool\" を使用してください。"
 - uid: microsoft.quantum.canon.bound
   summary: 1つの入力に対して動作する操作の配列を指定すると、によって、指定された各操作を順番に実行する新しい操作が生成されます。
 - uid: microsoft.quantum.canon.bounda
   summary: >-
     1つの入力に対して動作する操作の配列を指定すると、によって、指定された各操作を順番に実行する新しい操作が生成されます。
 
-    修飾子 `A` は、配列内のすべての操作が adjointable であることを示します。
+    修飾子`A`は、配列内のすべての操作が adjointable であることを示します。
 - uid: microsoft.quantum.canon.boundc
   summary: >-
     1つの入力に対して動作する操作の配列を指定すると、によって、指定された各操作を順番に実行する新しい操作が生成されます。
 
-    修飾子 `C` は、配列内のすべての操作が制御可能であることを示します。
+    修飾子`C`は、配列内のすべての操作が制御可能であることを示します。
 - uid: microsoft.quantum.canon.boundca
   summary: >-
     1つの入力に対して動作する操作の配列を指定すると、によって、指定された各操作を順番に実行する新しい操作が生成されます。
 
-    修飾子 `CA` は、配列内のすべての操作が adjointable および制御可能であることを示します。
+    修飾子`CA`は、配列内のすべての操作が adjointable および制御可能であることを示します。
 - uid: microsoft.quantum.canon.ccontrolled
-  summary: 操作 op が指定された場合、は、従来の制御ビットが true の場合に op を適用する新しい操作を返します。 `false`した場合、何も起こりません。
+  summary: 操作 op が指定された場合、は、従来の制御ビットが true の場合に op を適用する新しい操作を返します。 の`false`場合、何も起こりません。
 - uid: microsoft.quantum.canon.ccontrolleda
   summary: >-
-    操作 op が指定された場合、は、従来の制御ビットが true の場合に op を適用する新しい操作を返します。 `false`した場合、何も起こりません。
+    操作 op が指定された場合、は、従来の制御ビットが true の場合に op を適用する新しい操作を返します。 の`false`場合、何も起こりません。
 
-    修飾子 `A` は、操作が adjointable であることを示します。
+    修飾子`A`は、操作が adjointable であることを示します。
 - uid: microsoft.quantum.canon.ccontrolledc
   summary: >-
-    操作 op が指定された場合、は、従来の制御ビットが true の場合に op を適用する新しい操作を返します。 `false`した場合、何も起こりません。
+    操作 op が指定された場合、は、従来の制御ビットが true の場合に op を適用する新しい操作を返します。 の`false`場合、何も起こりません。
 
-    修飾子 `C` は、操作が制御可能であることを示します。
+    修飾子`C`は、操作が制御可能であることを示します。
 - uid: microsoft.quantum.canon.ccontrolledca
   summary: >-
-    操作 op が指定された場合、は、従来の制御ビットが true の場合に op を適用する新しい操作を返します。 `false`した場合、何も起こりません。
+    操作 op が指定された場合、は、従来の制御ビットが true の場合に op を適用する新しい操作を返します。 の`false`場合、何も起こりません。
 
-    修飾子 `CA` は、操作が制御可能であり、adjointable であることを示します。
+    修飾子`CA`は、操作が制御可能であり、adjointable であることを示します。
 - uid: microsoft.quantum.canon.compose
   summary: 2つの関数の合成を返します。
 - uid: microsoft.quantum.canon.conjugatedby
@@ -79,7 +79,7 @@ functions:
 - uid: microsoft.quantum.canon.conjugatedbyca
   summary: 外部操作と内部操作では、外部操作によって内部操作を活用する新しい操作が返されます。
 - uid: microsoft.quantum.canon.continuedfractionconvergent
-  summary: "\n> [!WARNING]\n> 非推奨\n\nContinuedFractionConvergent は非推奨となりました。 代わりに @\"microsoft.quantum.math.continuedfractionconvergenti\" を使用してください。\n@\"microsoft.quantum.math.continuedfractionconvergenti\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nContinuedFractionConvergent は非推奨となりました。 代わりに、@\"microsoft.quantum.math.continuedfractionconvergenti\" を使用してください。\n@\"microsoft.quantum.math.continuedfractionconvergenti\" を使用してください。"
 - uid: microsoft.quantum.canon.controlledonbitstring
   summary: 制御レジスタの状態が指定したビットマスクに対応する場合に、ターゲットレジスタに oracle を適用する、ユニタリ操作を返します。
 - uid: microsoft.quantum.canon.controlledonint
@@ -91,11 +91,11 @@ functions:
 
     つまり、2つの入力を持つ演算が指定された場合、この関数は、isomorphism $f (x, y) \equiv f (x) (y) $ という値を適用して、1つの入力の操作を返す1つの入力の操作を返します。
 - uid: microsoft.quantum.canon.curryop
-  summary: "\n> [!WARNING]\n> 非推奨\n\n現在は非推奨とされています。 代わりに @\"microsoft.quantum.canon.curriedop\" を使用してください。\n@\"microsoft.quantum.canon.curriedop\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\n現在は非推奨とされています。 代わりに、@\"microsoft.quantum.canon.curriedop\" を使用してください。\n@\"microsoft.quantum.canon.curriedop\" を使用してください。"
 - uid: microsoft.quantum.canon.decomposedintotimestepsca
   summary: 指定された操作に対して Trotter – Suzuki インテグレーターを実装する操作を返します。
 - uid: microsoft.quantum.canon.decomposeintotimestepsca
-  summary: "\n> [!WARNING]\n> 非推奨\n\nDecomposeIntoTimeStepsCA は非推奨となりました。 代わりに @\"microsoft.quantum.canon.decomposedintotimestepsca\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nDecomposeIntoTimeStepsCA は非推奨となりました。 代わりに、@\"microsoft.quantum.canon.decomposedintotimestepsca\" を使用してください。"
 - uid: microsoft.quantum.canon.delayed
   summary: 指定された引数を使用して指定された操作を適用する操作を返します。
 - uid: microsoft.quantum.canon.delayeda
@@ -105,45 +105,45 @@ functions:
 - uid: microsoft.quantum.canon.delayedca
   summary: 指定された引数を使用して指定された操作を適用する操作を返します。
 - uid: microsoft.quantum.canon.embedpauli
-  summary: Single qubit の P# li 演算子と qubit のインデックスを指定した場合、は、そのインデックス位置にある指定された single qubit 演算子を持つマルチ qubit の P# li 演算子を返し、他のすべてのインデックスで `PauliI` します。
+  summary: Single qubit の P# li 演算子と qubit のインデックスが指定されている場合、そのインデックス`PauliI`の指定された単一の qubit 演算子と他のすべてのインデックスで、マルチ Qubit の P# li 演算子を返します。
 - uid: microsoft.quantum.canon.expmod
-  summary: "\n> [!WARNING]\n> 非推奨\n\n関数の使用は非推奨とされました。 代わりに @\"microsoft.quantum.math.expmodi\" を使用してください。\n@\"microsoft.quantum.math.expmodi\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\n関数の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.math.expmodi\" を使用してください。\n@\"microsoft.quantum.math.expmodi\" を使用してください。"
 - uid: microsoft.quantum.canon.extendedgcd
-  summary: "\n> [!WARNING]\n> 非推奨\n\nExtendedGCD は非推奨となりました。 代わりに @\"microsoft.quantum.math.extendedgreatestcommondivisori\" を使用してください。\n@\"microsoft.quantum.math.extendedgreatestcommondivisori\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nExtendedGCD は非推奨となりました。 代わりに、@\"microsoft.quantum.math.extendedgreatestcommondivisori\" を使用してください。\n@\"microsoft.quantum.math.extendedgreatestcommondivisori\" を使用してください。"
 - uid: microsoft.quantum.canon.filter
-  summary: "\n> [!WARNING]\n> 非推奨\n\nフィルターは非推奨とされました。 代わりに @\"microsoft.quantum.arrays.filtered\" を使用してください。\n代わりに @\"Microsoft.Quantum.Arrays.Filtered\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nフィルターは非推奨とされました。 代わりに、@\"microsoft.quantum.arrays.filtered\" を使用してください。\n代わりに、@\"Microsoft.Quantum.Arrays.Filtered\" を使用してください。"
 - uid: microsoft.quantum.canon.forall
-  summary: "\n> [!WARNING]\n> 非推奨\n\nForAll は非推奨となりました。 代わりに @\"microsoft.quantum.arrays.all\" を使用してください。\n代わりに @\"Microsoft.Quantum.Arrays.All\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nForAll は非推奨となりました。 代わりに、@\"microsoft.quantum.arrays.all\" を使用してください。\n代わりに、@\"Microsoft.Quantum.Arrays.All\" を使用してください。"
 - uid: microsoft.quantum.canon.forany
-  summary: "\n> [!WARNING]\n> 非推奨\n\nForAny は非推奨となりました。 代わりに @\"microsoft.quantum.arrays.any\" を使用してください。\n代わりに @\"Microsoft.Quantum.Arrays.Any\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nForAny は非推奨となりました。 代わりに、@\"microsoft.quantum.arrays.any\" を使用してください。\n代わりに、@\"Microsoft.Quantum.Arrays.Any\" を使用してください。"
 - uid: microsoft.quantum.canon.fst
   summary: ペアが指定されている場合、最初の要素を返します。
 - uid: microsoft.quantum.canon.gcd
-  summary: "\n> [!WARNING]\n> 非推奨\n\nGCD は非推奨となりました。 代わりに @\"microsoft.quantum.math.greatestcommondivisori\" を使用してください。\n@\"microsoft.quantum.math.greatestcommondivisori\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nGCD は非推奨となりました。 代わりに、@\"microsoft.quantum.math.greatestcommondivisori\" を使用してください。\n@\"microsoft.quantum.math.greatestcommondivisori\" を使用してください。"
 - uid: microsoft.quantum.canon.ignore
   summary: 演算または関数の出力を無視します。
 - uid: microsoft.quantum.canon.intabs
-  summary: "\n> [!WARNING]\n> 非推奨\n\nIntAbs は非推奨となりました。 代わりに @\"microsoft.quantum.math.absi\" を使用してください。\nこの関数は削除されました。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nIntAbs は非推奨となりました。 代わりに、@\"microsoft.quantum.math.absi\" を使用してください。\nこの関数は削除されました。"
 - uid: microsoft.quantum.canon.intarrayfromrange
-  summary: "\n> [!WARNING]\n> 非推奨\n\nIntArrayFromRange は非推奨とされました。 代わりに @\"microsoft.quantum.convert.rangeasintarray\" を使用してください。\n@\"microsoft.quantum.convert.rangeasintarray\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nIntArrayFromRange は非推奨とされました。 代わりに、@\"microsoft.quantum.convert.rangeasintarray\" を使用してください。\n@\"microsoft.quantum.convert.rangeasintarray\" を使用してください。"
 - uid: microsoft.quantum.canon.intmax
-  summary: "\n> [!WARNING]\n> 非推奨\n\nIntMax は非推奨とされました。 代わりに @\"microsoft.quantum.math.maxi\" を使用してください。\nこの関数は削除されました。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nIntMax は非推奨とされました。 代わりに、@\"microsoft.quantum.math.maxi\" を使用してください。\nこの関数は削除されました。"
 - uid: microsoft.quantum.canon.inversemod
-  summary: "\n> [!WARNING]\n> 非推奨\n\nInverseMod は非推奨となりました。 代わりに @\"microsoft.quantum.math.inversemodi\" を使用してください。\n@\"microsoft.quantum.math.inversemodi\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nInverseMod は非推奨となりました。 代わりに、@\"microsoft.quantum.math.inversemodi\" を使用してください。\n@\"microsoft.quantum.math.inversemodi\" を使用してください。"
 - uid: microsoft.quantum.canon.iscoprime
-  summary: "\n> [!WARNING]\n> 非推奨\n\nIsCoprime は非推奨となりました。 代わりに @\"microsoft.quantum.math.iscoprimei\" を使用してください。\n@\"microsoft.quantum.math.greatestcommondivisori\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nIsCoprime は非推奨となりました。 代わりに、@\"microsoft.quantum.math.iscoprimei\" を使用してください。\n@\"microsoft.quantum.math.greatestcommondivisori\" を使用してください。"
 - uid: microsoft.quantum.canon.isresultone
-  summary: 指定された結果値が `One`と等しいかどうかをテストします。
+  summary: 指定された結果値がと等しい`One`かどうかをテストします。
 - uid: microsoft.quantum.canon.isresultzero
-  summary: 指定された結果値が `Zero`と等しいかどうかをテストします。
+  summary: 指定された結果値がと等しい`Zero`かどうかをテストします。
 - uid: microsoft.quantum.canon.littleendiantobigendian
-  summary: "\n> [!WARNING]\n> 非推奨\n\nLittleEndianToBigEndian は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.littleendianasbigendian\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nLittleEndianToBigEndian は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.littleendianasbigendian\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\" を使用してください。"
 - uid: microsoft.quantum.canon.map
-  summary: "\n> [!WARNING]\n> 非推奨\n\nマップの使用は非推奨とされました。 代わりに @\"microsoft.quantum.arrays.mapped\" を使用してください。\n代わりに @\"Microsoft.Quantum.Arrays.Mapped\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nマップの使用は非推奨とされました。 代わりに、@\"microsoft.quantum.arrays.mapped\" を使用してください。\n代わりに、@\"Microsoft.Quantum.Arrays.Mapped\" を使用してください。"
 - uid: microsoft.quantum.canon.mapindex
-  summary: "\n> [!WARNING]\n> 非推奨\n\nMapIndex は非推奨となりました。 代わりに @\"microsoft.quantum.arrays.mappedbyindex\" を使用してください。\n代わりに @\"Microsoft.Quantum.Arrays.MappedByIndex\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nMapIndex は非推奨となりました。 代わりに、@\"microsoft.quantum.arrays.mappedbyindex\" を使用してください。\n代わりに、@\"Microsoft.Quantum.Arrays.MappedByIndex\" を使用してください。"
 - uid: microsoft.quantum.canon.modulus
-  summary: "\n> [!WARNING]\n> 非推奨\n\n剰余は非推奨とされました。 代わりに @\"microsoft.quantum.math.modulusi\" を使用してください。\n@\"microsoft.quantum.math.modulusi\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\n剰余は非推奨とされました。 代わりに、@\"microsoft.quantum.math.modulusi\" を使用してください。\n@\"microsoft.quantum.math.modulusi\" を使用してください。"
 - uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   summary: >-
     N-qubit number 状態 $ \ket{j} $ によって制御されている場合に _j $ の $V を適用する、乗算によって制御される、$ $U の数値演算を返します。
@@ -157,7 +157,7 @@ functions:
 
     $U = \ sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
 - uid: microsoft.quantum.canon.nearequalityfact
-  summary: "\n> [!WARNING]\n> 非推奨\n\nNearEqualityFact は非推奨となりました。 代わりに @\"microsoft.quantum.diagnostics.nearequalityfactd\" を使用してください。\n代わりに @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nNearEqualityFact は非推奨となりました。 代わりに、@\"microsoft.quantum.diagnostics.nearequalityfactd\" を使用してください。\n代わりに、@\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" を使用してください。"
 - uid: microsoft.quantum.canon.operationpow
   summary: >-
     操作を累乗します。
@@ -168,7 +168,7 @@ functions:
   summary: >-
     操作を累乗します。
 
-    修飾子 `A` は、操作が adjointable であることを示します。
+    修飾子`A`は、操作が adjointable であることを示します。
 
 
     つまり、ゲート $U $ を表す操作が指定されている場合は、power $m $ に対して ^ m $ $U 新しい操作を返します。
@@ -176,7 +176,7 @@ functions:
   summary: >-
     操作を累乗します。
 
-    修飾子 `C` は、操作が制御可能であることを示します。
+    修飾子`C`は、操作が制御可能であることを示します。
 
 
     つまり、ゲート $U $ を表す操作が指定されている場合は、power $m $ に対して ^ m $ $U 新しい操作を返します。
@@ -184,57 +184,57 @@ functions:
   summary: >-
     操作を累乗します。
 
-    修飾子 `A` は、操作が制御可能であり、adjointable であることを示します。
+    修飾子`A`は、操作が制御可能であり、adjointable であることを示します。
 
 
     つまり、ゲート $U $ を表す操作が指定されている場合は、power $m $ に対して ^ m $ $U 新しい操作を返します。
 - uid: microsoft.quantum.canon.pad
-  summary: "\n> [!WARNING]\n> 非推奨\n\n埋め込みは非推奨とされます。 代わりに @\"microsoft.quantum.arrays.padded\" を使用してください。\n代わりに @\"Microsoft.Quantum.Arrays.Padded\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\n埋め込みは非推奨とされます。 代わりに、@\"microsoft.quantum.arrays.padded\" を使用してください。\n代わりに、@\"Microsoft.Quantum.Arrays.Padded\" を使用してください。"
 - uid: microsoft.quantum.canon.paulifrombitstring
-  summary: "\n> [!WARNING]\n> 非推奨\n\nPauliFromBitString は非推奨となりました。 代わりに @\"microsoft.quantum.convert.boolarrayaspauli\" を使用してください。\n@\"microsoft.quantum.convert.boolarrayaspauli\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nPauliFromBitString は非推奨となりました。 代わりに、@\"microsoft.quantum.convert.boolarrayaspauli\" を使用してください。\n@\"microsoft.quantum.convert.boolarrayaspauli\" を使用してください。"
 - uid: microsoft.quantum.canon.pnormalize
-  summary: "\n> [!WARNING]\n> 非推奨\n\nPNormalize は非推奨となりました。 代わりに @\"microsoft.quantum.math.pnormalized\" を使用してください。\n@\"microsoft.quantum.math.pnormalized\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nPNormalize は非推奨となりました。 代わりに、@\"microsoft.quantum.math.pnormalized\" を使用してください。\n@\"microsoft.quantum.math.pnormalized\" を使用してください。"
 - uid: microsoft.quantum.canon.positiveintfromboolarr
-  summary: "\n> [!WARNING]\n> 非推奨\n\nPositiveIntFromBoolArr は非推奨となりました。 代わりに @\"microsoft.quantum.convert.boolarrayasint\" を使用してください。\n@\"microsoft.quantum.convert.boolarrayasint\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nPositiveIntFromBoolArr は非推奨となりました。 代わりに、@\"microsoft.quantum.convert.boolarrayasint\" を使用してください。\n@\"microsoft.quantum.convert.boolarrayasint\" を使用してください。"
 - uid: microsoft.quantum.canon.positiveintfromresultarr
-  summary: "\n> [!WARNING]\n> 非推奨\n\nPositiveIntFromResultArr は非推奨となりました。 代わりに @\"microsoft.quantum.convert.resultarrayasint\" を使用してください。\n@\"microsoft.quantum.canon.resultarrayasint\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nPositiveIntFromResultArr は非推奨となりました。 代わりに、@\"microsoft.quantum.convert.resultarrayasint\" を使用してください。\n@\"microsoft.quantum.canon.resultarrayasint\" を使用してください。"
 - uid: microsoft.quantum.canon.restrictedtosubregister
   summary: 操作をレジスタのインデックスの配列 (サブレジスタ) に制限します。
 - uid: microsoft.quantum.canon.restrictedtosubregistera
   summary: >-
     操作をレジスタのインデックスの配列 (サブレジスタ) に制限します。
 
-    修飾子 `A` は、操作が adjointable であることを示します。
+    修飾子`A`は、操作が adjointable であることを示します。
 - uid: microsoft.quantum.canon.restrictedtosubregisterc
   summary: >-
     操作をレジスタのインデックスの配列 (サブレジスタ) に制限します。
 
-    修飾子 `C` は、操作が制御可能であることを示します。
+    修飾子`C`は、操作が制御可能であることを示します。
 - uid: microsoft.quantum.canon.restrictedtosubregisterca
   summary: >-
     操作をレジスタのインデックスの配列 (サブレジスタ) に制限します。
 
-    修飾子 `CA` は、操作が制御可能であり、adjointable であることを示します。
+    修飾子`CA`は、操作が制御可能であり、adjointable であることを示します。
 - uid: microsoft.quantum.canon.restricttosubregister
-  summary: "\n> [!WARNING]\n> 非推奨\n\nRestrictToSubregister は非推奨となりました。 代わりに @\"microsoft.quantum.canon.restrictedtosubregister\" を使用してください。\n@\"microsoft.quantum.canon.restrictedtosubregister\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nRestrictToSubregister は非推奨となりました。 代わりに、@\"microsoft.quantum.canon.restrictedtosubregister\" を使用してください。\n@\"microsoft.quantum.canon.restrictedtosubregister\" を使用してください。"
 - uid: microsoft.quantum.canon.restricttosubregistera
-  summary: "\n> [!WARNING]\n> 非推奨\n\nRestrictToSubregisterA は非推奨となりました。 代わりに @\"microsoft.quantum.canon.restrictedtosubregistera\" を使用してください。\n@\"microsoft.quantum.canon.restrictedtosubregistera\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nRestrictToSubregisterA は非推奨となりました。 代わりに、@\"microsoft.quantum.canon.restrictedtosubregistera\" を使用してください。\n@\"microsoft.quantum.canon.restrictedtosubregistera\" を使用してください。"
 - uid: microsoft.quantum.canon.restricttosubregisterc
-  summary: "\n> [!WARNING]\n> 非推奨\n\nRestrictToSubregisterC は非推奨となりました。 代わりに @\"microsoft.quantum.canon.restrictedtosubregisterc\" を使用してください。\n@\"microsoft.quantum.canon.restrictedtosubregisterc\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nRestrictToSubregisterC は非推奨となりました。 代わりに、@\"microsoft.quantum.canon.restrictedtosubregisterc\" を使用してください。\n@\"microsoft.quantum.canon.restrictedtosubregisterc\" を使用してください。"
 - uid: microsoft.quantum.canon.restricttosubregisterca
-  summary: "\n> [!WARNING]\n> 非推奨\n\nRestrictToSubregisterCA は非推奨となりました。 代わりに @\"microsoft.quantum.canon.restrictedtosubregisterca\" を使用してください。\n@\"microsoft.quantum.canon.restrictedtosubregisterca\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nRestrictToSubregisterCA は非推奨となりました。 代わりに、@\"microsoft.quantum.canon.restrictedtosubregisterca\" を使用してください。\n@\"microsoft.quantum.canon.restrictedtosubregisterca\" を使用してください。"
 - uid: microsoft.quantum.canon.resultarrfromboolarr
-  summary: "\n> [!WARNING]\n> 非推奨\n\nResultarrfromブール Arr は非推奨とされました。 代わりに @\"microsoft.quantum.convert.boolarrayasresultarray\" を使用してください。\n@\"microsoft.quantum.convert.resultarrayasboolarray\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nResultarrfromブール Arr は非推奨とされました。 代わりに、@\"microsoft.quantum.convert.boolarrayasresultarray\" を使用してください。\n@\"microsoft.quantum.convert.resultarrayasboolarray\" を使用してください。"
 - uid: microsoft.quantum.canon.resultasint
-  summary: "\n> [!WARNING]\n> 非推奨\n\nResultAsInt は非推奨となりました。 代わりに @\"microsoft.quantum.convert.resultarrayasint\" を使用してください。\n@\"microsoft.quantum.convert.resultarrayasint\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nResultAsInt は非推奨となりました。 代わりに、@\"microsoft.quantum.convert.resultarrayasint\" を使用してください。\n@\"microsoft.quantum.convert.resultarrayasint\" を使用してください。"
 - uid: microsoft.quantum.canon.resultfrombool
-  summary: "\n> [!WARNING]\n> 非推奨\n\nResultFromBool は非推奨とされました。 代わりに @\"microsoft.quantum.convert.boolasresult\" を使用してください。\n@\"microsoft.quantum.convert.boolasresult\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nResultFromBool は非推奨とされました。 代わりに、@\"microsoft.quantum.convert.boolasresult\" を使用してください。\n@\"microsoft.quantum.convert.boolasresult\" を使用してください。"
 - uid: microsoft.quantum.canon.reverse
-  summary: "\n> [!WARNING]\n> 非推奨\n\nReverse の使用は非推奨とされました。 代わりに @\"microsoft.quantum.arrays.reversed\" を使用してください。\n代わりに @\"Microsoft.Quantum.Arrays.Reversed\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nReverse の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.arrays.reversed\" を使用してください。\n代わりに、@\"Microsoft.Quantum.Arrays.Reversed\" を使用してください。"
 - uid: microsoft.quantum.canon.snd
   summary: ペアが指定されると、はその2番目の要素を返します。
 - uid: microsoft.quantum.canon.splitarray
-  summary: "\n> [!WARNING]\n> 非推奨\n\nSplitArray の使用は非推奨とされました。 代わりに @\"microsoft.quantum.arrays.partitioned\" を使用してください。\n代わりに @\"Microsoft.Quantum.Arrays.Partitioned\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nSplitArray の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.arrays.partitioned\" を使用してください。\n代わりに、@\"Microsoft.Quantum.Arrays.Partitioned\" を使用してください。"
 - uid: microsoft.quantum.canon.stackcapacity
   summary: "\n> [!WARNING]\n> 非推奨\n\nStackCapacity は非推奨となりました。"
 - uid: microsoft.quantum.canon.stacklength
@@ -248,7 +248,7 @@ functions:
 - uid: microsoft.quantum.canon.stackpush
   summary: "\n> [!WARNING]\n> 非推奨\n\nStackPush の使用は非推奨とされました。"
 - uid: microsoft.quantum.canon.tooperation
-  summary: "\n> [!WARNING]\n> 非推奨\n\nToOperation の使用は推奨されていません。 代わりに @\"microsoft.quantum.convert.functionasoperation\" を使用してください。\n@\"microsoft.quantum.convert.functionasoperation\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nToOperation の使用は推奨されていません。 代わりに、@\"microsoft.quantum.convert.functionasoperation\" を使用してください。\n@\"microsoft.quantum.convert.functionasoperation\" を使用してください。"
 - uid: microsoft.quantum.canon.transformedoperation
   summary: 関数と操作が指定された場合、指定された関数によって入力が変換される新しい操作を返します。
 - uid: microsoft.quantum.canon.transformedoperationa
@@ -263,32 +263,32 @@ functions:
   summary: >-
     操作を返す関数を指定した場合、は、両方の入力をタプルとして受け取る新しい操作を返します。
 
-    修飾子 `A` は、操作が adjointable であることを示します。
+    修飾子`A`は、操作が adjointable であることを示します。
 - uid: microsoft.quantum.canon.uncurriedopc
   summary: >-
     操作を返す関数を指定した場合、は、両方の入力をタプルとして受け取る新しい操作を返します。
 
-    修飾子 `C` は、操作が制御可能であることを示します。
+    修飾子`C`は、操作が制御可能であることを示します。
 - uid: microsoft.quantum.canon.uncurriedopca
   summary: >-
     操作を返す関数を指定した場合、は、両方の入力をタプルとして受け取る新しい操作を返します。
 
-    修飾子 `CA` は、操作が制御可能であり、adjointable であることを示します。
+    修飾子`CA`は、操作が制御可能であり、adjointable であることを示します。
 - uid: microsoft.quantum.canon.uncurryop
-  summary: "\n> [!WARNING]\n> 非推奨\n\nUny Op は非推奨とされました。 代わりに @\"microsoft.quantum.canon.uncurriedop\" を使用してください。\n@\"microsoft.quantum.canon.uncurriedop\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nUny Op は非推奨とされました。 代わりに、@\"microsoft.quantum.canon.uncurriedop\" を使用してください。\n@\"microsoft.quantum.canon.uncurriedop\" を使用してください。"
 - uid: microsoft.quantum.canon.uncurryopa
-  summary: "\n> [!WARNING]\n> 非推奨\n\nUncurryOpA は非推奨となりました。 代わりに @\"microsoft.quantum.canon.uncurriedopa\" を使用してください。\n@\"microsoft.quantum.canon.uncurriedopa\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nUncurryOpA は非推奨となりました。 代わりに、@\"microsoft.quantum.canon.uncurriedopa\" を使用してください。\n@\"microsoft.quantum.canon.uncurriedopa\" を使用してください。"
 - uid: microsoft.quantum.canon.uncurryopc
-  summary: "\n> [!WARNING]\n> 非推奨\n\nUn% Yopc は非推奨となりました。 代わりに @\"microsoft.quantum.canon.uncurriedopc\" を使用してください。\n@\"microsoft.quantum.canon.uncurriedopc\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nUn% Yopc は非推奨となりました。 代わりに、@\"microsoft.quantum.canon.uncurriedopc\" を使用してください。\n@\"microsoft.quantum.canon.uncurriedopc\" を使用してください。"
 - uid: microsoft.quantum.canon.uncurryopca
-  summary: "\n> [!WARNING]\n> 非推奨\n\nUn未確認 Yopca の使用は非推奨とされました。 代わりに @\"microsoft.quantum.canon.uncurriedopca\" を使用してください。\n@\"microsoft.quantum.canon.uncurriedopca\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nUn未確認 Yopca の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.canon.uncurriedopca\" を使用してください。\n@\"microsoft.quantum.canon.uncurriedopca\" を使用してください。"
 - uid: microsoft.quantum.canon.weightonepaulis
   summary: 指定された数の qubits に対するすべての重み-1 の Pan Li 演算子の配列を返します。
 - uid: microsoft.quantum.canon.xor
-  summary: "\n> [!WARNING]\n> 非推奨\n\nXOR は非推奨とされました。 代わりに @\"microsoft.quantum.logical.xor\" を使用してください。\n@\"microsoft.quantum.logical.xor\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nXOR は非推奨とされました。 代わりに、@\"microsoft.quantum.logical.xor\" を使用してください。\n@\"microsoft.quantum.logical.xor\" を使用してください。"
 operations:
 - uid: microsoft.quantum.canon.adiabaticstateenergyunitary
-  summary: "\n> [!WARNING]\n> 非推奨\n\nAdiabaticStateEnergyUnitary は非推奨となりました。 代わりに @\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\" を使用してください。\n@\"microsoft.quantum.simuilation.pnormalized\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nAdiabaticStateEnergyUnitary は非推奨となりました。 代わりに、@\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\" を使用してください。\n@\"microsoft.quantum.simuilation.pnormalized\" を使用してください。"
 - uid: microsoft.quantum.canon.andladder
   summary: ターゲット qubits のレジスタで、制御された "AND はしご" を実行します。
 - uid: microsoft.quantum.canon.applyand
@@ -347,12 +347,12 @@ operations:
   summary: >-
     1つの操作の制御された複数のバージョンを適用します。
 
-    修飾子 `C` は、single qubit 演算が制御可能であることを示します。
+    修飾子`C`は、single qubit 操作が制御可能であることを示します。
 - uid: microsoft.quantum.canon.applymulticontrolledca
   summary: >-
     1つの操作の制御された複数のバージョンを適用します。
 
-    修飾子 `CA` は、single qubit 操作が制御可能で adjointable であることを示します。
+    修飾子`CA`は、single qubit 操作が制御可能で adjointable であることを示します。
 - uid: microsoft.quantum.canon.applyoprepeatedlyover
   summary: Qubit レジスタに対して同じ操作を複数回適用します。
 - uid: microsoft.quantum.canon.applyoprepeatedlyovera
@@ -370,27 +370,27 @@ operations:
 - uid: microsoft.quantum.canon.applyquantumfouriertransformbe
   summary: "\n> [!WARNING]\n> 非推奨\n\nApplyQuantumFourierTransformBE は非推奨となりました。 代わりに、@ \"applyquantumfouriertransform (bigendianaslittleendian (qs))\" を使用してください。\nこの操作は削除されました。"
 - uid: microsoft.quantum.canon.applyquantumfouriertransformle
-  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyQuantumFourierTransformLE は非推奨となりました。 代わりに @\"microsoft.quantum.canon.applyquantumfouriertransform\" を使用してください。\n@\"microsoft.quantum.canon.applyquantumfouriertransform\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyQuantumFourierTransformLE は非推奨となりました。 代わりに、@\"microsoft.quantum.canon.applyquantumfouriertransform\" を使用してください。\n@\"microsoft.quantum.canon.applyquantumfouriertransform\" を使用してください。"
 - uid: microsoft.quantum.canon.applyreversedopbigendian
-  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyReversedOpBigEndian は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.applyreversedopbe\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyReversedOpBigEndian は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.applyreversedopbe\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE\" を使用してください。"
 - uid: microsoft.quantum.canon.applyreversedopbigendiana
-  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyReversedOpBigEndianA は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.applyreversedopbea\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyReversedOpBigEndianA は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.applyreversedopbea\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\" を使用してください。"
 - uid: microsoft.quantum.canon.applyreversedopbigendianc
-  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyReversedOpBigEndianC は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.applyreversedopbec\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyReversedOpBigEndianC は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.applyreversedopbec\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\" を使用してください。"
 - uid: microsoft.quantum.canon.applyreversedopbigendianca
-  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyReversedOpBigEndianCA は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.applyreversedopbeca\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyReversedOpBigEndianCA は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.applyreversedopbeca\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\" を使用してください。"
 - uid: microsoft.quantum.canon.applyreversedoplittleendian
-  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyReversedOpLittleEndian は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.applyreversedople\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyReversedOpLittleEndian は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.applyreversedople\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE\" を使用してください。"
 - uid: microsoft.quantum.canon.applyreversedoplittleendiana
-  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyReversedOpLittleEndianA は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.applyreversedoplea\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyReversedOpLittleEndianA は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.applyreversedoplea\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\" を使用してください。"
 - uid: microsoft.quantum.canon.applyreversedoplittleendianc
-  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyReversedOpLittleEndianC は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.applyreversedoplec\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyReversedOpLittleEndianC は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.applyreversedoplec\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\" を使用してください。"
 - uid: microsoft.quantum.canon.applyreversedoplittleendianca
-  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyReversedOpLittleEndianCA は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.applyreversedopleca\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyReversedOpLittleEndianCA は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.applyreversedopleca\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\" を使用してください。"
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
   summary: "\n> [!WARNING]\n> 非推奨\n\nApplyRippleCarryComparatorBE は非推奨となりました。 代わりに、@ \"compareusingripplecarry (bigendianaslittleendian (x), bigendianaslittleendian (y), output)\" を使用してください。\nこの操作は削除されました。"
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorle
-  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyRippleCarryComparatorLE は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.compareusingripplecarry\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nApplyRippleCarryComparatorLE は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.compareusingripplecarry\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\" を使用してください。"
 - uid: microsoft.quantum.canon.applyseriesofops
   summary: Ops とそのターゲットの一覧を配列に順番に適用します。
 - uid: microsoft.quantum.canon.applyseriesofopsa
@@ -405,34 +405,34 @@ operations:
   summary: >-
     レジスタ内の各要素に単一の qubit 演算を適用します。
 
-    修飾子 `A` は、single qubit 操作が adjointable であることを示します。
+    修飾子`A`は、single qubit 操作が adjointable であることを示します。
 - uid: microsoft.quantum.canon.applytoeachc
   summary: >-
     レジスタ内の各要素に単一の qubit 演算を適用します。
 
-    修飾子 `C` は、single qubit 演算が制御可能であることを示します。
+    修飾子`C`は、single qubit 操作が制御可能であることを示します。
 - uid: microsoft.quantum.canon.applytoeachca
   summary: >-
     レジスタ内の各要素に単一の qubit 演算を適用します。
 
-    修飾子 `CA` は、single qubit 操作が制御可能で adjointable であることを示します。
+    修飾子`CA`は、single qubit 操作が制御可能で adjointable であることを示します。
 - uid: microsoft.quantum.canon.applytoeachindex
   summary: レジスタ内のインデックスが付けられた各要素に単一の qubit 演算を適用します。
 - uid: microsoft.quantum.canon.applytoeachindexa
   summary: >-
     レジスタ内のインデックスが付けられた各要素に単一の qubit 演算を適用します。
 
-    修飾子 `A` は、single qubit 操作が adjointable であることを示します。
+    修飾子`A`は、single qubit 操作が adjointable であることを示します。
 - uid: microsoft.quantum.canon.applytoeachindexc
   summary: >-
     レジスタ内のインデックスが付けられた各要素に単一の qubit 演算を適用します。
 
-    修飾子 `C` は、single qubit 演算が制御可能であることを示します。
+    修飾子`C`は、single qubit 操作が制御可能であることを示します。
 - uid: microsoft.quantum.canon.applytoeachindexca
   summary: >-
     レジスタ内のインデックスが付けられた各要素に単一の qubit 演算を適用します。
 
-    修飾子 `CA` は、single qubit 操作が adjointable で制御可能であることを示します。
+    修飾子`CA`は、single qubit 操作が adjointable で制御可能であることを示します。
 - uid: microsoft.quantum.canon.applytoelement
   summary: 配列の特定の要素に操作を適用します。
 - uid: microsoft.quantum.canon.applytoelementa
@@ -447,85 +447,85 @@ operations:
   summary: >-
     レジスタ内の最初の qubit に操作を適用します。
 
-    修飾子 `A` は、操作が adjointable であることを示します。
+    修飾子`A`は、操作が adjointable であることを示します。
 - uid: microsoft.quantum.canon.applytofirstqubitc
   summary: >-
     レジスタ内の最初の qubit に操作 op を適用します。
 
-    修飾子 `C` は、操作が制御可能であることを示します。
+    修飾子`C`は、操作が制御可能であることを示します。
 - uid: microsoft.quantum.canon.applytofirstqubitca
   summary: >-
     レジスタ内の最初の qubit に操作 op を適用します。
 
-    修飾子 `CA` は、操作が制御可能であり、adjointable であることを示します。
+    修飾子`CA`は、操作が制御可能であり、adjointable であることを示します。
 - uid: microsoft.quantum.canon.applytofirstthreequbits
   summary: レジスタ内の最初の3つの qubits に操作を適用します。
 - uid: microsoft.quantum.canon.applytofirstthreequbitsa
   summary: >-
     レジスタ内の最初の3つの qubits に操作を適用します。
 
-    修飾子 `A` は、操作が adjointable であることを示します。
+    修飾子`A`は、操作が adjointable であることを示します。
 - uid: microsoft.quantum.canon.applytofirstthreequbitsc
   summary: >-
     レジスタ内の最初の3つの qubits に操作を適用します。
 
-    修飾子 `C` は、操作が制御可能であることを示します。
+    修飾子`C`は、操作が制御可能であることを示します。
 - uid: microsoft.quantum.canon.applytofirstthreequbitsca
   summary: >-
     レジスタ内の最初の3つの qubits に操作を適用します。
 
-    修飾子 `CA` は、操作が制御可能であり、adjointable であることを示します。
+    修飾子`CA`は、操作が制御可能であり、adjointable であることを示します。
 - uid: microsoft.quantum.canon.applytofirsttwoqubits
   summary: レジスタ内の最初の2つの qubits に操作を適用します。
 - uid: microsoft.quantum.canon.applytofirsttwoqubitsa
   summary: >-
     レジスタ内の最初の2つの qubits に操作を適用します。
 
-    修飾子 `A` は、操作が adjointable であることを示します。
+    修飾子`A`は、操作が adjointable であることを示します。
 - uid: microsoft.quantum.canon.applytofirsttwoqubitsc
   summary: >-
     レジスタ内の最初の2つの qubits に操作を適用します。
 
-    修飾子 `C` は、操作が制御可能であることを示します。
+    修飾子`C`は、操作が制御可能であることを示します。
 - uid: microsoft.quantum.canon.applytofirsttwoqubitsca
   summary: >-
     レジスタ内の最初の2つの qubits に操作を適用します。
 
-    修飾子 `CA` は、操作が制御可能であり、adjointable であることを示します。
+    修飾子`CA`は、操作が制御可能であり、adjointable であることを示します。
 - uid: microsoft.quantum.canon.applytopartition
   summary: レジスタの特定のパーティションに2つの操作を適用して、2つの部分に分割します。
 - uid: microsoft.quantum.canon.applytopartitiona
   summary: >-
     レジスタの特定のパーティションに2つの操作を適用して、2つの部分に分割します。
 
-    修飾子 `A` は、操作が adjointable であることを示します。
+    修飾子`A`は、操作が adjointable であることを示します。
 - uid: microsoft.quantum.canon.applytopartitionc
   summary: >-
     レジスタの特定のパーティションに2つの操作を適用して、2つの部分に分割します。
 
-    修飾子 `C` は、操作が制御可能であることを示します。
+    修飾子`C`は、操作が制御可能であることを示します。
 - uid: microsoft.quantum.canon.applytopartitionca
   summary: >-
     レジスタの特定のパーティションに2つの操作を適用して、2つの部分に分割します。
 
-    修飾子 `CA` は、操作が制御可能であり、adjointable であることを示します。
+    修飾子`CA`は、操作が制御可能であり、adjointable であることを示します。
 - uid: microsoft.quantum.canon.applytosubregister
   summary: インデックスの配列によって指定された qubits を使用して、レジスタのサブレジスタに操作を適用します。
 - uid: microsoft.quantum.canon.applytosubregistera
   summary: >-
     インデックスの配列によって指定された qubits を使用して、レジスタのサブレジスタに操作を適用します。
 
-    修飾子 `A` は、操作が adjointable であることを示します。
+    修飾子`A`は、操作が adjointable であることを示します。
 - uid: microsoft.quantum.canon.applytosubregisterc
   summary: >-
     インデックスの配列によって指定された qubits を使用して、レジスタのサブレジスタに操作を適用します。
 
-    修飾子 `C` は、操作が制御可能であることを示します。
+    修飾子`C`は、操作が制御可能であることを示します。
 - uid: microsoft.quantum.canon.applytosubregisterca
   summary: >-
     インデックスの配列によって指定された qubits を使用して、レジスタのサブレジスタに操作を適用します。
 
-    修飾子 `CA` は、操作が制御可能であり、adjointable であることを示します。
+    修飾子`CA`は、操作が制御可能であり、adjointable であることを示します。
 - uid: microsoft.quantum.canon.applywith
   summary: 2つの操作を指定した場合、1つは conjugated として適用されます。
 - uid: microsoft.quantum.canon.applywitha
@@ -551,43 +551,43 @@ operations:
 - uid: microsoft.quantum.canon.approximateqft
   summary: クォンタムレジスタにおおよそのクォンタムフーリエ変換 (アク FT) を適用します。
 - uid: microsoft.quantum.canon.asserthighestbit
-  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertHighestBit は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.assertmostsignificantbit\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertHighestBit は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.assertmostsignificantbit\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\" を使用してください。"
 - uid: microsoft.quantum.canon.assertlessthanphasele
-  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertLessThanPhaseLE は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.assertphaselessthan\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertLessThanPhaseLE は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.assertphaselessthan\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\" を使用してください。"
 - uid: microsoft.quantum.canon.assertphase
   summary: >-
     等しい法則状態のフェーズに予期される値があることをアサートします。
 
 
-    具体的には、任意の real t に対して $ \frac{e ^ {i t}} {\ sqrt{2}} (e ^{0} {k} \ k{1}) $ として表現されるクォンタムの状態のフェーズ $ \ phi $ が、予期される値を持つことをアサートします。
+    具体的には、任意の real t に対して $ \frac{e ^ {i t}} {\ sqrt{2}} (e ^ {{0} k} \ k{1}) $ として表現されるクォンタムの状態のフェーズ $ \ phi $ が、予期される値を持つことをアサートします。
 - uid: microsoft.quantum.canon.assertprobintbe
   summary: "\n> [!WARNING]\n> 非推奨\n\nAssertProbIntBE は非推奨となりました。 代わりに、@ \"assertprobint (stateindex, bigendianaslittleendian (qubits), tolerance)\" を使用してください。\nこの操作は削除されました。"
 - uid: microsoft.quantum.canon.cascadecnot
-  summary: "\n> [!WARNING]\n> 非推奨\n\nCascadeCNOT は非推奨となりました。 代わりに @\"microsoft.quantum.canon.applycnotchain\" を使用してください。\n@\"microsoft.quantum.canon.applycnotchain\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nCascadeCNOT は非推奨となりました。 代わりに、@\"microsoft.quantum.canon.applycnotchain\" を使用してください。\n@\"microsoft.quantum.canon.applycnotchain\" を使用してください。"
 - uid: microsoft.quantum.canon.cnotchain
-  summary: "\n> [!WARNING]\n> 非推奨\n\nCNOTChain は非推奨となりました。 代わりに @\"microsoft.quantum.canon.applycnotchain\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nCNOTChain は非推奨となりました。 代わりに、@\"microsoft.quantum.canon.applycnotchain\" を使用してください。"
 - uid: microsoft.quantum.canon.cnotchaintarget
-  summary: "\n> [!WARNING]\n> 非推奨\n\nCNOTChainTarget は非推奨となりました。 代わりに @\"microsoft.quantum.canon.applycnotchainwithtarget\" を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nCNOTChainTarget は非推奨となりました。 代わりに、@\"microsoft.quantum.canon.applycnotchainwithtarget\" を使用してください。"
 - uid: microsoft.quantum.canon.copymostsignificantbitle
-  summary: "\n> [!WARNING]\n> 非推奨\n\nCopyMostSignificantBitLE は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.copymostsignificantbit\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nCopyMostSignificantBitLE は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.copymostsignificantbit\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\" を使用してください。"
 - uid: microsoft.quantum.canon.cx
   summary: >-
     制御された X (CX) ゲートを qubits のペアに適用します。
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align}、$ $。ここでは、行と列がクォンタムの概念ガイドにまとめられています。
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{align}、$ $。ここでは、行と列がクォンタムの概念ガイドに従って編成されています。
 - uid: microsoft.quantum.canon.cy
   summary: >-
     コントロール-Y (CY) ゲートを qubits のペアに適用します。
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \end{align}、$ $。ここでは、行と列は、クォンタムの概念ガイドで構成されています。\\\\
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 &-i \\ \\ 0 & 0 & i & 0 \end{align}、$ $。ここでは、行と列がクォンタムの概念ガイドに従って編成されています。
 - uid: microsoft.quantum.canon.cz
   summary: >-
     CS-CZ ゲートを qubits のペアに適用します。
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align}、$ $。ここでは、行と列がクォンタムの概念ガイドにまとめられています。
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & \\ \\ 0 0 & 0 & 1 & \\ \\ 0 0 & 0 & 0 &-1 \end{align}、$ $。ここでは、行と列がクォンタムの概念ガイドに従って編成されています。
 - uid: microsoft.quantum.canon.delay
   summary: 指定された操作を遅延付きで適用します。
 - uid: microsoft.quantum.canon.delaya
@@ -604,19 +604,19 @@ operations:
     1つの qubit で Y Hadamard 変換 $H _Y = S H $ は次のようになります。
 
 
-    \begin{align} H_Y \mathrel{: =} \ frac{1}{\ sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ i &-i \end{bmatrix}.
+    \begin{align} H_Y \mathrel{: =} \ frac{1}{\ sqrt{2}} \begin{bmatrix} 1 & 1 \\ \\ i &-i \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.canon.inplacemajority
-  summary: "\n> [!WARNING]\n> 非推奨\n\nInPlaceMajority は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.applymajorityinplace\" を使用してください。\n@\"microsoft.quantum.arithmetic.applymajorityinplace\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nInPlaceMajority は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.applymajorityinplace\" を使用してください。\n@\"microsoft.quantum.arithmetic.applymajorityinplace\" を使用してください。"
 - uid: microsoft.quantum.canon.inplacexorbe
   summary: "\n> [!WARNING]\n> 非推奨\n\nInPlaceXorBE は非推奨となりました。 代わりに、@ \"applyreversedopleca (applyxorinplace (value, _), target)\" を使用してください。\nこの操作は削除されました。"
 - uid: microsoft.quantum.canon.inplacexorle
-  summary: "\n> [!WARNING]\n> 非推奨\n\nInPlaceXorLE は非推奨となりました。 代わりに @\"microsoft.quantum.measurement.applyxorinplace\" を使用してください。\n@\"Microsoft.Quantum.Measurement.ApplyXorInPlace\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nInPlaceXorLE は非推奨となりました。 代わりに、@\"microsoft.quantum.measurement.applyxorinplace\" を使用してください。\n@\"Microsoft.Quantum.Measurement.ApplyXorInPlace\" を使用してください。"
 - uid: microsoft.quantum.canon.integerincrementle
-  summary: "\n> [!WARNING]\n> 非推奨\n\nIntegerIncrementLE は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.incrementbyinteger\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.IncrementByInteger\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nIntegerIncrementLE は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.incrementbyinteger\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.IncrementByInteger\" を使用してください。"
 - uid: microsoft.quantum.canon.integerincrementphasele
-  summary: "\n> [!WARNING]\n> 非推奨\n\nIntegerIncrementPhaseLE は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.incrementphasebyinteger\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nIntegerIncrementPhaseLE は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.incrementphasebyinteger\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\" を使用してください。"
 - uid: microsoft.quantum.canon.iteratethroughcartesianpower
   summary: 整数範囲のデカルト乗の各インデックスに演算を適用します。
 - uid: microsoft.quantum.canon.iteratethroughcartesianproduct
@@ -624,15 +624,15 @@ operations:
 - uid: microsoft.quantum.canon.measureintegerbe
   summary: "\n> [!WARNING]\n> 非推奨\n\nMeasure整数 Be の使用は非推奨とされました。 代わりに、@ \"measureinteger (bigendianaslittleendian (target))\" を使用してください。\nこの操作は削除されました。"
 - uid: microsoft.quantum.canon.modularaddproductle
-  summary: "\n> [!WARNING]\n> 非推奨\n\nModularAddProductLE は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nModularAddProductLE は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\" を使用してください。"
 - uid: microsoft.quantum.canon.modularaddproductphasele
-  summary: "\n> [!WARNING]\n> 非推奨\n\nModularAddProductPhaseLE は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nModularAddProductPhaseLE は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\" を使用してください。"
 - uid: microsoft.quantum.canon.modularincrementle
-  summary: "\n> [!WARNING]\n> 非推奨\n\nModularIncrementLE は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.modularincrementbyinteger\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nModularIncrementLE は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.modularincrementbyinteger\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\" を使用してください。"
 - uid: microsoft.quantum.canon.modularincrementphasele
-  summary: "\n> [!WARNING]\n> 非推奨\n\nModularIncrementPhaseLE は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nModularIncrementPhaseLE は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\" を使用してください。"
 - uid: microsoft.quantum.canon.modularmultiplybyconstantle
-  summary: "\n> [!WARNING]\n> 非推奨\n\nModularMultiplyByConstantLE は非推奨となりました。 代わりに @\"microsoft.quantum.arithmetic.multiplybymodularinteger\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nModularMultiplyByConstantLE は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.multiplybymodularinteger\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\" を使用してください。"
 - uid: microsoft.quantum.canon.multiplexoperations
   summary: >-
     数値の状態の配列によって制御される操作の配列を適用します。
@@ -681,22 +681,22 @@ operations:
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: スワップゲートを使用して、レジスタ内の qubits の順序を逆にします。
 - uid: microsoft.quantum.canon.with
-  summary: "\n> [!WARNING]\n> 非推奨\n\nWith が非推奨とされました。 代わりに @\"microsoft.quantum.canon.applywith\" を使用してください。\n@\"Microsoft.Quantum.Canon.ApplyWith\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nWith が非推奨とされました。 代わりに、@\"microsoft.quantum.canon.applywith\" を使用してください。\n@\"Microsoft.Quantum.Canon.ApplyWith\" を使用してください。"
 - uid: microsoft.quantum.canon.witha
-  summary: "\n> [!WARNING]\n> 非推奨\n\nWithA の使用は非推奨とされました。 代わりに @\"microsoft.quantum.canon.applywitha\" を使用してください。\n@\"Microsoft.Quantum.Canon.ApplyWithA\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nWithA の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.canon.applywitha\" を使用してください。\n@\"Microsoft.Quantum.Canon.ApplyWithA\" を使用してください。"
 - uid: microsoft.quantum.canon.withc
-  summary: "\n> [!WARNING]\n> 非推奨\n\nWithC は非推奨とされます。 代わりに @\"microsoft.quantum.canon.applywithc\" を使用してください。\n@\"Microsoft.Quantum.Canon.ApplyWithC\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nWithC は非推奨とされます。 代わりに、@\"microsoft.quantum.canon.applywithc\" を使用してください。\n@\"Microsoft.Quantum.Canon.ApplyWithC\" を使用してください。"
 - uid: microsoft.quantum.canon.withca
-  summary: "\n> [!WARNING]\n> 非推奨\n\nWithCA の使用は非推奨とされました。 代わりに @\"microsoft.quantum.canon.applywithca\" を使用してください。\n@\"Microsoft.Quantum.Canon.ApplyWithCA\"を使用してください。"
+  summary: "\n> [!WARNING]\n> 非推奨\n\nWithCA の使用は非推奨とされました。 代わりに、@\"microsoft.quantum.canon.applywithca\" を使用してください。\n@\"Microsoft.Quantum.Canon.ApplyWithCA\" を使用してください。"
 newtypes:
 - uid: microsoft.quantum.canon.ccnotop
   summary: CCNOT gate の署名の種類。
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> 非推奨\n\nResultStack は非推奨とされました。"
 metadata:
-  ms.openlocfilehash: db3466b0e6fe493393f75bea85f9c91e2f56ec67
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: a38f0267c2caefba7acc63e8e36d96a1b8c08d91
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905626"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677053"

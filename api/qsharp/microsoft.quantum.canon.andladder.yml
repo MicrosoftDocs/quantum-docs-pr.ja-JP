@@ -7,9 +7,9 @@ summary: >-
   ターゲット qubits のレジスタで、制御された "AND はしご" を実行します。
 
 
-  この操作では、計算基準の次のマッピングによって記述された変換を適用します $ $ \begin{align} \ket{x\_1, \ ドット, x\_n} \ket{y\_1, \ ドット, y\_{n-1}} \ map\ket{x\_1, \ ドット, x\_n} \ket{y\_1 \ oplus (x\_1 \ 陸 x\_2)、\ 点、y\_{n-1} \ oplus (x\_1 \ 陸 x\_2 \\_{n-1}},、\end{align} $ $ where $ \ket{x\_1, \ ドット, x\_n} $ は `controls`の計算ベースの状態を表し、$ \ket{y\_1, \ ドット, y\_{n-1}} $ は `targets`の計算基盤の状態を示します。
+  この操作は、次の計算基準のマッピングによって記述された変換を\_適用します $ $ \begin{align}\_\ket{x 1,\_\ ドット, x n}\_\ket{y 1, \ ドット, y {n-\_1}} \ map\ket{\_\ket{x 1, \\_ドット, x n}\_y 1 \ oplus (x 1 \ 陸 x\_2), \\_ドット, y {n-\_1} \ oplus (x 1 \\_\ket{x x\_{n-1}}, \end{align} $ $ where $ 1,\_\ \ ($ 1\_, \) ドット, x n} $ は`controls`、の計算ベースの\_状態を示します。 $\_\ket{y 1、\ ドット、y {n-1}} $ は、 `targets`の計算ベースの状態を表します。
 remarks: >-
-  - <xref:microsoft.quantum.canon.applymulticontrolledc> と <xref:microsoft.quantum.canon.applymulticontrolledca>の一部として使用されます。
+  - および<xref:microsoft.quantum.canon.applymulticontrolledc> <xref:microsoft.quantum.canon.applymulticontrolledca>の一部として使用されます。
 
   - 説明とサーキットの図については、図4.10 のセクション4.3 を参照してください & 語。
 syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
@@ -24,14 +24,14 @@ input:
     summary: >-
       およびはしごのコントロールとして使用される qubits のレジスタ。
 
-      この操作では、`controls` インバリアントの計算ベースの状態が残ります。
+      この操作では、計算ベース`controls`の状態が不変になります。
 
-      `controls` の長さは2以上である必要があり、1に `targets`の長さを加えた値にする必要があります。
+      の`controls`長さは2以上でなければなりません`targets`。また、の長さは1以上にする必要があります。
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targets
-    summary: '`targets` の長さは1以上、`controls` から1を引いた長さと同じである必要があります。'
+    summary: の`targets`長さは1以上、の`controls`長さから1を引いた値にする必要があります。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -43,9 +43,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: bf5b262ca55bea542218356918cf36eb95502967
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 4cc74315145176fd3a2258a3d92b2f2dfb4d66d3
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871041"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676394"

@@ -4,7 +4,7 @@ name: Any
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 配列と、配列の要素に対して定義された述語が指定されている場合、配列の少なくとも1つの要素が述語を満たすかどうかを確認します。
-remarks: "関数はジェネリック型に対して定義されています。つまり、配列 `'T[]` と関数 `predicate: 'T -> Bool` は、一部の要素が `predicate`を満たすかどうかを示す `Bool` 値を生成できます。"
+remarks: "関数は、ジェネリック型に対して定義されます。つまり、配列`'T[]`と関数`predicate: 'T -> Bool`がある場合は、 `Bool`一部の要素が満たさ`predicate`れるかどうかを示す値を生成できます。"
 examples: >-
   ```qsharp
 
@@ -30,7 +30,7 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: 要素のチェックに使用される `Bool` に `'T` の関数。
+    summary: 要素のチェック`'T`に`Bool`使用されるからへの関数。
     isFunction: true
     input:
       types:
@@ -41,23 +41,23 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: "`'T`上の要素の配列。"
+    summary: 上`'T`の要素の配列。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: Bool
   types:
-  - summary: すべての要素に適用される述語の関数または関数の `Bool` 値。
+  - summary: すべて`Bool`の要素に適用される述語の関数または関数の値。
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
-  summary: '`array` 要素の型。'
+  summary: 要素の`array`型。
 metadata:
-  ms.openlocfilehash: 35555080f90588bc61d70e89ea412a23209408d6
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 4e80b5c39c83bc5d5b26d4df9ca86b8cbc796aeb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905558"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676559"

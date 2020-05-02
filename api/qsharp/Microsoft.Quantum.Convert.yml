@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.convert
 name: Microsoft.Quantum.Convert
-summary: " # <a name=\"summary\"></a>Summary\n この名前空間には、さまざまな Q # データ型の間で変換を行うための関数が含まれています。"
+summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、さまざまな Q # データ型の間で変換を行うための関数が含まれています。"
 functions:
 - uid: microsoft.quantum.convert.bigintasboolarray
   summary: >-
@@ -18,9 +18,9 @@ functions:
 - uid: microsoft.quantum.convert.boolarrayaspauli
   summary: ビット文字列を指定した場合は、single qubit の演算子の配列として表されるマルチ qubit の P# li 演算子を返します。
 - uid: microsoft.quantum.convert.boolarrayasresultarray
-  summary: '`Bool[]` 型を `Result[]` 型に変換します。 `true` は `One` にマップされ、`false` は `Zero`にマップされます。'
+  summary: '`Bool[]`型`Result[]`を型に変換し`true` `One` `false`ます。ここで、はにマップさ`Zero`れ、はにマップされます。'
 - uid: microsoft.quantum.convert.boolasresult
-  summary: '`Bool` 型を `Result` 型に変換します。 `true` は `One` にマップされ、`false` は `Zero`にマップされます。'
+  summary: '`Bool`型`Result`を型に変換し`true` `One` `false`ます。ここで、はにマップさ`Zero`れ、はにマップされます。'
 - uid: microsoft.quantum.convert.boolasstring
   summary: 指定したブール値を等価の文字列形式に変換します。
 - uid: microsoft.quantum.convert.doubleasstring
@@ -47,20 +47,20 @@ functions:
 - uid: microsoft.quantum.convert.pauliarrayasint
   summary: シングル qubit の演算子の配列として表されるマルチ qubit の Pan Li 演算子を整数にエンコードします。
 - uid: microsoft.quantum.convert.rangeasintarray
-  summary: Start. で列挙された整数の配列 `arr` を作成します。ステップ..終わり。
+  summary: Start. で`arr`列挙された整数の配列を作成します。ステップ..終わり。
 - uid: microsoft.quantum.convert.resultarrayasboolarray
-  summary: '`Result[]` 型を `Bool[]` 型に変換します。 `One` は `true` にマップされ、`Zero` は `false`にマップされます。'
+  summary: '`Result[]`型`Bool[]`を型に変換し`One` `true` `Zero`ます。ここで、はにマップさ`false`れ、はにマップされます。'
 - uid: microsoft.quantum.convert.resultarrayasint
   summary: リトルエンディアン形式の結果の文字列から正の整数を生成します。
 - uid: microsoft.quantum.convert.resultasbool
-  summary: '`Result` 型を `Bool` 型に変換します。 `One` は `true` にマップされ、`Zero` は `false`にマップされます。'
+  summary: '`Result`型`Bool`を型に変換し`One` `true` `Zero`ます。ここで、はにマップさ`false`れ、はにマップされます。'
 operations:
 - uid: microsoft.quantum.convert.call
   summary: 指定された入力を使用して関数を呼び出します。
 metadata:
-  ms.openlocfilehash: a0c347d8004b8f8bd35fc1b7f7eaf52e6230cee0
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d435979692fe94efb64af82f4a7a949cb2341ef8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210969"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677010"
