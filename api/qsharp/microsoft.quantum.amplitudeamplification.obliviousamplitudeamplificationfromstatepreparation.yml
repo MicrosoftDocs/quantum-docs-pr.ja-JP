@@ -5,13 +5,13 @@ type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: 部分的な反射のために oracles による振幅増幅を無関係します。
 remarks: >-
-  これにより、`AmpAmpObliviousByReflectionPhases`よりも、補助開始状態とターゲット状態の形式に対してより厳密な条件が課されます。
+  これにより、の`AmpAmpObliviousByReflectionPhases`ような補助開始状態とターゲット状態の形式に対して、より厳密な条件が課されます。
 
-  $A \ket{0}\_f\ket{0}\_A = \ket{\text{start}}\_{fa} $ は、計算基準 $ \ket\_{0}f\ket \_$ から補助開始状態 $ \ket{\text{start}}{0}{fa} $ を準備することを前提としています。
+  $A{0}\_\ket f\ket{0}\_A\_= \ket{\text{start}} {fa} $ は、計算ベース $ \ket\_{0}\_f\ket{0}$ から補助開始状態 $ \ket{\text{start}} {fa} $ を準備することを前提としています。
 
   ターゲットの状態が $ \ket{1}\_f $ によってマークされていることを前提としています。
 
-  \Begin{align} O\ket {\ text {start}}\_{fa} \ket{\psi}\_s = \lambda\ket{1}\_f\ket {\ text {すべて}}\_a\ket {\ text {target}}\_s U \ket{\psi}\_s + \sqrt{1-| \ lambda | ^ 2} \ket{0}\_\end{align}, として、いくつかの一部の ' $ ' を使用します。
+  \Begin{align}\_O\ket {\ text {start}} {fa} \ket{\psi}\_s = \lambda\ket{1}\_f\ket {\ text {すべて}}\_a\ket {\ text {target}}\_s U \ket{\psi}\_s + \sqrt{1-| \ lambda | ^ 2} \ket{0}\_\end{align}; (一部のユニタリ $U $) を想定しています。
 syntax: 'function ObliviousAmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
@@ -23,7 +23,7 @@ input:
     summary: 補助開始状態を準備する oracle $A $ のユニタリ
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: 補助レジスタとシステムレジスタに対して共同で動作する `ObliviousOracle` 型の、oracle $O $ のユニタリ
+    summary: 補助レジスタとシステムレジスタに`ObliviousOracle`共同で動作する型の、oracle $O $ のユニタリ
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: idxFlagQubit
     summary: シングル qubit フラグ登録のインデックス
@@ -50,9 +50,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: fa44068c55a1bb92f8827095889f9c3b4d6f1011
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: adc6f48a5d335eb9dc92dcb13425de900b5c8563
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872446"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680140"

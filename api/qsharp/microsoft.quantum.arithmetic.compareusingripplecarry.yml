@@ -7,24 +7,24 @@ summary: >-
   この操作では、qubits のレジスタによって表される整数がもう1つの整数より大きいかどうかをテストして、結果の XOR を出力 qubits に適用します。
 
 
-  2つの整数 `x` と `y` 同じサイズの qubit レジスタに格納されている場合、この操作は `x > y`を満たしているかどうかを確認します。 True の場合、1は出力 qubit に Xor ます。 それ以外の場合、0は出力 qubit に Xor されます。
+  2つの`x`整数`y`が指定され、同じサイズの qubit レジスタに格納され`x > y`ている場合、この操作は、が満たされているかどうかを確認します。 True の場合、1は出力 qubit に Xor ます。 それ以外の場合、0は出力 qubit に Xor されます。
 
-  言い換えると、この操作は、ユニタリ $ $ \begin{align} U\ket {x} \ k {y} \ k {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)} で表すことができます。
+  言い換えると、この操作は、ユニタリ $ $ \begin{align} U\ket {x} \ k {y} \ k {z} = \ket{x}\ket{y}\ket{z\oplus (x>y)} で表すことができます。
 
   \end{align} $ $
 syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
-references: '- 新しいクォンタム ripple は、Cuccaro、Draper、Samuel Kutin、David Petrie e を追加しています。これは、'
+references: '- 新しいクォンタム ripple、Cuccaro、Draper、Samuel、Kutin、David Petrie を追加していますので、https://arxiv.org/abs/quant-ph/0410184'
 input:
   content: '(x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit)'
   types:
   - name: x
-    summary: Qubit レジスタの `LittleEndian` 形式で格納されている最初の数値。
+    summary: Qubit レジスタの形式で格納`LittleEndian`されている、比較対象の最初の数値。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: y
-    summary: Qubit レジスタの `LittleEndian` 形式で格納されている2番目の数値。
+    summary: Qubit レジスタの形式で格納`LittleEndian`されている比較対象の2番目の数値。
     uid: microsoft.quantum.arithmetic.littleendian
   - name: output
-    summary: 比較 $x > y $ の結果を格納する qubit。
+    summary: 比較 $x>y $ の結果を格納する qubit。
     isPrimitive: true
     uid: Qubit
 output:
@@ -36,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 1ef346a9fd33859abffe9c30b14b5ea95068169d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 08cff4d874060fce0b461c7eeadfdcadf6fa1453
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871126"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679756"

@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.computereciprocali
 name: ComputeReciprocalI
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: 整数除算を使用して、符号なし整数 x の逆数 1/x を計算します。 結果は整数として解釈され、`floor(2^(2*n-1) / x)`されます。
+summary: 整数除算を使用して、符号なし整数 x の逆数 1/x を計算します。 整数として解釈される結果はに`floor(2^(2*n-1) / x)`なります。
 remarks: 入力 x = 0 の場合、出力はすべて1になります。
 syntax: 'operation ComputeReciprocalI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 91999bd0be10e1e77fb5d1daa88e34373eb83b9f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b371c7c1e7442e49aab01793fdaa9c99bcafa35d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221050"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679722"

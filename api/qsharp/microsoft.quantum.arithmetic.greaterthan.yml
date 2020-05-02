@@ -14,7 +14,7 @@ references: >-
   - Cuccaro、Draper、Samuel、Kutin、David Petrie の: "新しいクォンタム ripple-キャリー追加回路", 2004 ですが、このようになります。
     https://arxiv.org/abs/quant-ph/0410184v1
 
-  - トーマス Haener、Martin Roetteler、Krysta: "2n + 2 qubits と Toffoli based のモジュール乗算を使用したファクタリング"、2016 https://arxiv.org/abs/1611.07995
+  - トーマス Haener、Martin Roetteler、Krysta: "2n + 2 qubits と Toffoli ベースのモジュール乗算を使用したファクタリング"、2016https://arxiv.org/abs/1611.07995
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit)'
   types:
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 062d892ad66b8ab41e8ad0bbd2fce6e1eaff0baa
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 64c96858ea4bf1449a5ddd18f0f7cca45d09fb17
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870854"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679610"
