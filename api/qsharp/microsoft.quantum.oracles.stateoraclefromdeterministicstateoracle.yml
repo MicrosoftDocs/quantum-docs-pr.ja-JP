@@ -3,26 +3,26 @@ uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
 name: StateOracleFromDeterministicStateOracle
 type: function
 namespace: Microsoft.Quantum.Oracles
-summary: '`DeterministicStateOracle` 型の oracle を `StateOracle`に変換します。'
+summary: 型`DeterministicStateOracle`の oracle をに`StateOracle`変換します。
 syntax: 'function StateOracleFromDeterministicStateOracle (deterministicStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.StateOracle'
 input:
   content: '(deterministicStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
   types:
   - name: deterministicStateOracle
-    summary: '`DeterministicStateOracle`型の状態準備 oracle $A $。'
+    summary: 型`DeterministicStateOracle`の状態準備 oracle $A $。
     uid: microsoft.quantum.oracles.deterministicstateoracle
 output:
   content: Microsoft.Quantum.Oracles.StateOracle
   types:
-  - summary: 同じ状態準備 oracle $A $ が、現在は型 `StateOracle`です。 この `StateOracle` のフラグインデックスはダミー変数であり、何の影響もありません。
+  - summary: 同じ状態準備 oracle $A $ が、現在は型`StateOracle`になっています。 この`StateOracle`のフラグインデックスはダミー変数であり、効果はありません。
     uid: microsoft.quantum.oracles.stateoracle
 seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle
 - microsoft.quantum.canon.stateoracle
 metadata:
-  ms.openlocfilehash: 681d5a8a132819fa1b0c1af049418123d21ecec4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9431b58659bb50de872f73890a4a055c5534b2a0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228207"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685141"

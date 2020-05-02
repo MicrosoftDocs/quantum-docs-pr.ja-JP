@@ -8,9 +8,9 @@ remarks: >-
   このコードは、次の2つのホワイトペーパーで個別に検出されました。
 
 
-  - C. H. Bennett、d. DiVincenzo、j.。 Smolin と W. K。 Wootters、"Mixed state 結び付き and クォンタム error 修正、" Phys, 54 (1996) pp. 3824-3851;https://arxiv.org/abs/quant-ph/9604024 と
+  - C. H. Bennett、d. DiVincenzo、j.。 Smolin と W. K。 Wootters、"Mixed state 結び付き and クォンタム error 修正、" Phys, 54 (1996) pp. 3824-3851;https://arxiv.org/abs/quant-ph/9604024および
 
-  - Jenkins 社、 Laflamme、C. Miquel、J. P。 ラパスと W. H. Zurek、"完全なクォンタムエラー修正コード" Phys. Lett. 77 (1996) pp. 198-201;https://arxiv.org/abs/quant-ph/9602019
+  - R. Laflamme、C. Miquel、J. P。 ラパスと W. H. Zurek、"完全なクォンタムエラー修正コード" Phys. Lett. 77 (1996) pp. 198-201;https://arxiv.org/abs/quant-ph/9602019
 syntax: 'function FiveQubitCode () : Microsoft.Quantum.ErrorCorrection.QECC'
 input:
   content: ()
@@ -18,12 +18,12 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.QECC
   types:
-  - summary: '`QECC` 型を指定することによって、クォンタムエラー修正コードの実装を返します。'
+  - summary: 型を`QECC`指定して、クォンタムエラー修正コードの実装を返します。
     uid: microsoft.quantum.errorcorrection.qecc
 metadata:
-  ms.openlocfilehash: 1865ededef3e3ada743a49ef81141aeffdcfed0a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 39bd3adacd0f8e872d682d0df0bf81a3f1e1d8f0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220404"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684944"

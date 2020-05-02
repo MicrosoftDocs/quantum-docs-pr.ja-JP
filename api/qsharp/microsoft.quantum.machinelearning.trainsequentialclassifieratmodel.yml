@@ -16,7 +16,7 @@ input:
     isArray: true
     uid: microsoft.quantum.machinelearning.labeledsample
   - name: options
-    summary: トレーニング時に使用する構成詳細については、@"microsoft.quantum.machinelearning.trainingoptions" と @"microsoft.quantum.machinelearning.defaulttrainingoptions" を参照してください。
+    summary: トレーニング時に使用する構成詳細@"microsoft.quantum.machinelearning.trainingoptions"に@"microsoft.quantum.machinelearning.defaulttrainingoptions"ついては、「」を参照してください。
     uid: microsoft.quantum.machinelearning.trainingoptions
   - name: trainingSchedule
     summary: トレーニング手順でトレーニングデータからサンプルを選択するときに使用するサンプリングスケジュール。
@@ -39,9 +39,9 @@ seeAlso:
 - microsoft.quantum.machinelearning.trainsequentialclassifier
 - microsoft.quantum.machinelearning.validatesequentialclassifier
 metadata:
-  ms.openlocfilehash: 5b574d72115518389124d850a96f9fbcd669bd4e
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: ab30be93a0a1e0b347d2adfe82dbcf07b12d6996
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77909043"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684288"

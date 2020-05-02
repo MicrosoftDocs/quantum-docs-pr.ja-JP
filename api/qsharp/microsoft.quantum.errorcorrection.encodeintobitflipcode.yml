@@ -14,7 +14,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: auxQubits
-    summary: 保護されるデータのエンコードに使用される $ \ket{00}$ state の最初の補助 qubits のレジスタ。
+    summary: 保護されるデータのエンコードに使用される、{00}$ \ket $ 状態の最初の補助 qubits のレジスタ。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -26,9 +26,9 @@ output:
 seeAlso:
 - logicalregister
 metadata:
-  ms.openlocfilehash: 3890f4eebb70ea38fd23ffbe2b7b7eadf9e41d7b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7a902bc056b9eb39bf12125a1078329f56712ac9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234582"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685006"
