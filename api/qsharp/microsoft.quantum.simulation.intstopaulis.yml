@@ -9,21 +9,21 @@ input:
   content: '(ints : Int[])'
   types:
   - name: ints
-    summary: P# li 演算子に変換する `0..3` 範囲内の整数の配列。
+    summary: P# li 演算子に変換`0..3`される範囲内の整数の配列。
     isArray: true
     isPrimitive: true
     uid: Int
 output:
   content: Pauli[]
   types:
-  - summary: '`paulis[idxPauli]` `ints` と同じ長さ `Pauli[]` `paulis` 配列は、`[PauliI, PauliX, PauliY, PauliZ]` によって指定された `ints[idxPauli]`の要素と同じ長さになります。'
+  - summary: によっ`paulis`て`ints[idxPauli]`指定された`Pauli[]`の`ints` `paulis[idxPauli]` `[PauliI, PauliX, PauliY, PauliZ]`要素と同じ長さの、p# li 演算子の配列。
     isArray: true
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 407ad1481c220f390fffb5f1b59f0968d6d6570c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1159e3db02663b0588d12ea9d297e055be84ac4a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066984"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682613"

@@ -3,16 +3,16 @@ uid: microsoft.quantum.errorcorrection.recover
 name: Recover
 type: operation
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: '`QECC` 型で記述されたクォンタムコードによって、1回のエラー修正を実行します。'
+summary: '`QECC`型によって記述されたクォンタムコードによって、1回のエラー修正を実行します。'
 syntax: 'operation Recover (code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: '`QECC` 型としてパッケージ化されたクォンタムエラー修正コードは、クォンタムデータのエンコードとデコード、およびエラー syndromes の測定方法を記述します。'
+    summary: クォンタムエラー- `QECC`型としてパッケージ化されたコードを修正するには、クォンタムデータのエンコードとデコード、およびエラー syndromes の測定方法を記述します。
     uid: microsoft.quantum.errorcorrection.qecc
   - name: fn
-    summary: 検出されたエラーを修正する `Pauli[]` 操作に各エラーより隣人をマップする `RecoveryFn`。
+    summary: 検出`RecoveryFn`されたエラーを修正する`Pauli[]`操作に各エラーより隣人をマップする。
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
     summary: 安定板のコードが定義されている qubits の配列。
@@ -27,9 +27,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: baaa5862dd189a04667081d762900931e6b5e766
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2a873e06c20bf62c998b1096d862d26ff89aa134
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220353"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682284"
