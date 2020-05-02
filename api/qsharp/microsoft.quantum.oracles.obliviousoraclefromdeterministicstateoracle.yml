@@ -3,29 +3,29 @@ uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
 name: ObliviousOracleFromDeterministicStateOracle
 type: function
 namespace: Microsoft.Quantum.Oracles
-summary: Oracles `DeterministicStateOracle` と `ObliviousOracle`を結合します。
+summary: Oracles `DeterministicStateOracle`とを`ObliviousOracle`結合します。
 syntax: 'function ObliviousOracleFromDeterministicStateOracle (ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle) : Microsoft.Quantum.Oracles.ObliviousOracle'
 input:
   content: '(ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle)'
   types:
   - name: ancillaOracle
-    summary: $A $ のレジスタで動作 `DeterministicStateOracle` 型の状態準備 oracle $A $。
+    summary: 登録 $a $ で動作する型`DeterministicStateOracle`の状態準備 oracle $A $。
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: Oracle $U $ 型の $ は、レジスタ $a, s $ に共同で作用 `ObliviousOracle` ます。
+    summary: Register $a, s $ に`ObliviousOracle`共同で作用する型の oracle $U $。
     uid: microsoft.quantum.oracles.obliviousoracle
 output:
   content: Microsoft.Quantum.Oracles.ObliviousOracle
   types:
-  - summary: Oracle $O = UA $ 型 `ObliviousOracle`です。
+  - summary: Oracle $O = UA $ 型`ObliviousOracle`。
     uid: microsoft.quantum.oracles.obliviousoracle
 seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle
 - microsoft.quantum.canon.obliviousoracle
 metadata:
-  ms.openlocfilehash: 2fc80a583ef8990b0a9043e4847d926f37b48b77
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 036d89ed2a9b3a0db2637964e4fabec7352a67d9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231012"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681235"

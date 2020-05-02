@@ -7,8 +7,8 @@ summary: >-
   指定された P# li 軸についての回転を適用します。
 
 
-  \begin{align} R_ {\ mu} (\ シータ) \mathrel{: =} e ^ {-}/2}, \end{align} where $ \ mu \ in \{I, X, Y, Z\}$ ですが、$。
-remarks: '`pauli = PauliI`で呼び出された場合、この操作は*グローバルフェーズ*を適用します。 このフェーズは、`Controlled` ファンクタと共に使用すると重要になる場合があります。'
+  \begin{align} R_ {\ mu} (\ シータ) \mathrel{: =} e ^ {-i \ シータ \ sigma_ {/mu}/2}、\end{align} where $ \ mu \ \{i, X, Y, Z\}$ です。
+remarks: で`pauli = PauliI`呼び出された場合、この操作は*グローバルフェーズ*を適用します。 このフェーズは、 `Controlled`ファンクタで使用する場合に重要になります。
 syntax: 'operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit'
 input:
   content: '(pauli : Pauli, theta : Double, qubit : Qubit)'
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: cb7cf0c4c2a758b1abaa80d6fe3c265fc9feabb2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d6655f674d7bd6b92cfb0e81e588bdcd48380bf4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234021"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681774"
