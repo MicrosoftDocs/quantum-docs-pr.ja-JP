@@ -7,7 +7,7 @@ summary: >-
   可能な場合は、指定した大きい整数を等価の整数に変換します。
 
   関数は、変換が可能であった場合にのみ、結果として得られる整数とブール値のフラグのペアを返します。
-remarks: 詳細については、「 [ C# BigInteger コンストラクター](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) 」を参照してください。
+remarks: 詳細については、「 [C# BigInteger コンストラクター](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) 」を参照してください。
 syntax: 'function MaybeBigIntAsInt (a : BigInt) : (Int, Bool)'
 input:
   content: '(a : BigInt)'
@@ -24,9 +24,9 @@ output:
     - isPrimitive: true
       uid: Bool
 metadata:
-  ms.openlocfilehash: cd679df4a0cf178bf53bbf566bdfa0395ad8b019
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 98bd88315e9a1cbce2770ba82fd0eed18eac73c3
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230774"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677416"

@@ -3,7 +3,7 @@ uid: microsoft.quantum.characterization.quantumphaseestimation
 name: QuantumPhaseEstimation
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: 指定された oracle `U` と `targetState`に対してクォンタムフェーズ推定アルゴリズムを実行し、そのフェーズをビッグエンディアンクォンタムレジスタに読み取ります。
+summary: 指定された oracle `U`に対してクォンタムフェーズ推定`targetState`アルゴリズムを実行し、フェーズをビッグエンディアンクォンタムレジスタに読み込みます。
 syntax: 'operation QuantumPhaseEstimation (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian)'
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: f5cb07ee948a0472bbd5b85ba13e12fa6a9eff39
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: adbaf8af437a7067e8d2e6076b1a48c9000be3eb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229108"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677625"

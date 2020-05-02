@@ -3,13 +3,13 @@ uid: microsoft.quantum.chemistry.htermtogenidx
 name: HTermToGenIdx
 type: function
 namespace: Microsoft.Quantum.Chemistry
-summary: '`HTerm` データ形式の Hamiltonian term を GeneratorIndex に変換します。'
+summary: データ形式の`HTerm` Hamiltonian Term を GeneratorIndex に変換します。
 syntax: 'function HTermToGenIdx (term : Microsoft.Quantum.Chemistry.HTerm, termType : Int[]) : Microsoft.Quantum.Simulation.GeneratorIndex'
 input:
   content: '(term : Microsoft.Quantum.Chemistry.HTerm, termType : Int[])'
   types:
   - name: term
-    summary: '`HTerm` 形式でデータを入力します。'
+    summary: 形式でデータ`HTerm`を入力します。
     uid: microsoft.quantum.chemistry.hterm
   - name: termType
     summary: GeneratorIndex に追加される追加情報。
@@ -19,12 +19,12 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.GeneratorIndex
   types:
-  - summary: '`termType`によって追加された追加情報と共に `term`によって表される Hamiltonian term を表す GeneratorIndex。'
+  - summary: で表される Hamiltonian term と`term`、によって`termType`追加された追加情報を表す GeneratorIndex。
     uid: microsoft.quantum.simulation.generatorindex
 metadata:
-  ms.openlocfilehash: edfd08b1e9f80a0f468d50a10a7ad3ff0187511c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cf8f527c6acf2762b5ce415b707358f1011997ef
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228870"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677523"

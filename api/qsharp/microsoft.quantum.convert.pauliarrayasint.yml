@@ -10,7 +10,7 @@ remarks: >-
   \end{align} $ $
 
 
-  指定した `[P0, ..., Pn]`の配列がある場合、この関数は、ビッグエンディアン順 `bits(Pn) ... bits(P0)`の各 Pan Li 演算子のマッピングを連結することによって、バイナリ拡張を含む整数を返します。
+  これらの演算子`[P0, ..., Pn]`の配列を指定した場合、この関数は、ビッグエンディアン順`bits(Pn) ... bits(P0)`で各 pan li 演算子のマッピングを連結することによって、バイナリ拡張を含む整数を返します。
 syntax: 'function PauliArrayAsInt (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Int
   types:
-  - summary: 次に示すように、`paulis`を一意に識別する整数。
+  - summary: 次に示すよう`paulis`に、一意に識別する整数。
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0c211075d07147b1c1392fe3f3e4ceb110364bb3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 170218ccf1ec4ee1183a7a69ff1e0969f595cac4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230757"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677389"

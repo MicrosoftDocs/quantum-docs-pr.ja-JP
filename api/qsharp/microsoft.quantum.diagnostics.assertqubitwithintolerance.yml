@@ -3,14 +3,14 @@ uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
 name: AssertQubitWithinTolerance
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
-summary: Qubit `q` が、指定された許容範囲内の Pauli Z 演算子の予測される eigenstate 内にあることをアサートします。
-remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> を使用すると、$ eigenstates $Z だけでなく、任意の qubit 状態をアサートできます。
+summary: 指定された許容`q`範囲を上限として、Pauli Z 演算子の予期される eigenstate に qubit があることをアサートします。
+remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance>$Z $ eigenstates だけでなく、任意の qubit 状態をアサートできるようにします。
 syntax: 'operation AssertQubitWithinTolerance (expected : Result, q : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Result, q : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: 'Qubit があると想定されている状態: `Zero` または `One`。'
+    summary: 'Qubit があることが予期されている`Zero`状態`One`: または。'
     isPrimitive: true
     uid: Result
   - name: q
@@ -29,9 +29,9 @@ output:
 seeAlso:
 - assertqubitisinstatewithintolerance
 metadata:
-  ms.openlocfilehash: ccb44aed5612c369ff7c4e687e72fc65fba4180e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2749c682128e7c67506c2291d7a9e6034998731d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227085"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677244"

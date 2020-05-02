@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Characterization
 summary: Qubits のレジスタで id 演算子を測定します。
 remarks: >-
-  $/Bold が $ は eigenvalue $1 $ のみを持ち、負の eigenvalue を持たないため、この操作は常に eigenvalue $ + 1 = (-1) ^ 0 $ に対応する `Zero`を返し、`register`の状態が折りたたまれることはありません。
+  $/を完了した $ は eigenvalue $1 $ のみを持ち、負の eigenvalue を持たないため、この操作`Zero`は常にを返します。これは eigenvalue $ + 1 = (-1) ^ 0 $ に相当します。の`register`状態を折りたたむことはできません。
 
 
   実際には、この操作は役に立ちませんが、プロセス tomography のコンテキストでは、クォンタムプロセスのトレース保持に関する情報を提供するので役立ちます。
@@ -23,13 +23,13 @@ input:
 output:
   content: Result
   types:
-  - summary: 結果の値 `Zero`。
+  - summary: 結果の値`Zero`。
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: fcfe08d4ae7a192074b90b7b45fffbcb5944e7ff
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 28dd3655c883c02b798e6e4cdf39c70100c6535b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229125"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677634"

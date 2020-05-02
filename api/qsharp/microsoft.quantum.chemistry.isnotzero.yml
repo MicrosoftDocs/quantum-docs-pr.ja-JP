@@ -3,7 +3,7 @@ uid: microsoft.quantum.chemistry.isnotzero
 name: IsNotZero
 type: function
 namespace: Microsoft.Quantum.Chemistry
-summary: '`Double` 数が約0でないかどうかを確認します。'
+summary: 数値が約`Double` 0 以外であるかどうかを確認します。
 syntax: 'function IsNotZero (number : Double) : Bool'
 input:
   content: '(number : Double)'
@@ -15,13 +15,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`number` に `1e-15`よりも大きい絶対値が含まれている場合に true を返します。'
+  - summary: の値が`number`を超える`1e-15`絶対値を持つ場合に true を返します。
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: dad9a5f63a4adab9eb2ff8c4d969baaf1f2b346b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e52a6215bcd8f7f0da5c6a09c60a74c027602361
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228836"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677478"
