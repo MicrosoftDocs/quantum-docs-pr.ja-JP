@@ -4,9 +4,9 @@ name: CControlledC
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  操作 op が指定された場合、は、従来の制御ビットが true の場合に op を適用する新しい操作を返します。 `false`した場合、何も起こりません。
+  操作 op が指定された場合、は、従来の制御ビットが true の場合に op を適用する新しい操作を返します。 の`false`場合、何も起こりません。
 
-  修飾子 `C` は、操作が制御可能であることを示します。
+  修飾子`C`は、操作が制御可能であることを示します。
 syntax: "function CControlledC (op : ('T => Unit is Ctl)) : ((Bool, 'T) => Unit is Ctl)"
 input:
   content: "(op : ('T => Unit is Ctl))"
@@ -47,9 +47,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.ccontrolled
 metadata:
-  ms.openlocfilehash: 73a953fd2f2380f808fd612e46084c443e6c87ee
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a136257958cff7a759cdd34f266db1909b646f23
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211785"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675884"

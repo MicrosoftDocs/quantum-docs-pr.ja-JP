@@ -1,16 +1,16 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arithmetic
 name: Microsoft.Quantum.Arithmetic
-summary: " # <a name=\"summary\"></a>要約\n この名前空間には、一貫 compute 算術演算に使用される関数と操作が含まれています。"
+summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、一貫 compute 算術演算に使用される関数と操作が含まれています。"
 functions:
 - uid: microsoft.quantum.arithmetic.bigendianaslittleendian
-  summary: Qubit の順序を逆にして、`BigEndian` qubit レジスタを `LittleEndian` qubit レジスタに変換します。
+  summary: '`BigEndian` Qubit の順序を逆に`LittleEndian`して、qubit レジスタを qubit レジスタに変換します。'
 - uid: microsoft.quantum.arithmetic.identicalformatfactfxp
   summary: 指定された配列内のすべての固定小数点数のポイント位置と qubit 数値が同一であることをアサートします。
 - uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
   summary: 指定された配列内のすべての固定小数点数が、最下位ビットからカウントされるときに同一のポイント位置を持つことをアサートします。 つまり、ビット数からポイント位置を引いた値は、配列内のすべての固定小数点数に対して定数である必要があります。
 - uid: microsoft.quantum.arithmetic.littleendianasbigendian
-  summary: Qubit の順序を逆にして、`LittleEndian` qubit レジスタを `BigEndian` qubit レジスタに変換します。
+  summary: '`LittleEndian` Qubit の順序を逆に`BigEndian`して、qubit レジスタを qubit レジスタに変換します。'
 - uid: microsoft.quantum.arithmetic.reversedopbe
   summary: ビッグエンディアン入力を受け取る操作が指定された場合、は、リトルエンディアン入力を受け取る新しい操作を返します。
 - uid: microsoft.quantum.arithmetic.reversedopbea
@@ -33,19 +33,19 @@ operations:
 - uid: microsoft.quantum.arithmetic.addfxp
   summary: クォンタムレジスタに格納されている2つの固定小数点数を追加します。
 - uid: microsoft.quantum.arithmetic.addi
-  summary: では、`ys`のレジスタサイズに応じて、キャリーとの加算が自動的に選択されます。
+  summary: では、のレジスタサイズに応じて、キャリーとの`ys`加算が自動的に選択されます。
 - uid: microsoft.quantum.arithmetic.applyleoperationonphasele
-  summary: <xref:microsoft.quantum.arithmetic.littleendian>型のターゲットレジスタに対する入力として <xref:microsoft.quantum.arithmetic.phaselittleendian> レジスタを受け取る操作を適用します。
+  summary: 型<xref:microsoft.quantum.arithmetic.littleendian>のターゲットレジスタに対し<xref:microsoft.quantum.arithmetic.phaselittleendian>てレジスタを入力として受け取る操作を適用します。
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselea
-  summary: <xref:microsoft.quantum.arithmetic.littleendian>型のターゲットレジスタに対する入力として <xref:microsoft.quantum.arithmetic.phaselittleendian> レジスタを受け取る操作を適用します。
+  summary: 型<xref:microsoft.quantum.arithmetic.littleendian>のターゲットレジスタに対し<xref:microsoft.quantum.arithmetic.phaselittleendian>てレジスタを入力として受け取る操作を適用します。
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselec
-  summary: <xref:microsoft.quantum.arithmetic.littleendian>型のターゲットレジスタに対する入力として <xref:microsoft.quantum.arithmetic.phaselittleendian> レジスタを受け取る操作を適用します。
+  summary: 型<xref:microsoft.quantum.arithmetic.littleendian>のターゲットレジスタに対し<xref:microsoft.quantum.arithmetic.phaselittleendian>てレジスタを入力として受け取る操作を適用します。
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaseleca
-  summary: <xref:microsoft.quantum.arithmetic.littleendian>型のターゲットレジスタに対する入力として <xref:microsoft.quantum.arithmetic.phaselittleendian> レジスタを受け取る操作を適用します。
+  summary: 型<xref:microsoft.quantum.arithmetic.littleendian>のターゲットレジスタに対し<xref:microsoft.quantum.arithmetic.phaselittleendian>てレジスタを入力として受け取る操作を適用します。
 - uid: microsoft.quantum.arithmetic.applymajorityinplace
   summary: Qubit のレジスタに対して、3つの qubit マジョリティ操作をインプレースで適用します。
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonle
-  summary: <xref:microsoft.quantum.arithmetic.phaselittleendian>型のターゲットレジスタに対する入力として <xref:microsoft.quantum.arithmetic.littleendian> レジスタを受け取る操作を適用します。
+  summary: 型<xref:microsoft.quantum.arithmetic.phaselittleendian>のターゲットレジスタに対し<xref:microsoft.quantum.arithmetic.littleendian>てレジスタを入力として受け取る操作を適用します。
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonlea
   summary: ''
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonlec
@@ -71,34 +71,34 @@ operations:
 - uid: microsoft.quantum.arithmetic.applyxorinplace
   summary: 古典的な整数と、qubits のレジスタによって表される整数の間のビットごとの XOR 演算を適用します。
 - uid: microsoft.quantum.arithmetic.assertallzerofxp
-  summary: クォンタムの固定小数点数が0に初期化されることをアサートするヘルパー関数。つまり、すべての qubits は state $ \ket{0}$ にあります。
+  summary: クォンタムの固定小数点数が0に初期化されることをアサートするヘルパー関数。つまり、すべての qubits は状態が{0}$ \ket $ になります。
 - uid: microsoft.quantum.arithmetic.assertmostsignificantbit
   summary: 符号なし整数を表す qubit レジスタの最上位の qubit が特定の状態であることをアサートします。
 - uid: microsoft.quantum.arithmetic.assertphaselessthan
-  summary: PhaseLittleEndian でエンコードされた `number` が `value`未満であることをアサートします。
+  summary: PhaseLittleEndian で`number`エンコードされたが未満で`value`あることをアサートします。
 - uid: microsoft.quantum.arithmetic.assertprobint
   summary: クォンタムレジスタの特定の状態の確率に予期される値があることをアサートします。
 - uid: microsoft.quantum.arithmetic.carry
-  summary: 元に戻す伝達ゲートを実装します。 Qubit `carryIn` でエンコードされたキャリービットと `summand1` と `summand2`でエンコードされた2つの summand ビットがある場合、は、qubit `summand1` 内の `carryIn`、`summand2`、および `summand2` のビットごとの xor を計算し、キャリーは qubit `carryOut`に対して xor になります。
+  summary: 元に戻す伝達ゲートを実装します。 Qubit `carryIn`でエンコードされたキャリービットと、および`summand1` `summand2`でエンコードされた2つの summand ビットが`carryIn`ある`summand1`場合`summand2` 、はのビット`summand2`ごとの xor を計算し、qubit では`carryOut`xor は qubit に対してになります。
 - uid: microsoft.quantum.arithmetic.cascadeccnot
   summary: >-
     2つの qubit レジスタの対応するビットで制御される CCNOT ゲートのカスケードを実装します。これは、いずれかのレジスタの次の qubit で動作します。
 
-    両方のレジスタでコントロールとして位置0にある qubits から、CCNOT はターゲットレジスタの位置1にある qubits に適用され、ターゲットレジスタの位置2の qubits に作用する位置1の qubits によって制御されます。その後、`Length(nQubits)-1`位置のターゲット qubits に対するアクションで制御されます。
+    両方のレジスタでコントロールとして位置0にある qubits から、CCNOT はターゲットレジスタの位置1にある qubits に適用され、ターゲットレジスタの位置2の qubits に作用する位置1の qubits によって制御されます。その後、ターゲットの qubits `Length(nQubits)-1`に対するアクションで終了します。
 - uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
   summary: クォンタムレジスタに格納されている2つの固定小数点数を比較し、結果のフリップを制御します。
 - uid: microsoft.quantum.arithmetic.comparegti
-  summary: '整数比較のラッパー: `result = x > y`。'
+  summary: '整数比較のラッパー: `result = x > y`'
 - uid: microsoft.quantum.arithmetic.comparegtsi
-  summary: '符号付き整数の比較のラッパー: `result = xs > ys`。'
+  summary: 符号付き整数比較のラッパー `result = xs > ys`:。
 - uid: microsoft.quantum.arithmetic.compareusingripplecarry
   summary: この操作では、qubits のレジスタによって表される整数がもう1つの整数より大きいかどうかをテストして、結果の XOR を出力 qubits に適用します。
 - uid: microsoft.quantum.arithmetic.computereciprocalfxp
   summary: $ 1/x $ を計算します (固定小数点数 $x $)。
 - uid: microsoft.quantum.arithmetic.computereciprocali
-  summary: 整数除算を使用して、符号なし整数 x の逆数 1/x を計算します。 結果は整数として解釈され、`floor(2^(2*n-1) / x)`されます。
+  summary: 整数除算を使用して、符号なし整数 x の逆数 1/x を計算します。 整数として解釈される結果はに`floor(2^(2*n-1) / x)`なります。
 - uid: microsoft.quantum.arithmetic.copymostsignificantbit
-  summary: 符号なし整数を表す qubit レジスタ `from` の最上位ビットを qubit `target`にコピーします。
+  summary: 符号なし整数を表す qubit レジスタ`from`の最上位ビットを qubit `target`にコピーします。
 - uid: microsoft.quantum.arithmetic.dividei
   summary: 2つのクォンタム整数を除算します。
 - uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
@@ -124,7 +124,7 @@ operations:
 - uid: microsoft.quantum.arithmetic.measurefxp
   summary: 固定小数点数を測定し、その値を Double として返し、すべてのレジスタをゼロにリセットします。
 - uid: microsoft.quantum.arithmetic.measureinteger
-  summary: クォンタムレジスタの内容を測定し、整数に変換します。 測定値は、標準の計算基準 (つまり、`PauliZ`の値に基づいて実行されます。
+  summary: クォンタムレジスタの内容を測定し、整数に変換します。 測定は、標準の計算基準 (つまり、の`PauliZ`eigenbasis) に対して実行されます。
 - uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
   summary: Qubit レジスタに対して、モジュールの乗算および加算による整数定数を実行します。
 - uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
@@ -134,9 +134,9 @@ operations:
 - uid: microsoft.quantum.arithmetic.multiplyfxp
   summary: クォンタムレジスタの2つの固定小数点数を乗算します。
 - uid: microsoft.quantum.arithmetic.multiplyi
-  summary: 整数 `xs` を整数 `ys` で乗算し、結果を `result`に格納します。最初はゼロである必要があります。
+  summary: 整数`xs`を整数`ys`で乗算し、結果を`result`に格納します。最初はゼロである必要があります。
 - uid: microsoft.quantum.arithmetic.multiplysi
-  summary: 符号付き整数の `xs` を符号付き整数 `ys` で乗算し、結果を `result`に格納します。最初はゼロである必要があります。
+  summary: 符号付き整数`xs`を符号付き`ys`整数で乗算し、 `result`結果をに格納します。最初はゼロである必要があります。
 - uid: microsoft.quantum.arithmetic.preparefxp
   summary: クォンタム固定小数点数を古典定数に初期化します。
 - uid: microsoft.quantum.arithmetic.reflectaboutinteger
@@ -147,29 +147,29 @@ operations:
   summary: >-
     元に戻すことができ、2つの整数がインプレース適用されます。
 
-    LittleEndian レジスタ `xs` と `ys`でエンコードされた $n $ bit 整数が2つあり、qubit が格納されている場合、演算は、結果の最下位ビットが `ys` に保持され、キャリービットが qubit `carry`に xor さ $n れる2つの整数の合計を計算します。
+    LittleEndian レジスタ`xs`にエンコードされた2つの $n $ `ys`ビット整数と、qubit が渡された場合、演算は2つの整数の合計を計算します。この2つの`ys`整数は、結果の最下位の $n $ が`carry`保持され、実行ビットは qubit に xor されます。
 - uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
   summary: 元に戻すことができ、インプレースリップは実行されずに2つの整数を追加します。
 - uid: microsoft.quantum.arithmetic.ripplecarryadderttk
   summary: >-
     元に戻すことができ、2つの整数がインプレース適用されます。
 
-    LittleEndian レジスタ `xs` と `ys`でエンコードされた $n $ bit 整数が2つあり、qubit が格納されている場合、演算は、結果の最下位ビットが `ys` に保持され、キャリービットが qubit `carry`に xor さ $n れる2つの整数の合計を計算します。
+    LittleEndian レジスタ`xs`にエンコードされた2つの $n $ `ys`ビット整数と、qubit が渡された場合、演算は2つの整数の合計を計算します。この2つの`ys`整数は、結果の最下位の $n $ が`carry`保持され、実行ビットは qubit に xor されます。
 - uid: microsoft.quantum.arithmetic.squarefxp
   summary: は固定小数点数を二乗します。
 - uid: microsoft.quantum.arithmetic.squarei
-  summary: 整数 `xs` の2乗を `result`に計算します。最初はゼロである必要があります。
+  summary: 整数`xs`の2乗をに`result`計算します。最初はゼロである必要があります。
 - uid: microsoft.quantum.arithmetic.squaresi
-  summary: 角かっこで囲まれた符号付き整数 `xs` し、結果を `result`に格納します。最初はゼロである必要があります。
+  summary: 2乗符号`xs`付き整数。結果を`result`に格納します。最初はゼロである必要があります。
 - uid: microsoft.quantum.arithmetic.sum
-  summary: 元に戻すことができない合計ゲートを実装します。 Qubit `carryIn` でエンコードされたキャリービットと `summand1` と `summand2`でエンコードされた2つの summand ビットがある場合、は、qubit `summand1` 内の `carryIn`、`summand2`、および `summand2`のビットごとの xor を計算します。
+  summary: 元に戻すことができない合計ゲートを実装します。 Qubit `carryIn` `summand1`でエンコードされたキャリービットと、と`summand2`でエンコードされた2つの summand ビットを`carryIn`指定`summand1`する`summand2`と、との`summand2`ビットごとの xor を計算します。
 newtypes:
 - uid: microsoft.quantum.arithmetic.bigendian
-  summary: ビッグエンディアンの順序で符号なし整数をエンコードするレジスタ。 インデックス `0` の qubit は、符号なし整数の最上位ビットをエンコードします。
+  summary: ビッグエンディアンの順序で符号なし整数をエンコードするレジスタ。 Qubit with index `0`は、符号なし整数の最上位ビットをエンコードします。
 - uid: microsoft.quantum.arithmetic.fixedpoint
   summary: 固定小数点数をエンコードする qubits のレジスタを表します。 は、バイナリポイントの左側にある qubits の数と等しい整数で構成されます。つまり、1以上の重みの qubits と、クォンタムレジスタです。
 - uid: microsoft.quantum.arithmetic.littleendian
-  summary: 符号なし整数をリトルエンディアン順にエンコードするレジスタ。 インデックス `0` の qubit は、符号なし整数の最下位ビットをエンコードします。
+  summary: 符号なし整数をリトルエンディアン順にエンコードするレジスタ。 Qubit with index `0`は、符号なし整数の最下位ビットをエンコードします。
 - uid: microsoft.quantum.arithmetic.phaselittleendian
   summary: >-
     QFT のリトルエンディアン符号なし整数。
@@ -179,9 +179,9 @@ newtypes:
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: リトルエンディアンに格納されている符号付き整数の型 (「LittleEndian」を参照)。
 metadata:
-  ms.openlocfilehash: 905bac104c15881be6b2e600bd090ff650d63e0e
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: eda1d6d9037caecd7a2f0d91acdc0e59d34efe41
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77904555"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675489"
