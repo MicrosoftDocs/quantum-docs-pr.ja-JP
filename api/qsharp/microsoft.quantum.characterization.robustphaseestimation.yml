@@ -3,10 +3,10 @@ uid: microsoft.quantum.characterization.robustphaseestimation
 name: RobustPhaseEstimation
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: 指定された oracle `U` と eigenstate に対して、反復的ではない堅牢なクォンタムフェーズの推定アルゴリズムを実行し、ハイゼンベルグ limit での差異スケールを使用して、フェーズの1つの実際の予測値を提供します。
+summary: 指定された oracle `U`および eigenstate に対して、反復的ではない堅牢なクォンタムフェーズの推定アルゴリズムを実行し、ハイゼンベルグ limit での差異のスケーリングにより、フェーズの1つの実際の値の見積もりを提供します。
 remarks: クエリ数が多い場合、$/phi $ を満たす推定の標準偏差の下限を Cramer します。この値を超えると、$/シグマが使用されます (クエリ数 {#)。
 syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double'
-references: '- 堅牢なフェーズ推定 Shelby Kimmel、Guang Hao Low、Theodore J https://arxiv.org/abs/1502.02677 氏による、ユニバーサルシングル Qubit ゲートセットの堅牢な調整'
+references: '- 堅牢なフェーズ推定 Shelby Kimmel、Guang Hao Low、Theodore J 氏による、ユニバーサルシングル Qubit ゲートセットの堅牢な調整https://arxiv.org/abs/1502.02677'
 input:
   content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[])'
   types:
@@ -28,9 +28,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 169a828036fbe84f49e5d87399319d14a9584051
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5fa87e4da621871685501d58fa4a70b172f973b7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229057"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677597"

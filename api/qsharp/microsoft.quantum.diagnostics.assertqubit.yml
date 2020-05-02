@@ -3,14 +3,14 @@ uid: microsoft.quantum.diagnostics.assertqubit
 name: AssertQubit
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
-summary: Qubit `q` が、Pauli Z 演算子の予期される eigenstate にあることをアサートします。
-remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> を使用すると、$ eigenstates $Z だけでなく、任意の qubit 状態をアサートできます。
+summary: Qubit `q`が Pauli Z 演算子の予期される eigenstate にあることをアサートします。
+remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance>$Z $ eigenstates だけでなく、任意の qubit 状態をアサートできるようにします。
 syntax: 'operation AssertQubit (expected : Result, q : Qubit) : Unit'
 input:
   content: '(expected : Result, q : Qubit)'
   types:
   - name: expected
-    summary: 'Qubit があると想定されている状態: `Zero` または `One`。'
+    summary: 'Qubit があることが予期されている`Zero`状態`One`: または。'
     isPrimitive: true
     uid: Result
   - name: q
@@ -25,9 +25,9 @@ output:
 seeAlso:
 - assertqubitisinstatewithintolerance
 metadata:
-  ms.openlocfilehash: e926e8a106e7ef0999f30d00922394e611aa40a8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 18d1db5c36dddf7bd40c64e02252a15d37dc4fe1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227170"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677256"

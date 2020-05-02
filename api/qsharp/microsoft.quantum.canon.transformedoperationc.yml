@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: 関数と操作が指定された場合、指定された関数によって入力が変換される新しい操作を返します。
 examples: >-
-  次の呼び出しでは、@"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" を使用して、@"Microsoft.Quantum.Arithmetic.BigEndian" 入力用に設計された操作を @"Microsoft.Quantum.Arithmetic.LittleEndian"型の入力を受け入れる操作に変換します。
+  次の呼び出しで@"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian"は、を使用して@"Microsoft.Quantum.Arithmetic.BigEndian" 、入力用に設計された操作@"Microsoft.Quantum.Arithmetic.LittleEndian"を、型の入力を受け入れる操作に変換します。
 
 
   ```qsharp
@@ -44,7 +44,7 @@ input:
 output:
   content: ('U => Unit is Ctl)
   types:
-  - summary: 新しい操作 tbat は、入力と共に `fn` を呼び出し、その結果の出力を `op`に渡します。
+  - summary: 新しい操作 tbat は、 `fn`入力を使用してを呼び出し、その結果`op`の出力をに渡します。
     isOperation: true
     input:
       types:
@@ -63,9 +63,9 @@ seeAlso:
 - applywithinputtransformation
 - compose
 metadata:
-  ms.openlocfilehash: 315c9aa76018490a58fcf9bbf93d4ef0e8410616
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7f71aa5549ee813d0e53ed5b043479a7e7f3ffb6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217055"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678039"

@@ -3,23 +3,23 @@ uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerblockencodinggenerator
 name: JordanWignerBlockEncodingGeneratorSystem
 type: function
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: '`JWOptimizedHTerms` によって記述される Hamiltonian を、p Li `GeneratorIndex`の観点で表現された `GeneratorSystem` に変換します。'
+summary: によって`JWOptimizedHTerms`記述された`GeneratorSystem` Hamiltonian を、p li `GeneratorIndex`の観点から表現されたに変換します。
 syntax: 'function JordanWignerBlockEncodingGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms)'
   types:
   - name: data
-    summary: '`JWOptimizedHTerms` 形式の Hamiltonian の説明。'
+    summary: '`JWOptimizedHTerms`形式の Hamiltonian の説明。'
     uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: '`GeneratorSystem`としての Hamiltonian の表現。'
+  - summary: Hamiltonian の表現`GeneratorSystem`。
     uid: microsoft.quantum.simulation.generatorsystem
 metadata:
-  ms.openlocfilehash: f63434d0a3414faf3fbe1882680411bc0a5e6443
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cf17f51bf5a5ec72157036e8154d4079f2d04ba0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228802"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677494"

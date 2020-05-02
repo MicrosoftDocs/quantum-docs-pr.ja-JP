@@ -4,7 +4,7 @@ name: AssertOperationsEqualInPlaceCompBasis
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
 summary: >-
-  演算の `givenU` が、計算ベースのベクターに対してのみ操作の操作をチェックすることによって、指定した入力サイズに `expectedU` 操作と等しいかどうかを確認します。
+  演算の操作`givenU`が、指定された`expectedU`入力サイズに対する演算と等しいかどうかをチェックします。演算の操作は、計算ベースのベクターに対してのみ操作のアクションをチェックします。
 
   これは、2つの unitaries 等しいかどうかについて、十分ではなく、必要な条件です。
 syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
@@ -12,7 +12,7 @@ input:
   content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
-    summary: 操作 `givenU` と `expectedU` が動作する、qubits $n $ の数。
+    summary: 操作`givenU`と`expectedU`演算を実行する qubits $n $ の数。
     isPrimitive: true
     uid: Int
   - name: givenU
@@ -28,7 +28,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: expectedU
-    summary: '`givenU` を比較する $n $ qubits の参照操作です。'
+    summary: 比較対象の $n $ qubits `givenU`に対する参照操作です。
     isOperation: true
     input:
       types:
@@ -47,9 +47,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c3a98dee80b9e41ea3c27e1e52c3046751307912
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066559"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677269"
