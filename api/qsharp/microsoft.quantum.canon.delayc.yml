@@ -9,9 +9,9 @@ summary: >-
 
   操作とその操作への入力を指定した場合、追加の入力が提供されると、によって操作が適用されます。
 
-  特に、`Delay(op, arg, _)` 式は、呼び出されたときに `arg` に `op` を適用する操作です。
+  特に、式`Delay(op, arg, _)`は、呼び出されたとき`op`に`arg`に適用される演算です。
 
-  式 `Delay(op,arg,_)` を使用すると、`op`のアプリケーションを遅延させることができます。
+  式`Delay(op,arg,_)`を使用すると、の`op`アプリケーションを遅延させることができます。
 syntax: "operation DelayC (op : ('T => Unit is Ctl), arg : 'T, aux : Unit) : Unit"
 input:
   content: "(op : ('T => Unit is Ctl), arg : 'T, aux : Unit)"
@@ -51,9 +51,9 @@ seeAlso:
 - microsoft.quantum.canon.delay
 - microsoft.quantum.canon.delayed
 metadata:
-  ms.openlocfilehash: bbba9e29e35702d21f4c34a869b4cc1f0046b6ad
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 48648958e013058a14ba2bd4a6f751019cf70d61
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219673"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675724"

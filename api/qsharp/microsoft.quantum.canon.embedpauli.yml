@@ -3,9 +3,9 @@ uid: microsoft.quantum.canon.embedpauli
 name: EmbedPauli
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Single qubit の P# li 演算子と qubit のインデックスを指定した場合、は、そのインデックス位置にある指定された single qubit 演算子を持つマルチ qubit の P# li 演算子を返し、他のすべてのインデックスで `PauliI` します。
+summary: Single qubit の P# li 演算子と qubit のインデックスが指定されている場合、そのインデックス`PauliI`の指定された単一の qubit 演算子と他のすべてのインデックスで、マルチ Qubit の P# li 演算子を返します。
 examples: >-
-  配列 `[PauliI, PauliI, PauliX, PauliI]`を取得するには、次のようにします。
+  配列`[PauliI, PauliI, PauliX, PauliI]`を取得するには、次のようにします。
 
 
   ```qsharp
@@ -22,7 +22,7 @@ input:
     isPrimitive: true
     uid: Pauli
   - name: location
-    summary: '`output[location] == pauli`する (`output` がこの関数の出力である) インデックス。'
+    summary: インデックス。ここで`output[location] == pauli`、 `output`はこの関数の出力です。
     isPrimitive: true
     uid: Int
   - name: n
@@ -36,9 +36,9 @@ output:
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 1e852781f6dd85e5432f5613184f028db0e84b87
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: df9cff23b6a7255ec57e944fd1bed140ff18560a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219384"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675602"

@@ -1,13 +1,14 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.research.chemistry
 name: Microsoft.Quantum.Research.Chemistry
+summary: " # <a name=\"summary\"></a>まとめ\n この名前空間は、量子化学シミュレーションの高度な研究方法を提供します。\n\n # <a name=\"references\"></a>参考資料\n - 量子化学、m. B のクォンタムアルゴリズムを改善します。 Hastings、d. Wecker、Bauer、m. Troyer、https://arxiv.org/abs/1403.1539"
 functions:
 - uid: microsoft.quantum.research.chemistry.jordanwigneroptimizedfermionevolutionset
   summary: Dynamical generator を simulatable ゲートのセットとして表し、拡張を p にします。
 - uid: microsoft.quantum.research.chemistry.jwoptimizedfermionevolutionfunction
   summary: Dynamical generator を simulatable ゲートと JWOptimized ベースの拡張のセットとして表します。
 - uid: microsoft.quantum.research.chemistry.jwoptimizedgeneratorsystem
-  summary: '`JWOptimizedHTerms` によって記述される Hamiltonian を、このファイルで定義されている `GeneratorIndex` 規約に従って表される `GeneratorSystem` に変換します。'
+  summary: によって`JWOptimizedHTerms`記述された`GeneratorSystem` Hamiltonian を、このファイル`GeneratorIndex`で定義されている規則に従って表現したに変換します。
 - uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
   summary: 最適化された Trotter step 操作と、それを実行するために必要なパラメーターを返します。
 operations:
@@ -16,9 +17,9 @@ operations:
 - uid: microsoft.quantum.research.chemistry.jwoptimizedstatepreparation
   summary: スピン orbitals を利用して、評価版の状態を簡単に準備
 metadata:
-  ms.openlocfilehash: 8737229d1362a444f54d1a8d0791da9312923224
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aa1aa58d6e2dcee6f650714073b9a1386f0ed679
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215950"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675471"
