@@ -17,15 +17,7 @@
     - name: QDK の概要
       href: welcome.md
     - name: QDK をインストールする
-      items:
-        - name: インストールの概要
-          href: install-guide/index.md
-        - name: 'Q# + C#'
-          href: install-guide/csinstall.md
-        - name: 'Q# + Python'
-          href: install-guide/pyinstall.md
-        - name: 'Q# Jupyter ノートブック'
-          href: install-guide/qjupyter.md
+      href: install-guide/toc.yml
     - name: QDK を更新する
       href: install-guide/update.md
     - name: 'Q# プロジェクトを作成する方法'
