@@ -1,0 +1,28 @@
+- href: chemistry.broombridge.md
+  name: '%chemistry.broombridge マジック コマンド'
+- href: chemistry.encode.md
+  name: '%chemistry.encode マジック コマンド'
+- href: chemistry.fh.add_terms.md
+  name: '%chemistry.fh.add_terms マジック コマンド'
+- href: chemistry.fh.load.md
+  name: '%chemistry.fh.load マジック コマンド'
+- href: chemistry.inputstate.load.md
+  name: '%chemistry.inputstate.load マジック コマンド'
+- href: config.md
+  name: '%config マジック コマンド'
+- href: estimate.md
+  name: '%estimate マジック コマンド'
+- href: lsmagic.md
+  name: '%lsmagic マジック コマンド'
+- href: package.md
+  name: '%package マジック コマンド'
+- href: performance.md
+  name: '%performance マジック コマンド'
+- href: simulate.md
+  name: '%simulate マジック コマンド'
+- href: toffoli.md
+  name: '%toffoli マジック コマンド'
+- href: who.md
+  name: '%who マジック コマンド'
+- href: workspace.md
+  name: '%workspace マジック コマンド'

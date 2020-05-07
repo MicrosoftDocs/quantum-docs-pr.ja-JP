@@ -1,0 +1,13 @@
+items:
+  - name: インストールの概要
+    href: index.md
+  - name: 'Q# コマンド ライン アプリケーション'
+    href: standalone.md
+  - name: 'Q# Jupyter ノートブック'
+    href: qjupyter.md
+  - name: '他の言語で Q# を使用する'
+    items:
+      - name: 'Python で Q# を使用する'
+        href: pyinstall.md
+      - name: '.NET で Q# を使用する'
+        href: csinstall.md

@@ -1,6 +1,6 @@
 - name: Microsoft Quantum ドキュメント
   href: index.yml
-- name: 量子コンピューティングの概要
+- name: 概要
   items:
     - name: 量子コンピューティングとは
       href: overview/what-is-quantum-computing.md
@@ -12,7 +12,7 @@
       href: overview/what-is-qsharp.md
     - name: 詳しく学ぶには
       href: overview/how-to-learn-quantum-computing.md
-- name: Quantum 開発キットを入手する
+- name: クイックスタート
   items:
     - name: QDK の概要
       href: welcome.md
@@ -20,23 +20,19 @@
       href: install-guide/toc.yml
     - name: QDK を更新する
       href: install-guide/update.md
-    - name: 'Q# プロジェクトを作成する方法'
-      href: how-to-guides/create-qsharp-project.md
-- name: 'Q# 学習用のリソース'
+- name: チュートリアル
   items:
-    - name: クイックスタート
-      items:
-        - name: 量子乱数ジェネレーター
-          href: quickstarts/qrng.md
-        - name: 'Q# でのもつれの確認'
-          href: quickstart.md
-        - name: グローバーの検索アルゴリズムを実装する
-          href: quickstarts/search.md
+    - name: 量子乱数ジェネレーター
+      href: quickstarts/qrng.md
+    - name: 'Q# でのもつれの確認'
+      href: quickstart.md
+    - name: グローバーの検索アルゴリズムを実装する
+      href: quickstarts/search.md
     - name: 'Quantum Katas を使用して Q# を学ぶ'
       href: intro-to-katas.md
     - name: 'Q# コード サンプル'
       href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
-- name: QDK の詳細
+- name: 'Q# ユーザー ガイド'
   items:
     - name: 量子開発手法
       topicHref: techniques/index.md
@@ -46,15 +42,21 @@
       href: language/toc.yml
     - name: 量子シミュレーターとリソース エスティメーター
       href: machines/toc.yml
-- name: 'Q# ライブラリ'
-  href: libraries/toc.yml
-- name: 量子コンピューティングの概念
-  href: concepts/toc.yml
-- name: 関連項目
-  href: for-more-info.md
-- name: QDK への貢献
-  href: contributing/toc.yml
-  topicHref: contributing/index.md
-- name: QDK のリリース ノート
-  topicHref: relnotes/index.md
-  href: relnotes/toc.yml
+- name: 概念
+  items:
+    - name: 量子コンピューティングの概念
+      href: concepts/toc.yml
+    - name: 'Q# ライブラリ'
+      href: libraries/toc.yml
+- name: リソース
+  items:
+    - name: 用語集
+      href: concepts/Glossary.md
+    - name: QDK への貢献
+      href: contributing/toc.yml
+      topicHref: contributing/index.md
+    - name: QDK のリリース ノート
+      topicHref: relnotes/index.md
+      href: relnotes/toc.yml
+    - name: 関連項目
+      href: for-more-info.md
