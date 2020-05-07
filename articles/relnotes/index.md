@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 84e5db17ab8d963a75c72da38d3e4487b89abc9d
-ms.sourcegitcommit: b6b8459eb654040f1e19f66411b29fc9e48e95c9
+ms.openlocfilehash: 91f12ef6bd15e27c8920471442c66ff3b1e71122
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82030601"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82677087"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -20,6 +20,21 @@ ms.locfileid: "82030601"
 インストール手順については、[インストール ガイド](xref:microsoft.quantum.install)を参照してください。
 
 更新手順については、[更新ガイド](xref:microsoft.quantum.update)を参照してください。
+
+## <a name="version-01120042825"></a>バージョン 0.11.2004.2825
+
+*リリース日:2020 年 4 月 30 日*
+
+このリリースには、次のものが含まれています。
+
+- Q# コマンド ライン アプリケーションの新しいサポート。C# または Python ホスト ファイルが不要になりました。 Q# コマンド ライン アプリケーションを使用するための詳細については、[こちら](xref:microsoft.quantum.install.standalone)を参照してください。
+- C# または Python ホスト ファイルが不要になるように、クォンタム乱数ジェネレーターのクイックスタートを更新しました。 更新された[クイックスタート](xref:microsoft.quantum.quickstarts.qrng)をご覧ください。
+- IQ# Docker イメージのパフォーマンスの向上
+
+> [!NOTE]
+> 新しい [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) 属性を使用している Q# コマンド ライン アプリケーションは、現在、Python および .NET ホスト プログラムから呼び出すことはできません。
+> 詳細については、[Python](xref:microsoft.quantum.install.python) と [.NET 相互運用性](xref:microsoft.quantum.install.cs)のガイドを参照してください。
+
 
 ## <a name="version-01120033107"></a>バージョン 0.11.2003.3107
 
@@ -354,7 +369,7 @@ Quantum Development Kit の化学ライブラリの詳細については、[こ�
 
 このリリースには、コミュニティによって報告された問題に関するバグの修正と機能が含まれています。
 
-* Q# 用の IntelliSense とは ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918))。
+* Q# 用の IntelliSense とは  ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918))。
 * .qs ファイル ([UserVoice](https://quantum.uservoice.com/forums/906097/suggestions/32593049))。
 * If ステートメントで中かっこが省略された場合のエラー メッセージを改善する ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/34718518))。
 * 可変 (再) バインドでのタプル分解をサポートする ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/35020444))。
