@@ -6,16 +6,16 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 0e64fcd56929fa33397c45bf1b2e99bf687eca6f
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: c67ccd16957ceef694552bdd9c073ba5a35d8aaf
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906952"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82686825"
 ---
-# <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>クイック スタート:Q# でグローバーの検索アルゴリズムを実装する
+# <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>クイック スタート:Q\# でグローバーの検索アルゴリズムを実装する
 
-このクイック スタートでは、グローバーの検索を構築して実行子、非構造化データの検索速度を上げる方法について学習できます。  グローバーの検索は、最も人気がある量子コンピューティング アルゴリズムの 1 つであり、この比較的小規模な Q# 実装で、量子ソリューションをプログラミングすることの利点のいくつかと、量子アルゴリズムを表わす Q# 量子プログラミング言語の概要が理解できます。  ガイドの終わりには、シミュレーションの出力があります。この中で、旧式のコンピューターではリスト全体を検索するためにかかったであろう時間に比べ、ほんのわずかな時間で注文リストから特定の文字列を検索することに成功しています。
+このクイック スタートでは、グローバーの検索を構築して実行子、非構造化データの検索速度を上げる方法について学習できます。  グローバーの検索は、最も人気がある量子コンピューティング アルゴリズムの 1 つであり、この比較的小規模な Q# 実装で、量子ソリューションをプログラミングすることの利点のいくつかと、量子アルゴリズムを表わす Q# 量子プログラミング言語の概要が理解できます。  このガイドの最後に、シミュレーションの出力があります。そこでは、従来のコンピューターでリスト全体を検索するのにかかる時間に比べてほんのわずかな時間で、順序付けられていないエントリのリストから特定の文字列の検索に成功することを確認できます。
 
 グローバーのアルゴリズムでは、特定の項目の非構造化データのリストが検索されます。 たとえば、次のような質問に回答できます。一組のトランプから引いたこのカードは、ハートのエースですか? 特定の項目のラベル付けは、"_マークされた入力_" と呼ばれます。
 
@@ -41,9 +41,9 @@ ms.locfileid: "77906952"
 
 1. Quantum 開発キットを使用して、任意の開発環境に `Grover` という[新しい Q# プロジェクトを作成](xref:microsoft.quantum.howto.createproject)します。
 
-1. 新しいプロジェクトで次のコードを `Operations.qs` ファイルに追加します。
+1. 新しいプロジェクトで次のコードを `Program.qs` ファイルに追加します。
 
-    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-40":::
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-41":::
 
 1. 検索するリストを定義するために、新しいファイル `Reflections.qs` を作成し、次のコードに貼り付けます。
 
@@ -53,64 +53,54 @@ ms.locfileid: "77906952"
 
 1. 次に、新しい Q# プログラムを実行して、`ReflectAboutMarked` によってマークされた項目を検索します。
 
-    ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Visual Studio Code またはコマンド ラインを使用した Python](#tab/tabid-python)
+### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Visual Studio または Visual Studio Code を使用する Q# コマンド ライン アプリケーション
 
-    Python から新しい Q# プログラムを実行するには、次のコードを `host.py` として保存します。
+実行可能ファイルは、プロジェクトの構成とコマンドライン オプションに応じて、シミュレーターまたはリソース推定機能で `@EntryPoint()` 属性でマークされた操作または関数を実行します。
 
-    :::code language="python" source="~/quantum/samples/algorithms/simple-grover/host.py" range="9-14":::
+Visual Studio では、Ctrl キーを押しながら F5 キーを押すだけでスクリプトを実行します。
 
-    次に、コマンド ラインから Python ホスト プログラムを実行できます。
+VS Code では、ターミナルで次のように入力して、`Program.qs` の初回のビルドを行います。
 
-    ```bash
-    $ python host.py
-    Preparing Q# environment...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    [0, 1, 0, 1, 0]
-    ```
+```Command line
+dotnet build
+```
 
-    ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[Visual Studio Code またはコマンド ラインを使用した C#](#tab/tabid-csharp)
+以降の実行では、再度ビルドする必要はありません。 これを実行するには、次のコマンドを入力して、Enter キーを押します。
 
-    C# から新しい Q# プログラムを実行するには、次の C# コードを含めるように `Driver.cs` を変更します。
+```Command line
+dotnet run --no-build
+```
 
-    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
+ターミナルに次のメッセージが表示されます。
 
-    次に、コマンド ラインから C# ホスト プログラムを実行できます。
+```
+operations.qs:
+This operation applies Grover's algorithm to search all possible inputs to an operation to find a particular marked state.
+Usage:
+operations.qs [options] [command]
 
-    ```bash
-    $ dotnet run
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Result: [Zero,One,Zero,One,Zero]
+--n-qubits <n-qubits> (REQUIRED)
+-s, --simulator <simulator>         The name of the simulator to use.
+--version                           Show version information
+-?, -h, --help                      Show help and usage information
+Commands:
+```
 
-    Press any key to continue...
-    ```
+これは、使用するキュービットの数を指定しなかったためです。そのため、実行可能ファイルで使用できるコマンドがターミナルによって示されます。 5 つのキュービットを使用する場合は、次のように入力する必要があります。
 
-    ### <a name="c-with-visual-studio-2019"></a>[Visual Studio 2019 を使用した C#](#tab/tabid-vs2019)
+```Command line
+dotnet run --n-qubits 5
+```
 
-    Visual Studio で C# から新しい Q# プログラムを実行するには、次の C# コードを含めるように `Driver.cs` を変更します。
+Enter キーを押すと、次の出力が表示されます。
 
-    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
-
-    F5 キーを押すと、プログラムは実行を開始し、新しいポップアップ ウィンドウに次の結果が表示されます。 
-
-    ```bash
-    $ dotnet run
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Result: [Zero,One,Zero,One,Zero]
-
-    Press any key to continue...
-    ```
-    ***
-
-    `ReflectAboutMarked` 操作は 4 回だけ呼び出され、Q# プログラムにより $2^{5} = 32$ の入力で "01010" の入力を見つけることができました。
+```
+Reflecting about marked state...
+Reflecting about marked state...
+Reflecting about marked state...
+Reflecting about marked state...
+[Zero,One,Zero,One,Zero]
+```
 
 ## <a name="next-steps"></a>次のステップ
 
@@ -119,10 +109,11 @@ ms.locfileid: "77906952"
 - [QDK 入門ガイドに戻る](xref:microsoft.quantum.welcome)
 - より一般的なグローバーの検索アルゴリズムの[サンプル](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)を試す
 - [グローバーの検索と Quantum Katas について学習する](xref:microsoft.quantum.overview.katas)
-- グローバーの検索アルゴリズムの背後にある量子コンピューティング手法である[振幅増幅](xref:microsoft.quantum.libraries.standard.algorithms#amplitude-amplification)について読む
+- グローバーの検索アルゴリズムの背後にある量子コンピューティング手法である[振幅増幅][amplitude-amplification]について読む
 - [量子コンピューティングの概念](xref:microsoft.quantum.concepts.intro)
 - [Quantum 開発キット サンプル](https://docs.microsoft.com/samples/browse/?products=qdk)
 
 <!-- LINKS -->
 
 [install]: xref:microsoft.quantum.install
+[amplitude-amplification]: xref:microsoft.quantum.libraries.standard.algorithms#amplitude-amplification
