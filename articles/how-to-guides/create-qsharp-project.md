@@ -1,6 +1,6 @@
 ---
-title: 'Quantum Development Kit (QDK) を使用して Q # プロジェクトを作成する方法について説明します。'
-description: '選択した開発環境の QDK と Q # を使用して、quantum 開発用のプロジェクトを初期化します'
+title: 'Quantum Development Kit (QDK) を使用して Q# プロジェクトを作成する方法について説明します。'
+description: '選択した開発環境の QDK と Q# を使用して、quantum 開発用のプロジェクトを初期化します'
 author: natke
 ms.author: nakersha
 ms.date: 10/19/2019
@@ -14,16 +14,16 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 02/06/2020
 ms.locfileid: "77036442"
 ---
-# <a name="create-a-q-project-in-your-development-environment"></a><span data-ttu-id="fe9a3-103">開発環境で Q # プロジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="fe9a3-103">Create a Q# project in your development environment</span></span>
+# <a name="create-a-q-project-in-your-development-environment"></a><span data-ttu-id="fe9a3-103">開発環境で Q# プロジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="fe9a3-103">Create a Q# project in your development environment</span></span>
 
-<span data-ttu-id="fe9a3-104">QDK で Q # プロジェクトを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-104">Learn how to create a Q# project with the QDK.</span></span>
+<span data-ttu-id="fe9a3-104">QDK で Q# プロジェクトを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-104">Learn how to create a Q# project with the QDK.</span></span>
 
-<span data-ttu-id="fe9a3-105">Q # プロジェクトには、クォンタムコードを含む Q # ファイルと、クォンタムプログラムを実行するホストプログラムが含まれています。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-105">A Q# project contains Q# files containing quantum code, as well as a host program to run the quantum program.</span></span> <span data-ttu-id="fe9a3-106">ホストプログラムはC#、や Python などの .net 言語で記述できます。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-106">You can write the host program in .NET languages such as C#, or in Python.</span></span> <span data-ttu-id="fe9a3-107">また、IQ # kernel を使用して、Jupyter notebook で Q # コードを実行することもできます。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-107">You can also run Q# code in a Jupyter notebook using the IQ# kernel.</span></span>
+<span data-ttu-id="fe9a3-105">Q# プロジェクトには、クォンタムコードを含む Q# ファイルと、クォンタムプログラムを実行するホストプログラムが含まれています。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-105">A Q# project contains Q# files containing quantum code, as well as a host program to run the quantum program.</span></span> <span data-ttu-id="fe9a3-106">ホストプログラムはC#、や Python などの .net 言語で記述できます。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-106">You can write the host program in .NET languages such as C#, or in Python.</span></span> <span data-ttu-id="fe9a3-107">また、IQ# kernel を使用して、Jupyter notebook で Q# コードを実行することもできます。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-107">You can also run Q# code in a Jupyter notebook using the IQ# kernel.</span></span>
 
 <span data-ttu-id="fe9a3-108">以下のセクションで、開発環境と言語を選択します。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-108">Choose your development environment and language from the sections below:</span></span>
 
 * [<span data-ttu-id="fe9a3-109">Python</span><span class="sxs-lookup"><span data-stu-id="fe9a3-109">Python</span></span>](#create-a-python-project)
-* [<span data-ttu-id="fe9a3-110">Q # Jupyter notebook</span><span class="sxs-lookup"><span data-stu-id="fe9a3-110">Q# Jupyter notebooks</span></span>](#create-a-q-jupyter-notebook-project)
+* [<span data-ttu-id="fe9a3-110">Q# Jupyter notebook</span><span class="sxs-lookup"><span data-stu-id="fe9a3-110">Q# Jupyter notebooks</span></span>](#create-a-q-jupyter-notebook-project)
 * [<span data-ttu-id="fe9a3-111">C#Visual Studio を使用する</span><span class="sxs-lookup"><span data-stu-id="fe9a3-111">C# with Visual Studio</span></span>](#create-a-c-project-on-windows-using-visual-studio)
 * [<span data-ttu-id="fe9a3-112">C#VS Code</span><span class="sxs-lookup"><span data-stu-id="fe9a3-112">C# with VS Code</span></span>](#create-a-c-project-using-vs-code)
 * [<span data-ttu-id="fe9a3-113">C#コマンドラインを使用する</span><span class="sxs-lookup"><span data-stu-id="fe9a3-113">C# with the command line</span></span>](#create-a-c-project-using-the-dotnet-command-line-tool)
@@ -36,7 +36,7 @@ ms.locfileid: "77036442"
 
 1. <span data-ttu-id="fe9a3-117">プロジェクトのフォルダーを作成し、そのフォルダーに移動します。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-117">Create a folder for your project, and navigate to that folder</span></span>
 
-1. <span data-ttu-id="fe9a3-118">`Operation.qs`という名前の Q # ファイルを作成し、そのファイルに Q # コードを追加します。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-118">Create a Q# file called `Operation.qs`, and add your Q# code to it.</span></span> <span data-ttu-id="fe9a3-119">例 :</span><span class="sxs-lookup"><span data-stu-id="fe9a3-119">For example:</span></span>
+1. <span data-ttu-id="fe9a3-118">`Operation.qs`という名前の Q# ファイルを作成し、そのファイルに Q# コードを追加します。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-118">Create a Q# file called `Operation.qs`, and add your Q# code to it.</span></span> <span data-ttu-id="fe9a3-119">例 :</span><span class="sxs-lookup"><span data-stu-id="fe9a3-119">For example:</span></span>
 
     ```qsharp
     namespace HelloWorld {
@@ -50,7 +50,7 @@ ms.locfileid: "77036442"
     }
     ```
 
-1. <span data-ttu-id="fe9a3-120">Q # 操作を呼び出すために `host.py` という名前の python ホストファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-120">Create a python host file called `host.py` to call your Q# operation.</span></span> <span data-ttu-id="fe9a3-121">例 :</span><span class="sxs-lookup"><span data-stu-id="fe9a3-121">For example:</span></span>
+1. <span data-ttu-id="fe9a3-120">Q# 操作を呼び出すために `host.py` という名前の python ホストファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-120">Create a python host file called `host.py` to call your Q# operation.</span></span> <span data-ttu-id="fe9a3-121">例 :</span><span class="sxs-lookup"><span data-stu-id="fe9a3-121">For example:</span></span>
 
     ```python
     import qsharp
@@ -75,7 +75,7 @@ ms.locfileid: "77036442"
 
 <span data-ttu-id="fe9a3-125">これで、quantum プログラムの開発を続けることができます。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-125">You can now continue to develop your quantum program.</span></span>
 
-## <a name="create-a-q-jupyter-notebook-project"></a><span data-ttu-id="fe9a3-126">Q # Jupyter Notebook プロジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="fe9a3-126">Create a Q# Jupyter Notebook project</span></span>
+## <a name="create-a-q-jupyter-notebook-project"></a><span data-ttu-id="fe9a3-126">Q# Jupyter Notebook プロジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="fe9a3-126">Create a Q# Jupyter Notebook project</span></span>
 
 1. <span data-ttu-id="fe9a3-127">前提条件</span><span class="sxs-lookup"><span data-stu-id="fe9a3-127">Pre-requisites</span></span>
 
@@ -101,7 +101,7 @@ ms.locfileid: "77036442"
 
     ![Q# コードを含む Jupyter Notebook セル](~/media/install-guide-jupyter.png)
 
-    <span data-ttu-id="fe9a3-138">Jupyter Notebook で実行すると、Q # コードがコンパイルされ、ノートブックは検出した操作の名前を出力します。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-138">When running in Jupyter Notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.</span></span>
+    <span data-ttu-id="fe9a3-138">Jupyter Notebook で実行すると、Q# コードがコンパイルされ、ノートブックは検出した操作の名前を出力します。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-138">When running in Jupyter Notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.</span></span>
 
 1. <span data-ttu-id="fe9a3-139">新しいセルで、`%simulate` マジックを使用して、作成した演算の量子コンピューターでの実行をシミュレートします。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-139">In a new cell, simulate the execution in a quantum computer of the operation you just created by using the `%simulate` magic:</span></span>
 
@@ -109,7 +109,7 @@ ms.locfileid: "77036442"
 
     <span data-ttu-id="fe9a3-141">呼び出した演算の結果 (この場合は空) と共に、メッセージが画面に表示されます。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-141">You should see the message printed on the screen along with the result of the operation you invoked (in this case, empty).</span></span>
 
-<span data-ttu-id="fe9a3-142">他の Q # 操作を追加して、量子開発を続けることができるようになりました。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-142">You can now add other Q# operations to continue your quantum development.</span></span>
+<span data-ttu-id="fe9a3-142">他の Q# 操作を追加して、量子開発を続けることができるようになりました。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-142">You can now add other Q# operations to continue your quantum development.</span></span>
 
 ## <a name="create-a-c-project-on-windows-using-visual-studio"></a><span data-ttu-id="fe9a3-143">Visual Studio C#を使用した Windows でのプロジェクトの作成</span><span class="sxs-lookup"><span data-stu-id="fe9a3-143">Create a C# project on Windows, using Visual Studio</span></span>
 
@@ -149,8 +149,8 @@ ms.locfileid: "77036442"
 1. <span data-ttu-id="fe9a3-163">新しいプロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-163">Create a new project:</span></span>
 
     * <span data-ttu-id="fe9a3-164">**[表示]**  ->  **[コマンド パレット]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-164">Go to **View** -> **Command Palette**</span></span>
-    * <span data-ttu-id="fe9a3-165">**[Q #: 新しいプロジェクトの作成]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-165">Select **Q#: Create New Project**</span></span>
-    * <span data-ttu-id="fe9a3-166">**スタンドアロンコンソールアプリケーション**の選択</span><span class="sxs-lookup"><span data-stu-id="fe9a3-166">Select **Standalone console application**</span></span>
+    * <span data-ttu-id="fe9a3-165">**[Q#: Create New Project]\(Q#: 新しいプロジェクトの作成\)** を選択します。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-165">Select **Q#: Create New Project**</span></span>
+    * <span data-ttu-id="fe9a3-166">**[Standalone console application]\(スタンドアロンコンソールアプリケーション\)**の選択</span><span class="sxs-lookup"><span data-stu-id="fe9a3-166">Select **Standalone console application**</span></span>
     * <span data-ttu-id="fe9a3-167">アプリケーションの作成先となるファイル システム上の場所に移動します。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-167">Navigate to the location on the file system where you would like to create the application</span></span>
     * <span data-ttu-id="fe9a3-168">プロジェクトが作成されたら、 **[Open new project...]\(新しいプロジェクトを開く...\)** ボタンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="fe9a3-168">Click on the **Open new project...** button, once the project has been created</span></span>
 
