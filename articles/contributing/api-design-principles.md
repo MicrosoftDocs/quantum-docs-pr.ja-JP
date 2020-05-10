@@ -1,6 +1,6 @@
 ---
-title: 'Q # API 設計の原則'
-description: 'Q # API 設計の原則'
+title: 'Q# API 設計の原則'
+description: 'Q# API 設計の原則'
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
@@ -13,20 +13,20 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/01/2020
 ms.locfileid: "82687338"
 ---
-# <a name="q-api-design-principles"></a><span data-ttu-id="bfe5b-103">Q # API 設計の原則</span><span class="sxs-lookup"><span data-stu-id="bfe5b-103">Q# API Design Principles</span></span>
+# <a name="q-api-design-principles"></a><span data-ttu-id="bfe5b-103">Q# API 設計の原則</span><span class="sxs-lookup"><span data-stu-id="bfe5b-103">Q# API Design Principles</span></span>
 
 ## <a name="introduction"></a><span data-ttu-id="bfe5b-104">概要</span><span class="sxs-lookup"><span data-stu-id="bfe5b-104">Introduction</span></span>
 
 <span data-ttu-id="bfe5b-105">言語およびプラットフォームとして、ユーザーは、クォンタムアプリケーションの記述、実行、理解、調査を行うことができます。</span><span class="sxs-lookup"><span data-stu-id="bfe5b-105">As a language and as a platform, Q# empowers users to write, run, understand, and explore quantum applications.</span></span>
-<span data-ttu-id="bfe5b-106">ユーザーを支援するために、Q # ライブラリを設計する際には、一連の API 設計原則に従って設計を進め、quantum 開発コミュニティで使用可能なライブラリを作成できるようにします。</span><span class="sxs-lookup"><span data-stu-id="bfe5b-106">In order to empower users, when we design Q# libraries, we follow a set of API design principles to guide our designs and to help us make usable libraries for the the quantum development community.</span></span>
-<span data-ttu-id="bfe5b-107">この記事では、これらの原則について説明し、Q # Api を設計するときに適用する方法を示す例を示します。</span><span class="sxs-lookup"><span data-stu-id="bfe5b-107">This article lists these principles, and gives examples to help guide how to apply them when designing Q# APIs.</span></span>
+<span data-ttu-id="bfe5b-106">ユーザーを支援するために、Q# ライブラリを設計する際には、一連の API 設計原則に従って設計を進め、quantum 開発コミュニティで使用可能なライブラリを作成できるようにします。</span><span class="sxs-lookup"><span data-stu-id="bfe5b-106">In order to empower users, when we design Q# libraries, we follow a set of API design principles to guide our designs and to help us make usable libraries for the the quantum development community.</span></span>
+<span data-ttu-id="bfe5b-107">この記事では、これらの原則について説明し、Q# API を設計するときに適用する方法を示す例を示します。</span><span class="sxs-lookup"><span data-stu-id="bfe5b-107">This article lists these principles, and gives examples to help guide how to apply them when designing Q# APIs.</span></span>
 
 > [!TIP]
 > <span data-ttu-id="bfe5b-108">これは、ライブラリの開発と詳細なライブラリの投稿をガイドするための、非常に詳細なドキュメントです。</span><span class="sxs-lookup"><span data-stu-id="bfe5b-108">This is a fairly detailed document that's intended to help guide library development and in-depth library contributions.</span></span>
-> <span data-ttu-id="bfe5b-109">Q # で独自のライブラリを作成している場合や、 [q # ライブラリリポジトリ](https://github.com/microsoft/QuantumLibraries)に大きな機能を提供している場合は、最も役に立つでしょう。</span><span class="sxs-lookup"><span data-stu-id="bfe5b-109">You'll probably find it most useful if you're writing your own libraries in Q#, or if you're contributing larger features to the [Q# libraries repository](https://github.com/microsoft/QuantumLibraries).</span></span>
+> <span data-ttu-id="bfe5b-109">Q# で独自のライブラリを作成している場合や、 [Q# ライブラリリポジトリ](https://github.com/microsoft/QuantumLibraries)に大きな機能を提供している場合は、最も役に立つでしょう。</span><span class="sxs-lookup"><span data-stu-id="bfe5b-109">You'll probably find it most useful if you're writing your own libraries in Q#, or if you're contributing larger features to the [Q# libraries repository](https://github.com/microsoft/QuantumLibraries).</span></span>
 >
 > <span data-ttu-id="bfe5b-110">一方、Quantum 開発キットに投稿する方法については、後で説明することをお[勧めします。](xref:microsoft.quantum.contributing)</span><span class="sxs-lookup"><span data-stu-id="bfe5b-110">On the other hand, if you're looking to learn how to contribute to the Quantum Development Kit more generally, we suggest starting with the [contribution guide](xref:microsoft.quantum.contributing).</span></span>
-> <span data-ttu-id="bfe5b-111">Q # コードを書式設定する方法についての一般的な情報を探している場合は、[スタイルガイド](xref:microsoft.quantum.contributing.style)を確認することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="bfe5b-111">If you're looking for more general information about how we recommend formatting your Q# code, you may be interested in checking out the [style guide](xref:microsoft.quantum.contributing.style).</span></span>
+> <span data-ttu-id="bfe5b-111">Q# コードを書式設定する方法についての一般的な情報を探している場合は、[スタイルガイド](xref:microsoft.quantum.contributing.style)を確認することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="bfe5b-111">If you're looking for more general information about how we recommend formatting your Q# code, you may be interested in checking out the [style guide](xref:microsoft.quantum.contributing.style).</span></span>
 
 ## <a name="general-principles"></a><span data-ttu-id="bfe5b-112">一般原則</span><span class="sxs-lookup"><span data-stu-id="bfe5b-112">General Principles</span></span>
 
@@ -81,7 +81,7 @@ ms.locfileid: "82687338"
 - <span data-ttu-id="bfe5b-142">✅同じ API と以前に存在していたライブラリの両方で、他の関数や操作との連携を構成するために、関数と操作**を設計し**ます。</span><span class="sxs-lookup"><span data-stu-id="bfe5b-142">✅ **DO** design functions and operations to compose well with other   functions and operations, both in the same API and in previously   existing libraries.</span></span>
 
   <span data-ttu-id="bfe5b-143">*例:*</span><span class="sxs-lookup"><span data-stu-id="bfe5b-143">*Examples:*</span></span>
-  - <span data-ttu-id="bfe5b-144">この@"microsoft.quantum.canon.delay"操作では、入力に関して最小限の仮定が行われるため、Q # 標準ライブラリ全体またはユーザーによる定義に従って、いずれかの操作のアプリケーションを遅延させることができます。</span><span class="sxs-lookup"><span data-stu-id="bfe5b-144">The @"microsoft.quantum.canon.delay" operation makes minimal assumptions about its input, and thus can be used to delay applications of either operations across the Q# standard library or as defined by users.</span></span>
+  - <span data-ttu-id="bfe5b-144">この@"microsoft.quantum.canon.delay"操作では、入力に関して最小限の仮定が行われるため、Q# 標準ライブラリ全体またはユーザーによる定義に従って、いずれかの操作のアプリケーションを遅延させることができます。</span><span class="sxs-lookup"><span data-stu-id="bfe5b-144">The @"microsoft.quantum.canon.delay" operation makes minimal assumptions about its input, and thus can be used to delay applications of either operations across the Q# standard library or as defined by users.</span></span>
     <!-- TODO: define bad example. -->
 
 - <span data-ttu-id="bfe5b-145">✅純粋に確定的なクラシックロジックを操作ではなく関数とし**て公開し**ます。</span><span class="sxs-lookup"><span data-stu-id="bfe5b-145">✅ **DO** expose purely deterministic classical logic as   as functions rather than operations.</span></span>
