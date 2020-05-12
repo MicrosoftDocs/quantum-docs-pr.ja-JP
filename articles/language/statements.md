@@ -1,6 +1,6 @@
 ---
-title: 'Q # ステートメント'
-description: '関数と操作の宣言、変数の宣言と代入、操作の呼び出しなど、Q # でのステートメントの正しい使用方法について説明します。'
+title: 'Q# ステートメント'
+description: '関数と操作の宣言、変数の宣言と代入、操作の呼び出しなど、Q# でのステートメントの正しい使用方法について説明します。'
 author: QuantumWriter
 uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
@@ -18,15 +18,15 @@ ms.locfileid: "77904674"
 ## <a name="comments"></a><span data-ttu-id="bf409-104">コメント</span><span class="sxs-lookup"><span data-stu-id="bf409-104">Comments</span></span>
 
 <span data-ttu-id="bf409-105">コメントは、2つのスラッシュ (`//`) で始まり、行の終わりまで続きます。</span><span class="sxs-lookup"><span data-stu-id="bf409-105">Comments begin with two forward slashes, `//`, and continue until the end of line.</span></span>
-<span data-ttu-id="bf409-106">Q # ソースファイル内の任意の場所にコメントが表示される場合があります。</span><span class="sxs-lookup"><span data-stu-id="bf409-106">A comment may appear anywhere in a Q# source file.</span></span>
+<span data-ttu-id="bf409-106">Q# ソースファイル内の任意の場所にコメントが表示される場合があります。</span><span class="sxs-lookup"><span data-stu-id="bf409-106">A comment may appear anywhere in a Q# source file.</span></span>
 
 ### <a name="documentation-comments"></a><span data-ttu-id="bf409-107">ドキュメントのコメント</span><span class="sxs-lookup"><span data-stu-id="bf409-107">Documentation Comments</span></span>
 
 <span data-ttu-id="bf409-108">3つのスラッシュ (`///`) で始まるコメントは、名前空間、操作、特殊化、関数、または型定義の直前に出現するときに、コンパイラによって特別に処理されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-108">Comments that begin with three forward slashes, `///`, are treated specially by the compiler when they appear immediately before a namespace, operation, specialization, function, or type definition.</span></span>
 <span data-ttu-id="bf409-109">その場合、その内容は、他の .NET 言語と同様に、定義された呼び出し可能またはユーザー定義型のドキュメントとして取得されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-109">In that case, their contents are taken as documentation for the defined callable or user-defined type, as for other .NET languages.</span></span>
 
-<span data-ttu-id="bf409-110">`///` コメントでは、API ドキュメントの一部として表示されるテキストは[Markdown](https://daringfireball.net/projects/markdown/syntax)として書式設定され、ドキュメントのさまざまな部分が特別な名前のヘッダーによって示されています。</span><span class="sxs-lookup"><span data-stu-id="bf409-110">Within `///` comments, text to appear as a part of API documentation is formatted as [Markdown](https://daringfireball.net/projects/markdown/syntax), with different parts of the documentation being indicated by specially-named headers.</span></span>
-<span data-ttu-id="bf409-111">Markdown の拡張機能として、Q # の操作、関数、ユーザー定義型への相互参照は、`@"<ref target>"`を使用して含めることができます。 `<ref target>` は参照されるコードオブジェクトの完全修飾名に置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="bf409-111">As an extension to Markdown, cross references to operations, functions and user-defined types in Q# can be included using the `@"<ref target>"`, where `<ref target>` is replaced by the fully qualified name of the code object being referenced.</span></span>
+<span data-ttu-id="bf409-110">`///` コメントでは、API ドキュメントの一部として表示されるテキストは [Markdown](https://daringfireball.net/projects/markdown/syntax) として書式設定され、ドキュメントのさまざまな部分が特別な名前のヘッダーによって示されています。</span><span class="sxs-lookup"><span data-stu-id="bf409-110">Within `///` comments, text to appear as a part of API documentation is formatted as [Markdown](https://daringfireball.net/projects/markdown/syntax), with different parts of the documentation being indicated by specially-named headers.</span></span>
+<span data-ttu-id="bf409-111">Markdown の拡張機能として、Q# の操作、関数、ユーザー定義型への相互参照は、`@"<ref target>"`を使用して含めることができます。 `<ref target>` は参照されるコードオブジェクトの完全修飾名に置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="bf409-111">As an extension to Markdown, cross references to operations, functions and user-defined types in Q# can be included using the `@"<ref target>"`, where `<ref target>` is replaced by the fully qualified name of the code object being referenced.</span></span>
 <span data-ttu-id="bf409-112">必要に応じて、ドキュメントエンジンで追加の Markdown 拡張機能をサポートすることもできます。</span><span class="sxs-lookup"><span data-stu-id="bf409-112">Optionally, a documentation engine may also support additional Markdown extensions.</span></span>
 
 <span data-ttu-id="bf409-113">例 :</span><span class="sxs-lookup"><span data-stu-id="bf409-113">For example:</span></span>
@@ -76,9 +76,9 @@ operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
 
 ## <a name="namespaces"></a><span data-ttu-id="bf409-129">名前空間</span><span class="sxs-lookup"><span data-stu-id="bf409-129">Namespaces</span></span>
 
-<span data-ttu-id="bf409-130">すべての Q # 操作、関数、およびユーザー定義型は、名前空間内で定義されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-130">Every Q# operation, function, and user-defined type is defined within a namespace.</span></span>
-<span data-ttu-id="bf409-131">Q # は、他の .NET 言語として名前を付ける場合と同じ規則に従います。</span><span class="sxs-lookup"><span data-stu-id="bf409-131">Q# follows the same rules for naming as other .NET languages.</span></span>
-<span data-ttu-id="bf409-132">ただし、Q # では名前空間への相対参照はサポートされません。</span><span class="sxs-lookup"><span data-stu-id="bf409-132">However, Q# does not support relative references to namespaces.</span></span>
+<span data-ttu-id="bf409-130">すべての Q# 操作、関数、およびユーザー定義型は、名前空間内で定義されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-130">Every Q# operation, function, and user-defined type is defined within a namespace.</span></span>
+<span data-ttu-id="bf409-131">Q# は、他の .NET 言語として名前を付ける場合と同じ規則に従います。</span><span class="sxs-lookup"><span data-stu-id="bf409-131">Q# follows the same rules for naming as other .NET languages.</span></span>
+<span data-ttu-id="bf409-132">ただし、Q# では名前空間への相対参照はサポートされません。</span><span class="sxs-lookup"><span data-stu-id="bf409-132">However, Q# does not support relative references to namespaces.</span></span>
 <span data-ttu-id="bf409-133">つまり、名前空間 `a.b` が開かれている場合、操作名への参照 `c.d` は、完全な名前 `a.b.c.d`を持つ操作に解決されません。</span><span class="sxs-lookup"><span data-stu-id="bf409-133">That is, if the namespace `a.b` has been opened, a reference to an operation names `c.d` will not be resolved to an operation with full name `a.b.c.d`.</span></span>
 
 <span data-ttu-id="bf409-134">名前空間ブロック内では、`open` ディレクティブを使用して、特定の名前空間で宣言されたすべての型と呼び出し可能な型をインポートし、非修飾名で参照することができます。</span><span class="sxs-lookup"><span data-stu-id="bf409-134">Within a namespace block, the `open` directive may be used to import all types and callables declared in a certain namespace and refer to them by their unqualified name.</span></span> <span data-ttu-id="bf409-135">必要に応じて、名前空間のすべての要素が定義された短い名前によって修飾されるように、開いている名前空間の短い名前を定義することもできます。</span><span class="sxs-lookup"><span data-stu-id="bf409-135">Optionally, a short name for the opened namespace may be defined such that all elements from that namespace can (and need) to be qualified by the defined short name.</span></span> <span data-ttu-id="bf409-136">`open` ディレクティブは、ファイル内の名前空間ブロック全体に適用されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-136">The `open` directive applies to the entire namespace block within a file.</span></span>
@@ -99,7 +99,7 @@ namespace NS {
 
 ## <a name="formatting"></a><span data-ttu-id="bf409-143">書式設定</span><span class="sxs-lookup"><span data-stu-id="bf409-143">Formatting</span></span>
 
-<span data-ttu-id="bf409-144">ほとんどの Q # ステートメントおよびディレクティブは、終端のセミコロンで終わります `;`。</span><span class="sxs-lookup"><span data-stu-id="bf409-144">Most Q# statements and directives end with a terminating semicolon, `;`.</span></span>
+<span data-ttu-id="bf409-144">ほとんどの Q# ステートメントおよびディレクティブは、終端のセミコロンで終わります `;`。</span><span class="sxs-lookup"><span data-stu-id="bf409-144">Most Q# statements and directives end with a terminating semicolon, `;`.</span></span>
 <span data-ttu-id="bf409-145">ステートメントブロックで終わる `for` や `operation` などのステートメントと宣言には、終端のセミコロンは必要ありません。</span><span class="sxs-lookup"><span data-stu-id="bf409-145">Statements and declarations such as `for` and `operation` that end with a statement block do not require a terminating semicolon.</span></span>
 <span data-ttu-id="bf409-146">各ステートメントの説明には、終端のセミコロンが必要かどうかが示されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-146">Each statement description notes whether the terminating semicolon is required.</span></span>
 
@@ -108,19 +108,19 @@ namespace NS {
 
 ## <a name="statement-blocks"></a><span data-ttu-id="bf409-149">ステートメントブロック</span><span class="sxs-lookup"><span data-stu-id="bf409-149">Statement Blocks</span></span>
 
-<span data-ttu-id="bf409-150">Q # ステートメントは、ステートメントブロックにグループ化されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-150">Q# statements are grouped into statement blocks.</span></span>
+<span data-ttu-id="bf409-150">Q# ステートメントは、ステートメントブロックにグループ化されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-150">Q# statements are grouped into statement blocks.</span></span>
 <span data-ttu-id="bf409-151">ステートメントブロックが開始 `{` で始まり、終了 `}`で終わります。</span><span class="sxs-lookup"><span data-stu-id="bf409-151">A statement block starts with an opening `{` and ends with a closing `}`.</span></span>
 
 <span data-ttu-id="bf409-152">別のブロック内で構文的に囲まれたステートメントブロックは、それを含むブロックのサブブロックと見なされます。コンテナーとサブブロックは、外部ブロックと内部ブロックとも呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="bf409-152">A statement block that is lexically enclosed within another block is considered to be a sub-block of the containing block; containing and sub-blocks are also called outer and inner blocks.</span></span>
 
 ## <a name="symbol-binding-and-assignment"></a><span data-ttu-id="bf409-153">シンボルのバインドと代入</span><span class="sxs-lookup"><span data-stu-id="bf409-153">Symbol Binding and Assignment</span></span>
 
-<span data-ttu-id="bf409-154">Q # は、変更可能なシンボルと変更できないシンボルを区別します。</span><span class="sxs-lookup"><span data-stu-id="bf409-154">Q# distinguishes between mutable and immutable symbols.</span></span>
+<span data-ttu-id="bf409-154">Q# は、変更可能なシンボルと変更できないシンボルを区別します。</span><span class="sxs-lookup"><span data-stu-id="bf409-154">Q# distinguishes between mutable and immutable symbols.</span></span>
 <span data-ttu-id="bf409-155">一般に、変更できないシンボルを使用することをお勧めします。これにより、コンパイラはより多くの最適化を実行できるためです。</span><span class="sxs-lookup"><span data-stu-id="bf409-155">In general, the use of immutable symbols is encouraged because it allows the compiler to perform more optimizations.</span></span>
 
 <span data-ttu-id="bf409-156">バインディングの左側は、記号の組と式の右辺で構成されています。</span><span class="sxs-lookup"><span data-stu-id="bf409-156">The left-hand-side of the binding consists of a symbol tuple, and the right hand side of an expression.</span></span>
 
-<span data-ttu-id="bf409-157">すべての Q # 型は値型であるため、qubits が多少特別なロールを使用すると、値がシンボルにバインドされたとき、またはシンボルが再バインドされるときに "コピー" が作成されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-157">Since all Q# types are value types - with the qubits taking a somewhat special role - formally a "copy" is created when a value is bound to a symbol, or when a symbol is rebound.</span></span> <span data-ttu-id="bf409-158">つまり、Q # の動作は、割り当て時にコピーが作成された場合と同じです。</span><span class="sxs-lookup"><span data-stu-id="bf409-158">That is to say, the behavior of Q# is the same as if a copy were created on assignment.</span></span> <span data-ttu-id="bf409-159">これには、配列も含まれます。</span><span class="sxs-lookup"><span data-stu-id="bf409-159">This in particular also includes arrays.</span></span> <span data-ttu-id="bf409-160">もちろん、実際には、関連する部分のみが必要に応じて再作成されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-160">Of course in practice only the relevant pieces are actually recreated as needed.</span></span> 
+<span data-ttu-id="bf409-157">すべての Q# 型は値型であるため、qubits が多少特別なロールを使用すると、値がシンボルにバインドされたとき、またはシンボルが再バインドされるときに "コピー" が作成されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-157">Since all Q# types are value types - with the qubits taking a somewhat special role - formally a "copy" is created when a value is bound to a symbol, or when a symbol is rebound.</span></span> <span data-ttu-id="bf409-158">つまり、Q# の動作は、割り当て時にコピーが作成された場合と同じです。</span><span class="sxs-lookup"><span data-stu-id="bf409-158">That is to say, the behavior of Q# is the same as if a copy were created on assignment.</span></span> <span data-ttu-id="bf409-159">これには、配列も含まれます。</span><span class="sxs-lookup"><span data-stu-id="bf409-159">This in particular also includes arrays.</span></span> <span data-ttu-id="bf409-160">もちろん、実際には、関連する部分のみが必要に応じて再作成されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-160">Of course in practice only the relevant pieces are actually recreated as needed.</span></span> 
 
 ### <a name="tuple-deconstruction"></a><span data-ttu-id="bf409-161">タプル分解</span><span class="sxs-lookup"><span data-stu-id="bf409-161">Tuple Deconstruction</span></span>
 
@@ -139,7 +139,7 @@ let (r1, r2) = MeasureTwice(q1, PauliX, q2, PauliY);
 ### <a name="immutable-symbols"></a><span data-ttu-id="bf409-165">変更できないシンボル</span><span class="sxs-lookup"><span data-stu-id="bf409-165">Immutable Symbols</span></span>
 
 <span data-ttu-id="bf409-166">変更できないシンボルは、`let` ステートメントを使用してバインドされます。</span><span class="sxs-lookup"><span data-stu-id="bf409-166">Immutable symbols are bound using the `let` statement.</span></span>
-<span data-ttu-id="bf409-167">これは、などC#の言語での変数宣言および初期化とほぼ同じですが、Q # 記号はバインドされると変更されない可能性がある点が異なります。`let` バインドは変更できません。</span><span class="sxs-lookup"><span data-stu-id="bf409-167">This is roughly equivalent to variable declaration and initialization in languages such as C#, except that Q# symbols, once bound, may not be changed; `let` bindings are immutable.</span></span>
+<span data-ttu-id="bf409-167">これは、などC#の言語での変数宣言および初期化とほぼ同じですが、Q# 記号はバインドされると変更されない可能性がある点が異なります。`let` バインドは変更できません。</span><span class="sxs-lookup"><span data-stu-id="bf409-167">This is roughly equivalent to variable declaration and initialization in languages such as C#, except that Q# symbols, once bound, may not be changed; `let` bindings are immutable.</span></span>
 
 <span data-ttu-id="bf409-168">変更できないバインドは、キーワード `let`、その後にシンボルまたは記号の組、等号 `=`、記号をバインドする式、および終端のセミコロンで構成されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-168">An immutable binding consists of the keyword `let`, followed by a symbol or symbol tuple, an equals sign `=`, an expression to bind the symbol(s) to, and a terminating semicolon.</span></span>
 <span data-ttu-id="bf409-169">バインドされたシンボルの型は、右側の式に基づいて推論されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-169">The type of the bound symbol(s) is inferred based on the expression on the right hand side.</span></span>
@@ -397,9 +397,9 @@ using (qubit = Qubit()) {
 
 ### <a name="while-loop"></a><span data-ttu-id="bf409-231">While ループ</span><span class="sxs-lookup"><span data-stu-id="bf409-231">While Loop</span></span>
 
-<span data-ttu-id="bf409-232">繰り返し-成功パターンには、クォンタム固有の connotation があります。</span><span class="sxs-lookup"><span data-stu-id="bf409-232">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="bf409-233">これらは、特定のクラスのクォンタムアルゴリズムで広く使用されているため、Q # の専用言語構成要素です。</span><span class="sxs-lookup"><span data-stu-id="bf409-233">They are widely used in particular classes of quantum algorithms -- hence the dedicated language construct in Q#.</span></span> <span data-ttu-id="bf409-234">ただし、条件に基づいて中断されるループでは、実行の長さがコンパイル時に不明であるため、クォンタムランタイムでは特に注意して処理する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bf409-234">However, loops that break based on a condition and whose execution length is thus unknown at compile time need to be handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="bf409-235">一方、関数内での使用は、従来の (非クォンタム) ハードウェアで実行されるコードのみを含むため、問題はありません。</span><span class="sxs-lookup"><span data-stu-id="bf409-235">Their use within functions on the other hand is unproblematic, since these only contain code that will be executed on conventional (non-quantum) hardware.</span></span> 
+<span data-ttu-id="bf409-232">繰り返し-成功パターンには、クォンタム固有の connotation があります。</span><span class="sxs-lookup"><span data-stu-id="bf409-232">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="bf409-233">これらは、特定のクラスのクォンタムアルゴリズムで広く使用されているため、Q# の専用言語構成要素です。</span><span class="sxs-lookup"><span data-stu-id="bf409-233">They are widely used in particular classes of quantum algorithms -- hence the dedicated language construct in Q#.</span></span> <span data-ttu-id="bf409-234">ただし、条件に基づいて中断されるループでは、実行の長さがコンパイル時に不明であるため、クォンタムランタイムでは特に注意して処理する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bf409-234">However, loops that break based on a condition and whose execution length is thus unknown at compile time need to be handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="bf409-235">一方、関数内での使用は、従来の (非クォンタム) ハードウェアで実行されるコードのみを含むため、問題はありません。</span><span class="sxs-lookup"><span data-stu-id="bf409-235">Their use within functions on the other hand is unproblematic, since these only contain code that will be executed on conventional (non-quantum) hardware.</span></span> 
 
-<span data-ttu-id="bf409-236">そのため、Q # では、関数内でのみ while ループを使用できます。</span><span class="sxs-lookup"><span data-stu-id="bf409-236">Q# therefore supports to use of while loops within functions only.</span></span> <span data-ttu-id="bf409-237">`while` ステートメントは、キーワード `while`、開いているかっこ `(`、条件 (ブール式)、終わりかっこ `)`、およびステートメントブロックで構成されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-237">A `while` statement consists of the keyword `while`, an open parenthesis `(`, a condition (i.e. a Boolean expression), a close parenthesis `)`, and a statement block.</span></span>
+<span data-ttu-id="bf409-236">そのため、Q# では、関数内でのみ while ループを使用できます。</span><span class="sxs-lookup"><span data-stu-id="bf409-236">Q# therefore supports to use of while loops within functions only.</span></span> <span data-ttu-id="bf409-237">`while` ステートメントは、キーワード `while`、開いているかっこ `(`、条件 (ブール式)、終わりかっこ `)`、およびステートメントブロックで構成されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-237">A `while` statement consists of the keyword `while`, an open parenthesis `(`, a condition (i.e. a Boolean expression), a close parenthesis `)`, and a statement block.</span></span>
 <span data-ttu-id="bf409-238">ステートメントブロック (ループの本体) は、条件が `true`に評価される限り実行されます。</span><span class="sxs-lookup"><span data-stu-id="bf409-238">The statement block (the body of the loop) is executed as long as the condition evaluates to `true`.</span></span>
 
 ```qsharp
