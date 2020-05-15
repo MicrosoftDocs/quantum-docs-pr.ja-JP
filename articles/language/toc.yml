@@ -1,8 +1,0 @@
-- name: 'Q# 型モデル'
-  href: type-model.md
-- name: 式
-  href: expressions.md
-- name: ステートメント
-  href: statements.md
-- name: ファイル構造
-  href: file-structure.md
