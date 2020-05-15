@@ -1,5 +1,5 @@
 ---
-title: 'ドライバーとホスト言語を使用せずに Q # プログラムを実行する'
+title: 'ドライバーとホスト言語を使用せずに Q# プログラムを実行する'
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020
@@ -13,9 +13,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/01/2020
 ms.locfileid: "82706803"
 ---
-# <a name="q-command-line-applications"></a><span data-ttu-id="43367-102">Q # コマンドラインアプリケーション</span><span class="sxs-lookup"><span data-stu-id="43367-102">Q# Command Line Applications</span></span>
+# <a name="q-command-line-applications"></a><span data-ttu-id="43367-102">Q# コマンドラインアプリケーション</span><span class="sxs-lookup"><span data-stu-id="43367-102">Q# Command Line Applications</span></span>
 
-<span data-ttu-id="43367-103">Q # プログラムは、C#、F #、Python などのホスト言語でドライバーを使用しなくても、独自に実行できます。</span><span class="sxs-lookup"><span data-stu-id="43367-103">Q# programs can be executed on their own, without a driver in a host language like C#, F#, or Python.</span></span>
+<span data-ttu-id="43367-103">Q# プログラムは、C#、F #、Python などのホスト言語でドライバーを使用しなくても、独自に実行できます。</span><span class="sxs-lookup"><span data-stu-id="43367-103">Q# programs can be executed on their own, without a driver in a host language like C#, F#, or Python.</span></span>
 
 ## <a name="pre-requisites"></a><span data-ttu-id="43367-104">前提条件</span><span class="sxs-lookup"><span data-stu-id="43367-104">Pre-requisites</span></span>
 
@@ -23,31 +23,31 @@ ms.locfileid: "82706803"
 
 ## <a name="installation"></a><span data-ttu-id="43367-106">インストール</span><span class="sxs-lookup"><span data-stu-id="43367-106">Installation</span></span>
 
-<span data-ttu-id="43367-107">任意の IDE で Q # コマンドラインアプリケーションをビルドできますが、Q # アプリケーションには Visual Studio Code (VS Code) または Visual Studio IDE を使用することを強くお勧めします。</span><span class="sxs-lookup"><span data-stu-id="43367-107">While you can build Q# command line applications in any IDE, we highly recommend using Visual Studio Code (VS Code) or Visual Studio IDE for your Q# applications.</span></span> <span data-ttu-id="43367-108">VS Code または Visual Studio と QDK Visual Studio Code 拡張機能を使用すると、豊富な機能を利用できます。</span><span class="sxs-lookup"><span data-stu-id="43367-108">By using VS Code or Visual Studio and the QDK Visual Studio Code extension you gain access to richer functionality.</span></span>
+<span data-ttu-id="43367-107">任意の IDE で Q# コマンドラインアプリケーションをビルドできますが、Q# アプリケーションには Visual Studio Code (VS Code) または Visual Studio IDE を使用することを強くお勧めします。</span><span class="sxs-lookup"><span data-stu-id="43367-107">While you can build Q# command line applications in any IDE, we highly recommend using Visual Studio Code (VS Code) or Visual Studio IDE for your Q# applications.</span></span> <span data-ttu-id="43367-108">VS Code または Visual Studio と QDK Visual Studio Code 拡張機能を使用すると、豊富な機能を利用できます。</span><span class="sxs-lookup"><span data-stu-id="43367-108">By using VS Code or Visual Studio and the QDK Visual Studio Code extension you gain access to richer functionality.</span></span>
 
 - <span data-ttu-id="43367-109">[VS Code](https://code.visualstudio.com/download)のインストール (Windows、Linux、および Mac)</span><span class="sxs-lookup"><span data-stu-id="43367-109">Install [VS Code](https://code.visualstudio.com/download) (Windows, Linux and Mac)</span></span>
-- <span data-ttu-id="43367-110">VS Code または[の Qdk 拡張機能](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)をインストールします。</span><span class="sxs-lookup"><span data-stu-id="43367-110">Install the [QDK extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode) OR</span></span>
+- <span data-ttu-id="43367-110">VS Code または[の QDK 拡張機能](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)をインストールします。</span><span class="sxs-lookup"><span data-stu-id="43367-110">Install the [QDK extension for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode) OR</span></span>
 - <span data-ttu-id="43367-111">.NET Core クロス プラットフォーム開発ワークロードが有効な [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3</span><span class="sxs-lookup"><span data-stu-id="43367-111">[Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3, with the .NET Core cross-platform development workload enabled</span></span>
 - <span data-ttu-id="43367-112">[Visual Studio 拡張機能](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)をダウンロードしてインストールする</span><span class="sxs-lookup"><span data-stu-id="43367-112">Download and install the [Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)</span></span>
 
 
-## <a name="develop-with-q-using-vs-code"></a><span data-ttu-id="43367-113">VS Code を使用した Q # での開発</span><span class="sxs-lookup"><span data-stu-id="43367-113">Develop with Q# using VS Code</span></span>
+## <a name="develop-with-q-using-vs-code"></a><span data-ttu-id="43367-113">VS Code を使用した Q# での開発</span><span class="sxs-lookup"><span data-stu-id="43367-113">Develop with Q# using VS Code</span></span>
 
 <span data-ttu-id="43367-114">量子プロジェクト テンプレートをインストールします。</span><span class="sxs-lookup"><span data-stu-id="43367-114">Install the Quantum project templates:</span></span>
 
 - <span data-ttu-id="43367-115">**ビュー** -> **コマンドパレット**にアクセス</span><span class="sxs-lookup"><span data-stu-id="43367-115">Go to **View** -> **Command Palette**</span></span>
-- <span data-ttu-id="43367-116">[ **Q #: プロジェクトテンプレートのインストール**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="43367-116">Select **Q#: Install project templates**</span></span>
+- <span data-ttu-id="43367-116">[ **Q#: プロジェクトテンプレートのインストール**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="43367-116">Select **Q#: Install project templates**</span></span>
 
 <span data-ttu-id="43367-117">これで、Quantum Development Kit がインストールされ、使用しているアプリケーションとライブラリで使用できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="43367-117">You now have the Quantum Development Kit installed and ready to use in your own applications and libraries.</span></span>
 - <span data-ttu-id="43367-118">新しいプロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="43367-118">Create a new project:</span></span>
   - <span data-ttu-id="43367-119">**ビュー** -> **コマンドパレット**にアクセス</span><span class="sxs-lookup"><span data-stu-id="43367-119">Go to **View** -> **Command Palette**</span></span>
-  - <span data-ttu-id="43367-120">[ **Q #: 新しいプロジェクトの作成**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="43367-120">Select **Q#: Create New Project**</span></span>
+  - <span data-ttu-id="43367-120">[ **Q#: 新しいプロジェクトの作成**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="43367-120">Select **Q#: Create New Project**</span></span>
   - <span data-ttu-id="43367-121">**スタンドアロンコンソールアプリケーション**の選択</span><span class="sxs-lookup"><span data-stu-id="43367-121">Select **Standalone console application**</span></span>
   - <span data-ttu-id="43367-122">アプリケーションの作成先となるファイル システム上の場所に移動します。</span><span class="sxs-lookup"><span data-stu-id="43367-122">Navigate to the location on the file system where you would like to create the application</span></span>
   - <span data-ttu-id="43367-123">プロジェクトが作成されたら、**[Open new project...]\(新しいプロジェクトを開く...\)** ボタンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="43367-123">Click on the **Open new project...** button, once the project has been created</span></span>
         
 - <span data-ttu-id="43367-124">プロジェクトの確認</span><span class="sxs-lookup"><span data-stu-id="43367-124">Inspect the project</span></span>
-  - <span data-ttu-id="43367-125">"Created" という名前`Program.qs`のファイルが表示されます。このファイルは、コンソールにメッセージを出力する簡単な操作を定義する Q # プログラムです。</span><span class="sxs-lookup"><span data-stu-id="43367-125">You should see that a file called `Program.qs` created, which is a Q# program that defines a simple operation to print a message to the console.</span></span>
+  - <span data-ttu-id="43367-125">"Created" という名前`Program.qs`のファイルが表示されます。このファイルは、コンソールにメッセージを出力する簡単な操作を定義する Q# プログラムです。</span><span class="sxs-lookup"><span data-stu-id="43367-125">You should see that a file called `Program.qs` created, which is a Q# program that defines a simple operation to print a message to the console.</span></span>
 
 - <span data-ttu-id="43367-126">アプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="43367-126">Run the application:</span></span>
   - <span data-ttu-id="43367-127">**ターミナル** -> の**新しいターミナル**にアクセス</span><span class="sxs-lookup"><span data-stu-id="43367-127">Go to **Terminal** -> **New Terminal**</span></span>
@@ -58,7 +58,7 @@ ms.locfileid: "82706803"
 > [!NOTE]
 > * <span data-ttu-id="43367-130">複数のルート フォルダーを持つワークスペースは、Visual Studio Code の拡張機能では現在サポートされていません。</span><span class="sxs-lookup"><span data-stu-id="43367-130">Workspaces with multiple root folders are not currently supported by the Visual Studio Code extension.</span></span> <span data-ttu-id="43367-131">1 つの VS Code ワークスペース内に複数のプロジェクトがある場合は、すべてのプロジェクトが同じルート フォルダー内に含まれている必要があります。</span><span class="sxs-lookup"><span data-stu-id="43367-131">If you have multiple projects within one VS Code workspace, all projects need to be contained within the same root folder.</span></span>
 
-## <a name="develop-with-q-using-visual-studio"></a><span data-ttu-id="43367-132">Visual Studio を使用した Q # での開発</span><span class="sxs-lookup"><span data-stu-id="43367-132">Develop with Q# using Visual Studio</span></span>
+## <a name="develop-with-q-using-visual-studio"></a><span data-ttu-id="43367-132">Visual Studio を使用した Q# での開発</span><span class="sxs-lookup"><span data-stu-id="43367-132">Develop with Q# using Visual Studio</span></span>
 
 <span data-ttu-id="43367-133">`Hello World` アプリケーションを作成してインストールを確認する</span><span class="sxs-lookup"><span data-stu-id="43367-133">Verify the installation by creating a `Hello World` application</span></span>
 
@@ -71,7 +71,7 @@ ms.locfileid: "82706803"
   - <span data-ttu-id="43367-140">**[作成]**</span><span class="sxs-lookup"><span data-stu-id="43367-140">Select **Create**</span></span>
 
 - <span data-ttu-id="43367-141">プロジェクトの確認</span><span class="sxs-lookup"><span data-stu-id="43367-141">Inspect the project</span></span>
-  - <span data-ttu-id="43367-142">という名前`Program.qs`のファイルが作成されていることがわかります。これは、コンソールにメッセージを出力する簡単な操作を定義する Q # プログラムです。</span><span class="sxs-lookup"><span data-stu-id="43367-142">You should see that a file called `Program.qs` has been created, which is a Q# program that defines a simple operation to print a message to the console.</span></span>
+  - <span data-ttu-id="43367-142">という名前`Program.qs`のファイルが作成されていることがわかります。これは、コンソールにメッセージを出力する簡単な操作を定義する Q# プログラムです。</span><span class="sxs-lookup"><span data-stu-id="43367-142">You should see that a file called `Program.qs` has been created, which is a Q# program that defines a simple operation to print a message to the console.</span></span>
 
 - <span data-ttu-id="43367-143">アプリケーションの実行</span><span class="sxs-lookup"><span data-stu-id="43367-143">Run the application</span></span>
   - <span data-ttu-id="43367-144">デバッグ**Debug** -> を**行わないデバッグ開始**の選択</span><span class="sxs-lookup"><span data-stu-id="43367-144">Select **Debug** -> **Start Without Debugging**</span></span>
