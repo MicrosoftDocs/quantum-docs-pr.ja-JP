@@ -1,19 +1,19 @@
 ---
-title: Q# と Python を使用した開発
+title: 'Q # と Python を使用した開発'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: e1b8a0c68b3ac0c059c6de6e478593321764ff88
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: a8c5b9c25c069f98ef8eefd6cfbc36bf3376931c
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680142"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426359"
 ---
-# <a name="develop-with-q--python"></a>Q# と Python を使用した開発
+# <a name="develop-with-q-and-python"></a>Q # と Python を使用した開発
 
 QDK をインストールして、Q # 操作を呼び出す Python ホストプログラムを開発します。
 
@@ -24,7 +24,7 @@ QDK をインストールして、Q # 操作を呼び出す Python ホストプ�
     - [.NET Core SDK 3.1 以降](https://www.microsoft.com/net/download)
 
 
-1. `qsharp`パッケージをインストールします。これは、Q # と python の間の相互運用を可能にする python パッケージです。
+1. パッケージをインストールします。これは、 `qsharp` Q # と python の間の相互運用を可能にする python パッケージです。
 
     ```bash
     pip install qsharp
@@ -83,6 +83,6 @@ QDK をインストールして、Q # 操作を呼び出す Python ホストプ�
 > [!NOTE]
 > * Python Jupyter notebook を使用して、従来の Python プログラムを作成し、そのセルから Q # 操作を呼び出すこともできます。 Python コードは、通常の Python プログラムにすぎません。
 
-## <a name="whats-next"></a>次の内容
+## <a name="next-steps"></a>次の手順
 
-これで、使用している環境に Quantum Development Kit がインストールされたので、[最初の量子プログラム](xref:microsoft.quantum.write-program)を作成して実行することができます。
+これで、使用している環境に Quantum Development Kit がインストールされたので、[最初の量子プログラム](xref:microsoft.quantum.quickstarts.qrng)を作成して実行することができます。

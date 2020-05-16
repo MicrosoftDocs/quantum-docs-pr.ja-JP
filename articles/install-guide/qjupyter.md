@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: b7276f9b273f601f30e4938018398353b6a9102d
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 38db14ccc5f2406043ff4baee3f562385cdf47a8
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831071"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426374"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Q # Jupyter notebook を使用した開発
 
@@ -22,7 +22,7 @@ Jupyter Notebook を使用すると、命令、メモ、およびその他のコ
 IQ# (発音: アイ キュー シャープ) は主に Jupyter と Python で .NET Core SDK に対して使用される拡張機能であり、Q# の演算をコンパイルおよびシミュレートするためのコア機能を提供します。
 
 > [!NOTE]
-> * Q # Jupyter Notebook では、Q # コードのみを実行できます。また、操作を外部ホストプログラム (Python やC#ファイルなど) から呼び出すことはできません。 この環境は、外部のクラシックホストプログラムを quantum プログラムと組み合わせることが目的の場合には適していません。
+> * Q # Jupyter Notebook では、Q # コードのみを実行できます。また、操作を外部ホストプログラム (Python や C# ファイルなど) から呼び出すことはできません。 この環境は、外部のクラシックホストプログラムを quantum プログラムと組み合わせることが目的の場合には適していません。
 
 1. 前提条件
 
@@ -62,12 +62,12 @@ IQ# (発音: アイ キュー シャープ) は主に Jupyter と Python で .NE
         セルの出力に `SayHello` が表示されます。 Jupyter Notebook で実行すると、Q# コードがコンパイルされ、ノートブックから検出した操作の名前が出力されます。
 
 
-    - 新しいセルで、`%simulate` コマンドを使用して、先ほど作成した操作 (シミュレーター) を実行します。
+    - 新しいセルで、次のコマンドを使用して、先ほど作成した操作 (シミュレーター) を実行し `%simulate` ます。
 
         ![%simulate マジックのある Jupyter Notebook セル](~/media/install-guide-jupyter-simulate.png)
 
-        画面には、呼び出された操作の結果と共に、メッセージが出力されます (ここでは、操作は単に `Unit` 型を返すため、空のタプル `()` が表示されます)。
+        画面には、呼び出された操作の結果と共に、メッセージが出力されます (ここでは、操作が単純に型を返すため、空のタプルが表示されて `()` `Unit` います)。
 
-## <a name="whats-next"></a>次に、
+## <a name="next-steps"></a>次の手順
 
-これで、使用している環境に Quantum Development Kit がインストールされたので、[最初の量子プログラム](xref:microsoft.quantum.write-program)を作成して実行することができます。
+これで、使用している環境に Quantum Development Kit がインストールされたので、[最初の量子プログラム](xref:microsoft.quantum.quickstarts.qrng)を作成して実行することができます。

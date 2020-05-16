@@ -6,16 +6,16 @@ ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
-ms.openlocfilehash: a8e830e8f46ac6bd53ed5c607ca8cc2897721a20
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: def6a9f12accfa399fd4db3783b9899fc743f025
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82687338"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426443"
 ---
 # <a name="q-api-design-principles"></a>Q # API 設計の原則
 
-## <a name="introduction"></a>概要
+## <a name="introduction"></a>はじめに
 
 言語およびプラットフォームとして、ユーザーは、クォンタムアプリケーションの記述、実行、理解、調査を行うことができます。
 ユーザーを支援するために、Q # ライブラリを設計する際には、一連の API 設計原則に従って設計を進め、quantum 開発コミュニティで使用可能なライブラリを作成できるようにします。
@@ -41,19 +41,19 @@ ms.locfileid: "82687338"
     別の方法として、公開されている Api は役に立たないようにしてください。ただし、API の各部分には、役に立つ*具体的*な例が含まれていることを確認してください。
 
   *例:*
-  - @"microsoft.quantum.canon.applytoeachca"をとして`ApplyToEachCA(H, _)`使用することで、多くのクォンタムアルゴリズムで共通のタスクである uniform 法則状態のレジスタを準備できます。 同じ操作を、準備、数値、および oracle ベースのアルゴリズムの他の多くのタスクにも使用できます。
+  - @"microsoft.quantum.canon.applytoeachca"をとして使用することで `ApplyToEachCA(H, _)` 、多くのクォンタムアルゴリズムで共通のタスクである uniform 法則状態のレジスタを準備できます。 同じ操作を、準備、数値、および oracle ベースのアルゴリズムの他の多くのタスクにも使用できます。
 
 - ✅ブレーンストーミングとワークショップの新しい API 設計を**行っ**て、直感的で、提案されたユースケースに適合することを再度確認します。
 
   *例:*
-  - 現在の Q\#コードを調べて、新しい API 設計によって既存の実装がどのように簡略化され、明確になるかを確認します。
+  - 現在の Q \# コードを調べて、新しい API 設計によって既存の実装がどのように簡略化され、明確になるかを確認します。
   - 主要ユーザーの代表者として提示された API 設計を確認します。
 
 **主要原則:** 読み取り可能なコードをサポートし、奨励するように Api を設計します。
 
 - ✅ドメインの専門家と専門家以外の人がコードを読み**取れるようにしてください**。
 - ✅**必要に**応じて実装の詳細について詳しく説明するために、上位レベルのアルゴリズム内で各操作と関数の効果に重点を置きます。
-- ✅該当する場合は、一般的な[Q\#スタイルガイド](xref:microsoft.quantum.contributing.style)に従って**ください**。
+- ✅該当する場合は、一般的な[Q \# スタイルガイド](xref:microsoft.quantum.contributing.style)に従って**ください**。
 
 **主要原則:** 安定した Api を設計し、上位互換性を提供します。
 
@@ -62,11 +62,11 @@ ms.locfileid: "82687338"
 - ✅廃止時に既存のユーザーコードが正しく動作するようにする "shim" 操作と関数**を提供し**ます。
 
   *例:*
-  - に呼び出され`EstimateExpectation`た操作の`EstimateAverage`名前をに変更する場合`EstimateExpectation`は、既存のコードが引き続き正常に動作するように、新しい名前で元の操作を呼び出すという新しい操作を導入します。
+  - に呼び出された操作の名前をに変更する場合は `EstimateExpectation` `EstimateAverage` 、 `EstimateExpectation` 既存のコードが引き続き正常に動作するように、新しい名前で元の操作を呼び出すという新しい操作を導入します。
 
-- ✅属性を使用して、廃止をユーザーに通知します。 **DO** @"microsoft.quantum.core.deprecated"
+- ✅属性**を使用し** @"microsoft.quantum.core.deprecated" て、廃止をユーザーに通知します。
 
-- ✅操作または関数の名前を変更する**場合は、** 新しい名前をへ`@Deprecated`の文字列入力として指定します。
+- ✅操作または関数の名前を変更する**場合は、** 新しい名前をへの文字列入力として指定 `@Deprecated` します。
 
 - プレビューリリースの場合は少なくとも6か月以上、サポートされているリリースでは少なくとも2年間は、既存の関数または操作を削除し**ない**ように⛔️します。
 
@@ -81,20 +81,20 @@ ms.locfileid: "82687338"
 - ✅同じ API と以前に存在していたライブラリの両方で、他の関数や操作との連携を構成するために、関数と操作**を設計し**ます。
 
   *例:*
-  - この@"microsoft.quantum.canon.delay"操作では、入力に関して最小限の仮定が行われるため、Q # 標準ライブラリ全体またはユーザーによる定義に従って、いずれかの操作のアプリケーションを遅延させることができます。
+  - この操作では、 @"microsoft.quantum.canon.delay" 入力に関して最小限の仮定が行われるため、Q # 標準ライブラリ全体またはユーザーによる定義に従って、いずれかの操作のアプリケーションを遅延させることができます。
     <!-- TODO: define bad example. -->
 
 - ✅純粋に確定的なクラシックロジックを操作ではなく関数とし**て公開し**ます。
 
   *例:*
-  - 浮動小数点の入力をランダムに記述できるサブルーチンで、操作`Squared : Double -> Double` `Square : Double => Double`としてではなく、ユーザーに公開する必要があります。 これにより、サブルーチンをより多くの場所 (たとえば、他の関数の内部) で呼び出すことができ、パフォーマンスと最適化に影響を与える有用な最適化情報がコンパイラに提供されます。
-  - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]`および`Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]`は、決定性に関して行われる保証とは異なります。どちらも、さまざまな状況で役立ちます。
-  - クォンタム操作のアプリケーションを変換する API ルーチンは、決定的な方法で実行されることが多く、そのため、など`CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)`の関数として使用できるようになります。
+  - 浮動小数点の入力をランダムに記述できるサブルーチンで、操作としてではなく、ユーザーに公開する必要があり `Squared : Double -> Double` `Square : Double => Double` ます。 これにより、サブルーチンをより多くの場所 (たとえば、他の関数の内部) で呼び出すことができ、パフォーマンスと最適化に影響を与える有用な最適化情報がコンパイラに提供されます。
+  - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]`とは `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]` 、決定性に関して行われる保証とは異なります。どちらも、状況によって異なる場合があります。
+  - クォンタム操作のアプリケーションを変換する API ルーチンは、決定的な方法で実行されることが多く、そのため、などの関数として使用できるようになり `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)` ます。
 
 - ✅必要に応じて型パラメーターを使用して、各関数および操作に対して適切な入力型を一般化して**ください**。
 
   *例:*
-  - `ApplyToEach`は、 `<'T>(('T => Unit), 'T[]) => Unit`最も一般的なアプリケーションの特定の型ではなく`((Qubit => Unit), Qubit[]) => Unit`、型です。
+  - `ApplyToEach`は `<'T>(('T => Unit), 'T[]) => Unit` 、最も一般的なアプリケーションの特定の型ではなく、型 `((Qubit => Unit), Qubit[]) => Unit` です。
 
 > [!TIP]
 > 将来のニーズを予測することが重要ですが、ユーザーの具体的な問題を解決することも重要です。
@@ -105,20 +105,20 @@ ms.locfileid: "82687338"
 - ✅タプル型**を使用し**て、結合された入力と出力を論理的にグループ化します。 このような場合は、ユーザー定義型を使用することを検討してください。
 
   *例:*
-  - 別の関数のローカル最小を出力する関数は、適切なシグネチャになる`LocalMinima(fn : (Double -> Double), (left : Double, right : Double)) : Double`可能性のある、検索間隔を入力として受け取る必要がある場合があります。
-  - パラメーターシフト手法を使用して機械学習分類子の派生物を推定する操作では、シフトとシフト解除の両方のパラメーターベクトルを入力として取得する必要がある場合があります。 この場合、に`(unshifted : Double[], shifted : Double[])`似た入力が適している可能性があります。
+  - 別の関数のローカル最小を出力する関数は、適切なシグネチャになる可能性のある、検索間隔を入力として受け取る必要がある場合があり `LocalMinima(fn : (Double -> Double), (left : Double, right : Double)) : Double` ます。
+  - パラメーターシフト手法を使用して機械学習分類子の派生物を推定する操作では、シフトとシフト解除の両方のパラメーターベクトルを入力として取得する必要がある場合があります。 この場合、に似た入力が `(unshifted : Double[], shifted : Double[])` 適している可能性があります。
 
 - ✅入力と出力の組の項目を、さまざまな関数や操作にわたって一貫し**て並べ替えます**。
 
   *例:*
-  - 2つの関数または関数、またはそれぞれが回転角度とターゲット qubit を入力として使用することを検討している場合は、各入力タプルの順序が同じであることを確認します。 つまり`ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl` 、と`DelayedRotation(angle : Double, target : Qubit) : (Unit => Unit is Adj + Ctl)`を`ApplyRotation(target : Qubit, angle : Double) : Unit is Adj + Ctl`優先し`DelayedRotation(angle : Double, target : Qubit) : (Unit => Unit is Adj + Ctl)`ます。
+  - 2つの関数または関数、またはそれぞれが回転角度とターゲット qubit を入力として使用することを検討している場合は、各入力タプルの順序が同じであることを確認します。 つまり、と `ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl` を優先 `DelayedRotation(angle : Double, target : Qubit) : (Unit => Unit is Adj + Ctl)` し `ApplyRotation(target : Qubit, angle : Double) : Unit is Adj + Ctl` `DelayedRotation(angle : Double, target : Qubit) : (Unit => Unit is Adj + Ctl)` ます。
 
-**重要な原則:** 部分アプリケーションなどの Q\#言語機能で適切に動作するように関数と操作を設計します。
+**重要な原則:** 部分アプリケーションなどの Q 言語機能で適切に動作するように関数と操作を設計し \# ます。
 
 - ✅最も一般的に適用される入力が最初に発生するように、入力タプル内の項目**を並べ替えます**(つまり、部分的なアプリケーションがカリー化と同様に動作するようにします)。
 
   *例:*
-  - 入力と`ApplyRotation`して浮動小数点数と qubit を受け取る演算は、通常、型`Qubit => Unit`の入力を期待する操作で使用するために、浮動小数点の入力と共に部分的に適用されることがあります。 そのため、`operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
+  - 入力 `ApplyRotation` として浮動小数点数と qubit を受け取る演算は、通常、型の入力を期待する操作で使用するために、浮動小数点の入力と共に部分的に適用されることがあり `Qubit => Unit` ます。 そのため、`operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
       部分的なアプリケーションで最も一貫して動作します。
   - 通常、このガイダンスでは、入力タプル内のすべてのすべての古典データを、入力タプルのすべての qubits の前に配置しますが、実際の API の呼び出し方法については、適切な判断を行います。
 
@@ -135,69 +135,69 @@ ms.locfileid: "82687338"
 - ✅特定の基本型を使用する必要があることを示すために、新しいユーザー定義型**を導入する**ことをお勧めします。
 
   *例:*
-  - 特に、古典的なデータをクォンタムレジスタにエンコードする操作として解釈する必要がある操作は、ユーザー定義型`newtype InputEncoder = (Apply : (Qubit[] => Unit))`でラベル付けすることをお勧めします。
+  - 特に、古典的なデータをクォンタムレジスタにエンコードする操作として解釈する必要がある操作は、ユーザー定義型でラベル付けすることをお勧めし `newtype InputEncoder = (Apply : (Qubit[] => Unit))` ます。
 
 - ✅将来の拡張が可能な名前付きの項目を持つ新しいユーザー定義型**を導入し**ます (たとえば、後で追加の名前付き項目を含む可能性のある結果構造)。
 
   *例:*
-  - 操作`TrainModel`によって多数の構成オプションが公開されている場合、これら`TrainingOptions`のオプションを新しい udt と`DefaultTrainingOptions : Unit -> TrainingOptions`して公開し、新しい関数を提供することで、ユーザーは TrainingOptions udt 値内の特定の名前付き項目をオーバーライドできます。さらに、ライブラリ開発者は、必要に応じて新しい udt 項目を追加できます。
+  - 操作に `TrainModel` よって多数の構成オプションが公開されている場合、これらのオプションを新しい udt として公開 `TrainingOptions` し、新しい関数を提供 `DefaultTrainingOptions : Unit -> TrainingOptions` することで、ユーザーは TrainingOptions udt 値内の特定の名前付き項目をオーバーライドできます。さらに、ライブラリ開発者は、必要に応じて新しい udt 項目を追加できます。
 
 - ✅新しいユーザー定義型の名前付き項目は、ユーザーが正しい組分解を知る必要があるように、優先的**に宣言し**ます。
 
   *例:*
-  - 極分解で複素数を表す場合は、を`newtype ComplexPolar = (Magnitude: Double, Argument: Double)` `newtype ComplexPolar = (Double, Double)`優先します。
+  - 極分解で複素数を表す場合は、を優先 `newtype ComplexPolar = (Magnitude: Double, Argument: Double)` `newtype ComplexPolar = (Double, Double)` します。
 
 **重要な原則:** ユーザー定義型を使用すると、認知の負荷が軽減され、ユーザーが追加の概念や用語を習得する必要がありません。
 
-- ⛔️**ラップ**解除演算子 (`!`) を頻繁に使用する必要があるユーザー定義型を導入したり、通常は複数レベルのラップ解除が必要になることがあります。 次のような軽減策が考えられます。
+- ⛔️**ラップ**解除演算子 () を頻繁に使用する必要があるユーザー定義型を導入し `!` たり、通常は複数レベルのラップ解除が必要になることがあります。 次のような軽減策が考えられます。
 
-  - 1つの項目を持つユーザー定義型を公開する場合は、その項目の名前を定義することを検討してください。 たとえば、「」 `newtype Encoder = (Apply : (Qubit[] => Unit is Adj + Ctl))`を使用する`newtype Encoder = (Qubit[] => Unit is Adj + Ctl)`ことを検討してください。
+  - 1つの項目を持つユーザー定義型を公開する場合は、その項目の名前を定義することを検討してください。 たとえば、「」を使用することを検討してください `newtype Encoder = (Apply : (Qubit[] => Unit is Adj + Ctl))` `newtype Encoder = (Qubit[] => Unit is Adj + Ctl)` 。
 
   - 他の関数および操作が "ラップされた" UDT インスタンスを直接受け入れることを保証する。
 
 - ⛔️には、追加の表現力を提供せずに組み込み型を複製する新しいユーザー定義型は導入し**ません**。
 
   *例:*
-  - UDT `newtype QubitRegister = Qubit[]`は追加`Qubit[]`の表現力を提供しないため、はっきり特典なしで使用するのは困難です。
-  - UDT `newtype LittleEndian = Qubit[]`は、基になるレジスタがどのように使用および解釈されるかを文書にし、その基本型に対してさらに表現力を提供します。
+  - UDT は `newtype QubitRegister = Qubit[]` 追加の表現力を提供 `Qubit[]` しないため、はっきり特典なしで使用するのは困難です。
+  - UDT は、 `newtype LittleEndian = Qubit[]` 基になるレジスタがどのように使用および解釈されるかを文書にし、その基本型に対してさらに表現力を提供します。
 
 - 厳密に要求されていない限り、⛔️アクセサー関数は導入し**ません**。  この場合は、名前付きの項目を強くお勧めします。
 
   *例:*
-  - UDT `newtype Complex = (Double, Double)`を導入するときは、関数`newtype Complex = (Real : Double, Imag : Double)` `GetReal : Complex -> Double`と`GetImag : Complex -> Double`を導入するように定義をに変更することをお勧めします。
+  - UDT を導入するときは `newtype Complex = (Double, Double)` 、関数とを導入するように定義をに変更することをお勧めし `newtype Complex = (Real : Double, Imag : Double)` `GetReal : Complex -> Double` `GetImag : Complex -> Double` ます。
 
 ## <a name="namespaces-and-organization"></a>名前空間と組織
 
 **重要な原則:** それぞれの名前空間で、関数、操作、およびユーザー定義型の目的を明確に伝えることができる、予測可能な名前空間の名前を選択します。
 
-- ✅**名前空間**をと`Publisher.Product.DomainArea`して指定します。
+- ✅**名前空間**をとして指定 `Publisher.Product.DomainArea` します。
 
   *例:*
-  - Quantum 開発キットの quantum シミュレーション機能の一部として Microsoft が発行した関数、操作、および Udt は、 `Microsoft.Quantum.Simulation`名前空間に配置されます。
+  - Quantum 開発キットの quantum シミュレーション機能の一部として Microsoft が発行した関数、操作、および Udt は、名前空間に配置され `Microsoft.Quantum.Simulation` ます。
   - `Microsoft.Quantum.Math`数学ドメイン領域に関連する Quantum 開発キットの一部として Microsoft によって発行された名前空間を表します。
 
 - ✅特定の機能に使用される操作、関数、およびユーザー定義型を名前空間に配置して、その機能が異なる問題ドメイン間で使用されている**場合でも**、その機能を説明する名前空間に配置します。
 
   *例:*
-  - Quantum 開発キットの一部として Microsoft が発行した状態準備 Api は、 `Microsoft.Quantum.Preparation`に配置されます。
-  - Quantum 開発キットの一部として Microsoft が発行したクォンタムシミュレーション Api は、 `Microsoft.Quantum.Simulation`に配置されます。
+  - Quantum 開発キットの一部として Microsoft が発行した状態準備 Api は、に配置さ `Microsoft.Quantum.Preparation` れます。
+  - Quantum 開発キットの一部として Microsoft が発行したクォンタムシミュレーション Api は、に配置さ `Microsoft.Quantum.Simulation` れます。
 
 - ✅操作、関数、およびユーザー定義型を、特定のドメイン内でのみ使用される名前空間**に配置し**て、ユーティリティのドメインを示します。 必要に応じて、副名前空間を使用して、各ドメイン固有の名前空間内のフォーカスされたタスクを指定します。
 
   *例:*
-  - Microsoft によって発行されたクォンタム機械学習ライブラリは@"microsoft.quantum.machinelearning" 、主に名前空間に配置され@"microsoft.quantum.machinelearning.datasets"ますが、データセットの例は名前空間によって提供されます。
-  - Quantum 開発キットの一部として Microsoft によって発行された量子化学`Microsoft.Quantum.Chemistry`api は、に配置する必要があります。 ヨルダン--Wigner 分解の実装に固有の機能がに`Microsoft.Quantum.Chemistry.JordanWigner`配置されている場合があります。そのため、量子化学のドメイン領域の主要インターフェイスは実装に関係しません。
+  - Microsoft によって発行されたクォンタム機械学習ライブラリは、主に名前空間に配置され @"microsoft.quantum.machinelearning" ますが、データセットの例は名前空間によって提供され @"microsoft.quantum.machinelearning.datasets" ます。
+  - Quantum 開発キットの一部として Microsoft によって発行された量子化学 Api は、に配置する必要があり `Microsoft.Quantum.Chemistry` ます。 ヨルダン--Wigner 分解の実装に固有の機能がに配置されている場合があり `Microsoft.Quantum.Chemistry.JordanWigner` ます。そのため、量子化学のドメイン領域の主要インターフェイスは実装に関係しません。
 
 **主要原則:** 名前空間とアクセス修飾子を一緒に使用して、ユーザーに公開されている API サーフェイスに関する意図的なものにし、Api の実装とテストに関連する内部の詳細を非表示にします。
 
-- ✅必要に応じて、API を実装するために必要なすべての関数と操作を、実装されている API と同じ名前空間**に配置し**ますが、"private" または "internal" キーワードでマークして、ライブラリのパブリック API サーフェイスの一部ではないことを示します。 アンダースコア (`_`) で始まる名前を使用して、プライベートおよび内部の操作と関数をパブリック呼び出しができるかを視覚的に区別します。
+- ✅必要に応じて、API を実装するために必要なすべての関数と操作を、実装されている API と同じ名前空間**に配置し**ますが、"private" または "internal" キーワードでマークして、ライブラリのパブリック API サーフェイスの一部ではないことを示します。 アンダースコア () で始まる名前を使用して、 `_` プライベートおよび内部の操作と関数をパブリック呼び出しができるかを視覚的に区別します。
 
   *例:*
-  - 操作名`_Features`は、特定の名前空間とアセンブリに対してプライベートであり、 `internal`キーワードを使用する必要がある関数を示します。
+  - 操作名は、 `_Features` 特定の名前空間とアセンブリに対してプライベートであり、キーワードを使用する必要がある関数を示し `internal` ます。
 
-- ✅特定の名前空間の API を実装するために多数のプライベート関数または操作が必要な場合**は、実装**されて終了する名前空間に一致する新しい名前空間に`.Private`それらを配置することがまれにあります。
+- ✅特定の名前空間の API を実装するために多数のプライベート関数または操作が必要な場合**は、実装**されて終了する名前空間に一致する新しい名前空間にそれらを配置することがまれに `.Private` あります。
 
-- ✅すべての単体テスト**は**、テスト対象の名前空間に一致する名前`.Tests`空間に配置し、で終了します。
+- ✅すべての単体テスト**は**、テスト対象の名前空間に一致する名前空間に配置し、で終了 `.Tests` します。
 
 ## <a name="naming-conventions-and-vocabulary"></a>名前付け規則とボキャブラリ
 
@@ -212,12 +212,12 @@ ms.locfileid: "82687338"
   *例:*
   - "振幅増幅の反復" を "Grover iteration" に優先します。
 
-- ✅実装ではなく、呼び出し可能なの意図された効果を明確に伝える操作と関数の名前**を選択し**ます。 実装は[API ドキュメントコメント](xref:microsoft.quantum.language.statements#documentation-comments)に記載されていることに注意してください。
+- ✅実装ではなく、呼び出し可能なの意図された効果を明確に伝える操作と関数の名前**を選択し**ます。 実装は[API ドキュメントコメント](xref:microsoft.quantum.guide.filestructure#documentation-comments)に記載されていることに注意してください。
 
   *例:*
   - 後者がどのように実装されているかを通知するため、"Hadamard test" に "推定重複" を優先します。
 
-- ✅すべての Q\# api で、一貫した方法で単語**を使用し**ます。
+- ✅すべての Q api で、**一貫した**方法で単語を使用し \# ます。
 
   - **助動詞**
 
@@ -242,7 +242,7 @@ ms.locfileid: "82687338"
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
-    - **適用**: クォンタム操作または操作のシーケンスを1つ以上の qubits に適用し、それらの qubits の状態が一貫した形で変化するようにします。 この動詞は Q\#の用語で最も一般的な動詞であり、より具体的な動詞がより直接的に関連する場合には使用しないで**ください**。
+    - **適用**: クォンタム操作または操作のシーケンスを1つ以上の qubits に適用し、それらの qubits の状態が一貫した形で変化するようにします。 この動詞は Q の用語で最も一般的な動詞であり、 \# より具体的な動詞がより直接的に関連する場合には使用**しないでください**。
 
   - **名詞**:
 
@@ -254,7 +254,7 @@ ms.locfileid: "82687338"
     - **オプション:** 関数または演算に対して "省略可能な引数" として機能する複数の名前付き項目を含む UDT。 次に例を示します。
 
       *例:*
-      - @"microsoft.quantum.machinelearning.trainingoptions" UDT には、学習率、ミニバッチサイズ、および ML トレーニング用のその他の構成可能なパラメーターの名前付き項目が含まれています。
+      - UDT には @"microsoft.quantum.machinelearning.trainingoptions" 、学習率、ミニバッチサイズ、および ML トレーニング用のその他の構成可能なパラメーターの名前付き項目が含まれています。
 
   - **形容詞**:
 
@@ -265,7 +265,7 @@ ms.locfileid: "82687338"
     - **次のようになります。** 関数の入力と出力が同じ情報を表しているが、出力ではその情報を元の表現ではなく*X* **として**表すことを表します。 これは、型変換関数では特に一般的です。
 
       *例:*
-      - `IntAsDouble(2)`入力 (`2`) と出力 (`2.0`) の両方が同じ情報を質的しているが、異なる Q\#データ型を使用していることを示します。
+      - `IntAsDouble(2)`入力 ( `2` ) と出力 () の両方が `2.0` 同じ情報を質的しているが、異なる Q データ型を使用していることを示し \# ます。
 
     - **開始:** 一貫性を確保するために、この前置詞を使用**して、** 型変換関数や、が適切であるその他のケースを示すことはでき**ません**。
 

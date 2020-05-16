@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.pauli
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 08babbcb0d6c6c4d83622489bc4ecc811e64829a
-ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+ms.openlocfilehash: 3ce9c0ea13d62bd662f3ccc450c385799ddb264b
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80320867"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426565"
 ---
 # <a name="pauli-measurements"></a>P# li 測定
 
@@ -21,8 +21,8 @@ Q # を操作するときに実行する最も一般的な種類の測定は、�
 このような場合、一般的には、Pforce Li 演算子の測定について説明します。一般的には、$X、Y、Z $、$Z/otimes Z、xo times X、xotimes Y $ などの演算子です。
 
 > [!TIP]
-> Q # では、通常、マルチ qubit の演算子は `Pauli[]`型の配列によって表されます。
-> たとえば、$X & otimes Z/otimes Y $ を表すには、配列 `[PauliX, PauliZ, PauliY]`を使用できます。
+> Q # では、通常、マルチ qubit の演算子は型の配列によって表され `Pauli[]` ます。
+> たとえば、$X & otimes Z/otimes Y $ を表すには、配列を使用し `[PauliX, PauliZ, PauliY]` ます。
 
 P# li 演算子の観点から、メジャーについて説明することは、クォンタムエラー修正のサブフィールドで特に一般的です。
 Q # では、同様の規則に従います。ここでは、この測定の別のビューについて説明します。
@@ -36,12 +36,12 @@ $N $-qubit クォンタムの状態になっているとします。次に、1�
 2つのサブスペースを記述する方法の1つとして、2つの一意の値を持つマトリックスを通じて指定する方法があります。これは、規約によって $ pm $1 として取得されます。
 この方法でサブスペースを記述する簡単な例については、$Z $:
 
-$ $ \begin{align} Z & = \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}.
+$ $ \begin{align} Z & = \begin{bmatrix} 1 & 0 \\ \\ 0 &-1 \end{bmatrix}.
 \end{align} $ $
 
-$Z p固有ベクトル $ マトリックスの対角線要素を読み取ることで、$ \ket{0}$ と $ \ket{1}$ という2つのがある $Z ことを確認できます。対応する固有値 $ $1 があります。
-このため、qubit を測定して `Zero` (状態 $ \ket{0}$ に対応) を取得した場合、qubit の状態は $Z $ 演算子の $ + $1 eigenstate であることがわかります。
-同様に、`One`を取得した場合は、qubit の状態が $Z $ の $-$1 eigenstate であることがわかります。
+$Z p固有ベクトル $ マトリックスの対角線要素を読み取ることで、$ \ket $ と $ \ket $ という2つのがあり、 {0} {1} 対応する固有値 $ pm $1 がある $Z ことがわかります。
+したがって、qubit を測定して `Zero` (状態 $ \ket $ に対応する) を取得した場合、 {0} qubit の状態が $ + $1 eigenstate $Z $ 演算子であることがわかります。
+同様に、を取得した場合は、 `One` qubit の状態が $Z $ の $-$1 eigenstate であることがわかります。
 このプロセスは、"P# li $Z $" の測定値として、P# li 測定の言語で参照されます。これは、計算ベースの測定を実行することとまったく同じです。
 
 $ 2 \ times $2 マトリックスは、$Z $ のユニタリ変換でもあり、この条件を満たしています。
@@ -52,16 +52,16 @@ Preferences Li 測定の表記は、$X、Y、Z $ の測定値を等価の測定�
 
 |P# li 測定  |ユニタリ変換  |
 |-------------------|------------------------|
-| $Z $               | $ \ bold 完了 $             |
+| $Z $               | $\boldone$             |
 | $X $               | $H $                    |
 | $Y $               | $HS ^ {\ dagger} $         |
 
-つまり、この言語を使用すると、"measure $Y $" は $HS ^ \ ダガー $ を適用し、計算の単位で測定することと同じです。 [`S`](xref:microsoft.quantum.intrinsic.s)は "フェーズゲート" と呼ばれる組み込みのクォンタム操作であり、これは、長さの行列でシミュレートできます。
+つまり、この言語を使用すると、"measure $Y $" は $HS ^ \ ダガー $ を適用し、計算単位で測定することと同じです。ここで、は "フェーズゲート" と呼ばれる組み込みのクォンタム操作であり、この値 [`S`](xref:microsoft.quantum.intrinsic.s) は、ユニタリ行列でシミュレートできます。
 
-$ $ \begin{align} S = \begin{bmatrix} 1 & 0 \\\\ 0 & i \end{bmatrix}.
+$ $ \begin{align} S = \begin{bmatrix} 1 & 0 \\ \\ 0 & i \end{bmatrix}.
 \end{align} $ $
 
-また、クォンタム状態ベクターに $HS ^-ダガー $ を適用し、次の演算が `Measure([PauliY], [q])`と同じになるように $Z $ を測定することと同じです。
+また、クォンタムの状態ベクターに $HS ^ \ ダガー $ を適用し、次の演算がと等価になるように $Z $ を測定することと同じです `Measure([PauliY], [q])` 。
 
 ```Q#
 operation MeasureY(qubit : Qubit) : Result {
@@ -76,24 +76,24 @@ operation MeasureY(qubit : Qubit) : Result {
 }
 ```
 
-次に、適切な状態は、計算ベースに変換することによって検出されます。これは、$SH $ をクォンタム状態ベクターに適用する量です。上記のスニペットでは、計算ベースに戻る変換は、`within … apply` ブロックを使用して自動的に処理されます。
+次に、適切な状態は、計算ベースに変換することによって検出されます。これは、$SH $ をクォンタム状態ベクターに適用する量です。前のスニペットでは、計算に戻る変換は、ブロックを使用することによって自動的に処理され `within … apply` ます。
 
-Q # では、結果と---して、州---との対話から抽出された古典的な情報が `Result` の値によって与えられます。これは、結果が測定された $ (-1) ^ j $ eigenspace 内にあるかどうかを示す、\\{\texttt{Zero}, \texttt{One}\\} $ に $j ます。
+Q # では、結果と---して、州---とのやり取りから抽出された古典的な情報が、その `Result` \\ 結果が測定された \\ $ (-1) ^ j $ eigenspace 内にあるかどうかを示す値 $j \ {\texttt{Zero}, \texttt{One}} $ で指定されているとします。
 
 
 ## <a name="multiple-qubit-measurements"></a>複数の qubit 測定値
 
 次に示すように、マルチ qubit の演算子の測定値は同様に定義されています。
 
-$ $ Zotimes Z = \begin{bmatrix}1 & 0 & 0 & 0\\\\ 0 &-1 & 0 & 0\\\\ 0 & 0 &-1 & 0\\\\ 0 & 0 & 0 & 1 \ 終了 {bmatrix}。
+$ $ Zotimes Z = \begin{bmatrix}1 &0 &0&0 \\ \\ 0&-1&0&0 0 \\ \\&0&-1&0 0&0&\\ \\ 0&1 \ 終了 {bmatrix}。
 $$
 
 したがって、2つの $Z $ 演算子の3つの製品は、$ + $1 と $-$1 eigenvalues で構成される2つのスペースで構成されるマトリックスを形成します。
 シングル qubit の場合と同様に、両方とも、アクセス可能なベクター空間の半分が $ + $1 eigspace に属し、残りの半分が $-$1 の範囲に属していることを意味します。
 一般に、$Z $ 演算子と id のすべての操作については、この後も同様に、その製品の定義から簡単に確認できます。
-たとえば、次のように入力します。
+たとえば、オブジェクトに適用された
 
-$ $ \begin{align} Z/\begin{bmatrix} done = 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 &-1 & 0 \\\\ 0 & 0 & 0 &-1 \end{bmatrix}.
+$ $ \begin{align} Z-otimes \ \begin{bmatrix} done = 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 0 \\ \\ & 0 &-1 & 0 0 & 0 & \\ \\ 0 &-1 \end{bmatrix}.
 \end{align} $ $
 
 前と同様に、このようなマトリックスのすべてのユニタリ変換では、$ pm $1 eigenvalues でラベル付けされた2つの半分の空白も記述します。
@@ -101,7 +101,7 @@ $ $ \begin{align} Z/\begin{bmatrix} done = 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\
 1 qubit の場合と同様に、2つの2つのすべての値は、$U ^-ダガー (zotimes \ id) U $ for $ 4 \ times $4 $U $ として書き込むことができます。 次の表に示す変換を列挙します。
 
 > [!NOTE]
-> 次の表で、$ \begin{matrix} を使用して、$ $ \begin{align}/name{swap} & = \ left (1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \end{matrix}\right) \end{align} $ $ を使用して組み込み操作をシミュレートしています。 [\\](xref:microsoft.quantum.intrinsic)。\\`SWAP`
+> 次の表では、$ & & \begin{align} > $ を使用して、マトリックス $ $ \begin{matrix} (1 & 0 & 0 & 0 0 & 0 & 1 & 0 0 & 1 & 0 & 0 0 & 0 & 0 & \\ \\ \\ \\ \\ \\ 1 \end{matrix}\right) \end{align} $ $ を使用して組み込み操作をシミュレートして [`SWAP`](xref:microsoft.quantum.intrinsic) います。
 
 |P# li 測定     |ユニタリ変換  |
 |----------------------|------------------------|
@@ -112,31 +112,31 @@ $ $ \begin{align} Z/\begin{bmatrix} done = 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\
 | $/bold Z $ | $ \ 演算子名 {swap} $ |
 | $/bold (& a) @ times X $ | $ (Hotimes-bold 完了) \ オペレーター名 {swap} $ |
 | $/bold * Y $ | $ (HS ^/dagger\ otimes-bold 完了) \ オペレーター名 {swap} $ |
-| $Z/otimes Z $ | $ \ オペレーター名 {cnot}\_{10}$ |
-| $X/otimes Z $ | $ \ オペレーター名 {cnot}\_{10}(hotimes/bold done) $ |
-| $Y/otimes Z $ | $ \ オペレーター名 {cnot}\_{10}(HS ^ & daggero times \ bold) $ |
-| $Z/otimes X $ | $ \ オペレーター名 {cnot}\_{10}(\ bold oneotimes H) $ |
-| $X/otimes X $ | $ \ オペレーター名 {cnot}\_{10}(hotimes H) $ |
-| $Y/otimes X $ | $ \ オペレーター名 {cnot}\_{10}(HS ^ & daggerotimes H) $ |
-| $Z/otimes Y $ | $ \ オペレーター名 {cnot}\_{10}(\ (& a) {times HS ^ \ ダガー) $ |
-| $X/otimes Y $ | $ \ オペレーター名 {cnot}\_{10}(hotimes HS ^ \ ダガー) $ |
-| $Y/otimes Y $ | $ \ オペレーター名 {cnot}\_{10}(HS ^ & daggerotimes HS ^ \ ダガー) $ |
+| $Z/otimes Z $ | $ \ 演算子名 {cnot} \_ {10} $ |
+| $X/otimes Z $ | $ \ 演算子名 {cnot} \_ {10} (hotimes/bold done) $ |
+| $Y/otimes Z $ | $ \ オペレーター名 {cnot} \_ {10} (HS ^ & daggerotimes \ bold 完了) $ |
+| $Z/otimes X $ | $ \ 演算子名 {cnot} \_ {10} (\ bold oneotimes H) $ |
+| $X/otimes X $ | $ \ 演算子名 {cnot} \_ {10} (hotimes H) $ |
+| $Y/otimes X $ | $ \ 演算子名 {cnot} \_ {10} (HS ^ & daggerotimes H) $ |
+| $Z/otimes Y $ | $ \ オペレーター名 {cnot} (& a \_ {10} ) (& a) (& a) (& a) @ c |
+| $X/otimes Y $ | $ \ オペレーター名 {cnot} \_ {10} (hotimes HS ^ \ ダガー) $ |
+| $Y/otimes Y $ | $ \ 演算子名 {cnot} \_ {10} (hs ^ & daggerotimes hs ^ \ ダガー) $ |
 
-ここでは、 [`CNOT`](xref:microsoft.quantum.intrinsic.cnot)操作は次の理由で表示されます。
+ここでは、 [`CNOT`](xref:microsoft.quantum.intrinsic.cnot) 次の理由で操作が表示されます。
 $-Bold 完了 $ matrix を含まない各 P# li の測定値は、上記の理由によって Z $ を $Z するための最大値と同じです。
 $Z/otimes Z $ の固有値は、各計算ベースのベクトルを構成する qubits のパリティに依存しています。また、制御されていない操作は、このパリティを計算して最初のビットに格納するために機能します。
 次に、最初のビットを測定した後、結果として得られる半分の領域の id を回復できます。これは、P# li 演算子の測定に相当します。
 
-追加の注意点として、$Z/otimes Z $ が連続して $Z 測定されていることを想定していることもあります。これは、\mathbb{1}$ と $ \mathbb{1}/otimes Z $ の順に測定した場合、この想定は false になります。
+追加の注意点がありますが、$Z/otimes Z $ は、$Z \mathbb $ を順番に測定して {1} から $ \mathbb/Otimes z $ と同じであると想定されることもあり {1} ます。この想定は false になります。
 その理由は、Z $ $Z 測定すると、これらの演算子の $ + $1 または $-$1 eigenstate にクォンタムの状態が射影されます。
-\Mathbb{1}$ を測定してから $ \mathbb{1} & otimes Z $ を $Z 計測すると、最初にクォンタムの状態ベクターを $Z の半分の空白に射影してから、$ \mathbb{1}/otimes Z $ の半分の領域に \mathbb します。{1}
+$Z \mathbb $ を測定した {1} 後、$ \mathbb/ {1} Otimes z $ は、まずクォンタムの状態ベクトルを、\mathbb $ $Z の半分の領域に、 {1} 次に 30 \mathbb/ {1} otimes z $ に射影します。
 計算ベースのベクトルが4つあるため、両方の測定を実行すると、状態が4分の1に減少し、1つの計算ベースのベクトルに縮小されます。
 
 ## <a name="correlations-between-qubits"></a>Qubits 間の相関関係
 $X/otimes X $ や $Z/otimes Z $ のような、Pforce のマトリックスの保管された製品を測定する別の方法として、これらの測定値を使用すると、2つの qubits 間の相関関係に格納されている情報を確認できます。
 $X-otimes \ id $ を測定すると、最初の qubit にローカルに格納されている情報を確認できます。
 クォンタムコンピューティングではどちらの種類の測定も同等の価値がありますが、前者はクォンタムコンピューティングの能力を測定します。
-多くの場合、クォンタムコンピューティングでは、学習する情報が1つの qubit に格納されておらず、すべての qubit にローカルに格納されていないことがわかります。したがって、これは、結合測定 (たとえば、$Z/otimes Z $) によって行われます。情報はマニフェストになります。
+クォンタムコンピューティングでは、学習する情報が1つの qubit に格納されておらず、一度にすべての qubit にローカルではなく格納されているので、この情報を結合測定 ($Z/otimes Z $ など) を使用して調べることによって、この情報がマニフェストになります。
 
 たとえば、エラー修正では、保護しようとしている状態について何も学習していないときに発生したエラーを確認したい場合がよくあります。
 [ビットフリップコードサンプル](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code)では、$Z-otimes z/otimes-id $ と $ id & otimes z/otimes z $ のような測定値を使用して、その方法の例を示しています。
@@ -150,7 +150,7 @@ Q # では、このような測定値により $ (-1) ^ j $ という符号の�
 Q # の組み込み機能として Pdiagonalizing の測定値を持つことは便利です。このような演算子を測定するには、制御されていないゲート型のチェーンと基本変換の長いチェーンが必要であり、その操作を $Z $ と $ id $ のすべての製品として表現するために必要な $U $ gate を記述します
 これらの定義済みの測定値のいずれかを実行することを指定できるようにすることで、計算ベースの測定によって必要な情報が得られるように、基になる方法を気にする必要がなくなります。
 Q # は、必要なすべての基準変換を自動的に処理します。
-詳細については、「 [`Measure`](xref:microsoft.quantum.intrinsic.measure) 」および「 [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis)操作」を参照してください。
+詳細については、「」および「」操作を参照してください [`Measure`](xref:microsoft.quantum.intrinsic.measure) [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) 。
 
 ## <a name="the-no-cloning-theorem"></a>複製なしの定理
 
@@ -162,18 +162,18 @@ Q # は、必要なすべての基準変換を自動的に処理します。
 No 複製定理は、このという名前です。
 クォンタムコンピューターによる汎用クォンタム状態の複製は禁止されています。
 定理の証明は、非常に簡単です。
-ここでは、複製なしの定理の完全な証明は少し技術的なものではありませんが、追加の補助 qubits がこの範囲内に存在しない場合は、(計算中にスクラッチ領域に使用される補助 qubits は qubits、Q # で簡単に使用および管理されます)、「<xref:microsoft.quantum.techniques.qubits>」を参照してください。
+ここでは、複製なしの定理の完全な証明は少し技術的なものではありませんが、追加の補助 qubits がこのスコープ内に存在しない場合は、(計算中にスクラッチ領域に使用される補助 qubits は qubits であり、Q # で簡単に使用および管理されます)[を参照し](xref:microsoft.quantum.guide.qubits#borrowed-qubits)てください。
 
 このようなクォンタムコンピューターでは、複製操作は、1つのユニタリ行列によって記述される必要があります。
 複製しようとしているクォンタムの状態が破損する可能性があるため、測定は禁止されています。
-複製操作をシミュレートするには、' $ $ U \ket{\psi} \ket{0} = \ket{\psi} \ket{\psi} $ $ (任意の状態 $ \ket{\psi} $) のプロパティを持つために使用される、ユニタリ行列が必要です。
+複製操作をシミュレートするために、値 $ \ket{\psi} $ の $ $ U \ket{\psi} \ket {0} = \ket{\psi} \ket{\psi} $ $ というプロパティを持つために使用される、ユニタリ行列が必要です。
 マトリックス乗算の直線性プロパティは、2つ目のクォンタム状態 $ \ket{\phi} $ であることを意味します。
 
-$ $ \begin{align}/left [\ frac{1}{\ sqrt{2}} \ left (\ket{\phi} + \ket{\psi} \ right) \ right] \ket{0} & = \ frac{1}{\ sqrt{2}} U\ket {\ phi} \ k{0} +-frac{1}{\ sqrt{2}} U\ket {\ psi} \ k{0} \\\\ & = \ frac{1}{\ sqrt{2}} \ 左 (\ket{\phi} \ket{\phi} + \ket{\psi} \ket{\psi}/right) \\\\ & \n * 左 (-frac{1}{/sqrt{2}} \ 左 (\ket{\phi} + \ket{\psi} \ 右) \ otimes \left (\ frac{1}{\ sqrt{2}} \ left (\ket{\phi} + \ket{\psi}) \ right)。
+$ $ \begin{align} U \ 左 [\ frac {1} {\ sqrt {2} } \ left (\ket{\phi} + \ket{\psi}/right) \ right] \ket {0} & = \ frac {1} {-sqrt {2} } U\ket {\ phi} {0} {1} {2} k {\ psi} \ U\ket & = & lt; \ k {0} \\ \\ = \ frac {1} {\ sqrt {2} } \ left (\ket{\phi} \ket{\phi} + \ket{\psi} \ket{\psi} \ right) \\ \\ & \n * 左 (\ frac {1} {\ sqrt {2} } \ 左 (\ket{\phi} + \ket{\psi} {1} {2} /right) \ left (\ket{\phi} + \ket{\psi}/right)/left (+/right) (+)/right)。
 \end{align} $ $
 
 これにより、複製されていない定理の背後で基本的な直感が得られます。不明なクォンタム状態をコピーするデバイスは、少なくともそのコピーされた状態の中でエラーを誘発する必要があります。
-Cloner が入力状態で直線的に動作することを前提として、補助 qubits の加算と測定によって違反が発生する可能性がありますが、このような対話によって、測定統計を通じてシステムに関する情報が漏洩し、正確に防ぐことができます。このような場合にも複製します。
+Cloner が入力状態で直線的に動作することを前提として、補助 qubits の追加や測定によって違反が発生する可能性がありますが、このような対話によって、測定統計を通じてシステムに関する情報が漏洩し、そのような場合には正確な複製を防ぐことができます。
 複製なしの定理の詳細については、「」[を](xref:microsoft.quantum.more-information)参照してください。
 
 クォンタムの状態を複製できる場合は、クォンタムの状態についての理解を深めることができるので、定理の複製は、クォンタムの計算にとって重要です。

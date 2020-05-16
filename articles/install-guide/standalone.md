@@ -1,19 +1,19 @@
 ---
-title: 'ドライバーとホスト言語を使用せずに Q # プログラムを実行する'
+title: 'Q # コマンドラインアプリケーションを使用した開発'
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: e83acaf10af952da06abf4737ad2ec91f1cf1b8e
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: e829862521951c50cb42eebf261c803071a95275
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706803"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426433"
 ---
-# <a name="q-command-line-applications"></a>Q # コマンドラインアプリケーション
+# <a name="develop-with-q-command-line-applications"></a>Q # コマンドラインアプリケーションを使用した開発
 
 Q # プログラムは、C#、F #、Python などのホスト言語でドライバーを使用しなくても、独自に実行できます。
 
@@ -23,64 +23,67 @@ Q # プログラムは、C#、F #、Python などのホスト言語でドライ�
 
 ## <a name="installation"></a>インストール
 
-任意の IDE で Q # コマンドラインアプリケーションをビルドできますが、Q # アプリケーションには Visual Studio Code (VS Code) または Visual Studio IDE を使用することを強くお勧めします。 VS Code または Visual Studio と QDK Visual Studio Code 拡張機能を使用すると、豊富な機能を利用できます。
+任意の IDE で Q # コマンドラインアプリケーションをビルドできますが、Q # アプリケーションには Visual Studio Code (VS Code) または Visual Studio IDE を使用することをお勧めします。 これらのツールで開発することで、豊富な機能にアクセスできます。
 
-- [VS Code](https://code.visualstudio.com/download)のインストール (Windows、Linux、および Mac)
-- VS Code または[の Qdk 拡張機能](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)をインストールします。
-- .NET Core クロス プラットフォーム開発ワークロードが有効な [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3
-- [Visual Studio 拡張機能](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)をダウンロードしてインストールする
+VS Code を構成するには:
+
+1. [VS Code](https://code.visualstudio.com/download) (Windows、Linux、および Mac) をダウンロードしてインストールします。
+2. [Microsoft QDK for VS Code を](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)インストールします。
+
+Visual Studio を構成するには:
+
+1. .NET Core クロスプラットフォームの開発ワークロードが有効になっている[Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 以降をダウンロードしてインストールします。
+2. [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)をダウンロードしてインストールします。
 
 
 ## <a name="develop-with-q-using-vs-code"></a>VS Code を使用した Q # での開発
 
-量子プロジェクト テンプレートをインストールします。
+Q # プロジェクトテンプレートをインストールします。
 
-- **ビュー** -> **コマンドパレット**にアクセス
-- [ **Q #: プロジェクトテンプレートのインストール**] を選択します。
+1. VS Code を開きます。
+2. [ **View**  ->  **コマンドパレット**の表示] をクリックします。
+3. [ **Q #: Install project templates**] を選択します。
 
-これで、Quantum Development Kit がインストールされ、使用しているアプリケーションとライブラリで使用できるようになりました。
-- 新しいプロジェクトを作成します。
-  - **ビュー** -> **コマンドパレット**にアクセス
-  - [ **Q #: 新しいプロジェクトの作成**] を選択します。
-  - **スタンドアロンコンソールアプリケーション**の選択
-  - アプリケーションの作成先となるファイル システム上の場所に移動します。
-  - プロジェクトが作成されたら、**[Open new project...]\(新しいプロジェクトを開く...\)** ボタンをクリックします。
+**プロジェクトテンプレートが正常にインストール**されると、qdk を独自のアプリケーションやライブラリで使用する準備が整います。
+
+新しいプロジェクトを作成するには:
+
+1. [ **View**  ->  **コマンドパレット**の表示] をクリックし、[ **Q #: 新しいプロジェクトの作成**] を選択します。
+2. [**スタンドアロンコンソールアプリケーション**] をクリックします。
+3. プロジェクトを保存する場所に移動し、[**プロジェクトの作成**] をクリックします。
+4. プロジェクトが正常に作成されたら、右下にある [**新しいプロジェクトを開く**] をクリックします。
         
-- プロジェクトの確認
-  - "Created" という名前`Program.qs`のファイルが表示されます。このファイルは、コンソールにメッセージを出力する簡単な操作を定義する Q # プログラムです。
+プロジェクトを検査します。 という名前のソースファイルが表示 `Program.qs` されます。これは、コンソールにメッセージを出力する簡単な操作を定義する Q # プログラムです。
 
-- アプリケーションを実行します。
-  - **ターミナル** -> の**新しいターミナル**にアクセス
-  - 「`dotnet run`」と入力します
-  - 出力ウィンドウに `Hello quantum world!` というテキストが表示されます。
+アプリケーションを実行するには:
+1. [**ターミナル**  ->  の**新しいターミナル**] をクリックします。
+2. ターミナルプロンプトで、「」と入力し `dotnet run` ます。
+3. 出力ウィンドウに `Hello quantum world!` というテキストが表示されます。
 
 
 > [!NOTE]
-> * 複数のルート フォルダーを持つワークスペースは、Visual Studio Code の拡張機能では現在サポートされていません。 1 つの VS Code ワークスペース内に複数のプロジェクトがある場合は、すべてのプロジェクトが同じルート フォルダー内に含まれている必要があります。
+> 複数のルートフォルダーを持つワークスペースは、現在 VS Code Q # 拡張機能ではサポートされていません。 1 つの VS Code ワークスペース内に複数のプロジェクトがある場合は、すべてのプロジェクトが同じルート フォルダー内に含まれている必要があります。
 
 ## <a name="develop-with-q-using-visual-studio"></a>Visual Studio を使用した Q # での開発
 
-`Hello World` アプリケーションを作成してインストールを確認する
+Q # アプリケーションを作成して、Visual Studio のインストールを確認し `Hello World` ます。
 
-- 新しい Q# アプリケーションを作成する
-  - **ファイル** -> の**新しい** -> **プロジェクト**にアクセス
-  - 検索ボックスに、「`Q#`」と入力します
-  - **[Q# Application]\(Q# アプリケーション\)** を選択します
-  - **次**を選択
-  - アプリケーションの名前と格納する場所を選択します
-  - **[作成]**
+新しい Q # アプリケーションを作成するには:
+1. Visual Studio を開き、[**ファイル**] [  ->  **新しい**  ->  **プロジェクト**] の順にクリックします。
+2. `Q#`検索ボックスに「」と入力し、[ **Q # アプリケーション**] を選択して、[**次へ**] をクリックします。
+3. アプリケーションの名前と場所を入力し、[**作成**] をクリックします。
 
-- プロジェクトの確認
-  - という名前`Program.qs`のファイルが作成されていることがわかります。これは、コンソールにメッセージを出力する簡単な操作を定義する Q # プログラムです。
 
-- アプリケーションの実行
-  - デバッグ**Debug** -> を**行わないデバッグ開始**の選択
-  - テキスト `Hello quantum world!` がコンソール ウィンドウに出力されます。
+プロジェクトを検査します。 という名前のソースファイルが表示 `Program.qs` されます。これは、コンソールにメッセージを出力する簡単な操作を定義する Q # プログラムです。
+
+アプリケーションを実行するには:
+1. [**デバッグ**] [  ->  **デバッグなしで開始**] を選択します。
+2. テキスト `Hello quantum world!` がコンソール ウィンドウに出力されます。
 
 > [!NOTE]
-> * 1 つの Visual Studio ソリューションに複数のプロジェクトがある場合は、ソリューションに含まれるすべてのプロジェクトが、ソリューションと同じフォルダーまたはそのサブフォルダーのいずれかに存在する必要があります。  
+> 1つの Visual Studio ソリューション内に複数のプロジェクトがある場合、ソリューションに含まれるすべてのプロジェクトは、ソリューションと同じフォルダー、またはそのサブフォルダーの1つに存在する必要があります。  
 
 
-## <a name="whats-next"></a>次の内容
+## <a name="next-steps"></a>次の手順
 
-これで、使用している環境に Quantum Development Kit がインストールされたので、[最初の量子プログラム](xref:microsoft.quantum.write-program)を作成して実行することができます。
+これで、使用している環境に Quantum Development Kit がインストールされたので、[最初の量子プログラム](xref:microsoft.quantum.quickstarts.qrng)を作成して実行することができます。

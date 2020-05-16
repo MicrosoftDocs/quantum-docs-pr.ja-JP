@@ -1,24 +1,24 @@
 ---
-title: Q# と C# を使用した開発
+title: Q# と .NET を使用した開発
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 5bcb036b0b32e64d43f90e9a068d9dcc237890ba
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: 155367dbb1373f00e2b0bd732a5319b32462c9f9
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680164"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426502"
 ---
-# <a name="using-q-with-c-and-f"></a>Q # を C\#および F と共に使用する\#
+# <a name="develop-with-q-and-net"></a>Q# と .NET を使用した開発
 
 Q # は、C# や F # などの .NET 言語で適切に動作するように構築されています。
 このガイドでは、.NET 言語で記述されたホストプログラムで Q # を使用する方法について説明します。
 
-## <a name="prerequisites"></a>[前提条件]
+## <a name="prerequisites"></a>必須コンポーネント
 
 - [Q # コマンドラインプロジェクトで使用するための](xref:microsoft.quantum.install.standalone)Quantum 開発キットをインストールします。
 
@@ -29,7 +29,7 @@ Q # は、C# や F # などの .NET 言語で適切に動作するように構�
 ### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 - 新しい Q # ライブラリを作成する
-  - **ファイル** -> の**新しい** -> **プロジェクト**にアクセス
+  - ファイルの**File**  ->  **新しい**  ->  **プロジェクト**にアクセス
   - 検索ボックスに「Q #」と入力します。
   - **Q # ライブラリ**を選択します
   - **次**を選択
@@ -84,7 +84,7 @@ Q # コンパイラは、各 Q # 操作に対して .NET クラスを作成し�
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-クォンタムシミュレーターで .NET からこの操作を呼び出すには、Q # コンパイラ`Run`によって`RunAlgorithm`生成された .net クラスのメソッドを使用できます。
+クォンタムシミュレーターで .NET からこの操作を呼び出すには、 `Run` `RunAlgorithm` Q # コンパイラによって生成された .net クラスのメソッドを使用できます。
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
@@ -96,6 +96,6 @@ Q # コンパイラは、各 Q # 操作に対して .NET クラスを作成し�
 
 ***
     
-## <a name="whats-next"></a>次の内容
+## <a name="next-steps"></a>次の手順
 
-これで、2つのコマンドラインプログラムに対してクォンタム開発キットがセットアップされました。また、.NET との相互運用性のために、[最初のクォンタムプログラム](xref:microsoft.quantum.write-program)を記述して実行することができます。
+これで、2つのコマンドラインプログラムに対してクォンタム開発キットがセットアップされました。また、.NET との相互運用性のために、[最初のクォンタムプログラム](xref:microsoft.quantum.quickstarts.qrng)を記述して実行することができます。
