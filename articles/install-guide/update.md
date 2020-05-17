@@ -1,6 +1,6 @@
 ---
 title: Quantum Development Kit (QDK) を更新する
-description: 'Q # プロジェクトと Microsoft Quantum Development Kit を現在のバージョンに更新する方法について説明します。'
+description: 'Q# プロジェクトと Microsoft Quantum Development Kit を現在のバージョンに更新する方法について説明します。'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
@@ -21,12 +21,12 @@ ms.locfileid: "83426905"
 <span data-ttu-id="79f2f-105">この記事では、QDK が既にインストールされていることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="79f2f-105">This article assumes that you already have the QDK installed.</span></span> <span data-ttu-id="79f2f-106">を初めてインストールする場合は、[インストールガイド](xref:microsoft.quantum.install)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="79f2f-106">If you are installing for the first time, then please refer to the [installation guide](xref:microsoft.quantum.install).</span></span>
 
 <span data-ttu-id="79f2f-107">最新の QDK リリースを常に最新の状態に保つことをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="79f2f-107">We recommend keeping up to date with the latest QDK release.</span></span> <span data-ttu-id="79f2f-108">最新の QDK バージョンにアップグレードするには、この更新ガイドに従ってください。</span><span class="sxs-lookup"><span data-stu-id="79f2f-108">Follow this update guide to upgrade to the most recent QDK version.</span></span> <span data-ttu-id="79f2f-109">このプロセスは、次の2つの部分で構成されます。</span><span class="sxs-lookup"><span data-stu-id="79f2f-109">The process consists of two parts:</span></span>
-1. <span data-ttu-id="79f2f-110">既存の Q # ファイルとプロジェクトを更新して、コードを更新された構文に合わせる</span><span class="sxs-lookup"><span data-stu-id="79f2f-110">updating your existing Q# files and projects to align your code with any updated syntax</span></span>
+1. <span data-ttu-id="79f2f-110">既存の Q# ファイルとプロジェクトを更新して、コードを更新された構文に合わせる</span><span class="sxs-lookup"><span data-stu-id="79f2f-110">updating your existing Q# files and projects to align your code with any updated syntax</span></span>
 2. <span data-ttu-id="79f2f-111">選択した開発環境の QDK 自体を更新しています</span><span class="sxs-lookup"><span data-stu-id="79f2f-111">updating the QDK itself for your chosen development environment</span></span> 
 
-## <a name="updating-q-projects"></a><span data-ttu-id="79f2f-112">Q # プロジェクトを更新しています</span><span class="sxs-lookup"><span data-stu-id="79f2f-112">Updating Q# Projects</span></span> 
+## <a name="updating-q-projects"></a><span data-ttu-id="79f2f-112">Q# プロジェクトを更新しています</span><span class="sxs-lookup"><span data-stu-id="79f2f-112">Updating Q# Projects</span></span> 
 
-<span data-ttu-id="79f2f-113">Q # 操作をホストするために C# と Python のどちらを使用しているかにかかわらず、次の手順に従って Q # プロジェクトを更新します。</span><span class="sxs-lookup"><span data-stu-id="79f2f-113">Regardless of whether you are using C# or Python to host Q# operations, follow these instructions to update your Q# projects.</span></span>
+<span data-ttu-id="79f2f-113">Q# 操作をホストするために C# と Python のどちらを使用しているかにかかわらず、次の手順に従って Q # プロジェクトを更新します。</span><span class="sxs-lookup"><span data-stu-id="79f2f-113">Regardless of whether you are using C# or Python to host Q# operations, follow these instructions to update your Q# projects.</span></span>
 
 1. <span data-ttu-id="79f2f-114">まず、 [.NET Core SDK 3.1](https://dotnet.microsoft.com/download)の最新バージョンがあることを確認します。</span><span class="sxs-lookup"><span data-stu-id="79f2f-114">First, check that you have the latest version of the [.NET Core SDK 3.1](https://dotnet.microsoft.com/download).</span></span> <span data-ttu-id="79f2f-115">コマンドプロンプトで次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="79f2f-115">Run the following command in the command prompt:</span></span>
 
@@ -220,8 +220,8 @@ ms.locfileid: "83426905"
 
 2. <span data-ttu-id="79f2f-185">クォンタムプロジェクトテンプレートを更新します。</span><span class="sxs-lookup"><span data-stu-id="79f2f-185">Update the Quantum project templates:</span></span>
 
-   - <span data-ttu-id="79f2f-186">**ビュー**  ->  **コマンドパレット**にアクセス</span><span class="sxs-lookup"><span data-stu-id="79f2f-186">Go to **View** -> **Command Palette**</span></span>
-   - <span data-ttu-id="79f2f-187">[ **Q #: プロジェクトテンプレートのインストール**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="79f2f-187">Select **Q#: Install project templates**</span></span>
+   - <span data-ttu-id="79f2f-186">**表示** -> **コマンドパレット**にアクセス</span><span class="sxs-lookup"><span data-stu-id="79f2f-186">Go to **View** -> **Command Palette**</span></span>
+   - <span data-ttu-id="79f2f-187"> [**Q#: Install project templates\(Q#: プロジェクトテンプレートのインストール\)**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="79f2f-187">Select **Q#: Install project templates**</span></span>
    - <span data-ttu-id="79f2f-188">数秒後に、"プロジェクトテンプレートが正常にインストールされました" というポップアップが表示されます。</span><span class="sxs-lookup"><span data-stu-id="79f2f-188">After a few seconds you should get a popup confirming "project templates installed successfully"</span></span>
 
 ### <a name="c-using-the-dotnet-command-line-tool"></a><span data-ttu-id="79f2f-189">C#、 `dotnet` コマンドラインツールの使用</span><span class="sxs-lookup"><span data-stu-id="79f2f-189">C#, using the `dotnet` command-line tool</span></span>
