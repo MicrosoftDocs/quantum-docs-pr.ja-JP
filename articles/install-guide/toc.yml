@@ -5,9 +5,9 @@ items:
     href: standalone.md
   - name: 'Q# Jupyter ノートブック'
     href: qjupyter.md
-  - name: '他の言語で Q# を使用する'
+  - name: 'Q# と他の言語'
     items:
-      - name: 'Python で Q# を使用する'
+      - name: 'Q# と Python'
         href: pyinstall.md
-      - name: '.NET で Q# を使用する'
+      - name: 'Q# と .NET'
         href: csinstall.md
