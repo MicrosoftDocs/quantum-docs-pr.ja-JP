@@ -1,10 +1,10 @@
 - name: 概要
   href: index.md
-- name: 量子シミュレーター
+- name: 完全状態シミュレーター
   href: full-state-simulator.md
 - name: リソース推定
   href: resources-estimator.md
-- name: 量子コンピューターのトレース シミュレーター
+- name: トレース シミュレーター
   topicHref: qc-trace-simulator/index.md
   href: qc-trace-simulator/toc.yml
 - name: トフォリ シミュレーター

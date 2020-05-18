@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 91f12ef6bd15e27c8920471442c66ff3b1e71122
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: f365d471d9af73828b78c4fab8579557310a5288
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82677087"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426779"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -48,7 +48,7 @@ ms.locfileid: "82677087"
 
 このリリースには、次のものが含まれています。
 
-- Q# のアクセス修飾子が新しくサポートされています。詳細については、「[ファイル構造](xref:microsoft.quantum.language.file-structure#internal-declarations)」を参照してください。
+- Q# のアクセス修飾子が新しくサポートされています。詳細については、「[ファイル構造](xref:microsoft.quantum.guide.filestructure)」を参照してください。
 - .NET Core SDK 3.1 に更新されました
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
@@ -86,7 +86,7 @@ ms.locfileid: "82677087"
 
 このリリースには、次のものが含まれています。
 
-- Q# の単体テスト用の新しい Test 属性。更新された API ドキュメント ([こちら](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test)) および更新されたテストとデバッグのガイド ([こちら](xref:microsoft.quantum.techniques.testing-and-debugging)) を参照してください
+- Q# の単体テスト用の新しい Test 属性。更新された API ドキュメント ([こちら](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test)) および更新されたテストとデバッグのガイド ([こちら](xref:microsoft.quantum.guide.testingdebugging)) を参照してください
 - Q# プログラムの実行エラーが発生した場合にスタック トレースを追加しました
 - [OmniSharp C# Visual Studio Code 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)の更新により、Visual Studio Code 内のブレークポイントがサポートされるようになります
 
@@ -133,7 +133,7 @@ ms.locfileid: "82677087"
 
 このリリースには、次のものが含まれています。
 
-- Q# での[共役ステートメント](xref:microsoft.quantum.language.statements#conjugations)の新しいサポート
+- Q# での[共役ステートメント](xref:microsoft.quantum.guide.operationsfunctions#conjugations)の新しいサポート
 - "置換"、"ドキュメントの追加"、およびシンプルな配列項目の更新など、コンパイラでの新しいコード アクション
 - Visual Studio Code 拡張機能へのインストール テンプレートと新しいプロジェクト コマンドの追加
 - [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone) などの ApplyIf 連結子の新しいバリアントの追加
@@ -150,7 +150,7 @@ ms.locfileid: "82677087"
 
 このリリースには、次のものが含まれています。
 
-- 配列をスライスするための新しいインデックス作成場所。詳細については、[言語リファレンスを参照](xref:microsoft.quantum.language.expressions#array-slices)してください。
+- 配列をスライスするための新しいインデックス作成場所。詳細については、[言語リファレンスを参照](xref:microsoft.quantum.guide.expressions#array-slices)してください。
 - [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry) でホストされている Dockerfile が追加されました。[詳細については、IQ# リポジトリ](https://github.com/microsoft/iqsharp/blob/master/README.md)を参照してください
 - [トレース シミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)に関する破壊的変更、構成設定の更新、名前の変更。[更新された名前については、.NET API ブラウザー](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration)を参照してください。
 
@@ -171,10 +171,10 @@ ms.locfileid: "82677087"
 
 ### <a name="q-language-syntax"></a>Q# 言語の構文
 このリリースでは、新しい Q# 言語の構文が追加されます。
-* [ユーザー定義型](xref:microsoft.quantum.language.type-model#user-defined-types)の名前付き項目が追加されます。  
+* [ユーザー定義型](xref:microsoft.quantum.guide.types#user-defined-types)の名前付き項目が追加されます。  
 * ユーザー定義型コンストラクターを関数として使用できるようになりました。
-* ユーザー定義型の [copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions) および [apply-and-reassign]((xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols)) のサポートが追加されます。
-* [repeat-until-success](xref:microsoft.quantum.language.statements#repeat-until-success-loop) ループの fixup ブロックが省略可能になりました。
+* ユーザー定義型の [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) および [apply-and-reassign](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) のサポートが追加されます。
+* [repeat-until-success](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop) ループの fixup ブロックが省略可能になりました。
 * (演算ではなく) 関数で while ループがサポートされるようになりました。
 
 ### <a name="library"></a>ライブラリ 
@@ -202,10 +202,10 @@ ms.locfileid: "82677087"
 
 ### <a name="q-language-syntax"></a>Q# 言語の構文
 このリリースでは、新しい Q# 言語の構文が追加されます。
-* `+` 演算子を使用する[量子演算 (control および adjoint) の特殊化を表現するための短縮形](xref:microsoft.quantum.language.type-model#functors)が追加されます。  古い構文は非推奨になります。  古い構文 (`: adjoint` など) を使用するプログラムは引き続き機能しますが、コンパイル時の警告が生成されます。  
-* 既存の配列の変更として配列の作成を表現するために使用できる、[copy-and-update](xref:microsoft.quantum.language.expressions#copy-and-update-expressions) の新しい演算子 `w/` が追加されます。
-* 一般的な [apply-and-upate ステートメント](xref:microsoft.quantum.language.statements#rebinding-of-mutable-symbols) (`+=`、`w/=` など) が追加されます。
-* [オープン ディレクティブ](xref:microsoft.quantum.language.file-structure#open-directives)で名前空間の短い名前を指定する方法が追加されます。
+* `+` 演算子を使用する[量子演算 (control および adjoint) の特殊化を表現するための短縮形](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)が追加されます。  古い構文は非推奨になります。  古い構文 (`: adjoint` など) を使用するプログラムは引き続き機能しますが、コンパイル時の警告が生成されます。  
+* 既存の配列の変更として配列の作成を表現するために使用できる、[copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) の新しい演算子 `w/` が追加されます。
+* 一般的な [apply-and-update ステートメント](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) (`+=`、`w/=` など) が追加されます。
+* [オープン ディレクティブ](xref:microsoft.quantum.guide.filestructure#open-directives)で名前空間の短い名前を指定する方法が追加されます。
 
 このリリースでは、set ステートメントの左側で配列要素を指定できなくなりました。  これは、構文では配列が可変であることが示され、実際には、演算の結果が常に変更を伴う新しい配列の作成となっていたためです。  代わりに、同じ結果を得るために、copy-and-update の演算子 `w/` を使用する提案を含む、コンパイラ エラーが生成されます。  
 
@@ -280,7 +280,7 @@ Quantum Development Kit のバージョン 0.5 の既存の Q# プロジェク�
 
 - コミュニティによって報告された DumpRegister に関する問題 ([#148](https://github.com/Microsoft/Quantum/issues/148)) のバグ修正。
 
-- [using ステートメント](xref:microsoft.quantum.language.statements)内から返す機能が追加されました。
+- [using ステートメント](xref:microsoft.quantum.guide.qubits#allocating-qubits)内から返す機能が追加されました。
 
 - [入門ガイド](xref:microsoft.quantum.install)が改訂されました。
 
@@ -303,7 +303,7 @@ Quantum Development Kit のバージョン 0.5 の既存の Q# プロジェク�
 
 このリリースには、次のものが含まれています。
 
-- 任意のサイズの符号付き整数を表す、新しいプリミティブ型である BigInt のサポートが追加されます。  BigInt 型の詳細については、[こちら](xref:microsoft.quantum.language.type-model)を参照してください。
+- 任意のサイズの符号付き整数を表す、新しいプリミティブ型である BigInt のサポートが追加されます。  BigInt 型の詳細については、[こちら](xref:microsoft.quantum.guide.types)を参照してください。
 - 新しい Toffoli シミュレーターが追加されます。これは、X、CNOT およびマルチ制御の X 量子演算を非常に多くの量子ビットを使用してシミュレートできる特別な用途の高速シミュレーターです。  Toffoli シミュレーターの詳細については、[こちら](xref:microsoft.quantum.machines.toffoli-simulator)を参照してください。
 - 量子コンピューターで Q# 演算の特定のインスタンスを実行するために必要なリソースを推定する、シンプルなリソース推定機能が追加されます。  詳細については、[リソース推定機能](xref:microsoft.quantum.machines.resources-estimator)に関するページを参照してください。
 
@@ -369,7 +369,7 @@ Quantum Development Kit の化学ライブラリの詳細については、[こ�
 
 このリリースには、コミュニティによって報告された問題に関するバグの修正と機能が含まれています。
 
-* Q# 用の IntelliSense とは  ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918))。
+* Q# 用の IntelliSense とは ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918))。
 * .qs ファイル ([UserVoice](https://quantum.uservoice.com/forums/906097/suggestions/32593049))。
 * If ステートメントで中かっこが省略された場合のエラー メッセージを改善する ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/34718518))。
 * 可変 (再) バインドでのタプル分解をサポートする ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/35020444))。
@@ -427,7 +427,7 @@ Rohit Gupta ([@guptarohit](https://github.com/guptarohit)、[PR #90](https://git
 * Visual Studio では、1 つの量子ビットで $\ket{1}$ を測定する確率が、QuantumSimulator ターゲット コンピューターのデバッグ ウィンドウに自動的に表示されるようになりました。
 * Visual Studio では **[自動]** と **[ローカル]** のデバッグ ウィンドウでの変数プロパティの表示が改善されました。 
 
-テストとデバッグの詳細については、[こちら](xref:microsoft.quantum.techniques.testing-and-debugging)を参照してください。
+テストとデバッグの詳細については、[こちら](xref:microsoft.quantum.guide.testingdebugging)を参照してください。
 
 ### <a name="community-contributions"></a>コミュニティへの投稿
 

@@ -9,35 +9,33 @@ metadata:
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
-  ms.date: 10/21/2019
-  ms.openlocfilehash: e21b191689c228fa3e7c0590ee2f79f625b3960d
-  ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+  ms.date: 5/10/2020
+  ms.openlocfilehash: 7c0fdf596c3409f0e1db7773b079a258d14a7d9c
+  ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/13/2020
-  ms.locfileid: "80320837"
+  ms.lasthandoff: 05/15/2020
+  ms.locfileid: "83426889"
 landingContent:
 - title: 量子コンピューティング
   linkLists:
   - linkListType: learn
     links:
-    - text: 量子コンピューティングとは
-      url: overview/what-is-quantum-computing.md
-    - text: 量子コンピューターでできること
-      url: overview/quantum-computers.md
-    - text: 量子コンピューティングを学ぶ理由
-      url: overview/why-learn-quantum-computing.md
+    - text: 量子コンピューティングについて
+      url: overview/understanding-quantum-computing.md
+    - text: 量子コンピューターと量子シミュレータ
+      url: overview/quantum-computers-and-simulators.md
     - text: Q# および QDK とは
-      url: overview/what-is-qsharp.md
-    - text: 詳しく学ぶには
-      url: overview/how-to-learn-quantum-computing.md
+      url: overview/what-is-qsharp-and-qdk.md
+    - text: 量子コンピューティングの線形代数
+      url: overview/algebra-for-quantum-computing.md
   - linkListType: concept
     links:
     - text: 量子コンピューティングの概念
       url: concepts/index.md
-- title: Quantum 開発キットを入手する
+- title: Quantum Development Kit の使用を開始する
   linkLists:
-  - linkListType: overview
+  - linkListType: get-started
     links:
     - text: Quantum 開発キット
       url: welcome.md
@@ -49,19 +47,17 @@ landingContent:
       url: install-guide/update.md
 - title: Q# プログラミング言語
   linkLists:
-  - linkListType: overview
+  - linkListType: how-to-guide
     links:
-    - text: Q# 言語の紹介
-      url: language/index.md
-    - text: Q# 開発手法
-      url: techniques/index.md
+    - text: Q# ユーザー ガイド
+      url: user-guide/index.md
     - text: 量子シミュレーターとホスト アプリケーション
       url: machines/index.md
-  - linkListType: quickstart
+  - linkListType: tutorial
     links:
     - text: 量子乱数ジェネレーターの作成
       url: quickstarts/qrng.md
-    - text: Q# でのもつれの確認
+    - text: Q# でのエンタングルメントの確認
       url: quickstart.md
     - text: 量子加速:グローバーの検索アルゴリズム
       url: quickstarts/search.md
