@@ -3,7 +3,7 @@ items:
     href: index.md
   - name: 'Q# コマンド ライン アプリケーション'
     href: standalone.md
-  - name: 'Q# Jupyter ノートブック'
+  - name: 'Q# Jupyter Notebook'
     href: qjupyter.md
   - name: 'Q# と他の言語'
     items:
