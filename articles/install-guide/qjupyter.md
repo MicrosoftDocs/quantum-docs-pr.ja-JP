@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 38db14ccc5f2406043ff4baee3f562385cdf47a8
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 3302a9bd0652b2dea86b844058bf8303ee7a4a7f
+ms.sourcegitcommit: c85c1b439807ac576d3a11aadca307d57b059673
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426374"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551041"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Q # Jupyter notebook を使用した開発
 
@@ -28,7 +28,7 @@ IQ# (発音: アイ キュー シャープ) は主に Jupyter と Python で .NE
 
     - [Python](https://www.python.org/downloads/) 3.6 以降
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [.NET Core SDK 3.1 以降](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 1. `iqsharp` パッケージのインストール
 
@@ -68,6 +68,6 @@ IQ# (発音: アイ キュー シャープ) は主に Jupyter と Python で .NE
 
         画面には、呼び出された操作の結果と共に、メッセージが出力されます (ここでは、操作が単純に型を返すため、空のタプルが表示されて `()` `Unit` います)。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これで、使用している環境に Quantum Development Kit がインストールされたので、[最初の量子プログラム](xref:microsoft.quantum.quickstarts.qrng)を作成して実行することができます。
