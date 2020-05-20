@@ -1,5 +1,5 @@
 ---
-title: Q の変数#
+title: Q# の変数
 description: 説明の入力
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -13,16 +13,16 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/15/2020
 ms.locfileid: "83430902"
 ---
-# <a name="variables-in-q"></a><span data-ttu-id="1ff0e-103">Q の変数#</span><span class="sxs-lookup"><span data-stu-id="1ff0e-103">Variables in Q#</span></span>
+# <a name="variables-in-q"></a><span data-ttu-id="1ff0e-103">Q# の変数</span><span class="sxs-lookup"><span data-stu-id="1ff0e-103">Variables in Q#</span></span>
 
-<span data-ttu-id="1ff0e-104">Q # は、変更可能なシンボルと変更できないシンボル、または式にバインド/割り当てられる "variables" を区別します。</span><span class="sxs-lookup"><span data-stu-id="1ff0e-104">Q# distinguishes between mutable and immutable symbols, or "variables", which are bound/assigned to expressions.</span></span>
+<span data-ttu-id="1ff0e-104">Q# は、変更可能なシンボルと変更できないシンボル、または式にバインド/割り当てられる "variables" を区別します。</span><span class="sxs-lookup"><span data-stu-id="1ff0e-104">Q# distinguishes between mutable and immutable symbols, or "variables", which are bound/assigned to expressions.</span></span>
 <span data-ttu-id="1ff0e-105">一般に、変更できないシンボルを使用することをお勧めします。これにより、コンパイラはより多くの最適化を実行できるためです。</span><span class="sxs-lookup"><span data-stu-id="1ff0e-105">In general, the use of immutable symbols is encouraged because it allows the compiler to perform more optimizations.</span></span>
 
 <span data-ttu-id="1ff0e-106">バインディングの左側は、記号の組と式の右辺で構成されています。</span><span class="sxs-lookup"><span data-stu-id="1ff0e-106">The left-hand-side of a binding consists of a symbol tuple, and the right hand side of an expression.</span></span>
 
 ## <a name="immutable-variables"></a><span data-ttu-id="1ff0e-107">変更できない変数</span><span class="sxs-lookup"><span data-stu-id="1ff0e-107">Immutable Variables</span></span>
 
-<span data-ttu-id="1ff0e-108">Q # の任意の型の値を変数に代入して、キーワードを使用して操作または関数内で再利用することができ `let` ます。</span><span class="sxs-lookup"><span data-stu-id="1ff0e-108">A value of any type in Q# can be assigned to a variable for reuse within an operation or function by using the `let` keyword.</span></span>
+<span data-ttu-id="1ff0e-108">Q# の任意の型の値を変数に代入して、キーワードを使用して操作または関数内で再利用することができ `let` ます。</span><span class="sxs-lookup"><span data-stu-id="1ff0e-108">A value of any type in Q# can be assigned to a variable for reuse within an operation or function by using the `let` keyword.</span></span>
 
 <span data-ttu-id="1ff0e-109">変更できないバインドは、キーワードで構成され、 `let` その後にシンボルまたは記号の組、等号 `=` (=)、および終端のセミコロンをバインドする式で構成されます。</span><span class="sxs-lookup"><span data-stu-id="1ff0e-109">An immutable binding consists of the keyword `let`, followed by a symbol or symbol tuple, an equals sign `=`, an expression to bind the symbol(s) to, and a terminating semicolon.</span></span>
 
@@ -233,4 +233,4 @@ if (a == b) {
 ```
 
 ## <a name="whats-next"></a><span data-ttu-id="1ff0e-158">次の課題</span><span class="sxs-lookup"><span data-stu-id="1ff0e-158">What's Next?</span></span>
-<span data-ttu-id="1ff0e-159">Q # での[Qubits の](xref:microsoft.quantum.guide.qubits)使用について説明します。</span><span class="sxs-lookup"><span data-stu-id="1ff0e-159">Learn about [Working With Qubits](xref:microsoft.quantum.guide.qubits) in Q#.</span></span>
+<span data-ttu-id="1ff0e-159">Q# での[Qubits の](xref:microsoft.quantum.guide.qubits)使用について説明します。</span><span class="sxs-lookup"><span data-stu-id="1ff0e-159">Learn about [Working With Qubits](xref:microsoft.quantum.guide.qubits) in Q#.</span></span>
