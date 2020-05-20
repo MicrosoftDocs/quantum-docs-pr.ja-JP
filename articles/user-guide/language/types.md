@@ -1,19 +1,19 @@
 ---
-title: Q の型#
+title: Q# の型
 description: 'Q # プログラミング言語で使用されるさまざまな型について説明します。'
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 58370193bd62e306197a9e07c28f8611f043e55c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
+ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431140"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609143"
 ---
-# <a name="types-in-q"></a>Q の型#
+# <a name="types-in-q"></a>Q# の型
 
 このページでは、Q # 型モデルをレイアウトし、型を指定して操作するための構文について説明します。
 次のページ「[型の式](xref:microsoft.quantum.guide.expressions)」では、これらの型の式を作成および操作する方法について詳しく説明しています。
@@ -35,7 +35,7 @@ Q # 言語には、他の型を構築できるいくつかの*プリミティブ
    各種.
 - 型は、 `Double` 倍精度浮動小数点数を表します。例: `0.0` 、 `-1.3` 、 `4e-7` 。
 - 型は、 `Bool` またはのいずれかのブール値を表し `true` `false` ます。
-- この `Range` 型は、によって示される整数のシーケンスを表し `start..step..stop` ます。これは、ステップがオプションであることを示します。 
+- この `Range` 型は、によって示される整数のシーケンスを表し `start..step..stop` ます。これは、ステップが省略可能であることを示します。 
    これは `start .. stop` に対応 `start..1..stop` します。例: は、 `1..2..7` シーケンス $ \{ 1、3、5、7 $ を表し \} ます。
 - この `String` 型は、作成後にユーザーに対して非透過の Unicode 文字のシーケンスです。
   この型は、エラーまたは診断イベントが発生した場合に、従来のホストにメッセージを報告するために使用されます。
