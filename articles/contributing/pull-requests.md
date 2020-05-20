@@ -17,7 +17,7 @@ ms.locfileid: "82686846"
 
 <span data-ttu-id="7f477-104">Quantum 開発キットのドキュメントはすべて、GitHub でホストされている複数のリポジトリを使用して、Git バージョン管理システムを使用して管理されます。</span><span class="sxs-lookup"><span data-stu-id="7f477-104">All of the documentation for the Quantum Development Kit is managed using the Git version control system through the use of several repositories hosted on GitHub.</span></span>
 <span data-ttu-id="7f477-105">Git と GitHub を一緒に使用することで、Quantum 開発キットで幅広く共同作業が容易になります。</span><span class="sxs-lookup"><span data-stu-id="7f477-105">Using Git and GitHub together makes it easy to collaborate widely on the Quantum Development Kit.</span></span>
-<span data-ttu-id="7f477-106">特に、Git リポジトリを複製したりフォークしたりして、そのリポジトリの完全に独立したコピーを作成することができます。</span><span class="sxs-lookup"><span data-stu-id="7f477-106">In particular, any Git repository can be cloned or forked to make a completely independent copy of that repository.</span></span>
+<span data-ttu-id="7f477-106">特に、Git リポジトリをクローンしたりフォークしたりして、そのリポジトリの完全に独立したコピーを作成することができます。</span><span class="sxs-lookup"><span data-stu-id="7f477-106">In particular, any Git repository can be cloned or forked to make a completely independent copy of that repository.</span></span>
 <span data-ttu-id="7f477-107">これにより、ツールを使用した投稿や、好きなペースで作業できるようになります。</span><span class="sxs-lookup"><span data-stu-id="7f477-107">This allows you to work on your contribution with the tools and at a pace that you prefer.</span></span>
 
 <span data-ttu-id="7f477-108">準備ができたら、GitHub の_プル要求_機能を使用して、リポジトリへの投稿を含めるように要求を送信できます。</span><span class="sxs-lookup"><span data-stu-id="7f477-108">When you're ready, you can send us a request to include your contribution into our repos, using GitHub's _pull request_ functionality.</span></span>
@@ -62,7 +62,7 @@ ms.locfileid: "82686846"
 
 <span data-ttu-id="7f477-132">プル要求を行うには、主に2つの方法があります。</span><span class="sxs-lookup"><span data-stu-id="7f477-132">There are two main ways to make a pull request.</span></span>  
 <span data-ttu-id="7f477-133">1つのファイルにのみ影響を与える小さな変更については、GitHub web インターフェイスを使用してプル要求を完全にオンラインにすることができます。</span><span class="sxs-lookup"><span data-stu-id="7f477-133">For small changes that only affect a single file, the GitHub web interface can be used to make a pull request entirely online.</span></span> <span data-ttu-id="7f477-134">編集するファイルに移動して、編集アイコンを使用するだけです。</span><span class="sxs-lookup"><span data-stu-id="7f477-134">Simply navigate to the file you want to edit and use the edit icon.</span></span>  
-<span data-ttu-id="7f477-135">より複雑な投稿については、ほとんどの場合、ローカルコンピューターにリポジトリを複製して、最初にプル要求を準備する方が簡単です。</span><span class="sxs-lookup"><span data-stu-id="7f477-135">For more complicated contributions, it's most often easier to clone the repository to your local computer to prepare for a pull request first.</span></span>
+<span data-ttu-id="7f477-135">より複雑な投稿については、ほとんどの場合、ローカルコンピューターにリポジトリをクローンして、最初にプル要求を準備する方が簡単です。</span><span class="sxs-lookup"><span data-stu-id="7f477-135">For more complicated contributions, it's most often easier to clone the repository to your local computer to prepare for a pull request first.</span></span>
 
 <!--
 ### Using the Web Interface ###
