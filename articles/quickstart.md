@@ -1,23 +1,25 @@
 ---
-title: Q# を使った量子の基本
+title: Q# でのエンタングルメントの確認
 description: Q# で量子プログラムを作成する方法について説明します。 Quantum Development Kit (QDK) を使用してベル状態アプリケーションを開発する
 author: natke
 ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906731"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426841"
 ---
-# <a name="quantum-basics-with-q"></a>Q# を使った量子の基本
+# <a name="tutorial-explore-entanglement-with-q"></a>チュートリアル:Q\# でのもつれの確認
 
-このクイックスタートでは、量子ビットの操作および測定を行い、重ね合わせともつれの効果を示す、Q# プログラムの作成方法を説明します。  このガイドでは、QDK をインストールし、プログラムをビルドして、そのプログラムを量子シミュレーターで実行する方法を示します。  
+このチュートリアルでは、量子ビットの操作および測定を行い、重ね合わせともつれの効果を示す、Q# プログラムの作成方法を説明します。
+このガイドでは、QDK をインストールし、プログラムをビルドして、そのプログラムを量子シミュレーターで実行する方法を示します。  
 
-量子のもつれを示すため、Bell というアプリケーションを記述します。  Bell という名前は、ベル状態を表しています。これは、量子の重ね合わせともつれの最も簡単な例を表すために使用される、2 つの量子ビットの特定の量子の状態です。 
+量子のもつれを示すため、Bell というアプリケーションを記述します。
+Bell という名前は、ベル状態を表しています。これは、量子の重ね合わせともつれの最も簡単な例を表すために使用される、2 つの量子ビットの特定の量子の状態です。
 
 ## <a name="pre-requisites"></a>前提条件
 
@@ -30,7 +32,7 @@ QDK をインストールしなくても、説明を読み進めることで Q# 
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Q# を使った量子ビットの動作のデモ
 
-簡単な[量子ビットの定義](xref:microsoft.quantum.overview.what#the-qubit)を思い出してください。  従来のビットでは単一のバイナリ値 (0、1 など) が保持されるのに対し、量子ビットの状態は同時に 0 と 1 の**重ね合わせ**になることができます。  概念的には、量子ビットは空間内の方向 (ベクトルとも呼ばれます) と考えられます。  量子ビットは、任意の方向にすることができます。 2 つの**従来の状態**とは、0 を測定する確率が 100% になる方向と、1 を測定する確率が 100% になる方向のことです。  この表現は、[ブロッホ球](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)によってより正式に視覚化されます。
+簡単な[量子ビットの定義](xref:microsoft.quantum.overview.understanding)を思い出してください。  従来のビットでは単一のバイナリ値 (0、1 など) が保持されるのに対し、量子ビットの状態は同時に 0 と 1 の**重ね合わせ**になることができます。  概念的には、量子ビットは空間内の方向 (ベクトルとも呼ばれます) と考えられます。  量子ビットは、任意の方向にすることができます。 2 つの**従来の状態**とは、0 を測定する確率が 100% になる方向と、1 を測定する確率が 100% になる方向のことです。  この表現は、[ブロッホ球](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)によってより正式に視覚化されます。
 
 
 測定の動作により、2 進法の結果が生成され、量子ビットの状態が変わります。 測定では、0 または 1 のバイナリ値が生成されます。  量子ビットは重ね合わせ (あらゆる方向にある) の状態から古典的状態のいずれかになります。  その後、介在する操作なしで同じ測定を繰り返すと、同じ 2 進数の結果が生成されます。  
@@ -498,7 +500,7 @@ Init:One  0s=490  1s=510  agree=1000
 
 ## <a name="whats-next"></a>次の操作
 
-[グローバーの検索](xref:microsoft.quantum.quickstarts.search)のクイックスタートでは、最も人気のある量子コンピューティング アルゴリズムの 1 つである、グローバーの検索をビルドして実行する方法を示しています。また、量子コンピューティングに関する実際の問題を解決するために使用できる Q# プログラムの優れた例を提示しています。  
+[グローバーの検索](xref:microsoft.quantum.quickstarts.search)のチュートリアルでは、最も人気のある量子コンピューティング アルゴリズムの 1 つである、グローバーの検索をビルドして実行する方法を示しています。また、量子コンピューティングに関する実際の問題を解決するために使用できる Q# プログラムの優れた例を紹介しています。  
 
 「[Get Started with the Quantum Development Kit](xref:microsoft.quantum.welcome)」(Quantum Development Kit の概要) では、Q# と量子コンピューティングのその他の学習方法も紹介しています。
 
