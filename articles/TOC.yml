@@ -31,6 +31,8 @@
       href: quickstart.md
     - name: グローバーの検索アルゴリズムを実装する
       href: quickstarts/search.md
+    - name: 量子ビット レベルのプログラミング
+      href: tutorials/qft-tutorial.md
     - name: 'Quantum Katas を使用して Q# を学ぶ'
       href: intro-to-katas.md
     - name: 'Q# コード サンプル'

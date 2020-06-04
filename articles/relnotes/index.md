@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: f365d471d9af73828b78c4fab8579557310a5288
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: ec5b3b26102df6ecc19d89b41c7fd8938b34e761
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426779"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327766"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -20,6 +20,19 @@ ms.locfileid: "83426779"
 インストール手順については、[インストール ガイド](xref:microsoft.quantum.install)を参照してください。
 
 更新手順については、[更新ガイド](xref:microsoft.quantum.update)を参照してください。
+
+## <a name="version-0112006207"></a>バージョン 0.11.2006.207
+
+*リリース日:2020 年 6 月 3 日*
+
+このリリースには、次のものが含まれています。
+
+- Q# エントリ ポイントが存在する場合、Q# のノートブックと Python ホスト プログラムは失敗しなくなります。
+- アクセス修飾子を使用するための[標準ライブラリ](xref:microsoft.quantum.libraries.standard.intro)の更新。
+- コンパイラで、組み込みのリライト手順間でのリライト手順のプラグインが許可されるようになりました。
+- [API の原則](xref:microsoft.quantum.contributing.api-design)で説明されているスケジュールに従って、いくつかの非推奨の関数と操作が削除されています。 バージョン 0.11.2004.2825 で警告なしでビルドされる Q# プログラムとライブラリは、変更なしで動作し続けます。
+
+[ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、[IQ#s](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) について、クローズされた PR の完全な一覧を参照してください。  
 
 ## <a name="version-01120042825"></a>バージョン 0.11.2004.2825
 
@@ -34,7 +47,6 @@ ms.locfileid: "83426779"
 > [!NOTE]
 > 新しい [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) 属性を使用している Q# コマンド ライン アプリケーションは、現在、Python および .NET ホスト プログラムから呼び出すことはできません。
 > 詳細については、[Python](xref:microsoft.quantum.install.python) と [.NET 相互運用性](xref:microsoft.quantum.install.cs)のガイドを参照してください。
-
 
 ## <a name="version-01120033107"></a>バージョン 0.11.2003.3107
 
