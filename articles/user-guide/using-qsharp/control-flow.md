@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: c534e016fcb8b50e66c11ca29c253ba0512acc6e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 1f1b641563fe35879abeee32b4f0aeeb7001b1a0
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430953"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84326542"
 ---
 # <a name="control-flow-in-q"></a>Q での制御フロー#
 
@@ -44,7 +44,7 @@ ms.locfileid: "83430953"
 実行されるブロックはいずれも、それ自体のスコープ内で実行されることに注意してください。
 `if`、、またはブロック内で行われたバインディングは、末尾の後には表示され `elif` `else` ません。
 
-たとえば、オブジェクトに適用された
+たとえば、
 
 ```qsharp
 if (result == One) {
@@ -174,7 +174,7 @@ Return ステートメントは、操作または関数の実行を終了し、�
 操作内に return ステートメントの最大数がありません。
 ステートメントがブロック内の return ステートメントに続く場合、コンパイラは警告を生成することがあります。
 
-たとえば、オブジェクトに適用された
+たとえば、
 ```qsharp
 return 1;
 ```
@@ -196,7 +196,7 @@ Fail ステートメントは、操作の実行を終了し、呼び出し元に
 操作内の fail ステートメントの数に制限はありません。
 ステートメントがブロック内の fail ステートメントに続く場合、コンパイラは警告を生成することがあります。
 
-たとえば、オブジェクトに適用された
+たとえば、
 ```qsharp
 fail $"Impossible state reached";
 ```
@@ -329,5 +329,6 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 および操作の詳細については、「[テストおよびデバッグ](xref:microsoft.quantum.guide.testingdebugging)」も参照してください [`Assert`](xref:microsoft.quantum.intrinsic.assert) [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) 。
 
 
-## <a name="whats-next"></a>次の課題
+## <a name="next-steps"></a>次の手順
+
 Q # での[テストとデバッグ](xref:microsoft.quantum.guide.testingdebugging)について説明します。

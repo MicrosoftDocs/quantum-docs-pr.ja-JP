@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.load
-ms.openlocfilehash: 15e63ced6223759a332ce22a43c133a7899f482a
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: efa4a65a489446cbef48507d0b02a932da74c71c
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77909961"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327664"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>独自のデータセットを読み込んで分類する
 
@@ -25,7 +25,7 @@ ms.locfileid: "77909961"
 
 $N = $2 のトレーニングデータセット $ (x, y) $ があるとします。この場合、$x $ の各インスタンス $x _i $ には、$x _ {i1} $、$x _ {i2} $、$x _ {i3} $ という3つの特徴があります。
 検証データセットの構造は同じです。
-これらの datsets は、次のような `data.json` ファイルで表すことができます。
+これらの datsets は `data.json` 、次のようなファイルで表すことができます。
 
 ```json
 {
@@ -81,13 +81,13 @@ $N = $2 のトレーニングデータセット $ (x, y) $ があるとします
 | 0.32      | 5         | Cat    |
 | 0.25      | 4          | Cat    |
 
-プロセスは次のとおりです。
+手順です。
 
 - まず、データセットをトレーニングと検証に分割する必要があります。 このケースでは、最初の3つのサンプルでトレーニングを行い、残りのサンプルで検証を行うことができます。 一般に、トレーニングデータの不要なバイアスを避けるために、トレーニングと検証のデータセットをランダムにサンプリングすることをお勧めします。
-- 次に、各クラスに数値ラベルを割り当てる必要があります。 現時点では、QML ライブラリは二項分類の問題のみを使用することに注意してください。 ここでは、ラベル0をクラス `Dog` に割り当て、番号1をクラス `Cat`に割り当てます。
+- 次に、各クラスに数値ラベルを割り当てる必要があります。 現時点では、QML ライブラリは二項分類の問題のみを使用することに注意してください。 ここでは、ラベル0をクラスに割り当て、 `Dog` 番号1をクラスに割り当てます `Cat` 。
 - 最後に、データセットのデータを使用して、テンプレートに入力します。 大規模なデータセットの場合は、特定のデータセットからテンプレートを自動的に生成するための小さなスクリプトを作成する必要があることに注意してください。 このスクリプトは、データセットの元の形式によって異なります。
 
-データセットの場合、`data.json` ファイルは次のようになります。
+データセットの場合、 `data.json` ファイルは次のようになります。
 
 ```json
 {
@@ -137,24 +137,24 @@ $N = $2 のトレーニングデータセット $ (x, y) $ があるとします
 
 ```
 
-## <a name="loading-the-data"></a>データを読み込んでいます
+## <a name="loading-the-data"></a>データを読み込む
 
 データを JSON ファイルとしてシリアル化したら、選択したホスト言語で提供される JSON ライブラリを使用して、データを読み込むことができます。
 
 ### <a name="python"></a>[Python](#tab/tabid-python)
 
-Python には、JSON でシリアル化されたデータを操作するための[組み込みの `json` パッケージ](https://docs.python.org/3.7/library/json.html)が用意されています。
+Python には、JSON でシリアル化されたデータを操作するための[組み込み `json` パッケージ](https://docs.python.org/3.7/library/json.html)が用意されています。
 
 :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="4-5,20-22":::
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
-.NET Core プラットフォームには、JSON でシリアル化されたデータを処理するための[`System.Text.Json` パッケージ](https://www.nuget.org/packages/System.Text.Json)が用意されています。
+.NET Core プラットフォームは、JSON でシリアル化されたデータを処理するための[ `System.Text.Json` パッケージ](https://www.nuget.org/packages/System.Text.Json)を提供します。
 
 :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="10,64-82":::
 
 ***
 
-## <a name="whats-next"></a>次の操作
+## <a name="next-steps"></a>次の手順
 
 これで、独自のデータセットを使用して独自の実験の実行を開始する準備が整いました。 さまざまな分類子とデータセットを試し、結果を共有するコミュニティに投稿してください。

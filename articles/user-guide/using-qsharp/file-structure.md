@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
-ms.openlocfilehash: cbee92c6d7e765237a7a42532dd7012b51421708
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: b8c24dae6cc8d8f37ad4f1f74017c05cabe3a4b4
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430970"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327460"
 ---
 # <a name="q-file-structure"></a>Q # ファイル構造
 
@@ -93,7 +93,7 @@ Q # ステートメントは、ステートメントブロックにグループ�
 
 別のブロック内で構文的に囲まれたステートメントブロックは、それを含むブロックのサブブロックと見なされます。コンテナーとサブブロックは、外部ブロックと内部ブロックとも呼ばれます。
 
-## <a name="comments"></a>説明
+## <a name="comments"></a>コメント
 
 コメントは、2つのスラッシュ (,) で始まり、 `//` 行の終わりまで続きます。
 Q # ソースファイル内の任意の場所にコメントが表示される場合があります。
@@ -107,7 +107,7 @@ Q # ソースファイル内の任意の場所にコメントが表示される�
 Markdown の拡張機能として、Q # の操作、関数、ユーザー定義型への相互参照は、を使用して含めることができます `@"<ref target>"` 。ここで、 `<ref target>` は参照されるコードオブジェクトの完全修飾名に置き換えられます。
 必要に応じて、ドキュメントエンジンで追加の Markdown 拡張機能をサポートすることもできます。
 
-次に例を示します。
+例:
 
 ```qsharp
 /// # Summary
@@ -152,5 +152,6 @@ operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
 - 関連する関数、操作、またはユーザー定義型を示す完全修飾名の一覧**も参照してください**。
 - **参照**: ドキュメント化されている項目の参照および引用の一覧。
 
-## <a name="whats-next"></a>次の課題
+## <a name="next-steps"></a>次の手順
+
 Q # の[操作と関数](xref:microsoft.quantum.guide.operationsfunctions)について説明します。

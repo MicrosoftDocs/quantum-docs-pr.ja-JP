@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: bc9695b85b68807801225ccbc903a4622b450768
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 9e924b973c4f22a59dd862df3f4f0d70278a1b4e
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431072"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327800"
 ---
 # <a name="operations-and-functions-in-q"></a>Q の操作と関数#
 
@@ -151,7 +151,7 @@ Adjoint ファンクタは、独自の逆になります。つまり、 `Adjoint
 
 ### <a name="implicitly-specifying-implementations"></a>暗黙的な実装の指定
 
-この場合、操作宣言の本体は、既定の実装だけで構成されます。 次に例を示します。
+この場合、操作宣言の本体は、既定の実装だけで構成されます。 例:
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -670,5 +670,6 @@ Q # callables は、直接的または間接的に再帰的に許可されてい
 - 実際のクォンタムデバイスで実行すると、スタック領域が制限される可能性があるため、詳細な再帰によって実行時エラーが発生する可能性があります。
   特に、Q # コンパイラとランタイムは、末尾の再帰を識別して最適化しません。
 
-## <a name="whats-next"></a>次の課題
+## <a name="next-steps"></a>次の手順
+
 Q # の[変数](xref:microsoft.quantum.guide.variables)について説明します。

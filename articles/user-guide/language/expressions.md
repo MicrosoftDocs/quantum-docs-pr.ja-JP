@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 93432cef9711b6780192cd59e92b09647a264b5c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431208"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327307"
 ---
 # <a name="type-expressions-in-q"></a>Q の型式#
 
@@ -63,7 +63,7 @@ let bigOne = bigZero + 1L;
 
 整数の除算と整数の剰余は、C# と同じ負の数値の動作に従います。
 つまり、 `a % b` は常にと同じ符号を持ち、常に同じになり `a` `b * (a / b) + a % b` `a` ます。
-次に例を示します。
+例:
 
  `A` | `B` | `A / B` | `A % B`
 ---------|----------|---------|---------
@@ -209,7 +209,7 @@ Q # では、ラップ解除演算子は末尾の感嘆符 `!` です。
 
 演算子の優先順位は、 `!` 明らかでない可能性がある1つの影響を与えます。
 関数または操作が、ラップされていない値を返す場合は、ラップ解除ではなく、引数のタプルが呼び出しにバインドされるように、関数または操作の呼び出しをかっこで囲む必要があります。
-次に例を示します。
+例:
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -221,7 +221,6 @@ let g = Foo(arg)!;      // Syntax error
 配列リテラルは、およびで囲まれた、コンマで区切られた1つ以上の要素式のシーケンスです `[` `]` 。
 すべての要素は、同じ型と互換性がある必要があります。
 
-
 同じ型の2つの配列を指定した場合、 `+` 2 つの配列を連結した新しい配列を作成するために二項演算子を使用できます。
 たとえば、 `[1,2,3] + [4,5,6]` は `[1,2,3,4,5,6]` です。
 
@@ -229,6 +228,9 @@ let g = Foo(arg)!;      // Syntax error
 
 型と式を指定した場合、演算子を使用して、指定された `Int` `new` サイズの新しい配列を割り当てることができます。
 たとえば、では、 `new Int[i + 1]` `Int` 要素を含む新しい配列が割り当てら `i + 1` れます。
+
+空の配列リテラル `[]` は使用できません。
+で `new ★[0]` はなく、 `★` 適切な型のプレースホルダーとしてを使用すると、は、必要な長さゼロの配列を作成できるようになります。
 
 新しい配列の要素は、型に依存する既定値に初期化されます。
 ほとんどの場合、これはゼロのバリエーションです。
@@ -240,7 +242,7 @@ Qubits または callables 含む配列は、要素が安全に使用される�
 
 各型の既定値は次のとおりです。
 
-Type | Default
+種類 | Default
 ---------|----------
  `Int` | `0`
  `BigInt` | `0L`
@@ -373,8 +375,7 @@ for (i in 1..N) {
 - `[Op1, Op3]`は操作の配列です `(Qubit[] => Unit is Adj)` 。
 - `[Op2, Op3]`は操作の配列です `(Qubit[] => Unit is Ctl)` 。
 
-空の配列リテラル `[]` は使用できません。
-で `new ★[0]` はなく、 `★` 適切な型のプレースホルダーとしてを使用すると、は、必要な長さゼロの配列を作成できるようになります。
+ただし、 `(Qubit[] => Unit is Adj)` と `(Qubit[] => Unit is Ctl)` の演算には共通の基本型がありますが、 `(Qubit[] => Unit)` これら*の演算子の*配列は共通の基本型を共有しないことに注意してください。 たとえば、は、 `[[Op1], [Op2]]` 互換性のない配列型との配列を作成しようとしているため、現在、ではエラーが発生し `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` ます。
 
 
 ## <a name="conditional-expressions"></a>条件式
@@ -473,24 +474,25 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 演算子は優先順位の高い順になります。
 
-演算子 | アリ | 説明 | オペランドの型
+演算子 | アリ | Description | オペランドの型
 ---------|----------|---------|---------------
- 末尾`!` | 単項 | ラップ解除 | 任意のユーザー定義型
- `-`, `~~~`, `not` | 単項 | 負の数値、ビットごとの補数、論理否定 | `Int`、、 `BigInt` またはの場合 `Double` `-` `Int` は `BigInt` `~~~` `Bool` 、の場合は。`not`
- `^` | Binary | 整数の累乗 | `Int`底の場合は `BigInt` 、 `Int` 指数部の場合は
- `/`, `*`, `%` | Binary | 除算、乗算、整数剰余 | `Int`、、、、 `BigInt` `Double` `/` `*` `Int` または `BigInt` の場合は。`%`
- `+`, `-` | Binary | 加算または文字列と配列の連結、減算 | `Int`、、 `BigInt` また `Double` は、また `String` はのいずれかの配列型`+`
- `<<<`, `>>>` | Binary | 左シフト、右シフト | `Int` または `BigInt`
- `<`, `<=`, `>`, `>=` | Binary | より小さい、より小さい、または等しい、より大きい、より大きい、または等しい比較 | `Int`、、 `BigInt` または`Double`
- `==`, `!=` | Binary | 等しい、等しくない比較 | 任意のプリミティブ型
- `&&&` | Binary | ビット演算子 AND | `Int` または `BigInt`
- `^^^` | Binary | ビットごとの XOR | `Int` または `BigInt`
- <code>\|\|\|</code> | Binary | ビットごとの OR | `Int` または `BigInt`
- `and` | Binary | 論理積 | `Bool`
- `or` | Binary | 論理和 | `Bool`
+ 末尾`!` | 単項演算子 | ラップ解除 | 任意のユーザー定義型
+ `-`, `~~~`, `not` | 単項演算子 | 負の数値、ビットごとの補数、論理否定 | `Int`、、 `BigInt` またはの場合 `Double` `-` `Int` は `BigInt` `~~~` `Bool` 、の場合は。`not`
+ `^` | バイナリ | 整数の累乗 | `Int`底の場合は `BigInt` 、 `Int` 指数部の場合は
+ `/`, `*`, `%` | バイナリ | 除算、乗算、整数剰余 | `Int`、、、、 `BigInt` `Double` `/` `*` `Int` または `BigInt` の場合は。`%`
+ `+`, `-` | バイナリ | 加算または文字列と配列の連結、減算 | `Int`、、 `BigInt` また `Double` は、また `String` はのいずれかの配列型`+`
+ `<<<`, `>>>` | バイナリ | 左シフト、右シフト | `Int` または `BigInt`
+ `<`, `<=`, `>`, `>=` | バイナリ | より小さい、より小さい、または等しい、より大きい、より大きい、または等しい比較 | `Int`、、 `BigInt` または`Double`
+ `==`, `!=` | バイナリ | 等しい、等しくない比較 | 任意のプリミティブ型
+ `&&&` | バイナリ | ビット演算子 AND | `Int` または `BigInt`
+ `^^^` | バイナリ | ビットごとの XOR | `Int` または `BigInt`
+ <code>\|\|\|</code> | バイナリ | ビットごとの OR | `Int` または `BigInt`
+ `and` | バイナリ | 論理積 | `Bool`
+ `or` | バイナリ | 論理和 | `Bool`
  `..` | Binary/三項 | 範囲演算子 | `Int`
  `?` `|` | 三項 | 条件付き | `Bool`左側にある
 `w/` `<-` | 三項 | コピーと更新 | 「[コピーと更新の式」を](#copy-and-update-expressions)参照してください。
 
-## <a name="whats-next"></a>次の課題
+## <a name="next-steps"></a>次の手順
+
 Q # の式を操作できるようになったので、操作と関数を定義して呼び出す方法については、「 [q # の操作と関数](xref:microsoft.quantum.guide.operationsfunctions)」を参照してください。

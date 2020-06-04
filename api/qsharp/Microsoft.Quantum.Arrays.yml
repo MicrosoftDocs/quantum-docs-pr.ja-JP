@@ -20,7 +20,7 @@ functions:
 - uid: microsoft.quantum.arrays.filtered
   summary: 配列と、配列の要素に対して定義された述語が指定されている場合、は述語を満たす要素で構成される配列を返します。
 - uid: microsoft.quantum.arrays.fold
-  summary: 配列`f` `array`を使用して関数を反復`f(f(f(initialState, array[0]), array[1]), ...)`処理し、を返します。
+  summary: 配列を使用して関数を反復処理し `f` `array` 、を返し `f(f(f(initialState, array[0]), array[1]), ...)` ます。
 - uid: microsoft.quantum.arrays.head
   summary: 配列の最初の要素を返します。
 - uid: microsoft.quantum.arrays.indexof
@@ -29,6 +29,8 @@ functions:
   summary: 配列を指定した場合は、その配列のインデックスに対する範囲を返します。 for ループでの使用に適しています。
 - uid: microsoft.quantum.arrays.isempty
   summary: 配列が空の場合にのみ true を返します。
+- uid: microsoft.quantum.arrays.ispermutation
+  summary: 指定された配列が順列を表す場合にのみ、true を出力します。
 - uid: microsoft.quantum.arrays.lookupfunction
   summary: 配列が指定されている場合、その配列の要素を返す関数を返します。
 - uid: microsoft.quantum.arrays.mapped
@@ -69,9 +71,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: 配列と、配列の要素に対して定義されている操作が指定された場合、は、操作の下にある元の配列のイメージで構成される新しい配列を返します。
 metadata:
-  ms.openlocfilehash: a9088a037953f62ab7193ea525a6e71d43fe2fb2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 92eb956a1387a9765354f45e27eb084c6d73f51b
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673404"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326712"

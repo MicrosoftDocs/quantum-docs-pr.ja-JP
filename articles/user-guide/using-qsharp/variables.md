@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 407b4ff3570816eb7bdc323a5c5b77dac2d951af
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 456c05d4ca66a747e0cc514a30c6bbb33610f481
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430902"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327783"
 ---
 # <a name="variables-in-q"></a>Q の変数#
 
@@ -55,7 +55,7 @@ let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 
 ### <a name="apply-and-reassign-statements"></a>Apply ステートメントと再割り当てステートメント
 
-特定の種類の `set` ステートメントは、*適用および再割り当て*ステートメントとして参照します。右辺が二項演算子のアプリケーションで構成され、結果が演算子の左辺の引数に再バインドされる場合、連結に便利な方法として使用できます。 たとえば、オブジェクトに適用された
+特定の種類の `set` ステートメントは、*適用および再割り当て*ステートメントとして参照します。右辺が二項演算子のアプリケーションで構成され、結果が演算子の左辺の引数に再バインドされる場合、連結に便利な方法として使用できます。 たとえば、
 ```qsharp
 mutable counter = 0;
 for (i in 1 .. 2 .. 10) {
@@ -161,7 +161,7 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 バインドの右側がタプルの場合、そのタプルは代入時に分解される可能性があります。
 このような deconstructions には、入れ子になった組が含まれる場合があります。また、右辺の組の構造がシンボルの組の形状と互換性がある限り、完全または部分的な分解は有効です。
 
-次に例を示します。
+例:
 
 ```qsharp
 let (i, f) = (5, 0.1); // i is bound to 5 and f to 0.1
@@ -196,7 +196,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-および
+and
 
 ```qsharp
 if (a == b) {
@@ -232,5 +232,6 @@ if (a == b) {
 ...
 ```
 
-## <a name="whats-next"></a>次の課題
+## <a name="next-steps"></a>次の手順
+
 Q # での[Qubits の](xref:microsoft.quantum.guide.qubits)使用について説明します。

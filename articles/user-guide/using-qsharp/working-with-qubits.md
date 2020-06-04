@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: e89b9ccfe2a0796e01eedfc99f7ce71038d85f38
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 0deb0729a88c49798f32a22a943b935d383c570b
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430936"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327545"
 ---
 # <a name="working-with-qubits"></a>量子ビットの操作
 
@@ -30,7 +30,7 @@ Q # 言語のさまざまな部分を見てきましたが、それについて�
 バインディングは、ステートメントと同じパターンに従い `let` ます。1つの記号または記号の組、等号 (= `=` )、1つの値、または*初期化子*の一致するタプルのいずれかです。
 
 初期化子は、として指定された1つの qubit、 `Qubit()` または qubit の配列 (は式) に対して使用でき `Qubit[n]` `n` `Int` ます。
-たとえば、オブジェクトに適用された
+たとえば、
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -59,7 +59,7 @@ using ((auxiliary, register) = (Qubit(), Qubit[5])) {
 これらの状態は不明であるため、クォンタムコンピューターのメモリの他の部分との間でも、これらは "ダーティな" qubits と呼ばれることがよくあります。
 
 バインドは、ステートメントと同じパターンおよび規則に従い `using` ます。
-たとえば、オブジェクトに適用された
+たとえば、
 ```qsharp
 borrowing (qubit = Qubit()) {
     // ...
@@ -221,5 +221,6 @@ is Adj + Ctl {
 
 このコードを別のキャノン関数と比較して、 `MultiControlledXClean` 乗算制御演算を実装するのと同じ目標を達成し `X` ます。ただし、メカニズムを使用していくつかの clean qubits を使用し `using` ます。 
 
-## <a name="whats-next"></a>次の課題
+## <a name="next-steps"></a>次の手順
+
 Q # の[制御フロー](xref:microsoft.quantum.guide.controlflow)について説明します。

@@ -3,9 +3,9 @@ uid: microsoft.quantum.math
 name: Microsoft.Quantum.Math
 functions:
 - uid: microsoft.quantum.math.abscomplex
-  summary: 型`Complex`の複素数の絶対値を返します。
+  summary: 型の複素数の絶対値を返し `Complex` ます。
 - uid: microsoft.quantum.math.abscomplexpolar
-  summary: 型`ComplexPolar`の複素数の絶対値を返します。
+  summary: 型の複素数の絶対値を返し `ComplexPolar` ます。
 - uid: microsoft.quantum.math.absd
   summary: 倍精度浮動小数点数の絶対値を返します。
 - uid: microsoft.quantum.math.absi
@@ -13,9 +13,9 @@ functions:
 - uid: microsoft.quantum.math.absl
   summary: 大きい整数の絶対値を返します。
 - uid: microsoft.quantum.math.abssquaredcomplex
-  summary: 型`Complex`の複素数の2乗の絶対値を返します。
+  summary: 型の複素数の2乗の絶対値を返し `Complex` ます。
 - uid: microsoft.quantum.math.abssquaredcomplexpolar
-  summary: 型`ComplexPolar`の複素数の2乗の絶対値を返します。
+  summary: 型の複素数の2乗の絶対値を返し `ComplexPolar` ます。
 - uid: microsoft.quantum.math.arccos
   summary: コサインが指定数となる角度を返します。
 - uid: microsoft.quantum.math.arccosh
@@ -31,35 +31,31 @@ functions:
 - uid: microsoft.quantum.math.arctanh
   summary: 数値の逆双曲線正接を計算します。
 - uid: microsoft.quantum.math.argcomplex
-  summary: 型`Complex`の複素数のフェーズを返します。
+  summary: 型の複素数のフェーズを返し `Complex` ます。
 - uid: microsoft.quantum.math.argcomplexpolar
-  summary: 型`ComplexPolar`の複素数のフェーズを返します。
+  summary: 型の複素数のフェーズを返し `ComplexPolar` ます。
 - uid: microsoft.quantum.math.bitsizei
   summary: >-
-    負でない整数`a`の場合、はを表す`a`ために必要なビット数を返します。
+    負でない整数の場合 `a` 、はを表すために必要なビット数を返し `a` ます。
 
 
     つまり、$a < 2 ^ n $ である $n $ の最小値を返します。
 - uid: microsoft.quantum.math.bitsizel
   summary: >-
-    負でない整数`a`の場合、はを表す`a`ために必要なビット数を返します。
+    負でない整数の場合 `a` 、はを表すために必要なビット数を返し `a` ます。
 
 
     つまり、$a < 2 ^ n $ である $n $ の最小値を返します。
 - uid: microsoft.quantum.math.ceiling
   summary: 指定した数以上の数のうち、最小の整数を返します。
 - uid: microsoft.quantum.math.complexascomplexpolar
-  summary: 複素数型`Complex`の複素数を型`ComplexPolar`の複素数に変換します。
+  summary: 複素数型の複素数を `Complex` 型の複素数に変換 `ComplexPolar` します。
 - uid: microsoft.quantum.math.complexpolarascomplex
-  summary: 複素数型`ComplexPolar`の複素数を型`Complex`の複素数に変換します。
-- uid: microsoft.quantum.math.complexpolartocomplex
-  summary: "\n> [!WARNING]\n> 非推奨\n\nComplexPolarToComplex は非推奨となりました。 代わりに、@\"microsoft.quantum.math.complexpolarascomplex\" を使用してください。"
-- uid: microsoft.quantum.math.complextocomplexpolar
-  summary: "\n> [!WARNING]\n> 非推奨\n\nComplexToComplexPolar は非推奨とされました。 代わりに、@\"microsoft.quantum.math.complexascomplexpolar\" を使用してください。"
+  summary: 複素数型の複素数を `ComplexPolar` 型の複素数に変換 `Complex` します。
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: に最も近い、分母が以下`fraction`である継続分数の値を検索します。`denominatorBound`
+  summary: に最も近い `fraction` 、分母が以下である継続分数の値を検索します。`denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: に最も近い、分母が以下`fraction`である継続分数の値を検索します。`denominatorBound`
+  summary: に最も近い `fraction` 、分母が以下である継続分数の値を検索します。`denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: 指定された角度のコサインを返します。
 - uid: microsoft.quantum.math.cosh
@@ -145,9 +141,9 @@ functions:
 - uid: microsoft.quantum.math.modpowl
   summary: 別の数値のべき乗で累乗された数値でモジュール分割を実行します。
 - uid: microsoft.quantum.math.modulusi
-  summary: 剰余`value` `modulus`の正規の residue を計算します。
+  summary: 剰余の正規の residue を計算 `value` `modulus` します。
 - uid: microsoft.quantum.math.modulusl
-  summary: 剰余`value` `modulus`の正規の residue を計算します。
+  summary: 剰余の正規の residue を計算 `value` `modulus` します。
 - uid: microsoft.quantum.math.negationc
   summary: 入力の単項否定を返します。
 - uid: microsoft.quantum.math.negationcp
@@ -174,16 +170,16 @@ functions:
   summary: 2つの入力の合計を返します。
 - uid: microsoft.quantum.math.pnorm
   summary: >-
-    の`Double`ベクトル`L(p)`の基準を返します。
+    `L(p)`のベクトルの基準を返し `Double` ます。
 
 
-    つまり、 `Double[]`$ $x 型の $ が指定されている場合、$-$p $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $ が返されます。
+    つまり、$ $x 型の $ が指定されている場合、 `Double[]` $-$p $ \| x \| \_ p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $ が返されます。
 - uid: microsoft.quantum.math.pnormalized
   summary: >-
-    `L(p)`標準での`Double`ベクトルを正規化します。
+    標準でのベクトルを正規化 `Double` `L(p)` します。
 
 
-    つまり、$ $x 型`Double[]`の配列を指定すると、すべての要素が $p $-基準 $\|x\|_p $ で除算された配列が返されます。
+    つまり、$ $x 型の配列を指定すると、 `Double[]` すべての要素が $p $-基準 $ x _p $ で除算された配列が返され \| \| ます。
 - uid: microsoft.quantum.math.powc
   summary: 指定された指数で累乗された数値を返します。
 - uid: microsoft.quantum.math.powcp
@@ -230,7 +226,7 @@ functions:
   summary: 数値の整数部を計算します。
 newtypes:
 - uid: microsoft.quantum.math.bigfraction
-  summary: フォーム`p/q`の有理数を表します。 Integer `p`は組の最初の要素で、 `q`は組の2番目の要素です。
+  summary: フォームの有理数を表し `p/q` ます。 Integer `p` は組の最初の要素で、 `q` は組の2番目の要素です。
 - uid: microsoft.quantum.math.complex
   summary: >-
     実数部と虚数部の複素数を表します。
@@ -243,7 +239,7 @@ newtypes:
 
     複素数の極座標表現は $c = r e ^ {i t} $ です。
 - uid: microsoft.quantum.math.fraction
-  summary: フォーム`p/q`の有理数を表します。 Integer `p`は組の最初の要素で、 `q`は組の2番目の要素です。
+  summary: フォームの有理数を表し `p/q` ます。 Integer `p` は組の最初の要素で、 `q` は組の2番目の要素です。
 summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、従来の数学関数とデータ型が含まれています。"
 operations:
 - uid: microsoft.quantum.math.randomint
@@ -255,9 +251,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: シングル qubit の1つの演算子をランダムに一様に返します。
 metadata:
-  ms.openlocfilehash: 2ad787a0d29e98e25c733d1fdcf0a79fcc8c2803
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673153"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326496"

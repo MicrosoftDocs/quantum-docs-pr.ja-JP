@@ -7,28 +7,28 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: c093284f1ea33b72d4d264992b0ba6bf6bc72782
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 8019b32a3290e2d45124ebb1eb75395f6cb758db
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036442"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327528"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>開発環境で Q # プロジェクトを作成する
 
 QDK で Q # プロジェクトを作成する方法について説明します。
 
-Q # プロジェクトには、クォンタムコードを含む Q # ファイルと、クォンタムプログラムを実行するホストプログラムが含まれています。 ホストプログラムはC#、や Python などの .net 言語で記述できます。 また、IQ # kernel を使用して、Jupyter notebook で Q # コードを実行することもできます。
+Q # プロジェクトには、クォンタムコードを含む Q # ファイルと、クォンタムプログラムを実行するホストプログラムが含まれています。 ホストプログラムは、C# などの .NET 言語、または Python で記述できます。 また、IQ # kernel を使用して Jupyter Notebook で Q # コードを実行することもできます。
 
 以下のセクションで、開発環境と言語を選択します。
 
 * [Python](#create-a-python-project)
-* [Q # Jupyter notebook](#create-a-q-jupyter-notebook-project)
-* [C#Visual Studio を使用する](#create-a-c-project-on-windows-using-visual-studio)
-* [C#VS Code](#create-a-c-project-using-vs-code)
-* [C#コマンドラインを使用する](#create-a-c-project-using-the-dotnet-command-line-tool)
+* [Q# Jupyter Notebook](#create-a-q-jupyter-notebook-project)
+* [Visual Studio を使用した C#](#create-a-c-project-on-windows-using-visual-studio)
+* [VS Code を使用した C#](#create-a-c-project-using-vs-code)
+* [コマンドラインを使用した C#](#create-a-c-project-using-the-dotnet-command-line-tool)
 
-## <a name="create-a-python-project"></a>Python プロジェクトを作成する
+## <a name="create-a-python-project"></a>Python プロジェクトの作成
 
 1. 前提条件
 
@@ -36,7 +36,7 @@ Q # プロジェクトには、クォンタムコードを含む Q # ファイ�
 
 1. プロジェクトのフォルダーを作成し、そのフォルダーに移動します。
 
-1. `Operation.qs`という名前の Q # ファイルを作成し、そのファイルに Q # コードを追加します。 例 :
+1. という名前の Q # ファイルを作成 `Operation.qs` し、そのファイルに q # コードを追加します。 例:
 
     ```qsharp
     namespace HelloWorld {
@@ -50,7 +50,7 @@ Q # プロジェクトには、クォンタムコードを含む Q # ファイ�
     }
     ```
 
-1. Q # 操作を呼び出すために `host.py` という名前の python ホストファイルを作成します。 例 :
+1. という名前の python ホストファイルを作成し、 `host.py` Q # 操作を呼び出します。 例:
 
     ```python
     import qsharp
@@ -89,7 +89,7 @@ Q # プロジェクトには、クォンタムコードを含む Q # ファイ�
 
 1. コマンド ラインに表示されている URL を参照します。 例: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
 
-1. Jupyter ページがブラウザーに表示されます。 **[ファイル]** タブで [**新規** > **q #** ] を選択し、q # カーネルで jupyter notebook を作成します。 最初の notebook セルに次のコードを追加します。
+1. Jupyter ページがブラウザーに表示されます。 [**ファイル**] タブで [**新しい**q #] を選択し、  >  **Q#** q # カーネルを使用して Jupyter Notebook を作成します。 最初の notebook セルに次のコードを追加します。
 
     ```qsharp
     operation SayHello() : Unit {
@@ -97,21 +97,21 @@ Q # プロジェクトには、クォンタムコードを含む Q # ファイ�
     }
     ```
 
-1. [セル]**を選択**して [ > ] を**選択し、** notebook を実行します。 `SayHello` は、すぐにセルの出力に表示されます。
+1. [**セル**の実行] [セル] を選択し  >  **Run Cells**て、notebook を実行します。 `SayHello`は、すぐにセルの出力に表示されます。
 
-    ![Q# コードを含む Jupyter Notebook セル](~/media/install-guide-jupyter.png)
+    ![Q # コードを含むセルを Jupyter Notebook](~/media/install-guide-jupyter.png)
 
     Jupyter Notebook で実行すると、Q # コードがコンパイルされ、ノートブックは検出した操作の名前を出力します。
 
 1. 新しいセルで、`%simulate` マジックを使用して、作成した演算の量子コンピューターでの実行をシミュレートします。
 
-    ![%simulate マジックのある Jupyter Notebook セル](~/media/install-guide-jupyter-simulate.png)
+    ![% シミュレートマジックを含むセルを Jupyter Notebook](~/media/install-guide-jupyter-simulate.png)
 
     呼び出した演算の結果 (この場合は空) と共に、メッセージが画面に表示されます。
 
 他の Q # 操作を追加して、量子開発を続けることができるようになりました。
 
-## <a name="create-a-c-project-on-windows-using-visual-studio"></a>Visual Studio C#を使用した Windows でのプロジェクトの作成
+## <a name="create-a-c-project-on-windows-using-visual-studio"></a>Visual Studio を使用した Windows での C# プロジェクトの作成
 
 1. 前提条件
 
@@ -119,7 +119,7 @@ Q # プロジェクトには、クォンタムコードを含む Q # ファイ�
 
 1. 新しい Q# アプリケーションを作成する
 
-    * **[ファイル]**  ->  **[新規]**  ->  **[プロジェクト]** の順に移動します。
+    * ファイルの**File**  ->  **新しい**  ->  **プロジェクト**にアクセス
     * 検索ボックスに、「`Q#`」と入力します
     * **[Q# Application]\(Q# アプリケーション\)** を選択します
     * **[次へ]** を選択します
@@ -132,7 +132,7 @@ Q # プロジェクトには、クォンタムコードを含む Q # ファイ�
 
 1. アプリケーションの実行
 
-    * **[デバッグ]**  ->  **[デバッグなしで開始]** の順に選択します。
+    * デバッグ**Debug**を  ->  **行わないデバッグ開始**の選択
     * テキスト `Hello quantum world!` がコンソール ウィンドウに出力されます。
 
 Visual Studio を使用して、量子開発を続けることができるようになりました。
@@ -140,7 +140,7 @@ Visual Studio を使用して、量子開発を続けることができるよう
 > [!NOTE]
 > * 1 つの Visual Studio ソリューションに複数のプロジェクトがある場合は、ソリューションに含まれるすべてのプロジェクトが、ソリューションと同じフォルダーまたはそのサブフォルダーのいずれかに存在する必要があります。  
 
-## <a name="create-a-c-project-using-vs-code"></a>VS Code をC#使用してプロジェクトを作成する
+## <a name="create-a-c-project-using-vs-code"></a>VS Code を使用して C# プロジェクトを作成する
 
 1. 前提条件
 
@@ -148,15 +148,15 @@ Visual Studio を使用して、量子開発を続けることができるよう
 
 1. 新しいプロジェクトを作成します。
 
-    * **[表示]**  ->  **[コマンド パレット]** の順に選択します。
-    * **[Q #: 新しいプロジェクトの作成]** を選択します。
+    * **ビュー**  ->  **コマンドパレット**にアクセス
+    * [ **Q #: 新しいプロジェクトの作成**] を選択します。
     * **スタンドアロンコンソールアプリケーション**の選択
     * アプリケーションの作成先となるファイル システム上の場所に移動します。
-    * プロジェクトが作成されたら、 **[Open new project...]\(新しいプロジェクトを開く...\)** ボタンをクリックします。
+    * プロジェクトが作成されたら、**[Open new project...]\(新しいプロジェクトを開く...\)** ボタンをクリックします。
 
 1. アプリケーションを実行します。
 
-    * **ターミナル** -> **新しいターミナル**にアクセスする
+    * ターミナルの**Terminal**  ->  **新しいターミナル**にアクセス
     * 「`dotnet run`」と入力します
     * 出力ウィンドウに `Hello quantum world!` というテキストが表示されます。
 
@@ -165,11 +165,11 @@ Visual Studio Code を使用して、quantum の開発を続けることがで�
 > [!NOTE]
 > * 複数のルート フォルダーを持つワークスペースは、Visual Studio Code の拡張機能では現在サポートされていません。 1 つの VS Code ワークスペース内に複数のプロジェクトがある場合は、すべてのプロジェクトが同じルート フォルダー内に含まれている必要があります。
 
-## <a name="create-a-c-project-using-the-dotnet-command-line-tool"></a>`dotnet` コマンドC#ラインツールを使用してプロジェクトを作成する
+## <a name="create-a-c-project-using-the-dotnet-command-line-tool"></a>コマンドラインツールを使用して C# プロジェクトを作成する `dotnet`
 
 1. 前提条件
 
-    * [コマンドライン用の Quantum 開発キット](xref:microsoft.quantum.install.cs)をインストールする
+    * [コマンドライン用の Quantum 開発キット](xref:microsoft.quantum.install.standalone)をインストールする
 
 1. 新しいアプリケーションを作成する
 
@@ -195,6 +195,6 @@ Visual Studio Code を使用して、quantum の開発を続けることがで�
 
 これで、コマンドラインツールを使用して、クォンタム開発を続行できます。
 
-## <a name="whats-next"></a>次の操作
+## <a name="next-steps"></a>次の手順
 
 お好みの環境でプロジェクトを作成したので、量子開発を続けることができます。

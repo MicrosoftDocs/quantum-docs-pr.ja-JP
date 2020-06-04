@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
-ms.openlocfilehash: fd0ea47f00b1456ec460808ef7d451c8427677cd
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: e77b52d1a6eb7e2f62ab12dedd75d00ac8fec4be
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431157"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327324"
 ---
 # <a name="q-basics"></a>Q # の基本
 
@@ -66,7 +66,7 @@ Q # プログラムは、ターゲットコンピューターによって定義�
 言語の構文では、構文的に正しいプログラムを形成する記号のさまざまな組み合わせについて説明します。
 Q # では、3つの異なるグループ (型、式、ステートメント) で構文の要素を分類できます。
 
-### <a name="types"></a>種類
+### <a name="types"></a>型
 Q # は、厳密に型指定された言語であり、型を慎重に使用することで、コンパイラがコンパイル時に Q # プログラムに対する強力な保証を提供するのに役立ちます。
 標準およびクォンタム固有の組み込みのプリミティブ型 (、、、など) に加えて `Int` `Bool` `Qubit` `Result` 、Q # ではユーザー定義型がサポートされています。
 Q # のさまざまなプリミティブ型については、「Q # の[型」ページで](xref:microsoft.quantum.guide.types)、配列と組の型の詳細と、q # ファイル内で新しい型を定義する方法について説明しています。
@@ -91,7 +91,7 @@ let count = 5;
 ```
 
 さらに興味深い例として、 `for` 反復処理をサポートし、*ステートメントブロック*を含むステートメントがあります。
-たとえば `qubits` 、記号が qubits のレジスタにバインドされているとします (技術的には型の `Qubit[]` 配列、つまり型の配列 `Qubit` )。 Then
+たとえば `qubits` 、記号が qubits のレジスタにバインドされているとします (技術的には型の `Qubit[]` 配列、つまり型の配列 `Qubit` )。 THEN
 ```qsharp
 for (qubit in qubits) {
     H(qubit);
@@ -106,8 +106,7 @@ for (qubit in qubits) {
 Q # プログラムのほぼすべての側面がステートメントを使用して構築されているため、1つのページに関連するすべての情報が含まれるとは限りません。
 ただし、構文の構造と書式設定については、q # の[ファイル構造](xref:microsoft.quantum.guide.filestructure)のページ、 [q # の変数](xref:microsoft.quantum.guide.variables)でのシンボルのバインドの割り当てとスコープ `for` 、 [q # の制御フロー](xref:microsoft.quantum.guide.controlflow)などの制御フローループについて説明しています。
 
-
-## <a name="whats-next"></a>次の内容
+## <a name="next-steps"></a>次の手順
 このガイドの残りの部分では、操作、関数、および型の基本的な構成要素を使用して、Q # を使用して複雑なクォンタムプログラムを作成する方法について説明します。
 
 まず、 [Q # で型](xref:microsoft.quantum.guide.types)について学習を開始できます。

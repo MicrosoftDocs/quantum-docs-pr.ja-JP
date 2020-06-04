@@ -7,8 +7,8 @@ summary: >-
   元に戻すことができ、2つの整数がインプレース適用されます。
 
 
-  LittleEndian レジスタ`xs`にエンコードされた2つの $n $ `ys`ビット整数と、qubit が渡された場合、演算は2つの整数の合計を計算します。この2つの`ys`整数は、結果の最下位の $n $ が`carry`保持され、実行ビットは qubit に xor されます。
-remarks: この操作には RippleCarryAdderD と同じ機能がありますが、$n $ の代わりに ancilla qubit を1つだけ使用します。
+  LittleEndian レジスタにエンコードされた2つの $n $ ビット整数 `xs` `ys` と、qubit が渡された場合、演算は2つの整数の合計を計算します。この2つの整数は、結果の最下位の $n $ が保持され、 `ys` 実行ビットは qubit に xor され `carry` ます。
+remarks: この操作には、RippleCarryAdderD と同じ機能がありますが、$n $ ではなく、補助 qubit を1つだけ使用します。
 syntax: 'operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-
   - Cuccaro、Draper、Samuel、Kutin、David Petrie の: "新しいクォンタム ripple-キャリー追加回路", 2004 ですが、このようになります。
@@ -35,9 +35,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d75313cbc70643bc9cb96967c1b2eb928296f8d7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a72b9fe01846bbdb0b3cb6079a681104904747df
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675128"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326505"

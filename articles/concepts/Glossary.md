@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: cbc473eb14d8afd255a7072475dc054e18b98e3e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 042e4e27ef4e42cfc0c24fbb0ae2232cf1bbfe36
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426701"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327613"
 ---
 # <a name="quantum-computing-glossary"></a>クォンタムコンピューティング用語集
 
@@ -55,7 +55,7 @@ Q # 言語の[操作](xref:microsoft.quantum.glossary#operation)または[関数
 
 指定された変換によって方向が変更されず、そのベクトルの[eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)に対応する係数によって大きさが変更されるベクトル。 正方形の行列 $M $ と eigenvalue $c $ の場合、$Mv = cv $ となります。ここで、$v $ はマトリックスの eigenvector であり、任意の数の引数を指定できます。 詳細については、「[高度なマトリックスの概念](xref:microsoft.quantum.concepts.matrix-advanced)」を参照してください。
 
-## <a name="entanglement"></a>結び付き
+## <a name="entanglement"></a>もつれ
 
 [Qubits](xref:microsoft.quantum.glossary#qubit)などのクォンタムパーティクルは、互いに独立して記述できないように、接続するか、または複数の*角度で傾ける*ことができます。 これらの測定結果は、無限に分離されている場合でも相関関係があります。 Entanglement、qubit の[状態](xref:microsoft.quantum.glossary#quantum-state)を[測定](xref:microsoft.quantum.glossary#measurement)するために不可欠です。  詳細については、「[高度なマトリックスの概念](xref:microsoft.quantum.concepts.matrix-advanced)」を参照してください。
 
@@ -120,7 +120,11 @@ Q # でのクォンタム実行の基本単位。 これは、C、C++、また�
 
 ## <a name="quantum-circuit-diagram"></a>クォンタム回線の図
 
-サンプル回路図など、単純なクォンタムプログラムの一連の[操作](xref:microsoft.quantum.glossary#operation)([ゲート](xref:microsoft.quantum.glossary#gate)) をグラフィカルに表すメソッド ![ ](~/media/qpe.png) 。 詳細については、「[クォンタム回線](xref:microsoft.quantum.concepts.circuits)」を参照してください。
+単純なクォンタムプログラムの一連の[操作](xref:microsoft.quantum.glossary#operation)(または[ゲート](xref:microsoft.quantum.glossary#gate)) をグラフィカルに表すメソッド。たとえば、 
+
+![回路図のサンプル](~/media/qpe.png). 
+
+詳細については、「[クォンタム回線](xref:microsoft.quantum.concepts.circuits)」を参照してください。
 
 ## <a name="quantum-libraries"></a>クォンタムライブラリ
 
@@ -144,7 +148,7 @@ Q # プログラムを作成するための[操作](xref:microsoft.quantum.gloss
 
 ## <a name="superposition"></a>法則
 
-量子コンピューティングの概念は、 [qubit](xref:microsoft.quantum.glossary#qubit)が[測定](xref:microsoft.quantum.glossary#measurement)されるまでの2つの状態 ($ \ket{\0} $ と $ \ket{\1} $) の線形組み合わせです。  詳細については、「[クォンタムコンピューティングについ](xref:microsoft.quantum.overview.understanding)て」を参照してください。
+量子コンピューティングの概念は、 [qubit](xref:microsoft.quantum.glossary#qubit)が測定されるまでの2つの状態 ($ \ket {0} $ と $ \ket {1} $) の[measured](xref:microsoft.quantum.glossary#measurement)線形組み合わせです。  詳細については、「[クォンタムコンピューティングについ](xref:microsoft.quantum.overview.understanding)て」を参照してください。
 
 ## <a name="target-machine"></a>ターゲットコンピューター
 
