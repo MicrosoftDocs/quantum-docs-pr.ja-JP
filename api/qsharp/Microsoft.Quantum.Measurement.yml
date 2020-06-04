@@ -9,19 +9,19 @@ operations:
 - uid: microsoft.quantum.measurement.measurewithscratch
   summary: 明示的なスクラッチ qubit を使用して測定を実行し、指定された Pan Li 演算子を測定します。
 - uid: microsoft.quantum.measurement.mresetx
-  summary: X ベースの1つの qubit を測定し、測定値に従って標準の基本状態 | 0 〉にリセットします。
+  summary: X ベースの1つの qubit を測定し、測定値に従って固定の初期状態にリセットします。
 - uid: microsoft.quantum.measurement.mresety
-  summary: Y 単位で1つの qubit を測定し、測定値に従って標準の基本状態 | 0 〉にリセットします。
+  summary: Y 単位で1つの qubit を測定し、測定値に従って固定の初期状態にリセットします。
 - uid: microsoft.quantum.measurement.mresetz
-  summary: は、 `Z` 1 つの qubit をベースとして測定し、測定値に従って標準の状態 | 0 〉にリセットします。
+  summary: 1つの qubit を Z ベースで測定し、測定値に従って固定の初期状態にリセットします。
 - uid: microsoft.quantum.measurement.multim
   summary: 指定された配列内の各 qubit を標準ベースで測定します。
 - uid: microsoft.quantum.measurement.settobasisstate
   summary: Qubit を測定し、必要に応じてビットフリップを適用することによって、指定された計算基準の状態に qubit を設定します。
 metadata:
-  ms.openlocfilehash: 8e0910bf53734ffe65aa12b06321ec9b3403133f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 894c0bb7f0b57e9fe04837b89cd57345745df6c5
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673139"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326627"
