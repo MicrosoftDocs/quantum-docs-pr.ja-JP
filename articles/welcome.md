@@ -1,19 +1,19 @@
 ---
 uid: microsoft.quantum.welcome
-title: Quantum Development Kit の概要
+title: Quantum Development Kit (QDK) の概要
 description: Microsoft Quantum Development Kit を使用して Q# で量子プロジェクトのプログラミングを開始する方法について説明します。
 author: natke
 ms.author: nakersha
 ms.date: 5/10/2020
 ms.topic: overview
-ms.openlocfilehash: 2356fee2333acb73f528fad6d9def68a7fe84083
-ms.sourcegitcommit: 4da99168479f96f408b984279a5a7eabcda752db
+ms.openlocfilehash: 5fea46e43d9a3739e4b058781e1b52dff20b7e21
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83708720"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327511"
 ---
-# <a name="get-started-with-the-quantum-development-kit"></a>Quantum Development Kit の概要
+# <a name="get-started-with-the-quantum-development-kit-qdk"></a>Quantum Development Kit (QDK) の概要
 
 Microsoft Quantum Development Kit にようこそ。  
 
