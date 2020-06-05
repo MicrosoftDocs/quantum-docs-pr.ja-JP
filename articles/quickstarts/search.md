@@ -6,12 +6,12 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 9562e1937a2cac49d682cc0524d8fb29e276d95c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 9e4c53b4d5159cf07f0654603c1d477ad09eb7c6
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426806"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327409"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>チュートリアル:Q\# でグローバーの検索アルゴリズムを実装する
 
@@ -39,7 +39,7 @@ ms.locfileid: "83426806"
 
 ## <a name="write-the-code"></a>コードを作成する
 
-1. Quantum 開発キットを使用して、任意の開発環境に `Grover` という[新しい Q# プロジェクトを作成](xref:microsoft.quantum.howto.createproject)します。
+1. Quantum Development Kit を使用して、[コマンド ライン アプリケーション用の新しい Q# プロジェクトを作成](xref:microsoft.quantum.install.standalone)します。 プロジェクトに `Grover` というタイトルを付けます。
 
 1. 新しいプロジェクトで次のコードを `Program.qs` ファイルに追加します。
 

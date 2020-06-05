@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 3e109553adc4d724733834e3660bfe7789052bcf
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 8fafbccfe2a94a824353221b5e7eb8bac16c42f2
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426815"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327358"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>チュートリアル:Q\# で量子乱数ジェネレーターを実装する
 
@@ -20,7 +20,7 @@ Q# で記述された量子アルゴリズムの単純な例が量子乱数ジ�
 ## <a name="prerequisites"></a>前提条件
 
 - Microsoft [Quantum 開発キット](xref:microsoft.quantum.install)。
-- [Q# プロジェクトを作成する](xref:microsoft.quantum.howto.createproject)
+- [コマンド ラインから Q# を使用するため](xref:microsoft.quantum.install.standalone)、または [Python ホスト プログラム](xref:microsoft.quantum.install.python) または [C# ホスト プログラム](xref:microsoft.quantum.install.cs)で使用するために、Q# プロジェクトを作成します。
 
 ## <a name="write-a-q-operation"></a>Q# 操作を記述する
 

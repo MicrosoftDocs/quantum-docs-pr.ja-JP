@@ -3,15 +3,15 @@ title: Q# でのエンタングルメントの確認
 description: Q# で量子プログラムを作成する方法について説明します。 Quantum Development Kit (QDK) を使用してベル状態アプリケーションを開発する
 author: natke
 ms.author: nakersha
-ms.date: 10/07/2019
+ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 989080e7d9979bb87d14b2580d28732bb1092eb1
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426841"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327375"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>チュートリアル:Q\# でのもつれの確認
 
@@ -25,28 +25,27 @@ Bell という名前は、ベル状態を表しています。これは、量子
 
 コーディングを開始する準備ができたら、続行する前に次の手順を実行してください。 
 
-* 任意の言語および開発環境を使用して、Quantum Development Kit を[インストール](xref:microsoft.quantum.install)する
+* [Python](xref:microsoft.quantum.install.python) または [.NET](xref:microsoft.quantum.install.cs) 用の Quantum Development Kit をインストールします。
 * 既に QDK をインストールしている場合は、バージョンが[最新](xref:microsoft.quantum.update)であることを確認する
 
 QDK をインストールしなくても、説明を読み進めることで Q# プログラミング言語の概要と量子コンピューティングの最初の概念を理解することができます。
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Q# を使った量子ビットの動作のデモ
 
-簡単な[量子ビットの定義](xref:microsoft.quantum.overview.understanding)を思い出してください。  従来のビットでは単一のバイナリ値 (0、1 など) が保持されるのに対し、量子ビットの状態は同時に 0 と 1 の**重ね合わせ**になることができます。  概念的には、量子ビットは空間内の方向 (ベクトルとも呼ばれます) と考えられます。  量子ビットは、任意の方向にすることができます。 2 つの**従来の状態**とは、0 を測定する確率が 100% になる方向と、1 を測定する確率が 100% になる方向のことです。  この表現は、[ブロッホ球](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)によってより正式に視覚化されます。
-
+簡単な[量子ビットの定義](xref:microsoft.quantum.overview.understanding)を思い出してください。  従来のビットでは単一のバイナリ値 (0、1 など) が保持されるのに対し、[量子ビット](xref:microsoft.quantum.glossary#qubit)の状態は 0 と 1 の**重ね合わせ**になることができます。  概念的には、量子ビットは空間内の方向 (ベクトルとも呼ばれます) と考えられます。  量子ビットは、任意の方向にすることができます。 2 つの**従来の状態**とは、0 を測定する確率が 100% になる方向と、1 を測定する確率が 100% になる方向のことです。  この表現は、[ブロッホ球](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)によってより正式に視覚化されます。
 
 測定の動作により、2 進法の結果が生成され、量子ビットの状態が変わります。 測定では、0 または 1 のバイナリ値が生成されます。  量子ビットは重ね合わせ (あらゆる方向にある) の状態から古典的状態のいずれかになります。  その後、介在する操作なしで同じ測定を繰り返すと、同じ 2 進数の結果が生成されます。  
 
-複数の量子ビットは**もつれさせる**ことができます。 もつれのある 1 つの量子ビットを測定すると、もう一方の量子ビットの状態に関する知識も更新されます。
+複数の量子ビットは[**もつれさせる**](xref:microsoft.quantum.glossary#entanglement)ことができます。 もつれのある 1 つの量子ビットを測定すると、もう一方の量子ビットの状態に関する知識も更新されます。
 
 これで、Q# がこの動作を表現する方法を説明できるようになりました。  考えられる最も単純なプログラムから始め、量子の重ね合わせと量子のもつれを表すように構築します。
 
 ## <a name="setup"></a>セットアップ
 
-Microsoft の Quantum Development Kit を使用して開発されたアプリケーションは、次の 2 つの部分で構成されます。
+このチュートリアルでは、ホスト プログラムを使用し、次の 2 つの部分で構成されます。
 
-1. 1 つ以上の量子アルゴリズム。Q# 量子プログラミング言語を使用して実装します。
-1. ホストプログラム。Python や C# などのプログラミング言語で実装します。メイン エントリ ポイントとして機能し、Q# 操作を呼び出して量子アルゴリズムを実行します。
+1. 一連の量子アルゴリズム。Q# 量子プログラミング言語を使用して実装します。
+1. Python または C# で実装するホスト プログラム。メイン エントリ ポイントとして機能し、Q# 操作を呼び出して量子アルゴリズムを実行します。
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
 
@@ -498,9 +497,8 @@ Init:One  0s=490  1s=510  agree=1000
 
 これで、最初の量子プログラムが作成できました。
 
-## <a name="whats-next"></a>次の操作
+## <a name="next-steps"></a>次のステップ
 
 [グローバーの検索](xref:microsoft.quantum.quickstarts.search)のチュートリアルでは、最も人気のある量子コンピューティング アルゴリズムの 1 つである、グローバーの検索をビルドして実行する方法を示しています。また、量子コンピューティングに関する実際の問題を解決するために使用できる Q# プログラムの優れた例を紹介しています。  
 
 「[Get Started with the Quantum Development Kit](xref:microsoft.quantum.welcome)」(Quantum Development Kit の概要) では、Q# と量子コンピューティングのその他の学習方法も紹介しています。
-
