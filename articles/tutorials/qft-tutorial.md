@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
-ms.openlocfilehash: f0b87936c9baf07555e76f295da58c0a6b9ecd17
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 05d3292e1c6e3c8c1163c460f2aaa51c591aa1d5
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84328597"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422242"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>チュートリアル: Q で qubit レベルのプログラムを記述してシミュレートする\#
 
@@ -386,7 +386,7 @@ Qubit が `2` "最も重要" であるということは、基本的な状態ベ
 * **`    ---`**: 振幅のフェーズをグラフィカルに表示します。
 * **`[ 0.0000 rad ]`**: フェーズの数値 (ラジアン)。
 
-大きさとフェーズの両方がグラフィック表示で表示されます。 大きさの表現は簡単です。の棒が表示され、 `*` 確率が高いほど、棒が大きくなります。 フェーズについては、[この](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions)後の「dumpmachine」セクションを参照してください。
+大きさとフェーズの両方がグラフィック表示で表示されます。 大きさの表現は簡単です。の棒が表示され、 `*` 確率が高いほど、棒が大きくなります。 フェーズについては、「[テストおよびデバッグ:](xref:microsoft.quantum.guide.testingdebugging#dump-functions)山の範囲に基づいて可能なシンボル表現のダンプ関数」を参照してください。
 
 
 そのため、この出力は、プログラミングされたゲートによって状態が変換されたことを示しています。

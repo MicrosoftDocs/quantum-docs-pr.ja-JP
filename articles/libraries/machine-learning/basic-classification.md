@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: ddd889fdfabb505d7118c1eff551a6fbfa757309
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327647"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422174"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>基本分類: QDK でデータを分類する
 
@@ -86,9 +86,9 @@ ms.locfileid: "84327647"
 上記のコードで定義されている最も重要な関数と操作は次のとおりです。
 
 - `ClassifierStructure() : ControlledRotation[]`: この関数では、考慮する制御ゲートのレイヤーを追加することによって、サーキットモデルの構造を設定します。 この手順は、シーケンシャルなディープラーニングモデルでのニューロンのレイヤーの宣言に似ています。
-- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`: この操作はコードの中核となる部分で、トレーニングを定義します。 ここでは、ライブラリに含まれるデータセットからサンプルを読み込みます。ここでは、トレーニングのハイパーパラメーターと初期パラメーターを設定し、ライブラリに含まれる操作を呼び出してトレーニングを開始し `TrainSequentialClassifier` ます。 パラメーターと、分類子を決定するバイアスを出力します。
+- `TrainHalfMoonModel() : (Double[], Double)`: この操作はコードの中核となる部分で、トレーニングを定義します。 ここでは、ライブラリに含まれるデータセットからサンプルを読み込みます。ここでは、トレーニングのハイパーパラメーターと初期パラメーターを設定し、ライブラリに含まれる操作を呼び出してトレーニングを開始し `TrainSequentialClassifier` ます。 パラメーターと、分類子を決定するバイアスを出力します。
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: この操作では、モデルを評価するための検証プロセスを定義します。 ここでは、検証用のサンプル、サンプルごとの測定数、および許容範囲を読み込みます。 検証用に選択されたサンプルのバッチに誤分類の数が出力されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 まず、コードを使用して再生し、いくつかのパラメーターを変更してトレーニングにどのように影響するかを確認することができます。 次のチュートリアル「[独自の分類子の設計](xref:microsoft.quantum.libraries.machine-learning.design)」では、分類子の構造を定義する方法を学習します。
