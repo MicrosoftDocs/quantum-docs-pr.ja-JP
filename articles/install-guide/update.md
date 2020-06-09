@@ -7,12 +7,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 3245f587493ce12cfec15c8f932fd092d85f688e
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 89db1a671767b0cc083a251918bbeeed2b39b883
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327572"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578183"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum Development Kit の更新 (QDK)
 
@@ -175,7 +175,7 @@ QDK を更新するプロセスは、開発言語と環境によって異なり�
 
     次の出力が表示されます。
 
-    ```bash
+    ```
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
@@ -184,19 +184,19 @@ QDK を更新するプロセスは、開発言語と環境によって異なり�
 
 3. パッケージを更新する `qsharp`
 
-    ```bash
+    ```
     pip install qsharp --upgrade
     ```
 
 4. バージョンを確認する `qsharp`
 
-    ```bash
+    ```
     pip show qsharp
     ```
 
     次の出力が表示されます。
 
-    ```bash
+    ```
     Name: qsharp
     Version: 0.10.1912.501
     Summary: Python client for Q#, a domain-specific quantum programming language
@@ -205,7 +205,7 @@ QDK を更新するプロセスは、開発言語と環境によって異なり�
 
 5. ファイルの場所から次のコマンドを実行します。 `.qs`
 
-    ```bash
+    ```
     python -c "import qsharp; qsharp.reload()"
     ```
 
@@ -228,7 +228,7 @@ QDK を更新するプロセスは、開発言語と環境によって異なり�
 
     出力は次のようになります。
 
-    ```bash
+    ```
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```

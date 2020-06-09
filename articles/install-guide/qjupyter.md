@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 0c4dc856c94b0a694fb99607eda64cec4d5c221d
-ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
+ms.openlocfilehash: 9117794d6cf6f05fa34e05c21fad8977d0e76505
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83660760"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84577822"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Q# 用の Jupyter Notebook を使用した開発
 
@@ -32,7 +32,7 @@ IQ# (発音: アイ キュー シャープ) は主に Jupyter と Python で .NE
 
 1. `iqsharp` パッケージのインストール
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -41,7 +41,7 @@ IQ# (発音: アイ キュー シャープ) は主に Jupyter と Python で .NE
 
     - 次のコマンドを実行して、Notebook サーバーを起動します。
 
-        ```bash
+        ```
         jupyter notebook
         ```
 
@@ -68,7 +68,7 @@ IQ# (発音: アイ キュー シャープ) は主に Jupyter と Python で .NE
 
         画面には、呼び出された操作の結果と共に、メッセージが出力されます (ここでは、操作が単純に型を返すため、空のタプルが表示されて `()` `Unit` います)。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Q # Jupyter Notebook 用の QDK をインストールしたので、Jupyter Notebook 環境内で直接 Q # コードを記述して、[最初のクォンタムプログラム](xref:microsoft.quantum.quickstarts.qrng)を作成して実行できます。
 

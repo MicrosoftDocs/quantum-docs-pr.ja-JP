@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 35499daae0cd0ae329e39b43b0d8dd5a00183871
-ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
+ms.openlocfilehash: f18d005012dc1c52aab456f1c7b194d182cab786
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83660733"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578166"
 ---
 # <a name="develop-with-q-and-python"></a>Q # と Python を使用した開発
 
@@ -26,13 +26,13 @@ QDK をインストールして、Q # 操作を呼び出す Python ホストプ�
 
 1. パッケージをインストールします。これは、 `qsharp` Q # と python の間の相互運用を可能にする python パッケージです。
 
-    ```bash
+    ```
     pip install qsharp
     ```
 
 1. Jupyter および Python で使用されるカーネルである IQ # をインストールします。これは、Q # 操作をコンパイルおよび実行するためのコア機能を提供します。
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -69,20 +69,20 @@ QDK をインストールして、Q # 操作を呼び出す Python ホストプ�
 
     - 以下のプログラムを実行します。
 
-        ```bash
+        ```
         python hello_world.py
         ```
 
     - 出力を検証します。 プログラムから次の行が出力されます。
 
-        ```bash
+        ```
         Hello from quantum world!
-       ```
+        ```
 
 
 > [!NOTE]
 > * Python Jupyter notebook を使用して、従来の Python プログラムを作成し、そのセルから Q # 操作を呼び出すこともできます。 Python コードは、通常の Python プログラムにすぎません。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 これで、使用している環境に Quantum Development Kit がインストールされたので、[最初の量子プログラム](xref:microsoft.quantum.quickstarts.qrng)を作成して実行することができます。

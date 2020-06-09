@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 8019b32a3290e2d45124ebb1eb75395f6cb758db
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 8af8e3288aab731520ede984d5f89644de292385
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327528"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578213"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>開発環境で Q # プロジェクトを作成する
 
@@ -36,7 +36,7 @@ Q # プロジェクトには、クォンタムコードを含む Q # ファイ�
 
 1. プロジェクトのフォルダーを作成し、そのフォルダーに移動します。
 
-1. という名前の Q # ファイルを作成 `Operation.qs` し、そのファイルに q # コードを追加します。 例:
+1. という名前の Q # ファイルを作成 `Operation.qs` し、そのファイルに q # コードを追加します。 次に例を示します。
 
     ```qsharp
     namespace HelloWorld {
@@ -50,7 +50,7 @@ Q # プロジェクトには、クォンタムコードを含む Q # ファイ�
     }
     ```
 
-1. という名前の python ホストファイルを作成し、 `host.py` Q # 操作を呼び出します。 例:
+1. という名前の python ホストファイルを作成し、 `host.py` Q # 操作を呼び出します。 次に例を示します。
 
     ```python
     import qsharp
@@ -62,13 +62,13 @@ Q # プロジェクトには、クォンタムコードを含む Q # ファイ�
 
 1. 以下のプログラムを実行します。
 
-    ```bash
+    ```
     python host.py
     ```
 
 1. 出力を検証します。 プログラムから次の行が出力されます。
 
-    ```bash
+    ```
     Hello from quantum world!
     0
     ```
@@ -83,7 +83,7 @@ Q # プロジェクトには、クォンタムコードを含む Q # ファイ�
 
 1. 次のコマンドを実行して、Notebook サーバーを起動します。
 
-    ```bash
+    ```
     jupyter notebook
     ```
 
@@ -179,7 +179,7 @@ Visual Studio Code を使用して、quantum の開発を続けることがで�
 
 1. 新しいアプリケーション ディレクトリに移動します。
 
-    ```bash
+    ```
     cd <project name>
     ```
 
