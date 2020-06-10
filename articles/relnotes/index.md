@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 9a54c1d7a4403a98f945181fdad8ba8a7fdb1175
-ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
+ms.openlocfilehash: 6b24ebe9f0b5fd3318e8adfe1a62bafaf9d1961e
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84422225"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578136"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -25,6 +25,12 @@ ms.locfileid: "84422225"
 
 *リリース日:2020 年 6 月 4 日*
 
+このリリースでは、Q# プロジェクトのコンパイルに影響するバグが修正されます。
+
+## <a name="version-0112006207"></a>バージョン 0.11.2006.207
+
+*リリース日:2020 年 6 月 3 日*
+
 このリリースには、次のものが含まれています。
 
 - Q# エントリ ポイントが存在する場合、Q# のノートブックと Python ホスト プログラムは失敗しなくなります。
@@ -33,6 +39,9 @@ ms.locfileid: "84422225"
 - [API の原則](xref:microsoft.quantum.contributing.api-design)で説明されているスケジュールに従って、いくつかの非推奨の関数と操作が削除されています。 バージョン 0.11.2004.2825 で警告なしでビルドされる Q# プログラムとライブラリは、変更なしで動作し続けます。
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、[IQ#s](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) について、クローズされた PR の完全な一覧を参照してください。  
+
+> [!NOTE]
+> このバージョンには、Q# プロジェクトのコンパイルに影響するバグが含まれています。 新しいリリースにアップグレードすることをお勧めします。
 
 ## <a name="version-01120042825"></a>バージョン 0.11.2004.2825
 
