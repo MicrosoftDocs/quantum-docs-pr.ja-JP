@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: f18d005012dc1c52aab456f1c7b194d182cab786
-ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
+ms.openlocfilehash: 1ae208e7047cb040fb44945a59c3cc6508a09723
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578166"
+ms.locfileid: "84630281"
 ---
 # <a name="develop-with-q-and-python"></a>Q # と Python を使用した開発
 
@@ -36,6 +36,15 @@ QDK をインストールして、Q # 操作を呼び出す Python ホストプ�
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
+
+    > [!NOTE]
+    > 手順の実行中にエラーが発生した場合は `dotnet iqsharp install` 、新しいターミナルウィンドウを開いて、もう一度やり直してください。
+    > それでも問題が解決しない場合は、インストールされている `dotnet-iqsharp` ツール (Windows の場合) を見つけて、次を実行してみてください `dotnet-iqsharp.exe` 。
+    > ```
+    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+    > ```
+    > は、 `/path/to/dotnet-iqsharp` `dotnet-iqsharp` ファイルシステム内のツールへの絶対パスに置き換える必要があります。
+    > 通常、これは `.dotnet/tools` ユーザープロファイルフォルダー内にあります。
   
 1. 任意の IDE で Q # と Python を使用できますが、Q # + Python アプリケーションには Visual Studio Code (VS Code) IDE を使用することを強くお勧めします。 Visual Studio Code と QDK Visual Studio Code 拡張機能を使用すると、豊富な機能にアクセスできます。
 
@@ -83,6 +92,6 @@ QDK をインストールして、Q # 操作を呼び出す Python ホストプ�
 > [!NOTE]
 > * Python Jupyter notebook を使用して、従来の Python プログラムを作成し、そのセルから Q # 操作を呼び出すこともできます。 Python コードは、通常の Python プログラムにすぎません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これで、使用している環境に Quantum Development Kit がインストールされたので、[最初の量子プログラム](xref:microsoft.quantum.quickstarts.qrng)を作成して実行することができます。

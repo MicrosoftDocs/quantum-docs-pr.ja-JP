@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: 9e924b973c4f22a59dd862df3f4f0d70278a1b4e
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 6cfc1b14d86e86a1cbf0109d5e81dfe50c3a80bf
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327800"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630208"
 ---
 # <a name="operations-and-functions-in-q"></a>Q の操作と関数#
 
@@ -151,7 +151,7 @@ Adjoint ファンクタは、独自の逆になります。つまり、 `Adjoint
 
 ### <a name="implicitly-specifying-implementations"></a>暗黙的な実装の指定
 
-この場合、操作宣言の本体は、既定の実装だけで構成されます。 例:
+この場合、操作宣言の本体は、既定の実装だけで構成されます。 次に例を示します。
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -231,7 +231,7 @@ Q # 操作には、次の明示的特殊化宣言を含めることができま�
 引数リストでは、 `...` は、操作全体に対して宣言された引数を表すために使用されます。
 とでは、 `body` `adjoint` 引数リストは常にである必要があります `(...)` 。 `controlled` と `adjoint controlled` では、引数リストは、コントロール qubits の配列を表す記号であり、の後に `...` かっこで囲まれたを使用する必要があります (例:) `(controls,...)` 。
 
-### <a name="examples"></a>例
+### <a name="examples"></a>使用例
 
 操作の宣言は、次のように単純なものにすることができます。これにより、プリミティブな P# li X 操作が定義されます。
 
@@ -273,7 +273,7 @@ is Ctl + Adj {
         CNOT(here, there);
     }
 
-    controlled (cs, ...) { // user defined implementation for the controlled specialization
+    controlled (cs, ...) { // user-defined implementation for the controlled specialization
         Controlled H(cs, here);
         Controlled X(cs + [here], there);
     }
@@ -426,7 +426,7 @@ function Square(x : Double) : (Double) {
 }
 ```
 
-または 
+or 
 
 ```qsharp
 function DotProduct(a : Double[], b : Double[]) : Double {
@@ -670,6 +670,6 @@ Q # callables は、直接的または間接的に再帰的に許可されてい
 - 実際のクォンタムデバイスで実行すると、スタック領域が制限される可能性があるため、詳細な再帰によって実行時エラーが発生する可能性があります。
   特に、Q # コンパイラとランタイムは、末尾の再帰を識別して最適化しません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Q # の[変数](xref:microsoft.quantum.guide.variables)について説明します。

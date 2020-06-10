@@ -6,19 +6,19 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 01d242ed405bdd326f65e534f82ff378a464ee7d
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426873"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630131"
 ---
 # <a name="the-resources-estimator-target-machine"></a>リソース推定対象コンピューター
 
 この名前が示すように、は、 `ResourcesEstimator` クォンタムコンピューターで Q # 操作の特定のインスタンスを実行するために必要なリソースを見積もります。
 これを実現するには、実際にクォンタムコンピューターの状態をシミュレートせずに、クォンタム操作を実行します。このため、コードの古典的な部分を妥当な時間内に実行できる場合は、数千の qubits を使用する Q # 操作のリソースを見積もることができます。
 
-## <a name="usage"></a>使用方法
+## <a name="usage"></a>使用法
 
 `ResourcesEstimator`は別の種類のターゲットコンピューターであるため、任意の Q # 操作を実行するために使用できます。 
 
@@ -105,7 +105,7 @@ namespace Quantum.MyProgram
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>測定結果の確率を指定する
 
-<xref:microsoft.quantum.intrinsic.assertprob>名前空間からは、 <xref:microsoft.quantum.intrinsic> Q # プログラムの実行を促進するために、測定の予想される確率に関する情報を提供するために使用できます。 次に例を示します。
+<xref:microsoft.quantum.intrinsic.assertprob>名前空間からは、 <xref:microsoft.quantum.intrinsic> Q # プログラムの実行を促進するために、測定の予想される確率に関する情報を提供するために使用できます。 次の例を使って説明します。
 
 ```qsharp
 operation Teleport(source : Qubit, target : Qubit) : Unit {

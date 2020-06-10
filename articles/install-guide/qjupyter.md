@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 9117794d6cf6f05fa34e05c21fad8977d0e76505
-ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
+ms.openlocfilehash: b80d95a160b5f46c1132d3428ba32ad6dcd5656e
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/09/2020
-ms.locfileid: "84577822"
+ms.locfileid: "84630330"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Q# 用の Jupyter Notebook を使用した開発
 
@@ -36,6 +36,15 @@ IQ# (発音: アイ キュー シャープ) は主に Jupyter と Python で .NE
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
+
+    > [!NOTE]
+    > 手順の実行中にエラーが発生した場合は `dotnet iqsharp install` 、新しいターミナルウィンドウを開いて、もう一度やり直してください。
+    > それでも問題が解決しない場合は、インストールされている `dotnet-iqsharp` ツール (Windows の場合) を見つけて、次を実行してみてください `dotnet-iqsharp.exe` 。
+    > ```
+    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+    > ```
+    > は、 `/path/to/dotnet-iqsharp` `dotnet-iqsharp` ファイルシステム内のツールへの絶対パスに置き換える必要があります。
+    > 通常、これは `.dotnet/tools` ユーザープロファイルフォルダー内にあります。
 
 1. `Hello World` アプリケーションを作成してインストールを確認する
 
@@ -68,7 +77,7 @@ IQ# (発音: アイ キュー シャープ) は主に Jupyter と Python で .NE
 
         画面には、呼び出された操作の結果と共に、メッセージが出力されます (ここでは、操作が単純に型を返すため、空のタプルが表示されて `()` `Unit` います)。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Q # Jupyter Notebook 用の QDK をインストールしたので、Jupyter Notebook 環境内で直接 Q # コードを記述して、[最初のクォンタムプログラム](xref:microsoft.quantum.quickstarts.qrng)を作成して実行できます。
 

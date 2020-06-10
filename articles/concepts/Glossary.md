@@ -6,18 +6,89 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: 042e4e27ef4e42cfc0c24fbb0ae2232cf1bbfe36
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- $
+- $
+- '\cdots'
+- bmatrix
+- '\ddots'
+- '\equiv'
+- '\sum'
+- '\begin'
+- '\end'
+- '\sqrt'
+- '\otimes'
+- '{'
+- '}'
+- '\text'
+- '\phi'
+- '\kappa'
+- '\psi'
+- '\alpha'
+- '\beta'
+- '\gamma'
+- '\delta'
+- '\omega'
+- '\bra'
+- '\ket'
+- '\boldone'
+- '\\\\'
+- '\\'
+- =
+- '\frac'
+- '\text'
+- '\mapsto'
+- '\dagger'
+- '\to'
+- "\begin{cases}"
+- "\end{cases}"
+- '\operatorname'
+- '\braket'
+- '\id'
+- '\expect'
+- '\defeq'
+- '\variance'
+- '\dd'
+- '&'
+- "\begin{align}"
+- "\end{align}"
+- '\Lambda'
+- '\lambda'
+- '\Omega'
+- '\mathrm'
+- '\left'
+- '\right'
+- '\qquad'
+- '\times'
+- '\big'
+- '\langle'
+- '\rangle'
+- '\bigg'
+- '\Big'
+- '|'
+- '\mathbb'
+- '\vec'
+- '\in'
+- '\texttt'
+- '\ne'
+- <
+- '>'
+- '\leq'
+- '\geq'
+- ~~
+- "~"
+ms.openlocfilehash: 2a3b1fe480b9886d0c11255bb1b1e01402dce4f7
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327613"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630105"
 ---
 # <a name="quantum-computing-glossary"></a>クォンタムコンピューティング用語集
 
 ## <a name="adjoint"></a>Adjoint
 
-[操作](xref:microsoft.quantum.glossary#operation)の複素共役転置。 [ユニタリ](xref:microsoft.quantum.glossary#unitary-operator)演算子を実装する操作の場合、adjoint は演算の逆であり、ダガー記号によって示されます。 たとえば、操作が $U $ という単位の単位を表している場合、は `U` `Adjoint U` $U ^ \ ダガー $ を表します。 詳細については、「 [Adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)」を参照してください。
+[操作](xref:microsoft.quantum.glossary#operation)の複素共役転置。 [ユニタリ](xref:microsoft.quantum.glossary#unitary-operator)演算子を実装する操作の場合、adjoint は演算の逆であり、ダガー記号によって示されます。 たとえば、操作が $U の中からの $U を表している場合、は "^" を `U` $ `Adjoint U` 表し $ ます。 詳細については、「 [Adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)」を参照してください。
 
 ## <a name="ancilla"></a>Ancilla
 
@@ -25,7 +96,7 @@ ms.locfileid: "84327613"
 
 ## <a name="bell-state"></a>ベルの状態
 
-2つの qubits の下回っ[あり](xref:microsoft.quantum.glossary#entanglement)の4つの[状態](xref:microsoft.quantum.glossary#quantum-state)のうちの1つ。 4つの状態は、$ \ket{\ beta_ {ij}} = (\mathbb{I}/otimes X ^ iZ ^ j) (\ket {00} + \ket {11} )/\ sqrt $ と定義されてい {2} ます。 ベルの状態は、 [EPR ペア](xref:microsoft.quantum.glossary#epr-pair)とも呼ばれます。
+2つの qubits の下回っ[あり](xref:microsoft.quantum.glossary#entanglement)の4つの[状態](xref:microsoft.quantum.glossary#quantum-state)のうちの1つ。 4つの状態は、$ \ket { \ beta_ {ij } } = (\mathbb{I/ } otimes X ^ iZ ^ j) (\ket{00 } + \ket{11 } )/\ sqrt{2 $ } と定義されています。 ベルの状態は、 [EPR ペア](xref:microsoft.quantum.glossary#epr-pair)とも呼ばれます。
 
 ## <a name="bloch-sphere"></a>Bloch 球
 
@@ -37,7 +108,7 @@ Q # 言語の[操作](xref:microsoft.quantum.glossary#operation)または[関数
 
 ## <a name="clifford-group"></a>Clifford グループ
 
-[Bloch 球](xref:microsoft.quantum.glossary#bloch-sphere)の octants と、 [p li 演算子](xref:microsoft.quantum.glossary#pauli-operators)の効果の順列を占有する操作のセット。 これには、操作[$X $](xref:microsoft.quantum.intrinsic.x)、 [$Y $](xref:microsoft.quantum.intrinsic.y)、 [$Z $](xref:microsoft.quantum.intrinsic.z)、 [$H $](xref:microsoft.quantum.intrinsic.h) 、 [$S $](xref:microsoft.quantum.intrinsic.s)が含まれます。
+[Bloch 球](xref:microsoft.quantum.glossary#bloch-sphere)の octants と、 [p li 演算子](xref:microsoft.quantum.glossary#pauli-operators)の効果の順列を占有する操作のセット。 これには、[操作 $ $X](xref:microsoft.quantum.intrinsic.x)、 [$Y $ ](xref:microsoft.quantum.intrinsic.y)、 [ $ $Z](xref:microsoft.quantum.intrinsic.z)、 [ $ $H](xref:microsoft.quantum.intrinsic.h)および[$S $ ](xref:microsoft.quantum.intrinsic.s)が含まれます。
 
 ## <a name="controlled"></a>た
 
@@ -45,15 +116,15 @@ Q # 言語の[操作](xref:microsoft.quantum.glossary#operation)または[関数
 
 ## <a name="dirac-notation"></a>Dirac 表記
 
-[クォンタムの状態](xref:microsoft.quantum.glossary#quantum-state)の表現を簡略化するシンボリックな略記 ( *bra k* notation とも呼ばれます)。  *Bra*部分は、行ベクトルを表します。たとえば、$ \begin{bmatrix} {_1} & {_2} \end{bmatrix} $、 *k*部分は列ベクター、$ \ket{B} = \begin{bmatrix} B {_1} \\ \\ B {_2} \end{bmatrix} $ を表します。 詳細については、「 [Dirac 表記](xref:microsoft.quantum.concepts.dirac)」を参照してください。
+[クォンタムの状態](xref:microsoft.quantum.glossary#quantum-state)の表現を簡略化するシンボリックな略記 ( *bra k* notation とも呼ばれます)。  *Bra*の部分は、行ベクトルを表します。たとえば、$ } _2 と a {_1 {a { bmatrix } _1 } & a { } \ end{ bmatrix } $ と*k*部分は、列ベクター $ \ket{B } = \ begin{ bmatrix } B {_1 } \\ \\ B {_2/ } end{$ を表し bmatrix } ます。 詳細については、「 [Dirac 表記](xref:microsoft.quantum.concepts.dirac)」を参照してください。
 
 ## <a name="eigenvalue"></a>Eigenvalue
 
-変換の適用によって、特定の変換の[eigenvector](xref:microsoft.quantum.glossary#eigenvector)の大きさが変更される要因。  正方形の行列 $M $ と eigenvector $v $ の場合、$Mv = cv $ です。ここで、$c $ は eigenvalue で、任意の数の引数を指定できます。 詳細については、「[高度なマトリックスの概念](xref:microsoft.quantum.concepts.matrix-advanced)」を参照してください。
+変換の適用によって、特定の変換の[eigenvector](xref:microsoft.quantum.glossary#eigenvector)の大きさが変更される要因。  Square 行列 $M と eigenvector $v が指定され $ て $ いる場合、$Mv = cv $ になります。ここで $c $ は eigenvalue で、任意の引数の数を指定できます。 詳細については、「[高度なマトリックスの概念](xref:microsoft.quantum.concepts.matrix-advanced)」を参照してください。
 
 ## <a name="eigenvector"></a>Eigenvector
 
-指定された変換によって方向が変更されず、そのベクトルの[eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)に対応する係数によって大きさが変更されるベクトル。 正方形の行列 $M $ と eigenvalue $c $ の場合、$Mv = cv $ となります。ここで、$v $ はマトリックスの eigenvector であり、任意の数の引数を指定できます。 詳細については、「[高度なマトリックスの概念](xref:microsoft.quantum.concepts.matrix-advanced)」を参照してください。
+指定された変換によって方向が変更されず、そのベクトルの[eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)に対応する係数によって大きさが変更されるベクトル。 二乗行列 $M $ と eigenvalue $c を指定した $ 場合、$Mv = cv となります $ 。ここで $v $ はマトリックスの eigenvector であり、任意の数の引数を指定できます。 詳細については、「[高度なマトリックスの概念](xref:microsoft.quantum.concepts.matrix-advanced)」を参照してください。
 
 ## <a name="entanglement"></a>もつれ
 
@@ -61,13 +132,13 @@ Q # 言語の[操作](xref:microsoft.quantum.glossary#operation)または[関数
 
 ## <a name="epr-pair"></a>EPR ペア
 
-2つの[qubits](xref:microsoft.quantum.glossary#qubit)の下回っありの4つの[状態](xref:microsoft.quantum.glossary#quantum-state)のうちの1つ。 4つの状態は、$ \ket{\ beta_ {ij}} = (\mathbb/ {1} otimes X ^ iZ ^ j) (\ket {00} + \ket {11} )/\ sqrt $ と定義されてい {2} ます。 EPR ペアは[ベル状態](xref:microsoft.quantum.glossary#bell-state)とも呼ばれます。
+2つの[qubits](xref:microsoft.quantum.glossary#qubit)の下回っありの4つの[状態](xref:microsoft.quantum.glossary#quantum-state)のうちの1つ。 4つの状態は、$ \ket { \ beta_ {ij } } = (\mathbb{1/ } otimes X ^ iZ ^ j) (\ket{00 } + \ket{11 } )/\ sqrt{2 $ } と定義されています。 EPR ペアは[ベル状態](xref:microsoft.quantum.glossary#bell-state)とも呼ばれます。
 
 ## <a name="evolution"></a>発展
 
 クォンタムの[状態](xref:microsoft.quantum.glossary#quantum-state)が時間の経過と共にどのように変化するか。 詳細については、「 [Matrix 指数](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials)」を参照してください。
 
-## <a name="function"></a>機能
+## <a name="function"></a>関数
 純粋なクラシック (非クォンタム) の Q # 言語のサブルーチンの種類。 関数はクォンタムアルゴリズム内で使用されますが、 [qubits](xref:microsoft.quantum.glossary#qubit)または call[操作](xref:microsoft.quantum.glossary#operation)では動作しません。 詳細については、「[操作と関数](xref:microsoft.quantum.guide.operationsfunctions)」を参照してください。
 
 ## <a name="gate"></a>ゲートウェイ
@@ -76,11 +147,11 @@ Q # 言語の[操作](xref:microsoft.quantum.glossary#operation)または[関数
 
 ## <a name="global-phase"></a>グローバルフェーズ
 
-2つの[状態](xref:microsoft.quantum.glossary#quantum-state)が1つの複素数の倍数に等しい場合 $e ^ {i\ phi} $、グローバルフェーズが異なると言います。 ローカルフェーズとは異なり、グローバルフェーズはどの[measurment](xref:microsoft.quantum.glossary#measurement)でも観察できません。 詳細については、「 [Qubit](xref:microsoft.quantum.concepts.qubit)」を参照してください。
+2つの[状態](xref:microsoft.quantum.glossary#quantum-state)が1つの複素数の倍数に等しい場合 $e ^ {i \phi } $,、グローバルフェーズが異なると言います。 ローカルフェーズとは異なり、グローバルフェーズはどの[measurment](xref:microsoft.quantum.glossary#measurement)でも観察できません。 詳細については、「 [Qubit](xref:microsoft.quantum.concepts.qubit)」を参照してください。
 
 ## <a name="hadamard"></a>Hadamard
 
-Hadamard 操作 (Hadamard gate または transform とも呼ばれます) は、1つの[qubit](xref:microsoft.quantum.glossary#qubit)に作用し、 [superposition](xref:microsoft.quantum.glossary#superposition) {0} {1} qubit が最初に $ \ket $ 状態にある場合は、$ \ket $ または $ \ket $ の偶数法則に配置し {0} ます。 Q # では、この操作は定義済みの操作によって適用され [`H`](xref:microsoft.quantum.intrinsic.h) ます。
+Hadamard 操作 (Hadamard gate または transform とも呼ばれます) は、1つの[qubit](xref:microsoft.quantum.glossary#qubit)に作用し、 [superposition](xref:microsoft.quantum.glossary#superposition) } } qubit が最初に $ \ket{1 $ 状態にある場合は、$ \ket{0 $ または $ \ket{0 $ の偶数法則に配置し } ます。 Q # では、この操作は定義済みの操作によって適用され [`H`](xref:microsoft.quantum.intrinsic.h) ます。
 
 ## <a name="immutable"></a>変更不可
 
@@ -98,7 +169,7 @@ Hadamard 操作 (Hadamard gate または transform とも呼ばれます) は、
 
 関連する名前 (つまり、[操作](xref:microsoft.quantum.glossary#operation)、[関数](xref:microsoft.quantum.glossary#function)、および[ユーザー定義型](xref:microsoft.quantum.glossary#user-defined-type)) のコレクションのラベル。 たとえば、名前空間は、初期状態の準備に役立つ標準ライブラリで定義されているすべてのシンボルをラベル[付けします](xref:microsoft.quantum.preparation)。
 
-## <a name="operation"></a>Operation
+## <a name="operation"></a>操作
 
 Q # でのクォンタム実行の基本単位。 これは、C、C++、または Python の関数、または C# または Java の静的メソッドとほぼ同じです。 詳細については、「[操作と関数](xref:microsoft.quantum.guide.operationsfunctions)」を参照してください。
 
@@ -116,7 +187,7 @@ Q # でのクォンタム実行の基本単位。 これは、C、C++、また�
 
 ## <a name="pauli-operators"></a>P# li 演算子
 
-`X`、、 `Y` およびクォンタム操作として知られる3つの 2 x 2 つのユニタリ行列のセット `Z` 。 Id 行列 ($I $) も、多くの場合、セットに含まれています。  $I = \begin{bmatrix} 1 & 0 \\ \\ 0 & 1 \end{bmatrix} $、$X = \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \end{bmatrix} $、$Y = \begin{bmatrix} 0 &-i \\ \\ i & 0 \end{bmatrix} $、$Z = \begin{bmatrix} 1 & 0 \\ \\ 0 &-1 \end{bmatrix} $。   詳細については、「 [Single qubit 操作](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)」を参照してください。
+`X`、、 `Y` およびクォンタム操作として知られる3つの 2 x 2 つのユニタリ行列のセット `Z` 。 多くの場合、$I の id 行列 $ もセットに含まれています。  $I = \ begin{ bmatrix } 1 & 0 \\ \\ 0 & 1 & end{ bmatrix } $, $X = \ begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \ end{ bmatrix } $, $Y = \ begin{ bmatrix } 0 &-i \\ \\ i & 0 \ end{ bmatrix } $, $Z = \ begin{ bmatrix } 1 & 0 \\ \\ 0 &-1 \ end{ bmatrix } $。   詳細については、「 [Single qubit 操作](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)」を参照してください。
 
 ## <a name="quantum-circuit-diagram"></a>クォンタム回線の図
 
@@ -148,7 +219,7 @@ Q # プログラムを作成するための[操作](xref:microsoft.quantum.gloss
 
 ## <a name="superposition"></a>法則
 
-量子コンピューティングの概念は、 [qubit](xref:microsoft.quantum.glossary#qubit)が測定されるまでの2つの状態 ($ \ket {0} $ と $ \ket {1} $) の[measured](xref:microsoft.quantum.glossary#measurement)線形組み合わせです。  詳細については、「[クォンタムコンピューティングについ](xref:microsoft.quantum.overview.understanding)て」を参照してください。
+量子コンピューティングの概念は、 [qubit](xref:microsoft.quantum.glossary#qubit)が測定されるまでの2つの状態 ($ \ket{0 } $ と $ \ket{1 } $) の[measured](xref:microsoft.quantum.glossary#measurement)線形組み合わせです。  詳細については、「[クォンタムコンピューティングについ](xref:microsoft.quantum.overview.understanding)て」を参照してください。
 
 ## <a name="target-machine"></a>ターゲットコンピューター
 
@@ -164,7 +235,7 @@ Q # プログラムを作成するための[操作](xref:microsoft.quantum.gloss
 
 ## <a name="unitary-operator"></a>ユニタリ演算子
 
-逆数が[adjoint](xref:microsoft.quantum.glossary#adjoint)と等しい (つまり、$UU ^ {-dagger} = \ id $ である) 演算子。
+逆数が[adjoint](xref:microsoft.quantum.glossary#adjoint)と等しい (つまり、$UU ^ {\ ダガー } = \ id である) $ 演算子。
 
 ## <a name="user-defined-type"></a>ユーザー定義型
 

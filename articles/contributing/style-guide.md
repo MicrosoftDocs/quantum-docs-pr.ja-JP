@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: dfb2b1779e3ddc77fc74697bc4dc2904b1a0c70f
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 948b385948f0b362e7c12500662132883959a798
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426919"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630228"
 ---
 # <a name="q-style-guide"></a>Q # スタイルガイド #
 ## <a name="general-conventions"></a>一般規則 ##
@@ -235,7 +235,7 @@ Q # は厳密かつ厳密に型指定された言語であるため、1つの型
 この制限は、Q # の将来のバージョンでは保持されない場合がありますが、現在のところ、関連する操作のグループ、またはその入力がサポートしている機能や、引数の具象型によって区別される関数のグループが存在することがあります。
 これらのグループは、同じルート名を使用し、そのバリアントを示す 1 ~ 2 文字で区別できます。
 
-| サフィックス | 説明 |
+| サフィックス | 意味 |
 |--------|---------|
 | `A` | サポートが必要な入力`Adjoint` |
 | `C` | サポートが必要な入力`Controlled` |
@@ -374,7 +374,7 @@ Quantum Development Kit に用意されているコンパイラは、これら�
 
 - 各パブリック関数、操作、およびユーザー定義型は、ドキュメントコメントの直前に記述する必要があります。
 - 各ドキュメントコメントには、少なくとも次のセクションが含まれている必要があります。
-    - 要約
+    - まとめ
     - 入力
     - 出力 (該当する場合)
 - すべての概要が2文以下であることを確認します。 より多くの領域が必要な場合は、 `# Description` 完全な詳細を含むセクションを入力し `# Summary` ます。

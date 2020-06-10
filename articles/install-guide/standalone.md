@@ -6,18 +6,18 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: e829862521951c50cb42eebf261c803071a95275
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4311ebf9f72254485a20ba721ea2ce19163f4371
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426433"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630274"
 ---
 # <a name="develop-with-q-command-line-applications"></a>Q # コマンドラインアプリケーションを使用した開発
 
 Q # プログラムは、C#、F #、Python などのホスト言語でドライバーを使用しなくても、独自に実行できます。
 
-## <a name="pre-requisites"></a>前提条件
+## <a name="prerequisites"></a>前提条件
 
 - [.NET Core SDK 3.1 以降](https://www.microsoft.com/net/download)
 
@@ -84,6 +84,6 @@ Q # アプリケーションを作成して、Visual Studio のインストー�
 > 1つの Visual Studio ソリューション内に複数のプロジェクトがある場合、ソリューションに含まれるすべてのプロジェクトは、ソリューションと同じフォルダー、またはそのサブフォルダーの1つに存在する必要があります。  
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これで、使用している環境に Quantum Development Kit がインストールされたので、[最初の量子プログラム](xref:microsoft.quantum.quickstarts.qrng)を作成して実行することができます。

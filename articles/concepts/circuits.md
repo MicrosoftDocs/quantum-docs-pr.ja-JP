@@ -6,18 +6,89 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 43f14d67db76dabda34bf881ccbfae0bfd1784ff
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- $
+- $
+- '\cdots'
+- bmatrix
+- '\ddots'
+- '\equiv'
+- '\sum'
+- '\begin'
+- '\end'
+- '\sqrt'
+- '\otimes'
+- '{'
+- '}'
+- '\text'
+- '\phi'
+- '\kappa'
+- '\psi'
+- '\alpha'
+- '\beta'
+- '\gamma'
+- '\delta'
+- '\omega'
+- '\bra'
+- '\ket'
+- '\boldone'
+- '\\\\'
+- '\\'
+- =
+- '\frac'
+- '\text'
+- '\mapsto'
+- '\dagger'
+- '\to'
+- "\begin{cases}"
+- "\end{cases}"
+- '\operatorname'
+- '\braket'
+- '\id'
+- '\expect'
+- '\defeq'
+- '\variance'
+- '\dd'
+- '&'
+- "\begin{align}"
+- "\end{align}"
+- '\Lambda'
+- '\lambda'
+- '\Omega'
+- '\mathrm'
+- '\left'
+- '\right'
+- '\qquad'
+- '\times'
+- '\big'
+- '\langle'
+- '\rangle'
+- '\bigg'
+- '\Big'
+- '|'
+- '\mathbb'
+- '\vec'
+- '\in'
+- '\texttt'
+- '\ne'
+- <
+- '>'
+- '\leq'
+- '\geq'
+- ~~
+- "~"
+ms.openlocfilehash: 745f0570bf62c5d98c2896cdc893ec385abd7115
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426623"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630405"
 ---
 # <a name="quantum-circuits"></a>クォンタム回線
-ここでは、ユニタリ変換 $ \ text{CNOT} _ {01} (hotimes 1) $ という点を考慮してください。
+ここでは、ユニタリ変換 $ \ text { cnot} _ {01 } (H \otimes 1) $ という点を考慮してください。
 このゲートシーケンスは、下回っありの2つのビット状態を作成するので、クォンタムコンピューティングにとって基本的な意味を持ちます。
 
-$ $ \mathrm{CNOT}_ {01} (H-otimes 1) \ket {00} = \ frac {1} {\ sqrt {2} } \ left (\ket {00} + \ket {11} ), $ $
+$ $ \mathrm{CNOT}_{01 } (H \otimes 1) \ket{00 } = \frac{1 } {\ sqrt{2 } } \ left (\ket{00 } + \ket{11 } /right), $ $
 
 このような複雑さを持つ操作は、クォンタムアルゴリズムとクォンタムエラー修正で広く普及しています。そのため、*量子回線図*と呼ばれるシンプルな方法で視覚化を行うことができます。
 この下回っありのクォンタム状態を準備するためのサーキット図は次のとおりです。
@@ -31,7 +102,7 @@ $ $ \mathrm{CNOT}_ {01} (H-otimes 1) \ket {00} = \ frac {1} {\ sqrt {2} } \ left
 以下の規則を確認します。
 
 回路図では、各実線は qubit レジスタを表しています。
-慣例として、一番上の行は qubit レジスタ $0 $ で、残りは順番にラベル付けされます。 上の例の回線は、2つの qubits (または1つの qubits で構成される2つのレジスタ) で動作しているように表されています。
+慣例として、一番上の行は qubit レジスタ $0 であり、 $ 余りには順番にラベルが付けられています。 上の例の回線は、2つの qubits (または1つの qubits で構成される2つのレジスタ) で動作しているように表されています。
 1つ以上の qubit レジスタに作用するゲートは、ボックスとして示されます。
 たとえば、シンボルは
 
@@ -49,7 +120,7 @@ $ $ \mathrm{CNOT}_ {01} (H-otimes 1) \ket {00} = \ frac {1} {\ sqrt {2} } \ left
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![左から右に適用されているクォンタムゲートの図](~/media/3.svg)
 
-は、$CBA が $ であることを示します。
+は、$CBA のユニタリ行列です $ 。
 行列乗算は反対の規則に従います。最初に右端の行列が適用されます。 ただし、量子回線図では、最初に一番左のゲートが適用されます。
 この違いによって混乱が生じる可能性があるため、線形代数の図と量子回線の図の大きな違いに注意することが重要です。
 
@@ -61,27 +132,27 @@ $ $ \mathrm{CNOT}_ {01} (H-otimes 1) \ket {00} = \ frac {1} {\ sqrt {2} } \ left
 このため、サーキット図に描画されるすべてのボックスには、それを終了するときとまったく同じ数のワイヤを入力する必要があります。
 
 マルチ qubit 回路図は、単 qubit と同様の規則に従います。
-明確な例として、$ を $ (H & otimes X) $ に $B、2つの qubit のを定義し、次のように回線を表現することができます。
+明確な例として、2つの qubit の $B を定義して、$ $ (H S \otimes X) $ と同等の回線を表現することができます。
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![2つの qubit のユニタリ操作のサーキットダイアグラム](~/media/4.svg)
 
-また、回線が使用されているコンテキストに応じて、2 1-qubit レジスタではなく、1つの2つの2つのビットレジスタに対するアクションを持つ $B $ を表示することもできます。 このような抽象回路図の中で最も役に立つのは、複雑なクォンタムアルゴリズムを高いレベルで記述し、基本ゲートにコンパイルする必要がない場合などです。
+また、 $ 回線が使用されているコンテキストに応じて、2 1-qubit レジスタではなく、1つの2つの qubit レジスタに対するアクションを持つ $B を表示することもできます。 このような抽象回路図の中で最も役に立つのは、複雑なクォンタムアルゴリズムを高いレベルで記述し、基本ゲートにコンパイルする必要がない場合などです。
 これは、アルゴリズム内の各サブルーチンがどのように機能するかについてすべての詳細を理解しなくても、大規模なクォンタムアルゴリズムのデータフローに関する直感を取得できることを意味します。
 
 ## <a name="controlled-gates"></a>制御ゲート
 マルチ qubit クォンタム回路図に組み込まれているもう1つのコンストラクトは制御です。
-クォンタム片制御ゲートのアクション ($-ラムダ (G) $) を示します。ここでは、1つの qubit の値が $G $ のアプリケーションを制御します。この例では、製品状態入力 $-ラムダ (G) (\ alpha \ket {0} + \ket {1} ) \ket{\psi} = \ alpha \ket {0} \ket{\psi} + \ beta \ket {1} G\ket {\ psi} $ の例を
-つまり、制御されたゲートが $ \ psi $ を含むレジスタに $ $G を適用するのは、コントロールの qubit が値 $1 $ を受け取る場合のみです。
+クォンタム片制御ゲートのアクション。 $-ラムダ (G) $ が示されています。ここでは、1つの qubit の値が $G のアプリケーションを制御し $ ています。この例では、製品状態入力 $-ラムダ (g) (\ alpha \ket{0 } + \ket{1 } ) \ket/ { psi } =-alpha \ket{0 } \ket { } } \ket { }
+つまり、制御されたゲートが $ \ psi を含むレジスタに $G 適用されるのは、 $ $ コントロールの qubit が値 $1 を受け取る場合のみです $ 。
 一般に、このような制御された操作を回路図に記述します。
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![単一制御ゲートのサーキットダイアグラム](~/media/5.svg)
 
-ここで、黒い円はゲートが制御されているクォンタムビットを表し、垂直方向のワイヤは、コントロール qubit が値 $1 $ を受け取るときに適用されるユニタリを表します。
-$G = X $ および $G = Z $ の特殊なケースでは、ゲートの制御されたバージョンを記述するために次の表記が導入されます (制御された X ゲートは[$CNOT $ gate](xref:microsoft.quantum.intrinsic.cnot)であることに注意してください)。
+ここで、黒い円はゲートが制御されるクォンタムビットを表し、垂直方向のワイヤは、コントロール qubit が値 $1 を受け取るときに適用されるユニタリを表し $ ます。
+$G = X および $G = Z の特殊なケースでは、 $ $ ゲートの制御されたバージョンを記述するために次の表記を導入します (制御された X ゲートが[$CNOT $ ゲート](xref:microsoft.quantum.intrinsic.cnot)であることに注意してください)。
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -115,7 +186,7 @@ Q # この目的のために[メジャー演算子](xref:microsoft.quantum.intri
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![制御された操作を表す回路図](~/media/8.svg)
 
-クラシックデプロイ制御ゲートを提供します。 $G $ は、$1 $ という従来の制御ビットで条件付きで適用されます。
+クラシックデプロイ制御ゲートを提供します。 $G は、$1 の古典的な制御ビットで条件付きで適用され $ $ ます。
 
 ## <a name="teleportation-circuit-diagram"></a>受付回路の図
 クォンタムは、これらのコンポーネントを示す最良のクォンタムアルゴリズムであると考えられます。
