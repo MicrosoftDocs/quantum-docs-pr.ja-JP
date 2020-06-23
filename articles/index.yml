@@ -10,12 +10,12 @@ metadata:
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 5/10/2020
-  ms.openlocfilehash: e36a289f17d56a4a8edae71b9a3194a144767dd4
-  ms.sourcegitcommit: 4da99168479f96f408b984279a5a7eabcda752db
+  ms.openlocfilehash: 313ee49f4e6ad25e57c47a9d95a1617326af3bec
+  ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/20/2020
-  ms.locfileid: "83708703"
+  ms.lasthandoff: 06/23/2020
+  ms.locfileid: "85269526"
 landingContent:
 - title: 量子コンピューティング
   linkLists:
@@ -40,13 +40,13 @@ landingContent:
   - linkListType: get-started
     links:
     - text: Quantum 開発キット
-      url: welcome.md
+      url: quickstarts/get-started.md
   - linkListType: download
     links:
     - text: QDK をインストールする
-      url: install-guide/index.md
+      url: quickstarts/index.md
     - text: QDK を更新する
-      url: install-guide/update.md
+      url: quickstarts/update.md
 - title: Q# プログラミング言語
   linkLists:
   - linkListType: how-to-guide
@@ -54,19 +54,19 @@ landingContent:
     - text: Q# ユーザー ガイド
       url: user-guide/index.md
     - text: 量子シミュレーターとホスト アプリケーション
-      url: machines/index.md
+      url: user-guide/machines/index.md
   - linkListType: tutorial
     links:
     - text: 量子乱数ジェネレーターの作成
-      url: quickstarts/qrng.md
+      url: tutorials/quantum-random-number-generator.md
     - text: Q# でのエンタングルメントの確認
-      url: quickstart.md
+      url: tutorials/explore-entanglement.md
     - text: 量子加速:グローバーの検索アルゴリズム
-      url: quickstarts/search.md
+      url: tutorials/search.md
   - linkListType: learn
     links:
     - text: Quantum Katas による学習
-      url: intro-to-katas.md
+      url: tutorials/intro-to-katas.md
     - text: Q# コード サンプルの参照
       url: https://docs.microsoft.com/samples/browse/?languages=qsharp
 - title: コミュニティとコントリビューション
@@ -74,7 +74,7 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: QDK へコントリビュート
-      url: contributing/index.md
+      url: resources/contributing/index.md
     - text: Microsoft Quantum ブログを読む
       url: https://cloudblogs.microsoft.com/quantum
 - title: Q# ライブラリ
@@ -82,10 +82,10 @@ landingContent:
   - linkListType: reference
     links:
     - text: 標準ライブラリ
-      url: libraries/standard/index.md
+      url: user-guide/libraries/standard/index.md
     - text: 化学ライブラリ
-      url: libraries/chemistry/index.md
+      url: user-guide/libraries/chemistry/index.md
     - text: 機械学習ライブラリ
-      url: libraries/machine-learning/index.md
+      url: user-guide/libraries/machine-learning/index.md
     - text: 数値ライブラリ
-      url: libraries/numerics/index.md
+      url: user-guide/libraries/numerics/index.md
