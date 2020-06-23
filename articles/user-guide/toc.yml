@@ -1,12 +1,14 @@
 - name: 概要/内容
   href: index.md
-- name: 'Q# の基本'
+- name: Q# の基本
   href: basics.md
-- name: 'Q# 言語'
+- name: Q# 言語
   href: language/toc.yml
-- name: 'Q# を使用する'
+- name: Q# を使用する
   href: using-qsharp/toc.yml
 - name: シミュレーターとリソース エスティメーター
-  href: ../machines/toc.yml
+  href: machines/toc.yml
+- name: Q# ライブラリ
+  href: libraries/toc.yml
 - name: クイック リファレンス
   href: quickref/toc.yml

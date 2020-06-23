@@ -1,0 +1,22 @@
+- name: 準備
+  href: prelude.md
+- name: 従来型の計算
+  href: math.md
+- name: 型の変換
+  href: convert.md
+- name: 高次制御フロー
+  href: control-flow.md
+- name: データ構造とモデリング
+  href: data-structures.md
+- name: 量子アルゴリズム
+  href: algorithms.md
+- name: 診断
+  href: diagnostics.md
+- name: 特性評価
+  href: characterization.md
+- name: エラー修正
+  href: error-correction.md
+- name: アプリケーション
+  href: applications.md
+- name: OSS ライセンス
+  href: licensing.md

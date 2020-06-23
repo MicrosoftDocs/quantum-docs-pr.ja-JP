@@ -1,0 +1,10 @@
+- name: 深さのカウンター
+  href: depth-counter.md
+- name: 個別の入力チェッカー
+  href: distinct-inputs-checker.md
+- name: 無効な量子ビット使用チェッカー
+  href: invalidated-qubits-use-checker.md
+- name: プリミティブ操作カウンター
+  href: primitive-operations-counter.md
+- name: 幅のカウンター
+  href: width-counter.md

@@ -1,0 +1,9 @@
+- name: 用語集
+  href: glossary.md
+- name: QDK への貢献
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
+- name: QDK のリリース ノート
+  href: relnotes.md
+- name: 関連項目
+  href: further-reading.md
