@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 958910452109fc722999acddd70894c458e38357
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: f9dddfa25e9fd1e3d8aaf92b2e3b17c96ed8b72a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630380"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269508"
 ---
 # <a name="dirac-notation"></a>Dirac 表記
 
@@ -123,7 +130,7 @@ $$
 
 Dirac 表記の例として、$0 ~ $1 の内部積である braket $ \braket{0 | 1 $ について考えてみ } $ $ ます。  このファイルは、 
 
-$ $ \braket{0 | 1 } = \ begin{ bmatrix } 1 & 0 \ end{ bmatrix } \ begin{ bmatrix } 0 \\\\ 1 \end { bmatrix } = 0. $ $
+$ $ \braket{0 | 1 } = \ begin{ bmatrix } 1 & 0 \ end{ bmatrix } \ begin{ bmatrix } 0 \\\\ 1 \end{bmatrix} = 0. $ $
 
 これは、$ \ket{0 } $ と $ \ket{1 } $ が直交ベクトルであることを示しています。これは、$ \braket{0 | 1 } = \braket{1 | 0 = 0 であることを意味 } $ します。  また、definition $ \braket{0 | 0 } = \braket{1 | 1 } = 1 でもあり $ ます。これは、2つの計算ベースベクトルを*orthonormal*として呼び出すことができることを意味します。
 これらの orthonormal プロパティは、次の例で役に立ちます。 状態が $ \ket { \ psi } = {\frac{3 } {5} } \ket{1 } + {\frac{4 } {5 } } \ket{0 } $ の場合、$ \braket{1 | 0 = 0 であるため } $ 、$1 を測定する確率 $ は  
@@ -173,7 +180,7 @@ $ $ | \braket { -| \ psi } | ^ 2 = \ 左 | \frac{1 } {\ sqrt{2 } } (& b) ( } } \
 ## <a name="ketbra-or-outer-product"></a>ketbra または外側の製品
 Dirac 表記で説明する最後の項目は、 *ketbra*または outer 製品です。  外側の製品は、Dirac 表記では $ \ket { \ psi \bra \ phi $ として表され、 } { } bras と kets は brakets と逆の順序で発生するため、ketbras と呼ばれることもあります。  外側の製品は、マトリックス乗算を使用して、 { } { } $ クォンタム状態ベクトル $ \ psi と $ phi の $ \ket \ psi \bra/phi = \ psi \ phi ^ \ ダガーと $ して定義され $ ます。  この表記法の最も単純で最も一般的な例を次に示します。
 
-$ $ \ket{0 } } = \ begin{ bmatrix } 1 \\\\ 0 \ end{\ begin{} 1 bmatrix } bmatrix&0 \ end{ bmatrix } = \ begin{ bmatrix } 1 &0 0 &0 {\qquad \ket{1/end{/begin{} 0 \\\\ \end bmatrix } } } bmatrix \\\\ bmatrix } bmatrix&1 & end{= \ begin{} 0 bmatrix } bmatrix &0 \\\\ 0 &1 \end {に bmatrix } なりました。
+$ $ \ket{0/\qquad } } = \ begin{ bmatrix } 1 \\\\ 0 \ end{ bmatrix } \ begin{ bmatrix } 1&0 \ end{ bmatrix } = \ begin{ bmatrix } 1 &0 0 &0 \ket{1/end{/begin{} 0 \\\\ \end{bmatrix} } } bmatrix \\\\ bmatrix } bmatrix&1 & end{= \ begin{} 0 bmatrix } bmatrix &0 \\\\ 0 &1 \end{bmatrix} . です。
 $$
 
 Ketbras は、クォンタム状態を固定値に射影するため、多くの場合、プロジェクターと呼ばれます。  これらの操作は、(ベクターの基準を維持するのではなく)、また、クォンタムコンピューターがプロジェクターを確定的に適用できないということではありません。  しかし、プロジェクターは、クォンタムの状態に対して測定されるアクションを記述する美しいジョブを実行します。  たとえば、$ \ket \ psi $ という状態を $0 に測定した場合、 { } 状態が $ 測定の結果として得られる変換は、次のようになります。

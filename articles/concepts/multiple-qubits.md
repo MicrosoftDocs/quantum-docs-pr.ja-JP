@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 224bd5165f508f6cd1fdb85fb5c14ba2e23e59ea
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 1ac235bef473efa82b096cae4159e2c724ba7c0e
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630377"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269492"
 ---
 # <a name="multiple-qubits"></a>複数の Qubits
 
@@ -138,7 +145,7 @@ $$
 
 2つの qubit クォンタム状態の1つの qubit だけを測定することもできます。 Qubits の1つだけを測定する場合、測定の影響はわずかに異なります。これは、状態全体が1つのサブシステムにのみ折りたたまれるのではなく、すべての状態が計算ベースの状態に折りたたまれないためです。  言い換えると、1つの qubit だけを測定すると、サブシステムの1つだけが折りたたまれますが、すべてが折りたたまれるわけではありません。  
 
-これを確認するには、次の状態の最初の qubit を測定することを検討します。これは、最初に "0" 状態に設定された2つの qubit の Hadamard transform $H を適用することによって形成され $ ます。 $ $ H ^ {\ otimes 2 } \ left (\ begin{ bmatrix } 1 \\ \\ 0/end{/ bmatrix } otimes \ begin{ bmatrix } 1 \\ \\ 0 \ end{ bmatrix } \ right) = \frac{1 } {2 & } begin{ bmatrix } 1 & 1 & 1 & 1 \\ \\ 1 &-1 & 1 &-1 \\ \\ 1 & 1 &-1 &-1 \\ \\ 1 &-1 &-1 & 1 & end{/ bmatrix } begin{ bmatrix } 1 0 0 0 \\\\ \\\\ \\\\ \end { bmatrix } = \frac{1 } {2 & } begin{ bmatrix } 1 1 1 1 1 \\\\ \\\\ \\\\ \end { bmatrix } \ map\frac{1 } } = 0 & } {\ sqrt{2}/beginになります。 } { bmatrix } 1 \\\\ 1 \\\\ 0 0% \\\\ end{ bmatrix } \\ \\ \ \frac{1} = 1 & } {\ sqrt{2 } } \ begin{ bmatrix } 0 \\\\ 0 \\\\ 1 1 & \\\\ end{} bmatrix } \\ \\ ケース } 。
+これを確認するには、次の状態の最初の qubit を測定することを検討します。これは、最初に "0" 状態に設定された2つの qubit の Hadamard transform $H を適用することによって形成され $ ます。 $ $ H ^ {\ otimes 2 } \ left (\ begin{ bmatrix } 1 \\ \\ 0/end{/ bmatrix } otimes \ begin{ bmatrix } 1 \\ \\ 0 \ end{ bmatrix } \ right) = \frac{1 } {2 & } begin{ bmatrix } 1 & 1 & 1 & 1 \\ \\ 1 &-1 & 1 &-1 \\ \\ 1 & 1 &-1 &-1 \\ \\ 1 &-1 &-1 & 1 & end{ bmatrix } \ begin{ bmatrix } 1 0 0 0 \\\\ \\\\ \\\\ \end{bmatrix} = \frac{1 } {2 & } begin{ bmatrix } 1 1 1 1 \\\\ \\\\ \\\\ \end{bmatrix} \ map\frac{1 } } = 0 & } {\ sqrt{2} & beginになります。 } { bmatrix } 1 \\\\ 1 \\\\ 0 0% \\\\ end{ bmatrix } \\ \\ \ \frac{1} = 1 & } {\ sqrt{2 } } \ begin{ bmatrix } 0 \\\\ 0 \\\\ 1 1 & \\\\ end{} bmatrix } \\ \\ ケース } 。
 $ $ 両方の結果が50% の確率で発生しています。  2つの結果を50% の確率で intuited ことができます。これは、最初の量子状態ベクトルが、最初の qubit の $0 と $1 をスワップした状態で不変であるという事実です $ $ 。
 
 最初または2番目の qubit を測定するための数学的規則は単純です。  $E を $ $k ^ {\ rm th } $ 計算ベースのベクターに _k して、問題の $ $ qubit が $e の値に対して値 $1 を受け取るように、すべての _k $k のセットにすることを許可 $S し $ $ ます。  たとえば、最初の qubit の測定に関心がある場合、$S $ は $e _1 \equiv 10 $ および $e 3 11 で構成 \equiv さ $ れます。  同様に、2番目の qubit $S に関心がある場合、 $ $e _2 \equiv 01 $ と $e 3 \equiv 11 で構成され $ ます。  その後、選択された qubit を $1 に測定する確率 $ は、state vector $ \ psi$
@@ -167,12 +174,12 @@ $$
 これは、結果 $10 と $11 を測定するために期待される2つの確率の合計のみであることに注意 $ $ してください。
 この例では、次のように評価されます。
 
-$ $ \frac{1 } {4 } \ 左 | \ begin{ bmatrix } 0&0&1&0 \end {\ bmatrix } begin{ bmatrix } 1 1 1 1 \\\\ \\\\ \\\\ \end { bmatrix } \ 右 | ^ 2 + \frac{1 } {4, } left | \ begin{ bmatrix } 0&0&0&1 \end {/ bmatrix } begin{ bmatrix } 1 1 1 1 \\\\ \\\\ \\\\ \end { bmatrix } \ 右 | ^ 2 = \frac{1 } {2 } .
+$ $ \frac{1 } {4 } \ 左 | \ begin{ bmatrix } 0&0&1&0, \end{bmatrix} begin{ bmatrix } 1 1 1 1 \\\\ \\\\ \\\\ \end{bmatrix} \ 右 | ^ 2 + \frac{1 } {4, } left & | begin{ bmatrix } 0&0&0&1 & \end{bmatrix} begin{} 1 1 1 1 1 bmatrix \\\\ \\\\ \\\\ \end{bmatrix} \ 右 | ^ 2 = \frac{1 } {2 } .
 $$
 
 これは、直感がどのような確率を示すかということに完全に一致します。  同様に、状態はとして書き込むことができます。
 
-$ $ \ frac { \frac{e_1 } {2 } + \frac{e_3 { } 2 } } {\ sqrt { \frac{1 } {2 } }} = \frac{1 } {\ sqrt{2 } } \ begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1 \end {bmatrix}
+$ $ \ frac { \frac{e_1 } {2 } + \frac{e_3 } {2 } } {\ sqrt { \frac{1 } {2 } }} = \frac{1 } {\ sqrt{2 } } \ begin{ bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1\end{bmatrix}
 $$
 
 ここでも、直感に従っています。

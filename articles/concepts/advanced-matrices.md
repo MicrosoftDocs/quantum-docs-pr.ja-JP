@@ -9,6 +9,13 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
+- $$
+- $$
+- $$
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +84,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 8d3c646715f13c454e51b9295cbfdabf6a236ffc
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 71923247121eae6a1d4e26d2664d8e547370ba3a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630147"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269458"
 ---
 # <a name="advanced-matrix-concepts"></a>高度なマトリックスの概念 #
 
@@ -104,7 +114,7 @@ $$
 
 ベクター
 
-$ $ \ begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \ end{ bmatrix } , & begin{ bmatrix } 0 \\ \\ 1 \\ \\ 0 \end { bmatrix } および \ begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1 \end {bmatrix}$$
+$ $ \ begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \ end{ bmatrix } , \ begin{ bmatrix } 0 \\ \\ 1 \\ \\ 0 \end{bmatrix} および \ begin{ bmatrix } 0 0 \\ \\ \\ \\ 1\end{bmatrix}$$
 
 このマトリックスの固有ベクトルは、固有値 $d _1 $ 、$d _2 $ 、および $d、それぞれ3つ $ です。 $D _1 $ 、$d _2 $ 、および $d (_d $ ) が個別の数値の場合、これらのベクター (およびそのマルチプル) はマトリックス $D の唯一の固有ベクトル $ です。 一般に、対角線マトリックスの場合は、固有値と固有ベクトルを簡単に読み取ることができます。 固有値は、対角線に表示されるすべての数値であり、それぞれの固有ベクトルは1つのエントリが $1 $ 、残りのエントリが $0 に等しい単位ベクトルです $ 。
 
