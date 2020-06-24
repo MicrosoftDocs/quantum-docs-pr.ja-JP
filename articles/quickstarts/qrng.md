@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 8fafbccfe2a94a824353221b5e7eb8bac16c42f2
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 18e8975e513a87c0a67a6dbb5586cc7dab5a93fb
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327358"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630112"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>チュートリアル:Q\# で量子乱数ジェネレーターを実装する
 
@@ -38,7 +38,7 @@ Q# で記述された量子アルゴリズムの単純な例が量子乱数ジ�
 
 重ね合わせに `Qubit` を入れ、測定することで、コードを呼び出すたびに結果は異なる値になります。
 
-`Qubit` の割り当てが解除されるとき、`Zero` 状態に明示的に戻す必要があります。戻さない場合、シミュレーターからランタイム エラーが報告されます。 これを実現する簡単な方法は `Reset` を呼び出すことです。
+`Qubit` の割り当てが解除されるとき、`Zero` 状態に明示的に戻される必要があります。戻されない場合、シミュレーターからランタイム エラーが報告されます。 これを実現する簡単な方法は `Reset` を呼び出すことです。
 
 ### <a name="visualizing-the-code-with-the-bloch-sphere"></a>ブロッホ球でコードを視覚化する
 
