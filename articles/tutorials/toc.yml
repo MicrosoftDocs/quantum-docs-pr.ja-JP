@@ -1,0 +1,12 @@
+- name: 量子乱数ジェネレーター
+  href: quantum-random-number-generator.md
+- name: Q# でのエンタングルメントの確認
+  href: explore-entanglement.md
+- name: グローバーの検索アルゴリズムを実装する
+  href: search.md
+- name: 量子ビット レベルのプログラミング
+  href: qubit-level.md
+- name: Quantum Katas を使用して Q# を学ぶ
+  href: intro-to-katas.md
+- name: Q# コード サンプル
+  href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
