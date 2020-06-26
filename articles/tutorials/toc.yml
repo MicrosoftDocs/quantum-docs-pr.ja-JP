@@ -9,4 +9,4 @@
 - name: Quantum Katas を使用して Q# を学ぶ
   href: intro-to-katas.md
 - name: Q# コード サンプル
-  href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
+  href: 'https://docs.microsoft.com/samples/browse/?languages=qsharp'
