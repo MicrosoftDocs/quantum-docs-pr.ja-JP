@@ -6,19 +6,19 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: cbb1c274b64738cc4b47869563d7d02eb717afbc
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275544"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415261"
 ---
 # <a name="the-resources-estimator-target-machine"></a>リソース推定対象コンピューター
 
 この名前が示すように、は、 `ResourcesEstimator` クォンタムコンピューターで Q # 操作の特定のインスタンスを実行するために必要なリソースを見積もります。
 これを実現するには、実際にクォンタムコンピューターの状態をシミュレートせずに、クォンタム操作を実行します。このため、コードの古典的な部分を妥当な時間内に実行できる場合は、数千の qubits を使用する Q # 操作のリソースを見積もることができます。
 
-## <a name="usage"></a>使用
+## <a name="usage"></a>使用法
 
 `ResourcesEstimator`は別の種類のターゲットコンピューターであるため、任意の Q # 操作を実行するために使用できます。 
 
@@ -98,8 +98,8 @@ namespace Quantum.MyProgram
 * __Measure__: 実行された測定値の数。
 * __R__: 実行された1つの qubit ローテーション (T、Clifford、および P# li を除く) の数。
 * __T__: t ゲート、T_x = .h、T_y = hy. t .h を含む t ゲートとその活用の数が実行されました。
-* __Depth__: Q # 操作によって実行されるクォンタム回線の深さ。 既定では、T ゲートのみが深さでカウントされます。詳細については、「[深度カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) 」を参照してください。
-* __Width__: Q # 操作の実行中に割り当てられた qubits の最大数。
+* __Depth__: Q # 操作によって実行されるクォンタム回線の深さの下限。 既定では、T ゲートのみが深さでカウントされます。詳細については、「[深度カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) 」を参照してください。
+* __Width__: Q # 操作の実行中に割り当てられた qubits の最大数の下限。 __深さ__と__幅__の両方の下限を同時に達成できない可能性があります。
 * __BorrowedWidth__: Q # 操作内で借用される qubits の最大数。
 
 

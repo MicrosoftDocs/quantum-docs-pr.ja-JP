@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: e48f4157438fba063877b2b79fbc7629710fc9f3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 0fcdec1a304730b593224283421539ea3ca9c913
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275384"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415457"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -344,8 +344,6 @@ VS Code の拡張機能では使用されていませんが、`event-stream` NPM
 
 このリリースでは、一部のユーザーが Visual Studio 拡張機能を正常に読み込むことができないバグが修正されます。
 
-0\.2 バージョンの Quantum Development Kit からアップグレードする場合は、[Q# 言語の変更と Q# プログラムの移行](xref:microsoft.quantum.relnotes.migration-0-3)の詳細を確認してください。
-
 ## <a name="version-031811203"></a>バージョン 0.3.1811.203
 
 *リリース日:2018 年 11 月 2 日*
@@ -356,8 +354,6 @@ VS Code の拡張機能では使用されていませんが、`event-stream` NPM
 * 2\.1.403 より前のバージョンの .NET Core を使用して、プロジェクトをビルドするときのコンパイルの警告が削除されました。
 * ドキュメント、特に、VS Code または Visual Studio でマウスをポイントしたときに表示されるヒントがクリーンアップされました。
 
-0\.2 バージョンの Quantum Development Kit からアップグレードする場合は、[Q# 言語の変更と Q# プログラムの移行](xref:microsoft.quantum.relnotes.migration-0-3)の詳細を確認してください。
-
 ## <a name="version-0318102508"></a>バージョン 0.3.1810.2508
 
 *リリース日:2018 年 10 月 29 日*
@@ -367,8 +363,6 @@ VS Code の拡張機能では使用されていませんが、`event-stream` NPM
 * このリリースには、Visual Studio および Visual Studio Code 用のクライアント統合だけでなく、Q# 用の言語サーバーが含まれています。 これにより、波下線が付いたエラーおよび警告形式での入力時のライブ フィードバックと共に、IntelliSense 機能の新しいセットが有効になります。 
 * この更新により、一般的には診断メッセージが大幅に改善され、診断のための移動が容易になり、診断の範囲が正確になり、表示されるホバー情報の詳細が追加されます。
 * Q# 言語が拡張され、開発者が一般的な演算を行い、言語機能を新たに強化し、量子計算を強力に表現できる方法を統一することができます。  このリリースでは、Q# 言語にいくつかの破壊的変更が加えられています。   
-
-詳細については、[Q# 言語の変更と Q# プログラムの移行](xref:microsoft.quantum.relnotes.migration-0-3)に関するページを参照してください。
 
 このリリースには、新しい量子化学ライブラリも含まれています。
 
