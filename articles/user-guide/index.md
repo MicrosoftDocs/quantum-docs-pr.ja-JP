@@ -6,60 +6,59 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
-ms.openlocfilehash: f535aaedbe6ce181375d48f7023409ad8212c702
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: c5611f3e2907791f2dfc1644be0a45515d50dfd7
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430613"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415368"
 ---
 # <a name="the-q-user-guide"></a>Q# ユーザー ガイド
 
 Q# ユーザー ガイドへようこそ。 
 
-ここでは、Q# 言語の主要概念と、量子プログラムを記述するために必要なすべての情報について説明します。
+このガイドの様々なトピックでは、Q# 言語の主要概念と、量子プログラムを記述するために必要なすべての情報について説明します。
 
 ## <a name="user-guide-contents"></a>ユーザー ガイドの内容
 
-- [Q# の基本](xref:microsoft.quantum.guide.basics): Q# プログラミング言語の目的と機能に関する概要について説明します。 
+- [Q# の基本](xref:microsoft.quantum.guide.basics):Q# プログラミング言語の目的と機能に関する概要について説明します。 
 
 ### <a name="q-language"></a>Q# 言語
 
-- [Q# の型](xref:microsoft.quantum.guide.types): Q# 型モデルを紹介し、型を指定して操作するための構文について説明します。
+- [Q# の型](xref:microsoft.quantum.guide.types):Q# の型モデルを紹介し、型を指定して操作するための構文について説明します。
 
-- [型式](xref:microsoft.quantum.guide.expressions): Q# の各型の値を指定、参照、結合、および操作する方法について詳しく説明します。 
+- [型式](xref:microsoft.quantum.guide.expressions):Q# の各型の値の指定、参照、結合、および操作を行う方法について詳しく説明します。 
 
 ### <a name="using-q"></a>Q# の使用
 
-- [Q# のファイル構造](xref:microsoft.quantum.guide.filestructure): `*.qs` Q# ファイルの構造と構文について説明します。
+- [Q# のファイル構造](xref:microsoft.quantum.guide.filestructure):`*.qs` Q# ファイルの構造と構文について説明します。
 
-- [演算と関数](xref:microsoft.quantum.guide.operationsfunctions): Q# 言語の 2 つの呼び出し可能な型について詳しく説明します。すなわち、"*演算*" (量子ビットに対するアクションを含みます) と "*関数*" (従来の情報と厳密に連携して機能します) です。 
+- [演算と関数](xref:microsoft.quantum.guide.operationsfunctions):Q# 言語の 2 つの呼び出し可能な型について詳しく説明します。すなわち、"*演算*" (量子ビット レジスタに対するアクションを含みます) と "*関数*" (従来の情報と厳密に連携して機能します) です。 
     ここでは、adjoint および制御されたバージョンの量子操作を含め、これらを定義して呼び出す方法について説明します。
 
 - [変数](xref:microsoft.quantum.guide.variables): Q# プログラム内における変数の役割と、それらを効果的に活用する方法について説明します。 
-    たとえば、バインド スコープに関する情報に加えて、変更できない変数と変更可能な変数の違い、およびそれらを割り当て/再割り当てする方法についても説明します。
+    たとえば、バインド スコープに関する情報に加えて、変更できない変数と変更可能な変数の違い、およびそれらを割り当てまたは再割り当てする方法についても説明します。
 
-- [量子ビットの操作](xref:microsoft.quantum.guide.qubits): 個別の量子ビットと量子ビットのシステムに対処するために使用できる Q# の機能について説明します。 
-    具体的には、それらの割り当て、それらに対する演算の実行、そして最終的にそれらの測定を行う必要があります。 
+- [量子ビットの操作](xref:microsoft.quantum.guide.qubits):個々の量子ビットと量子ビットの系を扱うために使用する Q# の機能について説明します。具体的には、それらの割り当て、それらに対する演算の実行、それらの測定です。 
 
-- [制御フロー](xref:microsoft.quantum.guide.controlflow): Q# で使用できるプログラミング制御フロー パターンについて詳しく説明します。これには、多くの標準的な手法 (条件付き実行、for ループ、while ループなど) に加え、量子固有の "成功するまで繰り返す" パターンが含まれます。
+- [制御フロー](xref:microsoft.quantum.guide.controlflow):Q# で使用できるプログラミング制御フロー パターンについて詳しく説明します。これには、多くの標準的な手法 (条件付き実行、for ループ、while ループなど) に加え、量子固有の "成功するまで繰り返す" パターンが含まれます。
 
-- [テストとデバッグ](xref:microsoft.quantum.guide.testingdebugging): 自分のコードが想定どおりに動作していることを確かめるためのいくつかの手法について説明します。 
+- [テストとデバッグ](xref:microsoft.quantum.guide.testingdebugging):自分のコードが想定どおりに動作していることを確かめるためのいくつかの手法について説明します。 
     量子情報の一般的な不透明性により、量子プログラムのデバッグには特殊な手法が必要になる場合があります。 
     さいわい、Q# では、プログラマーが慣れている従来のデバッグ手法の多くと、量子特有の手法がサポートされています。 これには、Q# での単体テストの作成や実行、コード内の値と確率に対する "*アサーション*" の埋め込み、ターゲット コンピューターの状態を出力する `Dump` 関数などが含まれています。 
-    その後者を完全状態シミュレーターと共に使用して、いくつかの量子限界を回避することで計算の特定の部分をデバッグすることができます (例: 量子複製不可能定理)。
+    その後者を完全状態シミュレーターと共に使用して、いくつかの量子限界を回避することで計算の特定の部分をデバッグすることができます (例: [量子複製不可能定理](xref:microsoft.quantum.concepts.pauli))。
 
 ### <a name="quantum-simulators-and-resource-estimators"></a>量子シミュレーターとリソース エスティメーター
 
-- [量子シミュレーターとホスト アプリケーション](xref:microsoft.quantum.machines): 使用可能なさまざまなシミュレーターの概要と、ホスト プログラムとターゲット コンピューター間の一般的な実行モデル。
+- [量子シミュレーターとホスト アプリケーション](xref:microsoft.quantum.machines):使用可能なさまざまなシミュレーターの概要と、ホスト プログラムとターゲット コンピューター間の一般的な実行モデル。
 
-- [完全状態シミュレーター](xref:microsoft.quantum.machines.full-state-simulator): 完全な量子状態をシミュレートするターゲット マシン。 小規模のプログラムを完全に実行またはデバッグする場合に便利です (24 量子ビット未満)。
+- [完全状態シミュレーター](xref:microsoft.quantum.machines.full-state-simulator):完全な量子状態をシミュレートするターゲット コンピューター。 小規模のプログラムを完全に実行またはデバッグする場合に便利です (数十の量子ビット未満)。
 
-- [リソース エスティメーター](xref:microsoft.quantum.machines.resources-estimator): 量子コンピューターで Q# 演算の特定のインスタンスを実行するために必要なリソースを推定します。
+- [リソース エスティメーター](xref:microsoft.quantum.machines.resources-estimator):量子コンピューターで Q# 演算の特定のインスタンスを実行するために必要なリソースを推定します。
 
-- [トレース シミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro): 量子コンピューターの状態を実際にシミュレートせずに、量子プログラムを実行します。そのため、数千もの量子ビットを使用する量子プログラムを実行できます。 量子プログラム内のクラシック コードをデバッグする場合や、必要なリソースを推定する場合に便利です。
+- [トレース シミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro):量子コンピューターの状態を実際にシミュレートせずに、量子プログラムを実行します。そのため、数千もの量子ビットを使用する量子プログラムを実行できます。 量子プログラム内のクラシック コードをデバッグする場合や、必要なリソースを推定する場合に便利です。
 
-- [Toffoli シミュレーター](xref:microsoft.quantum.machines.toffoli-simulator): 特別な用途のための量子シミュレーターで、数百万の量子ビットで使用できますが、限定された量子操作のセット (X、CNOT、およびマルチ制御 X) を使用するプログラムに対してのみ使用できます。
+- [Toffoli シミュレーター](xref:microsoft.quantum.machines.toffoli-simulator):特別な用途のための量子シミュレーターで、数百万の量子ビットで使用できますが、限定された量子演算のセット (X、CNOT、およびマルチ制御 X) を使用するプログラムに対してのみ使用できます。
 
 ### <a name="quick-reference-pages"></a>クイック リファレンス ページ
 
