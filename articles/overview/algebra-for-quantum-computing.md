@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 4cf6cce870c7661a7fffc21dcb60dd53cf281ddd
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327596"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415442"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>量子コンピューティングの線形代数
 
@@ -62,8 +62,7 @@ $$\frac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}\begin{bmatrix} 1 
 
 各量子ビットはベクトル空間であるため、単なる乗算はできないことに注意してください。 代わりに、**テンソル積**を使用します。これは、個々のベクトル空間から新しいベクトル空間を作成する関連演算であり、$\otimes$ 記号で表されます。 たとえば、2 つの量子ビットの状態 $\begin{bmatrix} a \\\\  b \end{bmatrix}$ と $\begin{bmatrix} c \\\\  d \end{bmatrix}$ のテンソル積を計算します。
 
-$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}
-$$
+$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix} $$
 
 結果は 4 次元行列になり、各要素は確率を表します。 たとえば、$ac$ は 0 と 0 に収縮する 2 つの量子ビットの確率であり、$ad$ は 0 と 1 の確率、というようになります。 
 
