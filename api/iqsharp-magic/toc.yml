@@ -1,3 +1,17 @@
+- href: azure.connect.md
+  name: '% azure.connect マジック コマンド'
+- href: azure.execute.md
+  name: '%azure.execute マジック コマンド'
+- href: azure.jobs.md
+  name: '%azure.jobs マジック コマンド'
+- href: azure.output.md
+  name: '%azure.output マジック コマンド'
+- href: azure.status.md
+  name: '%azure.status マジック コマンド'
+- href: azure.submit.md
+  name: '%azure.submit マジック コマンド'
+- href: azure.target.md
+  name: '%azure.target マジック コマンド'
 - href: check_kata.md
   name: '% check_kata マジック コマンド'
 - href: chemistry.broombridge.md
