@@ -39,6 +39,10 @@ operations:
   summary: 指定された qubits はすべて $ \ket {0} $ 状態です。
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
   summary: 指定された qubits のアサートはすべて、指定された許容範囲内の $ \ket {0} $ 状態にあります。
+- uid: microsoft.quantum.diagnostics.assertmeasurement
+  summary: 指定された P# li の指定した qubits を測定すると、常に指定された結果が得られることをアサートします。
+- uid: microsoft.quantum.diagnostics.assertmeasurementprobability
+  summary: 指定された型の指定された qubits を測定すると、特定の確率で特定の結果が許容範囲内にあることをアサートします。
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     2つの操作を指定すると、すべての入力状態で同じ動作をするようにアサートされます。
@@ -81,12 +85,12 @@ newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
   summary: 型を読み込むとき、またはテスト目的で呼び出すことができる代替名を定義できる、コンパイラで認識される属性。
 - uid: microsoft.quantum.diagnostics.test
-  summary: 単体テストをマークするために使用される、コンパイラが認識する属性。
+  summary: 単体テストをマークするために使用されるコンパイラ認識属性。
 summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、アサート操作や要求関数など、診断の目的に役立つ関数と操作が含まれています。"
 metadata:
-  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326593"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884564"

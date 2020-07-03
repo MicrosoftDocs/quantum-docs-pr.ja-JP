@@ -1,0 +1,64 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.repeatc
+name: RepeatC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: 指定された回数だけ操作を繰り返します。
+examples: >-
+  同等のものを次に示します。
+
+
+  ```Q#
+
+  RepeatC(U, 17, target);
+
+  (BoundC(ConstantArray(17, U)))(target);
+
+  ```
+syntax: "operation RepeatC (op : ('TInput => Unit is Ctl), nTimes : Int, input : 'TInput) : Unit"
+input:
+  content: "(op : ('TInput => Unit is Ctl), nTimes : Int, input : 'TInput)"
+  types:
+  - name: op
+    summary: 繰り返し呼び出す操作。
+    isOperation: true
+    input:
+      types:
+      - uid: "'TInput"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: nTimes
+    summary: を呼び出す回数 `op` 。
+    isPrimitive: true
+    uid: Int
+  - name: input
+    summary: に渡される入力 `op` 。
+    uid: "'TInput"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: TInput
+  summary: によって求められる入力の種類 `op` 。
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.arrays.drawmany
+- microsoft.quantum.canon.repeat
+- microsoft.quantum.canon.repeata
+- microsoft.quantum.canon.repeatca
+metadata:
+  ms.openlocfilehash: 092771c95695cd79bcfd142e53e48a4225ccb091
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886794"

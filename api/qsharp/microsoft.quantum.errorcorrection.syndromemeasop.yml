@@ -5,10 +5,10 @@ type: newtype
 namespace: Microsoft.Quantum.ErrorCorrection
 summary: エラー修正コードブロックのより隣人を測定するために使用される操作を表します。
 remarks: >-
-  このシグネチャ`(LogicalRegister => Syndrome)`は、の`LogicalRegister` qubits と一部の補助 qubits に対して共同で動作する操作を表し、その後に補助 qubits `Syndrome`の測定値`Result[]`を指定して、これらの測定値を表す値を抽出します。
+  このシグネチャは、 `(LogicalRegister => Syndrome)` の qubits と、補助 qubits `LogicalRegister` の後に補助 qubits の測定値を指定して、 `Syndrome` これらの測定値を表す値を抽出する操作を表し `Result[]` ます。
 
 
-  ### <a name="examples"></a>例
+  ### <a name="examples"></a>使用例
 
   ビットフリップコード $S = \ langle ZZI、IZZ \rangle $ のメジャー syndromes を、非フォールトトレラントな方法でスクラッチ qubits を使用して測定します。
 
@@ -24,9 +24,9 @@ seeAlso:
 - logicalregister
 - syndrome
 metadata:
-  ms.openlocfilehash: aa324e8e149ba9418082145ed982236c473c1a4d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e4c011bcbe4200fe894962e0432f4c5c358d0295
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684825"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885751"

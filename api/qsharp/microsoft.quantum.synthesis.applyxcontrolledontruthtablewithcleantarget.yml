@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
+name: ApplyXControlledOnTruthTableWithCleanTarget
+type: operation
+namespace: Microsoft.Quantum.Synthesis
+summary: >-
+  の @"microsoft.quantum.intrinsic.x" `target` クラシック代入に対してブール関数が true と評価された場合に、操作をに適用し `func` `controlRegister` ます。
+
+
+  この操作では、の特殊なケースを実装します。この場合、 @"microsoft.quantum.synthesis.applyxcontrolledontruthtable" ターゲットの qubit は $ \ket $ 状態であることがわかってい {0} ます。
+
+
+  実装では @"microsoft.quantum.intrinsic.cnot" 、およびゲートを使用し @"microsoft.quantum.intrinsic.r1" ます。  Adjoint 操作の実装は最適化されており、測定ベースの uncomputation が使用されます。
+syntax: 'operation ApplyXControlledOnTruthTableWithCleanTarget (func : BigInt, controlRegister : Qubit[], target : Qubit) : Unit'
+input:
+  content: '(func : BigInt, controlRegister : Qubit[], target : Qubit)'
+  types:
+  - name: func
+    summary: ブール型の真理値テーブルを大きな整数として表現
+    isPrimitive: true
+    uid: BigInt
+  - name: controlRegister
+    summary: 制御 qubits の登録
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: ターゲット qubit ($ \ket $ 状態である必要があります {0} )
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.synthesis.applyxcontrolledontruthtable
+metadata:
+  ms.openlocfilehash: c779acd9dfcebd3b9a71ba53c66d9e07c19f792b
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886561"

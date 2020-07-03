@@ -3,42 +3,26 @@ uid: microsoft.quantum.intrinsic.assertprob
 name: AssertProb
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: 指定された型の指定された qubits を測定すると、特定の確率で特定の結果が許容範囲内にあることをアサートします。
-remarks: この操作の Adjoint および制御されたバージョンが条件をチェックしないことに注意してください。
-examples: >-
-  ```qsharp
-
-  using (register = Qubit()) {
-      H(register);
-      AssertProb([PauliZ], [register], One, 0.5,
-          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
-  }
-
-  ```
+summary: AssertProb は非推奨となりました。 代わりに、@"microsoft.quantum.diagnostics.assertmeasurementprobability" を使用してください。
 syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
   types:
   - name: bases
-    summary: の確率をアサートする測定効果。これは、マルチ qubit の P# li 演算子として表現されます。
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: qubits
-    summary: アサーションを行うレジスタ。
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: result
-    summary: の`Measure(bases, qubits)`予期される結果。
     isPrimitive: true
     uid: Result
   - name: prob
-    summary: 指定された結果が返される確率。
     isPrimitive: true
     uid: Double
   - name: msg
-    summary: アサーションが失敗した場合に報告されるメッセージ。
     isPrimitive: true
     uid: String
   - name: tol
@@ -52,12 +36,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-seeAlso:
-- assert
 metadata:
-  ms.openlocfilehash: 6317476e89feb3a5fecac15afd52541859fc2f21
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: db29d52b79b1e7b5a980f3e3196c5b2547132103
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674162"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885724"

@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.synthesis
+name: Microsoft.Quantum.Synthesis
+summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、順列および Boolean 関数に基づくからクォンタム操作のための関数と操作が含まれています。"
+operations:
+- uid: microsoft.quantum.synthesis.applypermutationusingdecomposition
+  summary: 分解ベースの合成を使用する順列を指定して、クォンタムの状態の振幅を Permutes します。
+- uid: microsoft.quantum.synthesis.applypermutationusingdecompositionwithvariableorder
+  summary: 分解ベースの合成を使用する順列を指定して、クォンタムの状態の振幅を Permutes します。
+- uid: microsoft.quantum.synthesis.applypermutationusingtransformation
+  summary: 変換ベースの合成を使用した順列を指定して、クォンタムの状態の振幅を Permutes します。
+- uid: microsoft.quantum.synthesis.applytransposition
+  summary: ''
+- uid: microsoft.quantum.synthesis.applyxcontrolledontruthtable
+  summary: の @"microsoft.quantum.intrinsic.x" `target` クラシック代入に対してブール関数が true と評価された場合に、操作をに適用し `func` `controlRegister` ます。
+- uid: microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
+  summary: の @"microsoft.quantum.intrinsic.x" `target` クラシック代入に対してブール関数が true と評価された場合に、操作をに適用し `func` `controlRegister` ます。
+metadata:
+  ms.openlocfilehash: d12a16656826134cfe8c9fb44a1c577c267a6603
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886781"

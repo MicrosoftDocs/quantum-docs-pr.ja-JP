@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 配列が指定された場合、は、元の配列の要素と各要素のインデックスを含む新しい配列を返します。
 examples: >-
-  次`for`のループは同等です。
+  次の `for` ループは同等です。
 
 
   ```Q#
@@ -30,7 +30,7 @@ input:
 output:
   content: (Int, 'TElement)[]
   types:
-  - summary: 元の配列の要素そのインデックスを含む新しい配列。
+  - summary: 元の配列の要素とそのインデックスを含む新しい配列。
     isArray: true
     types:
     - isPrimitive: true
@@ -41,9 +41,9 @@ typeParameters:
 - uid: "'TElement"
   summary: 配列の要素の型。
 metadata:
-  ms.openlocfilehash: 9cfb5a48974128f865ada49df3aa3152bf0f33ed
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a8b0a9abeb378c863d228268315950f32c5247c0
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676509"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884636"
