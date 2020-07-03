@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applycontrolledonint
+name: ApplyControlledOnInt
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: コントロールの登録状態が指定した正の整数に対応する場合は、ターゲットレジスタに対して、値の指定操作を適用します。
+remarks: >-
+  の値は、リトルエン `numberState` ディアンエンコーディングを使用して解釈されます。
+
+
+  `numberState`は最大で $ 2 ^ \texttt{Length (controlRegister)}-$1 である必要があります。
+
+  たとえば、 `numberState = 537` `oracle` は、 `controlRegister` が $ \ket $ という状態にある場合にのみ適用されることを意味し {537} ます。
+syntax: "operation ApplyControlledOnInt (numberState : Int, oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit"
+input:
+  content: "(numberState : Int, oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T)"
+  types:
+  - name: numberState
+    summary: 操作を制御する必要がある負で `oracle` ない整数。
+    isPrimitive: true
+    uid: Int
+  - name: oracle
+    summary: 制御される、ユニタリ操作。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: controlRegister
+    summary: のアプリケーションを制御するクォンタムレジスタ `oracle` 。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targetRegister
+    summary: 適用するレジスタ `oracle` 。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 468886684513035d24b3b4881944f2c18fa65e18
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886734"

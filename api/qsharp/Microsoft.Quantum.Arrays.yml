@@ -1,7 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arrays
 name: Microsoft.Quantum.Arrays
-summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、データの配列を作成および操作するための関数が含まれています。"
 functions:
 - uid: microsoft.quantum.arrays.all
   summary: 配列と、配列の要素に対して定義されている述語が指定されている場合、配列のすべての要素が述語を満たすかどうかを確認します。
@@ -67,13 +66,16 @@ functions:
   summary: 3つの配列を指定すると、3組の新しい配列が返されます。これにより、各3組には各元の配列の要素が含まれます。
 - uid: microsoft.quantum.arrays.zip4
   summary: 4つの配列がある場合、4組の新しい配列を返して、各4組に各元の配列の要素が格納されるようにします。
+summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、データの配列を作成および操作するための関数が含まれています。"
 operations:
+- uid: microsoft.quantum.arrays.drawmany
+  summary: 指定された数のサンプルに対して操作を繰り返し、配列内の出力を収集します。
 - uid: microsoft.quantum.arrays.foreach
   summary: 配列と、配列の要素に対して定義されている操作が指定された場合、は、操作の下にある元の配列のイメージで構成される新しい配列を返します。
 metadata:
-  ms.openlocfilehash: 92eb956a1387a9765354f45e27eb084c6d73f51b
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 32aeecb419739a89792bdf1e9761e3821abcf380
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326712"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884693"

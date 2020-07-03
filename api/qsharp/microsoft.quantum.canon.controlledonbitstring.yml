@@ -7,22 +7,24 @@ summary: >-
   制御レジスタの状態が指定したビットマスクに対応する場合に、ターゲットレジスタに oracle を適用する、ユニタリ操作を返します。
 
 
-  この関数の出力は、\begin{align} U \ket{b_0 b_1/cドット b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \ cドット b_ {n-1}} という $U の、単位の変換で表すことができる演算です。 \ otimes \begin{cases} V \ket{\psi} & \t extrm{if} (b_0 b_1 \ cドット b_ {n-1}) \\ \\ = \texttt{bits} \ket{\psi} & \textrm{otherwise} \end{cases}, \end{align} ここで $V $ は、 `oracle`操作のアクションを表すミリ秒変換です。
+  この関数の出力は、\begin{align} U \ket{b_0 b_1/cドット b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \ cドット b_ {n-1}} という $U の、単位の変換で表すことができる演算です。 \ otimes \begin{cases} V \ket{\psi} & \t extrm{if} (b_0 b_1 \ cドット b_ {n-1}) = \texttt{bits} \\ \\ \ket{\psi} & \textrm{otherwise} \end{cases}, \end{align} ここで $V $ は、操作のアクションを表すミリ秒変換です `oracle` 。
 remarks: >-
-  と`bits` `controlRegister`の長さは同じである必要があります。
+  によって指定されたパターンは `bits` よりも短い場合があります `controlRegister` 。この場合、追加の制御 qubits は無視されます (つまり、$ \ket $ と $ \ket $ で制御されません {0} {1} )。
+
+  `bits`がより長い場合は `controlRegister` 、エラーが発生します。
 
 
-  ブール型の配列`bits`と1つの`oracle`値を指定すると、この関数の出力は、次の手順を実行する操作になります。
+  ブール型の配列と1つの値を指定する `bits` と、 `oracle` この関数の出力は、次の手順を実行する操作になります。
 
 
-  * の要素`X`に`false`対応する制御レジスタの各 qubit に操作を適用し`bits`ます。
+  * `X`の要素に対応する制御レジスタの各 qubit に操作を適用 `false` し `bits` ます。
 
-  * コントロール`Controlled oracle`とターゲットレジスタに適用します。
+  * `Controlled oracle`コントロールとターゲットレジスタに適用します。
 
-  * コントロールレジスタ`X`を元の状態に戻すために、 `bits`の要素に`false`対応する各 qubit に操作を適用します。
+  * コントロールレジスタを `X` `false` `bits` 元の状態に戻すために、の要素に対応する各 qubit に操作を適用します。
 
 
-  ファンクタの出力は、 `bits`がと等しい特殊`ControlledOnBitString`なケースです`[true, ..., true]` `Controlled`
+  ファンクタの出力 `Controlled` は、 `ControlledOnBitString` `bits` がと等しい特殊なケースです `[true, ..., true]` 。
 examples: >-
   次のコードスニペットは同等です。
 
@@ -34,7 +36,7 @@ examples: >-
   ```
 
 
-  and
+  および
 
 
   ```qsharp
@@ -48,7 +50,7 @@ examples: >-
   ```
 
 
-  次のコードでは、{1}{2}状態 $ \ frac ({00} \ket-{01} \ket +{10} \ket +{11}\ket) $ を準備します。
+  次のコードでは、状態 $ \ frac {1} {2} (\ket {00} -\ket {01} + \ket {10} + \ket) $ {11} を準備します。
 
 
   ```qsharp
@@ -85,7 +87,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: コントロールのレジスタの状態`oracle`がビットマスク`bits`に対応している場合に、ターゲットのレジスタに適用されるユニタリ操作。
+  - summary: '`oracle`コントロールのレジスタの状態がビットマスクに対応している場合に、ターゲットのレジスタに適用されるユニタリ操作 `bits` 。'
     isOperation: true
     input:
       types:
@@ -102,9 +104,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: d5a6223c130150f42f83044aec19b1d5a875bb1d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 98bb8a9d5770e34257cd2fbc5456bcf70139af07
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680357"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885513"

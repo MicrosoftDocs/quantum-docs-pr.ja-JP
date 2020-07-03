@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applycontrolledonbitstring
+name: ApplyControlledOnBitString
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: ターゲットレジスタに対して、指定されたビットマスクによって指定された状態で制御される、一連の処理を実行します。
+remarks: >-
+  によって指定されたパターンは `bits` よりも短い場合があります `controlRegister` 。この場合、追加の制御 qubits は無視されます (つまり、$ \ket $ と $ \ket $ で制御されません {0} {1} )。
+
+  `bits`がより長い場合は `controlRegister` 、エラーが発生します。
+
+
+  たとえば、は、 `bits = [0,1,0,0,1]` `oracle` `controlRegister` が $ \ket {0} \ket {1} \ket {0} \ket \ket $ という状態である場合にのみ適用され {0} {1} ます。
+syntax: "operation ApplyControlledOnBitString (bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit"
+input:
+  content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T)"
+  types:
+  - name: bits
+    summary: 指定されたユニタリ操作を制御するビット文字列。
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+  - name: oracle
+    summary: ターゲットレジスタに適用されるユニタリ操作。
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: controlRegister
+    summary: のアプリケーションを制御するクォンタムレジスタ `oracle` 。
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targetRegister
+    summary: 入力としてに渡されるターゲットレジスタ `oracle` 。
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: cb0aaffb9710f98a3ed22d7a7c97828b05f6ae2c
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886751"

@@ -7,9 +7,9 @@ summary: 一連のパラメーター化および制御された回転、回転�
 syntax: newtype SequentialModel = (Microsoft.Quantum.MachineLearning.ControlledRotation[], Double[], Double);
 references: '- [arXiv: 1804.00633](https://arxiv.org/abs/1804.00633)'
 metadata:
-  ms.openlocfilehash: f653687ef29ac55704e6a7a8746de9e964bf5947
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 21b3dee50b6c9ce85ec796d1462d1f9ce53a0435
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684365"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884529"

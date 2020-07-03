@@ -7,7 +7,7 @@ summary: >-
   Oracle から特定の状態に関するリフレクションを構築します。
 
 
-  この関数の結果は、ミリ秒 $O 行列で表される \ket{\psi} の状態準備 oracle を指定すると、oracle $O $; によって準備された状態 $ $ を中心にリフレクションを適用する oracle になります。つまり、$ \ket{\psi} $ という状態で、\ket{0} = \ket{\psi} $ という $O ます。
+  配列 $O によって表される決定的な状態準備 oracle があるとします。この関数の結果は oracle で、oracle $O $; によって準備された状態 $ \ket{\psi} $ の周りにリフレクションが適用されます。つまり、$ \ket{\psi} $ という状態で、\ket {0} = \ket{\psi} $ という $O ます。
 syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
@@ -24,9 +24,9 @@ seeAlso:
 - microsoft.quantum.oracles.deterministicstateoracle
 - microsoft.quantum.oracles.reflectionoracle
 metadata:
-  ms.openlocfilehash: ecd14c8fbf54c6ba224693ea02f469379f66d1bc
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 580e4f0a38888faf0fbea99f680c82a5172f82a4
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673494"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884496"

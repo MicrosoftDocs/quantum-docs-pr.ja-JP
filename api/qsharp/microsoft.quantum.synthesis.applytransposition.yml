@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.synthesis.applytransposition
+name: ApplyTransposition
+type: operation
+namespace: Microsoft.Quantum.Synthesis
+summary: この操作では、インデックスの振幅を、 `a` `b` 長さ $n $ の指定した状態ベクトルのインデックス位置の振幅でスワップし `register` ます。  が `a` に等しい場合 `b` 、状態ベクトルは変更されません。
+examples: >-
+  2つの qubits に対して、number of 法則 # | 1 \ \rangle $、$ | 2 \ \rangle $、$ | 3 \ \rangle $ という uniform を準備します。
+
+
+  ```Q#
+
+  using (qubits = Qubit[2]) {
+    let register = LittleEndian(qubits);
+    PrepareUniformSuperposition(3, register);
+    ApplyTransposition(0, 3, register);
+  }
+
+  ```
+syntax: 'operation ApplyTransposition (a : Int, b : Int, qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(a : Int, b : Int, qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: a
+    summary: 最初のインデックス (0 ~ $ 2 ^ n-$1 の値である必要があります)
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: 2番目のインデックス (0 ~ $ 2 ^ n-$1 の値である必要があります)
+    isPrimitive: true
+    uid: Int
+  - name: qubits
+    summary: 転調が適用される $n $ qubits の一覧。
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: de888c27a7d897492283c7285c6d2d828fe5821b
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886573"
