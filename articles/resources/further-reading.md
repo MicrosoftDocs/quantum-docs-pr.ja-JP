@@ -6,12 +6,12 @@ uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: bcc26f66a4ba3e861800ceca122b38b8d3ef6ad5
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: d3c252c6579e1286aae71a0f18ac7b6b02a5c1ed
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275368"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884144"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>その他の量子コンピューティング学習リソース
 
@@ -24,6 +24,14 @@ ms.locfileid: "85275368"
 + Kitaev、A. Y.、Shen、A.、& Vyalyi、M. N。 (2002)。 古典およびクォンタム計算 (Vol. 47)。 Providence: アメリカの数学的社会。
 + Kaye、P.、Laflamme、R.、& Mosca、M. (2007)。 クォンタムコンピューティングの概要。 Oxford 大学のプレス。
 + Rieffel、、& Polak、W. H。 (2011). クォンタムコンピューティング: 簡単に紹介します。 (MIT Press)。
++ Sarah Kaiser と Christopher (早期アクセスプログラムは2019年4月2020に公開されました)。 [Python および Q # を使用したクォンタムコンピューティングについて学習します。ハンズオンアプローチ](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp)です。
+
+## <a name="online-courses"></a>オンラインコース ##
+
++ [MS は、クォンタムコンピューティングモジュールについて説明](https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r)します。 クォンタムコンピューティングの概念とプラクティスに関する貼り付けチュートリアルです。 
++ [クォンタムコンピューティング-すばらしいコース](https://brilliant.org/courses/quantum-computing/)。 ブラウザーでシミュレートされたクォンタムコンピューターを使用して、最初からクォンタムアルゴリズムを構築する方法について説明します。
++ [クォンタムコンピューティングの概要-LinkedIn Learning](https://www.linkedin.com/learning/introduction-to-quantum-computing)。 1h25m ビデオの概要 
++ [Comics を使用した量子コンピューティング](https://hackaday.io/project/168554-introduction-to-quantum-computing)。 日曜日毎週のハンズオンコミュニティクラス。 
 
 ## <a name="elementary-techniques-for-building-controlled-gates"></a>制御ゲートを構築するための基本的な手法 ##
 

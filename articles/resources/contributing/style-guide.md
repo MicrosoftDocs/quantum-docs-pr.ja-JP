@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: f8e398b5c9932a5079222fed7ad20e54de814eb8
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275383"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884187"
 ---
 # <a name="q-style-guide"></a>Q # スタイルガイド #
 ## <a name="general-conventions"></a>一般規則 ##
@@ -105,6 +105,31 @@ Quantum 開発キットの提供では、quantum 開発者が簡単に読むこ�
 | ☑ | `newtype GeneratorTerm` | 名詞句の使用は、UDT コンストラクターを呼び出した結果を明確に表します。 |
 | ☒ | <s>`@Attribute() newtype RunOnce()`</s> | 動詞句を使用すると、UDT コンストラクターが操作であることがわかります。 |
 | ☑ | `@Attribute() newtype Deprecated(Reason : String)` | 名詞句を使用すると、属性の使用が伝えます。 |
+
+***
+
+### <a name="entry-points"></a>エントリ ポイント
+
+Q # プログラムへのエントリポイントを定義すると、Q # コンパイラは、 [ `@EntryPoint()` ](xref:microsoft.quantum.core.entrypoint)エントリポイントが特定の名前 (例: `main` 、 `Main` 、または) を持つことを要求するのではなく、属性を認識し `__main__` ます。
+つまり、Q # 開発者の視点から見ると、エントリポイントは、で注釈が付けられた通常の操作です `@EntryPoint()` 。
+さらに、q # のエントリポイントは、アプリケーション全体 (つまり、Q # のスタンドアロンの実行可能ファイル) のエントリポイントである場合もあれば、q # プログラムとアプリケーションのホストプログラムの間のインターフェイスである場合もあります。つまり、q # のエントリポイントに適用すると、"main" という名前は誤解されません。
+
+`@EntryPoint()`前述の名前付け操作に関する一般的なアドバイスを使用して、属性の使用を反映するために名前付けのエントリポイントを使用することをお勧めします。
+
+
+# <a name="guidance"></a>[ガイダンス](#tab/guidance)
+
+次のことをお勧めします。
+
+- エントリポイント操作を "main" という名前にしないでください。
+- 名前エントリポイント操作は通常の操作として指定します。
+
+# <a name="examples"></a>[使用例](#tab/examples)
+
+|   | 名前 | 説明 |
+|---|------|-------------|
+| ☑ | `@EntryPoint() operation RunSimulation` | 操作名を使用してエントリポイントの目的を明確に伝えます。 |
+| ☒ | <s>`@EntryPoint() operation Main`</s> | の使用 `Main` は、エントリポイントの目的を明確に伝えるものではなく、属性と重複し `@EntryPoint()` ます。 |
 
 ***
 

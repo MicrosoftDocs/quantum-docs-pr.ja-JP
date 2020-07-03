@@ -3,25 +3,25 @@ title: テストとデバッグ
 description: 単体テスト、ファクトとアサーション、およびダンプ関数を使用して、クォンタムプログラムをテストおよびデバッグする方法について説明します。
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: dd6c7ae8a016423f26c37f3eedf0ae9c1d126b78
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+ms.openlocfilehash: cd619607af9e2b601f3bec1304c5729d84312f35
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630028"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884079"
 ---
 # <a name="testing-and-debugging"></a>テストとデバッグ
 
-従来のプログラミングと同様に、クォンタムプログラムが意図したとおりに動作することを確認し、正しくないクォンタムプログラムを診断できるようにすることが不可欠です。
+従来のプログラミングと同様に、クォンタムプログラムが意図したとおりに動作することを確認し、正しくない動作を診断できるようにすることが不可欠です。
 このセクションでは、クォンタムプログラムをテストおよびデバッグするための Q # によって提供されるツールについて説明します。
 
 ## <a name="unit-tests"></a>単体テスト
 
-クラシックプログラムをテストする一般的な方法の1つは、ライブラリ内のコードを実行する*単体テスト*と呼ばれる小さなプログラムを記述し、その出力を予想される出力と比較することです。
-たとえば、 `Square(2)` `4` *priori*が $ 2 ^ 2 = $4 であることがわかっているため、がを返すようにすることができます。
+従来のプログラムをテストする一般的な方法の1つは、*単体テスト*と呼ばれる小さなプログラムを作成することです。これにより、ライブラリでコードを実行し、出力を予想される出力と比較します。
+たとえば、 `Square(2)` `4` $ 2 ^ 2 = $4 の*priori*がわかっているため、がを返すようにすることができます。
 
 Q # は、クォンタムプログラムの単体テストの作成をサポートしています。これは、 [Xunit](https://xunit.github.io/)単体テストフレームワーク内でテストとして実行できます。
 
@@ -29,13 +29,12 @@ Q # は、クォンタムプログラムの単体テストの作成をサポー�
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Visual Studio 2019 を開きます。 メニューにアクセスし、を `File` 選択し `New`  >  `Project...` ます。
-右上隅にあるを検索し、 `Q#` テンプレートを選択し `Q# Test Project` ます。
+Visual Studio 2019 を開きます。 [**ファイル**] メニューにアクセスし、[**新しい > プロジェクト**] を選択します。右上隅で `Q#` 、 **Q # Test プロジェクト**テンプレートを検索して選択します。
 
 #### <a name="command-line--visual-studio-code"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
 
 お気に入りのコマンドラインから、次のコマンドを実行します。
-```bash
+```dotnetcli
 $ dotnet new xunit -lang Q# -o Tests
 $ cd Tests
 $ code . # To open in Visual Studio Code
@@ -43,7 +42,7 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-新しいプロジェクトには `Tests.qs` 、新しい Q # の単体テストを定義するための便利な場所を提供する1つのファイルがあります。
+新しいプロジェクトには、 `Tests.qs` 新しい Q # の単体テストを定義するための便利な場所を提供する1つのファイルがあります。
 初期状態では、このファイルに `AllocateQubit` は、新しく割り当てられた qubit が $ \ket $ 状態であることを確認し、メッセージを出力するサンプル単体テストが1つ含まれてい {0} ます。
 
 ```qsharp
@@ -58,32 +57,32 @@ $ code . # To open in Visual Studio Code
     }
 ```
 
-: new: 型およびを返す引数を受け取るすべての Q # 操作または関数は、 `Unit` `Unit` 属性を使用して単体テストとしてマークできます `@Test("...")` 。 上記の属性の引数は、 `"QuantumSimulator"` テストを実行するターゲットを指定します。 1つのテストを複数のターゲットで実行できます。 たとえば、上に属性を追加し `@Test("ResourcesEstimator")` `AllocateQubit` ます。 
+型と戻り値の引数を受け取るすべての Q # 操作または関数は `Unit` `Unit` 、属性を使用して単体テストとしてマークでき `@Test("...")` ます。 前の例では、その属性の引数が、 `"QuantumSimulator"` テストを実行するターゲットを指定しています。 1つのテストを複数のターゲットで実行できます。 たとえば、の前に属性を追加し `@Test("ResourcesEstimator")` `AllocateQubit` ます。 
 ```qsharp
     @Test("QuantumSimulator")
     @Test("ResourcesEstimator")
     operation AllocateQubit () : Unit {
         ...
 ```
-ファイルを保存し、すべてのテストを実行します。 ここで、2つの単体テストがあります。1つは、QuantumSimulator で AllocateQubit が実行され、もう1つは ResourceEstimator で実行されます。 
+ファイルを保存し、すべてのテストを実行します。 ここで、2つの単体テストがあります。1つはで実行され、もう1つは `AllocateQubit` `QuantumSimulator` で実行さ `ResourcesEstimator` れます。 
 
-Q # コンパイラは、組み込みのターゲット "QuantumSimulator"、"ToffoliSimulator"、および "ResourcesEstimator" を単体テストの有効な実行ターゲットとして認識します。 また、任意の完全修飾名を指定して、カスタム実行ターゲットを定義することもできます。 
+Q # コンパイラは、組み込みのターゲット、 `"QuantumSimulator"` `"ToffoliSimulator"` 、および `"ResourcesEstimator"` 単体テストの有効な実行ターゲットを認識します。 また、任意の完全修飾名を指定して、カスタム実行ターゲットを定義することもできます。 
 
 ### <a name="running-q-unit-tests"></a>Q # の単体テストの実行
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-ソリューションごとの1回限りの設定として、メニューにアクセスしてを `Test` 選択し `Test Settings`  >  `Default Processor Architecture`  >  `X64` ます。
+ソリューションごとの1回限りの設定として、[**テスト**] メニューの [テストの設定] を選択し、[**既定のプロセッサアーキテクチャ > X64 >** ます。
 
 > [!TIP]
 > Visual Studio の既定のプロセッサアーキテクチャ設定は、各ソリューションのソリューションオプション () ファイルに格納され `.suo` ます。
-> このファイルを削除する場合は、プロセッサアーキテクチャとしてをもう一度選択する必要があり `X64` ます。
+> このファイルを削除する場合は、プロセッサアーキテクチャとして**X64**を選択する必要があります。
 
-プロジェクトをビルドし、メニューにアクセスし `Test` てを選択し `Windows`  >  `Test Explorer` ます。 `AllocateQubit`は、グループ内のテストの一覧に表示され `Not Run Tests` ます。 `Run All`この個別のテストを選択または実行すると、成功する必要があります。
+プロジェクトをビルドし、[**テスト**] メニューを開き、[ **Windows > テストエクスプローラー**] を選択します。 **Allocatequbit**は、[**テストを実行しない**] グループのテストの一覧に表示されます。 [**すべて実行**] を選択するか、この個々のテストを実行します。
 
 #### <a name="command-line--visual-studio-code"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
 
-テストを実行するには、プロジェクトフォルダー (を含むフォルダー) に移動 `Tests.csproj` し、コマンドを実行します。
+テストを実行するには、プロジェクトフォルダー (を含むフォルダー) に移動 `Tests.csproj` し、次のコマンドを実行します。
 
 ```bash
 $ dotnet restore
@@ -111,7 +110,7 @@ Test Run Successful.
 Test execution time: 1.9607 Seconds
 ```
 
-単体テストは、名前や実行ターゲットに応じてフィルター処理できます。
+単体テストは、名前または実行ターゲットに応じてフィルター処理できます。
 
 ```bash 
 $ dotnet test --filter "Target=QuantumSimulator"
@@ -125,7 +124,7 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-テストエクスプローラーでテストを実行し、テストをクリックすると、テストの実行に関する情報がパネルに表示されます (成功/失敗の状態、経過時間、および "出力" リンク)。 [出力] リンクをクリックすると、新しいウィンドウでテスト出力が開きます。
+テストエクスプローラーでテストを実行し、テストをクリックすると、テストの実行に関する情報がパネルに表示されます (成功/失敗の状態、経過時間、および出力へのリンク)。 [**出力**] をクリックして、新しいウィンドウでテスト出力を開きます。
 
 ![テスト出力](~/media/unit-test-output.png)
 
@@ -138,9 +137,9 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 ## <a name="facts-and-assertions"></a>ファクトとアサーション
 
-Q # の関数には_論理的_な副作用がないため、出力の種類が空のタプルである関数を実行した場合の_その他の種類_の影響は、 `()` q # プログラム内からは確認できません。
+Q # の関数には_論理的_な副作用がないため、q # プログラム内から、出力の種類が空のタプルである関数を実行した場合は、他の種類の効果を確認することはできません `()` 。
 つまり、ターゲットコンピューターは、この省略によって `()` 次の Q # コードの動作が変更されないことを保証して、が返す関数を実行しないことを選択できます。
-これにより、関数が返されます `()` (つまり `Unit` 、アサーションを埋め込むための便利なツールと、Q # プログラムにロジックをデバッグするためのツール)。 
+この動作により `()` `Unit` 、アサーションを埋め込むための便利なツールや、Q # プログラムにロジックをデバッグするための関数が返されます。 
 
 単純な例を考えてみましょう。
 
@@ -154,17 +153,17 @@ function PositivityFact(value : Double) : Unit
 }
 ```
 
-ここで、キーワードは、 `fail` 計算が続行されないことを示し、Q # プログラムを実行しているターゲットコンピューターで例外が発生します。
-定義上、この種のエラーは、Q # 内からは確認できません。これは、ステートメントに到達した後にそれ以上の Q # コードが実行されないため `fail` です。
-したがって、への呼び出しを行った後にを実行すると、 `PositivityFact` 入力が肯定的であることが保証されます。
+ここで、キーワードは、 `fail` 計算が続行されないことを示し、Q # プログラムを実行しているターゲットコンピューターで例外を発生させます。
+定義上、この種のエラーは、Q # 内では確認できません。これは、ターゲットコンピューターがステートメントに到達した後に Q # コードを実行しなくなったため `fail` です。
+したがって、への呼び出しを実行した後にを続行すると、入力が肯定的であることが `PositivityFact` 保証されます。
 
 名前空間の関数を使用するのと同じ動作を実装できることに注意して `PositivityFact` [`Fact`](xref:microsoft.quantum.diagnostics.fact) <xref:microsoft.quantum.diagnostics> ください。
 
 ```qsharp
-    Fact(value <= 0, "Expected a positive number.");
+    Fact(value > 0, "Expected a positive number.");
 ```
 
-一方、*アサーション*はファクトと同様に使用されますが、ターゲットコンピューターの状態に依存する場合があります。 それに応じて、これらは操作として定義されますが、ファクトは関数として定義されます (上記のように)。
+一方、*アサーション*はファクトと同様に使用されますが、ターゲットコンピューターの状態によって異なる場合があります。 それに応じて、これらは操作として定義されますが、ファクトは関数として定義されます (前の例のように)。
 この違いを理解するには、アサーション内で次のファクトを使用することを検討してください。
 
 ```qsharp
@@ -175,12 +174,12 @@ operation AssertQubitsAreAvailable() : Unit
 ```
 
 ここでは、操作を使用して、 <xref:microsoft.quantum.environment.getqubitsavailabletouse> 使用可能な qubits の数を返します。
-これは、プログラムとその実行環境のグローバルな状態によって明確に依存しているため、の定義 `AssertQubitsAreAvailable` も操作である必要があります。
+これは、プログラムとその実行環境のグローバルな状態によって異なりますが、の定義 `AssertQubitsAreAvailable` も操作である必要があります。
 ただし、そのグローバル状態を使用し `Bool` て、関数への入力として単純な値を生成することができ `Fact` ます。
 
-これらのアイデアを基にして、[準備は](xref:microsoft.quantum.libraries.standard.prelude)、2つの便利なアサーションを提供し、 <xref:microsoft.quantum.intrinsic.assert> <xref:microsoft.quantum.intrinsic.assertprob> 両方とも操作としてモデル化し `()` ます。 これらのアサーションは、特定の対象測定、測定を実行するクォンタムレジスタ、および仮定の結果を記述する P# li オペレーターを受け取ります。
-シミュレーションによって動作するターゲットコンピューターでは、[複製なしの定理](https://en.wikipedia.org/wiki/No-cloning_theorem)によってバインドされていないため、このようなアサーションに渡されたレジスタに支障をきたすことなく、このような測定を実行できます。
-シミュレーターは、上記の関数と同様に、 `PositivityFact` 実際の結果が実際に観察されない場合に計算を中止できます。
+これらのアイデアを基にして構築さ[れた準備は](xref:microsoft.quantum.libraries.standard.prelude)、2つの便利なアサーションを提供 <xref:microsoft.quantum.intrinsic.assert> し、 <xref:microsoft.quantum.intrinsic.assertprob> 両方とも操作としてモデル化されて `()` います。 これらのアサーションは、特定の対象測定、測定が実行されるクォンタムレジスタ、および仮定の結果を記述する P# li オペレーターを受け取ります。
+シミュレーションによって動作するターゲットコンピューターは、[複製なしの定理](https://en.wikipedia.org/wiki/No-cloning_theorem)によってバインドされないため、このようなアサーションに合格するレジスタに支障をきたすことなく、このような測定を実行できます。
+次に、シミュレーターは、前の関数と同様に、 `PositivityFact` 仮定の結果が実際に観測されていない場合に計算を停止できます。
 
 ```qsharp
 using (register = Qubit()) 
@@ -193,9 +192,9 @@ using (register = Qubit())
 }
 ```
 
-物理的なクォンタムハードウェアでは、複製なしの定理がクォンタムの状態を検査できない場合、 `Assert` `AssertProb` 操作と操作は単 `()` に他の効果なしでを返します。
+物理クォンタムハードウェアでは、複製なしの定理がクォンタムの状態を検査できない場合 `Assert` 、 `AssertProb` 操作と操作は単 `()` に他の効果なしでを返します。
 
-名前空間には、 <xref:microsoft.quantum.diagnostics> `Assert` より高度な条件をチェックできるようにするファミリの関数がいくつか用意されています。 
+名前空間には、 <xref:microsoft.quantum.diagnostics> `Assert` さらに高度な条件を確認できるファミリの機能がいくつか用意されています。 
 
 ## <a name="dump-functions"></a>ダンプ関数
 
@@ -213,7 +212,7 @@ Quantum 開発キットの一部として配布された完全な状態のクォ
 ∣3❭:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 ```
 
-最初の行は、対応する qubits の Id を持つコメントを有意な順序で提供します。
+最初の行は、対応する qubits の id を持つコメントを有意な順序で提供します。
 残りの行は、デカルト形式と極座標形式の両方で、basis 状態ベクター $ \ket{n} $ を測定する確率の振幅を示しています。 最初の行の詳細は次のとおりです。
 
 * **`∣0❭:`** この行は、計算基礎の状態に対応します。 `0`
@@ -221,7 +220,7 @@ Quantum 開発キットの一部として配布された完全な状態のクォ
 * **` == `**: 符号は、 `equal` 両方の同等の表現を分離します。
 * **`**********  `**: 大きさをグラフィカルに表示します。の数は、 `*` この状態ベクターを測定する確率に比例します。
 * **`[ 0.500000 ]`**: マグニチュードの数値
-* **`    ---`**: 振幅のフェーズをグラフィックで表現したもの (下記参照)。
+* **`    ---`**: 振幅のフェーズをグラフィカルに表示します (次の出力を参照してください)。
 * **`[ 0.0000 rad ]`**: フェーズの数値 (ラジアン)。
 
 大きさとフェーズの両方がグラフィック表示で表示されます。 マグニチュード表現は、水平方向です。の棒が大きいほど、 `*` 棒が大きくなる確率が大きくなります。 フェーズでは、次の記号を使用して範囲に基づく角度を表します。
@@ -288,7 +287,7 @@ Quantum 開発キットの一部として配布された完全な状態のクォ
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
   > [!TIP]
-  > コードにブレークポイントを配置し、qubit 変数の値を調べることで、Visual Studio で qubit id を調べることができます。次に例を示します。
+  > コードにブレークポイントを配置し、qubit 変数の値を調べることで、Visual Studio で qubit id を見つけることができます。次に例を示します。
   > 
   > ![Visual Studio での qubit id の表示](~/media/qubit_id.png)
   >
@@ -297,7 +296,7 @@ Quantum 開発キットの一部として配布された完全な状態のクォ
 #### <a name="command-line--visual-studio-code"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
 
   > [!TIP]
-  > 関数を使用し、メッセージに qubit 変数を渡すことによって、qubit id を調べることができ <xref:microsoft.quantum.intrinsic.message> ます。次に例を示します。
+  > 関数を使用し、メッセージに qubit 変数を渡すことによって、qubit id を見つけることができ <xref:microsoft.quantum.intrinsic.message> ます。次に例を示します。
   >
   > ```qsharp
   > Message($"0={register2[0]}; 1={register2[1]}");
@@ -312,7 +311,7 @@ Quantum 開発キットの一部として配布された完全な状態のクォ
 
 ***
 
-<xref:microsoft.quantum.diagnostics.dumpmachine>は名前空間の一部である <xref:microsoft.quantum.diagnostics> ため、これを使用するには、ステートメントを追加する必要があり `open` ます。
+<xref:microsoft.quantum.diagnostics.dumpmachine>は名前空間の一部 <xref:microsoft.quantum.diagnostics> であるため、 `open` それにアクセスするためのステートメントを追加する必要があります。
 
 ```qsharp
 namespace Samples {
@@ -331,7 +330,7 @@ namespace Samples {
 
 ### <a name="dumpregister"></a>DumpRegister
 
-<xref:microsoft.quantum.diagnostics.dumpregister>はと同様に機能し <xref:microsoft.quantum.diagnostics.dumpmachine> ますが、情報の量を対応する qubits に限定するために、qubits の配列を受け取ることになります。
+<xref:microsoft.quantum.diagnostics.dumpregister>はと同じように動作し <xref:microsoft.quantum.diagnostics.dumpmachine> ますが、情報の量を対応する qubits に限定するために、qubits の配列も取得する点が異なります。
 
 と同様に <xref:microsoft.quantum.diagnostics.dumpmachine> 、によって生成される情報は <xref:microsoft.quantum.diagnostics.dumpregister> ターゲットコンピューターによって異なります。 完全な状態のクォンタムシミュレーターでは、と同じ形式で指定された qubits によって生成されるクォンタムサブシステムのグローバルフェーズまで、wave 関数がファイルに書き込まれ <xref:microsoft.quantum.diagnostics.dumpmachine> ます。  たとえば、2つの qubits のみが割り当てられ、クォンタム状態が $ $ \begin{align} \ket{\psi} = \ frac {1} {\ sqrt {2} } \ket {00} -\frac{(1 + i)} \ket =-e ^ {であるマシンをもう一度実行します。 {2} {10} -i \ pi/4} ((\ frac {1} {\ sqrt {2} } \ket {0} -\frac{(1 + i)} {2} \ket {1} ) \ otimes \frac{-(1 + i)} {\ sqrt {2} } \ket {0} )、\end{align} $ $ を呼び出すと <xref:microsoft.quantum.diagnostics.dumpregister> 、次の出力が生成され `qubit[0]` ます。
 
@@ -382,6 +381,6 @@ namespace app
 
 ## <a name="debugging"></a>デバッグ
 
-`Assert`および `Dump` 関数と操作の上で、Q # は標準の Visual Studio デバッグ機能のサブセットをサポートしています。[行ブレークポイントの設定](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)、 [F10 を使用](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)したコードのステップ実行、および[クラシック変数の値の検査](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)は、シミュレーターでのコードの実行中に可能です。
+`Assert`および `Dump` 関数と操作の上で、Q # は標準の Visual Studio デバッグ機能のサブセットをサポートしています。[行ブレークポイントの設定](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)、 [F10 を使用したコードのステップ](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)実行、および[クラシック変数の値の検査](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)は、シミュレーターでのコードの実行中に可能です。
 
 Visual Studio Code でのデバッグでは、OmniSharp によって強化された Visual Studio Code 拡張機能のために C# によって提供されるデバッグ機能を利用し、[最新バージョン](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)をインストールする必要があります。 
