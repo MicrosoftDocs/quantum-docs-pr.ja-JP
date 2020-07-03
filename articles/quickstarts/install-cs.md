@@ -6,17 +6,19 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 2b0b16bdd9fccc3b668036e6df2b20e11b32f8b6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 714c15d9589095f0fe395fcd6941672167879dca
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274090"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885504"
 ---
 # <a name="develop-with-q-and-net"></a>Q# と .NET を使用した開発
 
 Q# は、C# や F# などの .NET 言語とうまく動作するように構築されています。
 このガイドでは、Q# を .NET 言語で作成されたホスト プログラムとともに使用する方法を説明します。
+
+まず、Q# アプリケーションと .NET ホストを作成し、次にホストから Q# を呼び出す方法を示します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -26,23 +28,8 @@ Q# は、C# や F# などの .NET 言語とうまく動作するように構築�
 
 最初の手順として、Q# ライブラリのプロジェクトと、Q# ライブラリで定義された演算と関数を呼び出す .NET ホストのプロジェクトを作成します。
 
-### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
-
-- 新しい Q# ライブラリを作成する
-  - **[ファイル]**  ->  **[新規]**  ->  **[プロジェクト]** の順に移動します。
-  - 検索ボックスに、「Q#」と入力します
-  - **[Q# ライブラリ]** を選択します
-  - **[次へ]** を選択します
-  - ライブラリの名前と場所を選択します
-  - [ソリューションとプロジェクトを同じディレクトリに配置する] に**チェックを入れない**ようにします
-  - **[作成]**
-- 新しい C# または F# のホスト プログラムを作成する
-  - **[ファイル]** → **[新規作成]** → **[プロジェクト]** に移動します
-  - C# または F# の [コンソール アプリ (.NET Core)] を選択します
-  - **[次へ]** を選択します
-  - *[ソリューション]* で、[ソリューションに追加] を選択します
-  - ホスト プログラムの名前を選択します
-  - **[作成]**
+お使いの開発環境に対応するタブの指示に従ってください。
+Visual Studio または VS Code 以外のエディターを使用している場合は、コマンド ラインの手順に従ってください。
 
 ### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code またはコマンド ライン](#tab/tabid-cmdline)
 
@@ -72,6 +59,24 @@ Q# は、C# や F# などの .NET 言語とうまく動作するように構築�
   dotnet sln quantum-dotnet.sln add ./quantum/quantum.csproj
   dotnet sln quantum-dotnet.sln add ./host/host.csproj
   ```
+
+### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+
+- 新しい Q# ライブラリを作成する
+  - **[ファイル]**  ->  **[新規]**  ->  **[プロジェクト]** の順に移動します。
+  - 検索ボックスに、「Q#」と入力します
+  - **[Q# ライブラリ]** を選択します
+  - **[次へ]** を選択します
+  - ライブラリの名前と場所を選択します
+  - [ソリューションとプロジェクトを同じディレクトリに配置する] に**チェックを入れない**ようにします
+  - **[作成]**
+- 新しい C# または F# のホスト プログラムを作成する
+  - **[ファイル]** → **[新規作成]** → **[プロジェクト]** に移動します
+  - C# または F# の [コンソール アプリ (.NET Core)] を選択します
+  - **[次へ]** を選択します
+  - *[ソリューション]* で、[ソリューションに追加] を選択します
+  - ホスト プログラムの名前を選択します
+  - **[作成]**
 
 ***
 

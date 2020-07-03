@@ -6,12 +6,12 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 4311ebf9f72254485a20ba721ea2ce19163f4371
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 15015d1673f47faf5a13dde516f834916b4319d6
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274124"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884285"
 ---
 # <a name="develop-with-q-command-line-applications"></a>Q# コマンド ライン アプリケーションを使用した開発
 
@@ -23,7 +23,7 @@ Q# プログラムはそれ自体で実行可能です。C#、F#、Python など
 
 ## <a name="installation"></a>インストール
 
-Q# コマンド ライン アプリケーションはどんな IDE でもビルドできますが、Q# アプリケーションでは Visual Studio Code (VS Code) または Visual Studio IDE を使用することをお勧めします。 これらのツールで開発すると、豊富な機能を活用することができます。
+Q# コマンド ライン アプリケーションはどんな IDE でもビルドできますが、Q# アプリケーションでは Visual Studio Code (VS Code) または Visual Studio IDE を使用することをお勧めします。 これらの環境での開発には、警告、構文の強調表示、プロジェクト テンプレートなど、QDK 拡張機能の豊富な機能が用意されています。
 
 VS Code を構成するには:
 
@@ -35,8 +35,17 @@ Visual Studio を構成するには:
 1. [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 以降をダウンロードしてインストールし、.NET Core クロスプラットフォーム開発ワークロードを有効にします。
 2. [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) をダウンロードしてインストールします。
 
+別の環境の QDK をインストールするには、コマンド ラインで次のように入力します。
 
-## <a name="develop-with-q-using-vs-code"></a>VS Code を使用した Q# での開発
+```dotnetcli
+dotnet new -i Microsoft.Quantum.ProjectTemplates
+```
+
+## <a name="develop-with-q"></a>Q# を使用した開発
+
+お使いの環境に対応するタブの指示に従ってください。
+
+### <a name="vs-code"></a>[VS Code](#tab/tabid-vscode)
 
 Q# プロジェクト テンプレートをインストールします。
 
@@ -64,7 +73,7 @@ Q# プロジェクト テンプレートをインストールします。
 > [!NOTE]
 > 複数のルート フォルダーを持つワークスペースは、VS Code の Q# 拡張機能では現在サポートされていません。 1 つの VS Code ワークスペース内に複数のプロジェクトがある場合は、すべてのプロジェクトが同じルート フォルダー内に含まれている必要があります。
 
-## <a name="develop-with-q-using-visual-studio"></a>Visual Studio を使用した Q# での開発
+### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs)
 
 Q# の `Hello World` アプリケーションを作成して、Visual Studio のインストールを確認します。
 
@@ -83,6 +92,30 @@ Q# の `Hello World` アプリケーションを作成して、Visual Studio の
 > [!NOTE]
 > 1 つの Visual Studio ソリューションに複数のプロジェクトがある場合は、ソリューションに含まれるすべてのプロジェクトが、ソリューションと同じフォルダーまたはそのサブフォルダーのいずれかに存在する必要があります。  
 
+### <a name="other-editors-with-the-command-line"></a>[コマンド ラインを使用した他のエディター](#tab/tabid-cmdline)
+
+Q# の `Hello World` アプリケーションを作成して、インストールを確認します。
+
+1. 新しいアプリケーションを作成します。
+    ```dotnetcli
+    dotnet new console -lang Q# -o runSayHello
+    ```
+
+2. アプリケーション ディレクトリに移動します。
+    ```dotnetcli
+    cd runSayHello
+    ```
+
+    このディレクトリには `Program.qs` という名前のファイルがあるはずです。これは、コンソールにメッセージを表示する簡単な演算を定義する Q# プログラムです。 このテンプレートをテキスト エディターで変更し、独自のクォンタム アプリケーションで上書きすることができます。 
+
+3. 以下のプログラムを実行します。
+    ```dotnetcli
+    dotnet run
+    ```
+
+4. 次のように表示されます。`Hello quantum world!`
+
+***
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
-ms.openlocfilehash: c5611f3e2907791f2dfc1644be0a45515d50dfd7
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: 078d86c808b26c7f0b7b2577020cd9cef9491a9d
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415368"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885016"
 ---
 # <a name="the-q-user-guide"></a>Q# ユーザー ガイド
 
@@ -22,6 +22,8 @@ Q# ユーザー ガイドへようこそ。
 ## <a name="user-guide-contents"></a>ユーザー ガイドの内容
 
 - [Q# の基本](xref:microsoft.quantum.guide.basics):Q# プログラミング言語の目的と機能に関する概要について説明します。 
+
+- [Q# プログラム実行する方法:](xref:microsoft.quantum.guide.host-programs) Q# プログラムの実行方法について説明します。また、コマンド ライン、Q# Jupyter Notebook、または Python や .NET 言語で記述された従来のホスト プログラムから、プログラムを呼び出すためのさまざまな方法の概要を示します。
 
 ### <a name="q-language"></a>Q# 言語
 

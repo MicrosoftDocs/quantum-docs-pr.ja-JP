@@ -2,6 +2,13 @@
 
 | マジック コマンド | まとめ |
 |---------------|---------|
+| [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Azure Quantum ワークスペースに接続するか、現在の接続状態を表示します。 |
+| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Azure Quantum ワークスペースでジョブを実行します。 |
+| [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs) | 現在の Azure Quantum ワークスペースにジョブの一覧を表示します。 |
+| [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output) | 現在の Azure Quantum ワークスペースにジョブの結果を表示します。 |
+| [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status) | 現在の Azure Quantum ワークスペースにジョブの状態を表示します。 |
+| [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit) | Azure Quantum ワークスペースにジョブを送信します。 |
+| [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target) | Azure Quantum ワークスペースでの Q# ジョブ送信のアクティブな実行ターゲットを設定または表示します。 |
 | [`%check_kata`](xref:microsoft.quantum.iqsharp.magic-ref.check_kata) | 1 つの kata のテストについて参照の実装を確認します。 |
 | [`%chemistry.broombridge`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge) | 指定された yaml ファイルから Broombridge の電子構造の問題表現を読み込んで返します。 |
 | [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode) | フェルミオン ハミルトニアンを Q# で利用できる形式にエンコードします。 |
@@ -12,9 +19,9 @@
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | 指定された関数または操作を ResourcesEstimator ターゲット マシンで実行します。 |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | 1 つのテストを実行します。 |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | 現在使用可能なすべてのマジック コマンドの一覧を返します。 |
-| [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | Nuget パッケージを読み込む機能を提供します。 パッケージは nuget ソースの一覧で使用できる必要があります。通常、これには nuget.org が含まれます。 |
+| [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | NuGet パッケージを読み込む機能を提供します。 |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | このカーネルの現在のパフォーマンス メトリックを報告します。 |
 | [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | 指定された関数または操作を QuantumSimulator ターゲット マシンで実行します。 |
-| [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) | 指定された関数または操作を ToffoliSimulator シミュレーター ターゲット マシンで実行します。 |
-| [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who) | 現在のワークスペースに関連するアクションを提供します。 |
-| [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace) | 現在のセッションで定義されているすべての操作と関数の一覧を、対話的に、または現在のワークスペースから読み込んで返します。 |
+| [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) | 指定された関数または操作を ToffoliSimulator ターゲット マシンで実行します。 |
+| [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who) | 現在のセッションで使用できる Q# 操作を一覧表示します。 |
+| [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace) | 現在のワークスペースに関連するアクションを提供します。 |
