@@ -6,31 +6,37 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: 0deb0729a88c49798f32a22a943b935d383c570b
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 1655d18ab9d8638ad356e6fb90994b5c1fd76a25
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327545"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885295"
 ---
-# <a name="working-with-qubits"></a><span data-ttu-id="7f0d2-103">量子ビットの操作</span><span class="sxs-lookup"><span data-stu-id="7f0d2-103">Working with qubits</span></span>
+# <a name="working-with-qubits"></a><span data-ttu-id="842cb-103">量子ビットの操作</span><span class="sxs-lookup"><span data-stu-id="842cb-103">Working with qubits</span></span>
 
-<span data-ttu-id="7f0d2-104">Q # 言語のさまざまな部分を見てきましたが、それについて説明し、qubits 自体を使用する方法を見てみましょう。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-104">Having now seen a variety of different parts of the Q# language, let us get into the thick of it and see how to use qubits themselves.</span></span>
+<span data-ttu-id="842cb-104">Qubits は、クォンタムコンピューティングにおける情報の基本的なオブジェクトです。</span><span class="sxs-lookup"><span data-stu-id="842cb-104">Qubits are the fundamental object of information in quantum computing.</span></span> <span data-ttu-id="842cb-105">Qubits の概要については、「[クォンタムコンピューティングについ](xref:microsoft.quantum.overview.understanding)て」を参照してください。また、数学表現の詳細については、「 [qubits](xref:microsoft.quantum.concepts.qubit)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="842cb-105">For a general introduction to qubits, see [Understanding quantum computing](xref:microsoft.quantum.overview.understanding), and to dive deeper into their mathematical representation, see [The Qubit](xref:microsoft.quantum.concepts.qubit).</span></span> 
 
-<span data-ttu-id="7f0d2-105">関数の本体内では、これらのステートメントを使用できないことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-105">Note that none of these statements are allowed within the body of a function.</span></span>
-<span data-ttu-id="7f0d2-106">これらは、操作内でのみ有効です。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-106">They are only valid within operations.</span></span>
+<span data-ttu-id="842cb-106">この記事では、Q # プログラムで qubits を使用して操作する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="842cb-106">This article explores how to use and work with qubits in a Q# program.</span></span> 
 
-## <a name="allocating-qubits"></a><span data-ttu-id="7f0d2-107">割り当て (Qubits を)</span><span class="sxs-lookup"><span data-stu-id="7f0d2-107">Allocating Qubits</span></span>
+> [!IMPORTANT]
+><span data-ttu-id="842cb-107">この記事で説明されているどのステートメントも、関数の本体内では有効ではありません。</span><span class="sxs-lookup"><span data-stu-id="842cb-107">None of the statements discussed in this article are valid within the body of a function.</span></span> <span data-ttu-id="842cb-108">これらは、操作内でのみ有効です。</span><span class="sxs-lookup"><span data-stu-id="842cb-108">They are only valid within operations.</span></span>
 
-### <a name="clean-qubits"></a><span data-ttu-id="7f0d2-108">Clean qubits</span><span class="sxs-lookup"><span data-stu-id="7f0d2-108">Clean qubits</span></span>
+## <a name="allocating-qubits"></a><span data-ttu-id="842cb-109">割り当て (Qubits を)</span><span class="sxs-lookup"><span data-stu-id="842cb-109">Allocating Qubits</span></span>
 
-<span data-ttu-id="7f0d2-109">ステートメント `using` は、ステートメントブロック中に使用する新しい qubits を*割り当てる*ために使用されます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-109">The `using` statement is used to *allocate* new qubits for use during a statement block.</span></span>
+<span data-ttu-id="842cb-110">物理 qubits は、quantum コンピューターの貴重なリソースであるため、コンパイラのジョブの一部として、それらが可能な限り効率的に使用されていることを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="842cb-110">Because physical qubits are a precious resource in a quantum computer, part of the compiler's job is to make sure they are being used as efficiently as possible.</span></span>
+<span data-ttu-id="842cb-111">そのため、特定のステートメントブロック内で使用するために qubits を*割り当てる*には、Q # に指示する必要があります。</span><span class="sxs-lookup"><span data-stu-id="842cb-111">As such, you need to tell Q# to *allocate* qubits for use within a particular statement block.</span></span>
+<span data-ttu-id="842cb-112">Qubits を1つの qubits として割り当てることも、*レジスタ*と呼ばれる qubits の配列として割り当てることもできます。</span><span class="sxs-lookup"><span data-stu-id="842cb-112">You can allocate qubits as a single qubit, or as an array of qubits, known as a *register*.</span></span> 
 
-<span data-ttu-id="7f0d2-110">このステートメントは、キーワードと、その `using` 後に始めかっこ `(` 、バインド、終わりかっこ `)` 、および qubits を使用できるようにするステートメントブロックで構成されます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-110">The statement consists of the keyword `using`, followed by an open parenthesis `(`, a binding, a close parenthesis `)`, and the statement block within which the qubits will be available.</span></span>
-<span data-ttu-id="7f0d2-111">バインディングは、ステートメントと同じパターンに従い `let` ます。1つの記号または記号の組、等号 (= `=` )、1つの値、または*初期化子*の一致するタプルのいずれかです。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-111">The binding follows the same pattern as `let` statements: either a single symbol or a tuple of symbols, followed by an equals sign `=`, and either a single value or a matching tuple of *initializers*.</span></span>
+### <a name="clean-qubits"></a><span data-ttu-id="842cb-113">Clean qubits</span><span class="sxs-lookup"><span data-stu-id="842cb-113">Clean qubits</span></span>
 
-<span data-ttu-id="7f0d2-112">初期化子は、として指定された1つの qubit、 `Qubit()` または qubit の配列 (は式) に対して使用でき `Qubit[n]` `n` `Int` ます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-112">Initializers are available either for a single qubit, indicated as `Qubit()`, or an array of qubits, `Qubit[n]`, where `n` is an `Int` expression.</span></span>
-<span data-ttu-id="7f0d2-113">たとえば、</span><span class="sxs-lookup"><span data-stu-id="7f0d2-113">For example,</span></span>
+<span data-ttu-id="842cb-114">ステートメントを使用して、 `using` ステートメントブロック中に使用する新しい qubits を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="842cb-114">Use the `using` statement to allocate new qubits for use during a statement block.</span></span>
+
+<span data-ttu-id="842cb-115">ステートメントは、キーワードと、 `using` その後にかっこで囲まれたバインディング `( )` と、qubits が使用可能なステートメントブロックで構成されます。</span><span class="sxs-lookup"><span data-stu-id="842cb-115">The statement consists of the keyword `using`, followed by a binding enclosed in parentheses `( )` and the statement block within which the qubits are available.</span></span>
+<span data-ttu-id="842cb-116">バインディングは、ステートメントと同じパターンに従い `let` ます。1つの記号または記号の組、等号 (= `=` )、1つの値、または*初期化子*の一致するタプルのいずれかです。</span><span class="sxs-lookup"><span data-stu-id="842cb-116">The binding follows the same pattern as `let` statements: either a single symbol or a tuple of symbols, followed by an equals sign `=`, and either a single value or a matching tuple of *initializers*.</span></span>
+
+<span data-ttu-id="842cb-117">初期化子は、として指定された1つの qubit、 `Qubit()` または qubit の配列 (は式) に対して使用でき `Qubit[n]` `n` `Int` ます。</span><span class="sxs-lookup"><span data-stu-id="842cb-117">Initializers are available either for a single qubit, indicated as `Qubit()`, or an array of qubits, `Qubit[n]`, where `n` is an `Int` expression.</span></span>
+<span data-ttu-id="842cb-118">例:</span><span class="sxs-lookup"><span data-stu-id="842cb-118">For example,</span></span>
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -41,25 +47,25 @@ using ((auxiliary, register) = (Qubit(), Qubit[5])) {
 }
 ```
 
-<span data-ttu-id="7f0d2-114">この方法で割り当てられた qubits は、$ \ket {0} $ 状態から開始されます。上記の例では、この `register` 状態は $ \ket {00000} = \ket/ {0} otimes \ket/ {0} otimes/cドット/otimes \ket {0} $ です。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-114">Any qubits allocated in this way start off in the $\ket{0}$ state; in the example above, `register` is thus in the state $\ket{00000} = \ket{0} \otimes \ket{0} \otimes \cdots \otimes \ket{0}$.</span></span>
-<span data-ttu-id="7f0d2-115">ブロックの末尾に `using` は、そのブロックによって割り当てられたすべての qubits がすぐに割り当て解除され、それ以上使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-115">At the end of the `using` block, any qubits allocated by that block are immediately deallocated and cannot be used further.</span></span>
+<span data-ttu-id="842cb-119">この方法で割り当てられた qubits は、$ \ket {0} $ 状態から開始されます。</span><span class="sxs-lookup"><span data-stu-id="842cb-119">Any qubits allocated in this way start off in the $\ket{0}$ state.</span></span> <span data-ttu-id="842cb-120">したがって、前の例で `auxiliary` は、は、状態が $ \ket $ である1つの qubit で、 {0} `register` 5 つの qubit 状態は $ \ket {00000} = \ket/ {0} otimes \ket/ {0} otimes/cドット/otimes \ket {0} $ です。</span><span class="sxs-lookup"><span data-stu-id="842cb-120">Thus in the previous example, `auxiliary` is a single qubit in the state $\ket{0}$, and `register` is in the five-qubit state $\ket{00000} = \ket{0} \otimes \ket{0} \otimes \cdots \otimes \ket{0}$.</span></span>
+<span data-ttu-id="842cb-121">ブロックの末尾に `using` は、そのブロックによって割り当てられたすべての qubits がすぐに割り当て解除され、それ以上使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="842cb-121">At the end of the `using` block, any qubits allocated by that block are immediately deallocated and cannot be used further.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="7f0d2-116">ターゲットコンピューターでは {0} 、割り当てのために再利用して他のブロックに提供できるように、割り当て解除の直前に qubits が $ \ket $ 状態にあることを想定してい `using` ます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-116">Target machines expect that qubits are in the $\ket{0}$ state immediately before deallocation, so that they can be reused and offered to other `using` blocks for allocation.</span></span>
-> <span data-ttu-id="7f0d2-117">可能な場合は常に、ユニタリ操作を使用して、割り当てられた qubits を $ \ket $ に返し {0} ます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-117">Whenever possible, use unitary operations to return any allocated qubits to $\ket{0}$.</span></span>
-> <span data-ttu-id="7f0d2-118">必要に応じて、 @"microsoft.quantum.intrinsic.reset" 操作を使用して qubit を測定し、測定結果を使用して、測定された qubit が $ \ket $ に返されるようにすることができ {0} ます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-118">If need be, the @"microsoft.quantum.intrinsic.reset" operation can be used to measure a qubit instead, and to use that measurement result to ensure that the measured qubit is returned to $\ket{0}$.</span></span> <span data-ttu-id="7f0d2-119">このような測定値は、残りの qubits を使用してすべての entangを破棄するため、計算に影響を与える可能性があります。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-119">Such a measurement will destroy any entanglement with the remaining qubits and can thus impact the computation.</span></span>
+> <span data-ttu-id="842cb-122">ターゲットコンピューターは、割り当て解除された qubits を再利用し、割り当てのために他のブロックに提供でき `using` ます。</span><span class="sxs-lookup"><span data-stu-id="842cb-122">Target machines can reuse deallocated qubits and offer them to other `using` blocks for allocation.</span></span> <span data-ttu-id="842cb-123">そのため、ターゲットコンピューターでは、割り当て解除の直前に、qubits が $ \ket $ 状態にあることを想定してい {0} ます。</span><span class="sxs-lookup"><span data-stu-id="842cb-123">As such, the target machine expects that qubits are in the $\ket{0}$ state immediately before deallocation.</span></span>
+> <span data-ttu-id="842cb-124">可能な場合は常に、ユニタリ操作を使用して、割り当てられた qubits を $ \ket $ に返し {0} ます。</span><span class="sxs-lookup"><span data-stu-id="842cb-124">Whenever possible, use unitary operations to return any allocated qubits to $\ket{0}$.</span></span>
+> <span data-ttu-id="842cb-125">必要に応じて、操作を使用できます @"microsoft.quantum.intrinsic.reset" 。この操作では、演算子を {0} 測定し、結果に基づいて条件付きで演算を実行することで、qubit を $ \ket $ に返します。</span><span class="sxs-lookup"><span data-stu-id="842cb-125">If need be, you can use the @"microsoft.quantum.intrinsic.reset" operation, which returns the qubit to $\ket{0}$ by measuring it and conditionally performing an operation based on the result.</span></span> <span data-ttu-id="842cb-126">このような測定値は、残りの qubits を使用して結び付き破棄し、計算に影響を与える可能性があります。</span><span class="sxs-lookup"><span data-stu-id="842cb-126">Such a measurement destroys any entanglement with the remaining qubits and can thus impact the computation.</span></span>
 
 
-### <a name="borrowed-qubits"></a><span data-ttu-id="7f0d2-120">借りた Qubits</span><span class="sxs-lookup"><span data-stu-id="7f0d2-120">Borrowed Qubits</span></span>
+### <a name="borrowed-qubits"></a><span data-ttu-id="842cb-127">借りた Qubits</span><span class="sxs-lookup"><span data-stu-id="842cb-127">Borrowed Qubits</span></span>
 
-<span data-ttu-id="7f0d2-121">この `borrowing` ステートメントは、特定の状態にする必要がない、一時的な使用に対して qubits を使用できるようにするために使用されます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-121">The `borrowing` statement is used to make qubits available for temporary use, which do not need be in a specific state.</span></span>
+<span data-ttu-id="842cb-128">ステートメントを使用して `borrowing` 、一時的な使用のために qubits を割り当てます。これは、特定の状態である必要はありません。</span><span class="sxs-lookup"><span data-stu-id="842cb-128">Use the `borrowing` statement to allocate qubits for temporary use, which do not need to be in a specific state.</span></span>
 
-<span data-ttu-id="7f0d2-122">借用機構を使用すると、計算中にスクラッチ領域として使用できる qubits を割り当てることができます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-122">The borrowing mechanism allows the allocation of qubits that can be used as scratch space during a computation.</span></span>
-<span data-ttu-id="7f0d2-123">通常、これらの qubits はクリーンな状態ではありません。つまり、$ \ket $ などの既知の状態で初期化されるとは限りません。 {0}</span><span class="sxs-lookup"><span data-stu-id="7f0d2-123">These qubits are generally not in a clean state, i.e., they are not necessarily initialized in a known state such as $\ket{0}$.</span></span>
-<span data-ttu-id="7f0d2-124">これらの状態は不明であるため、クォンタムコンピューターのメモリの他の部分との間でも、これらは "ダーティな" qubits と呼ばれることがよくあります。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-124">These are often referred to as "dirty" qubits because their state is unknown and can even be entangled with other parts of the quantum computer's memory.</span></span>
+<span data-ttu-id="842cb-129">計算時には、借りた qubits をスクラッチ領域として使用できます。</span><span class="sxs-lookup"><span data-stu-id="842cb-129">You can use borrowed qubits as scratch space during a computation.</span></span>
+<span data-ttu-id="842cb-130">これらの qubits は、一般にクリーンな状態ではありません。つまり、$ \ket $ などの既知の状態で初期化されるとは限りません {0} 。</span><span class="sxs-lookup"><span data-stu-id="842cb-130">These qubits are generally not in a clean state, that is, they are not necessarily initialized in a known state such as $\ket{0}$.</span></span>
+<span data-ttu-id="842cb-131">これらの状態は不明であるため、クォンタムコンピューターのメモリの他の部分との間でも、これらは "ダーティな" qubits と呼ばれることがよくあります。</span><span class="sxs-lookup"><span data-stu-id="842cb-131">These are often referred to as "dirty" qubits because their state is unknown and can even be entangled with other parts of the quantum computer's memory.</span></span>
 
-<span data-ttu-id="7f0d2-125">バインドは、ステートメントと同じパターンおよび規則に従い `using` ます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-125">The binding follows the same pattern and rules as the one in a `using` statement.</span></span>
-<span data-ttu-id="7f0d2-126">たとえば、</span><span class="sxs-lookup"><span data-stu-id="7f0d2-126">For example,</span></span>
+<span data-ttu-id="842cb-132">バインディングは、ステートメントと同じパターンおよび規則に従い `using` ます。</span><span class="sxs-lookup"><span data-stu-id="842cb-132">The binding follows the same pattern and rules as the `using` statement.</span></span>
+<span data-ttu-id="842cb-133">例:</span><span class="sxs-lookup"><span data-stu-id="842cb-133">For example,</span></span>
 ```qsharp
 borrowing (qubit = Qubit()) {
     // ...
@@ -68,27 +74,28 @@ borrowing ((auxiliary, register) = (Qubit(), Qubit[5])) {
     // ...
 }
 ```
-<span data-ttu-id="7f0d2-127">借用した qubits は不明な状態であり、ステートメントブロックの最後でスコープ外に出ます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-127">The borrowed qubits are in an unknown state and go out of scope at the end of the statement block.</span></span>
-<span data-ttu-id="7f0d2-128">借り手は、貸し出しされたときと同じ状態に qubits を残すことをコミットします。つまり、ステートメントブロックの先頭と末尾の状態は同じであると想定されます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-128">The borrower commits to leaving the qubits in the same state they were in when they were borrowed,  i.e. their state at the beginning and at the end of the statement block is expected to be the same.</span></span>
-<span data-ttu-id="7f0d2-129">特に、この状態は必ずしも古典的な状態ではありません。ほとんどの場合、借りているスコープには測定値を含めないでください。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-129">This state in particular is not necessarily a classical state, such that in most cases, borrowing scopes should not contain measurements.</span></span> 
+<span data-ttu-id="842cb-134">借用した qubits は不明な状態であり、ステートメントブロックの最後でスコープ外に出ます。</span><span class="sxs-lookup"><span data-stu-id="842cb-134">The borrowed qubits are in an unknown state and go out of scope at the end of the statement block.</span></span>
+<span data-ttu-id="842cb-135">借り手は、借用したときと同じ状態で qubits を離れるようにコミットします。つまり、ステートメントブロックの先頭と末尾の状態は同じである必要があります。</span><span class="sxs-lookup"><span data-stu-id="842cb-135">The borrower commits to leaving the qubits in the same state they were in when they borrowed them; that is, their state at the beginning and the end of the statement block should be the same.</span></span>
+<span data-ttu-id="842cb-136">この状態は必ずしも従来の状態ではないため、ほとんどの場合、スコープには測定値を含めないでください。</span><span class="sxs-lookup"><span data-stu-id="842cb-136">Because this state is not necessarily a classical state, in most cases borrowing scopes should not contain measurements.</span></span> 
 
-<span data-ttu-id="7f0d2-130">Qubits を借りている場合、システムはまず、使用中であるが、ステートメントの本体ではアクセスされていない qubits から要求を入力しようとし `borrowing` ます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-130">When borrowing qubits, the system will first try to fill the request from qubits that are in use but that are not accessed during the body of the `borrowing` statement.</span></span>
-<span data-ttu-id="7f0d2-131">このような qubits が不足している場合は、要求を完了するために新しい qubits が割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-131">If there aren't enough such qubits, then it will allocate new qubits to complete the request.</span></span>
+<span data-ttu-id="842cb-137">Qubits を借りている場合、システムはまず、使用中であるが、ステートメントの本体ではアクセスされていない qubits から要求を入力しようとし `borrowing` ます。</span><span class="sxs-lookup"><span data-stu-id="842cb-137">When borrowing qubits, the system first tries to fill the request from qubits that are in use but not accessed during the body of the `borrowing` statement.</span></span>
+<span data-ttu-id="842cb-138">このような qubits が不足している場合は、新しい qubits を割り当てて要求を完了します。</span><span class="sxs-lookup"><span data-stu-id="842cb-138">If there aren't enough such qubits, then it allocates new qubits to complete the request.</span></span>
 
+<span data-ttu-id="842cb-139">ダーティ qubits の既知のユースケースの中では、incrementers の少数の qubits と実装のみを必要とする、マルチ制御の CNOT ゲートの実装があります。</span><span class="sxs-lookup"><span data-stu-id="842cb-139">Among the known use cases of dirty qubits are implementations of multi-controlled CNOT gates that require only very few qubits and implementation of incrementers.</span></span>
+<span data-ttu-id="842cb-140">Q # での使用例については、この記事の「[貸し出し Qubits の例](#borrowing-qubits-example)」を参照するか、 [*2n + 2 Qubits と Toffoli ベースのモジュール乗算 (Based*](https://arxiv.org/abs/1611.07995) 、roetteler、および svore 2017) を使用して、借り qubits を利用するアルゴリズムについてのホワイトペーパーを参照してください。</span><span class="sxs-lookup"><span data-stu-id="842cb-140">For an example of their use in Q#, see [Borrowing Qubits Example](#borrowing-qubits-example) in this article, or the paper [*Factoring using 2n+2 qubits with Toffoli based modular multiplication*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler, and Svore 2017) for an algorithm which utilizes borrowed qubits.</span></span>
 
-<span data-ttu-id="7f0d2-132">ダーティ qubits の既知のユースケースの中では、incrementers の少数の qubits と実装のみを必要とする、マルチ制御の CNOT ゲートの実装があります。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-132">Among the known use cases of dirty qubits are implementations of multi-controlled CNOT gates that require only very few qubits and implementation of incrementers.</span></span>
-<span data-ttu-id="7f0d2-133">次の[例](#borrowing-qubits-example)を参照して Q # での使用例をご覧ください。または、借り qubits を利用するアルゴリズムに対して、 [*2n + 2 Qubits と Toffoli ベースのモジュール乗算 2017 (ベースのモジュール乗算) を使用してファクタリング*](https://arxiv.org/abs/1611.07995)したホワイトペーパーを参照してください。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-133">See the [Borrowing Qubits Example](#borrowing-qubits-example) below to see an example of their use in Q#, or the paper [*Factoring using 2n+2 qubits with Toffoli based modular multiplication*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler, and Svore 2017) for an algorithm which utilizes borrowed qubits.</span></span>
+## <a name="intrinsic-operations"></a><span data-ttu-id="842cb-141">組み込みの操作</span><span class="sxs-lookup"><span data-stu-id="842cb-141">Intrinsic Operations</span></span>
 
+<span data-ttu-id="842cb-142">割り当てられると、関数と操作に qubit を渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="842cb-142">Once allocated, you can pass a qubit to functions and operations.</span></span>
+<span data-ttu-id="842cb-143">ある意味では、これは、実行可能なアクションがすべて操作として定義されているため、Q # プログラムが qubit を使用して実行できることです。</span><span class="sxs-lookup"><span data-stu-id="842cb-143">In some sense, this is all that a Q# program can do with a qubit, as the actions that can be taken are all defined as operations.</span></span>
 
-## <a name="intrinsic-operations"></a><span data-ttu-id="7f0d2-134">組み込みの操作</span><span class="sxs-lookup"><span data-stu-id="7f0d2-134">Intrinsic Operations</span></span>
+<span data-ttu-id="842cb-144">この記事では、qubits との対話に使用できるいくつかの便利な Q # 操作について説明します。</span><span class="sxs-lookup"><span data-stu-id="842cb-144">This article discusses a few useful Q# operations that you can use to interact with qubits.</span></span>
+<span data-ttu-id="842cb-145">これらおよび他の詳細については、「[組み込みの操作と関数](xref:microsoft.quantum.libraries.standard.prelude)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="842cb-145">For more detail about these and others, see [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude).</span></span> 
 
-<span data-ttu-id="7f0d2-135">割り当てられた後、qubit を関数と操作に渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-135">Once allocated, a qubit can then be passed to functions and operations.</span></span>
-<span data-ttu-id="7f0d2-136">ある意味では、これは、実行可能なアクションがすべて操作として定義されているため、Q # プログラムが qubit を使用して実行できることです。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-136">In some sense, this is all that a Q# program can do with a qubit, as the actions that can be taken are all defined as operations.</span></span>
-<span data-ttu-id="7f0d2-137">これらの操作については、[組み込みの操作と関数](xref:microsoft.quantum.libraries.standard.prelude)で詳しく説明しますが、ここでは、qubits との対話に使用できるいくつかの便利な操作について説明します。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-137">We will see these operations in more detail in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), but for now, we mention a few useful operations that can be used to interact with qubits.</span></span>
+<span data-ttu-id="842cb-146">1つ目の方法として、1つの $Z $、$Y $、および $ $X、 [`X`](xref:microsoft.quantum.intrinsic.x) それぞれが型を持つ組み込みの操作、、およびによって Q # で表され [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) `(Qubit => Unit is Adj + Ctl)` ます。</span><span class="sxs-lookup"><span data-stu-id="842cb-146">First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in Q# by the intrinsic operations [`X`](xref:microsoft.quantum.intrinsic.x), [`Y`](xref:microsoft.quantum.intrinsic.y), and [`Z`](xref:microsoft.quantum.intrinsic.z), each of which has type `(Qubit => Unit is Adj + Ctl)`.</span></span>
 
-<span data-ttu-id="7f0d2-138">1つ目の方法として、1つの $Z $、$Y $、および $ $X、 `X` それぞれが型を持つ組み込みの操作、、およびによって Q # で表され `Y` `Z` `(Qubit => Unit is Adj + Ctl)` ます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-138">First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in Q# by the intrinsic operations `X`, `Y`, and `Z`, each of which has type `(Qubit => Unit is Adj + Ctl)`.</span></span>
-<span data-ttu-id="7f0d2-139">「組み込みの[操作と関数](xref:microsoft.quantum.libraries.standard.prelude)」で説明されているように、$X $ として、がビットフリップ演算であるか、そうではないと考えることができ `X` ます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-139">As described in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), we can think of $X$ and hence of `X` as a bit-flip operation or NOT gate.</span></span>
-<span data-ttu-id="7f0d2-140">この操作を実行すると、 `X` いくつかのクラシックビット文字列 $s $: で $ \ket{s_0 s_1 \ ドット s_n} $ という形式の状態を準備できます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-140">The `X` operation lets us prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:</span></span>
+<span data-ttu-id="842cb-147">「組み込みの[操作と関数](xref:microsoft.quantum.libraries.standard.prelude)」で説明されているように、$ $X `X` は、ビットフリップ演算または NOT gate として考えられます。</span><span class="sxs-lookup"><span data-stu-id="842cb-147">As described in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), think of $X$ and hence of `X` as a bit-flip operation or NOT gate.</span></span>
+<span data-ttu-id="842cb-148">操作を使用して、 `X` $ \ket{s_0 s_1 \ ドット s_n} $ の形式の状態を準備できます。これは、一部のクラシックビット文字列 $s $:</span><span class="sxs-lookup"><span data-stu-id="842cb-148">You can use the `X` operation to prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:</span></span>
 
 ```qsharp
 operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit
@@ -108,57 +115,68 @@ operation RunExample() : Unit {
             register
         );
         // At this point, register now has the state |11001001〉.
-        // Resetting the qubits will allow us to deallocate them properly.
+        // Remember to reset the qubits before deallocation:
         ResetAll(register);
     }
 }
 ```
 
 > [!TIP]
-> <span data-ttu-id="7f0d2-141">後で、手動によるフロー制御を必要としない、この操作を記述するよりコンパクトな方法を紹介します。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-141">Later, we will see more compact ways of writing this operation that do not require manual flow control.</span></span>
+> <span data-ttu-id="842cb-149">後で、手動による制御フローを必要としない、この操作をよりコンパクトな方法で作成できます。</span><span class="sxs-lookup"><span data-stu-id="842cb-149">Later, you will see more compact ways of writing this operation that do not require manual control flow.</span></span>
 
-<span data-ttu-id="7f0d2-142">また、 {0} {1} {2} {-} {0} {1} {2} 組み込み操作によって Q # で表される \ket transform $H $ を使用して、$ \ket{+} = \ left (\ket + \ket →)/\ sqrt $ および $ \ket = \ left (\ket-Hadamard/right)/\ sqrt $ などの状態を準備することもでき `H : (Qubit => Unit is Adj + Ctl)` ます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-142">We can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, which is represented in Q# by the intrinsic operation `H : (Qubit => Unit is Adj + Ctl)`:</span></span>
+<span data-ttu-id="842cb-150">また、\Ket transform $H $ を使用して、$ \ket{+} = \ left (\ket {0} + \ket, {1} right)/\ sqrt {2} $ および $ \ket {-} = \ left (\ket-Hadamard/right)//sqrt $ などの状態を準備することもできます {0} {1} {2} 。これは、組み込み> の操作によって Q # で表され [`H`](xref:microsoft.quantum.intrinsic.h) ます。</span><span class="sxs-lookup"><span data-stu-id="842cb-150">You can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, which is represented in Q# by the intrinsic operation [`H`](xref:microsoft.quantum.intrinsic.h) (also of type (Qubit => Unit is Adj + Ctl)\`):</span></span>
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
     // First, get a computational basis state of the form
-    // |s_0 s_1 ... s_n〉 by using PrepareBitString, above.
+    // |s_0 s_1 ... s_n〉 by using PrepareBitString in the earlier example.
     PrepareBitString(bitstring, register);
-    // Next, we use that |+〉 = H|0〉 and |-〉 = H|1〉 to
-    // prepare the state we want.
+    // Next, use that |+〉 = H|0〉 and |-〉 = H|1〉 to
+    // prepare the desired state.
     for (idxQubit in IndexRange(register)) {
         H(register[idxQubit]);
     }
 }
 ```
 
-## <a name="measurements"></a><span data-ttu-id="7f0d2-143">測定</span><span class="sxs-lookup"><span data-stu-id="7f0d2-143">Measurements</span></span>
+## <a name="measurements"></a><span data-ttu-id="842cb-151">測定</span><span class="sxs-lookup"><span data-stu-id="842cb-151">Measurements</span></span>
 
-<span data-ttu-id="7f0d2-144">組み込みの非インサム演算である操作を使用する `Measure` と、型のオブジェクトから古典的な情報を抽出し、その結果 `Qubit` として古典的な値を割り当てることができます。これには予約済みの型があり、結果はクォンタム状態ではなくなっていることを `Result` 示します。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-144">Using the `Measure` operation, which is a built-in intrinsic non-unitary operation, we can extract classical information from an object of type `Qubit` and assign a classical value as a result, which has a reserved type `Result`, indicating that the result is no longer a quantum state.</span></span>
-<span data-ttu-id="7f0d2-145">への入力 `Measure` は、Bloch 球の p li 軸で、型 `Pauli` (たとえば、) の値 `PauliX` と型の値で表され `Qubit` ます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-145">The input to `Measure` is a Pauli axis on the Bloch sphere, represented by a value of type `Pauli` (for instance `PauliX`) and an value of type `Qubit`.</span></span>
+<span data-ttu-id="842cb-152">個々の qubits の測定は、 [Bloch 球の p](xref:microsoft.quantum.glossary#bloch-sphere)li 軸によって表される異なるベースで実行できます。</span><span class="sxs-lookup"><span data-stu-id="842cb-152">Measurements of individual qubits can be performed in different bases, each represented by a Pauli axis on the [Bloch sphere](xref:microsoft.quantum.glossary#bloch-sphere).</span></span>
+<span data-ttu-id="842cb-153">*計算基準*はベースを指し、 `PauliZ` 測定に最も一般的に使用されます。</span><span class="sxs-lookup"><span data-stu-id="842cb-153">The *computational basis* refers to the `PauliZ` basis, and is the most common basis used for measurement.</span></span>
 
-<span data-ttu-id="7f0d2-146">単純な例として、次の操作があります。この操作では、$ \ket $ 状態に1つの qubit が割り当てられ、 {0} Hadamard 操作が適用され、その `H` 結果が基になり `PauliZ` ます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-146">A simple example is the following operation, which allocates one qubit in the $\ket{0}$ state, then applies a Hadamard operation `H` to it and measures the result in the `PauliZ` basis.</span></span>
+### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a><span data-ttu-id="842cb-154">1つの qubit を基準にして測定する `PauliZ`</span><span class="sxs-lookup"><span data-stu-id="842cb-154">Measure a single qubit in the `PauliZ` basis</span></span>
+
+<span data-ttu-id="842cb-155">演算を使用します [`M`](xref:microsoft.quantum.intrinsic.m) 。この操作は組み込みの非イン数値演算であり、1つの qubit を `PauliZ` 基準にして、その結果に古典的な値を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="842cb-155">Use the [`M`](xref:microsoft.quantum.intrinsic.m) operation, which is a built-in intrinsic non-unitary operation, to measure a single qubit in the `PauliZ` basis and assign a classical value to the result.</span></span>
+<span data-ttu-id="842cb-156">`M`には、予約された戻り値の型があります `Result` 。これは、値を取得するか、測定された `Zero` `One` 状態 $ \ket {0} $ または $ \ket $-に対応します。これは、 {1} 結果がクォンタムの状態ではなくなったことを示します。</span><span class="sxs-lookup"><span data-stu-id="842cb-156">`M` has a reserved return type, `Result`, which can only take values `Zero` or `One` corresponding to the measured states $\ket{0}$ or $\ket{1}$ - indicating that the result is no longer a quantum state.</span></span>
+
+<span data-ttu-id="842cb-157">単純な例として、次の操作があります。この操作では、$ \ket $ 状態に1つの qubit が割り当てられ、 {0} Hadamard 操作が適用され、その `H` 結果が基になり `PauliZ` ます。</span><span class="sxs-lookup"><span data-stu-id="842cb-157">A simple example is the following operation, which allocates one qubit in the $\ket{0}$ state, then applies a Hadamard operation `H` to it and measures the result in the `PauliZ` basis.</span></span>
 
 ```qsharp
 operation MeasureOneQubit() : Result {
     // The following using block creates a fresh qubit and initializes it
     // in the |0〉 state.
     using (qubit = Qubit()) {
-        // We apply a Hadamard operation H to the state, thereby preparing the
+        // Apply a Hadamard operation H to the state, thereby preparing the
         // state 1 / sqrt(2) (|0〉 + |1〉).
         H(qubit);
-        // Now we measure the qubit in Z-basis.
+        // Now measure the qubit in Z-basis.
         let result = M(qubit);
         // As the qubit is now in an eigenstate of the measurement operator,
-        // we reset the qubit before releasing it.
+        // reset the qubit before releasing it.
         if (result == One) { X(qubit); }
-        // Finally, we return the result of the measurement.
+        // Finally, return the result of the measurement.
         return result;
     }
 }
 ```
 
-<span data-ttu-id="7f0d2-147">次の演算では、より複雑な例が示されています。この操作では、 `true` 型のレジスタ内のすべての qubits が、指定された pare によって測定された場合は、ブール値を返し、それ以外の場合は `Qubit[]` を返し `false` ます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-147">A slightly more complicated example is given by the following operation, which returns the Boolean value `true` if all qubits in a register of type `Qubit[]` are in the state zero when measured in a specified Pauli basis, and which returns `false` otherwise.</span></span>
+### <a name="measure-one-or-more-qubits-in-specific-bases"></a><span data-ttu-id="842cb-158">特定のベースの1つ以上の qubits を測定する</span><span class="sxs-lookup"><span data-stu-id="842cb-158">Measure one or more qubits in specific bases</span></span>
+
+<span data-ttu-id="842cb-159">特定のベースの1つ以上の qubits の配列を測定するには、操作を使用し [`Measure`](xref:microsoft.quantum.intrinsic.measure) ます。</span><span class="sxs-lookup"><span data-stu-id="842cb-159">To measure an array of one or more qubits in specific bases, you can use the [`Measure`](xref:microsoft.quantum.intrinsic.measure) operation.</span></span>
+
+<span data-ttu-id="842cb-160">への入力 `Measure` は `Pauli` 、型 (たとえば、) の配列で `[PauliX, PauliZ, PauliZ]` あり、qubits の配列です。</span><span class="sxs-lookup"><span data-stu-id="842cb-160">The inputs to `Measure` are an array of `Pauli` types (for example, `[PauliX, PauliZ, PauliZ]`) and an array of qubits.</span></span>
+
+<span data-ttu-id="842cb-161">次の演算では、より複雑な例が示されています。この操作では、 `true` 型のレジスタ内のすべての qubits が、指定された pare によって測定された場合は、ブール値を返し、それ以外の場合は `Qubit[]` を返し `false` ます。</span><span class="sxs-lookup"><span data-stu-id="842cb-161">A slightly more complicated example is given by the following operation, which returns the Boolean value `true` if all qubits in a register of type `Qubit[]` are in the state zero when measured in a specified Pauli basis, and which returns `false` otherwise.</span></span>
 
 ```qsharp
 operation MeasureIfAllQubitsAreZero(qubits : Qubit[], pauli : Pauli) : Bool {
@@ -172,10 +190,11 @@ operation MeasureIfAllQubitsAreZero(qubits : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
-## <a name="borrowing-qubits-example"></a><span data-ttu-id="7f0d2-148">借りた Qubits の例</span><span class="sxs-lookup"><span data-stu-id="7f0d2-148">Borrowing Qubits Example</span></span>
+<span data-ttu-id="842cb-162">この例では、一度 `Measure` に1つずつ個別の qubits に対してのみが実行されることに注意してくださいが、この操作は複数の qubits の結合測定に拡張できます。</span><span class="sxs-lookup"><span data-stu-id="842cb-162">Note that this example still only performs `Measure` on individual qubits one at a time, but the operation can be extended to joint measurements on multiple qubits.</span></span>
 
-<span data-ttu-id="7f0d2-149">キャノンには、キーワードを使用する例があり `borrowing` ます。たとえば、 `MultiControlledXBorrow` 次に定義されている関数です。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-149">In the canon there are examples that use the `borrowing` keyword, for instance the function `MultiControlledXBorrow` defined below.</span></span>
-<span data-ttu-id="7f0d2-150">は、 `controls` 操作に追加する必要があるコントロール qubits を示す場合 `X` 、 `Length(controls)-2` この実装によって多くのダーティ ancillas の全体が追加されます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-150">If `controls` denotes the control qubits that should be added to an `X` operation, then an overall of `Length(controls)-2` many dirty ancillas will be added by this implementation.</span></span>
+## <a name="borrowing-qubits-example"></a><span data-ttu-id="842cb-163">借りた Qubits の例</span><span class="sxs-lookup"><span data-stu-id="842cb-163">Borrowing Qubits Example</span></span>
+
+<span data-ttu-id="842cb-164">次の関数のように、キーワードを使用するキャノンの例があり `borrowing` `MultiControlledXBorrow` ます。</span><span class="sxs-lookup"><span data-stu-id="842cb-164">There are examples in the canon that use the `borrowing` keyword, such as the following function `MultiControlledXBorrow`.</span></span> <span data-ttu-id="842cb-165">が `controls` 操作に追加する制御 qubits を `X` 示す場合、この実装によって追加されるダーティ[ancillas](xref:microsoft.quantum.glossary#ancilla)の数はに `Length(controls)-2` なります。</span><span class="sxs-lookup"><span data-stu-id="842cb-165">If `controls` denotes the control qubits to add to an `X` operation, then the number of dirty [ancillas](xref:microsoft.quantum.glossary#ancilla) added by this implementation is `Length(controls)-2`.</span></span>
 
 ```qsharp
 operation MultiControlledXBorrow ( controls : Qubit[] , target : Qubit ) : Unit
@@ -214,13 +233,13 @@ is Adj + Ctl {
 }
 ```
 
-<span data-ttu-id="7f0d2-151">結合子は、 `With` adjoint をサポートする操作 (つまり、 `WithA` この例では---されています) に適用される---の形式で広く使用されていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-151">Note that extensive use of the `With` combinator---in its form that is applicable for operations that support adjoint, i.e., `WithA`---was made in this example.</span></span>
-<span data-ttu-id="7f0d2-152">これは、 `With` 内部操作にのみ制御を反映する構造体にコントロールを追加するため、適切なプログラミングスタイルです。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-152">This is good programming style, because adding control to structures involving `With` propagates control only to the inner operation.</span></span>
-<span data-ttu-id="7f0d2-153">さらに、ここでは、操作のに加えて、操作の本体の実装が明示的に指定されていることに注意してください。これは、ステートメントを再実行することで `body` `controlled` は `controlled auto` ありません。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-153">Further, note that here in addition to the `body` of the operation, an implementation of the `controlled` body of the operation was explicitly provided, rather than resorting to a `controlled auto` statement.</span></span>
-<span data-ttu-id="7f0d2-154">その理由は、の各ゲートにコントロールを追加する場合と比較して、役に立つコントロールをさらに簡単に追加する方法です `body` 。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-154">The reason for this is that we know from the structure of the circuit how to easily add further controls which is beneficial compared to adding control to each and every individual gate in the `body`.</span></span> 
+<span data-ttu-id="842cb-166">この例では、連結子の広範な使用を、 `With` adjoint をサポートする操作 (など) に適用できる形式で使用して `WithA` います。</span><span class="sxs-lookup"><span data-stu-id="842cb-166">Note that this example used extensive use of the `With` combinator, in its form that is applicable for operations that support adjoint, for example, `WithA`.</span></span>
+<span data-ttu-id="842cb-167">これは、 `With` 内部操作にのみ制御を反映する構造体にコントロールを追加するため、適切なプログラミングスタイルです。</span><span class="sxs-lookup"><span data-stu-id="842cb-167">This is good programming style, because adding control to structures involving `With` propagates control only to the inner operation.</span></span>
+<span data-ttu-id="842cb-168">また、操作のに加えて、操作の本体の実装が明示的に指定されていることにも注意してください。これは、 `body` `controlled` ステートメントを実行するのでは `controlled auto` ありません。</span><span class="sxs-lookup"><span data-stu-id="842cb-168">Also note that, in addition to the `body` of the operation, an implementation of the `controlled` body of the operation was explicitly provided, rather than resorting to a `controlled auto` statement.</span></span>
+<span data-ttu-id="842cb-169">その理由は、回線の構造により、コントロールをさらに追加するのは簡単です。これは、内の各ゲートにコントロールを追加する場合と比べて便利です `body` 。</span><span class="sxs-lookup"><span data-stu-id="842cb-169">The reason for this is that, because of the structure of the circuit, it is easy to add further controls, which is beneficial compared to adding control to each gate in the `body`.</span></span> 
 
-<span data-ttu-id="7f0d2-155">このコードを別のキャノン関数と比較して、 `MultiControlledXClean` 乗算制御演算を実装するのと同じ目標を達成し `X` ます。ただし、メカニズムを使用していくつかの clean qubits を使用し `using` ます。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-155">It is instructive to compare this code with another canon function `MultiControlledXClean` which achieves the same goal of implementing a multiply-controlled `X` operation, however, which uses several clean qubits using the `using` mechanism.</span></span> 
+<span data-ttu-id="842cb-170">このコードを別のキャノン関数と比較して、 `MultiControlledXClean` 乗算制御演算を実装するのと同じ目標を達成し `X` ます。ただし、メカニズムを使用していくつかの clean qubits を使用し `using` ます。</span><span class="sxs-lookup"><span data-stu-id="842cb-170">It is instructive to compare this code with another canon function `MultiControlledXClean` which achieves the same goal of implementing a multiply-controlled `X` operation, however, which uses several clean qubits using the `using` mechanism.</span></span> 
 
-## <a name="next-steps"></a><span data-ttu-id="7f0d2-156">次の手順</span><span class="sxs-lookup"><span data-stu-id="7f0d2-156">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="842cb-171">次の手順</span><span class="sxs-lookup"><span data-stu-id="842cb-171">Next steps</span></span>
 
-<span data-ttu-id="7f0d2-157">Q # の[制御フロー](xref:microsoft.quantum.guide.controlflow)について説明します。</span><span class="sxs-lookup"><span data-stu-id="7f0d2-157">Learn about [Control Flow](xref:microsoft.quantum.guide.controlflow) in Q#.</span></span>
+<span data-ttu-id="842cb-172">Q # の[制御フロー](xref:microsoft.quantum.guide.controlflow)について説明します。</span><span class="sxs-lookup"><span data-stu-id="842cb-172">Learn about [Control Flow](xref:microsoft.quantum.guide.controlflow) in Q#.</span></span>
