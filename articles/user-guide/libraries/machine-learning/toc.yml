@@ -1,5 +1,5 @@
 - name: 量子機械学習の概要
-  href: introduction.md
+  href: intro.md
 - name: 基本分類
   href: basic-classification.md
 - name: 独自の分類器を設計する
