@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.intro
-ms.openlocfilehash: efd1a712616534ac281433fc008f0983271881d7
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9552f3683e1df8cb10d19d0b3f85223df056f83d
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273639"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871350"
 ---
 # <a name="introduction-to-the-quantum-numerics-library"></a>量子数値ライブラリの概要
 
@@ -33,9 +33,10 @@ ms.locfileid: "85273639"
 
 これまでに説明した整数演算以外にも、数値ライブラリでは次の機能が提供されています。
 
- - 1 つまたは 2 つの量子整数値を入力として使用する、符号付き (符号なし) 整数の機能 (乗算、平方、剰余がある除算、反転、...)
- - 1 つまたは 2 つの量子固定小数点数を入力として持つ、固定小数点機能 (加算/減算、乗算、平方、1/x、多項式評価)
+- 1 つまたは 2 つの量子整数値を入力として使用する、符号付き (符号なし) 整数の機能 (乗算、平方、剰余がある除算、反転、...)
+- 1 つまたは 2 つの量子固定小数点数を入力として持つ、固定小数点機能 (加算/減算、乗算、平方、1/x、多項式評価)
 
 ## <a name="getting-started"></a>作業の開始
 
-数値ライブラリの使用を開始するには、[インストール ガイド](xref:microsoft.quantum.numerics.installation)を参照してください。また、[数値ライブラリの使用](xref:microsoft.quantum.numerics.usage)に関するさらに詳しい情報を確認してください。
+> [!div class="nextstepaction"]
+> [数値ライブラリの使用方法について確認する](xref:microsoft.quantum.numerics.usage)

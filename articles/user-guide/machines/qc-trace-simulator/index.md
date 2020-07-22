@@ -1,53 +1,32 @@
 ---
-title: 量子コンピューターのトレース シミュレーター
-description: Microsoft 量子コンピューターのトレース シミュレーターを使用して、従来型のコードをデバッグし、量子プログラムのリソース要件を見積もる方法について説明します。
+title: 量子トレース シミュレーター - Quantum Development Kit
+description: Microsoft の量子コンピューター トレース シミュレーターを使用して、従来型のコードをデバッグし、Q# プログラムのリソース要件を見積もる方法について説明します。
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: 4cec688da35951271d87396d9b6a8fed744defc6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: c01f01973ea08153cbfa35d87a588a4eae46f1b7
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273499"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871112"
 ---
-# <a name="quantum-trace-simulator"></a>量子トレース シミュレーター
+# <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum Development Kit (QDK) の量子トレース シミュレーター
 
-Microsoft 量子コンピューターのトレース シミュレーターは、量子コンピューターの状態を実際にシミュレートせずに、量子プログラムを実行します。  このため、トレース シミュレーターでは、何千もの量子ビットを使用する量子プログラムを実行できます。  これは主に次の 2 つの目的で役立ちます。 
+QDK の <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> クラスでは、量子コンピューターの状態を実際にシミュレーションすることなく量子プログラムが実行されます。 このため、量子トレース シミュレーターでは、何千もの量子ビットを使用する量子プログラムを実行できます。  これは主に次の 2 つの目的で役立ちます。 
 
 * 量子プログラムの一部である、従来型のコードのデバッグ。 
-* 量子プログラムの特定のインスタンスを量子コンピューターで実行するために必要なリソースの推定。
+* 量子プログラムの特定のインスタンスを量子コンピューターで実行するために必要なリソースの推定。 実際、より限定されたメトリック セットを提供する[リソース推定器](xref:microsoft.quantum.machines.resources-estimator)は、トレース シミュレーターに基づいて構築されています。
 
-トレース シミュレーターは、測定を行う必要がある場合に、ユーザーによって提供される追加情報を使用します。 詳細については、「[測定結果の確率を指定する](#providing-the-probability-of-measurement-outcomes)」セクションを参照してください。 
+## <a name="invoking-the-quantum-trace-simulator"></a>量子トレース シミュレーターの呼び出し
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a>測定結果の確率を指定する
+量子トレース シミュレーターを使用して、任意の Q# 操作を実行できます。
 
-量子アルゴリズムには、2 種類の測定値が表示されます。 最初の種類は、ユーザーが結果の確率を知っている場合に使用するため、補助的な役割を果たします。 この場合、ユーザーは <xref:microsoft.quantum.intrinsic> 名前空間の <xref:microsoft.quantum.intrinsic.assertprob> を使用して、知っている確率を表すことができます。 次の例を使って説明します。
+他のターゲット マシンと同様に、最初に `QCTraceSimulator` クラスのインスタンスを作成し、それを操作の `Run` メソッドの最初のパラメーターとして渡します。
 
-```qsharp
-operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
-    using (qubit = Qubit()) {
-        H(qubit);
-        CNOT(qubit, target);
-        CNOT(source, qubit);
-        H(source);
-
-        AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-
-        if (M(source) == One)  { Z(target); X(source); }
-        if (M(q) == One) { X(target); X(q); }
-    }
-}
-```
-
-トレース シミュレーターが `AssertProb` を実行すると、`source` と `q` で `PauliZ` を測定した結果は、確率が0.5 の `Zero` となることを記録します。 シミュレーターが後で `M` を実行すると、記録された結果の確率の値が検出され、`M` は確率が0.5 の `Zero` または `One` を返します。 量子状態を追跡するシミュレーターで同じコードを実行すると、シミュレーターは `AssertProb` で指定された確率が正しいかどうかを確認します。
-
-## <a name="running-your-program-with-the-quantum-computer-trace-simulator"></a>量子コンピューターのトレース シミュレーターを使用してプログラムを実行する 
-
-量子コンピューターのトレース シミュレーターは、ターゲット コンピューターの 1 つとして見なすことができます。 量子コンピューターを使用するための C# ドライバー プログラムは、他の量子シミュレーターで使用するものとよく似ています。 
+`QuantumSimulator` クラスとは異なり、`QCTraceSimulator` クラスでは <xref:System.IDisposable> インターフェイスが実装されていないため、これを `using` ステートメント内で囲む必要はありません。
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -69,18 +48,53 @@ namespace Quantum.MyProgram
 }
 ```
 
-`AssertProb` によって注釈が付けられていない測定が少なくとも 1 つある場合は、シミュレーターによって `Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators` 名前空間から `UnconstrainedMeasurementException` がスローされることに注意してください。 詳細については [UnconstrainedMeasurementException](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.UnconstrainedMeasurementException) に関する API ドキュメントを参照してください。
+## <a name="providing-the-probability-of-measurement-outcomes"></a>測定結果の確率を指定する
 
-量子プログラムの実行に加えて、トレース シミュレーターには、プログラム内のバグを検出し、量子プログラム リソースの推定を行うための 5 つのコンポーネントが付属しています。 
+量子トレース シミュレーターでは実際の量子状態がシミュレートされないため、操作内の測定結果の確率を計算することはできません。 
 
-* [Distinct Inputs Checker](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs)
-* [Invalidated Qubits Use Checker](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)
-* [Primitive Operations Counter](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)
-* [Circuit Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)
-* [Circuit Width Counter](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)
+したがって、操作に測定が含まれている場合は、<xref:microsoft.quantum.diagnostics> 名前空間の <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 操作を使用して、これらの確率を明示的に指定する必要があります。 次の例を使って説明します。
 
-これらの各コンポーネントは、`QCTraceSimulatorConfiguration` で適切なフラグを設定することによって有効にすることができます。 これらの各コンポーネントの使用方法の詳細については、対応する参照ファイルを参照してください。 具体的な詳細については [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) に関する API ドキュメントを参照してください。
+```qsharp
+operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
+    using (qubit = Qubit()) {
+        H(qubit);
+        CNOT(qubit, target);
+        CNOT(source, qubit);
+        H(source);
+
+        AssertMeasurementProbability([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertMeasurementProbability([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+
+        if (M(source) == One)  { Z(target); X(source); }
+        if (M(q) == One) { X(target); X(q); }
+    }
+}
+```
+
+量子トレース シミュレーターで `AssertMeasurementProbability` が発生すると、`source` と `q` で `PauliZ` を測定した結果は、確率 **0.5** で `Zero` となることが記録されます。 その後 `M` 操作が実行されると、結果の確率の記録された値が検出され、`M` は、確率 **0.5** で `Zero` または `One` を返します。 量子状態を追跡するシミュレーターで同じコードを実行すると、シミュレーターは `AssertMeasurementProbability` で指定された確率が正しいかどうかを確認します。
+
+`AssertMeasurementProbability` によって注釈が付けられていない操作が少なくとも 1 つある場合は、シミュレーターによって [`UnconstrainedMeasurementException`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstrainedmeasurementexception) がスローされることに注意してください。
+
+## <a name="quantum-trace-simulator-tools"></a>量子トレース シミュレーターのツール
+
+QDK には、プログラム内のバグを検出し、量子プログラム リソースの見積もりを実行するために、量子トレース シミュレーターで使用できる 5 つのツールが用意されています。 
+
+|ツール | 説明 |
+|-----| -----|
+|[個別入力チェッカー](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |共有量子ビットと競合する可能性があるかどうかを確認します |
+|[無効な量子ビット使用チェッカー](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |プログラムが既に解放されている量子ビットに操作を適用していないかどうかを確認します |
+|[プリミティブ操作カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | 量子プログラムで呼び出されたすべての操作によって使用されるプリミティブ実行の数をカウントします  |
+|[深さのカウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |量子プログラムで呼び出された各操作の深さの下限を表すカウントを収集します   |
+|[幅のカウンター](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |量子プログラムの各操作によって割り当てられ、借用された量子ビットの数をカウントします |
+
+これらの各ツールは、`QCTraceSimulatorConfiguration` で適切なフラグを設定し、構成を `QCTraceSimulator` 宣言に渡すことによって有効になります。 これらの各ツールの使用方法の詳細については、前の一覧のリンクを参照してください。 `QCTraceSimulator` の構成の詳細については、「[QCTraceSimulatorConfiguration](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration)」を参照してください。
+
+## <a name="qctracesimulator-methods"></a>QCTraceSimulator のメソッド
+
+`QCTraceSimulator` には、量子操作中に追跡されるメトリックの値を取得するための組み込みメソッドがいくつか用意されています。 [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) と [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) メソッドの例については、[プリミティブ操作カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)、[深さのカウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)、および[幅のカウンター](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)に関する記事を参照してください。 使用可能なすべてのメソッドの詳細については、Q# API リファレンスの [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) を参照してください。  
 
 ## <a name="see-also"></a>関連項目
-量子コンピューターの[トレース シミュレーター](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)向け C# リファレンス 
 
+- [量子リソース推定器](xref:microsoft.quantum.machines.resources-estimator)
+- [量子 Toffoli シミュレーター](xref:microsoft.quantum.machines.toffoli-simulator)
+- [量子完全状態シミュレーター](xref:microsoft.quantum.machines.full-state-simulator) 

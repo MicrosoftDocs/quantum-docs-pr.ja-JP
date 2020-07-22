@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273466"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871418"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit に貢献する
 
@@ -61,10 +61,9 @@ Quantum Development Kit には、量子プログラムを作成するための�
 > [!NOTE]
 > 現時点では、[**microsoft/Quantum-NC**](https://github.com/microsoft/Quantum-NC) リポジトリに関するコードとドキュメントのコントリビューションは受け付けておりませんが、バグ報告については歓迎しています。
 
-また、さまざまなイベント、または Quantum 開発キットに関連する補助機能に重点を置いた他の特化されたリポジトリもあります。
+また、Quantum Development Kit に関連する補助機能に重点を置いた他の特化されたリポジトリもあります。
 
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty):Q# 構文の LaTeX 形式サポート。
-- [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019):2019 年のインターン ワークショップで行われた Deutsch–Jozsa チュートリアルの IQ# Notebook
 
 ## <a name="next-steps"></a>次のステップ
 

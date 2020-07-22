@@ -1,5 +1,18 @@
+---
+title: IQ# マジック コマンド
+author: rmshaffer
+uid: microsoft.quantum.iqsharp.magic-ref.index
+ms.author: rmshaffer
+ms.date: 07/21/2020
+ms.topic: article
+ms.openlocfilehash: 971787adae03af35d2e5b408fb88356a8b7df90a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870704"
+---
 # <a name="iq-magic-commands"></a>IQ# マジック コマンド
-
 | マジック コマンド | まとめ |
 |---------------|---------|
 | [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Azure Quantum ワークスペースに接続するか、現在の接続状態を表示します。 |
@@ -19,6 +32,7 @@
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | 指定された関数または操作を ResourcesEstimator ターゲット マシンで実行します。 |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | 1 つのテストを実行します。 |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | 現在使用可能なすべてのマジック コマンドの一覧を返します。 |
+| [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen) | 現在開かれている名前空間とそのエイリアスを一覧表示します。 |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | NuGet パッケージを読み込む機能を提供します。 |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | このカーネルの現在のパフォーマンス メトリックを報告します。 |
 | [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | 指定された関数または操作を QuantumSimulator ターゲット マシンで実行します。 |
