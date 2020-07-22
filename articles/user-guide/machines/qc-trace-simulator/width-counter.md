@@ -1,22 +1,35 @@
 ---
-title: 幅カウンター
-description: クォンタムプログラムの各操作によって割り当てられた qubits の数をカウントする Microsoft QDK Width カウンターについて説明します。
+title: 幅カウンター-Quantum 開発キット
+description: 'Microsoft QDK width カウンターについて説明します。これは、クォンタムトレースシミュレーターを使用して、Q # プログラムの操作によって割り当てられた qubits の数をカウントします。'
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: a76292222950310acc90dded02980e4a5b792e76
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: af8609dc5c05f7a19b8d21755281427feb29b84c
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275560"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871521"
 ---
-# <a name="width-counter"></a><span data-ttu-id="4a145-103">幅カウンター</span><span class="sxs-lookup"><span data-stu-id="4a145-103">Width Counter</span></span>
+# <a name="quantum-trace-simulator-width-counter"></a><span data-ttu-id="5c2b2-103">クォンタムトレースシミュレーター: width カウンター</span><span class="sxs-lookup"><span data-stu-id="5c2b2-103">Quantum trace simulator: width counter</span></span>
 
-<span data-ttu-id="4a145-104">は、 `Width Counter` 各操作によって割り当てられて借用される qubits の数をカウントします。</span><span class="sxs-lookup"><span data-stu-id="4a145-104">The `Width Counter` counts the number of qubits allocated and borrowed by each operation.</span></span>
-<span data-ttu-id="4a145-105">名前空間のすべて `Microsoft.Quantum.Intrinsic` の操作は、単一の qubit 回転、T ゲート、単一の Qubit Clifford ゲート、CNOT ゲート、およびマルチ Qubit pobservable li の測定値で表現されます。</span><span class="sxs-lookup"><span data-stu-id="4a145-105">All operations from the `Microsoft.Quantum.Intrinsic` namespace are expressed in terms of single qubit rotations, T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit Pauli observables.</span></span> <span data-ttu-id="4a145-106">一部のプリミティブ操作では、追加の qubits を割り当てることができます。</span><span class="sxs-lookup"><span data-stu-id="4a145-106">Some of the primitive operations can allocate extra qubits.</span></span> <span data-ttu-id="4a145-107">たとえば、制御 `X` ゲートまたは制御さ `T` れたゲートを乗算します。</span><span class="sxs-lookup"><span data-stu-id="4a145-107">For example, multiply controlled `X` gates or controlled `T` gates.</span></span> <span data-ttu-id="4a145-108">次に、乗算制御ゲートの実装によって割り当てられた追加の qubits の数を計算してみましょう `X` 。</span><span class="sxs-lookup"><span data-stu-id="4a145-108">Let us compute the number of extra qubits allocated by the implementation of a multiply controlled `X` gate:</span></span>
+<span data-ttu-id="5c2b2-104">Width カウンターは、Quantum Development Kit[クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の一部です。</span><span class="sxs-lookup"><span data-stu-id="5c2b2-104">The width counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="5c2b2-105">これを使用すると、Q # プログラムの各操作によって割り当てられた qubits の数をカウントできます。</span><span class="sxs-lookup"><span data-stu-id="5c2b2-105">You can use it to count the number of qubits allocated and borrowed by each operation in a Q# program.</span></span> <span data-ttu-id="5c2b2-106">プリミティブ操作によっては、追加の qubits を割り当てることができます。たとえば、制御された操作や制御される演算を乗算でき `X` `T` ます。</span><span class="sxs-lookup"><span data-stu-id="5c2b2-106">Some primitive operations can allocate extra qubits, for example, multiply controlled `X` operations or controlled `T` operations.</span></span>
+
+## <a name="invoking-the-width-counter"></a><span data-ttu-id="5c2b2-107">Width カウンターを呼び出しています</span><span class="sxs-lookup"><span data-stu-id="5c2b2-107">Invoking the width counter</span></span>
+
+<span data-ttu-id="5c2b2-108">Width カウンターでクォンタムトレースシミュレーターを実行するには、インスタンスを作成し <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 、プロパティを true に設定した後、を `UseWidthCounter` パラメーターとして使用して**true**新しいインスタンスを作成する必要があり <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> `QCTraceSimulatorConfiguration` ます。</span><span class="sxs-lookup"><span data-stu-id="5c2b2-108">To run the quantum trace simulator with the width counter, you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UseWidthCounter` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with the `QCTraceSimulatorConfiguration` as the parameter.</span></span> 
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UseWidthCounter = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-width-counter-in-a-c-host-program"></a><span data-ttu-id="5c2b2-109">C# ホストプログラムでの width カウンターの使用</span><span class="sxs-lookup"><span data-stu-id="5c2b2-109">Using the width counter in a C# host program</span></span>
+
+<span data-ttu-id="5c2b2-110">このセクションで後述する C# の例では、 <xref:microsoft.quantum.intrinsic.x> 次の Q # サンプルコードに基づいて、乗算制御演算の実装によって割り当てられた追加の qubits の数を計算します。</span><span class="sxs-lookup"><span data-stu-id="5c2b2-110">The C# example that follows in this section computes the number of extra qubits allocated by the implementation of a multiply controlled <xref:microsoft.quantum.intrinsic.x> operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -28,13 +41,11 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-## <a name="using-width-counter-within-a-c-program"></a><span data-ttu-id="4a145-109">C# プログラム内での Width カウンターの使用</span><span class="sxs-lookup"><span data-stu-id="4a145-109">Using Width Counter within a C# Program</span></span>
-
-<span data-ttu-id="4a145-110">`X`合計5つの qubits に対して制御される演算を乗算すると、2つの補助 qubits が割り当てられ、その入力幅は5になります。</span><span class="sxs-lookup"><span data-stu-id="4a145-110">Multiply controlled `X` acting on a total of 5 qubits will allocate 2 ancillary qubits and its input width will be 5.</span></span> <span data-ttu-id="4a145-111">このことを確認するには、次の C# プログラムを使用できます。</span><span class="sxs-lookup"><span data-stu-id="4a145-111">To check that this is the case, we can use the following C# program:</span></span>
+<span data-ttu-id="5c2b2-111">多重制御演算は、 <xref:microsoft.quantum.intrinsic.x> 合計5つの qubits に対して作用し、2つの[補助 qubits](xref:microsoft.quantum.glossary#ancilla)を割り当てます。入力幅は**5**です。</span><span class="sxs-lookup"><span data-stu-id="5c2b2-111">The multiply controlled <xref:microsoft.quantum.intrinsic.x> operation acts on a total of five qubits, allocates two [ancillary qubits](xref:microsoft.quantum.glossary#ancilla), and has an input width of **5**.</span></span> <span data-ttu-id="5c2b2-112">カウントを確認するには、次の C# プログラムを使用します。</span><span class="sxs-lookup"><span data-stu-id="5c2b2-112">Use the following C# program to verify the counts:</span></span>
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();
-config.useWidthCounter = true;
+config.UseWidthCounter = true;
 var sim = new QCTraceSimulator(config);
 int totalNumberOfQubits = 5;
 var res = ApplyMultiControlledX.Run(sim, totalNumberOfQubits).Result;
@@ -50,13 +61,16 @@ double inputWidth =
         functor: OperationFunctor.Controlled);
 ```
 
-<span data-ttu-id="4a145-112">プログラムの最初の部分が実行さ `ApplyMultiControlledX` れます。</span><span class="sxs-lookup"><span data-stu-id="4a145-112">The first part of the program executes `ApplyMultiControlledX`.</span></span> <span data-ttu-id="4a145-113">2番目の部分では、メソッドを使用して、 `QCTraceSimulator.GetMetric` 割り当てられた qubits と、 `X` 入力として受信された qubits の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="4a145-113">In the second part we use the method `QCTraceSimulator.GetMetric` to get the number of allocated qubits as well as the number of qubits that Controlled `X` received as input.</span></span> 
+<span data-ttu-id="5c2b2-113">プログラムの最初の部分で操作が実行され `ApplyMultiControlledX` ます。</span><span class="sxs-lookup"><span data-stu-id="5c2b2-113">The first part of the program runs the `ApplyMultiControlledX` operation.</span></span> <span data-ttu-id="5c2b2-114">2番目の部分では、メソッドを使用して、 [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) 割り当てられた qubits の数と、 `Controlled X` 操作が入力として受け取った qubits の数を取得します。</span><span class="sxs-lookup"><span data-stu-id="5c2b2-114">The second part uses the [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) method to retrieve the number of allocated qubits as well as the number of qubits that the `Controlled X` operation received as input.</span></span> 
 
-<span data-ttu-id="4a145-114">最後に、width カウンターによって収集されたすべての統計を CSV 形式で出力するには、次のようにします。</span><span class="sxs-lookup"><span data-stu-id="4a145-114">Finally, to output all the statistics collected by width counter in CSV format we can use the following:</span></span>
+<span data-ttu-id="5c2b2-115">最後に、次を使用して、width カウンターによって収集されたすべての統計を CSV 形式で出力できます。</span><span class="sxs-lookup"><span data-stu-id="5c2b2-115">Finally, you can output all the statistics collected by the width counter in CSV format using the following:</span></span>
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a><span data-ttu-id="4a145-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="4a145-115">See also</span></span> ##
+## <a name="see-also"></a><span data-ttu-id="5c2b2-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="5c2b2-116">See also</span></span>
 
-- <span data-ttu-id="4a145-116">クォンタムコンピューターの[トレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の概要。</span><span class="sxs-lookup"><span data-stu-id="4a145-116">The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="5c2b2-117">Quantum Development Kit[クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の概要。</span><span class="sxs-lookup"><span data-stu-id="5c2b2-117">The Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="5c2b2-118"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API リファレンス。</span><span class="sxs-lookup"><span data-stu-id="5c2b2-118">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.</span></span>
+- <span data-ttu-id="5c2b2-119"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>API リファレンス。</span><span class="sxs-lookup"><span data-stu-id="5c2b2-119">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.</span></span>
+- <span data-ttu-id="5c2b2-120"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.WidthCounter>API リファレンス。</span><span class="sxs-lookup"><span data-stu-id="5c2b2-120">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.WidthCounter> API reference.</span></span>

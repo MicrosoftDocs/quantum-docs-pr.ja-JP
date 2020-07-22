@@ -1,21 +1,25 @@
 ---
-title: Distinct 入力チェッカー
-description: 'Microsoft QDK の入力チェッカーについて説明します。このチェッカーは、Q # コードで共有 qubits との競合の可能性を確認します。'
+title: Distinct 入力チェッカー-Quantum Development Kit
+description: 'Microsoft QDK distinct 入力チェッカーについて説明します。これは、Quantum トレースシミュレーターを使用して、共有 qubits と競合する可能性があることを Q # コードで確認します。'
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 11a0573242c8afb12f242aa3be5f9cff18290452
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 49a1ccc5f37acfeaa1ee08bd974be45a40a76f93
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275623"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871146"
 ---
-# <a name="distinct-inputs-checker"></a><span data-ttu-id="bcac7-103">Distinct 入力チェッカー</span><span class="sxs-lookup"><span data-stu-id="bcac7-103">Distinct Inputs Checker</span></span>
+# <a name="quantum-trace-simulator-distinct-inputs-checker"></a><span data-ttu-id="eced9-103">クォンタムトレースシミュレーター: 個別入力チェッカー</span><span class="sxs-lookup"><span data-stu-id="eced9-103">Quantum trace simulator: distinct inputs checker</span></span>
 
-<span data-ttu-id="bcac7-104">は、 `Distinct Inputs Checker` quantum コンピューターの[トレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の一部です。</span><span class="sxs-lookup"><span data-stu-id="bcac7-104">The `Distinct Inputs Checker` is a part of the quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="bcac7-105">これは、コード内の潜在的なバグを検出するように設計されています。</span><span class="sxs-lookup"><span data-stu-id="bcac7-105">It is designed for detecting potential bugs in the code.</span></span> <span data-ttu-id="bcac7-106">このパッケージによって検出された問題を示すために、次の Q # コードを検討してください。</span><span class="sxs-lookup"><span data-stu-id="bcac7-106">Consider the following piece of Q# code to illustrate the issues detected by this package:</span></span>
+<span data-ttu-id="eced9-104">Distinct 入力チェッカーは、Quantum Development Kit [quantum トレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の一部です。</span><span class="sxs-lookup"><span data-stu-id="eced9-104">The distinct inputs checker is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="eced9-105">これを使用すると、共有 qubits との競合によって発生する可能性のあるコード内のバグを検出できます。</span><span class="sxs-lookup"><span data-stu-id="eced9-105">You can use it to detect potential bugs in the code caused by conflicts with shared qubits.</span></span> 
+
+## <a name="conflicts-with-shared-qubits"></a><span data-ttu-id="eced9-106">共有 qubits との競合</span><span class="sxs-lookup"><span data-stu-id="eced9-106">Conflicts with shared qubits</span></span>
+
+<span data-ttu-id="eced9-107">個別の入力チェッカーによって検出された問題を示すために、次のような Q # コードを考えてみましょう。</span><span class="sxs-lookup"><span data-stu-id="eced9-107">Consider the following piece of Q# code to illustrate the issues detected by the distinct inputs checker:</span></span>
 
 ```qsharp
 operation ApplyBoth(
@@ -29,7 +33,9 @@ operation ApplyBoth(
 }
 ```
 
-<span data-ttu-id="bcac7-107">ユーザーは、このプログラムを参照するときに、とが呼び出される順序が関係していないことを前提として `op1` `op2` い `q1` ます。これは、とは異なる qubits `q2` と操作が異なる qubits commute で動作するためです。</span><span class="sxs-lookup"><span data-stu-id="bcac7-107">When the user looks at this program, they assume that the order in which `op1` and `op2` are called does not matter because `q1` and `q2` are different qubits and operations acting on different qubits commute.</span></span> <span data-ttu-id="bcac7-108">ここで、この操作が使用される例を考えてみましょう。</span><span class="sxs-lookup"><span data-stu-id="bcac7-108">Let us now consider an example, where this operation is used:</span></span>
+<span data-ttu-id="eced9-108">このプログラムを見ると、との呼び出し順序が異なることを想定できます `op1` `op2` `q1` 。これは、とは異なる qubits `q2` commute に作用する演算子と操作が異なるためです。</span><span class="sxs-lookup"><span data-stu-id="eced9-108">When you look at this program, you can assume that the order in which it calls `op1` and `op2` does not matter, because `q1` and `q2` are different qubits and operations acting on different qubits commute.</span></span> 
+
+<span data-ttu-id="eced9-109">ここで、次の例を考えてみます。</span><span class="sxs-lookup"><span data-stu-id="eced9-109">Now, consider this example:</span></span>
 
 ```qsharp
 operation ApplyWithNonDistinctInputs() : Unit {
@@ -41,11 +47,21 @@ operation ApplyWithNonDistinctInputs() : Unit {
 }
 ```
 
-<span data-ttu-id="bcac7-109">これで `op1` 、と `op2` は両方とも部分アプリケーションを使用して取得され、qubit を共有します。</span><span class="sxs-lookup"><span data-stu-id="bcac7-109">Now `op1` and `op2` are both obtained using partial application and share a qubit.</span></span> <span data-ttu-id="bcac7-110">上の例でユーザーがを呼び出すと、 `ApplyBoth` 操作の結果はとの順序に依存し `op1` `op2` `ApplyBoth` ます。</span><span class="sxs-lookup"><span data-stu-id="bcac7-110">When the user calls `ApplyBoth` in the example above the result of the operation will depend on the order of `op1` and `op2` inside `ApplyBoth`.</span></span> <span data-ttu-id="bcac7-111">これは、ユーザーが期待するものではありません。</span><span class="sxs-lookup"><span data-stu-id="bcac7-111">This is definitely not what the user would expect to happen.</span></span> <span data-ttu-id="bcac7-112">は、有効になっている `Distinct Inputs Checker` 場合にこのような状況を検出し、をスロー `DistinctInputsCheckerException` します。</span><span class="sxs-lookup"><span data-stu-id="bcac7-112">The `Distinct Inputs Checker` will detect such situations when enabled and will throw `DistinctInputsCheckerException`.</span></span> <span data-ttu-id="bcac7-113">詳細については、 [DistinctInputsCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException)の API ドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="bcac7-113">See the API documentation on [DistinctInputsCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException) for more details.</span></span>
+<span data-ttu-id="eced9-110">`op1`と `op2` は両方とも部分アプリケーションを使用して取得され、qubit を共有することに注意してください。</span><span class="sxs-lookup"><span data-stu-id="eced9-110">Note that `op1` and `op2` are both obtained using partial application and share a qubit.</span></span> <span data-ttu-id="eced9-111">この例でを呼び出すと、 `ApplyBoth` 操作の結果は、 `op1` 発生すると予想される順序と内部ではなく、の順序によって決まり `op2` `ApplyBoth` ます。</span><span class="sxs-lookup"><span data-stu-id="eced9-111">When you call `ApplyBoth` in this example, the result of the operation depends on the order of `op1` and `op2` inside `ApplyBoth` - not what you would expect to happen.</span></span> <span data-ttu-id="eced9-112">Distinct 入力チェッカーを有効にすると、このような状況が検出され、がスローさ `DistinctInputsCheckerException` れます。</span><span class="sxs-lookup"><span data-stu-id="eced9-112">When you enable the distinct inputs checker, it detects such situations and throws a `DistinctInputsCheckerException`.</span></span> <span data-ttu-id="eced9-113">詳細については、 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> Q # API ライブラリの「」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="eced9-113">For more information, see <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> in the Q# API library.</span></span>
 
-## <a name="using-the-distinct-inputs-checker-in-your-c-program"></a><span data-ttu-id="bcac7-114">C# プログラムでの Distinct 入力チェッカーの使用</span><span class="sxs-lookup"><span data-stu-id="bcac7-114">Using the Distinct Inputs Checker in your C# Program</span></span>
+## <a name="invoking-the-distinct-inputs-checker"></a><span data-ttu-id="eced9-114">個別入力チェッカーの呼び出し</span><span class="sxs-lookup"><span data-stu-id="eced9-114">Invoking the distinct inputs checker</span></span>
 
-<span data-ttu-id="bcac7-115">次に、が有効なを使用して、クォンタムコンピューターのトレースシミュレーターを使用するための C# ドライバーコードの例を示し `Distinct Inputs Checker` ます。</span><span class="sxs-lookup"><span data-stu-id="bcac7-115">The following is an example of C# driver code for using the quantum computer trace simulator with the `Distinct Inputs Checker` enabled:</span></span>
+<span data-ttu-id="eced9-115">Distinct 入力チェッカーを使用してクォンタムトレースシミュレーターを実行するには、インスタンスを作成し <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 、 `UseDistinctInputsChecker` プロパティを**true**に設定してから、 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> パラメーターとしてを使用して新しいインスタンスを作成する必要があり `QCTraceSimulatorConfiguration` ます。</span><span class="sxs-lookup"><span data-stu-id="eced9-115">To run the quantum trace simulator with the distinct inputs checker you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UseDistinctInputsChecker` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with `QCTraceSimulatorConfiguration` as the parameter.</span></span> 
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UseDistinctInputsChecker = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-distinct-inputs-checker-in-a-c-host-program"></a><span data-ttu-id="eced9-116">C# ホストプログラムでの distinct 入力チェッカーの使用</span><span class="sxs-lookup"><span data-stu-id="eced9-116">Using the distinct inputs checker in a C# host program</span></span>
+
+<span data-ttu-id="eced9-117">次に、distinct 入力チェッカーが有効になっているクォンタムトレースシミュレーターを使用する C# ホストプログラムの例を示します。</span><span class="sxs-lookup"><span data-stu-id="eced9-117">The following is an example of C# host program that uses the quantum trace simulator with the distinct inputs checker enabled:</span></span>
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -59,7 +75,7 @@ namespace Quantum.MyProgram
         static void Main(string[] args)
         {
             var traceSimCfg = new QCTraceSimulatorConfiguration();
-            traceSimCfg.useDistinctInputsChecker = true; //enables distinct inputs checker
+            traceSimCfg.UseDistinctInputsChecker = true; //enables distinct inputs checker
             QCTraceSimulator sim = new QCTraceSimulator(traceSimCfg);
             var res = MyQuantumProgram.Run().Result;
             System.Console.WriteLine("Press any key to continue...");
@@ -69,8 +85,9 @@ namespace Quantum.MyProgram
 }
 ```
 
-<span data-ttu-id="bcac7-116">クラスは、 `QCTraceSimulatorConfiguration` クォンタムコンピューターのトレースシミュレーターの構成を格納します。このクラスは、コンストラクターの引数として指定でき `QCTraceSimulator` ます。</span><span class="sxs-lookup"><span data-stu-id="bcac7-116">The class `QCTraceSimulatorConfiguration` stores the configuration of the quantum computer trace simulator and can be provided as an argument for the `QCTraceSimulator` constructor.</span></span> <span data-ttu-id="bcac7-117">を `useDistinctInputsChecker` true に設定すると `Distinct Inputs Checker` 、が有効になります。</span><span class="sxs-lookup"><span data-stu-id="bcac7-117">When `useDistinctInputsChecker` is set to true the `Distinct Inputs Checker` is enabled.</span></span> <span data-ttu-id="bcac7-118">詳細については、 [Qctracesimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)および[Qctracesimulatorconfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?)に関する API ドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="bcac7-118">See the API documentation on [QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) and [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?) for more details.</span></span>
+## <a name="see-also"></a><span data-ttu-id="eced9-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="eced9-118">See also</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="bcac7-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="bcac7-119">See also</span></span>
-
-- <span data-ttu-id="bcac7-120">クォンタムコンピューターの[トレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の概要。</span><span class="sxs-lookup"><span data-stu-id="bcac7-120">The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="eced9-119">Quantum Development Kit[クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の概要。</span><span class="sxs-lookup"><span data-stu-id="eced9-119">The Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="eced9-120"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API リファレンス。</span><span class="sxs-lookup"><span data-stu-id="eced9-120">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.</span></span>
+- <span data-ttu-id="eced9-121"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>API リファレンス。</span><span class="sxs-lookup"><span data-stu-id="eced9-121">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.</span></span>
+- <span data-ttu-id="eced9-122"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException>API リファレンス。</span><span class="sxs-lookup"><span data-stu-id="eced9-122">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> API reference.</span></span>

@@ -1,25 +1,29 @@
 ---
-title: 完全な状態シミュレーター
+title: 完全な状態の量子シミュレーター-Quantum 開発キット
 description: 'Microsoft Quantum Development Kit 完全な状態シミュレーターで Q # プログラムを実行する方法について説明します。'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
-ms.date: 12/7/2017
+ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
-ms.openlocfilehash: f73abbc4366b003e4b22366ed83ca9c897737307
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 563fdbd2a45461d112e4c46651eddd75c6fc3db2
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275640"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871180"
 ---
-# <a name="quantum-development-kit-full-state-simulator"></a><span data-ttu-id="7b002-103">Quantum 開発キット-完全な状態シミュレーター</span><span class="sxs-lookup"><span data-stu-id="7b002-103">Quantum Development Kit Full State Simulator</span></span>
+# <a name="quantum-development-kit-qdk-full-state-simulator"></a><span data-ttu-id="df42a-103">Quantum 開発キット (QDK) 完全な状態シミュレーター</span><span class="sxs-lookup"><span data-stu-id="df42a-103">Quantum Development Kit (QDK) full state simulator</span></span>
 
-<span data-ttu-id="7b002-104">Quantum Development Kit には、Microsoft Research の[Liq $ Ui | \rangle $](http://stationq.github.io/Liquid/)に似た完全な状態のクォンタムシミュレーターが用意されています。</span><span class="sxs-lookup"><span data-stu-id="7b002-104">The Quantum Development Kit provides a full state quantum simulator similar to [LIQ$Ui|\rangle$](http://stationq.github.io/Liquid/) from Microsoft Research.</span></span>
-<span data-ttu-id="7b002-105">このシミュレーターを使用すると、コンピューターの Q # で記述されたクォンタムアルゴリズムを実行およびデバッグできます。</span><span class="sxs-lookup"><span data-stu-id="7b002-105">This simulator can be used to execute and debug quantum algorithms written in Q# on your computer.</span></span>
+<span data-ttu-id="df42a-104">QDK には、ローカルコンピューター上のクォンタムコンピューターをシミュレートする完全な状態シミュレーターが用意されています。</span><span class="sxs-lookup"><span data-stu-id="df42a-104">The QDK provides a full state simulator that simulates a quantum machine on your local computer.</span></span> <span data-ttu-id="df42a-105">完全な状態シミュレーターを使用して、Q # で記述されたクォンタムアルゴリズムを実行およびデバッグし、最大30個の qubits を利用することができます。</span><span class="sxs-lookup"><span data-stu-id="df42a-105">You can use the full state simulator to run and debug quantum algorithms written in Q#, utilizing up to 30 qubits.</span></span> <span data-ttu-id="df42a-106">完全な状態シミュレーターは、Microsoft Research の[Liq $ Ui | \rangle $](http://stationq.github.io/Liquid/)プラットフォームで使用されるクォンタムシミュレーターに似ています。</span><span class="sxs-lookup"><span data-stu-id="df42a-106">The full state simulator is similar to the quantum simulator used in the  [LIQ$Ui|\rangle$](http://stationq.github.io/Liquid/) platform from Microsoft Research.</span></span>
 
-<span data-ttu-id="7b002-106">このクォンタムシミュレーターはクラスを介して公開されてい `QuantumSimulator` ます。</span><span class="sxs-lookup"><span data-stu-id="7b002-106">This quantum simulator is exposed via the `QuantumSimulator` class.</span></span> <span data-ttu-id="7b002-107">シミュレーターを使用するには、このクラスのインスタンスを作成し、残りの `Run` パラメーターと共に実行するクォンタム操作のメソッドに渡すだけです。</span><span class="sxs-lookup"><span data-stu-id="7b002-107">To use the simulator, simply create an instance of this class and pass it to the `Run` method of the quantum operation you want to execute along with the rest of the parameters:</span></span>
+## <a name="invoking-and-running-the-full-state-simulator"></a><span data-ttu-id="df42a-107">完全な状態シミュレーターを起動して実行する</span><span class="sxs-lookup"><span data-stu-id="df42a-107">Invoking and running the full state simulator</span></span>
 
+<span data-ttu-id="df42a-108">完全な状態シミュレーターはクラスを使用して公開し `QuantumSimulator` ます。</span><span class="sxs-lookup"><span data-stu-id="df42a-108">You expose the full state simulator via the `QuantumSimulator` class.</span></span> <span data-ttu-id="df42a-109">詳細については、「 [Q # プログラムを実行する方法](xref:microsoft.quantum.guide.host-programs)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="df42a-109">For additional details, see [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs).</span></span>
+
+### <a name="invoking-the-simulator-from-c"></a><span data-ttu-id="df42a-110">C からシミュレーターを呼び出す#</span><span class="sxs-lookup"><span data-stu-id="df42a-110">Invoking the simulator from C#</span></span>
+
+<span data-ttu-id="df42a-111">クラスのインスタンスを作成し、そのインスタンスを、 `QuantumSimulator` `Run` 追加のパラメーターと共に、クォンタム操作のメソッドに渡します。</span><span class="sxs-lookup"><span data-stu-id="df42a-111">Create an instance of the `QuantumSimulator` class and then pass it to the `Run` method of a quantum operation, along with any additional parameters.</span></span>
 ```csharp
     using (var sim = new QuantumSimulator())
     {
@@ -28,13 +32,35 @@ ms.locfileid: "85275640"
     }
 ```
 
-## <a name="idisposable"></a><span data-ttu-id="7b002-108">IDisposable</span><span class="sxs-lookup"><span data-stu-id="7b002-108">IDisposable</span></span>
+<span data-ttu-id="df42a-112">クラスはインターフェイスを実装しているため `QuantumSimulator` <xref:System.IDisposable> 、 `Dispose` シミュレーターのインスタンスが不要になった場合は、メソッドを呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="df42a-112">Because the `QuantumSimulator` class implements the <xref:System.IDisposable> interface, you must call the `Dispose` method once you do not need the instance of the simulator anymore.</span></span> <span data-ttu-id="df42a-113">これを行う最善の方法は、メソッド[を自動的に呼び出すステートメントで](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-statement)、シミュレーターの宣言と操作をラップすることです `Dispose` 。</span><span class="sxs-lookup"><span data-stu-id="df42a-113">The best way to do this is to wrap the simulator declaration and operations within a [using](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-statement) statement, which automatically calls the `Dispose` method.</span></span>
 
-<span data-ttu-id="7b002-109">`QuantumSimulator`クラスはを実装する <xref:System.IDisposable> ため、 `Dispose` シミュレーターのインスタンスが使用されなくなると、メソッドを呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="7b002-109">The `QuantumSimulator` class implements <xref:System.IDisposable>, thus the `Dispose` method should be called once the instance of the simulator is not used anymore.</span></span> <span data-ttu-id="7b002-110">これを行う最善の方法は、上の例のように、ステートメント内にシミュレーターをラップすることです `using` 。</span><span class="sxs-lookup"><span data-stu-id="7b002-110">The best way to do this is to wrap the simulator within a `using` statement, as in the example above.</span></span>
+### <a name="invoking-the-simulator-from-python"></a><span data-ttu-id="df42a-114">Python からシミュレーターを呼び出す</span><span class="sxs-lookup"><span data-stu-id="df42a-114">Invoking the simulator from Python</span></span>
 
-## <a name="seed"></a><span data-ttu-id="7b002-111">Seed</span><span class="sxs-lookup"><span data-stu-id="7b002-111">Seed</span></span>
+<span data-ttu-id="df42a-115">Q # Python ライブラリの[シミュレート ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable)メソッドを、インポートされた q # 操作と共に使用します。</span><span class="sxs-lookup"><span data-stu-id="df42a-115">Use the [simulate()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) method from the Q# Python library with the imported Q# operation:</span></span>
 
-<span data-ttu-id="7b002-112">では、 `QuantumSimulator` 乱数ジェネレーターを使用して、クォンタムのランダム性をシミュレートします。</span><span class="sxs-lookup"><span data-stu-id="7b002-112">The `QuantumSimulator` uses a random number generator to simulate quantum randomness.</span></span> <span data-ttu-id="7b002-113">テスト目的では、決定的な結果が得られる場合があります。</span><span class="sxs-lookup"><span data-stu-id="7b002-113">For testing purposes, it is sometimes useful to have deterministic results.</span></span> <span data-ttu-id="7b002-114">これを実現するには、パラメーターを使用して、のコンストラクターに乱数ジェネレーターのシードを指定し `QuantumSimulator` `randomNumberGeneratorSeed` ます。</span><span class="sxs-lookup"><span data-stu-id="7b002-114">This can be accomplished by providing a seed for the random number generator in the `QuantumSimulator`'s constructor via the `randomNumberGeneratorSeed` parameter:</span></span>
+```python
+qubit_result = myOperation.simulate()
+```
+
+### <a name="invoking-the-simulator-from-the-command-line"></a><span data-ttu-id="df42a-116">コマンドラインからシミュレーターを呼び出す</span><span class="sxs-lookup"><span data-stu-id="df42a-116">Invoking the simulator from the command line</span></span>
+
+<span data-ttu-id="df42a-117">コマンドラインから Q # プログラムを実行すると、完全な状態シミュレーターが既定のターゲットコンピューターになります。</span><span class="sxs-lookup"><span data-stu-id="df42a-117">When running a Q# program from the command line, the full state simulator is the default target machine.</span></span> <span data-ttu-id="df42a-118">必要に応じて、 **--シミュレーター** (または **-s**ショートカット) パラメーターを使用して、目的のターゲットコンピューターを指定できます。</span><span class="sxs-lookup"><span data-stu-id="df42a-118">Optionally, you can use the **--simulator** (or **-s** shortcut) parameter to specify the desired target machine.</span></span> <span data-ttu-id="df42a-119">次のコマンドはいずれも、完全な状態シミュレーターを使用してプログラムを実行します。</span><span class="sxs-lookup"><span data-stu-id="df42a-119">Both of the following commands run a program using the full state simulator.</span></span> 
+
+```dotnetcli
+dotnet run
+dotnet run -s QuantumSimulator
+```
+
+### <a name="invoking-the-simulator-from-juptyer-notebooks"></a><span data-ttu-id="df42a-120">Juptyer Notebook からシミュレーターを呼び出す</span><span class="sxs-lookup"><span data-stu-id="df42a-120">Invoking the simulator from Juptyer Notebooks</span></span>
+
+<span data-ttu-id="df42a-121">"IQ # マジック command [% シミュレート](xref:microsoft.quantum.iqsharp.magic-ref.simulate)" を使用して Q # 操作を実行します。</span><span class="sxs-lookup"><span data-stu-id="df42a-121">Use the IQ# magic command [%simulate](xref:microsoft.quantum.iqsharp.magic-ref.simulate) to run the Q# operation.</span></span>
+
+```
+%simulate myOperation
+```
+## <a name="seeding-the-simulator"></a><span data-ttu-id="df42a-122">シミュレーターのシード処理</span><span class="sxs-lookup"><span data-stu-id="df42a-122">Seeding the simulator</span></span>
+
+<span data-ttu-id="df42a-123">既定では、完全な状態シミュレーターはランダムな数値ジェネレーターを使用して、クォンタムのランダム性をシミュレートします。</span><span class="sxs-lookup"><span data-stu-id="df42a-123">By default, the full state simulator uses a random number generator to simulate quantum randomness.</span></span> <span data-ttu-id="df42a-124">テスト目的では、決定的な結果が得られる場合があります。</span><span class="sxs-lookup"><span data-stu-id="df42a-124">For testing purposes, it is sometimes useful to have deterministic results.</span></span> <span data-ttu-id="df42a-125">C# プログラムでは、パラメーターを使用してコンストラクターに乱数ジェネレーターのシードを指定することで、これを実現でき `QuantumSimulator` `randomNumberGeneratorSeed` ます。</span><span class="sxs-lookup"><span data-stu-id="df42a-125">In a C# program, you can accomplish this by providing a seed for the random number generator in the `QuantumSimulator` constructor via the `randomNumberGeneratorSeed` parameter.</span></span>
 
 ```csharp
     using (var sim = new QuantumSimulator(randomNumberGeneratorSeed: 42))
@@ -44,7 +70,12 @@ ms.locfileid: "85275640"
     }
 ```
 
-## <a name="threads"></a><span data-ttu-id="7b002-115">Threads</span><span class="sxs-lookup"><span data-stu-id="7b002-115">Threads</span></span>
+## <a name="configuring-threads"></a><span data-ttu-id="df42a-126">構成 (スレッドを)</span><span class="sxs-lookup"><span data-stu-id="df42a-126">Configuring threads</span></span>
 
-<span data-ttu-id="7b002-116">は `QuantumSimulator` [OpenMP](http://www.openmp.org/)を使用して、必要な線形代数を並列化します。</span><span class="sxs-lookup"><span data-stu-id="7b002-116">The `QuantumSimulator` uses [OpenMP](http://www.openmp.org/) to parallelize the linear algebra required.</span></span> <span data-ttu-id="7b002-117">既定では、OpenMP で利用可能なすべてのハードウェア スレッドが使用されます。これは、必要な調整を行って実際の作業を小さくするため、多くの場合、少数の量子ビットを含むプログラムの実行速度が低下することを意味します。</span><span class="sxs-lookup"><span data-stu-id="7b002-117">By default OpenMP uses all available hardware threads, which means that programs with small numbers of qubits will often run slowly because the coordination required will dwarf the actual work.</span></span> <span data-ttu-id="7b002-118">これを修正するには、環境変数 `OMP_NUM_THREADS` を小さい数値に設定します。</span><span class="sxs-lookup"><span data-stu-id="7b002-118">This can be fixed by setting the environment variable `OMP_NUM_THREADS` to a small number.</span></span> <span data-ttu-id="7b002-119">経験則として、最大 4 つ程度の量子ビットには 1 つのスレッドが適しています。その後、量子ビットごとにスレッドを追加することをお勧めします。ただし、これはアルゴリズムに大きく依存します。</span><span class="sxs-lookup"><span data-stu-id="7b002-119">As a very rough rule of thumb, 1 thread is good for up to about 4 qubits, and then an additional thread per qubit is good, although this is highly dependent on your algorithm.</span></span>
+<span data-ttu-id="df42a-127">完全な状態シミュレーターでは、 [OpenMP](http://www.openmp.org/)を使用して、必要な線形代数を並列化します。</span><span class="sxs-lookup"><span data-stu-id="df42a-127">The full state simulator uses [OpenMP](http://www.openmp.org/) to parallelize the linear algebra required.</span></span> <span data-ttu-id="df42a-128">既定では、OpenMP は使用可能なすべてのハードウェアスレッドを使用します。これは、必要な調整によって実際の作業が dwarfs されるため、多くの場合、qubits の数が少ないプログラムは低速で動作することを意味します。</span><span class="sxs-lookup"><span data-stu-id="df42a-128">By default, OpenMP uses all available hardware threads, which means that programs with small numbers of qubits often runs slowly because the coordination that is required dwarfs the actual work.</span></span> <span data-ttu-id="df42a-129">この問題を解決するには、環境変数 `OMP_NUM_THREADS` を小さい数値に設定します。</span><span class="sxs-lookup"><span data-stu-id="df42a-129">You can fix this by setting the environment variable `OMP_NUM_THREADS` to a small number.</span></span> <span data-ttu-id="df42a-130">経験則として、1つのスレッドを最大4つの qubits に構成してから、qubits ごとに1つのスレッドを追加します。</span><span class="sxs-lookup"><span data-stu-id="df42a-130">As a rule of thumb, configure one thread for up to four qubits, and then one additional thread per qubit.</span></span> <span data-ttu-id="df42a-131">アルゴリズムによっては、変数の調整が必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="df42a-131">You might need to adjust the variable depending on your algorithm.</span></span>
 
+## <a name="see-also"></a><span data-ttu-id="df42a-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="df42a-132">See also</span></span>
+
+- [<span data-ttu-id="df42a-133">量子リソース推定器</span><span class="sxs-lookup"><span data-stu-id="df42a-133">Quantum resources estimator</span></span>](xref:microsoft.quantum.machines.resources-estimator)
+- [<span data-ttu-id="df42a-134">量子 Toffoli シミュレーター</span><span class="sxs-lookup"><span data-stu-id="df42a-134">Quantum Toffoli simulator</span></span>](xref:microsoft.quantum.machines.toffoli-simulator)
+- [<span data-ttu-id="df42a-135">クォンタムトレースシミュレーター</span><span class="sxs-lookup"><span data-stu-id="df42a-135">Quantum trace simulator</span></span>](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
