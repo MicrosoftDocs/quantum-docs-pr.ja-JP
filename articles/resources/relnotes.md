@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 4b5e7b657f0e11fb4a14308c20859f4007729146
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885047"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871555"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -21,6 +21,17 @@ ms.locfileid: "85885047"
 
 更新手順については、[更新ガイド](xref:microsoft.quantum.update)を参照してください。
 
+
+## <a name="version-01220072031"></a>バージョン0.12.20072031
+
+*リリース日: 2020 年7月21日*
+
+このリリースには、次のものが含まれています。
+
+- Q # notebook の名前空間を開くと、今後のすべてのセルの実行で使用できるようになりました。 これにより、たとえば、各コードセルで関連する名前空間を開く必要がなく、ノートブックの上部にあるセルに1回だけ名前空間を開くことができます。 新しいマジックコマンドを実行すると、 `%lsopen` 現在開かれている名前空間の一覧が表示されます。
+
+[ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、[IQ#s](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) について、クローズされた PR の完全な一覧を参照してください。  
+
 ## <a name="version-01220070124"></a>バージョン0.12.20070124
 
 *リリース日: 2020 年7月2日*
@@ -28,7 +39,7 @@ ms.locfileid: "85885047"
 このリリースには、次のものが含まれています。
 
 - `qdk-chem`従来の電子構造の問題のシリアル化形式 (例: FCIDUMP) を[Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)に変換するための新しいツール
-- 変換と分解に基づく合成アルゴリズムを使用して古典 oracles を適用する一貫の[ `Microsoft.Quantum.Synthesis` 名前空間](xref:microsoft.quantum.synthesis)の新しい関数と操作。
+- [`Microsoft.Quantum.Synthesis`](xref:microsoft.quantum.synthesis)変換と分解に基づく合成アルゴリズムを使用して古典 oracles を適用する一貫の名前空間の新しい関数と操作。
 - IQ # で、、、 `%simulate` `%estimate` およびその他のマジックコマンドへの引数が許可されるようになりました。 詳細については、「 [ `%simulate` マジックコマンドリファレンス](xref:microsoft.quantum.iqsharp.magic-ref.simulate)」を参照してください。
 - IQ # の新しいフェーズ表示オプション。 詳細については、「 [ `%config` マジックコマンドリファレンス](xref:microsoft.quantum.iqsharp.magic-ref.config)」を参照してください。
 - `qsharp`Conda パッケージ ([qsharp](https://anaconda.org/quantum-engineering/qsharp)および[iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) によって、IQ # と python パッケージが提供されるようになりました。これにより、Conda 環境への Q # jupyter および python 機能のローカルインストールが簡単になります。 詳細については、「 [q # Jupyter notebook](xref:microsoft.quantum.install.jupyter) 」と「 [q # with Python](xref:microsoft.quantum.install.python)インストールガイド」を参照してください。
@@ -446,7 +457,7 @@ Rohit Gupta ([@guptarohit](https://github.com/guptarohit)、[PR #90](https://git
 
 *リリース日:2018 年 6 月 22 日*
 
-このリリースには、改善されたデバッグ エクスペリエンスとパフォーマンスだけでなく、いくつかのコミュニティへの投稿が含まれています。  具体的には、次のように使用します。
+このリリースには、改善されたデバッグ エクスペリエンスとパフォーマンスだけでなく、いくつかのコミュニティへの投稿が含まれています。  具体的な内容は次のとおりです。
 
 * QuantumSimulator ターゲット コンピューターの小規模のシミュレーションと大規模のシミュレーションの両方のパフォーマンスの向上。
 * デバッグ機能の改善。
@@ -519,7 +530,7 @@ dotnet add package xunit -v "2.3.1"
 dotnet clean 
 ```
 
-### <a name="known-issues"></a>の既知の問題
+### <a name="known-issues"></a>既知の問題
 
 報告する追加の既知の問題はありません。
 
@@ -554,7 +565,7 @@ Quantum Development Kit の以前のリリースでは .NET Framework のみが�
 
 名前空間 Microsoft.Quantum.Canon の演算 RandomWalkPhaseEstimation は、[Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) リポジトリの名前空間 Microsoft.Research.Quantum.RandomWalkPhaseEstimation に移動されたことに注意してください。
 
-### <a name="known-issues"></a>既知の問題
+### <a name="known-issues"></a>の既知の問題
 
 - `dotnet test` の `--filter` オプションが、Q# で記述されたテストで正しく機能しません。
   そのため、個々の単体テストを Visual Studio Code で実行することができません。すべてのテストを再実行する場合は、コマンドラインで `dotnet test` を使用することをお勧めします。

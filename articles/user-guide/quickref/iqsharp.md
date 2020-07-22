@@ -5,37 +5,47 @@ author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref.iqsharp
-ms.openlocfilehash: 0cd1a2289132e2760a21fd9d4f4083696353e271
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 2fb542df8723fa437c82b4a1dfada77e22c1d6e4
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431021"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870543"
 ---
 # <a name="iq-magic-commands"></a>IQ# マジック コマンド
 
 ### <a name="general"></a>全般
 
-- `%config`: 構成設定を設定または取得します。
-- `%estimate`: QuantumSimulator ターゲットコンピューターで指定された関数または操作を実行します。
-- `%lsmagic`: 現在使用可能なすべてのマジックコマンドの一覧を返します。
-- `%package`: Nuget パッケージを読み込む機能を提供します。
-- `%performance`: このカーネルの現在のパフォーマンスメトリックを報告します。
-- `%simulate`: QuantumSimulator ターゲットコンピューターで指定された関数または操作を実行します。
-- `%toffoli`: ToffoliSimulator シミュレーターターゲットコンピューターで指定された関数または操作を実行します。
-- `%who`: 現在のワークスペースに関連するアクションを提供します。
-- `%workspace`: 現在のセッションで定義されているすべての操作と関数の一覧を、対話的に、または現在のワークスペースから読み込んで返します。
+- [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config): 構成オプションを設定または照会できます。
+- [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate): ResourcesEstimator ターゲットコンピューターで指定された関数または操作を実行します。
+- [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic): 現在使用可能なすべてのマジックコマンドの一覧を返します。
+- [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package): NuGet パッケージを読み込む機能を提供します。
+- [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance): このカーネルの現在のパフォーマンスメトリックを報告します。
+- [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate): QuantumSimulator ターゲットコンピューターで指定された関数または操作を実行します。
+- [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli): ToffoliSimulator ターゲットコンピューターで指定された関数または操作を実行します。
+- [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who): 現在のセッションで使用できる Q # 操作を一覧表示します。
+- [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace): 現在のワークスペースに関連するアクションを提供します。
 
-### <a name="chemistry"></a>科学
+### <a name="azure-quantum-integration"></a>Azure クォンタムの統合
 
-- `%chemistry.broombridge`: 指定された yaml ファイルから Broombridge の電子構造の問題表現を読み込んで返します。
-- `%chemistry.encode`: Hamiltonian on にあるは、Q # で利用できる形式にエンコードします。
-- `%chemistry.fh.add_terms`: Hamiltonian 上の対象に用語を追加します。
-- `%chemistry.fh.load`: 電子構造の問題のために、Hamiltonian 上にあるので、このデータを読み込みます。 問題はファイルから読み込まれるか、引数として渡されます。
-- `%chemistry.inputstate.load`: Broombridge の電子構造問題を読み込み、選択した入力状態を返します。
+- [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect): Azure Quantum ワークスペースに接続するか、現在の接続状態を表示します。
+- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Azure Quantum ワークスペースでジョブを実行します。
+- [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs): 現在の Azure クォンタムワークスペースのジョブの一覧を表示します。
+- [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): 現在の Azure クォンタムワークスペースにジョブの結果を表示します。
+- [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): 現在の Azure クォンタムワークスペースのジョブの状態を表示します。
+- [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit): Azure Quantum ワークスペースにジョブを送信します。
+- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Azure Quantum ワークスペースでの Q # ジョブの送信のアクティブな実行ターゲットを設定または表示します。
 
-### <a name="from-microsoftquantumkatas-package"></a>Katas パッケージから
+### <a name="chemistry-from-microsoftquantumchemistry-package"></a>化学 (Microsoft の Quantum パッケージから)
 
-- `%kata`: 1 つのテストを実行し、テストが成功したかどうかを報告します。
-- `%check_kata`: 1 つの kata のテストの参照の実装を確認します。
+- [`%chemistry.broombridge`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge): 指定された yaml ファイルから Broombridge の電子構造の問題表現を読み込んで返します。
+- [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode): Hamiltonian on にあるは、Q # で利用できる形式にエンコードします。
+- [`%chemistry.fh.add_terms`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.add_terms): Hamiltonian 上の対象に用語を追加します。
+- [`%chemistry.fh.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load): 電子構造の問題のために、Hamiltonian 上にあるので、このデータを読み込みます。 問題はファイルから読み込まれるか、引数として渡されます。
+- [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load): Broombridge の電子構造問題を読み込み、選択した入力状態を返します。
+
+### <a name="katas-from-microsoftquantumkatas-package"></a>Katas (Katas パッケージから)
+
+- [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata): 1 つのテストを実行し、テストが成功したかどうかを報告します。
+- [`%check_kata`](xref:microsoft.quantum.iqsharp.magic-ref.check_kata): 1 つの kata のテストの参照の実装を確認します。
     具体的には、1つのタスクの参照実装をセルに置き換え、テストが成功したかどうかを報告します。

@@ -1,87 +1,35 @@
 ---
-title: 'Microsoft Q # 化学ライブラリのインストールと検証'
+title: 'Microsoft Q # 化学ライブラリのインストール'
 description: Microsoft Quantum の化学ライブラリをインストールし、NWChem 計算化学プラットフォームで使用する方法について説明します。
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: 48bf7bc980e238e622053f5c2bdd09604c572596
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 0e870bb3421dddb632375a2fc8633249954f8c8b
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276105"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871536"
 ---
-# <a name="chemistry-library-installation-and-validation"></a>化学ライブラリのインストールと検証
+# <a name="chemistry-library-installation"></a>化学ライブラリのインストール
 
-Quantum 開発キットでは、NuGet パッケージを使用した量子化学アプリケーションがサポートされて [`Microsoft.Quantum.Chemistry`](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) います。
-他の NuGet パッケージと同様に、プロジェクトに化学ライブラリを簡単に追加できます。
-
-**Visual Studio 2019:** Visual Studio 2019 を使用している場合は、NuGet パッケージマネージャーを使用して、quantum の化学パッケージを追加できます。
-パッケージマネージャーを開くには、次のスクリーンショットのように、化学ライブラリを追加するプロジェクトを右クリックし、[NuGet パッケージの管理...] を選択します。
-
-![Visual Studio 2019 での NuGet パッケージマネージャーの使用](~/media/vs2017-nuget-manage-packages.png)
-
-[参照] タブで、パッケージ名 "Microsoft. Quantum." を検索します。
-
-> [!NOTE]
-> 必ず [プレリリース版を含める] をオンにしてください。
-
-![プレリリースチェックボックスを含める](~/media/vs2017-nuget-package-search.png)
-
-これにより、ダウンロード可能なパッケージが一覧表示されます。
-左側のウィンドウで [Microsoft. Quantum. 化学] をクリックし、右側のウィンドウで最新のプレリリースバージョンを選択し、[インストール] をクリックします。
-
-![最新の Microsoft の Quantum パッケージをインストールする](~/media/vs2017-nuget-select-chem.png)
-
-詳細については、「[パッケージマネージャー UI ガイド](https://docs.microsoft.com/nuget/tools/package-manager-ui)」を参照してください。
-
-または、パッケージマネージャーコンソールを使用して、コマンドラインインターフェイスを使用して、プロジェクトに量子化学ライブラリを追加することもできます。
-
-![コマンドラインからのパッケージマネージャーコンソールの使用](~/media/vs2017-nuget-console-menu.png)
-
-パッケージマネージャーコンソールで、次のように実行します。
-
-```
-Install-Package Microsoft.Quantum.Chemistry
-```
-
-詳細については、「[パッケージマネージャーコンソールガイド](https://docs.microsoft.com/nuget/tools/package-manager-console)」を参照してください。
-
-**コマンドラインまたは Visual Studio Code:** コマンドラインを単独で、または Visual Studio Code 内で使用すると、コマンドを使用して `dotnet` NuGet パッケージ参照をプロジェクトに追加できます。
-
-```dotnetcli
-dotnet add package Microsoft.Quantum.Chemistry
-```
-
-## <a name="verifying-your-installation"></a>インストールの確認 
-
-Quantum 開発キットの残りの部分と同様に、量子化学ライブラリには、すぐに起動して実行するのに役立つ、完全にドキュメント化されたサンプルがいくつか付属しています。
-これらのサンプルを使用してインストールをテストするには、[メインサンプルリポジトリ](https://github.com/Microsoft/Quantum)を複製し、サンプルのいずれかを実行します。  たとえば、サンプルを実行するには、次のようにし [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) ます。
-
-```bash
-git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/samples/chemistry/MolecularHydrogen
-dotnet run
-```
-
-リポジトリを複製した後に Microsoft Visual Studio を使用して、quantum の化学ライブラリがインストールされていることを確認するには:
-    1. [化学] フォルダーの ChemistrySamples ソリューションを開きます。  
-    2. サンプル/1 を選択します。 スタートアッププロジェクトとしての単純な分子/MolecularHydrogen。
-    3. F5 キーを押して、分子 Hydrogen クォンタムフェーズの推定デモを実行します。
-
-エネルギーレベルの値の推定の詳細については、「[エネルギーレベルの推定の取得](xref:microsoft.quantum.chemistry.examples.energyestimate)」を参照してください。   
-
-
-## <a name="using-the-quantum-development-kit-with-nwchem"></a>NWChem での Quantum 開発キットの使用 ##
-
-MolecularHydrogen サンプルでは、手動で構成された分子入力データを使用します。  これは、小さな例では問題ありませんが、大規模な量子化学には、何百万または十億の Hamiltonians が必要です。 スケーラブルな計算化学パッケージによって生成された Hamiltonians は、手動でインポートするには大きすぎます。 
+[ **MolecularHydrogen**サンプル](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen)では、手動で構成された分子入力データを使用します。
+これは、小さな例では問題ありませんが、大規模な量子化学では、何百万または十億の Hamiltonians を持つ必要があります。
+スケーラブルな計算化学パッケージによって生成されるこのような Hamiltonians は、大きすぎて手動でインポートすることはできません。
 
 Quantum 開発キットの quantum 化学ライブラリは、計算化学パッケージで適切に動作するように設計されています。特に、環境分子サイエンス研究所 (EMSL) によって開発された、太平洋北西国立研究所で作成された[**Nwchem**](http://www.nwchem-sw.org/)計算化学プラットフォームです。
-特に、 `Microsoft.Quantum.Chemistry` [Broombridge スキーマ](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)に示されている量子化学シミュレーションの問題のインスタンスを読み込むためのツールがパッケージに用意されています。これは、最近のバージョンの nwchem のエクスポートでもサポートされています。
+特に、 [Broombridge スキーマ](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)に示されている量子化学シミュレーションの問題のインスタンスを読み込むためのツールを提供しています。 [ **Microsoft.Quantum.Chemistry**これは、](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry)最近のバージョンの nwchem のエクスポートでもサポートされています。
 
-Quantum 開発キットと共に NWChem を使用して稼働させるには、次のいずれかの方法をお勧めします。
+Quantum Development Kit 化学ライブラリには、 `qdk-chem` 従来の形式と[Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)を変換するためのコマンドラインツールも用意されています。
+
+このセクションでは、Broombridge、または従来の形式とを使用して、Quantum 開発キットを使用する方法について詳しく説明し `qdk-chem` ます。
+
+## <a name="using-the-quantum-development-kit-with-nwchem"></a>NWChem での Quantum 開発キットの使用
+
+Quantum 開発キットと共に NWChem を使用して稼働させるには、次のいずれかの方法を使用します。
+
 - 「統合[Aldata/YAML](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)」でサンプルに用意されている既存の Broombridge ファイルの使用を開始します。
 - 新しい Broombridge 形式の分子入力ファイルを生成するには、 [Microsoft Quantum Development Kit 用の Emsl 矢印ビルダー](https://arrows.emsl.pnnl.gov/api/qsharp_chem)を使用します。これは、NWChem の web ベースのフロントエンドです。  
 - PNNL によって提供される[Docker イメージ](https://hub.docker.com/r/nwchemorg/nwchem-qc/)を使用して、NWChem を実行します。
@@ -171,4 +119,27 @@ PowerShell の組み込みヘルプ機能を使用して、詳細情報を取得
 ```powershell
 Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
+```
+
+## <a name="using-the-quantum-development-kit-with-qdk-chem"></a>での Quantum 開発キットの使用`qdk-chem`
+
+をインストールするには、 `qdk-chem` コマンドラインで .NET Core SDK を使用します。
+
+```dotnetcli
+dotnet tool install --global Microsoft.Quantum.Chemistry.Tools
+```
+
+をインストールしたら `qdk-chem` 、オプションを使用して、 `--help` ツールによって提供される機能に関する詳細情報を取得でき `qdk-chem` ます。
+
+Broombridge との間で変換を行うには、次のコマンドを使用し `qdk-chem convert` ます。
+
+```
+qdk-chem convert --from fcidump --to broombridge data.fcidump --out data.yml
+```
+
+`qdk-chem convert`また、このコマンドは標準入力からデータを受け入れ、標準出力に書き込むことができます。これは、スクリプトや、従来の形式にエクスポートするツールとの統合に特に役立ちます。
+たとえば Bash の場合は次のようになります。
+
+```bash
+cat data.fcidump | qdk-convert --from fcidump --to broombridge - > data.yml
 ```

@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: 0cf62a128170bd0c28ff77f00fc23414567b1ea4
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: b652736168a71b905deaf7c4fdb29a8751b3dfaf
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415305"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870993"
 ---
 # <a name="control-flow-in-q"></a>Q での制御フロー#
 
@@ -42,7 +42,7 @@ ms.locfileid: "85415305"
 いずれかのブロックが実行されると、それ自体のスコープ内で実行されることに注意してください。
 `if`、 `elif` 、またはブロック内で行われたバインディングは、ブロックの終了後には `else` 参照できません。
 
-たとえば、オブジェクトに適用された
+たとえば、次のように入力します。
 
 ```qsharp
 if (result == One) {
@@ -52,7 +52,7 @@ if (result == One) {
 } 
 // n is not bound
 ```
-または
+or
 ```qsharp
 if (i == 1) {
     X(target);
@@ -166,11 +166,11 @@ while (index < Length(arr) && item < 0) {
 Return ステートメントは、操作または関数の実行を終了し、値を呼び出し元に返します。
 これは、キーワードと、 `return` 適切な型の式、および終端のセミコロンで構成されます。
 
-たとえば、オブジェクトに適用された
+たとえば、次のように入力します。
 ```qsharp
 return 1;
 ```
-または
+or
 ```qsharp
 return (results, qubits);
 ```
@@ -191,7 +191,7 @@ Fail ステートメントは、操作の実行を終了し、呼び出し元に
 操作内の fail ステートメントの数に制限はありません。
 ステートメントがブロック内の fail ステートメントに続く場合、コンパイラは警告を生成することがあります。
 
-たとえば、オブジェクトに適用された
+たとえば、次のように入力します。
 
 ```qsharp
 fail $"Impossible state reached";
@@ -278,9 +278,9 @@ using (qubit = Qubit()) {
 この操作に示されている重要なプログラム機能は次のとおりです。
 
 * ループのより複雑な `fixup` 部分。これには、クォンタム操作が含まれます。 
-* ステートメントを使用して、 `AssertProb` プログラム内の指定した特定のポイントでクォンタムの状態を測定する確率を確認します。
+* ステートメントを使用して、 `AssertMeasurementProbability` プログラム内の指定した特定のポイントでクォンタムの状態を測定する確率を確認します。
 
-操作と操作の詳細につい [`Assert`](xref:microsoft.quantum.intrinsic.assert) [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) ては、「[テストおよびデバッグ](xref:microsoft.quantum.guide.testingdebugging)」を参照してください。
+操作と操作の詳細につい [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) ては、「[テストおよびデバッグ](xref:microsoft.quantum.guide.testingdebugging)」を参照してください。
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {
@@ -289,10 +289,10 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
         repeat {
             // We expect the target and auxiliary qubits to each be in
             // the |+> state.
-            AssertProb(
+            AssertMeasurementProbability(
                 [PauliX], [target], Zero, 1.0,
                 "target qubit should be in the |+> state", 1e-10 );
-            AssertProb(
+            AssertMeasurementProbability(
                 [PauliX], [auxiliary], Zero, 1.0,
                 "auxiliary qubit should be in the |+> state", 1e-10 );
 
@@ -302,7 +302,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 
             // The probability of measuring |+> state on the auxiliary qubit
             // is 3/4.
-            AssertProb(
+            AssertMeasurementProbability(
                 [PauliX], [auxiliary], Zero, 3. / 4.,
                 "Error: the probability to measure |+> in the first
                 auxiliary must be 3/4",

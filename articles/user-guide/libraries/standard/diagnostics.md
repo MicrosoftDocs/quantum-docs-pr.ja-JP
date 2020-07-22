@@ -5,12 +5,12 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: fa5173f710dd9e0b0b2c110e45aa0bf019111aca
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 324753cfa1b7d940bf5a0bbe7665f19cc6dda82c
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275704"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870636"
 ---
 # <a name="diagnostics"></a>診断 #
 
@@ -61,19 +61,19 @@ Q # 標準ライブラリには、次のようなファクトを表すための�
 
 実際には、アサーションは、クォンタム機構の古典シミュレーションが、[複製なしの定理](https://arxiv.org/abs/quant-ph/9607018)に従う必要がないという事実に依存しています。これは、ターゲットマシンにシミュレーターを使用するときに、非物理測定とアサーションを行うことができるようにするためです。
 そのため、ハードウェアに展開する前に、古典シミュレーターで個々の操作をテストすることができます。
-アサーションの評価が許可されていないターゲットコンピューターでは、の呼び出しは <xref:microsoft.quantum.intrinsic.assert> 無視しても安全です。
+アサーションの評価が許可されていないターゲットコンピューターでは、の呼び出しは <xref:microsoft.quantum.diagnostics.assertmeasurement> 無視しても安全です。
 
-一般的に、この操作は、指定されたすべての指定された qubits が指定された <xref:microsoft.quantum.intrinsic.assert> 結果を常に取得することをアサートします。
+一般的に、この操作は、指定されたすべての指定された qubits が指定された <xref:microsoft.quantum.diagnostics.assertmeasurement> 結果を常に取得することをアサートします。
 アサーションが失敗した場合、指定したメッセージを使用してを呼び出すことにより、実行が終了し `fail` ます。
 既定では、この操作は実装されていません。これをサポートするシミュレーターは、ランタイムチェックを実行する実装を提供する必要があります。
-`Assert`に署名があり `((Pauli[], Qubit[], Result, String) -> ())` ます。
-`Assert`は、出力の種類として空のタプルを持つ関数であるため、を呼び出すことによる影響 `Assert` は、Q # プログラム内では監視できません。
+`AssertMeasurement`に署名があり `((Pauli[], Qubit[], Result, String) -> ())` ます。
+`AssertMeasurement`は、出力の種類として空のタプルを持つ関数であるため、を呼び出すことによる影響 `AssertMeasurement` は、Q # プログラム内では監視できません。
 
-操作関数は、指定された型の指定された <xref:microsoft.quantum.intrinsic.assertprob> qubits を測定することをアサートします。これは、一定の許容範囲内で指定された確率で特定の結果を取得します。
+操作関数は、指定された型の指定された <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> qubits を測定することをアサートします。これは、一定の許容範囲内で指定された確率で特定の結果を取得します。
 許容範囲は加法です (など `abs(expected-actual) < tol` )。
 アサーションが失敗した場合、指定したメッセージを使用してを呼び出すことにより、実行が終了し `fail` ます。
 既定では、この操作は実装されていません。これをサポートするシミュレーターは、ランタイムチェックを実行する実装を提供する必要があります。
-`AssertProb`に署名があり `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` ます。 1つ目のパラメーターは、 `Double` 結果の目的の確率を示し、2番目のパラメーターは許容範囲です。
+`AssertMeasurementProbability`に署名があり `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` ます。 1つ目のパラメーターは、 `Double` 結果の目的の確率を示し、2番目のパラメーターは許容範囲です。
 
 1つの測定値をアサートする以外にも、シミュレーターで使用される古典的な情報を使用して qubit の内部状態を表すことが、コピーに適しているということを使用します。これは、実際にアサーションをテストするために測定を実行する必要がないためです。
 具体的には、これにより、実際のハードウェアでは不可能な*互換性*のない測定を行うことができます。
@@ -100,7 +100,7 @@ using (register = Qubit()) {
 ```
 
 ただし、一般に、Pauli オペレーターの eigenstates と一致しない状態に関するアサーションにアクセスできない場合があります。
-たとえば、$ \ket{\psi} = (\ket {0} + e ^ {i \ pi/8} \ket {1} )/\ sqrt {2} $ は、pauli 演算子の eigenstate ではなく、を使用して <xref:microsoft.quantum.intrinsic.assertprob> 状態 $ \ket{\psi '} $ が $ \ket{\psi} $ と等しいことを一意に特定することはできません。
+たとえば、$ \ket{\psi} = (\ket {0} + e ^ {i \ pi/8} \ket {1} )/\ sqrt {2} $ は、pauli 演算子の eigenstate ではなく、を使用して <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 状態 $ \ket{\psi '} $ が $ \ket{\psi} $ と等しいことを一意に特定することはできません。
 代わりに、アサーション $ \ket{\psi '} = \ket{\psi} $ を、シミュレーターでサポートされているプリミティブを使用して直接テストできる仮定に分解する必要があります。
 これを行うには、$ \ket{\psi} = \ alpha \ket {0} + \ beta \ket {1} $ に複素数 $-alpha = a \_ r + a \_ i $ and $ \ beta $ を使用します。
 この式では、 \{ \_ \_ \_ \_ \} 各複素数を実数部と虚数部の合計として表現できるため、$ a r、a i、b r、b i $ という4つの実数が必要であることに注意してください。

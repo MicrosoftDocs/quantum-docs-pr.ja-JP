@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 26de7d5f639ea1b4df24232127b6f95cee3a041e
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884187"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871384"
 ---
 # <a name="q-style-guide"></a>Q # スタイルガイド #
 ## <a name="general-conventions"></a>一般規則 ##
@@ -259,7 +259,7 @@ Q # は厳密かつ厳密に型指定された言語であるため、1つの型
 この制限は、Q # の将来のバージョンでは保持されない場合がありますが、現在のところ、関連する操作のグループ、またはその入力がサポートしている機能や、引数の具象型によって区別される関数のグループが存在することがあります。
 これらのグループは、同じルート名を使用し、そのバリアントを示す 1 ~ 2 文字で区別できます。
 
-| サフィックス | 説明 |
+| サフィックス | 意味 |
 |--------|---------|
 | `A` | サポートが必要な入力`Adjoint` |
 | `C` | サポートが必要な入力`Controlled` |
@@ -386,9 +386,8 @@ Quantum Development Kit に用意されているコンパイラは、これら�
 同様に、Quantum 開発キットで提供されている言語サーバーは、これらのコメントを使用して、ユーザーが Q # コード内のシンボルにマウスポインターを置いたときにヘルプを提供します。
 ドキュメントコメントを使用すると、このドキュメントの他の規則を使用して簡単には表現できない詳細情報を提供することで、ユーザーがコードを理解するのに役立ちます。
 
-<div class="nextstepaction">
-    [ドキュメントコメントの構文リファレンス](xref:microsoft.quantum.guide.filestructure#documentation-comments)
-</div>
+> [!div class="nextstepaction"]
+> [ドキュメントコメントの構文リファレンス](xref:microsoft.quantum.guide.filestructure#documentation-comments)。
 
 この機能を効果的に使用してユーザーを支援するには、ドキュメントコメントを記述する際に注意することをお勧めします。
 
