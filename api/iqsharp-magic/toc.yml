@@ -32,6 +32,8 @@
   name: '%kata マジック コマンド'
 - href: lsmagic.md
   name: '%lsmagic マジック コマンド'
+- href: lsopen.md
+  name: '%lsopen マジック コマンド'
 - href: package.md
   name: '%package マジック コマンド'
 - href: performance.md
