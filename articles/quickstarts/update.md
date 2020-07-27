@@ -7,12 +7,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 457083ea4756d64375834e5a276c2d91031138fe
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 69b83997773896583258a4996a61b6f334edf407
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885146"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871401"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum 開発キット (QDK) を更新する
 
@@ -53,7 +53,7 @@ Q# の演算をホストするために C# と Python のどちらを使用し�
 5. それぞれの .csproj ファイルで、次の行で示されているように SDK を `Microsoft.Quantum.Sdk` に設定します。 バージョン番号は利用可能な最新のものにする必要がありますので、ご注意ください。[リリース ノート](https://docs.microsoft.com/quantum/relnotes/)を確認してください。
 
     ```xml
-    <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+    <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
     ```
 
 6. ソリューションのすべてのファイルを保存し、閉じます。
@@ -93,7 +93,7 @@ Q# の演算をホストするために C# と Python のどちらを使用し�
     dotnet clean [project_name].csproj
     ```
 
-3. QDK の現在のバージョンを確認します。 そのためには、[リリース ノート](https://docs.microsoft.com/quantum/relnotes/)を確認します。 バージョンの形式は、`0.11.2006.207` のようになっています。
+3. QDK の現在のバージョンを確認します。 そのためには、[リリース ノート](https://docs.microsoft.com/quantum/relnotes/)を確認します。 バージョンの形式は、`0.12.20072031` のようになっています。
 
 4. それぞれの `.csproj` ファイルで、次のステップを繰り返します。
 
@@ -108,7 +108,7 @@ Q# の演算をホストするために C# と Python のどちらを使用し�
     - プロジェクト定義で、SDK への参照を置き換えます。 バージョン番号が、**手順 3** で確認した値に対応していることを確認します。
 
         ```xml
-        <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+        <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
         ```
 
     - もしある場合は、パッケージ `Microsoft.Quantum.Development.Kit` への参照を削除します。これは、次のエントリで指定されます。
@@ -127,7 +127,7 @@ Q# の演算をホストするために C# と Python のどちらを使用し�
         パッケージへの参照は、次のような形式になっています。
 
         ```xml
-        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.11.2006.207" />
+        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.12.20072031" />
         ```
 
     - 更新したファイルを保存します。
@@ -194,7 +194,7 @@ QDK を更新するプロセスは、開発の言語と環境に応じて異な�
     次の出力が表示されます。
 
     ```
-    iqsharp: 0.12.20070124
+    iqsharp: 0.12.20072031
     Jupyter Core: 1.4.0.0
     ```
 
@@ -216,7 +216,7 @@ QDK を更新するプロセスは、開発の言語と環境に応じて異な�
 
     ```
     Name: qsharp
-    Version: 0.12.20070124
+    Version: 0.12.2007.2031
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
@@ -267,7 +267,7 @@ QDK を更新するプロセスは、開発の言語と環境に応じて異な�
     出力は次のようになります。
 
     ```
-    iqsharp: 0.12.20070124
+    iqsharp: 0.12.20072031
     Jupyter Core: 1.4.0.0
     ```
 
@@ -302,16 +302,19 @@ QDK を更新するプロセスは、開発の言語と環境に応じて異な�
     - **[Microsoft Quantum Development Kit for Visual Studio Code]\(Visual Studio Code 用 Microsoft Quantum 開発キット\)** を選択します
     - 拡張機能を再度読み込みます
 
-2. Quantum プロジェクト テンプレートを更新します
-
-   - **[表示]**  ->  **[コマンド パレット]** の順に選択します。
-   - **[Q#:Install project templates]\(Q#: プロジェクト テンプレートのインストール\)** を選択します。
-   - 数秒後に、[project templates installed successfully]\(プロジェクト テンプレートが正常にインストールされました\) というポップアップが表示されます。
-
 ### <a name="c-using-the-dotnet-command-line-tool"></a>C# で `dotnet` コマンド ライン ツールを使用する
 
 1. .NET 用 Quantum プロジェクト テンプレートを更新します
 
+    コマンドラインから:
+
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
+
+   または、コマンド ライン テンプレートを使用する予定であり、既に VS Code QDK 拡張機能をインストール済みの場合は、拡張機能自体からプロジェクト テンプレートを更新できます。
+
+   - [QDK 拡張機能を更新します](#update-vs-code-qdk-extension)
+   - VS Code で、 **[表示]**  ->  **[コマンド パレット]** に移動します
+   - **[Q#:Install command line project templates]\(Q#: コマンド ライン プロジェクト テンプレートのインストール\)** を選択します
+   - 数秒後に、[project templates installed successfully]\(プロジェクト テンプレートが正常にインストールされました\) というポップアップが表示されます。
