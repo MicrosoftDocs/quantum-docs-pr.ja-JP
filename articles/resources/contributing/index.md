@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: c5acd6c2b3163488a9b4c6e52e6d34489a8f4056
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871418"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436565"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit に貢献する
 
@@ -19,7 +19,7 @@ Quantum Development Kit は、量子プログラムを作成するための単�
 これは、量子コンピューティングの研究、量子アルゴリズムを使用した調査、量子デバイス向けの新しいアプリケーションの開発、および量子プログラミングを最大限に活用するためのその他の作業を行う人々の広範囲のコミュニティの一部です。
 このコミュニティのメンバーとして、Quantum Development Kit は、さまざまな背景を持つ量子開発者に必要な機能を提供することを目的としています。
 Quantum Development Kit へのコントリビューションは、他の量子開発者が使用するツールの改善、それらのツールの文書化、さらに量子プログラミング コミュニティでの発見や作成を改善するために役立つ新しい機能の作成などを通じて、このような目的を実現するために役立ちます。
-Microsoft は、皆さんのコントリビューション、そして皆さんと協力してコミュニティを最大限に活用できる機会を非常にうれしく思います。
+Microsoft は、皆さんのコントリビューション、そして皆さんと協力してコミュニティを最大限に活用できる機会を非常にうれしく思います。 
 
 このガイドでは、より広い量子プログラミング コミュニティへのコントリビューションを可能な限り有益なものにする方法に関するアドバイスを提供します。
 

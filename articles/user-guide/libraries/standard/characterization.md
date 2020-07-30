@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275767"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436532"
 ---
 # <a name="quantum-characterization-and-statistics"></a>クォンタムの特性と統計 #
 
@@ -96,7 +96,7 @@ $X = \ket{+} \ ロウ {+}-\ket \bra $ であることに注意 {-} {-} してく
 これを確認するには、$ bit 変数 $x $ $n を学習します。
 以前のディストリビューション $ \ Pr (x) $ は $x $ の $ 2 ^ n $ 仮定値をサポートしています。
 つまり、$x $ の推定精度が高い場合、ベイジアンフェーズの推定には、膨大なメモリと処理時間が必要になることがあります。
-クォンタムシミュレーションなどの一部のアプリケーションでは、必要な limitted の精度によって、そのような方法では、Shor のアルゴリズムなどの他のアプリケーションでは、そのフェーズの推定手順で正確なベイジアン推論を使用できません。  このため、[ランダムウォークフェーズの推定 (RWPE)](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation)や、[堅牢なフェーズの推定](xref:microsoft.quantum.characterization.robustphaseestimation)などの非ベイジアンアプローチについても、おおよそのベイジアンメソッドの実装を提供しています。
+クォンタムシミュレーションなどの一部のアプリケーションでは、必要な limitted の精度によって、そのような方法では、Shor のアルゴリズムなどの他のアプリケーションでは、そのフェーズの推定手順で正確なベイジアン推論を使用できません。  このため、[ランダムウォークフェーズの推定 (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation)や、[堅牢なフェーズの推定](xref:microsoft.quantum.characterization.robustphaseestimation)などの非ベイジアンアプローチについても、おおよそのベイジアンメソッドの実装を提供しています。
 
 ### <a name="robust-phase-estimation"></a>堅牢なフェーズの推定 ###
 
