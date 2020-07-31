@@ -6,12 +6,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: ec5e66e0c85d89888a8ff1e7d6bf18bf89ff44ac
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: 4d148435f01d975e690828dd02335758fc71dfe4
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871588"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436547"
 ---
 # <a name="develop-with-q-and-python"></a>Q# と Python を使用した開発
 
@@ -97,7 +97,7 @@ VS Code を使用する場合は、次のようにします。
     import qsharp
     from Qrng import SampleQuantumRandomNumberGenerator
 
-    SampleQuantumRandomNumberGenerator.simulate()
+    print(SampleQuantumRandomNumberGenerator.simulate())
     ```
 
 1. インストール時に作成した環境 (`qsharp` をインストールした conda または Python 環境) で、次のプログラムを実行します。
@@ -106,7 +106,7 @@ VS Code を使用する場合は、次のようにします。
     python host.py
     ```
 
-1. 呼び出された演算の結果が表示されます。 この場合、演算によってランダムな結果が生成されるため、`Zero` または `One` が画面に表示されます。 プログラムを繰り返し実行すると、それぞれの結果がだいたい半分ずつ表示されます。
+1. 呼び出された演算の結果が表示されます。 この場合、演算によってランダムな結果が生成されるため、`0` または `1` が画面に表示されます。 プログラムを繰り返し実行すると、それぞれの結果がだいたい半分ずつ表示されます。
 
 > [!NOTE]
 > * その Python コードは通常の Python プログラムです。 Python ベースの Jupyter Notebook を含む任意の Python 環境を使用して、Python プログラムを記述し、Q# 演算を呼び出すことができます。 Python プログラムでは、Python コード自体と同じフォルダーにある任意の .qs ファイルから Q# 演算をインポートできます。
