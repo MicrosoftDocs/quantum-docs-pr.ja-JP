@@ -1,32 +1,35 @@
 ---
-title: 'Q # API 設計の原則'
-description: 'Q # API 設計の原則'
+title: Q#API 設計の原則
+description: Q#API 設計の原則
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
-ms.openlocfilehash: def6a9f12accfa399fd4db3783b9899fc743f025
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 580fcaea575ff544ed2c5f31eba7e963bea4534b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275495"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866895"
 ---
-# <a name="q-api-design-principles"></a>Q # API 設計の原則
+# <a name="no-locq-api-design-principles"></a>Q#API 設計の原則
 
-## <a name="introduction"></a>概要
+## <a name="introduction"></a>はじめに
 
-言語およびプラットフォームとして、ユーザーは、クォンタムアプリケーションの記述、実行、理解、調査を行うことができます。
-ユーザーを支援するために、Q # ライブラリを設計する際には、一連の API 設計原則に従って設計を進め、quantum 開発コミュニティで使用可能なライブラリを作成できるようにします。
-この記事では、これらの原則について説明し、Q # Api を設計するときに適用する方法を示す例を示します。
+言語としてのプラットフォームとして、では、 Q# ユーザーは quantum アプリケーションの作成、実行、理解、調査を行うことができます。
+ユーザーを支援するために、ライブラリを設計する際に Q# は、一連の API 設計原則に従って設計を進め、quantum 開発コミュニティで使用可能なライブラリを作成できるようにします。
+この記事では、これらの原則について説明し、api の設計時にそれらを適用する方法を示す例を示し Q# ます。
 
 > [!TIP]
 > これは、ライブラリの開発と詳細なライブラリの投稿をガイドするための、非常に詳細なドキュメントです。
-> Q # で独自のライブラリを作成している場合や、 [q # ライブラリリポジトリ](https://github.com/microsoft/QuantumLibraries)に大きな機能を提供している場合は、最も役に立つでしょう。
+> で独自のライブラリを作成している場合 Q# 、または[ Q# ライブラリリポジトリ](https://github.com/microsoft/QuantumLibraries)により大きな機能を提供している場合に、最も役に立つでしょう。
 >
 > 一方、Quantum 開発キットに投稿する方法については、後で説明することをお[勧めします。](xref:microsoft.quantum.contributing)
-> Q # コードを書式設定する方法についての一般的な情報を探している場合は、[スタイルガイド](xref:microsoft.quantum.contributing.style)を確認することをお勧めします。
+> コードの書式設定を推奨する方法に関する一般的な情報を探している場合は、 Q# [スタイルガイド](xref:microsoft.quantum.contributing.style)を確認することをお勧めします。
 
 ## <a name="general-principles"></a>一般原則
 
@@ -81,7 +84,7 @@ ms.locfileid: "85275495"
 - ✅同じ API と以前に存在していたライブラリの両方で、他の関数や操作との連携を構成するために、関数と操作**を設計し**ます。
 
   *例:*
-  - この操作では、 @"microsoft.quantum.canon.delay" 入力に関して最小限の仮定が行われるため、Q # 標準ライブラリ全体またはユーザーによる定義に従って、いずれかの操作のアプリケーションを遅延させることができます。
+  - この操作では、 @"microsoft.quantum.canon.delay" 入力に関して最小限の仮定が行われるため、 Q# 標準ライブラリ全体またはユーザーによる定義に従って、いずれかの操作のアプリケーションを遅延させることができます。
     <!-- TODO: define bad example. -->
 
 - ✅純粋に確定的なクラシックロジックを操作ではなく関数とし**て公開し**ます。

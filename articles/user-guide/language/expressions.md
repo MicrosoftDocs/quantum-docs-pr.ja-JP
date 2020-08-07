@@ -1,29 +1,32 @@
 ---
-title: Q の型式#
-description: 'Q # の式として、定数、変数、演算子、操作、関数を指定、参照、および結合する方法について説明します。'
+title: の式Q#
+description: 定数、変数、演算子、操作、および関数をの式として指定、参照、および結合する方法について説明 Q# します。
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 1821df6a3a51a62b44f3ccd96b127577c5db990a
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415390"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869615"
 ---
-# <a name="type-expressions-in-q"></a>Q の型式#
+# <a name="expressions-in-no-locq"></a>の式Q#
 
 ## <a name="numeric-expressions"></a>数値式
 
 数値式は `Int` 、、 `BigInt` 、または型の式です `Double` 。
 つまり、整数または浮動小数点数のいずれかです。
 
-`Int`Q # のリテラルは、一連の数字として書き込まれます。
+`Int`のリテラル Q# は、一連の数字として書き込まれます。
 16進整数とバイナリ整数がサポートされ、それぞれとプレフィックスを使用して記述され `0x` `0b` ます。
 
-`BigInt`Q # のリテラルには、末尾 `l` またはサフィックスがあり `L` ます。
+`BigInt`のリテラルに Q# は、末尾 `l` またはサフィックスがあり `L` ます。
 16進数の大きな整数がサポートされており、プレフィックス "0x" を使用して記述されています。
 したがって、リテラルの有効な使用法は次のとおりです `BigInt` 。
 
@@ -33,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`Q # のリテラルは、10進数を使用して記述された浮動小数点数です。
+`Double`のリテラル Q# は、10進数を使用して記述された浮動小数点数です。
 小数点、 `.` 、または "e" または "e" で示された指数部を使用して記述することもできます (その後は、負の符号と小数点以下の桁数のみが有効になります)。
 有効なリテラルは、、 `Double` `0.0` `1.2e5` 、 `1e-5` です。
 
@@ -86,7 +89,7 @@ let bigOne = bigZero + 1L;
 同じプリミティブ型の2つの式がある場合、 `==` および `!=` 二項演算子を使用して式を作成でき `Bool` ます。
 式は、2つの式が等しい場合は true、それ以外の場合は false です。
 
-ユーザー定義型の値を比較することはできません。ラップ解除された値だけを比較できます。 たとえば、"ラップ解除" 演算子を使用します `!` (「 [Q # の型](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)」で詳しく説明しています)。
+ユーザー定義型の値を比較することはできません。ラップ解除された値だけを比較できます。 たとえば、"ラップ解除" 演算子 `!` ([の Q# 型](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)の詳細については、「」をご覧ください) を使用します。
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -110,9 +113,9 @@ let t = x == y;               // This will cause a compiler error.
 
 ## <a name="string-expressions"></a>文字列式
 
-Q # では、 `fail` ステートメント ([制御フロー](xref:microsoft.quantum.guide.controlflow#fail-statement)で説明されています) および標準関数で文字列を使用でき [`Message`](xref:microsoft.quantum.intrinsic.message) ます。 後者の特定の動作は、使用されるシミュレーターによって異なりますが、通常は Q # プログラム中に呼び出されたときに、メッセージをホストコンソールに書き込みます。
+Q#`fail`ステートメント ([制御フロー](xref:microsoft.quantum.guide.controlflow#fail-statement)で説明されています) および標準関数で文字列を使用できるようにし [`Message`](xref:microsoft.quantum.intrinsic.message) ます。 後者の特定の動作は、使用されるシミュレーターによって異なりますが、通常はプログラム中に呼び出されたときに、メッセージをホストコンソールに書き込み Q# ます。
 
-Q # の文字列は、リテラルまたは挿入文字列です。
+内の文字列 Q# は、リテラルまたは挿入文字列です。
 
 文字列リテラルは、ほとんどの言語の単純な文字列リテラルに似ています。これは、二重引用符で囲まれた Unicode 文字のシーケンス `" "` です。
 文字列の内部では、円記号を使用して `\` 二重引用符 () をエスケープしたり、改行 `\"` ( `\n` )、キャリッジリターン ( `\r` )、またはタブ () を挿入したりし `\t` ます。
@@ -123,11 +126,11 @@ Q # の文字列は、リテラルまたは挿入文字列です。
 ```
 ### <a name="interpolated-strings"></a>挿入文字列
 
-文字列補間の Q # 構文は、C# 構文のサブセットです。 Q # に関連する重要なポイントは次のとおりです。
+Q#文字列補間の構文は、C# 構文のサブセットです。 次に示すのは、関連する重要なポイント Q# です。
 
 * 文字列リテラルを挿入文字列として識別するため、先頭に `$` の記号を追加してください。 との間には、 `$` `"` 文字列リテラルを開始する空白文字を使用できません。
 
-* 次に示すのは、関数を使用して、 [`Message`](xref:microsoft.quantum.intrinsic.message) 他の Q # 式と共に測定の結果をコンソールに書き込む基本的な例です。
+* 次に、関数を使用して、 [`Message`](xref:microsoft.quantum.intrinsic.message) 他の式と共に測定の結果をコンソールに書き込む基本的な例を示し Q# ます。
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -135,9 +138,9 @@ Q # の文字列は、リテラルまたは挿入文字列です。
     Message($"Number: {num}, Result: {res}");
 ```
 
-* 有効な Q # 式は、挿入文字列に含めることができます。
+* 有効な Q# 式は、挿入文字列に含めることができます。
 
-* 挿入文字列内の式は、C# 構文ではなく、Q # 構文に従います。 最も重要な違いは、Q # では逐語的 (複数行) の補間文字列がサポートされないことです。
+* 挿入文字列内の式は Q# 、C# 構文ではなく構文に従います。 最も顕著な違いは、が Q# 逐語的 (複数行) の補間文字列をサポートしていないことです。
 
 C# の構文の詳細については、「[*補間文字列*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings)」を参照してください。
 
@@ -197,7 +200,7 @@ C# の構文の詳細については、「[*補間文字列*](https://docs.micro
 
 ## <a name="unwrap-expressions"></a>ラップ解除 (式の)
 
-Q # では、ラップ解除演算子は末尾の感嘆符 `!` です。
+で Q# は、ラップ解除演算子は末尾の感嘆符 `!` です。
 たとえば、 `IntPair` が基になる型のユーザー定義型で、 `(Int, Int)` `s` が値を持つ変数である場合、 `IntPair(2, 3)` はに `s!` `(2, 3)` なります。
 
 他のユーザー定義型の観点から定義されたユーザー定義型の場合は、ラップ解除演算子を繰り返すことができます。 たとえば、は、 `s!!` の二重ラップ解除された値を示し `s` ます。
@@ -270,7 +273,7 @@ Type | Default
 (a + b)[13]
 ```
 
-Q # のすべての配列は0から始まります。
+内のすべての配列 Q# は、0から始まります。
 つまり、配列の最初の要素 `a` は常に `a[0]` です。
 
 
@@ -318,7 +321,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a>コピーと更新の式
 
-すべての Q # 型は値型であるため (少し特別な役割を果たす qubits を使用)、値がシンボルにバインドされたとき、またはシンボルが再バインドされるときに "コピー" が作成されます。 つまり、Q # の動作は、代入演算子を使用してコピーが作成された場合と同じです。 
+すべての Q# 型は値型であるため (少し特別な役割を果たす qubits を使用)、値がシンボルにバインドされているとき、またはシンボルが再バインドされるときに "コピー" が作成されます。 つまり、の動作 Q# は、代入演算子を使用してコピーが作成された場合と同じです。 
 
 もちろん、実際には、関連する部分のみが必要に応じて再作成されます。 これは、配列項目を更新できないため、配列のコピー方法に影響します。 既存の配列を変更するには、*コピーと更新*のメカニズムを利用する必要があります。
 
@@ -381,7 +384,7 @@ for (i in 1..N) {
 
 たとえば、では、 `[[Op1], [Op2]]` 互換性のない2つの配列型との配列を作成しようとするため、現在、ではエラーが発生し `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` ます。
 
-呼び出し可能なの詳細については、このページの「呼び出し可能な[式](#callable-expressions)」または「 [Q # の操作と関数](xref:microsoft.quantum.guide.operationsfunctions)」を参照してください。
+呼び出し可能の詳細については、このページの「呼び出し可能な[式](#callable-expressions)」または「 [」の Q# 操作と関数](xref:microsoft.quantum.guide.operationsfunctions)を参照してください。
 
 ## <a name="conditional-expressions"></a>条件式
 
@@ -446,7 +449,7 @@ SomeOtherFun(Fun);           // This also causes a compilation error.
 ```
 
 [型パラメーター付き](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)呼び出し可能呼び出しを呼び出す場合、呼び出し可能な式の後に、山かっこ内に実際の型パラメーターを指定でき `< >` ます。
-このアクションは通常、Q # コンパイラが実際の型を推測する場合には不要です。
+通常、このアクションは、 Q# コンパイラが実際の型を推論するときには不要です。
 ただし、型パラメーターの引数が指定されていない*場合は、* [部分的なアプリケーション](xref:microsoft.quantum.guide.operationsfunctions#partial-application)で必要になります。
 また、異なるファンのサポートを持つ操作を呼び出し可能に渡す場合にも便利です。
 
@@ -469,27 +472,27 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 * 演算と関数呼び出しのかっこは、演算子の前、配列のインデックス作成および関数の後にもバインドされます。
 
-Q # 演算子を優先順位の高い順に並べ替えます。
+Q#演算子は優先順位の高い順になります。
 
 演算子 | アリ | 説明 | オペランドの型
 ---------|----------|---------|---------------
  末尾`!` | 単項 | ラップ解除 | 任意のユーザー定義型
  `-`, `~~~`, `not` | 単項 | 負の数値、ビットごとの補数、論理否定 | `Int`、、 `BigInt` またはの場合 `Double` `-` `Int` は `BigInt` `~~~` `Bool` 、の場合は。`not`
- `^` | 2 項 | 整数の累乗 | `Int`底の場合は `BigInt` 、 `Int` 指数部の場合は
- `/`, `*`, `%` | 2 項 | 除算、乗算、整数剰余 | `Int`、、、、 `BigInt` `Double` `/` `*` `Int` または `BigInt` の場合は。`%`
- `+`, `-` | 2 項 | 加算または文字列と配列の連結、減算 | `Int`、、 `BigInt` また `Double` は、また `String` はのいずれかの配列型`+`
- `<<<`, `>>>` | 2 項 | 左シフト、右シフト | `Int` または `BigInt`
- `<`, `<=`, `>`, `>=` | 2 項 | より小さい、より小さい、または等しい、より大きい、より大きい、または等しい比較 | `Int`、、 `BigInt` または`Double`
- `==`, `!=` | 2 項 | 等しい、等しくない比較 | 任意のプリミティブ型
- `&&&` | 2 項 | ビット演算子 AND | `Int` または `BigInt`
- `^^^` | 2 項 | ビットごとの XOR | `Int` または `BigInt`
- <code>\|\|\|</code> | 2 項 | ビットごとの OR | `Int` または `BigInt`
- `and` | 2 項 | 論理積 | `Bool`
- `or` | 2 項 | 論理和 | `Bool`
+ `^` | Binary | 整数の累乗 | `Int`底の場合は `BigInt` 、 `Int` 指数部の場合は
+ `/`, `*`, `%` | Binary | 除算、乗算、整数剰余 | `Int`、、、、 `BigInt` `Double` `/` `*` `Int` または `BigInt` の場合は。`%`
+ `+`, `-` | Binary | 加算または文字列と配列の連結、減算 | `Int`、、 `BigInt` また `Double` は、また `String` はのいずれかの配列型`+`
+ `<<<`, `>>>` | Binary | 左シフト、右シフト | `Int` または `BigInt`
+ `<`, `<=`, `>`, `>=` | Binary | より小さい、より小さい、または等しい、より大きい、より大きい、または等しい比較 | `Int`、、 `BigInt` または`Double`
+ `==`, `!=` | Binary | 等しい、等しくない比較 | 任意のプリミティブ型
+ `&&&` | Binary | ビット演算子 AND | `Int` または `BigInt`
+ `^^^` | Binary | ビットごとの XOR | `Int` または `BigInt`
+ <code>\|\|\|</code> | Binary | ビットごとの OR | `Int` または `BigInt`
+ `and` | Binary | 論理積 | `Bool`
+ `or` | Binary | 論理和 | `Bool`
  `..` | Binary/三項 | 範囲演算子 | `Int`
  `?` `|` | 三項 | 条件付き | `Bool`左側にある
 `w/` `<-` | 三項 | コピーと更新 | 「[コピーと更新の式」を](#copy-and-update-expressions)参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 
-Q # の式を操作できるようになったので、次は[q # の操作と関数](xref:microsoft.quantum.guide.operationsfunctions)に移動して、操作と関数を定義して呼び出す方法を学習してください。
+で式を操作できるようになったので、操作と関数 Q# を[ Q# ](xref:microsoft.quantum.guide.operationsfunctions)定義して呼び出す方法については、「」を参照してください。

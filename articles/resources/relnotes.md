@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 4b5e7b657f0e11fb4a14308c20859f4007729146
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 869d13acd5cb82fac73be514d6622a616ddceb54
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871555"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866674"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -28,9 +31,9 @@ ms.locfileid: "86871555"
 
 このリリースには、次のものが含まれています。
 
-- Q # notebook の名前空間を開くと、今後のすべてのセルの実行で使用できるようになりました。 これにより、たとえば、各コードセルで関連する名前空間を開く必要がなく、ノートブックの上部にあるセルに1回だけ名前空間を開くことができます。 新しいマジックコマンドを実行すると、 `%lsopen` 現在開かれている名前空間の一覧が表示されます。
+- ノートブックで開かれ Q# ている名前空間は、今後のすべてのセルの実行で使用できるようになりました。 これにより、たとえば、各コードセルで関連する名前空間を開く必要がなく、ノートブックの上部にあるセルに1回だけ名前空間を開くことができます。 新しいマジックコマンドを実行すると、 `%lsopen` 現在開かれている名前空間の一覧が表示されます。
 
-[ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、[IQ#s](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) について、クローズされた PR の完全な一覧を参照してください。  
+[ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、 [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 、 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)については、closed pr の完全な一覧を参照してください。  
 
 ## <a name="version-01220070124"></a>バージョン0.12.20070124
 
@@ -40,24 +43,24 @@ ms.locfileid: "86871555"
 
 - `qdk-chem`従来の電子構造の問題のシリアル化形式 (例: FCIDUMP) を[Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)に変換するための新しいツール
 - [`Microsoft.Quantum.Synthesis`](xref:microsoft.quantum.synthesis)変換と分解に基づく合成アルゴリズムを使用して古典 oracles を適用する一貫の名前空間の新しい関数と操作。
-- IQ # で、、、 `%simulate` `%estimate` およびその他のマジックコマンドへの引数が許可されるようになりました。 詳細については、「 [ `%simulate` マジックコマンドリファレンス](xref:microsoft.quantum.iqsharp.magic-ref.simulate)」を参照してください。
-- IQ # の新しいフェーズ表示オプション。 詳細については、「 [ `%config` マジックコマンドリファレンス](xref:microsoft.quantum.iqsharp.magic-ref.config)」を参照してください。
-- `qsharp`Conda パッケージ ([qsharp](https://anaconda.org/quantum-engineering/qsharp)および[iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) によって、IQ # と python パッケージが提供されるようになりました。これにより、Conda 環境への Q # jupyter および python 機能のローカルインストールが簡単になります。 詳細については、「 [q # Jupyter notebook](xref:microsoft.quantum.install.jupyter) 」と「 [q # with Python](xref:microsoft.quantum.install.python)インストールガイド」を参照してください。
+- Q#ここで `%simulate` 、、 `%estimate` 、およびその他のマジックコマンドへの引数を許可します。 詳細については、「 [ `%simulate` マジックコマンドリファレンス](xref:microsoft.quantum.iqsharp.magic-ref.simulate)」を参照してください。
+- 新しいフェーズ表示オプション I Q# 。詳細については、「 [ `%config` マジックコマンドリファレンス](xref:microsoft.quantum.iqsharp.magic-ref.config)」を参照してください。
+- Q# `qsharp` Conda パッケージ ([qsharp](https://anaconda.org/quantum-engineering/qsharp)と[iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) を使用して、 Q# jupyter および python 機能のローカルインストールを conda 環境に簡単にするために、python パッケージが提供されるようになりました。 詳細については、 [ Q# jupyter Notebook](xref:microsoft.quantum.install.jupyter)および[ Q# Python](xref:microsoft.quantum.install.python)インストールガイドを参照してください。
 - シミュレーターを使用する場合、qubits はリリース時には | 0 ⟩状態である必要がなくなりましたが、解放の直前に測定された場合は、自動的にリセットできます。
-- IQ # ユーザーが異なる QDK バージョンのライブラリパッケージを簡単に使用できるように更新されました。これにより、まったく同じバージョンではなく、メジャー & マイナーバージョン番号のみが一致するようになります。
+- 異なる QDK バージョンのライブラリパッケージをユーザーが簡単に使用できるように更新されました。 Q# まったく同じバージョンではなく、メジャー & マイナーバージョン番号のみが一致します。
 - 廃止された `Microsoft.Quantum.Primitive.*` 名前空間の削除
 - 移動された操作:
   - `Microsoft.Quantum.Intrinsic.Assert` は `Microsoft.Quantum.Diagnostics.AssertMeasurement` になりました
   - `Microsoft.Quantum.Intrinsic.AssertProb` は `Microsoft.Quantum.Diagnostics.AssertMeasurementProbability` になりました
 - バグの修正 
 
-[ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、[IQ#s](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) について、クローズされた PR の完全な一覧を参照してください。  
+[ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、 [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 、 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)については、closed pr の完全な一覧を参照してください。  
 
 ## <a name="version-0112006403"></a>バージョン 0.11.2006.403
 
 *リリース日:2020 年 6 月 4 日*
 
-このリリースでは、Q# プロジェクトのコンパイルに影響するバグが修正されます。
+このリリースでは、プロジェクトのコンパイルに影響するバグが修正されました Q# 。
 
 ## <a name="version-0112006207"></a>バージョン 0.11.2006.207
 
@@ -65,15 +68,15 @@ ms.locfileid: "86871555"
 
 このリリースには、次のものが含まれています。
 
-- Q# エントリ ポイントが存在する場合、Q# のノートブックと Python ホスト プログラムは失敗しなくなります。
+- Q#エントリポイントが存在する場合、ノートブックと Python ホストプログラムは失敗しなくなります。 Q#
 - アクセス修飾子を使用するための[標準ライブラリ](xref:microsoft.quantum.libraries.standard.intro)の更新。
 - コンパイラで、組み込みのリライト手順間でのリライト手順のプラグインが許可されるようになりました。
-- [API の原則](xref:microsoft.quantum.contributing.api-design)で説明されているスケジュールに従って、いくつかの非推奨の関数と操作が削除されています。 バージョン 0.11.2004.2825 で警告なしでビルドされる Q# プログラムとライブラリは、変更なしで動作し続けます。
+- [API の原則](xref:microsoft.quantum.contributing.api-design)で説明されているスケジュールに従って、いくつかの非推奨の関数と操作が削除されています。 Q#バージョン0.11.2004.2825 で警告なしでビルドされたプログラムとライブラリは、変更せずに引き続き動作します。
 
-[ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、[IQ#s](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) について、クローズされた PR の完全な一覧を参照してください。  
+[ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、 [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 、 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)については、closed pr の完全な一覧を参照してください。  
 
 > [!NOTE]
-> このバージョンには、Q# プロジェクトのコンパイルに影響するバグが含まれています。 新しいリリースにアップグレードすることをお勧めします。
+> このバージョンには、プロジェクトのコンパイルに影響するバグが含まれてい Q# ます。 新しいリリースにアップグレードすることをお勧めします。
 
 ## <a name="version-01120042825"></a>バージョン 0.11.2004.2825
 
@@ -81,12 +84,12 @@ ms.locfileid: "86871555"
 
 このリリースには、次のものが含まれています。
 
-- Q# コマンド ライン アプリケーションの新しいサポート。C# または Python ホスト ファイルが不要になりました。 Q# コマンド ライン アプリケーションを使用するための詳細については、[こちら](xref:microsoft.quantum.install.standalone)を参照してください。
+- Q#C# または Python ホストファイルが不要になったコマンドラインアプリケーションの新しいサポート。 コマンドラインアプリケーションの概要については Q# 、[こちら](xref:microsoft.quantum.install.standalone)を参照してください。
 - C# または Python ホスト ファイルが不要になるように、クォンタム乱数ジェネレーターのクイックスタートを更新しました。 更新された[クイックスタート](xref:microsoft.quantum.quickstarts.qrng)をご覧ください。
-- IQ# Docker イメージのパフォーマンスの向上
+- Docker イメージのパフォーマンスの向上 Q#
 
 > [!NOTE]
-> 新しい [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) 属性を使用している Q# コマンド ライン アプリケーションは、現在、Python および .NET ホスト プログラムから呼び出すことはできません。
+> Q#現在、新しい属性を使用しているコマンドラインアプリケーションを [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) Python または .net ホストプログラムから呼び出すことはできません。
 > 詳細については、[Python](xref:microsoft.quantum.install.python) と [.NET 相互運用性](xref:microsoft.quantum.install.cs)のガイドを参照してください。
 
 ## <a name="version-01120033107"></a>バージョン 0.11.2003.3107
@@ -101,7 +104,7 @@ ms.locfileid: "86871555"
 
 このリリースには、次のものが含まれています。
 
-- Q# のアクセス修飾子が新しくサポートされています。詳細については、「[ファイル構造](xref:microsoft.quantum.guide.filestructure)」を参照してください。
+- のアクセス修飾子が新しくサポートされ Q# ています。詳細については、「[ファイル構造](xref:microsoft.quantum.guide.filestructure)」を参照してください。
 - .NET Core SDK 3.1 に更新されました
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
@@ -113,7 +116,7 @@ ms.locfileid: "86871555"
 このリリースには、次のものが含まれています。
 
 - 新しい Quantum Machine Learning Library。詳細については、[QML ドキュメント ページ](https://docs.microsoft.com/quantum/libraries/machine-learning/?view=qsharp-preview)を参照してください
-- IQ# のバグの修正。これにより、NuGet パッケージの読み込み時のパフォーマンスが最大 10 から 20 倍向上します
+- Q#バグの修正によって、NuGet パッケージの読み込み時に最大 10 20 倍のパフォーマンスが向上しました。
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
 
@@ -124,12 +127,12 @@ ms.locfileid: "86871555"
 このリリースには、次のものが含まれています。
 
 - 新規プロジェクトの作成時に Microsoft.Quantum.Development.Kit NuGet パッケージに代わって使用される新しい Microsoft.Quantum.SDK NuGet パッケージ。 Microsoft.Quantum.Development.Kit NuGet パッケージは、既存のプロジェクトで引き続きサポートされます。 
-- 新しい Microsoft.Quantum.SDK NuGet パッケージで有効になる Q# コンパイラ拡張機能のサポート。詳しくは、[Github のドキュメント](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler)、[コンパイラ拡張機能のサンプル](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions)、および [Q# 開発ブログ](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/)を参照してください
+- Q#新しい Microsoft. Quantum. SDK NuGet packge によって有効化されたコンパイラ拡張機能のサポート。詳細については、 [Github のドキュメント](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler)、[コンパイラ拡張機能のサンプル](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions)、および[ Q# 開発ブログ](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/)を参照してください。
 - .NET Core 3.1 のサポートが追加されました。古い .NET Core SDK バージョンでビルドすると、問題が発生する可能性があるため、バージョン 3.1.100 をインストールすることを強くお勧めします。
 - Microsoft.Quantum.QsCompiler.Experimental 下で新しいコンパイラ変換を使用できます
-- IQ# で HTML として出力状態ベクターを公開する新しい機能
+- 出力状態ベクトルを HTML として公開する新しい機能Q#
 - Hadamard および SWAP テスト用の EstimateFrequencyA から Microsoft.Quantum.Characterization のサポートを追加しました
-- AmplitudeAmplification 名前空間で Q# スタイル ガイドが使用されるようになりました
+- AmplitudeAmplification 名前空間でスタイルガイドが使用されるようになりました Q#
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
 
@@ -139,8 +142,8 @@ ms.locfileid: "86871555"
 
 このリリースには、次のものが含まれています。
 
-- Q# の単体テスト用の新しい Test 属性。更新された API ドキュメント ([こちら](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test)) および更新されたテストとデバッグのガイド ([こちら](xref:microsoft.quantum.guide.testingdebugging)) を参照してください
-- Q# プログラムの実行エラーが発生した場合にスタック トレースを追加しました
+- 単体テストの新しいテスト属性。ここで Q# 更新さ[here](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test)れた API ドキュメントを参照してください。[ここでは](xref:microsoft.quantum.guide.testingdebugging)、更新されたテスト & デバッグガイドを参照してください
+- Q#プログラムの実行エラーが発生した場合にスタックトレースを追加しました
 - [OmniSharp C# Visual Studio Code 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)の更新により、Visual Studio Code 内のブレークポイントがサポートされるようになります
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
@@ -175,7 +178,7 @@ ms.locfileid: "86871555"
 
 このリリースには、次のものが含まれています。
 
-- Visual Studio 2019 (バージョン 16.3 以降) および Visual Studio Code での Q# コード補完の新しいサポート
+- Q#Visual Studio 2019 でのコード補完の新しいサポート (バージョン 16.3 & 後) & Visual Studio Code
 - 新しい [Quantum Kata](https://github.com/Microsoft/QuantumKatas) (量子加算器用)
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
@@ -186,7 +189,7 @@ ms.locfileid: "86871555"
 
 このリリースには、次のものが含まれています。
 
-- Q# での[共役ステートメント](xref:microsoft.quantum.guide.operationsfunctions#conjugations)の新しいサポート
+- での[活用形ステートメント](xref:microsoft.quantum.guide.operationsfunctions#conjugations)の新しいサポートQ#
 - "置換"、"ドキュメントの追加"、およびシンプルな配列項目の更新など、コンパイラでの新しいコード アクション
 - Visual Studio Code 拡張機能へのインストール テンプレートと新しいプロジェクト コマンドの追加
 - [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone) などの ApplyIf 連結子の新しいバリアントの追加
@@ -195,7 +198,7 @@ ms.locfileid: "86871555"
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
 
-ここでは、既存のプログラムをアップグレードする手順だけでなく、変更の概要を示します。  これらの変更の詳細については、[Q# の開発に関するブログ](https://devblogs.microsoft.com/qsharp)を参照してください。
+ここでは、既存のプログラムをアップグレードする手順だけでなく、変更の概要を示します。  これらの変更の詳細については、 [ Q# dev ブログ](https://devblogs.microsoft.com/qsharp)を参照してください。
 
 ## <a name="version-08-packagereference-0819071701"></a>バージョン 0.8 (*PackageReference 0.8.1907.1701*)
 
@@ -204,7 +207,7 @@ ms.locfileid: "86871555"
 このリリースには、次のものが含まれています。
 
 - 配列をスライスするための新しいインデックス作成場所。詳細については、[言語リファレンスを参照](xref:microsoft.quantum.guide.expressions#array-slices)してください。
-- [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry) でホストされている Dockerfile が追加されました。[詳細については、IQ# リポジトリ](https://github.com/microsoft/iqsharp/blob/master/README.md)を参照してください
+- [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry)でホストされている Dockerfile を追加しました。 [ Q# 詳細に](https://github.com/microsoft/iqsharp/blob/master/README.md)ついては、I リポジトリを参照してください。
 - [トレース シミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)に関する破壊的変更、構成設定の更新、名前の変更。[更新された名前については、.NET API ブラウザー](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration)を参照してください。
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)と[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)については、閉じられた PR の完全な一覧を参照してください。  
@@ -214,16 +217,16 @@ ms.locfileid: "86871555"
 *リリース日:2019 年 5 月 31 日*
 
 このリリースには、次のものが含まれています。
-- Q# 言語の追加 
+- 言語への追加 Q# 、 
 - 化学ライブラリの更新 
 - 新しい数値ライブラリ
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)と[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)については、閉じられた PR の完全な一覧を参照してください。  
 
-ここでは、既存のプログラムをアップグレードする手順だけでなく、変更の概要を示します。  これらの変更の詳細については、[Q# の開発に関するブログ](https://devblogs.microsoft.com/qsharp)を参照してください。
+ここでは、既存のプログラムをアップグレードする手順だけでなく、変更の概要を示します。  これらの変更の詳細については、 [ Q# dev ブログ](https://devblogs.microsoft.com/qsharp)を参照してください。
 
-### <a name="q-language-syntax"></a>Q# 言語の構文
-このリリースでは、新しい Q# 言語の構文が追加されます。
+### <a name="no-locq-language-syntax"></a>Q#言語の構文
+このリリースでは、新しい言語の構文が追加されてい Q# ます。
 * [ユーザー定義型](xref:microsoft.quantum.guide.types#user-defined-types)の名前付き項目が追加されます。  
 * ユーザー定義型コンストラクターを関数として使用できるようになりました。
 * ユーザー定義型の [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) および [apply-and-reassign](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) のサポートが追加されます。
@@ -246,15 +249,15 @@ ms.locfileid: "86871555"
 *リリース日:2019 年 5 月 3 日*
 
 このリリースには、次のものが含まれています。
-- Q# 言語の変更 
+- 言語を変更します。 Q# 
 - Quantum Development Kit ライブラリの再構築 
 - 新しいサンプルの追加 
 - バグの修正  [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)と[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)に関するいくつかの PR が閉じられました。  
 
 ここでは、既存のプログラムをアップグレードする手順だけでなく、変更の概要を示します。  これらの変更の詳細については、devblogs.microsoft.com/qsharp を参照してください。
 
-### <a name="q-language-syntax"></a>Q# 言語の構文
-このリリースでは、新しい Q# 言語の構文が追加されます。
+### <a name="no-locq-language-syntax"></a>Q#言語の構文
+このリリースでは、新しい言語の構文が追加されてい Q# ます。
 * `+` 演算子を使用する[量子演算 (control および adjoint) の特殊化を表現するための短縮形](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)が追加されます。  古い構文は非推奨になります。  古い構文 (`: adjoint` など) を使用するプログラムは引き続き機能しますが、コンパイル時の警告が生成されます。  
 * 既存の配列の変更として配列の作成を表現するために使用できる、[copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) の新しい演算子 `w/` が追加されます。
 * 一般的な [apply-and-update ステートメント](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) (`+=`、`w/=` など) が追加されます。
@@ -266,7 +269,7 @@ ms.locfileid: "86871555"
 このリリースでは、一貫した方法での拡張を可能にするために、ライブラリが再編成されます。
 * Microsoft.Quantum.Primitive 名前空間の名前が、Microsoft.Quantum.Intrinsic に変更されます。  これらの演算は、ターゲット コンピューターによって実装されます。  Microsoft.Quantum.Primitive 名前空間は非推奨となります。  プログラムで非推奨の名前を使用して演算と関数が呼び出されたときに、ランタイム警告で知らせます。
 
-* Microsoft.Quantum.Canon パッケージの名前が、Microsoft.Quantum.Standard に変更されます。  このパッケージには、ほとんどの Q# プログラムに共通の名前空間が含まれています。  これには次のものが含まれます  
+* Microsoft.Quantum.Canon パッケージの名前が、Microsoft.Quantum.Standard に変更されます。  このパッケージには、ほとんどのプログラムに共通の名前空間が含まれてい Q# ます。  これには次のものが含まれます  
     - 一般的な演算のための Microsoft.Quantum.Canon
     - 汎用算術演算のための Microsoft.Quantum.Arithmetic
     - 量子ビット状態の準備に使用される演算のための Microsoft.Quantum.Preparation
@@ -278,13 +281,13 @@ ms.locfileid: "86871555"
 
 * <xref:microsoft.quantum.arithmetic.littleendian> のユーザー定義型を使用するために、Microsoft.Quantum.Arithmetic 名前空間が正規化されました。 リトル エンディアンに変換するために必要な場合は、関数 [BigEndianAsLittleEndian](xref:microsoft.quantum.arithmetic.bigendianaslittleendian) を使用します。  
 
-* いくつかの callable (関数と演算) の名前は、[Q# スタイル ガイド](xref:microsoft.quantum.contributing.style)に準拠するように変更されました。  古い callable の名前は非推奨となります。  古い callable を使用するプログラムでは引き続き、コンパイル時の警告を操作します。 
+* いくつかの呼び出し許可 (関数および操作) の名前は、 [ Q# スタイルガイド](xref:microsoft.quantum.contributing.style)に準拠するように変更されています。  古い callable の名前は非推奨となります。  古い callable を使用するプログラムでは引き続き、コンパイル時の警告を操作します。 
 
 ### <a name="new-samples"></a>新しいサンプル
 
-[Q# と F# ドライバーを使用するサンプル](https://github.com/Microsoft/Quantum/pull/164)を追加しました。  
+[ Q# F # ドライバーでを使用するサンプル](https://github.com/Microsoft/Quantum/pull/164)を追加しました。  
 
-**ご協力ありがとうございました。** [http://github.com/Microsoft/Quantum](http://github.com/Microsoft/Quantum ) にあるオープン コード ベースに投稿していただいた方は、次のとおりです。 これらの投稿内容は、Q# コードの豊富なサンプルにかなり追加されています。
+**ご協力ありがとうございました。** [http://github.com/Microsoft/Quantum](http://github.com/Microsoft/Quantum ) にあるオープン コード ベースに投稿していただいた方は、次のとおりです。 これらの投稿は、コードの豊富なサンプルに大幅に追加され Q# ます。
 
 * Mathias Soeken ([@msoeken](https://github.com/msoeken)):Oracle 関数の合成。 [PR #135](https://github.com/Microsoft/Quantum/pull/135)。
 
@@ -292,7 +295,7 @@ ms.locfileid: "86871555"
 
 QDK を更新する場合は、[インストール ガイド](xref:microsoft.quantum.install)を参照してください。
   
-Quantum Development Kit のバージョン 0.5 の既存の Q# プロジェクトがある場合は、以下がそれらのプロジェクトを最新バージョンに移行するための手順となります。
+クォンタム開発キットのバージョン0.5 の既存のプロジェクトがある場合は、 Q# これらのプロジェクトを最新バージョンに移行する手順を次に示します。
 
     1. プロジェクトは順にアップグレードする必要があります。  複数のプロジェクトを含むソリューションがある場合は、各プロジェクトを参照順に更新します。
     2. コマンド ラインから、`dotnet clean` を実行して、既存のバイナリと中間ファイルをすべて削除します。
@@ -305,7 +308,7 @@ Quantum Development Kit のバージョン 0.5 の既存の Q# プロジェク�
     4. コマンド ラインから、このコマンド `dotnet msbuild` を実行します。  
     5. これを実行した後も、上記の変更のために手動でエラーに対処する必要がある場合があります。  多くの場合、これらのエラーは Visual Studio または Visual Studio Code の IntelliSense でも報告されます。
         - Visual Studio 2019 または Visual Studio Code で、プロジェクトまたはそれを含むソリューションのルート フォルダーを開きます。
-        - エディターで .qs ファイルを開いた後、出力ウィンドウに Q# 言語拡張機能の出力が表示されるはずです。
+        - エディターで qs ファイルを開くと、[ Q# 出力] ウィンドウに言語拡張の出力が表示されます。
         - プロジェクトが正常に読み込まれた (出力ウィンドウに示された) 後、各ファイルを開き、手動で残りのすべての問題に対処します。
 
 > [!NOTE]
@@ -327,7 +330,7 @@ Quantum Development Kit のバージョン 0.5 の既存の Q# プロジェク�
 
 このリリースには、次のものが含まれています。
 
-- Jupyter Notebook のサポートが追加されます。これにより、Q# について学習するための優れた方法が提供されます。  [新しい Jupyter Notebook のサンプルを確認し、独自のノートブックを作成する方法を学習してください](xref:microsoft.quantum.install)。 
+- では、Jupyter Notebook のサポートが追加されています。これにより、について理解するのに役立ち Q# ます。  [新しい Jupyter Notebook のサンプルを確認し、独自のノートブックを作成する方法を学習してください](xref:microsoft.quantum.install)。 
 
 - Quantum Canon ライブラリに整数の加算器算術が追加されます。  [新しい整数の加算器を使用する方法が説明されている](https://github.com/microsoft/Quantum/blob/master/samples/arithmetic/AdderExample.ipynb)、Jupyter Notebook も参照してください。
 
@@ -344,7 +347,7 @@ Quantum Development Kit のバージョン 0.5 の既存の Q# プロジェク�
 
 このリリースには、次のものが含まれています。
 
-- クロスプラットフォームの Python ホストのサポートが追加されます。  Python 用の `qsharp` パッケージを使用すると、Python 内から Q# の演算と関数を簡単にシミュレートできます。 Python の相互運用性の詳細については、[こちら](xref:microsoft.quantum.install)を参照してください。 
+- クロスプラットフォームの Python ホストのサポートが追加されます。  `qsharp`Python 用パッケージを使用する Q# と、python 内から操作や関数を簡単にシミュレートできます。 Python の相互運用性の詳細については、[こちら](xref:microsoft.quantum.install)を参照してください。 
 
 - Visual Studio と Visual Studio Code の拡張機能で、シンボル (関数や演算など) の名前変更がサポートされるようになりました。
 
@@ -358,7 +361,7 @@ Quantum Development Kit のバージョン 0.5 の既存の Q# プロジェク�
 
 - 任意のサイズの符号付き整数を表す、新しいプリミティブ型である BigInt のサポートが追加されます。  BigInt 型の詳細については、[こちら](xref:microsoft.quantum.guide.types)を参照してください。
 - 新しい Toffoli シミュレーターが追加されます。これは、X、CNOT およびマルチ制御の X 量子演算を非常に多くの量子ビットを使用してシミュレートできる特別な用途の高速シミュレーターです。  Toffoli シミュレーターの詳細については、[こちら](xref:microsoft.quantum.machines.toffoli-simulator)を参照してください。
-- 量子コンピューターで Q# 演算の特定のインスタンスを実行するために必要なリソースを推定する、シンプルなリソース推定機能が追加されます。  詳細については、[リソース推定機能](xref:microsoft.quantum.machines.resources-estimator)に関するページを参照してください。
+- クォンタムコンピューターで特定の操作のれを実行するために必要なリソースを推定する単純なリソース推定機能を追加し Q# ます。  詳細については、[リソース推定機能](xref:microsoft.quantum.machines.resources-estimator)に関するページを参照してください。
 
 
 ## <a name="version-0318112802"></a>バージョン 0.3.1811.2802
@@ -392,9 +395,9 @@ VS Code の拡張機能では使用されていませんが、`event-stream` NPM
 
 このリリースには、新しい言語の機能と改善された開発者エクスペリエンスが含まれています。
 
-* このリリースには、Visual Studio および Visual Studio Code 用のクライアント統合だけでなく、Q# 用の言語サーバーが含まれています。 これにより、波下線が付いたエラーおよび警告形式での入力時のライブ フィードバックと共に、IntelliSense 機能の新しいセットが有効になります。 
+* このリリースには、の言語サーバー Q# だけでなく、Visual Studio および Visual Studio Code 用のクライアント統合が含まれています。 これにより、波下線が付いたエラーおよび警告形式での入力時のライブ フィードバックと共に、IntelliSense 機能の新しいセットが有効になります。 
 * この更新により、一般的には診断メッセージが大幅に改善され、診断のための移動が容易になり、診断の範囲が正確になり、表示されるホバー情報の詳細が追加されます。
-* Q# 言語が拡張され、開発者が一般的な演算を行い、言語機能を新たに強化し、量子計算を強力に表現できる方法を統一することができます。  このリリースでは、Q# 言語にいくつかの破壊的変更が加えられています。   
+* この Q# 言語は、開発者が一般的な操作を実行する方法と、言語機能をシンプルかつ強力 express クォンタムの計算に拡張するための新機能を統合する方法で拡張されています。  このリリースでは、言語にいくつかの重大な変更が加えられ Q# ています。   
 
 このリリースには、新しい量子化学ライブラリも含まれています。
 
@@ -408,7 +411,7 @@ VS Code の拡張機能では使用されていませんが、`event-stream` NPM
     - 位相推定を使用して、水素化リチウムの基底および励起エネルギーを可視化する。
     - 量子化学シミュレーションのリソースを推定する。
     - Broombridge スキーマによって表される分子のエネルギー レベルを推定する。
-* ドキュメントでは、NWChem を使用して、Q# での量子シミュレーション用の追加の化学モデルを生成する方法について説明されています。
+* ドキュメントでは、NWChem を使用して、でクォンタムシミュレーション用の追加の化学モデルを生成する方法について説明し Q# ます。
 
 Quantum Development Kit の化学ライブラリの詳細については、[こちら](xref:microsoft.quantum.chemistry.concepts.intro)を参照してください。
 
@@ -416,7 +419,7 @@ Quantum Development Kit の化学ライブラリの詳細については、[こ�
 
 このリリースには、コミュニティによって報告された問題に関するバグの修正と機能が含まれています。
 
-* Q# 用の IntelliSense とは ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918))。
+* Intellisense の Q# 場合 ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918))。
 * .qs ファイル ([UserVoice](https://quantum.uservoice.com/forums/906097/suggestions/32593049))。
 * If ステートメントで中かっこが省略された場合のエラー メッセージを改善する ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/34718518))。
 * 可変 (再) バインドでのタプル分解をサポートする ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/35020444))。
@@ -425,9 +428,9 @@ Quantum Development Kit の化学ライブラリの詳細については、[こ�
 
 ### <a name="community-contributions"></a>コミュニティへの投稿
 
-**ご協力ありがとうございました。** [http://github.com/Microsoft/Quantum](http://github.com/Microsoft/Quantum ) にあるオープン コード ベースに投稿していただいた方は、次のとおりです。 これらの投稿内容は、Q# コードの豊富なサンプルにかなり追加されています。
+**ご協力ありがとうございました。** [http://github.com/Microsoft/Quantum](http://github.com/Microsoft/Quantum ) にあるオープン コード ベースに投稿していただいた方は、次のとおりです。 これらの投稿は、コードの豊富なサンプルに大幅に追加され Q# ます。
 
-* Rolf Huisman ([@RolfHuisman](https://github.com/RolfHuisman)):QASM から Q# への変換プログラムを作成することにより、QASM/Q# 開発者のエクスペリエンスを向上させました。 [PR #58](https://github.com/Microsoft/Quantum/pull/58)。
+* Rolf ( [@RolfHuisman](https://github.com/RolfHuisman) ): Q# qasm をトランスレーターに作成することにより、qasm/開発者のエクスペリエンスを改善しました。 Q# [PR #58](https://github.com/Microsoft/Quantum/pull/58)。
 
 * Andrew Helwer ([@ahelwer](https://github.com/ahelwer)):非局所性に関連する量子ゲームである、CHSH ゲームを実装するサンプルを投稿しました。  [PR #84](https://github.com/Microsoft/Quantum/pull/84)。
 
@@ -451,7 +454,7 @@ Rohit Gupta ([@guptarohit](https://github.com/guptarohit)、[PR #90](https://git
 
 *リリース日:2018 年 6 月 30 日*
 
-このリリースは、[GitHub で報告された問題 #48](https://github.com/Microsoft/Quantum/issues/48) (ユーザー名に空白が含まれている場合、Q# のコンパイルが失敗する) の応急処置にすぎません。 対応する新しいバージョン (`0.2.1806.3001-preview`) で、`0.2.1806.1503` と同じ更新手順に従ってください。
+このリリースは、 [GitHub で報告](https://github.com/Microsoft/Quantum/issues/48)された問題 #48 の簡単な修正にすぎ Q# ません (ユーザー名に空白が含まれている場合、コンパイルは失敗します)。 対応する新しいバージョン (`0.2.1806.3001-preview`) で、`0.2.1806.1503` と同じ更新手順に従ってください。
 
 ## <a name="version-0218061503"></a>バージョン 0.2.1806.1503
 
@@ -478,9 +481,9 @@ Rohit Gupta ([@guptarohit](https://github.com/guptarohit)、[PR #90](https://git
 
 ### <a name="community-contributions"></a>コミュニティへの投稿
 
-Q# プログラマーのコミュニティが拡大しており、 http://github.com/Microsoft/quantum のオープン コード ベースに提出された、最初のユーザーが投稿したライブラリとサンプルを見て嬉しく思います。  **皆様のご協力に深く感謝します。** 投稿していただいた方は次のとおりです。
-* Mathias Soeken ([@msoeken](https://github.com/msoeken)): 指定された順列を実装する Toffoli ネットワークを構築する、変換ベースの論理合成メソッドを定義するサンプルを投稿しました。 コードは、Q# 関数と演算で完全に記述されます。  [PR #41](https://github.com/Microsoft/Quantum/pull/41)。
-* RolfHuisman ([@RolfHuisman](https://github.com/RolfHuisman)):Microsoft MVP の Rolf Huisman は、従来の制御フローと制限された量子演算が含まれない、プログラムの制限されたクラスに対して、Q# コードからフラットな QASM コードを生成するサンプルを投稿しました。 [PR #59](https://github.com/Microsoft/Quantum/pull/59)
+Q#プログラマが成長しているので、お客様がオープンコードベースのライブラリとサンプルを参照していることを嬉しく思いしてい http://github.com/Microsoft/quantum ます。  **皆様のご協力に深く感謝します。** 投稿していただいた方は次のとおりです。
+* Mathias Soeken ([@msoeken](https://github.com/msoeken)): 指定された順列を実装する Toffoli ネットワークを構築する、変換ベースの論理合成メソッドを定義するサンプルを投稿しました。 このコードは、関数と操作で完全に記述されてい Q# ます。  [PR #41](https://github.com/Microsoft/Quantum/pull/41)。
+* RolfHuisman ( [@RolfHuisman](https://github.com/RolfHuisman) ): MICROSOFT MVP Rolf は、 Q# 従来の制御フローと制限されたクォンタム操作を持たない、限られたプログラムのクラスのコードからフラットな qasm コードを生成するサンプルを提供しました。 [PR #59](https://github.com/Microsoft/Quantum/pull/59)
 * Sarah Kasier ([@crazy4pi314](https://github.com/crazy4pi314)): 制御演算のためのライブラリ関数を提出することにより、コード ベースの向上を支援しました。 [PR #53](https://github.com/Microsoft/Quantum/pull/53)
 * Jessica Lemieux ([@Lemj3111](https://github.com/Lemj3111)): @"microsoft.quantum.canon.quantumphaseestimation" を修正し、新しい単体テストを作成しました。  [PR #54](https://github.com/Microsoft/Quantum/pull/54)
 * Tama McGlinn ([@TamaHobbit](https://github.com/TamaHobbit)): QuantumSimulator インスタンスが破棄されていることを確認し、テレポーテーション サンプルをクリーニングしました。 [PR #20](https://github.com/Microsoft/Quantum/pull/20)
@@ -559,15 +562,15 @@ Quantum Development Kit の以前のリリースでは .NET Framework のみが�
 ### <a name="project-migration"></a>プロジェクトの移行
 
 以前のバージョンの Quantum Development Kit を使用して作成されたプロジェクトは、使用されている NuGet パッケージを更新しない限り、引き続き機能します。 既存のコードを新しいバージョンに移行するには、次の手順を行います。
-1. 正しい種類の Q# プロジェクト テンプレート (アプリケーション、ライブラリまたはテスト プロジェクト) を使用して、新しい .NET Core プロジェクトを作成します。
+1. 適切な種類の Q# プロジェクトテンプレート (アプリケーション、ライブラリ、またはテストプロジェクト) を使用して、新しい .Net Core プロジェクトを作成します。
 2. 既存の .qs および .cs/.fs ファイルを古いプロジェクトから新しいプロジェクトにコピーします ([追加] > [既存の項目] を使用)。 AssemblyInfo.cs ファイルはコピーしないでください。
 3. 新しいプロジェクトをビルドして実行します。
 
 名前空間 Microsoft.Quantum.Canon の演算 RandomWalkPhaseEstimation は、[Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) リポジトリの名前空間 Microsoft.Research.Quantum.RandomWalkPhaseEstimation に移動されたことに注意してください。
 
-### <a name="known-issues"></a>の既知の問題
+### <a name="known-issues"></a>既知の問題
 
-- `dotnet test` の `--filter` オプションが、Q# で記述されたテストで正しく機能しません。
+- `--filter`のオプションは、 `dotnet test` で記述されたテストに対して正しく機能しません Q# 。
   そのため、個々の単体テストを Visual Studio Code で実行することができません。すべてのテストを再実行する場合は、コマンドラインで `dotnet test` を使用することをお勧めします。
 
 ## <a name="version-0118011707"></a>バージョン 0.1.1801.1707
@@ -577,7 +580,7 @@ Quantum Development Kit の以前のリリースでは .NET Framework のみが�
 このリリースでは、コミュニティによって報告されたいくつかの問題が修正されます。 つまり、
 
 - シミュレーターは、早期の AVX 対応でない CPU で動作するようになりました。
-- 地域の 10 進数の設定により、Q# パーサーが失敗することはありません。
+- 地域10進数の設定では、パーサーが失敗することはありません Q# 。
 - `SignD` プリミティブ演算では、`Double`ではなく、`Int` が返されるようになりました。
 
 
@@ -594,15 +597,15 @@ Quantum Development Kit の以前のリリースでは .NET Framework のみが�
 
 #### <a name="project-creation"></a>プロジェクトの作成
 
-- Q# を使用するソリューション (.sln) を作成する場合、ディレクトリは、そのソリューション内の各プロジェクト (.csproj) よりも 1 つ上位のものである必要があります。 新しいソリューションを作成する場合は、[新しいプロジェクト] ダイアログボックスの [ソリューションのディレクトリの作成] チェックボックスがオンになっていることを確認することで、これを行うことができます。 これが行われない場合は、Quantum Development Kit の NuGet パッケージを手動でインストールする必要があります。
+- を使用するソリューション (.sln) を作成する場合、ソリューション Q# はソリューション内の各プロジェクト (.csproj) よりも1つ大きいディレクトリである必要があります。 新しいソリューションを作成する場合は、[新しいプロジェクト] ダイアログボックスの [ソリューションのディレクトリの作成] チェックボックスがオンになっていることを確認することで、これを行うことができます。 これが行われない場合は、Quantum Development Kit の NuGet パッケージを手動でインストールする必要があります。
 
-#### <a name="q"></a>Q#
+#### Q#
 
-- Intellisense で、Q# コードに対する適切なエラーが表示されません。 正しい Q# エラーを表示するために、Visual Studio エラー一覧にビルド エラーが表示されていることを確認してください。 また、ビルドが完了するまで Q# エラーが表示されないことに注意してください。
+- Intellisense では、コードに対する適切なエラーは表示されません Q# 。 正しいエラーを確認するには、Visual Studio エラー一覧にビルドエラーが表示されていることを確認してください Q# 。 また、 Q# ビルドが完了するまでエラーが表示されないことにも注意してください。
 - 部分アプリケーションで可変配列を使用すると、予期しない動作が発生する可能性があります。
 - 不変配列を可変配列にバインドする (a = b にする。この b は可変配列です) 場合、予期しない動作が発生する可能性があります。
-- プロファイル、コード カバレッジ、およびその他の VS プラグインで、Q# の行とブロックが必ずしも正確にカウントされるとは限りません。
-- Q# コンパイラで、補間された文字列が確認されません。 変数名のスペルを間違えたり、Q# の補間された文字列で式を使用したりすることで、C# コンパイル エラーが作成される場合があります。
+- プロファイル、コードカバレッジ、およびその他の VS プラグインは、行をカウントして正確にブロックするとは限りません Q# 。
+- コンパイラは、挿入 Q# 文字列を検証しません。 変数名のスペルを間違えたり、挿入文字列で式を使用したりすることにより、C# のコンパイルエラーを作成することができ Q# ます。
 
 #### <a name="simulation"></a>シミュレーション
 
@@ -610,8 +613,8 @@ Quantum Development Kit の以前のリリースでは .NET Framework のみが�
 
 #### <a name="debugging"></a>デバッグ
 
-- F11 (ステップイン) が Q# コードで機能しません。
-- ブレークポイントまたはシングルステップの一時停止で Q# コードのコードを強調表示すると、不正確になることがあります。 正しい行が強調表示されても、強調表示が行の不適切な列で開始されて終了する場合があります。
+- F11 (ステップイン) はコードでは機能しません Q# 。
+- Q#ブレークポイントまたはシングルステップの一時停止でコード内のコードを強調表示すると、不正確になることがあります。 正しい行が強調表示されても、強調表示が行の不適切な列で開始されて終了する場合があります。
 
 #### <a name="testing"></a>テスト
 

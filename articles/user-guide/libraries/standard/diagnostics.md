@@ -1,21 +1,24 @@
 ---
-title: 'Q # 標準ライブラリの診断'
-description: 'クォンタムプログラムで間違いやエラーをキャッチするために使用される、Q # 標準ライブラリの診断関数と操作について説明します。'
+title: Q#標準ライブラリの診断
+description: Q#クォンタムプログラムで間違いやエラーをキャッチするために使用される標準ライブラリの診断関数と操作について説明します。
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 324753cfa1b7d940bf5a0bbe7665f19cc6dda82c
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870636"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868544"
 ---
 # <a name="diagnostics"></a>診断 #
 
 従来の開発と同様に、クォンタムプログラムで間違いやエラーを診断できることが重要です。
-Q # 標準ライブラリには、「」で詳しく説明されているように、クォンタムプログラムの正確性を確保するためのさまざまな方法が用意されて <xref:microsoft.quantum.guide.testingdebugging> います。
+Q#標準ライブラリでは、「」で詳しく説明されているように、クォンタムプログラムの正確性を確保するためにさまざまな方法が用意されて <xref:microsoft.quantum.guide.testingdebugging> います。
 主に、このサポートには、ホストプログラムまたは開発者に追加の診断情報を提供するように対象コンピューターに指示するか、関数または操作の呼び出しで表現される条件と不変性を強制的に適用するための関数と操作の形式が使用されます。
 
 ## <a name="machine-diagnostics"></a>コンピューターの診断 ##
@@ -30,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`には `(String -> Unit)` 、Q # 内からデバッグログメッセージの出力を確認することはできません。
+> `Message`には `(String -> Unit)` 、デバッグログメッセージを出力するという署名が含まれてい Q# ます。
 
 と呼び出しによって、 <xref:microsoft.quantum.diagnostics.dumpmachine> <xref:microsoft.quantum.diagnostics.dumpregister> ターゲットコンピューターは、現在割り当てられている qubits または特定の qubits のレジスタに関する診断情報をそれぞれ提供するように指示します。
 各ターゲットコンピューターは、ダンプ命令への応答として提供される診断情報によって異なります。
@@ -49,7 +52,7 @@ Message($"About to rotate by an angle of {angle}...");
 たとえば、は、 `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` $1 + 1 = $2 という数学的な事実を表しますが、は `AssertQubit(One, qubit)` 測定が確実性を `qubit` 持つを返す条件を表し `One` ます。
 前者の場合は、値のみを指定して条件の正確性を確認できます。後者の場合、アサーションを評価するには、qubit の状態に関する情報を把握しておく必要があります。
 
-Q # 標準ライブラリには、次のようなファクトを表すためのさまざまな機能が用意されています。
+Q#標準ライブラリには、次のようなファクトを表すためのさまざまな関数が用意されています。
 
 - <xref:microsoft.quantum.diagnostics.fact>
 - <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact>
@@ -67,7 +70,7 @@ Q # 標準ライブラリには、次のようなファクトを表すための�
 アサーションが失敗した場合、指定したメッセージを使用してを呼び出すことにより、実行が終了し `fail` ます。
 既定では、この操作は実装されていません。これをサポートするシミュレーターは、ランタイムチェックを実行する実装を提供する必要があります。
 `AssertMeasurement`に署名があり `((Pauli[], Qubit[], Result, String) -> ())` ます。
-`AssertMeasurement`は、出力の種類として空のタプルを持つ関数であるため、を呼び出すことによる影響 `AssertMeasurement` は、Q # プログラム内では監視できません。
+`AssertMeasurement`は、出力の種類として空のタプルを持つ関数であるため、を呼び出しても、 `AssertMeasurement` プログラム内では影響を受けることはありません Q# 。
 
 操作関数は、指定された型の指定された <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> qubits を測定することをアサートします。これは、一定の許容範囲内で指定された確率で特定の結果を取得します。
 許容範囲は加法です (など `abs(expected-actual) < tol` )。

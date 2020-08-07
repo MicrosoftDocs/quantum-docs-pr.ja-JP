@@ -6,12 +6,15 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/17/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.design
-ms.openlocfilehash: b304b9d1a15f164f4dfe758aaed31b7b2369b18c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 60e694e9f7c2f01a6679ef960f5a7774c8bd6a62
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276034"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868944"
 ---
 # <a name="design-your-own-classifier"></a>独自の分類器を設計する
 
@@ -48,6 +51,8 @@ ms.locfileid: "85276034"
 
  ![回路モデルの例](~/media/circuit_model_1.PNG)
 
+既定では、クォンタム Machine Learning ライブラリの操作によって、レジスタの最後の qubit が測定され、分類確率が算出されます。 回線を設計するときは、この事実に注意する必要があります。
+
 ## <a name="use-the-library-functions-to-write-layers-of-gates"></a>ライブラリ関数を使用してゲートのレイヤーを作成する
 
 たとえば、MNIST データセットのような28×28ピクセルの画像など、インスタンスごとに784の機能を持つデータセットがあるとします。 この場合、回線の幅が十分に大きくなり、個々のゲートが個別に作成される可能性がありますが、現実的ではないタスクになります。 このため、Quantum Machine Learning ライブラリには、パラメーター化回転のレイヤーを自動的に生成するための一連のツールが用意されています。 たとえば、関数は、 [`LocalRotationsLayer`](xref:microsoft.quantum.machinelearning.localrotationslayer) 指定された軸に沿って制御されないシングル qubit 回転の配列を返します。レジスタ内の qubit ごとに1つの回転があり、それぞれが異なるモデルパラメーターによってパラメーター化されます。 たとえば、は `LocalRotationsLayer(4, X)` 次のゲートのセットを返します。
@@ -56,6 +61,6 @@ ms.locfileid: "85276034"
 
 サーキットの設計を効率化するために使用できるすべてのツールを検出するには、 [Quantum Machine Learning ライブラリの API リファレンスを参照](xref:microsoft.quantum.machinelearning)することをお勧めします。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
  サンプルに用意されている例では、さまざまな構造体を試してみてください。 モデルのパフォーマンスに変更があるかどうかを確認できます。 次のチュートリアル「」で [`Load your own datasets`](xref:microsoft.quantum.libraries.machine-learning.load) は、データセットを読み込んで、分類子の新しいアーキテクチャを試してみる方法を学習します。

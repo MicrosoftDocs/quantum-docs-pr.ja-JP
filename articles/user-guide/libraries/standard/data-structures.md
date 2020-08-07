@@ -1,17 +1,20 @@
 ---
-title: 'Q # 標準ライブラリのデータ構造'
-description: 'Microsoft Q # 標準ライブラリのデータ構造、oracles、dynamical ジェネレーターについて説明します。'
+title: 標準ライブラリのデータ構造 Q#
+description: Microsoft 標準ライブラリのデータ構造、oracles、dynamical ジェネレーターについて説明し Q# ます。
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 46ac6794d1e21e111aa1d98e11a6f83194f8d54e
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275735"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868522"
 ---
 # <a name="data-structures-and-modeling"></a>データ構造とモデリング #
 
@@ -34,7 +37,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ### <a name="arrays"></a>配列 ###
 
 Canon には、配列を操作するための関数がいくつか用意されています。
-これらの関数は型パラメーター化されるため、任意の Q # 型の配列と共に使用できます。
+これらの関数は型パラメーター化されるため、任意の型の配列と共に使用でき Q# ます。
 たとえば、関数は、 <xref:microsoft.quantum.arrays.reversed> 入力とは逆の順序で要素を持つ新しい配列を返します。
 これは、操作を呼び出すときに、クォンタムレジスタがどのように表されるかを変更するために使用できます。
 
@@ -72,7 +75,7 @@ ApplyToEach(
 ここで、oracle という用語は、qubits のセットに対して動作し、その回答をフェーズとして返すブラックボックスクォンタムサブルーチンを指します。
 多くの場合、このサブルーチンは、他のいくつかのパラメーターに加えて oracle を受け入れるクォンタムアルゴリズムへの入力と考えることができます。また、一連のクォンタム操作を適用し、このクォンタムサブルーチンの呼び出しを基本的なゲートと同様に処理します。
 当然ながら、より大きなアルゴリズムを実際に実装するためには、oracle の根本的な分解を基本的なゲートに提供する必要がありますが、このような分解は、oracle を呼び出すアルゴリズムを理解するためには必要ありません。
-Q # では、この抽象化は、操作がファーストクラスの値であることによって表されます。これにより、操作を、ブラックボックス方式でクォンタムアルゴリズムの実装に渡すことができます。
+では Q# 、この抽象化は、操作がファーストクラスの値であることによって表されます。これにより、操作を、ブラックボックス方式でクォンタムアルゴリズムの実装に渡すことができます。
 さらに、ユーザー定義型を使用して、さまざまな oracle 表現をタイプセーフな方法でラベル付けすることで、さまざまな種類のブラックボックス操作を誤って混同ことが困難になります。
 
 このような oracles は、 [Grover の検索](https://en.wikipedia.org/wiki/Grover%27s_algorithm)やクォンタムシミュレーションアルゴリズムなどの有名な例を含む、さまざまなコンテキストで表示されます。
@@ -189,7 +192,7 @@ $U (t) $ の固有値は、$H $ の固有値に直接関連付けられていま
 このコンテキストでは、1つの $R _z $ gate を使用して任意の $t $ に対して $U (t) $ をシミュレートできます。そのため、このような場合は、個別のクエリのみを使用して、そのようにする必要はありません。
 このような連続モデルには、連続したクエリを使用するフェーズ推定プロセスから得られるプロパティが含まれています。これは、対数関数の分岐カットによってマスクされるフェーズ情報が、$t $ の非対応値に対して実行される実験の結果から明らかになる可能性があるためです。
 このため、このような連続したクエリモデル (フェーズ推定) の場合、oracle は適切なだけでなく、個別のクエリモデルにも適しています。
-このため、Q # には両方の形式のクエリの機能があり、ユーザーにそのまま残して、ニーズに合わせてフェーズの推定アルゴリズムを決定し、使用可能な oracle の種類を決定します。
+このため、 Q# 両方の形式のクエリに対して機能があり、ユーザーにそのまま残して、ニーズと使用可能な oracle の種類に合わせてフェーズ推定アルゴリズムを決定します。
 
 ## <a name="dynamical-generator-modeling"></a>Dynamical Generator モデリング ##
 

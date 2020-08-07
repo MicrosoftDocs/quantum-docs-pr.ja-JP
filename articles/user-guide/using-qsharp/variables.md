@@ -1,28 +1,31 @@
 ---
-title: Q の変数#
+title: の変数Q#
 description: 説明の入力
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 08301f408dcb2211ba25c582a5e5aa43310b714a
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885290"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867847"
 ---
-# <a name="variables-in-q"></a>Q の変数#
+# <a name="variables-in-no-locq"></a>の変数Q#
 
-Q # は、変更可能なシンボルと変更できないシンボル、または式にバインド/割り当てられている*変数*を区別します。
+Q#変更可能なシンボルと変更できないシンボル、または式にバインド/割り当てられている*変数*を区別します。
 一般に、変更できないシンボルを使用することをお勧めします。これにより、コンパイラはより多くの最適化を実行できるためです。
 
 バインディングの左側は、記号の組と式の右辺で構成されています。
 
 ## <a name="immutable-variables"></a>変更できない変数
 
-キーワードを使用して、操作または関数内で再利用するために、Q # の任意の型の値を変数に割り当てることができ `let` ます。 
+キーワードを使用すると、任意の型の値を変数に代入して、 Q# 操作または関数内で再利用することができ `let` ます。 
 
 変更できないバインドは、キーワードで構成され、 `let` その後にシンボルまたは記号の組、等号 `=` (=)、および終端のセミコロンをバインドする式で構成されます。
 
@@ -55,7 +58,7 @@ let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 
 #### <a name="apply-and-reassign-statements"></a>Apply ステートメントと再割り当てステートメント
 
-特定の種類の `set` -ステートメント (*適用および再割り当て*ステートメント) は、右辺が二項演算子のアプリケーションで構成されており、結果が演算子の左辺の引数に再バインドされる場合に、簡単に連結できる方法を提供します。 例:
+特定の種類の `set` -ステートメント (*適用および再割り当て*ステートメント) は、右辺が二項演算子のアプリケーションで構成されており、結果が演算子の左辺の引数に再バインドされる場合に、簡単に連結できる方法を提供します。 たとえば、
 
 ```qsharp
 mutable counter = 0;
@@ -107,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-配列の場合、 [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) Q # 標準ライブラリでは、多くの一般的な配列の初期化と操作に必要なツールが提供されるため、最初に配列項目を更新する必要がなくなります。 
+配列の場合、 [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) 標準ライブラリでは、 Q# 多くの一般的な配列の初期化と操作に必要なツールが提供されるため、最初に配列項目を更新する必要がなくなります。 
 
 必要に応じて、更新ステートメントと再割り当てステートメントで代替手段を提供します。
 
@@ -198,7 +201,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-および
+and
 
 ```qsharp
 if (a == b) {
@@ -234,6 +237,6 @@ if (a == b) {
 ...
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-Q # での[Qubits の](xref:microsoft.quantum.guide.qubits)使用について説明します。
+での[Qubits の使用](xref:microsoft.quantum.guide.qubits)について説明 Q# します。

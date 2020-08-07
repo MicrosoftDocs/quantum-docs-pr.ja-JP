@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.samples
-ms.openlocfilehash: 3bd0de04a448c74eea6c3e8e3a15dcbb19f9d705
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 20da0e1765a242c172cc595f03d7791a0e8b8d2d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275399"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867514"
 ---
 # <a name="contributing-samples-to-the-quantum-development-kit"></a>Quantum 開発キットに貢献するサンプル
 
@@ -47,8 +50,8 @@ microsoft/Quantum
 
 | ファイル              | 説明                                                |
 |-------------------|------------------------------------------------------------|
-| `CHSHGame.csproj` | .NET Core SDK を使用してサンプルをビルドするために使用される Q # プロジェクト |
-| `Game.qs`         | このサンプルで使用される Q # の操作と関数                 |
+| `CHSHGame.csproj` | Q#.NET Core SDK を使用してサンプルをビルドするために使用されるプロジェクト |
+| `Game.qs`         | Q#サンプルの操作と関数                 |
 | `Host.cs`         | サンプルを実行するために使用される C# ホストプログラム                     |
 | `host.py`         | サンプルを実行するために使用される Python ホストプログラム                 |
 | `README.md`       | サンプルの動作と使用方法に関するドキュメント    |

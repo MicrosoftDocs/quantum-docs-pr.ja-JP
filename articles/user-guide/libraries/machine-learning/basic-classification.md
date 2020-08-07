@@ -1,28 +1,31 @@
 ---
 title: クォンタム Machine Learning ライブラリを使用した基本的な分類
-description: 'Microsoft QDK の Quantum Machine Learning ライブラリを使用して、Q # で記述されたクォンタムシーケンシャル分類器を実行する方法について説明します。'
+description: Q#Microsoft QDK の quantum Machine Learning ライブラリを使用して、で記述されたクォンタムシーケンシャル分類器を実行する方法について説明します。
 author: geduardo
 ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: f9c3e7ab85c0f0d1a6063e593607d35c5cb76936
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275784"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868969"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>基本分類: QDK でデータを分類する
 
-このクイックスタートでは、QDK の Quantum Machine Learning ライブラリを使用して、Q # で記述されたクォンタムシーケンシャル分類器を実行する方法について説明します。 
+このクイックスタートでは、で記述されたクォンタムシーケンシャル分類器を実行する方法につい Q# Machine Learning て説明します。 
 
-このガイドでは、Q # で定義された分類子構造を使用して、半月のデータセットを使用します。
+このガイドでは、「」で定義されている分類子構造を使用して、半月のデータセットを使用し Q# ます。
 
 ## <a name="prerequisites"></a>前提条件
 
 - Microsoft [Quantum 開発キット](xref:microsoft.quantum.install)。
-- [Python ホストプログラム](xref:microsoft.quantum.install.python)または[C# ホストプログラム](xref:microsoft.quantum.install.cs)のいずれかに対して Q # プロジェクトを作成します。
+- Q# [Python ホストプログラム](xref:microsoft.quantum.install.python)または[C# ホストプログラム](xref:microsoft.quantum.install.cs)のいずれかのプロジェクトを作成します。
 
 ## <a name="host-program"></a>ホストプログラム
 
@@ -34,7 +37,7 @@ ms.locfileid: "85275784"
 
     ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Visual Studio Code またはコマンド ラインを使用した Python](#tab/tabid-python)
 
-    Python から Q # 分類子を実行するには、次のコードをとして保存し `host.py` ます。 `Training.qs`このチュートリアルの後半で説明する Q # ファイルも必要であることに注意してください。
+    Python の分類子であるを実行するには、 Q# 次のコードをとして保存し `host.py` ます。 Q# `Training.qs` このチュートリアルの後半で説明するファイルも必要であることに注意してください。
 
     :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="3-42":::
 
@@ -49,7 +52,7 @@ ms.locfileid: "85275784"
 
     ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[Visual Studio Code またはコマンド ラインを使用した C#](#tab/tabid-csharp)
 
-    C# の Q # 分類子であることを実行するには、次のコードをとして保存し `Host.cs` ます。 `Training.qs`このチュートリアルの後半で説明する Q # ファイルも必要であることに注意してください。
+    C# の分類子であるを実行するには、 Q# 次のコードをとして保存し `Host.cs` ます。 Q# `Training.qs` このチュートリアルの後半で説明するファイルも必要であることに注意してください。
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -63,7 +66,7 @@ ms.locfileid: "85275784"
 
     ### <a name="c-with-visual-studio-2019"></a>[Visual Studio 2019 を使用した C#](#tab/tabid-vs2019)
 
-    Visual Studio で c# から新しい Q # プログラムを実行するには、 `Host.cs` 次の C# コードを含むようにを変更します。 `Training.qs`このチュートリアルの後半で説明する Q # ファイルも必要であることに注意してください。
+    Q#Visual Studio で c# から新しいプログラムを実行するには、 `Host.cs` 次の c# コードを含むようにを変更します。 Q# `Training.qs` このチュートリアルの後半で説明するファイルも必要であることに注意してください。
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -78,7 +81,7 @@ ms.locfileid: "85275784"
 
 ## <a name="q-classifier-code"></a>Q \# 分類器コード
 
-次に、ホストプログラムによって呼び出された操作が Q # でどのように定義されているかを見てみましょう。
+次に、ホストプログラムによって呼び出された操作がでどのように定義されているかを見てみましょう Q# 。
 次のコードをという名前のファイルに保存 `Training.qs` します。
 
 :::code language="qsharp" source="~/quantum/samples/machine-learning/half-moons/Training.qs" range="4-116":::
@@ -89,6 +92,6 @@ ms.locfileid: "85275784"
 - `TrainHalfMoonModel() : (Double[], Double)`: この操作はコードの中核となる部分で、トレーニングを定義します。 ここでは、ライブラリに含まれるデータセットからサンプルを読み込みます。ここでは、トレーニングのハイパーパラメーターと初期パラメーターを設定し、ライブラリに含まれる操作を呼び出してトレーニングを開始し `TrainSequentialClassifier` ます。 パラメーターと、分類子を決定するバイアスを出力します。
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: この操作では、モデルを評価するための検証プロセスを定義します。 ここでは、検証用のサンプル、サンプルごとの測定数、および許容範囲を読み込みます。 検証用に選択されたサンプルのバッチに誤分類の数が出力されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 まず、コードを使用して再生し、いくつかのパラメーターを変更してトレーニングにどのように影響するかを確認することができます。 次のチュートリアル「[独自の分類子の設計](xref:microsoft.quantum.libraries.machine-learning.design)」では、分類子の構造を定義する方法を学習します。

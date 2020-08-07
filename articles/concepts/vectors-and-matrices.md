@@ -1,6 +1,8 @@
 ---
 title: 量子コンピューティングのベクトルとマトリックスの説明: ベクターとマトリックスを操作する方法の基本について説明します。
 author: QuantumWriter uid: microsoft.... author: nawiebe@microsoft.com ms. date: 12/11/2017 ms. topic: article no loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -87,7 +89,7 @@ author: QuantumWriter uid: microsoft.... author: nawiebe@microsoft.com ms. date:
 
 次元 (またはサイズ) n の列ベクター (または単なる[*vector*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v $ は、 $ $ $ 列として配置された n 個の $ 複素数 $ (v_1、v_2、\ lドット、v_n) のコレクションです $ 。
 
-$$画像=\begin{bmatrix}
+$$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \ vドット\\\\
@@ -215,7 +217,7 @@ $$
     =\begin{bmatrix}c \\\\ a d \\\\ a e \\\\ b c \\\\ b d \\\\\end{bmatrix}
 $$
 
-および
+and
 
 $$
     \begin{bmatrix}

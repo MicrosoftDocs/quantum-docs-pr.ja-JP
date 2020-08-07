@@ -1,19 +1,22 @@
 ---
-title: Q での制御フロー#
+title: 制御フローQ#
 description: ループ、条件、その他
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: b652736168a71b905deaf7c4fdb29a8751b3dfaf
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870993"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867949"
 ---
-# <a name="control-flow-in-q"></a>Q での制御フロー#
+# <a name="control-flow-in-no-locq"></a>制御フローQ#
 
 演算または関数内では、各ステートメントが順序どおりに実行されます。これは、その他の一般的な従来の言語と似ています。
 ただし、制御フローを変更するには、次の3つの方法があります。
@@ -42,7 +45,7 @@ ms.locfileid: "86870993"
 いずれかのブロックが実行されると、それ自体のスコープ内で実行されることに注意してください。
 `if`、 `elif` 、またはブロック内で行われたバインディングは、ブロックの終了後には `else` 参照できません。
 
-たとえば、次のように入力します。
+たとえば、
 
 ```qsharp
 if (result == One) {
@@ -104,12 +107,12 @@ for ((index, measured) in results) { // iterates over the tuple values in result
 
 ## <a name="repeat-until-success-loop"></a>繰り返し-成功ループ
 
-Q # 言語を使用すると、古典制御フローは qubits の測定結果に依存することになります。
+この言語では、 Q# 古典制御フローは qubits の測定結果に依存します。
 さらに、この機能により、unitaries を実装するための計算コストを削減できる強力なガジェットを実装できるようになります。
-このような例として、Q # の*繰り返しまで成功*(ru) のパターンが挙げられます。
+この例として、の*繰り返しの成功*(ru) パターンが挙げられ Q# ます。
 これらの RU パターンは、基本的なゲートの観点から、*予想*低コストの確率論的プログラムです。発生したコストは、実際の実行と、考えられる複数の branchings のインターリーブによって異なります。
 
-Repeat To success (RU) パターンを容易にするために、Q # はコンストラクトをサポートしています。
+繰り返し-成功 (RU) パターンを容易にするために、は Q# コンストラクトをサポートしています。
 
 ```qsharp
 repeat {
@@ -147,9 +150,9 @@ until (expression);
 
 ## <a name="while-loop"></a>While ループ
 
-繰り返し-成功パターンには、クォンタム固有の connotation があります。 これらは、クォンタムアルゴリズムの特定のクラスで広く使用されているため、Q # の専用言語構成要素です。 ただし、条件に基づいて中断されるループは、実行の長さがコンパイル時に不明であるため、クォンタムのランタイムでは特に注意して処理されます。 ただし、これらのループには従来の (非クォンタム) ハードウェアで実行されるコードのみが含まれているため、関数内での使用は問題ありません。 
+繰り返し-成功パターンには、クォンタム固有の connotation があります。 これらは、クォンタムアルゴリズムの特定のクラスで広く使用されているため、の専用言語構成要素 Q# です。 ただし、条件に基づいて中断されるループは、実行の長さがコンパイル時に不明であるため、クォンタムのランタイムでは特に注意して処理されます。 ただし、これらのループには従来の (非クォンタム) ハードウェアで実行されるコードのみが含まれているため、関数内での使用は問題ありません。 
 
-このため、Q # では、関数内でのみ while ループを使用できます。 ステートメントは、 `while` キーワード、 `while` かっこで囲まれたブール式、およびステートメントブロックで構成されます。
+Q#したがって、では、関数内でのみ while ループを使用できます。 ステートメントは、 `while` キーワード、 `while` かっこで囲まれたブール式、およびステートメントブロックで構成されます。
 ステートメントブロック (ループの本体) は、条件がと評価されている限り実行され `true` ます。
 
 ```qsharp
@@ -166,7 +169,7 @@ while (index < Length(arr) && item < 0) {
 Return ステートメントは、操作または関数の実行を終了し、値を呼び出し元に返します。
 これは、キーワードと、 `return` 適切な型の式、および終端のセミコロンで構成されます。
 
-たとえば、次のように入力します。
+たとえば、
 ```qsharp
 return 1;
 ```
@@ -191,7 +194,7 @@ Fail ステートメントは、操作の実行を終了し、呼び出し元に
 操作内の fail ステートメントの数に制限はありません。
 ステートメントがブロック内の fail ステートメントに続く場合、コンパイラは警告を生成することがあります。
 
-たとえば、次のように入力します。
+たとえば、
 
 ```qsharp
 fail $"Impossible state reached";
@@ -205,7 +208,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>無理数軸についてのシングル qubit ローテーションの ru パターン 
 
-一般的なユースケースでは、次の Q # 操作は、Bloch 球の $ (I + 2i Z)/\ sqrt $ の無理数軸を中心とした回転を実装し {5} ます。 実装では、既知の RUS パターンを使用します。
+一般的なユースケースでは、次の操作によって、 Q# Bloch 球の $ (I + 2i Z)/\ sqrt $ の無理数軸の周りの回転が実装され {5} ます。 実装では、既知の RUS パターンを使用します。
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -331,4 +334,4 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 
 ## <a name="next-steps"></a>次のステップ
 
-Q # での[テストとデバッグ](xref:microsoft.quantum.guide.testingdebugging)について説明します。
+での[テストとデバッグ](xref:microsoft.quantum.guide.testingdebugging)について説明 Q# します。

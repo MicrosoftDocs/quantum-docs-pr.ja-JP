@@ -1,30 +1,33 @@
 ---
 title: 量子乱数ジェネレーターの作成
-description: 量子乱数ジェネレーターを作成することで、重ね合わせなど、基本的量子概念を実証する Q# プロジェクトを構築します。
+description: Q#クォンタムの乱数ジェネレーターを作成することによって、法則のような基本的なクォンタムの概念を示すプロジェクトをビルドします。
 author: bromeg
 ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 18e8975e513a87c0a67a6dbb5586cc7dab5a93fb
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8db892091794cb1166e41744572d8938d975abf2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275287"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869768"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>チュートリアル:Q\# で量子乱数ジェネレーターを実装する
 
-Q# で記述された量子アルゴリズムの単純な例が量子乱数ジェネレーターです。 このアルゴリズムでは、量子力学の性質を活用し、乱数を生成します。
+で記述されたクォンタムアルゴリズムの簡単な例 Q# は、クォンタム乱数ジェネレーターです。 このアルゴリズムでは、量子力学の性質を活用し、乱数を生成します。
 
 ## <a name="prerequisites"></a>前提条件
 
 - Microsoft [Quantum 開発キット](xref:microsoft.quantum.install)。
-- [コマンド ラインから Q# を使用するため](xref:microsoft.quantum.install.standalone)、または [Python ホスト プログラム](xref:microsoft.quantum.install.python) または [C# ホスト プログラム](xref:microsoft.quantum.install.cs)で使用するために、Q# プロジェクトを作成します。
+- Q# [ Q# コマンドラインからを使用](xref:microsoft.quantum.install.standalone)するか、 [Python ホストプログラム](xref:microsoft.quantum.install.python)または[C# ホストプログラム](xref:microsoft.quantum.install.cs)を使用して、のプロジェクトを作成します。
 
-## <a name="write-a-q-operation"></a>Q# 操作を記述する
+## <a name="write-a-no-locq-operation"></a>操作を記述する Q#
 
-### <a name="q-operation-code"></a>Q# 操作コード
+### <a name="no-locq-operation-code"></a>Q#操作コード
 
 1. Program.qs ファイルの内容を次のコードに置き換えます。
 
@@ -32,7 +35,7 @@ Q# で記述された量子アルゴリズムの単純な例が量子乱数ジ�
 
 「[量子コンピューティングについて](xref:microsoft.quantum.overview.understanding)」という記事で述べたように、キュービットとは、重ね合わせに入ることができる量子情報の単位です。 測定されるとき、キュービットは 0 か 1 だけになります。 ただし、実行中、キュービットの状態は測定で 0 または 1 を読み取る可能性を表わします。 この確率論的な状態が重ね合わせと呼ばれています。 この確率を使用し、乱数を生成できます。
 
-今回の Q# 操作では、Q# ネイティブの `Qubit` データ型を導入します。 `Qubit` は `using` ステートメントでのみ割り当てることができます。 割り当て後、キュービットは常に `Zero` 状態になります。 
+この操作では、 Q# `Qubit` にネイティブなデータ型を導入 Q# します。 `Qubit` は `using` ステートメントでのみ割り当てることができます。 割り当て後、キュービットは常に `Zero` 状態になります。 
 
 `H` 操作を使用することで、`Qubit` を重ね合わせに入れることができます。 キュービットを測定し、その値を読み取るには、`M` 組み込み操作を使用します。
 
@@ -61,13 +64,13 @@ Q# で記述された量子アルゴリズムの単純な例が量子乱数ジ�
 
 ## <a name="creating-a-complete-random-number-generator"></a>完全な乱数ジェネレーターの作成
 
-ランダム ビットを生成する Q# 操作ができたので、それを使用して、完全な量子乱数ジェネレーターを作成できます。 Q# コマンド ライン アプリケーションを使用することも、ホスト プログラムを使用することもできます。
+これで、ランダムなビットを生成する操作ができるようになりました。これを Q# 使用して、完全なクォンタム乱数ジェネレーターを構築できます。 コマンドラインアプリケーションを使用することも、 Q# ホストプログラムを使用することもできます。
 
 
 
-### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Visual Studio または Visual Studio Code を使用する Q# コマンド ライン アプリケーション](#tab/tabid-qsharp)
+### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Q#Visual Studio または Visual Studio Code を使用したコマンドラインアプリケーション](#tab/tabid-qsharp)
 
-完全な Q# コマンドライン アプリケーションを作成するには、使用する Q# プログラムに次のエントリ ポイントを追加します。 
+完全なコマンドラインアプリケーションを作成するには Q# 、次のエントリポイントをプログラムに追加し Q# ます。 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
@@ -91,7 +94,7 @@ dotnet run --no-build
 
 ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Visual Studio Code またはコマンド ラインを使用した Python](#tab/tabid-python)
 
-Python から新しい Q# プログラムを実行するには、次のコードを `host.py` として保存します。
+Python から新しいプログラムを実行するには Q# 、次のコードをとして保存し `host.py` ます。
 
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
@@ -105,7 +108,7 @@ Preparing Q# environment...
 
 ### <a name="c-with-visual-studio-code-or-visual-studio"></a>[Visual Studio Code または Visual Studio を使用する C#](#tab/tabid-csharp)
 
-C# から新しい Q# プログラムを実行するには、次の C# コードを含めるように `Driver.cs` を変更します。
+C# から新しいプログラムを実行するには Q# 、 `Driver.cs` 次の c# コードを含むようにを変更します。
 
 :::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 

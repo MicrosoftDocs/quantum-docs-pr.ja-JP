@@ -1,18 +1,21 @@
 ---
-title: IQ# マジック コマンド
-description: 'Q # Jupyter Notebook を使用した IQ # マジックコマンドのクイックリファレンスページ'
+title: I Q# マジックコマンド
+description: Q#Jupyter notebook を使用した I マジックコマンドのクイックリファレンスページ Q#
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref.iqsharp
-ms.openlocfilehash: 2fb542df8723fa437c82b4a1dfada77e22c1d6e4
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: fb7b5543ef9222e6bab2b1cbbc7e3ebb54863438
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870543"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867983"
 ---
-# <a name="iq-magic-commands"></a>IQ# マジック コマンド
+# <a name="ino-locq-magic-commands"></a>I Q# マジックコマンド
 
 ### <a name="general"></a>全般
 
@@ -23,7 +26,7 @@ ms.locfileid: "86870543"
 - [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance): このカーネルの現在のパフォーマンスメトリックを報告します。
 - [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate): QuantumSimulator ターゲットコンピューターで指定された関数または操作を実行します。
 - [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli): ToffoliSimulator ターゲットコンピューターで指定された関数または操作を実行します。
-- [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who): 現在のセッションで使用できる Q # 操作を一覧表示します。
+- [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who): 現在の Q# セッションで使用できる操作を一覧表示します。
 - [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace): 現在のワークスペースに関連するアクションを提供します。
 
 ### <a name="azure-quantum-integration"></a>Azure クォンタムの統合
@@ -34,12 +37,12 @@ ms.locfileid: "86870543"
 - [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): 現在の Azure クォンタムワークスペースにジョブの結果を表示します。
 - [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): 現在の Azure クォンタムワークスペースのジョブの状態を表示します。
 - [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit): Azure Quantum ワークスペースにジョブを送信します。
-- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Azure Quantum ワークスペースでの Q # ジョブの送信のアクティブな実行ターゲットを設定または表示します。
+- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Azure Quantum ワークスペースでのジョブ送信のアクティブな実行ターゲットを設定または表示 Q# します。
 
 ### <a name="chemistry-from-microsoftquantumchemistry-package"></a>化学 (Microsoft の Quantum パッケージから)
 
 - [`%chemistry.broombridge`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge): 指定された yaml ファイルから Broombridge の電子構造の問題表現を読み込んで返します。
-- [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode): Hamiltonian on にあるは、Q # で利用できる形式にエンコードします。
+- [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode): の Hamiltonian on が、で利用できる形式にエンコードさ Q# れます。
 - [`%chemistry.fh.add_terms`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.add_terms): Hamiltonian 上の対象に用語を追加します。
 - [`%chemistry.fh.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load): 電子構造の問題のために、Hamiltonian 上にあるので、このデータを読み込みます。 問題はファイルから読み込まれるか、引数として渡されます。
 - [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load): Broombridge の電子構造問題を読み込み、選択した入力状態を返します。

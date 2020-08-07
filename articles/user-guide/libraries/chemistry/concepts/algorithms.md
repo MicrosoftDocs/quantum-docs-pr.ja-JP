@@ -6,18 +6,21 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: 5dad4e4a77eea99e72eb2efac52eec61ebbdb21c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 40f79a66ae95e20a8b1c19af735eedca5e3c15ef
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275926"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869530"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics のシミュレーション
 
 Hamiltonian が基本演算子の合計として表現されたら、既知の手法のホストを使用して、dynamics を基本的なゲート操作にコンパイルできます。
 Trotter – Suzuki 数式、unitaries の線形組み合わせ、qubitization という3つの効果的なアプローチがあります。
-以下の3つのアプローチについて説明し、Hamiltonian シミュレーションライブラリを使用してこれらのメソッドを実装する方法の具体的な Q&a 例を示します。
+以下の3つのアプローチについて説明し、 Q# Hamiltonian シミュレーションライブラリを使用してこれらのメソッドを実装する方法の具体的な例を示します。
 
 
 ## <a name="trottersuzuki-formulas"></a>Trotter – Suzuki 数式
@@ -49,7 +52,7 @@ Diagonalized 演算子は、Clifford 操作 (クォンタムコンピューテ�
         0 & 0 & 0 & e ^ {-it} \end{bmatrix}.
 $ $ ここ、$e ^ {-iHt} \ket {00} = e ^ {it} \ket {00} $ and $e ^ {-iht} \ket {01} = e ^ {-it} \ket {01} $。これは、$0 $ のパリティが $0 $ で、ビット文字列 $1 $ のパリティは $1 $ であるという事実の結果として直接確認できます。
 
-指数演算子は、次の操作を使用して Q # に直接実装でき <xref:microsoft.quantum.intrinsic.exp> ます。
+指数演算子は Q# 、次の操作を使用して直接実装でき <xref:microsoft.quantum.intrinsic.exp> ます。
 ```qsharp
     using(qubits = Qubit[2]){
         let pauliString = [PauliX, PauliX];
@@ -86,8 +89,8 @@ Fermionic Hamiltonians の場合、[ヨルダン– Wigner 分解](xref:microsof
     var qSharpData = jordanWignerEncoding.ToQSharpFormat();
 ```
 
-この形式では、Q # シミュレーションアルゴリズムで利用できる、この形式がユーザー定義型 `JordanWignerEncodingData` です。
-Q # では、この形式は便利な関数に渡されます。この関数は、 `TrotterStepOracle` Trotter-Suzuki インテグレーターを使用して、その実行に必要なその他のパラメーターに加えて、時間の短縮に関する演算子を返します。
+シミュレーションアルゴリズムによって利用されるヨルダン– Wigner 表現形式は、 Q# ユーザー定義型 `JordanWignerEncodingData` です。
+内で Q# は、この形式は便利な関数に渡されます。この関数は、 `TrotterStepOracle` Trotter-Suzuki インテグレーターを使用して、その実行に必要な他のパラメーターに加えて、時間の短縮に関する演算子を返します。
 
 ```qsharp
 // qSharpData passed from driver
@@ -151,10 +154,10 @@ $ Qubitization を直接使用することはできませんが、$-\begin{align
 
 ウォーク演算子 $W $ は、$ & operator name{select} $ および $R $ operation as $ $ W = \ 演算子 name{select} R, $ $ として表すことができます。これにより、同等の演算子 (アイソメトリック) を実装して、^ {/pm i-cos ^ {-1} (H/| H | _1)} $ を $e できます。
 
-これらのサブルーチンは、Q # で簡単に設定できます。
+これらのサブルーチンは、で簡単に設定 Q# できます。
 例として、$H = X_1 + X_2 + Z_1 Z_2 $ という単純な qubit の横形式の Hamiltonian を考えてみます。
-この場合、$ 演算子を実装する Q # コードはによって呼び出されますが、 <xref:microsoft.quantum.canon.multiplexoperations> $-演算子はを使用して実装することができ <xref:microsoft.quantum.preparation.preparearbitrarystate> ます。
-このモデルをシミュレートする例については、 [Q # のサンプル](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)を参照してください。
+この場合、 Q# $ 演算子を実装するコードはによって呼び出されますが、 <xref:microsoft.quantum.canon.multiplexoperations> $-演算子はを使用して実装することができ <xref:microsoft.quantum.preparation.preparearbitrarystate> ます。
+一例として、このモデルのシミュレーションを含む例[ Q# があります。](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)
 
 任意の化学の問題に対してこれらの手順を手動で指定すると、多くの労力が必要になります。これは、化学ライブラリを使用しても回避できます。
 上記の Trotter – Suzuki シミュレーションアルゴリズムと同様に、は、 `JordanWignerEncodingData` `QubitizationOracle` 実行に必要な他のパラメーターに加えて、ウォーク演算子を返す便利な関数に渡されます。

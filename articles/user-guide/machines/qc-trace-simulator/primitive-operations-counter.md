@@ -1,17 +1,20 @@
 ---
 title: プリミティブ操作カウンター-Quantum 開発キット
-description: 'Microsoft QDK プリミティブ操作カウンターについて説明します。これは、quantum トレースシミュレーターを使用して、Q # プログラムの操作によって使用されるプリミティブ実行を追跡します。'
+description: Microsoft QDK プリミティブ操作カウンターについて説明します。このカウンターは、クォンタムトレースシミュレーターを使用して、プログラム内の操作によって使用されるプリミティブ実行を追跡し Q# ます。
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
-ms.openlocfilehash: ea022d499354f7cefd60da690466496e0ce7c336
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ceb70cef6dc0a4530b992b5a529248a8b283c17f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871027"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868238"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>クォンタムトレースシミュレーター: プリミティブ操作カウンター
 
@@ -31,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>C# ホストプログラムでのプリミティブ操作カウンターの使用
 
-このセクションで後述する C# の例では、 <xref:microsoft.quantum.intrinsic.t> <xref:microsoft.quantum.intrinsic.ccnot> 次の Q # サンプルコードに基づいて、操作を実装するために必要な操作の数をカウントします。
+このセクションで後述する C# の例では、 <xref:microsoft.quantum.intrinsic.t> <xref:microsoft.quantum.intrinsic.ccnot> 次のサンプルコードに基づいて、操作を実装するために必要な操作の数をカウントし Q# ます。
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

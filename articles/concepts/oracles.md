@@ -1,6 +1,8 @@
 ---
 title: クォンタム oracles の説明: 別のアルゴリズムへの入力として使用される、クォンタム oracles、ブラックボックス操作の操作方法と定義方法について説明します。
 執筆者: cgranade uid: oracles: Christopher.Granade@microsoft.com ms. date: 07/11/2018 ms. topic: article no loc (次の説明を参照):
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -105,7 +107,7 @@ $$
 ここで $ o = ^ は \dagger $ 構築によって、以前の問題を解決しました。
 
 > [!TIP]
->O ^ 2 があることを確認するには、 $ = { \dagger } $ $ o ^ 2 = \boldone $ $ = $ $ \in \[ が b と b の a a、b!ファンド.NO LOC ({)] 0, 1 \[ !ファンド.なし (})] $ 。
+>O ^ 2 であることを確認するには、 $ = { \dagger } $ $ o ^ 2 が a a = \boldone $ 、b $ = $ $ \in \: :: no-loc ({)::: 0、1 \: :: no loc (})::: $ のいずれかであることに注意してください。
 >結果として、 $ O \ket { x y と f } \ket { (x) } = \ket { x } \ket { y/oplus f (x) & oplus f (x) } = \ket { x } \ket { y } $ です。
 
 重要な点として、各計算基準の状態 x y に対して oracle を定義することで、 $ \ket { } \ket { } $ O が $ 他の状態にどのように作用するかも定義し $ ます。

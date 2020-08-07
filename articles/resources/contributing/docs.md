@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 1110f32a6486de1a346b115fa928a098749b6690
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275496"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866878"
 ---
 # <a name="improving-documentation"></a>ドキュメントの改善
 
@@ -25,7 +28,7 @@ Quantum 開発キットのドキュメントでは、さまざまな形式を採
 ただし、ドキュメントの各形式は、詳細によって多少異なります。
 
 - **概念説明のドキュメント**は、に公開されている一連の記事で構成されています。このドキュメントでは、 https://docs.microsoft.com/quantum クォンタムコンピューティングの基本から、インターチェンジ形式の技術仕様までのすべてを説明しています。 これらの記事は[Docfx-Flavored Markdown (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)で記述されています。これは、豊富なドキュメントセットの作成に使用される Markdown バリアントです。
-- **API リファレンス**は、にパブリッシュされた各 Q # 関数、操作、およびユーザー定義型のページのセットです https://docs.microsoft.com/qsharp/api/ 。 これらのページでは、それぞれの呼び出しに対する入力と操作、および例と詳細情報へのリンクが文書化されています。 API リファレンスは、各リリースの一部として Q # ソースコードの小規模な DFM ドキュメントから自動的に抽出されます。
+- **API リファレンス**は、にパブリッシュされた各 Q# 関数、操作、およびユーザー定義型のページのセットです https://docs.microsoft.com/qsharp/api/ 。 これらのページでは、それぞれの呼び出しに対する入力と操作、および例と詳細情報へのリンクが文書化されています。 API リファレンスは、 Q# 各リリースの一部としてソースコードの小さな DFM ドキュメントから自動的に抽出されます。
 - 各サンプルに含まれている**readme.txt <!----> **ファイルと kata は、そのサンプルまたは kata の使用方法、使用方法、および Quantum 開発キットの残りの部分にどのように関連しているかを説明しています。 これらのファイルは、 [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/)を使用して記述されています。これは、コードリポジトリに直接ドキュメントを添付する場合によく使用される dfm に代わるものです。
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>概念説明のドキュメントに貢献する
@@ -49,7 +52,7 @@ Quantum 開発キットのドキュメントでは、さまざまな形式を採
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
 ```
 
-このコマンドでは、 [ `Game.qs` `chsh-game` サンプルから](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)4 行のファイルをインポートし、構文の強調表示を目的として Q # コードとしてマークします。
+このコマンドは、 [ `Game.qs` `chsh-game` サンプルから](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)4 行のファイルをインポートし、 Q# 構文の強調表示の目的でコードとしてマークします。
 このコマンドを使用すると、概念説明の記事とサンプルリポジトリ間でコードが重複しないようにすることができます。これにより、ドキュメント内のサンプルコードは常に最新の状態になります。
 
 ## <a name="contributing-to-the-api-references"></a>API リファレンスへの貢献
@@ -64,7 +67,7 @@ API 参照の向上を促進するために、ドキュメントに記載され�
 
 たとえば、関数について考えてみ `ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)` ます。
 ドキュメントコメントは、との解釈方法や、関数の用途を理解するのに役立ち `bits` `oracle` ます。
-これらのさまざまな情報は、ドキュメントコメント内の特別に名前が付けられた Markdown セクションによって、Q # コンパイラに提供できます。
+これらのさまざまな情報は、 Q# ドキュメントコメント内の特別に名前が付けられた Markdown セクションによってコンパイラに提供されます。
 の例では `ControlledOnBitString` 、次のようなコードを記述することがあります。
 
 ```qsharp
@@ -139,7 +142,7 @@ API 参照の向上を促進するために、ドキュメントに記載され�
 
 ドキュメント作成の一般的なプラクティスに加えて、API ドキュメントのコメントを記述する際には、次の点に注意してください。
 
-- 各ドキュメントコメントの形式は、Q # コンパイラがドキュメントを正しく表示するために必要なものと一致させる必要があります。 一部のセクション (自由形式のコンテンツを許可するなど) では、セクションなどのセクションの `/// # Remarks` `/// # See Also` 方が制限されています。
+- 各ドキュメントコメントの形式は、 Q# ドキュメントが正しく表示されるためにコンパイラが期待するものと一致する必要があります。 一部のセクション (自由形式のコンテンツを許可するなど) では、セクションなどのセクションの `/// # Remarks` `/// # See Also` 方が制限されています。
 - リーダーは、メインの API 参照サイトで API ドキュメントを読み取ることができます。また、各名前空間の概要についても、ホバー情報を使用して IDE 内からも読み取ることができます。 が `/// # Summary` 文の長さを超えていないことを確認すると、リーダーは、さらに読む必要があるか、他の場所を探す必要があるかをすばやく確認でき、名前空間の概要をすばやくスキャンするのに役立ちます。
 - ドキュメントはコード自体よりもかなり長くなる可能性がありますが、これで問題はありません。 コードの小さな部分でも、そのコードが存在するコンテキストがわからないユーザーには予期しない影響が生じる可能性があります。 具体的な例を提供し、説明を明確にすることで、ユーザーが使用できるコードを最適に使用できるようになります。
 

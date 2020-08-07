@@ -6,12 +6,15 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436532"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868629"
 ---
 # <a name="quantum-characterization-and-statistics"></a>クォンタムの特性と統計 #
 
@@ -19,7 +22,7 @@ ms.locfileid: "87436532"
 これは、クォンタムシステムのすべての測定値が1ビットの情報を生成するため、困難です。
 このような概念を表すために必要な多くの情報をユーザーが収集できるように、1つのクォンタム状態だけを使用して、eigenvalue を学習するには、多くの測定の結果を合成する必要があります。
 クォンタムの状態は特に厄介です。これは、[複製なしの定理](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem)は、状態のコピーを作成できるようにするため、状態の1つのコピーから任意のクォンタム状態を学習する方法がないことを示すためです。
-ユーザーからのクォンタム状態のこのような難読化は、Q # がプログラムを量子*化するか*どうかの状態を公開しないという事実に反映されています。
+ユーザーからのクォンタム状態のこの難読化は、" Q# クォンタムプログラム" に対して状態を公開したり定義*is*したりしないという事実に反映されます。
 このため、操作と状態を黒色のボックスとして扱うことによって、クォンタムの特性を解決します。このアプローチは、クォンタムの特性、検証、検証 (QCVV) の実験的プラクティスによく似ています。
 
 特性は、前に説明した他の多くのライブラリとは異なります。
@@ -36,7 +39,7 @@ ms.locfileid: "87436532"
 以下の各方法では、実験を設計するためのさまざまな戦略と、フェーズを学習するためのさまざまなデータ処理方法を使用します。  各ユーザーには、厳密なエラーの範囲、前の情報の組み込み、エラーの許容、メモリ limitted の古典コンピューターでの実行など、それぞれ固有の利点があります。
 
 反復的なフェーズの推定については、ブラックボックスの操作として指定された $U $ のユニタリが考慮されます。
-[データ構造](xref:microsoft.quantum.libraries.data-structures)の oracles に関するセクションで説明されているように、Q # キャノンは、 <xref:microsoft.quantum.oracles.discreteoracle> タプル型によって定義されたユーザー定義型による演算を実行し `((Int, Qubit[]) => Unit : Adjoint, Controlled)` ます。
+[データ構造](xref:microsoft.quantum.libraries.data-structures)の oracles に関するセクションで説明したように、キャノンのモデルは、 Q# ユーザー定義型によって、 <xref:microsoft.quantum.oracles.discreteoracle> タプル型によって定義された演算を実行し `((Int, Qubit[]) => Unit : Adjoint, Controlled)` ます。
 の場合、具体的に、の場合は `U : DiscreteOracle` `U(m)` $U ^ m $ を実装し `m : Int` ます。
 
 この定義では、反復フェーズの推定の各手順は、$ \ket{+} $ 状態の補助 qubit と初期状態 $ \ket{\phi} $ を準備しています。これは、$U [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) (m) $、つまり $U (m) \ket{\phi} = e ^ {im/phi} \ k {\ phi} $ と想定されています。  
@@ -47,7 +50,7 @@ ms.locfileid: "87436532"
 
 この時点で、 `Result` 反復フェーズ推定によって取得された値からフェーズを再構築することは、従来の統計的な推論の問題です。
 修正された推論方法で得られた情報を最大限に活用する $m $ の値は、単に統計の問題です。
-この問題を解決するために、Q # キャノンで提供される統計アルゴリズムの説明に進む前に、ベイジアンパラメーターの推定形式の理論レベルで反復フェーズ推定を簡単に説明します。
+この問題を解決するために、キャノンで提供される統計アルゴリズムの説明に進む前に、ベイジアンパラメーターの推定形式の理論レベルで反復フェーズ推定を簡単に説明しました Q# 。
 
 ### <a name="iterative-phase-estimation-without-eigenstates"></a>Eigenstates のない反復フェーズ推定 ###
 
@@ -127,7 +130,7 @@ $H $ の eigenstate $ \ket{\phi} $ ($H \ket{\phi} = \ phi \ket{\phi} $ は、す
 
 ### <a name="random-walk-phase-estimation"></a>ランダムウォークフェーズの推定 ###
 
-Q # では、反復フェーズ推定から取得されたデータレコードに対してランダムウォークを使用して動作するクォンタムデバイスの近くに使用するように設計された、ベイジアンフェーズ推定についての実用的な概算を提供しています。
+Q#では、反復フェーズ推定から取得したデータレコードに対してランダムなウォークを行うことによって動作するクォンタムデバイスの近くに使用するように設計された、ベイジアンフェーズ推定についての実用的な概算を提供しています。
 このメソッドは、アダプティブで完全に決定的であり、メモリオーバーヘッドが非常に少ない推定フェーズ $ \hat{\phi} $ でのエラーのほぼ最適化されたスケーリングを可能にします。
 
 このプロトコルでは、前の分布がガウスであることを前提として、おおよそのベイジアン推論方法が使用されます。
@@ -141,7 +144,7 @@ Q # では、反復フェーズ推定から取得されたデータレコード�
 
 ## <a name="calling-phase-estimation-algorithms"></a>フェーズ推定アルゴリズムの呼び出し ##
 
-Q # キャノンによって提供される各フェーズの推定操作では、最終的な推定値 $ \hat{\phi} $ から得られる品質をパラメーター化します。
+キャノンによって提供される各フェーズの推定操作では、 Q# 最終的な推定値 $ \hat{\phi} $ から得られる品質をパラメーター化します。
 ただし、これらのさまざまな入力では、複数の入力が共通に共有されるため、品質パラメーターに対する部分的なアプリケーションによって共通のシグネチャが生成されます。
 たとえば、次の <xref:microsoft.quantum.characterization.robustphaseestimation> セクションで説明する操作には次のシグネチャがあります。
 

@@ -1,27 +1,30 @@
 ---
 title: クォンタムリソースの推定-Quantum 開発キット
-description: 'Microsoft QDK リソースの推定機能について説明します。この推定値は、クォンタムコンピューターで Q # 操作の特定のインスタンスを実行するために必要なリソースを見積もります。'
+description: クォンタムコンピューターで特定の操作のインスタンスを実行するために必要なリソースを推定する、Microsoft QDK リソースの推定機能について説明し Q# ます。
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 0909a050e89d6295664e54ab63cfda5d407a8f12
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: d5338eb740716d9d7f408703347f572688bbccb2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870544"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868187"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Quantum Development Kit (QDK) リソースの推定機能
 
-名前が示すように、 `ResourcesEstimator` クラスは、クォンタムコンピューターで Q # 操作の特定のインスタンスを実行するために必要なリソースを見積もります。 これを実現するには、実際にクォンタムコンピューターの状態をシミュレートせずに、クォンタム操作を実行します。このため、コードの古典的な部分が適切な時間内に実行されていれば、数千個の qubits を使用する Q # 操作のリソースを推定します。
+名前が示すように、 `ResourcesEstimator` クラスは、クォンタムコンピューターで特定の操作のインスタンスを実行するために必要なリソースを見積もり Q# ます。 これを実現するには、実際にクォンタムコンピューターの状態をシミュレートせずに、クォンタム操作を実行します。このため、 Q# コードの古典的な部分が適切な時間内に実行されていれば、何千もの qubits を使用する操作のリソースを推定します。
 
-リソースの推定機能は、[シミュレータートレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の上に構築されています。これは、Q # プログラムのデバッグを支援するための豊富なメトリックとツールのセットを提供します。
+リソースの推定機能は、プログラムのデバッグを支援するための豊富なメトリックとツールのセットを提供する、 [Quantum トレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の上に構築されてい Q# ます。
 
 ## <a name="invoking-and-running-the-resources-estimator"></a>リソースの推定機能の呼び出しと実行
 
-リソースの推定機能を使用して、任意の Q # 操作を実行できます。 詳細については、「 [Q # プログラムを実行する方法](xref:microsoft.quantum.guide.host-programs)」を参照してください。
+リソースの推定機能を使用して、任意の操作を実行でき Q# ます。 詳細については、「 [ Q# プログラムを実行する方法](xref:microsoft.quantum.guide.host-programs)」を参照してください。
 
 ### <a name="invoking-the-resources-estimator-from-c"></a>C からリソースの推定を呼び出す# 
 
@@ -66,7 +69,7 @@ BorrowedWidth   0
 
 ### <a name="invoking-the-resources-estimator-from-python"></a>Python からリソースの推定機能を呼び出す
 
-インポートされた Q # 操作で、Python ライブラリの[estimate_resources ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable)メソッドを使用します。
+インポートされた操作で、Python ライブラリの[estimate_resources ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable)メソッドを使用し Q# ます。
 
 ```python
 qubit_result = myOperation.estimate_resources()
@@ -74,7 +77,7 @@ qubit_result = myOperation.estimate_resources()
 
 ### <a name="invoking-the-resources-estimator-from-the-command-line"></a>コマンドラインからリソースの推定機能を呼び出す
 
-コマンドラインから Q # プログラムを実行する場合は、 **--シミュレーター** (または **-s**ショートカット) パラメーターを使用して、対象のコンピューターを指定し `ResourcesEstimator` ます。 次のコマンドは、リソースの推定機能を使用してプログラムを実行します。 
+コマンドラインからプログラムを実行する場合は、 Q# **--シミュレーター** (または **-s**ショートカット) パラメーターを使用して、対象のコンピューターを指定し `ResourcesEstimator` ます。 次のコマンドは、リソースの推定機能を使用してプログラムを実行します。 
 
 ```dotnetcli
 dotnet run -s ResourcesEstimator
@@ -82,7 +85,7 @@ dotnet run -s ResourcesEstimator
 
 ### <a name="invoking-the-resources-estimator-from-juptyer-notebooks"></a>Juptyer Notebook からリソースの推定機能を呼び出す
 
-"IQ # マジック command [% 推定](xref:microsoft.quantum.iqsharp.magic-ref.simulate)" を使用して、Q # 操作を実行します。
+この Q# 操作を実行するには、I マジック command [% 推定](xref:microsoft.quantum.iqsharp.magic-ref.simulate)を使用し Q# ます。
 
 ```
 %estimate myOperation
@@ -92,7 +95,7 @@ dotnet run -s ResourcesEstimator
 
 TSV テーブルに加えて、リソースの推定機能のプロパティを使用して、実行中に推定されるリソースをプログラムで取得することができ `Data` ます。 プロパティは、 `Data` `System.DataTable` とという2つの列を持つインスタンスを提供します。これは `Metric` `Sum` 、メトリックの名前によってインデックス化されます。
 
-次のコードは `QubitClifford` 、 `T` `CNOT` Q # 操作によって使用される、、および操作の合計数を取得して印刷する方法を示しています。
+次のコードは `QubitClifford` 、 `T` 操作に `CNOT` よって使用される、、および操作の合計数を取得して印刷する方法を示してい Q# ます。
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -127,9 +130,9 @@ namespace Quantum.MyProgram
 |__測定値__    |測定の実行回数。  |
 |__R__    |`T`、Clifford、および P# li の各操作を除く、任意の1つの qubit 回転の実行回数。  |
 |__T__    |操作の実行回数 `T` とその活用 ( `T` 操作、T_x = h. t .h、T_y = Hy. t. hy など)。  |
-|__[奥行]__|Q # 操作によって実行されるクォンタム回線の深さの下限。 既定では、深さメトリックはゲートだけをカウントし `T` ます。 詳細については、「[深度カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)」を参照してください。   |
-|__Width__    |Q # 操作の実行中に割り当てられた qubits の最大数の下限。 __深さ__と__幅__の両方の下限を同時に達成できない可能性があります。  |
-|__BorrowedWidth__    |Q # 操作内で借用された qubits の最大数。  |
+|__[奥行]__|操作によって実行されるクォンタム回線の深さの下限。 Q# 既定では、深さメトリックはゲートだけをカウントし `T` ます。 詳細については、「[深度カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)」を参照してください。   |
+|__Width__    |操作の実行中に割り当てられた qubits の最大数の下限 Q# 。 __深さ__と__幅__の両方の下限を同時に達成できない可能性があります。  |
+|__BorrowedWidth__    |操作内で借用される qubits の最大数 Q# 。  |
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>測定結果の確率を指定する
 

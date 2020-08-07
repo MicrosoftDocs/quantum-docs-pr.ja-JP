@@ -1,21 +1,24 @@
 ---
-title: Q# でグローバーの検索アルゴリズムを実行する - Quantum 開発キット
-description: 正規の量子アルゴリズムの 1 つであるグローバーのアルゴリズムを示す Q# プロジェクトを構築します。
+title: 量子開発キットで Grover の検索アルゴリズムを実行する Q#
+description: Q#標準のクォンタムアルゴリズムの1つである Grover のアルゴリズムを示すプロジェクトをビルドします。
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 9e4c53b4d5159cf07f0654603c1d477ad09eb7c6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 5c23d71209eb484a510f102e8b581ba4ec21829a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275271"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869666"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>チュートリアル:Q\# でグローバーの検索アルゴリズムを実装する
 
-このチュートリアルでは、グローバーの検索を構築して実行し、非構造化データの検索速度を上げる方法について学習できます。  グローバーの検索は、最も人気がある量子コンピューティング アルゴリズムの 1 つであり、この比較的小規模な Q# 実装で、量子ソリューションをプログラミングすることの利点のいくつかと、量子アルゴリズムを表わす Q# 量子プログラミング言語の概要が理解できます。  このガイドの最後に、シミュレーションの出力があります。そこでは、従来のコンピューターでリスト全体を検索するのにかかる時間に比べてほんのわずかな時間で、順序付けられていないエントリのリストから特定の文字列の検索に成功することを確認できます。
+このチュートリアルでは、グローバーの検索を構築して実行し、非構造化データの検索速度を上げる方法について学習できます。  Grover の検索は最も一般的なクォンタムコンピューティングアルゴリズムの1つであり、この比較的小規模な実装では、クォンタム Q# Q# アルゴリズムを表現するために、高レベルのクォンタムプログラミング言語でクォンタムソリューションをプログラミングする利点の一部を示しています。  このガイドの最後に、シミュレーションの出力があります。そこでは、従来のコンピューターでリスト全体を検索するのにかかる時間に比べてほんのわずかな時間で、順序付けられていないエントリのリストから特定の文字列の検索に成功することを確認できます。
 
 グローバーのアルゴリズムでは、特定の項目の非構造化データのリストが検索されます。 たとえば、次のような質問に回答できます。一組のトランプから引いたこのカードは、ハートのエースですか? 特定の項目のラベル付けは、"_マークされた入力_" と呼ばれます。
 
@@ -39,7 +42,7 @@ ms.locfileid: "85275271"
 
 ## <a name="write-the-code"></a>コードを作成する
 
-1. Quantum Development Kit を使用して、[コマンド ライン アプリケーション用の新しい Q# プロジェクトを作成](xref:microsoft.quantum.install.standalone)します。 プロジェクトに `Grover` というタイトルを付けます。
+1. Quantum Development Kit を使用して、 [ Q# コマンドラインアプリケーション用の新しいプロジェクトを作成](xref:microsoft.quantum.install.standalone)します。 プロジェクトに `Grover` というタイトルを付けます。
 
 1. 新しいプロジェクトで次のコードを `Program.qs` ファイルに追加します。
 
@@ -51,9 +54,9 @@ ms.locfileid: "85275271"
 
     `ReflectAboutMarked` 操作では、検索対象としてマークが付けられた入力を定義します。これは、0 と 1 の交互の文字列です。 このサンプルにより、マークされた入力はハードコードされます。サンプルは他の入力を検索するために拡張したり、任意の入力用に一般化したりできます。
 
-1. 次に、新しい Q# プログラムを実行して、`ReflectAboutMarked` によってマークされた項目を検索します。
+1. 次に、新しいプログラムを実行し Q# て、でマークされた項目を検索し `ReflectAboutMarked` ます。
 
-### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Visual Studio または Visual Studio Code を使用する Q# コマンド ライン アプリケーション
+### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Q#Visual Studio または Visual Studio Code を使用したコマンドラインアプリケーション
 
 実行可能ファイルは、プロジェクトの構成とコマンドライン オプションに応じて、シミュレーターまたはリソース推定機能で `@EntryPoint()` 属性でマークされた操作または関数を実行します。
 
@@ -104,7 +107,7 @@ Reflecting about marked state...
 
 ## <a name="next-steps"></a>次のステップ
 
-チュートリアルをお読みいただきありがとうございます。Q# を使用して独自の量子アプリケーションを記述する方法の詳細について、次のリソースもご覧ください。
+このチュートリアルを楽しんでいる場合は、以下のリソースを参照して、を使用して Q# 独自の quantum アプリケーションを作成する方法を確認してください。
 
 - [QDK 入門ガイドに戻る](xref:microsoft.quantum.welcome)
 - より一般的なグローバーの検索アルゴリズムの[サンプル](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)を試す

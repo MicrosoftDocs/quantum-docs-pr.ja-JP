@@ -1,17 +1,20 @@
 ---
-title: 'Microsoft Q # 数値ライブラリの使用'
+title: Microsoft Q# 数値ライブラリの使用
 description: Microsoft Quantum の数値ライブラリで使用できる型と操作について説明します。
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: 10d5675e0ef182211a38db4d09347b05afe109c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 474fc74b9c92fbf28c0618a3090905d025699d32
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276123"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868799"
 ---
 # <a name="using-the-numerics-library"></a>数値ライブラリの使用
 
@@ -64,7 +67,7 @@ open Microsoft.Quantum.Arithmetic;
     - 逆数 (1/x)
     - 測定 (古典 Double)
 
-これらの各操作の詳細と詳細なドキュメントについては、 [docs.microsoft.com](https://docs.microsoft.com/quantum)の Q # ライブラリリファレンスドキュメントを参照してください。
+これらの各操作の詳細と詳細なドキュメントについては、 Q# [docs.microsoft.com](https://docs.microsoft.com/quantum)のライブラリリファレンスドキュメントを参照してください。
 
 ## <a name="sample-integer-addition"></a>サンプル: 整数加算
 
@@ -99,7 +102,7 @@ EvaluatePolynomialFxP([1.0, 2.0], x, y);
 結果として $P (x) = 1 + 2x $ がに格納され `yFxP` ます。
 
 2番目の、 `EvaluateEvenPolynomialFxP` 、および3番目のは、 `EvaluateOddPolynomialFxP` それぞれ偶数と奇数の関数の場合に特殊化されています。 つまり、偶数/奇数関数 $f (x) $ および $ $ P_ {偶数} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \ cドット + a_d x ^ {2d}, $ $ $f (x) $ は、_ {偶数} (x) $ または $P _ {奇数} (x): = xcdot P_ {偶数} (x) $ の $P によって、近似されます。
-Q # では、次の2つのケースを処理できます。
+では、次の Q# 2 つのケースを処理できます。
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```

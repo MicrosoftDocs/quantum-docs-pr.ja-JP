@@ -1,25 +1,28 @@
 ---
 title: 完全な状態の量子シミュレーター-Quantum 開発キット
-description: 'Microsoft Quantum Development Kit 完全な状態シミュレーターで Q # プログラムを実行する方法について説明します。'
+description: Q#Microsoft Quantum Development Kit 完全な状態シミュレーターでプログラムを実行する方法について説明します。
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
-ms.openlocfilehash: 563fdbd2a45461d112e4c46651eddd75c6fc3db2
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b15af66123dadae09815cde1966c69b3ce2e9e64
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871180"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868340"
 ---
 # <a name="quantum-development-kit-qdk-full-state-simulator"></a>Quantum 開発キット (QDK) 完全な状態シミュレーター
 
-QDK には、ローカルコンピューター上のクォンタムコンピューターをシミュレートする完全な状態シミュレーターが用意されています。 完全な状態シミュレーターを使用して、Q # で記述されたクォンタムアルゴリズムを実行およびデバッグし、最大30個の qubits を利用することができます。 完全な状態シミュレーターは、Microsoft Research の[Liq $ Ui | \rangle $](http://stationq.github.io/Liquid/)プラットフォームで使用されるクォンタムシミュレーターに似ています。
+QDK には、ローカルコンピューター上のクォンタムコンピューターをシミュレートする完全な状態シミュレーターが用意されています。 完全な状態シミュレーターを使用して、で記述されたクォンタムアルゴリズムを実行およびデバッグし Q# 、最大30個の qubits を利用できます。 完全な状態シミュレーターは、Microsoft Research の[Liq $ Ui | \rangle $](http://stationq.github.io/Liquid/)プラットフォームで使用されるクォンタムシミュレーターに似ています。
 
 ## <a name="invoking-and-running-the-full-state-simulator"></a>完全な状態シミュレーターを起動して実行する
 
-完全な状態シミュレーターはクラスを使用して公開し `QuantumSimulator` ます。 詳細については、「 [Q # プログラムを実行する方法](xref:microsoft.quantum.guide.host-programs)」を参照してください。
+完全な状態シミュレーターはクラスを使用して公開し `QuantumSimulator` ます。 詳細については、「 [ Q# プログラムを実行する方法](xref:microsoft.quantum.guide.host-programs)」を参照してください。
 
 ### <a name="invoking-the-simulator-from-c"></a>C からシミュレーターを呼び出す#
 
@@ -36,7 +39,7 @@ QDK には、ローカルコンピューター上のクォンタムコンピュ�
 
 ### <a name="invoking-the-simulator-from-python"></a>Python からシミュレーターを呼び出す
 
-Q # Python ライブラリの[シミュレート ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable)メソッドを、インポートされた q # 操作と共に使用します。
+インポートされた操作で、Python ライブラリの[シミュレート ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable)メソッドを使用し Q# Q# ます。
 
 ```python
 qubit_result = myOperation.simulate()
@@ -44,7 +47,7 @@ qubit_result = myOperation.simulate()
 
 ### <a name="invoking-the-simulator-from-the-command-line"></a>コマンドラインからシミュレーターを呼び出す
 
-コマンドラインから Q # プログラムを実行すると、完全な状態シミュレーターが既定のターゲットコンピューターになります。 必要に応じて、 **--シミュレーター** (または **-s**ショートカット) パラメーターを使用して、目的のターゲットコンピューターを指定できます。 次のコマンドはいずれも、完全な状態シミュレーターを使用してプログラムを実行します。 
+コマンドラインからプログラムを実行すると、 Q# 完全な状態シミュレーターが既定のターゲットコンピューターになります。 必要に応じて、 **--シミュレーター** (または **-s**ショートカット) パラメーターを使用して、目的のターゲットコンピューターを指定できます。 次のコマンドはいずれも、完全な状態シミュレーターを使用してプログラムを実行します。 
 
 ```dotnetcli
 dotnet run
@@ -53,7 +56,7 @@ dotnet run -s QuantumSimulator
 
 ### <a name="invoking-the-simulator-from-juptyer-notebooks"></a>Juptyer Notebook からシミュレーターを呼び出す
 
-"IQ # マジック command [% シミュレート](xref:microsoft.quantum.iqsharp.magic-ref.simulate)" を使用して Q # 操作を実行します。
+この Q# 操作を実行するには、I マジックコマンド[% シミュレート](xref:microsoft.quantum.iqsharp.magic-ref.simulate)を使用し Q# ます。
 
 ```
 %simulate myOperation

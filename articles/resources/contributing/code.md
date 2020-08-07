@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 956b0957a5261b8a77bf18d776fbcc2853bfbfe7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275480"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866911"
 ---
 # <a name="contributing-code"></a>コードの投稿
 
@@ -28,10 +31,10 @@ ms.locfileid: "85275480"
 
 ### <a name="unit-tests"></a>単体テスト
 
-キャノンなどのライブラリを構成する Q # 関数、操作、およびユーザー定義型は、 [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/)リポジトリでの開発の一部として自動的にテストされます。
+キャノンなどの Q# ライブラリを構成する関数、操作、およびユーザー定義型は、 [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/)リポジトリでの開発の一部として自動的にテストされます。
 たとえば、新しいプル要求が開かれたときに、 [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/)構成によって、クォンタムプログラミングコミュニティが依存している既存の機能が、プル要求の変更によって中断されていないことが確認されます。
 
-最新の Q # バージョンでは、属性を使用して単体テストが定義され `@Test("QuantumSimulator")` ます。 引数には、"QuantumSimulator"、"ToffoliSimulator"、"TraceSimulator"、または実行ターゲットを指定する完全修飾名のいずれかを指定できます。 さまざまな実行ターゲットを定義するいくつかの属性が、同じ呼び出し可能にアタッチされる場合があります。 一部のテストでは、 [Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) `Test` [xunit](https://xunit.github.io/)フレームワークに含まれるすべての Q # 関数と操作を公開する、非推奨の Microsoft Quantum パッケージが使用されています。 単体テストを定義するために、このパッケージは不要になりました。 
+最新バージョンでは、 Q# 属性を使用して単体テストが定義され `@Test("QuantumSimulator")` ます。 引数には、"QuantumSimulator"、"ToffoliSimulator"、"TraceSimulator"、または実行ターゲットを指定する完全修飾名のいずれかを指定できます。 さまざまな実行ターゲットを定義するいくつかの属性が、同じ呼び出し可能にアタッチされる場合があります。 一部のテストでは、で終了[Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/)したすべて Q# の関数と操作を `Test` [xunit](https://xunit.github.io/)フレームワークに公開する、非推奨の Microsoft Quantum パッケージが引き続き使用されます。 単体テストを定義するために、このパッケージは不要になりました。 
 
 次の関数は、 <xref:microsoft.quantum.canon.fst> <xref:microsoft.quantum.canon.snd> 関数と関数が両方とも代表的な例で正しい出力を返すようにするために使用されます。
 またはの出力が正しくない場合は、ステートメントを使用して `Fst` `Snd` テストが `fail` 失敗します。
@@ -92,20 +95,20 @@ operation TestApplyWith() : Unit {
 これは、サードパーティ製のライブラリとして機能をリリースすることによって、非常に意味があります。
 または、機能を変更して、最適な作業を行うことができるように、ロードマップに適合するように、機能を変更することをお勧めします。
 
-また、プル要求を使用するのに役立つドキュメントや単体テストが必要な場合、または、ユーザーが機能を見つけるのが困難になるように、他の Q # ライブラリのスタイルとして十分に異なっている場合にも、プル要求の変更を要求します。
+また、プル要求を使用するのに役立つドキュメントや単体テストが必要な場合、または、 Q# ユーザーが機能を見つけづらくなることを防ぐために、他のライブラリとは異なるスタイルの変更が必要な場合にも、プル要求の変更を要求します。
 このような場合は、投稿を容易にするために追加または変更できるものについて、コードレビューでアドバイスを提供します。
 
 最後に、 [Microsoft オープンソース](https://opensource.microsoft.com/codeofconduct/)倫理規定に記載されているように、クォンタムコンピューティングコミュニティに悪影響を及ぼす投稿を受け入れることはできません。
 私たちは、現在のすばらしい多様性の中でも、今後もさらに包括的になるように、共同作業がクォンタムコンピューティングコミュニティ全体に提供されるようにしたいと考えています。
 この目標を達成するための支援を歓迎します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Quantum 開発キットを利用して、quantum プログラミングコミュニティ全体にとって優れたリソースを作成しようとしていただき、誠にありがとうございます。
-詳細については、Q # のスタイルに関する次のガイドを参照してください。
+詳細については、次のスタイルに関するガイドを参照してください Q# 。
 
 > [!div class="nextstepaction"]
-> [Q # スタイルのガイドラインについて学習する](xref:microsoft.quantum.contributing.style)
+> [スタイルのガイドラインについて学習する Q#](xref:microsoft.quantum.contributing.style)
 
 投稿しようとしているコードの種類によっては、投稿を可能な限りコミュニティにとって優れたものにするために役立つ場合があります。
 

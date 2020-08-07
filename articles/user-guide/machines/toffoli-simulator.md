@@ -6,12 +6,15 @@ ms.author: ageller@microsoft.com
 ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
-ms.openlocfilehash: a6ceee592e628215511ec83475d9e25bf54674f7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8a981645703423856e667be7c3dccf5270a5885f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870619"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868102"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Quantum 開発キット (QDK) Toffoli シミュレーター
 
@@ -21,7 +24,7 @@ Toffoli シミュレーターは、[完全な状態シミュレーター](xref:m
 
 ## <a name="invoking-the-toffoli-simulator"></a>Toffoli シミュレーターの呼び出し
 
-クラスを使用して Toffoli シミュレーターを公開し `ToffoliSimulator` ます。 詳細については、「 [Q # プログラムを実行する方法](xref:microsoft.quantum.guide.host-programs)」を参照してください。
+クラスを使用して Toffoli シミュレーターを公開し `ToffoliSimulator` ます。 詳細については、「 [ Q# プログラムを実行する方法](xref:microsoft.quantum.guide.host-programs)」を参照してください。
 
 ### <a name="invoking-the-toffoli-simulator-from-c"></a>C から Toffoli シミュレーターを呼び出す#
 
@@ -37,7 +40,7 @@ Toffoli シミュレーターは、[完全な状態シミュレーター](xref:m
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a>Python から Toffoli シミュレーターを呼び出す
 
-インポートされた Q # 操作で、Python ライブラリの[toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable)メソッドを使用します。
+インポートされた操作で、Python ライブラリの[toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable)メソッドを使用し Q# ます。
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -45,7 +48,7 @@ qubit_result = myOperation.toffoli_simulate()
 
 ### <a name="invoking-the-toffoli-simulator-from-the-command-line"></a>コマンドラインからの Toffoli シミュレーターの呼び出し
 
-コマンドラインから Q # プログラムを実行する場合は、 **--シミュレーター** (または **-s**ショートカット) パラメーターを使用して、Toffoli シミュレーターターゲットコンピューターを指定します。 次のコマンドは、リソースの推定機能を使用してプログラムを実行します。 
+コマンドラインからプログラムを実行する場合は、 Q# **--シミュレーター** (または **-s**ショートカット) パラメーターを使用して、Toffoli シミュレーターターゲットコンピューターを指定します。 次のコマンドは、リソースの推定機能を使用してプログラムを実行します。 
 
 ```dotnetcli
 dotnet run -s ToffoliSimulator
@@ -53,7 +56,7 @@ dotnet run -s ToffoliSimulator
 
 ### <a name="invoking-the-toffoli-simulator-from-juptyer-notebooks"></a>Juptyer Notebook から Toffoli シミュレーターを呼び出す
 
-"IQ # マジック command [% toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) " を使用して Q # 操作を実行します。
+この Q# 操作を実行するには、I マジックコマンド[% toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli)を使用し Q# ます。
 
 ```
 %toffoli myOperation

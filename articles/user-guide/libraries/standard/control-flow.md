@@ -1,22 +1,25 @@
 ---
-title: 'Q # 標準 libararies フロー制御'
-description: 'Microsoft Q # 標準ライブラリのフロー制御操作と関数について説明します。'
+title: Q#標準 libararies フロー制御
+description: Microsoft 標準ライブラリのフロー制御操作と関数について説明し Q# ます。
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: b41b3edd7a3e3ac13dbda106a869f4cba8183600
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275752"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868578"
 ---
 # <a name="higher-order-control-flow"></a>上位制御フロー #
 
 標準ライブラリの主要な役割の1つは、高レベルのアルゴリズムアイデアを[量子プログラム](https://en.wikipedia.org/wiki/Quantum_programming)として簡単に表現できるようにすることです。
-このため、Q # キャノンはさまざまなフロー制御の構成要素を提供しており、それぞれが関数と操作の部分的な適用を使用して実装されています。
+そのため、 Q# キャノンはさまざまなフロー制御の構成要素を提供しており、それぞれが関数と操作の部分的な適用を使用して実装されています。
 すぐに例にジャンプする場合は、レジスタに "CNOT はしご" を構築したいケースを考えてみます。
 
 ```qsharp
@@ -47,7 +50,7 @@ ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 
 キャノンによって提供される主な抽象化の1つは、イテレーションのことです。
 たとえば、という形式の $U、1つの 1 qubit の $U である $ のような形式のユニタリを使用します。
-Q # では、を使用し <xref:microsoft.quantum.arrays.indexrange> て、これをレジスタに対するループとして表すことができ `for` ます。
+では Q# 、を使用し <xref:microsoft.quantum.arrays.indexrange> て、これをレジスタに対するループとして表すことができ `for` ます。
 
 ```qsharp
 /// # Summary
@@ -88,7 +91,7 @@ ApplyToEachCA(Adjoint U, register);
 > 次に `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` 、エラー修正コード `code` と復旧関数 `recoveryFn` を各ブロックに個別に適用します。
 > これは、従来の入力に対しても保持されます。で `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` は、$-pi/$2 の回転が $X $ に対して適用され、$Y $ に関する $pi/$3 の回転が適用されます。
 
-また、Q # キャノンでは、関数型プログラミングに慣れている古典的な列挙パターンもサポートしています。
+また、キャノンでは、 Q# 関数型プログラミングに慣れている古典的な列挙パターンもサポートしています。
 たとえば、は、 <xref:microsoft.quantum.arrays.fold> リストに対して関数を縮小するために、パターン $f (f (s \_ {\ text{\ text{\ text{\ text{\ text{\ text{\ text{\ text{\ text{\ text{/text{\), \_ \_ \ ドット) $) を実装します。
 このパターンを使用すると、合計、製品、最小、最大化、およびその他の機能を実装できます。
 
@@ -100,7 +103,7 @@ function Sum(xs : Int[]) {
 }
 ```
 
-同様に、やなどの関数を <xref:microsoft.quantum.arrays.mapped> 使用して、 <xref:microsoft.quantum.arrays.mappedbyindex> Q # での関数型プログラミングの概念を表現できます。
+同様に、やなどの関数を <xref:microsoft.quantum.arrays.mapped> 使用して、 <xref:microsoft.quantum.arrays.mappedbyindex> の関数型プログラミングの概念を表現でき Q# ます。
 
 ## <a name="composing-operations-and-functions"></a>操作と関数の作成 ##
 
@@ -170,7 +173,7 @@ U(1, time / Float(nSteps), target);
 DecomposeIntoTimeStepsCA((2, U), 1);
 ```
 
-のシグネチャは、 `DecomposeIntoTimeStepsCA` Q # の共通パターンに従います。このパターンは、配列またはその場で計算される要素を使用してサポートされるコレクションで、最初の要素が `Int` 長さを示す値である組によって表されます。
+のシグネチャは `DecomposeIntoTimeStepsCA` 、の一般的なパターンに従います Q# 。ここでは、配列またはその場で計算される要素を使用してサポートされるコレクションは、最初の要素が長さを示す値である組によって表され `Int` ます。
 
 ## <a name="putting-it-together-controlling-operations"></a>まとめ: 操作の制御 ##
 
@@ -215,7 +218,7 @@ $X ^ {\ dagger} = X $ であるため、これは $ \ket{0\dots 0} = X ^ {s \_ 0
 
 この時点では、これで完了ですが、新しい操作では、ファンクタを適用するような "感覚" にならないということがわかりません `Controlled` 。
 このため、oracle を制御し、新しい操作を返す関数を記述することによって、新しい制御フローの概念を定義します。
-このように、新しい関数は、 `Controlled` Q # とキャノンを使用して強力な新しい制御フローコンストラクトを簡単に定義できることを示し、非常によく似ています。
+このように、新しい関数は、 `Controlled` とキャノンを使用して強力な新しい制御フローコンストラクトを簡単に定義できることを示してい Q# ます。
 
 ```qsharp
 function ControlledOnBitString(

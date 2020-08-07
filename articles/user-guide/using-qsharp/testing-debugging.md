@@ -6,30 +6,33 @@ ms.author: mamykhai@microsoft.com
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: db6e49e94e5ceb3b1b0b2d6ab57391618084072b
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 2b5276da594ba263177d435c1153f6d96e29c4e8
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870976"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867915"
 ---
 # <a name="testing-and-debugging"></a>テストとデバッグ
 
 従来のプログラミングと同様に、クォンタムプログラムが意図したとおりに動作することを確認し、正しくない動作を診断できるようにすることが不可欠です。
-このセクションでは、クォンタムプログラムをテストおよびデバッグするための Q # によって提供されるツールについて説明します。
+このセクションでは、 Q# クォンタムプログラムをテストおよびデバッグするためにに用意されているツールについて説明します。
 
 ## <a name="unit-tests"></a>単体テスト
 
 従来のプログラムをテストする一般的な方法の1つは、*単体テスト*と呼ばれる小さなプログラムを作成することです。これにより、ライブラリでコードを実行し、出力を予想される出力と比較します。
 たとえば、 `Square(2)` `4` $ 2 ^ 2 = $4 の*priori*がわかっているため、がを返すようにすることができます。
 
-Q # は、クォンタムプログラムの単体テストの作成をサポートしています。これは、 [Xunit](https://xunit.github.io/)単体テストフレームワーク内でテストとして実行できます。
+Q#は、クォンタムプログラムの単体テストの作成をサポートしています。これは、 [Xunit](https://xunit.github.io/)単体テストフレームワーク内でテストとして実行できます。
 
 ### <a name="creating-a-test-project"></a>テストプロジェクトの作成
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Visual Studio 2019 を開きます。 [**ファイル**] メニューにアクセスし、[**新しい > プロジェクト**] を選択します。右上隅で `Q#` 、 **Q # Test プロジェクト**テンプレートを検索して選択します。
+Visual Studio 2019 を開きます。 [**ファイル**] メニューにアクセスし、[**新しい > プロジェクト**] を選択します。右上隅にあるを検索し、 `Q#` ** Q# テストプロジェクト**テンプレートを選択します。
 
 #### <a name="command-line--visual-studio-code"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
 
@@ -42,7 +45,7 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-新しいプロジェクトには、 `Tests.qs` 新しい Q # の単体テストを定義するための便利な場所を提供する1つのファイルがあります。
+新しいプロジェクトには `Tests.qs` 、新しい単体テストを定義するための便利な場所を提供する1つのファイルがあり Q# ます。
 初期状態では、このファイルに `AllocateQubit` は、新しく割り当てられた qubit が $ \ket $ 状態であることを確認し、メッセージを出力するサンプル単体テストが1つ含まれてい {0} ます。
 
 ```qsharp
@@ -57,7 +60,7 @@ $ code . # To open in Visual Studio Code
     }
 ```
 
-型と戻り値の引数を受け取るすべての Q # 操作または関数は `Unit` `Unit` 、属性を使用して単体テストとしてマークでき `@Test("...")` ます。 前の例では、その属性の引数が、 `"QuantumSimulator"` テストを実行するターゲットを指定しています。 1つのテストを複数のターゲットで実行できます。 たとえば、の前に属性を追加し `@Test("ResourcesEstimator")` `AllocateQubit` ます。 
+Q#型の引数を受け取り、を返すすべての操作または関数は `Unit` `Unit` 、属性を使用して単体テストとしてマークでき `@Test("...")` ます。 前の例では、その属性の引数が、 `"QuantumSimulator"` テストを実行するターゲットを指定しています。 1つのテストを複数のターゲットで実行できます。 たとえば、の前に属性を追加し `@Test("ResourcesEstimator")` `AllocateQubit` ます。 
 ```qsharp
     @Test("QuantumSimulator")
     @Test("ResourcesEstimator")
@@ -66,9 +69,9 @@ $ code . # To open in Visual Studio Code
 ```
 ファイルを保存し、すべてのテストを実行します。 ここで、2つの単体テストがあります。1つはで実行され、もう1つは `AllocateQubit` `QuantumSimulator` で実行さ `ResourcesEstimator` れます。 
 
-Q # コンパイラは、組み込みのターゲット、 `"QuantumSimulator"` `"ToffoliSimulator"` 、および `"ResourcesEstimator"` 単体テストの有効な実行ターゲットを認識します。 また、任意の完全修飾名を指定して、カスタム実行ターゲットを定義することもできます。 
+コンパイラは、 Q# 組み込みのターゲット、、を、 `"QuantumSimulator"` `"ToffoliSimulator"` `"ResourcesEstimator"` 単体テストの有効な実行ターゲットとして認識します。 また、任意の完全修飾名を指定して、カスタム実行ターゲットを定義することもできます。 
 
-### <a name="running-q-unit-tests"></a>Q # の単体テストの実行
+### <a name="running-no-locq-unit-tests"></a>Q#単体テストの実行
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
@@ -137,9 +140,9 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 ## <a name="facts-and-assertions"></a>ファクトとアサーション
 
-Q # の関数には_論理的_な副作用がないため、q # プログラム内から、出力の種類が空のタプルである関数を実行した場合は、他の種類の効果を確認することはできません `()` 。
-つまり、ターゲットコンピューターは、この省略によって `()` 次の Q # コードの動作が変更されないことを保証して、が返す関数を実行しないことを選択できます。
-この動作により `()` `Unit` 、アサーションを埋め込むための便利なツールや、Q # プログラムにロジックをデバッグするための関数が返されます。 
+の関数には Q# _論理的_な副作用がないため、プログラム内から、 Q# 出力の種類が空のタプルである関数の実行によって他の種類の影響が発生しないようにすることはできません `()` 。
+つまり、ターゲットコンピューターは、この省略によって `()` 次のコードの動作が変更されないことを保証して、が返す関数を実行しないことを選択でき Q# ます。
+この動作により `()` 、関数 (など `Unit` ) が、アサーションの埋め込みとプログラムへのデバッグロジックに便利なツールとして返さ Q# れます。 
 
 単純な例を考えてみましょう。
 
@@ -153,8 +156,8 @@ function PositivityFact(value : Double) : Unit
 }
 ```
 
-ここで、キーワードは、 `fail` 計算が続行されないことを示し、Q # プログラムを実行しているターゲットコンピューターで例外を発生させます。
-定義上、この種のエラーは、Q # 内では確認できません。これは、ターゲットコンピューターがステートメントに到達した後に Q # コードを実行しなくなったため `fail` です。
+ここで、キーワードは、 `fail` 計算が続行されないことを示し、プログラムを実行しているターゲットコンピューターで例外を発生させ Q# ます。
+定義上、この種のエラーは、 Q# ターゲットコンピューターが Q# ステートメントに到達した後にコードを実行しなくなったため、内からは確認できません `fail` 。
 したがって、への呼び出しを実行した後にを続行すると、入力が肯定的であることが `PositivityFact` 保証されます。
 
 名前空間の関数を使用するのと同じ動作を実装できることに注意して `PositivityFact` [`Fact`](xref:microsoft.quantum.diagnostics.fact) <xref:microsoft.quantum.diagnostics> ください。
@@ -354,7 +357,7 @@ namespace Samples {
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-次の例では、 <xref:microsoft.quantum.diagnostics.dumpregister> Q # コードでとの両方を使用する方法を示してい <xref:microsoft.quantum.diagnostics.dumpmachine> ます。
+次の例は、 <xref:microsoft.quantum.diagnostics.dumpregister> コード内でとの両方を使用する方法を示してい <xref:microsoft.quantum.diagnostics.dumpmachine> Q# ます。
 
 ```qsharp
 namespace app
@@ -381,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a>デバッグ
 
-`Assert`および `Dump` 関数と操作の上で、Q # は標準の Visual Studio デバッグ機能のサブセットをサポートしています。[行ブレークポイントの設定](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)、 [F10 を使用したコードのステップ](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)実行、および[クラシック変数の値の検査](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)は、シミュレーターでのコードの実行中に可能です。
+`Assert`およびの `Dump` 関数と操作の上で、は、 Q# 標準の Visual Studio デバッグ機能のサブセットをサポートしています。[行ブレークポイントの設定](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)、 [F10 を使用したコードのステップ](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)実行、および[クラシック変数の値の検査](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)は、シミュレーターでのコードの実行中に可能です。
 
 Visual Studio Code でのデバッグでは、OmniSharp によって強化された Visual Studio Code 拡張機能のために C# によって提供されるデバッグ機能を利用し、[最新バージョン](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)をインストールする必要があります。 

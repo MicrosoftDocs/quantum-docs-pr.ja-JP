@@ -1,21 +1,24 @@
 ---
 title: 幅カウンター-Quantum 開発キット
-description: 'Microsoft QDK width カウンターについて説明します。これは、クォンタムトレースシミュレーターを使用して、Q # プログラムの操作によって割り当てられた qubits の数をカウントします。'
+description: クォンタムトレースシミュレーターを使用して、プログラム内の操作によって割り当てられた qubits の数をカウントする Microsoft QDK width カウンターについて説明し Q# ます。
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: af8609dc5c05f7a19b8d21755281427feb29b84c
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 02f4937aaccf7bf49d6450355c6b42b273071b2e
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871521"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868204"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>クォンタムトレースシミュレーター: width カウンター
 
-Width カウンターは、Quantum Development Kit[クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の一部です。 これを使用すると、Q # プログラムの各操作によって割り当てられた qubits の数をカウントできます。 プリミティブ操作によっては、追加の qubits を割り当てることができます。たとえば、制御された操作や制御される演算を乗算でき `X` `T` ます。
+Width カウンターは、Quantum Development Kit[クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の一部です。 これを使用すると、プログラムの各操作によって割り当てられた qubits の数をカウントでき Q# ます。 プリミティブ操作によっては、追加の qubits を割り当てることができます。たとえば、制御された操作や制御される演算を乗算でき `X` `T` ます。
 
 ## <a name="invoking-the-width-counter"></a>Width カウンターを呼び出しています
 
@@ -29,7 +32,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-width-counter-in-a-c-host-program"></a>C# ホストプログラムでの width カウンターの使用
 
-このセクションで後述する C# の例では、 <xref:microsoft.quantum.intrinsic.x> 次の Q # サンプルコードに基づいて、乗算制御演算の実装によって割り当てられた追加の qubits の数を計算します。
+このセクションで後述する C# の例では、 <xref:microsoft.quantum.intrinsic.x> 次のサンプルコードに基づいて、乗算制御演算の実装によって割り当てられた追加の qubits の数を計算し Q# ます。
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

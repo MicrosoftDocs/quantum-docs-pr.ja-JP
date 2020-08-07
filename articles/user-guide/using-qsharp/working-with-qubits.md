@@ -6,18 +6,21 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: 1655d18ab9d8638ad356e6fb90994b5c1fd76a25
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 6808a852ee0de7d3a38ea44e9637eeaa6bea382a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885295"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867864"
 ---
 # <a name="working-with-qubits"></a>量子ビットの操作
 
 Qubits は、クォンタムコンピューティングにおける情報の基本的なオブジェクトです。 Qubits の概要については、「[クォンタムコンピューティングについ](xref:microsoft.quantum.overview.understanding)て」を参照してください。また、数学表現の詳細については、「 [qubits](xref:microsoft.quantum.concepts.qubit)」を参照してください。 
 
-この記事では、Q # プログラムで qubits を使用して操作する方法について説明します。 
+この記事では、プログラムで qubits を使用して操作する方法について説明し Q# ます。 
 
 > [!IMPORTANT]
 >この記事で説明されているどのステートメントも、関数の本体内では有効ではありません。 これらは、操作内でのみ有効です。
@@ -25,7 +28,7 @@ Qubits は、クォンタムコンピューティングにおける情報の基�
 ## <a name="allocating-qubits"></a>割り当て (Qubits を)
 
 物理 qubits は、quantum コンピューターの貴重なリソースであるため、コンパイラのジョブの一部として、それらが可能な限り効率的に使用されていることを確認する必要があります。
-そのため、特定のステートメントブロック内で使用するために qubits を*割り当てる*には、Q # に指示する必要があります。
+そのため、 Q# 特定のステートメントブロック内で使用するには、qubits を*割り当てる*必要があります。
 Qubits を1つの qubits として割り当てることも、*レジスタ*と呼ばれる qubits の配列として割り当てることもできます。 
 
 ### <a name="clean-qubits"></a>Clean qubits
@@ -36,7 +39,7 @@ Qubits を1つの qubits として割り当てることも、*レジスタ*と�
 バインディングは、ステートメントと同じパターンに従い `let` ます。1つの記号または記号の組、等号 (= `=` )、1つの値、または*初期化子*の一致するタプルのいずれかです。
 
 初期化子は、として指定された1つの qubit、 `Qubit()` または qubit の配列 (は式) に対して使用でき `Qubit[n]` `n` `Int` ます。
-例:
+たとえば、
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -65,7 +68,7 @@ using ((auxiliary, register) = (Qubit(), Qubit[5])) {
 これらの状態は不明であるため、クォンタムコンピューターのメモリの他の部分との間でも、これらは "ダーティな" qubits と呼ばれることがよくあります。
 
 バインディングは、ステートメントと同じパターンおよび規則に従い `using` ます。
-例:
+たとえば、
 ```qsharp
 borrowing (qubit = Qubit()) {
     // ...
@@ -82,17 +85,17 @@ Qubits を借りている場合、システムはまず、使用中であるが�
 このような qubits が不足している場合は、新しい qubits を割り当てて要求を完了します。
 
 ダーティ qubits の既知のユースケースの中では、incrementers の少数の qubits と実装のみを必要とする、マルチ制御の CNOT ゲートの実装があります。
-Q # での使用例については、この記事の「[貸し出し Qubits の例](#borrowing-qubits-example)」を参照するか、 [*2n + 2 Qubits と Toffoli ベースのモジュール乗算 (Based*](https://arxiv.org/abs/1611.07995) 、roetteler、および svore 2017) を使用して、借り qubits を利用するアルゴリズムについてのホワイトペーパーを参照してください。
+での使用例につい Q# ては、この記事の「[貸し出し Qubits の例](#borrowing-qubits-example)」を参照するか、 [*2n + 2 qubits と Toffoli ベースのモジュール乗算 (Based*](https://arxiv.org/abs/1611.07995) 、roetteler、および svore 2017) を使用して、借り qubits を利用するアルゴリズムを確認してください。
 
 ## <a name="intrinsic-operations"></a>組み込みの操作
 
 割り当てられると、関数と操作に qubit を渡すことができます。
-ある意味では、これは、実行可能なアクションがすべて操作として定義されているため、Q # プログラムが qubit を使用して実行できることです。
+これは、 Q# 実行可能なアクションがすべて操作として定義されているため、プログラムが qubit を使用して実行できることです。
 
-この記事では、qubits との対話に使用できるいくつかの便利な Q # 操作について説明します。
+この記事では、 Q# qubits との対話に使用できるいくつかの便利な操作について説明します。
 これらおよび他の詳細については、「[組み込みの操作と関数](xref:microsoft.quantum.libraries.standard.prelude)」を参照してください。 
 
-1つ目の方法として、1つの $Z $、$Y $、および $ $X、 [`X`](xref:microsoft.quantum.intrinsic.x) それぞれが型を持つ組み込みの操作、、およびによって Q # で表され [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) `(Qubit => Unit is Adj + Ctl)` ます。
+1つ目の方法として、単 qubit の Pare Li 演算子 $X $、$Y $、および $Z $ は、 Q# [`X`](xref:microsoft.quantum.intrinsic.x) それぞれが型を持つ組み込みの操作である、、およびによって表され [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) `(Qubit => Unit is Adj + Ctl)` ます。
 
 「組み込みの[操作と関数](xref:microsoft.quantum.libraries.standard.prelude)」で説明されているように、$ $X `X` は、ビットフリップ演算または NOT gate として考えられます。
 操作を使用して、 `X` $ \ket{s_0 s_1 \ ドット s_n} $ の形式の状態を準備できます。これは、一部のクラシックビット文字列 $s $:
@@ -124,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > 後で、手動による制御フローを必要としない、この操作をよりコンパクトな方法で作成できます。
 
-また、\Ket transform $H $ を使用して、$ \ket{+} = \ left (\ket {0} + \ket, {1} right)/\ sqrt {2} $ および $ \ket {-} = \ left (\ket-Hadamard/right)//sqrt $ などの状態を準備することもできます {0} {1} {2} 。これは、組み込み> の操作によって Q # で表され [`H`](xref:microsoft.quantum.intrinsic.h) ます。
+組み込み操作によって表される \Ket transform $H $ を使用して、$ \ket{+} = \ left (\ket {0} + \ket {1} /right)/\ sqrt {2} $ and $ \ket = (\ket-Hadamard/right)/-sqrt $ などの状態を準備することもでき {-} {0} {1} {2} Q# [`H`](xref:microsoft.quantum.intrinsic.h) ます (型 (qubit => Unit is 形容詞 + Ctl) ')。
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -240,6 +243,6 @@ is Adj + Ctl {
 
 このコードを別のキャノン関数と比較して、 `MultiControlledXClean` 乗算制御演算を実装するのと同じ目標を達成し `X` ます。ただし、メカニズムを使用していくつかの clean qubits を使用し `using` ます。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-Q # の[制御フロー](xref:microsoft.quantum.guide.controlflow)について説明します。
+の[制御フロー](xref:microsoft.quantum.guide.controlflow)について説明 Q# します。

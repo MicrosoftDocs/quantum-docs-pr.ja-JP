@@ -1,17 +1,20 @@
 ---
 title: エネルギー準位の推定の取得
-description: 分子 hydrogen のエネルギーレベルの値を推定するサンプル Q&a プログラムについて説明します。
+description: Q#分子 hydrogen のエネルギーレベルの値を推定するサンプルプログラムについて説明します。
 author: guanghaolow
 ms.author: gulow
 ms.date: 07/02/2020
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: b26538980366cf4cbe01fc2ef59580ae182f1e8a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a2df4b829a3f4946c6de6e6b80ad72a5bc192b2c
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871570"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869207"
 ---
 # <a name="obtaining-energy-level-estimates"></a>エネルギー準位の推定の取得
 エネルギーレベルの値の推定は、量子化学の主要なアプリケーションの1つです。 この記事では、分子 hydrogen の正規の例に対してこれを実行する方法について説明します。 このセクションで参照されているサンプルは、 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) 化学サンプルリポジトリにあります。 出力をプロットするより視覚的な例は [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) デモです。
@@ -121,7 +124,7 @@ operation GetEnergyByTrotterization (
 }
 ```
 
-これで、ホストプログラムから Q # コードを呼び出すことができます。 次の C# コードは、完全な状態のシミュレーターを作成し、を実行して `GetEnergyByTrotterization` 、グラウンドステートエネルギーを取得します。
+これで、ホストプログラムからコードを呼び出すことができ Q# ます。 次の C# コードは、完全な状態のシミュレーターを作成し、を実行して `GetEnergyByTrotterization` 、グラウンドステートエネルギーを取得します。
 
 ```csharp
 using (var qsim = new QuantumSimulator())

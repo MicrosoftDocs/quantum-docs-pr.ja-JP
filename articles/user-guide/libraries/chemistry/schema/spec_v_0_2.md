@@ -6,12 +6,15 @@ ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
-ms.openlocfilehash: df7e651b7d32e672c6e83346ff603132bd55c1a2
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 3d935ec9de7e9b93bcdb00a4e13fc7bfce33b0aa
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275854"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869088"
 ---
 # <a name="broombridge-specification-v02"></a>Broombridge Specification v 0.2 #
 
@@ -19,7 +22,7 @@ ms.locfileid: "85275854"
 
 見出しが "NOTE"、"情報"、または "警告" のサイドバーは役に立つものです。
 
-## <a name="introduction"></a>概要 ##
+## <a name="introduction"></a>はじめに ##
 
 このセクションは有益です。
 
@@ -69,7 +72,7 @@ Quantity オブジェクトは、
 - スパース配列の quantity オブジェクト。
 
 
-### <a name="examples"></a>使用例 ###
+### <a name="examples"></a>例 ###
 
 このセクションは有益です。
 

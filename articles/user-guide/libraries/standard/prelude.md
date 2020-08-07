@@ -6,16 +6,19 @@ uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 19674620475e68b41c855023807a5fd1f7945ec9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 283504a5f5635a4996c804e514a6f52eb4966d22
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275671"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868442"
 ---
 # <a name="the-prelude"></a>準備 #
 
-このクォンタム開発キットに含まれる Q # コンパイラとターゲットコンピューターには、Q # でクォンタムプログラムを記述するときに使用できる組み込み関数と操作のセットが用意されています。
+Q#クォンタム開発キットに含まれているコンパイラとターゲットコンピューターには、でクォンタムプログラムを記述するときに使用できる組み込み関数と操作のセットが用意されて Q# います。
 
 ## <a name="intrinsic-operations-and-functions"></a>組み込みの操作と関数 ##
 
@@ -27,11 +30,11 @@ ms.locfileid: "85275671"
 - 測定を実装する操作。
 
 Clifford + $T $ gate セットは、クォンタムコンピューティングでは[universal](xref:microsoft.quantum.concepts.multiple-qubits)であるため、これらの操作では negligibly 小規模エラーの中で、クォンタムアルゴリズムをほぼ実装することができます。
-また、回転を提供することにより、プログラマは単一の qubit のユニタリおよび CNOT gate ライブラリ内で作業できるようになります。 このライブラリは、プログラマが Clifford + $T $ 分解を直接表現する必要がないため、また、1つの qubit unitaries を Clifford および $T $ ゲートにコンパイルするための非常に効率的なメソッドが存在するため、より簡単に考えることができます (詳細について[は、こちら](xref:microsoft.quantum.more-information)を参照してください)。
+また、回転も提供することにより、 Q# プログラマは単一の qubit のユニタリおよび CNOT gate ライブラリ内で作業できるようになります。 このライブラリは、プログラマが Clifford + $T $ 分解を直接表現する必要がないため、また、1つの qubit unitaries を Clifford および $T $ ゲートにコンパイルするための非常に効率的なメソッドが存在するため、より簡単に考えることができます (詳細について[は、こちら](xref:microsoft.quantum.more-information)を参照してください)。
 
 可能であれば、qubits で動作する準備に定義されている操作によって、 `Controlled` ターゲットコンピューターが適切な分解を実行するように、バリアントを適用できます。
 
-準備のこの部分で定義されている関数と操作の多くは @"microsoft.quantum.intrinsic" 名前空間にあります。そのため、ほとんどの Q # ソースファイルには、 `open Microsoft.Quantum.Intrinsic;` 最初の名前空間宣言の直後にディレクティブがあります。
+準備のこの部分で定義されている関数と操作の多くは @"microsoft.quantum.intrinsic" 名前空間にあります。そのため、ほとんどのソースファイルには、 Q# `open Microsoft.Quantum.Intrinsic;` 最初の名前空間宣言の直後にディレクティブがあります。
 <xref:microsoft.quantum.core>名前空間は自動的に開かれるため、などの関数を <xref:microsoft.quantum.core.length> ステートメントなしで使用することもでき `open` ます。
 
 ### <a name="common-single-qubit-unitary-operations"></a>共通の単一 Qubit の解析操作 ###
@@ -96,9 +99,9 @@ Hadamard ゲートは、$ \ket {0} $ と $ \ket $ の状態の法則を作成す
 \begin{bmatrix} 1 & 0 \\ \\ % FIXME: 現在、quadwhack ハックが使用されています。
 0 & i \end{bmatrix} です。
 
-#### <a name="rotations"></a>回転 ####
+#### <a name="rotations"></a>ローテーション ####
 
-上記の P準備 Li および Clifford 操作に加えて、Q # のには、回転を表すさまざまな方法が用意されています。
+上記の P準備 Li および Clifford 操作に加えて、 Q# 回転を表現するさまざまな方法が用意されています。
 「[シングル qubit 操作](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)」で説明されているように、ローテーションすることは、クォンタムアルゴリズムにとって重要です。
 
 最初に、$H $ と $T $ ゲートを使用して任意の1つの Hadamard 操作を表すことができることを呼び出します。ここで、$H $ は操作、where は \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ % FIXME: 現在は quad back たたくハックを使用します。
@@ -229,7 +232,7 @@ return rs;
 
 ## <a name="extension-functions-and-operations"></a>拡張関数と操作 ##
 
-さらに、準備は、Q # コード内で使用するために、.NET レベルで数学的および型変換関数の豊富なセットを定義します。
+また、準備は、コード内で使用するために、.NET レベルで数学的および型変換関数の豊富なセットを定義し Q# ます。
 たとえば、名前空間は、やなどの <xref:microsoft.quantum.math> 便利な操作を定義し <xref:microsoft.quantum.math.sin> <xref:microsoft.quantum.math.log> ます。
 Quantum 開発キットによって提供される実装では、従来の .NET 基底クラスライブラリを使用します。そのため、quantum プログラムとその典型的なドライバーの間で、追加の通信ラウンドトリップが必要になる場合があります。
 これによってローカルシミュレーターに問題が発生することはありませんが、リモートシミュレーターまたは実際のハードウェアをターゲットコンピューターとして使用すると、パフォーマンスの問題が発生する可能性があります。
@@ -238,7 +241,7 @@ Quantum 開発キットによって提供される実装では、従来の .NET 
 ### <a name="math"></a>数値演算 ###
 
 名前空間には、 <xref:microsoft.quantum.math> .net 基底クラスライブラリの[ `System.Math` クラス](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)の便利な関数が多数用意されています。
-これらの関数は、他の Q # 関数と同じ方法で使用できます。
+これらの関数は、他の関数と同じ方法で使用でき Q# ます。
 
 ```qsharp
 open Microsoft.Quantum.Math;
@@ -246,7 +249,7 @@ open Microsoft.Quantum.Math;
 let y = Sin(theta);
 ```
 
-.NET の静的メソッドが引数の型に基づいてオーバーロードされている場合、対応する Q # 関数には、入力の型を示すサフィックスで注釈が付けられます。
+.NET の静的メソッドが引数の型に基づいてオーバーロードされている場合、対応する Q# 関数には、入力の型を示すサフィックスで注釈が付けられます。
 
 ```qsharp
 let x = AbsI(-3); // x : Int = 3

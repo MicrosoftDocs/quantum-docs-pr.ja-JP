@@ -1,17 +1,20 @@
 ---
 title: 無効になった qubits の使用チェッカー-Quantum Development Kit
-description: 'Microsoft QDK で無効になっている qubits 使用チェッカーについて説明します。これは、Quantum トレースシミュレーターを使用して、無効な qubits の Q # コードを確認します。'
+description: Microsoft QDK で無効になっている qubits 使用チェッカーについて説明します。これは、Quantum トレースシミュレーターを使用して、 Q# 無効な qubits のコードを確認します。
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: fccf6d5784b587f4ad9b659e23027619acd06ffa
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: c451747badba03801bd4ecd419420f131ac502d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871095"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868289"
 ---
 # <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>クォンタムトレースシミュレーター: 無効になった qubits 使用チェッカー
 
@@ -19,7 +22,7 @@ ms.locfileid: "86871095"
 
 ## <a name="invalid-qubits"></a>無効な qubits
 
-無効化された qubits use checker によって検出された問題を示すために、次の Q # コードを考えてみましょう。
+Q#無効化された qubits use checker によって検出された問題を示すために、次のコードについて考えてみましょう。
 
 ```qsharp
 operation UseReleasedQubit() : Unit {

@@ -1,21 +1,24 @@
 ---
-title: 'Q # 標準ライブラリでのエラー修正'
-description: 'Q # プログラムでエラー修正コードを使用しながら、qubits の状態を保護する方法について説明します。'
+title: 標準ライブラリでのエラー修正 Q#
+description: プログラムでエラー修正コードを使用し Q# ながら、qubits の状態を保護する方法について説明します。
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 514fe68f603b9a3a0b4607390719b08a43fe4967
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275720"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868493"
 ---
 # <a name="error-correction"></a>エラーの修正 #
 
-## <a name="introduction"></a>概要 ##
+## <a name="introduction"></a>はじめに ##
 
 従来のコンピューティングでは、エラーに対して1つの保護が必要な場合は、データビットを繰り返すことによって、そのビットを*論理ビット*で表現するのが十分な場合があります。
 たとえば、$0 $ > は、 {0} データビット0のエンコーディングとして使用します。この場合、ラベル0の上の行を使用して、0状態のビットのエンコーディングであることを示します。
@@ -48,7 +51,7 @@ $Z 0 Z_1 \ket {000} = \ket {000} $ で $Z 0 Z_1 \ket = \ket $ であることに
 一方、$Z 0 Z_1 \ket {100} =-\ket {100} $ and $Z 0 Z_1 \ket {011} =-\ket {011} $ のように指定すると、0 $Z $ を測定した結果として、発生したエラーに関する有用な情報が示されます。
 
 このことを強調するために、上記の表を繰り返しますが、各行に 0 Z_1 $ および $Z _1 Z_2 $ $Z 測定した結果を追加します。
-各測定の結果は、それぞれ、との Q # 値に対応する $ + $ または $-$ のいずれかの eigenvalue の符号によって示され `Result` `Zero` `One` ます。
+各測定の結果は、 Q# `Result` それぞれとの値に対応する $ + $ または $-$ のいずれかの eigenvalue の符号によって示され `Zero` `One` ます。
 
 | エラー $E $ | $E \ket{\overline {0} } $ | $E \ket{\overline {1} } $ | $Z 0 Z_1 $ の結果 | $Z _1 Z_2 $ の結果 |
 | --- | --- | --- | --- | --- |
@@ -68,16 +71,16 @@ $Z 0 Z_1 \ket {000} = \ket {000} $ で $Z 0 Z_1 \ket = \ket $ であることに
 > 一般的には、コードを作成して、より多くのエラーを処理したり、$ errors $Z 処理したり、$ errors を $X したりすることができます。
 
 すべてのコード状態で同じように動作するクォンタムエラー修正の測定値を記述できるという洞察は、安定板の*形式*の本質です。
-Q # キャノンは、安定板のコードに対してエンコードを記述し、それをエラーからどのように回復するかを説明するためのフレームワークを提供します。
+キャノンは、 Q# 安定板のコードに対してエンコードを記述し、それをエラーからどのように回復するかを説明するためのフレームワークを提供します。
 このセクションでは、このフレームワークとそのアプリケーションについて、いくつかの単純なクォンタムエラー修正コードについて説明します。
 
 > [!TIP]
 > 安定板形式の詳細については、このセクションでは説明しません。
 > [Gottesman 2009](https://arxiv.org/abs/0904.2557)の詳細については、読者を参照してください。
 
-## <a name="representing-error-correcting-codes-in-q"></a>Q でのエラー修正コードの表現# ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>エラー修正コードを表すQ# ##
 
-エラー修正コードを指定するために、Q # キャノンには、さまざまなユーザー定義型が用意されています。
+エラー修正コードを指定するために、 Q# キャノン社はいくつかの異なるユーザー定義型を提供しています。
 
 - <xref:microsoft.quantum.errorcorrection.logicalregister>`= Qubit[]`: Qubits のレジスタは、エラー修正コードのコードブロックとして解釈される必要があることを示します。
 - <xref:microsoft.quantum.errorcorrection.syndrome>`= Result[]`: 測定結果の配列を、コードブロックで測定されるより隣人として解釈する必要があることを示します。
@@ -119,4 +122,4 @@ using (scratch = Qubit[nScratch]) {
 
 この詳細については、「[ビットフリップコードサンプル](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code)」を参照してください。
 
-ビットフリップコードとは別に、Q # キャノンは、 [5 桁の完全なコード](https://arxiv.org/abs/quant-ph/9602019)と7つの[qubit コード](https://arxiv.org/abs/quant-ph/9705052)の実装によって提供されます。どちらの場合も、任意のシングル qubit エラーを修正できます。
+この例では、ビットフリップコード以外に、 Q# [5 qubit の完全なコード](https://arxiv.org/abs/quant-ph/9602019)と7つの[qubit コード](https://arxiv.org/abs/quant-ph/9705052)を実装しています。どちらも任意のシングル qubit エラーを修正できます。

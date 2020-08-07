@@ -1,17 +1,20 @@
 ---
 title: Distinct 入力チェッカー-Quantum Development Kit
-description: 'Microsoft QDK distinct 入力チェッカーについて説明します。これは、Quantum トレースシミュレーターを使用して、共有 qubits と競合する可能性があることを Q # コードで確認します。'
+description: Microsoft QDK distinct 入力チェッカーについて説明します。これは、Quantum トレースシミュレーターを使用して、 Q# 共有 qubits との潜在的な競合をコードに確認します。
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 49a1ccc5f37acfeaa1ee08bd974be45a40a76f93
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 750c94e7f861678d37f051619ff5b29bf4fd3d3e
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871146"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868272"
 ---
 # <a name="quantum-trace-simulator-distinct-inputs-checker"></a>クォンタムトレースシミュレーター: 個別入力チェッカー
 
@@ -19,7 +22,7 @@ Distinct 入力チェッカーは、Quantum Development Kit [quantum トレー�
 
 ## <a name="conflicts-with-shared-qubits"></a>共有 qubits との競合
 
-個別の入力チェッカーによって検出された問題を示すために、次のような Q # コードを考えてみましょう。
+Q#Distinct 入力チェッカーによって検出された問題を示すために、次のコードについて考えてみましょう。
 
 ```qsharp
 operation ApplyBoth(
@@ -47,7 +50,7 @@ operation ApplyWithNonDistinctInputs() : Unit {
 }
 ```
 
-`op1`と `op2` は両方とも部分アプリケーションを使用して取得され、qubit を共有することに注意してください。 この例でを呼び出すと、 `ApplyBoth` 操作の結果は、 `op1` 発生すると予想される順序と内部ではなく、の順序によって決まり `op2` `ApplyBoth` ます。 Distinct 入力チェッカーを有効にすると、このような状況が検出され、がスローさ `DistinctInputsCheckerException` れます。 詳細については、 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> Q # API ライブラリの「」を参照してください。
+`op1`と `op2` は両方とも部分アプリケーションを使用して取得され、qubit を共有することに注意してください。 この例でを呼び出すと、 `ApplyBoth` 操作の結果は、 `op1` 発生すると予想される順序と内部ではなく、の順序によって決まり `op2` `ApplyBoth` ます。 Distinct 入力チェッカーを有効にすると、このような状況が検出され、がスローさ `DistinctInputsCheckerException` れます。 詳細については、 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> API ライブラリの「」を参照してください Q# 。
 
 ## <a name="invoking-the-distinct-inputs-checker"></a>個別入力チェッカーの呼び出し
 

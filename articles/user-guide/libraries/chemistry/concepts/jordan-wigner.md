@@ -6,12 +6,15 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: 17cb473c6d33e3356d5da886f47985c3828d4d1f
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 9f1455ebbecf6a3500ec11a5196e7662455c9a78
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275925"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869513"
 ---
 # <a name="jordan-wigner-representation"></a>ヨルダン-Wigner 表現
 
@@ -28,7 +31,7 @@ State $ \ket {0} _j $ は、spin 回転 $j $ が空であることを意味し�
 \Begin{align} a ^ \ dagger_j &= \begin{bmatrix}0 & 0 \\ \ 1 &0 \end{bmatrix} = \frac{X_j-iY_j} {2} 、\nonumber \\ \\ a_j &= \begin{bmatrix}0 & 1 \\ \ 0 &0 \end{bmatrix} = \frac{X_j + iY_j}、\end{align} という確認は簡単です {2} 。ここで、$X _j $ および $Y _j $ は、Qubit $X $ で動作する p $ 演算子および-$Y $ 演算子です。
 
 >[!NOTE]
-> Q # $ \ket {0} $ state は、$Z $ 演算子の + 1 eigenstate を表します。 物理的な領域によっては、エネルギーの \ket {0} $ が低エネルギーの接地状態を表しています。したがって、$ operator $Z $ 演算子の-1 eigenstate が示されます。 そのため、いくつかの数式は一般的な文献とは異なる場合があります。
+> Q#$ \Ket $ state は、$ {0} operator $Z の + 1 eigenstate を表します。 物理的な領域によっては、エネルギーの \ket {0} $ が低エネルギーの接地状態を表しています。したがって、$ operator $Z $ 演算子の-1 eigenstate が示されます。 そのため、いくつかの数式は一般的な文献とは異なる場合があります。
 
 化学ライブラリでは、$ \ket $ を使用して、 {0} 未使用のスピン回転を表します。
 これは、1つのスピン回転の場合、量子コンピューターが理解しているユニタリ行列の観点から、作成演算子と annihilation 演算子を簡単に表すことができることを示しています。
