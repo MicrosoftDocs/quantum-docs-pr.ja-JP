@@ -6,14 +6,17 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 3d70838289e72afdd0a48bbdff0bec407428d125
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871435"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867609"
 ---
-# <a name="develop-with-q-command-line-applications"></a>Q# コマンド ライン アプリケーションを使用した開発
+# <a name="develop-with-no-locq-command-line-applications"></a>Q# コマンド ライン アプリケーションを使用した開発
 
 Q# プログラムはそれ自体で実行可能です。C#、F#、Python などのホスト言語のドライバーは必要ありません。
 
@@ -48,7 +51,7 @@ Visual Studio Codespaces を構成するには:
 dotnet new -i Microsoft.Quantum.ProjectTemplates
 ```
 
-## <a name="develop-with-q"></a>Q# を使用した開発
+## <a name="develop-with-no-locq"></a>Q# を使用した開発
 
 お使いの環境に対応するタブの指示に従ってください。
 
@@ -56,7 +59,7 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 
 新しいプロジェクトを作成するには:
 
-1. **[表示]**  ->  **[コマンド パレット]** をクリックして、 **[Q#:新しいプロジェクトの作成]** を選択します。
+1. **[表示]**  ->  **[コマンド パレット]** をクリックして、 **[Q#: 新しいプロジェクトの作成]** を選択します。
 2. **[Standalone console application]\(スタンドアロン コンソール アプリケーション\)** をクリックします。
 3. プロジェクトを保存する場所に移動して、 **[プロジェクトの作成]** をクリックします。
 4. プロジェクトが正常に作成されたら、右下にある **[Open new project...]\(新しいプロジェクトを開く...\)** をクリックします。
@@ -78,7 +81,7 @@ Q# の `Hello World` アプリケーションを作成して、Visual Studio の
 
 新しい Q# アプリケーションを作成するには:
 1. Visual Studio を開き、 **[ファイル]**  ->  **[新規]**  ->  **[プロジェクト]** をクリックします。
-2. 検索ボックスに `Q#` と入力し、 **[Q# アプリケーション]** を選択して **[次へ]** をクリックします。
+2. 検索ボックスに「`Q#`」と入力し、 **[Q# アプリケーション]** を選択して **[次へ]** をクリックします。
 3. アプリケーションの名前と場所を入力して、 **[作成]** をクリックします。
 
 

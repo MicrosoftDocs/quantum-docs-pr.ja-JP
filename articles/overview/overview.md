@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 05/05/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.introduction
-ms.openlocfilehash: 7c55420bd35f9b6e0e7ec80ddffe8a861cb7df39
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 59cb595ac207d6e84358fc6ba742e0e0019c76f9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430783"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866980"
 ---
 # <a name="introduction-to-quantum-computing-and-the-quantum-development-kit"></a>量子コンピューティングと Quantum 開発キットの概要
 
@@ -62,9 +65,9 @@ Microsoft Quantum 開発キット (QDK) は、開発者が量子アルゴリズ�
 
 Quantum 開発キットには [Quantum Machine Learning Library](xref:microsoft.quantum.machine-learning.concepts.intro) が付属しています。これを使用すると、量子/従来型のハイブリッド機械学習の実験を行うことができます。 このライブラリには、サンプルとチュートリアルが含まれています。また、教師あり分類問題を解決するための新たな量子/従来型ハイブリッド アルゴリズムである回路中心量子分類器の実装に必要なツールが用意されています。
 
-## <a name="q-and-the-microsoft-quantum-development-kit-qdk"></a>Q# と Microsoft Quantum 開発キット (QDK)
+## <a name="no-locq-and-the-microsoft-quantum-development-kit-qdk"></a>Q# と Microsoft Quantum 開発キット (QDK)
 
-Q# は、量子アルゴリズムを開発および実行するための Microsoft のオープンソース プログラミング言語です。 これは [QDK](https://docs.microsoft.com/quantum/)に含まれています。QDK は Q# 用のフル機能の開発キットであり、組み込みの全状態の量子シミュレーターなど、さまざまな環境で実行できる量子アプリケーションを開発するために、標準のツールと言語で使用できます。
+Q# は、量子アルゴリズムを開発および実行するための Microsoft のオープンソース プログラミング言語です。 これは [QDK](https://docs.microsoft.com/quantum/) に含まれています。QDK は Q# 用のフル機能の開発キットであり、組み込みの全状態の量子シミュレーターなど、さまざまな環境で実行できる量子アプリケーションを開発するために、標準のツールと言語で使用できます。
 
 Visual Studio と VS Code 用の拡張機能と、Python と Jupyter Notebook で使用するためのパッケージが用意されています。
 

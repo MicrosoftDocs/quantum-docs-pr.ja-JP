@@ -1,19 +1,22 @@
 ---
 title: Q# プログラミング言語と QDK とは
-description: Microsoft Quantum 開発キット と Q# プログラミング言語について、および量子プログラムの作成方法について説明します。
+description: Microsoft Quantum 開発キットと Q# プログラミング言語について、および量子プログラムの作成方法について説明します。
 author: bradben
 ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
-ms.openlocfilehash: ede4ad005090e4ac8ffd9b05d27edfa91f8c50ab
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 3ee9e897eb142bbc9503a617cc3e25c1a665ff35
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327708"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866946"
 ---
-# <a name="what-are-the-q-programming-language-and-qdk"></a>Q# プログラミング言語と QDK とは
+# <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Q# プログラミング言語と QDK とは
 
 Q# は、量子アルゴリズムを開発および実行するための Microsoft のオープンソース プログラミング言語です。 これは Quantum 開発キット (QDK) に含まれています。QDK には、[Q# ライブラリ](xref:microsoft.quantum.libraries)、[量子シミュレーター](xref:microsoft.quantum.machines)、[他のプログラミング環境用の拡張機能](xref:microsoft.quantum.install)、[API ドキュメント](xref:microsoft.quantum.standardlibsintro)が含まれています。 QDK には、標準の Q# ライブラリに加えて、化学、機械学習、数値のライブラリも含まれています。
 
@@ -41,13 +44,13 @@ QDK は Q# 用のフル機能の開発キットであり、さまざまな環境
 | ---- | ---- |
 | **量子コンピューティングが初めての場合** | [主要な概念](xref:microsoft.quantum.overview.understanding)に関するページで、量子物理学と量子コンピューティングの基礎を確認します。|
 | **Q# 言語について深く理解したい場合** | 「[Q# ユーザー ガイド](xref:microsoft.quantum.guide)」で型、式、変数、量子プログラムの構造について確認します。|
-| **量子プログラムの作成を始めたい場合** | [クイックスタート](xref:microsoft.quantum.install)のページで、Q# 環境を設定し、量子プログラムの作成を開始します。|
+| **量子プログラムの作成を始めたい場合** | [クイックスタート](xref:microsoft.quantum.install)で、Q# 環境を設定し、量子プログラムの作成を開始します。|
 
-## <a name="how-does-q-work"></a>Q# のしくみ
+## <a name="how-does-no-locq-work"></a>Q# のしくみ
 
-Q# プログラムは、スタンドアロンのコマンド ライン アプリケーションとしてコンパイルすることも、Python 言語または .NET 言語で記述されたホスト プログラムによって呼び出すこともできます。
+Q# プログラムは、スタンドアロンのコマンド ライン アプリケーションとしてコンパイルすることも、Python または .NET 言語で記述されたホスト プログラムによって呼び出すこともできます。
 
-プログラムをコンパイルして実行すると、量子シミュレーターのインスタンスが作成され、そのインスタンスに Q# コードが渡されます。 シミュレーターでは、Q# コードを使用して量子ビット (量子粒子のシミュレーション) を作成し、変換を適用してその状態を変更します。 その後、シミュレーター内の量子演算の結果がプログラムに返されます。  
+プログラムをコンパイルして実行すると、量子シミュレーターのインスタンスが作成され、それに Q# コードが渡されます。 シミュレーターでは、Q# コードを使用して量子ビット (量子粒子のシミュレーション) を作成し、変換を適用してその状態を変更します。 その後、シミュレーター内の量子演算の結果がプログラムに返されます。  
 
 シミュレーター内で Q# コードを分離すると、アルゴリズムが量子物理学の法則に従うようになり、量子コンピューターで正しく実行できます。
 

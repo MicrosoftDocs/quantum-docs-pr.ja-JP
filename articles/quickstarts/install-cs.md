@@ -6,14 +6,17 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 714c15d9589095f0fe395fcd6941672167879dca
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885504"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867558"
 ---
-# <a name="develop-with-q-and-net"></a>Q# と .NET を使用した開発
+# <a name="develop-with-no-locq-and-net"></a>Q# と .NET を使用した開発
 
 Q# は、C# や F# などの .NET 言語とうまく動作するように構築されています。
 このガイドでは、Q# を .NET 言語で作成されたホスト プログラムとともに使用する方法を説明します。
@@ -24,7 +27,7 @@ Q# は、C# や F# などの .NET 言語とうまく動作するように構築�
 
 - [Q# コマンド ライン プロジェクトで使用するための](xref:microsoft.quantum.install.standalone) Quantum 開発キットをインストールしていること。
 
-## <a name="creating-a-q-library-and-a-net-host"></a>Q# ライブラリと .NET ホストを作成する
+## <a name="creating-a-no-locq-library-and-a-net-host"></a>Q# ライブラリと .NET ホストを作成する
 
 最初の手順として、Q# ライブラリのプロジェクトと、Q# ライブラリで定義された演算と関数を呼び出す .NET ホストのプロジェクトを作成します。
 
@@ -65,7 +68,7 @@ Visual Studio または VS Code 以外のエディターを使用している場
 - 新しい Q# ライブラリを作成する
   - **[ファイル]**  ->  **[新規]**  ->  **[プロジェクト]** の順に移動します。
   - 検索ボックスに、「Q#」と入力します
-  - **[Q# ライブラリ]** を選択します
+  - **[Q#ライブラリ]** を選択します。
   - **[次へ]** を選択します
   - ライブラリの名前と場所を選択します
   - [ソリューションとプロジェクトを同じディレクトリに配置する] に**チェックを入れない**ようにします
@@ -80,7 +83,7 @@ Visual Studio または VS Code 以外のエディターを使用している場
 
 ***
 
-## <a name="calling-into-q-from-net"></a>.NET から Q# を呼び出す
+## <a name="calling-into-no-locq-from-net"></a>.NET から Q# を呼び出す
 
 上の手順に従ってプロジェクトを設定したら、.NET コンソール アプリケーションから Q# を呼び出すことができます。
 Q# コンパイラは、それぞれの Q# の演算と関数に対して .NET クラスを作成します。これにより、量子プログラムをシミュレーターで実行できるようになります。

@@ -1,23 +1,26 @@
 ---
 uid: microsoft.quantum.welcome
 title: Quantum Development Kit (QDK) の概要
-description: Microsoft Quantum Development Kit を使用して Q# で量子プロジェクトのプログラミングを開始する方法について説明します。
+description: Microsoft Quantum 開発キットを使用して Q# で量子プロジェクトのプログラミングを開始する方法について説明します。
 author: bradben
 ms.author: bradben
 ms.date: 5/10/2020
 ms.topic: overview
-ms.openlocfilehash: ff4a3dc829423525e18d89d5ed3d621079d1a524
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ff5eb9984da0b22a65f3919599ee18605a206fa0
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274125"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867519"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Quantum Development Kit (QDK) の概要
 
 Microsoft Quantum Development Kit にようこそ。  
 
-Quantum Development Kit (QDK) には、量子アプリケーション開発専用に設計されたプログラミング言語である Q# を使用して、独自の量子プログラムおよび実験を構築するために必要なあらゆるツールが含まれています。
+Quantum 開発キット (QDK) には、量子アプリケーション開発専用に設計されたプログラミング言語である Q# を使用して、独自の量子プログラムおよび実験を構築するために必要なあらゆるツールが含まれています。
 
 すぐに始めるには、まず [QDK インストール ガイド](xref:microsoft.quantum.install)を参照してください。
 Windows、Linux、または MacOS を搭載したマシンに Quantum 開発キットをインストールして、独自の量子プログラムを作成するための手順が示されます。
@@ -37,7 +40,7 @@ Quantum 開発キットには、Q# を使用して量子プログラムを開発
 
 ### <a name="learning-further"></a>今後の学習
 * [量子コンピューティングの Microsoft Learn モジュール](https://docs.microsoft.com/learn/browse/?term=quantum)は、ご自身のペースとスケジュールで中核概念を習得できるように構成されています。 [最初のモジュール](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/)では、QDK で量子プログラムを作成する方法の基本を学習できます。
-* Q# プログラミングの詳細については、[Quantum Katas](https://github.com/Microsoft/QuantumKatas) に関する説明をご覧ください。これは、Q# のプログラミング演習を通じて量子コンピューティングを紹介するマイペースで進められるプログラミング演習のコレクションです。
+* Q# プログラミングの詳細については、[Quantum Katas](https://github.com/Microsoft/QuantumKatas) に関する説明をご覧ください。これは、Q# のプログラミング演習を通じて量子コンピューティングを紹介する、マイペースで進められるプログラミング演習のコレクションです。
     これらの katas の多くは、Q# ノートブックとしても利用できます。 
 * [サンプル リポジトリ](https://github.com/Microsoft/Quantum)では、Q# を使用して量子プログラムを作成する方法について複数の例を紹介しています。 これらのサンプルのほとんどは、オープンソースの[量子ライブラリ](https://github.com/Microsoft/QuantumLibraries)を使用して記述されています。これには、[標準](xref:microsoft.quantum.libraries.standard.intro)および[化学](xref:microsoft.quantum.chemistry.concepts.intro)ライブラリ (以下の詳細を参照) が含まれます。
 
@@ -54,16 +57,16 @@ Quantum 開発キットには、Q# を使用して量子プログラムを開発
 
 現在のドキュメントには、次の追加のトピックが含まれています。
 
-### <a name="q-developer-guides"></a>Q# 開発者ガイド
+### <a name="no-locq-developer-guides"></a>Q# 開発者ガイド
 
 * 「[Q# ユーザー ガイド](xref:microsoft.quantum.guide)」では、Q# で量子プログラムを作成するための中核概念について詳しく説明します。
 * [量子シミュレーターとホスト アプリケーション](xref:microsoft.quantum.machines)では、量子アルゴリズムがどのように実行されるか、どの量子コンピューターを使用できるか、および量子プログラム用に Q# 以外のドライバーを書き込む方法について説明します。
 
-### <a name="q-libraries"></a>Q# ライブラリ
+### <a name="no-locq-libraries"></a>Q# ライブラリ
 
 * [Q# 標準ライブラリ](xref:microsoft.quantum.libraries.standard.intro)では、従来の言語制御の要件と Q# 量子アルゴリズムの両方をサポートする操作と関数について説明します。 
     トピックには、制御フロー、データ構造、エラー修正、テスト、デバッグが含まれます。 
-* [Q# 化学ライブラリ](xref:microsoft.quantum.chemistry.concepts.intro)では、量子化学シミュレーションをサポートする操作や関数について説明します。これは、量子コンピューティングの重要なアプリケーションです。 トピックには、ハミルトン力学や量子位相推定のシミュレーションなどが含まれます。
+* [Q# 化学ライブラリ](xref:microsoft.quantum.chemistry.concepts.intro)では、量子化学シミュレーションをサポートする操作や関数について説明します。これは、量子コンピューティングの重要な応用です。 トピックには、ハミルトン力学や量子位相推定のシミュレーションなどが含まれます。
 * [Q# 数値ライブラリ](xref:microsoft.quantum.numerics.intro)では、対象のコンピューターのネイティブ操作に関して複雑な算術関数の表現をサポートする操作と関数について説明します。
 * [Q# ライブラリ リファレンス](xref:microsoft.quantum.standardlibsintro)には、名前空間別のライブラリ エンティティに関する参照情報が含まれています。
 
@@ -79,7 +82,7 @@ Quantum 開発キットには、Q# を使用して量子プログラムを開発
 * [Microsoft Quantum Development Kit のリリース ノート](xref:microsoft.quantum.relnotes)
 
 
-## <a name="be-a-part-of-the-q-open-source-community"></a>Q# のオープンソース コミュニティに参加する
+## <a name="be-a-part-of-the-no-locq-open-source-community"></a>Q# のオープンソース コミュニティに参加する
 
 オープンソースの開発キットである Quantum 開発キットにより、開発者はすべての人の量子コンピューティングへのアクセスを容易にすることができるため、世界で最も切迫している課題の一部を解決できるようになります。  オープンソース ソフトウェアを必要とする教育機関は、その量子の学習と開発のために Q# をデプロイできます。 また、開発キットのオープンソース化により、開発者やドメインの専門家は、コードを使用して改善やアイデアを投稿する機会を得ることができます。
 

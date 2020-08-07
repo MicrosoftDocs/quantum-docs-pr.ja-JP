@@ -7,12 +7,15 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 69b83997773896583258a4996a61b6f334edf407
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871401"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866759"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum 開発キット (QDK) を更新する
 
@@ -24,7 +27,7 @@ Microsoft Quantum 開発キット (QDK) を、最新のバージョンに更新�
 1. 既存の Q# ファイルとプロジェクトを更新して、更新された構文にコードが合致するようにします。
 2. 選択した開発環境に対して、QDK そのものを更新します。
 
-## <a name="updating-q-projects"></a>Q# プロジェクトの更新 
+## <a name="updating-no-locq-projects"></a>Q# プロジェクトの更新 
 
 Q# の演算をホストするために C# と Python のどちらを使用しているかに関わらず、次の手順に従って Q# プロジェクトを更新してください。
 
@@ -36,7 +39,7 @@ Q# の演算をホストするために C# と Python のどちらを使用し�
 
     出力が `3.1.100` 以上であることを確認します。 そうでない場合、[最新バージョン](https://dotnet.microsoft.com/download)をインストールして、もう一度確認します。 その後、自分の設定 (Visual Studio、Visual Studio Code、または直接コマンド ラインで) に応じて次の手順に従います。
 
-### <a name="update-q-projects-in-visual-studio"></a>Visual Studio で Q# プロジェクトを更新する
+### <a name="update-no-locq-projects-in-visual-studio"></a>Visual Studio で Q# プロジェクトを更新する
  
 1. [こちら](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019)の手順を参照して、Visual Studio 2019 の最新バージョンに更新します。
 2. Visual Studio でソリューションを開きます。
@@ -77,13 +80,13 @@ Q# の演算をホストするために C# と Python のどちらを使用し�
 これで、[Visual Studio の QDK 拡張機能の更新](#update-visual-studio-qdk-extension)に進むことができます。
 
 
-### <a name="update-q-projects-in-visual-studio-code"></a>Visual Studio Code で Q# プロジェクトを更新する
+### <a name="update-no-locq-projects-in-visual-studio-code"></a>Visual Studio Code で Q# プロジェクトを更新する
 
 1. Visual Studio Code で、更新するプロジェクトが含まれるフォルダーを開きます。
 2. **[ターミナル]**  ->  **[新しいターミナル]** を選択します。
 3. コマンド ラインを使用する更新の手順に従います (すぐ下にあります)。
 
-### <a name="update-q-projects-using-the-command-line"></a>コマンド ラインを使用して Q# プロジェクトを更新する
+### <a name="update-no-locq-projects-using-the-command-line"></a>コマンド ラインを使用して Q# プロジェクトを更新する
 
 1. メイン プロジェクト ファイルが含まれているフォルダーに移動します。
 
@@ -231,7 +234,7 @@ QDK を更新するプロセスは、開発の言語と環境に応じて異な�
 
 これで、更新された `qsharp` Python パッケージを使用して既存の量子プログラムを実行できるようになりました。
 
-### <a name="update-the-iq-jupyter-kernel"></a>IQ# Jupyter カーネルを更新する
+### <a name="update-the-ino-locq-jupyter-kernel"></a>IQ# Jupyter カーネルを更新する
 
 更新手順は、最初のインストールに conda を使用したか、.NET CLI と pip を使用したかによって異なります。
 
@@ -316,5 +319,5 @@ QDK を更新するプロセスは、開発の言語と環境に応じて異な�
 
    - [QDK 拡張機能を更新します](#update-vs-code-qdk-extension)
    - VS Code で、 **[表示]**  ->  **[コマンド パレット]** に移動します
-   - **[Q#:Install command line project templates]\(Q#: コマンド ライン プロジェクト テンプレートのインストール\)** を選択します
+   - **[Q#: Install command line project templates]\(Q#: コマンド ライン プロジェクト テンプレートのインストール\)** を選択します
    - 数秒後に、[project templates installed successfully]\(プロジェクト テンプレートが正常にインストールされました\) というポップアップが表示されます。

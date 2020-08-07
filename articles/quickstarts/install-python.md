@@ -6,14 +6,17 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 4d148435f01d975e690828dd02335758fc71dfe4
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 01a5c31a7a920a69f4f90701d370f3a772d2c4d2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436547"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866742"
 ---
-# <a name="develop-with-q-and-python"></a>Q# と Python を使用した開発
+# <a name="develop-with-no-locq-and-python"></a>Q# と Python を使用した開発
 
 QDK をインストールして、Q# の演算を呼び出す Python のホスト プログラムを開発します。
 
@@ -83,7 +86,7 @@ VS Code を使用する場合は、次のようにします。
 
 別のエディターを使用する場合は、上記の手順ですべてが設定されています。
 
-## <a name="write-your-first-q-program"></a>最初の Q# プログラムを作成する
+## <a name="write-your-first-no-locq-program"></a>最初の Q# プログラムを作成する
 
 これで、簡単な Q# プログラムを作成して実行することで、`qsharp` Python パッケージのインストールを確認する準備ができました。
 
