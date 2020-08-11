@@ -6,14 +6,17 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
-ms.openlocfilehash: 078d86c808b26c7f0b7b2577020cd9cef9491a9d
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4fae2949bdcab0c3735b40ef029d70bf7ea3fb9f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885016"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869632"
 ---
-# <a name="the-q-user-guide"></a>Q# ユーザー ガイド
+# <a name="the-no-locq-user-guide"></a>Q# ユーザー ガイド
 
 Q# ユーザー ガイドへようこそ。 
 
@@ -23,15 +26,15 @@ Q# ユーザー ガイドへようこそ。
 
 - [Q# の基本](xref:microsoft.quantum.guide.basics):Q# プログラミング言語の目的と機能に関する概要について説明します。 
 
-- [Q# プログラム実行する方法:](xref:microsoft.quantum.guide.host-programs) Q# プログラムの実行方法について説明します。また、コマンド ライン、Q# Jupyter Notebook、または Python や .NET 言語で記述された従来のホスト プログラムから、プログラムを呼び出すためのさまざまな方法の概要を示します。
+- [Q# プログラム実行する方法](xref:microsoft.quantum.guide.host-programs): Q# プログラムの実行方法について説明します。また、コマンド ライン、Q# Jupyter Notebook、または Python や .NET 言語で記述された従来のホスト プログラムから、プログラムを呼び出すためのさまざまな方法の概要を示します。
 
-### <a name="q-language"></a>Q# 言語
+### <a name="no-locq-language"></a>Q# 言語
 
-- [Q# の型](xref:microsoft.quantum.guide.types):Q# の型モデルを紹介し、型を指定して操作するための構文について説明します。
+- [Q#の型](xref:microsoft.quantum.guide.types):Q# の型モデルを紹介し、型を指定して操作するための構文について説明します。
 
 - [型式](xref:microsoft.quantum.guide.expressions):Q# の各型の値の指定、参照、結合、および操作を行う方法について詳しく説明します。 
 
-### <a name="using-q"></a>Q# の使用
+### <a name="using-no-locq"></a>Q# の使用
 
 - [Q# のファイル構造](xref:microsoft.quantum.guide.filestructure):`*.qs` Q# ファイルの構造と構文について説明します。
 

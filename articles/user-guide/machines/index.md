@@ -6,16 +6,19 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: c81226ba3e50b65cb1012e885866bd6fcc3764d7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 77401ca3642b89d708f338f852dc60bf7346b87b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871163"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868306"
 ---
 # <a name="quantum-simulators"></a>量子シミュレーター
 
-量子シミュレーターは従来型コンピューターで実行され、"*ターゲット マシン*" として動作するソフトウェア プログラムであり、量子プログラムをある環境で実行して、さまざまな演算に量子ビットがどのように反応するかを予測するためのテストを行えるようにします。 この記事では、Quantum Development Kit (QDK) に含まれている量子シミュレーターについて説明します。また、コマンド ラインまたは従来の言語で記述されたドライバー コードなどを使用して、量子シミュレーターに Q# プログラムを渡すさまざまな方法についても説明します。  
+量子シミュレーターは従来型コンピューターで実行され、Q# プログラムの "*ターゲット マシン*" として動作するソフトウェア プログラムであり、量子プログラムをある環境で実行して、さまざまな演算に量子ビットがどのように反応するかを予測するためのテストを行えるようにします。 この記事では、Quantum Development Kit (QDK) に含まれている量子シミュレーターについて説明します。また、コマンド ラインまたは従来の言語で記述されたドライバー コードなどを使用して、量子シミュレーターに Q# プログラムを渡すさまざまな方法についても説明します。  
 
 
 

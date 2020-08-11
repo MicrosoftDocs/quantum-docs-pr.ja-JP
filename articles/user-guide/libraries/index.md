@@ -6,14 +6,17 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries
-ms.openlocfilehash: 09fc723d27f2e026430b358c62b817c106c135c2
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: d61fe459362fdb5f3550768a26b34656a8a538a7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871503"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869105"
 ---
-# <a name="overview-of-q-libraries"></a>Q# ライブラリの概要
+# <a name="overview-of-no-locq-libraries"></a>Q# ライブラリの概要
 Quantum 開発キットには、Q# で量子アプリケーションを簡単に開発するためのいくつかのライブラリが用意されています。
 ドキュメントのこのセクションでは、そのライブラリと、それらをプログラムで使用する方法について説明します。
 
