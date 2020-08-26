@@ -1,5 +1,5 @@
 ---
-title: Quantum Machine Learning Library
+title: 量子機械学習ライブラリの用語集
 author: alexeib2
 ms.author: alexei.bocharov@microsoft.com
 ms.date: 2/27/2020
@@ -8,12 +8,12 @@ uid: microsoft.quantum.libraries.machine-learning.training
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 52c3f69fb99384270a27e57c4f32212d18bee1a4
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 068fc61d0d7c066df1270384679e13a3b3a8c878
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868901"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863023"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Quantum Machine Learning 用語集
 
@@ -21,15 +21,15 @@ ms.locfileid: "87868901"
 
 ## <a name="trainingtesting-schedules"></a>トレーニング/テストのスケジュール
 
-分類器トレーニングのコンテキストでは、トレーニングセットまたはテストセット全体のデータサンプルのサブセット*について説明します*。 スケジュールは、通常、サンプルインデックスのコレクションとして定義されます。
+分類器トレーニングのコンテキストでは、トレーニングセットまたはテストセット全体のデータサンプルのサブセット *について説明します* 。 スケジュールは、通常、サンプルインデックスのコレクションとして定義されます。
 
 ## <a name="parameterbias-scores"></a>パラメーター/バイアススコア
 
-候補のパラメーターベクターと分類子バイアスが指定されている場合、その*検証スコア*は、選択した検証スケジュールに対して相対的に測定され、スケジュール内のすべてのサンプルに対してカウントされる誤分類の数によって表されます。
+候補のパラメーターベクターと分類子バイアスが指定されている場合、その *検証スコア* は、選択した検証スケジュールに対して相対的に測定され、スケジュール内のすべてのサンプルに対してカウントされる誤分類の数によって表されます。
 
 ## <a name="hyperparameters"></a>ハイパーパラメーター
 
-モデルのトレーニングプロセスは、*ハイパーパラメーター*と呼ばれる特定の事前設定された値によって管理されます。
+モデルのトレーニングプロセスは、 *ハイパーパラメーター*と呼ばれる特定の事前設定された値によって管理されます。
 
 ### <a name="learning-rate"></a>Learning rate (学習率)
 

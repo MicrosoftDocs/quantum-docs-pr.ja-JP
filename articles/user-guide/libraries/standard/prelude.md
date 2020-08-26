@@ -2,19 +2,19 @@
 title: QDK の組み込みの操作と関数
 description: QDK の組み込みの操作と関数について説明します。これには、従来の関数、ユニタリ、ローテーション、測定演算が含まれます。
 author: QuantumWriter
-uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
+uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 283504a5f5635a4996c804e514a6f52eb4966d22
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4eb10e82a64381c503703be440be90e60f3a8622
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868442"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863722"
 ---
 # <a name="the-prelude"></a>準備 #
 
@@ -29,8 +29,8 @@ Q#クォンタム開発キットに含まれているコンパイラとターゲ
 - さまざまな演算子についての回転を表す操作です。
 - 測定を実装する操作。
 
-Clifford + $T $ gate セットは、クォンタムコンピューティングでは[universal](xref:microsoft.quantum.concepts.multiple-qubits)であるため、これらの操作では negligibly 小規模エラーの中で、クォンタムアルゴリズムをほぼ実装することができます。
-また、回転も提供することにより、 Q# プログラマは単一の qubit のユニタリおよび CNOT gate ライブラリ内で作業できるようになります。 このライブラリは、プログラマが Clifford + $T $ 分解を直接表現する必要がないため、また、1つの qubit unitaries を Clifford および $T $ ゲートにコンパイルするための非常に効率的なメソッドが存在するため、より簡単に考えることができます (詳細について[は、こちら](xref:microsoft.quantum.more-information)を参照してください)。
+Clifford + $T $ gate セットは、クォンタムコンピューティングでは [universal](xref:microsoft.quantum.concepts.multiple-qubits) であるため、これらの操作では negligibly 小規模エラーの中で、クォンタムアルゴリズムをほぼ実装することができます。
+また、回転も提供することにより、 Q# プログラマは単一の qubit のユニタリおよび CNOT gate ライブラリ内で作業できるようになります。 このライブラリは、プログラマが Clifford + $T $ 分解を直接表現する必要がないため、また、1つの qubit unitaries を Clifford および $T $ ゲートにコンパイルするための非常に効率的なメソッドが存在するため、より簡単に考えることができます (詳細について [は、こちら](xref:microsoft.quantum.more-information) を参照してください)。
 
 可能であれば、qubits で動作する準備に定義されている操作によって、 `Controlled` ターゲットコンピューターが適切な分解を実行するように、バリアントを適用できます。
 
@@ -39,7 +39,7 @@ Clifford + $T $ gate セットは、クォンタムコンピューティング�
 
 ### <a name="common-single-qubit-unitary-operations"></a>共通の単一 Qubit の解析操作 ###
 
-準備は、多くの一般的な[シングル qubit 操作](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)も定義します。
+準備は、多くの一般的な [シングル qubit 操作](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)も定義します。
 これらの操作では、との両方の機能を使用でき `Controlled` `Adjoint` ます。
 
 #### <a name="pauli-operators"></a>P# li 演算子 ####
@@ -66,7 +66,7 @@ i & 0 \end{bmatrix} です。
 \begin{bmatrix} 1 & 0 \\ \\ % FIXME: 現在、quadwhack ハックが使用されています。
 0 &-1 \end{bmatrix} です。
 
-次の例では、これらの変換を[Bloch 球](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)にマップしています (各ケースの回転軸は赤で強調表示されています)。
+次の例では、これらの変換を [Bloch 球](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere) にマップしています (各ケースの回転軸は赤で強調表示されています)。
 
 ![Bloch 球にマップされた p# li 操作](~/media/prelude_pauliBloch.png)
 
@@ -102,7 +102,7 @@ Hadamard ゲートは、$ \ket {0} $ と $ \ket $ の状態の法則を作成す
 #### <a name="rotations"></a>ローテーション ####
 
 上記の P準備 Li および Clifford 操作に加えて、 Q# 回転を表現するさまざまな方法が用意されています。
-「[シングル qubit 操作](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)」で説明されているように、ローテーションすることは、クォンタムアルゴリズムにとって重要です。
+「 [シングル qubit 操作](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)」で説明されているように、ローテーションすることは、クォンタムアルゴリズムにとって重要です。
 
 最初に、$H $ と $T $ ゲートを使用して任意の1つの Hadamard 操作を表すことができることを呼び出します。ここで、$H $ は操作、where は \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ % FIXME: 現在は quad back たたくハックを使用します。
 0 & e^{i \pi / 4} \end{bmatrix} \end{equation} This is the square root of the <xref:microsoft.quantum.intrinsic.s> operation, such that $T^2 = S$.
@@ -121,14 +121,14 @@ $-シグマ $ と $/phi $ を部分的に適用して、1つの型が単一の q
 > 特に、 `T` とは無関係な `R(PauliZ, PI() / 8, _)` [グローバルフェーズ](xref:microsoft.quantum.glossary#global-phase)によってのみ異なることを意味します。
 > このため、$T $ は $ \frac{\pi} $-gate と呼ばれることもあり {8} ます。
 >
-> また、回転によって `PauliI` 、単に $/phi/$2 のグローバルフェーズが適用されることにも注意してください。 このようなフェーズは、[概念的なドキュメント](xref:microsoft.quantum.concepts.qubit)の場合とは無関係ですが、制御された回転に関連し `PauliI` ます。
+> また、回転によって `PauliI` 、単に $/phi/$2 のグローバルフェーズが適用されることにも注意してください。 このようなフェーズは、 [概念的なドキュメント](xref:microsoft.quantum.concepts.qubit)の場合とは無関係ですが、制御された回転に関連し `PauliI` ます。
 
 クォンタムアルゴリズムでは、多くの場合、\mathbb{Z} $ と \mathbb{N} $ での一部の $k \ に対して $-phi = \ pi k/2 ^ n $ $n というように、回転を dyadic の分数として表現すると便利です。
 操作は、 <xref:microsoft.quantum.intrinsic.rfrac> この規則を使用して、指定された P# li 軸を中心とした回転を実装します。
 これは、 <xref:microsoft.quantum.intrinsic.r> 回転角度が、 `Int` dyadic の割合として解釈される型の2つの入力として指定されている点で異なります。
 このため、に `RFrac` はシグネチャがあり `((Pauli, Int, Int, Qubit) => Unit is Adj + Ctl)` ます。
 シングル qubit のユニタリ $ \ exp (i-pi k-シグマ/2 ^ n) $ を実装します。 $-シグマ $ は、最初の $k 引数に対応する Pforce Li 行列、$ は2番目の引数、$n $ は3番目の引数です。
-`RFrac(_,k,n,_)`はと同じです。 `R(_,-πk/2^n,_)` 角度は分数の負の*値*であることに注意してください。
+`RFrac(_,k,n,_)` はと同じです。 `R(_,-πk/2^n,_)` 角度は分数の負の *値* であることに注意してください。
 
 操作は、 <xref:microsoft.quantum.intrinsic.rx> $X $ 軸に対する回転を実装します。
 署名があり `((Double, Qubit) => Unit is Adj + Ctl)` ます。
@@ -144,11 +144,11 @@ $-シグマ $ と $/phi $ を部分的に適用して、1つの型が単一の q
 
 操作は、$ <xref:microsoft.quantum.intrinsic.r1> \ket $ に対して指定された量の回転を実装し {1} ます。これは $Z $ の $-$1 eigenstate です。
 署名があり `((Double, Qubit) => Unit is Adj + Ctl)` ます。
-`R1(phi,_)`は、の `R(PauliZ,phi,_)` 後に続くと同じです `R(PauliI,-phi,_)` 。
+`R1(phi,_)` は、の `R(PauliZ,phi,_)` 後に続くと同じです `R(PauliI,-phi,_)` 。
 
 操作は、 <xref:microsoft.quantum.intrinsic.r1frac> Z = 1 eigenstate に対して指定された量だけ、小数部の回転を実装します。
 署名があり `((Int,Int, Qubit) => Unit is Adj + Ctl)` ます。
-`R1Frac(k,n,_)`は、の `RFrac(PauliZ,-k.n+1,_)` 後に続くと同じです `RFrac(PauliI,k,n+1,_)` 。
+`R1Frac(k,n,_)` は、の `RFrac(PauliZ,-k.n+1,_)` 後に続くと同じです `RFrac(PauliI,k,n+1,_)` 。
 
 Bloch 球にマップされた (このインスタンスの p Li $Z $ axis を中心とした) 回転操作の例を次に示します。
 
@@ -170,10 +170,10 @@ Bloch 球にマップされた (このインスタンスの p Li $Z $ axis を�
 操作は、 <xref:microsoft.quantum.intrinsic.swap> 2 つの qubits のクォンタムの状態を交換します。
 つまり、このメソッドは、ユニタリ行列を実装します。 \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 0 & \\ \\ 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix}. です。
 (& a)、署名が含まれてい `((Qubit, Qubit) => Unit is Adj + Ctl)` ます。
-`SWAP(q1,q2)`は `CNOT(q1, q2)` 、との後に続くと同じです `CNOT(q2, q1)` `CNOT(q1, q2)` 。
+`SWAP(q1,q2)` は `CNOT(q1, q2)` 、との後に続くと同じです `CNOT(q2, q1)` `CNOT(q1, q2)` 。
 
 > [!NOTE]
-> スワップゲートは、変数の要素を型で再配置するのと同じでは*ありません* `Qubit[]` 。
+> スワップゲートは、変数の要素を型で再配置するのと同じでは *ありません* `Qubit[]` 。
 > を適用する `SWAP(q1, q2)` と、とによって参照される qubits の状態が変更されますが、は `q1` これらの `q2` `let swappedRegister = [q2, q1];` qubits を参照する方法にのみ影響します。
 > さらに、は、 `(Controlled SWAP)([q0], (q1, q2))` `SWAP` 要素の並べ替えによっては表現できない3番目の qubit の状態に対して条件を設定できます。
 > Fredkin gate とも呼ばれる、制御されたスワップゲートは、すべての従来の計算を含めるのに十分な性能を備えています。
@@ -202,14 +202,14 @@ Bloch 球にマップされた (このインスタンスの p Li $Z $ axis を�
 
 操作は、 <xref:microsoft.quantum.intrinsic.measure> 指定された P# li 演算子の積で1つ以上の qubits の結合測定を実行します。
 P# li 配列と qubit 配列の長さが異なる場合、操作は失敗します。
-`Measure`に署名があり `((Pauli[], Qubit[]) => Result)` ます。
+`Measure` に署名があり `((Pauli[], Qubit[]) => Result)` ます。
 
 ジョイント測定は、各 qubit を個別に測定するのと同じではないことに注意してください。
 たとえば、$ \ket {11} = \ket/ {1} otimes \Ket {1} = Xotimes X \ket $ という状態を考えてみ {00} ます。
 各 $Z 0 $ と $Z _1 $ を個別に測定すると、$r 0 = $1 および $r _1 = $1 の結果が得られます。
 $Z 0 Z_1 $ を測定すると、$ \ket $ の pairity が正であることを表す _ {\textrm{joint}} = $0 という1つの $r 結果が得られ {11} ます。
 異なる形式で、$ (-1) ^ {r_0 + r_1} = (-1) ^ r_ {\textrm{joint}}) $ と指定します。
-非常に大きなことですが、この測定からはパリティを学習する*だけ*なので、法則に示されている、正のパリティの 2 2-qubit の状態間のクォンタム情報 ($ \ket {00} $ と $ \ket {11} $) は保持されます。
+非常に大きなことですが、この測定からはパリティを学習する *だけ* なので、法則に示されている、正のパリティの 2 2-qubit の状態間のクォンタム情報 ($ \ket {00} $ と $ \ket {11} $) は保持されます。
 このプロパティは、エラー修正について説明するため、後で必要になります。
 
 便宜上、準備には、qubits を測定するための他の2つの操作も用意されています。
@@ -217,9 +217,9 @@ $Z 0 Z_1 $ を測定すると、$ \ket $ の pairity が正であることを表
 この操作では、 <xref:microsoft.quantum.intrinsic.m> 1 つの qubit に対して P# li $Z $ 演算子を測定し、シグネチャを持ち `(Qubit => Result)` ます。
 `M(q)` は `Measure([PauliZ], [q])` に相当します。
 
-は、 <xref:microsoft.quantum.measurement.multim> qubits の各配列で*個別*に $Z $ 演算子を測定し、qubits ごとに取得された値の*配列*を返し `Result` ます。
+は、 <xref:microsoft.quantum.measurement.multim> qubits の各配列で *個別* に $Z $ 演算子を測定し、qubits ごとに取得された値の *配列* を返し `Result` ます。
 場合によっては、これを最適化することができます。 シグネチャ () があり `Qubit[] => Result[])` ます。
-`MultiM(qs)`は、次の場合と同じです。
+`MultiM(qs)` は、次の場合と同じです。
 
 ```qsharp
 mutable rs = new Result[Length(qs)];

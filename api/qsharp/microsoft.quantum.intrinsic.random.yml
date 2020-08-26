@@ -3,31 +3,24 @@ uid: microsoft.quantum.intrinsic.random
 name: Random
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: >-
-  ランダム操作は、入力として double の配列を取得し、ランダムに選択されたインデックスを`Int`として配列に返します。
-
-  特定のインデックスを選択する確率は、そのインデックス位置にある配列要素の値に比例します。
-
-  0に等しい配列要素は無視され、インデックスは返されません。 配列要素が0未満の場合、または配列要素がゼロより大きい場合、操作は失敗します。
+summary: ランダムの使用は非推奨とされました。 代わりに、@"microsoft.quantum.random.drawcategorical" を使用してください。
 syntax: 'operation Random (probs : Double[]) : Int'
 input:
   content: '(probs : Double[])'
   types:
   - name: probs
-    summary: 各インデックスを選択する確率に比例した浮動小数点数の配列。
     isArray: true
     isPrimitive: true
     uid: Double
 output:
   content: Int
   types:
-  - summary: 確率が $ \ Pr (i) = p_i/\ sum_i p_i $ の整数 $i $。ここで $p _i $ は、の`probs`$i $ th 要素です。
-    isPrimitive: true
+  - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: b269b780b5e8ad048d1563e3dca98524a5ed63d2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: eb8c26f5085dc728c558bb996ebc6cf068fa6cb4
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686820"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863349"

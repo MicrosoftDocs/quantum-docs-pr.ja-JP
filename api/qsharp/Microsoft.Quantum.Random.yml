@@ -1,0 +1,45 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.random
+name: Microsoft.Quantum.Random
+functions:
+- uid: microsoft.quantum.random.categoricaldistribution
+  summary: 個別のカテゴリ分布を返します。この分布では、特定の結果の有限のリストの各確率が明示的に指定されます。
+- uid: microsoft.quantum.random.continuousuniformdistribution
+  summary: 指定された範囲内の一様分布を返します。
+- uid: microsoft.quantum.random.discreteuniformdistribution
+  summary: 指定された包括範囲に対する一様分布を返します。
+- uid: microsoft.quantum.random.normaldistribution
+  summary: 指定された平均と分散を使用して正規分布を返します。
+- uid: microsoft.quantum.random.standardnormaldistribution
+  summary: 平均0および分散1を持つ正規分布を返します。
+- uid: microsoft.quantum.random.transformedcontinuousdistribution
+  summary: 連続分布の場合は、指定された関数によって元のを変換する新しい分布を返します。
+operations:
+- uid: microsoft.quantum.random.drawcategorical
+  summary: Probablities のリストによって指定されたカテゴリ分布からランダムサンプルを描画します。
+- uid: microsoft.quantum.random.drawrandombool
+  summary: 成功の確率が指定された場合、は、指定された確率で true である単一のベルヌーイ評価を返します。
+- uid: microsoft.quantum.random.drawrandomdouble
+  summary: 指定した包括間隔でランダムな実数を描画します。
+- uid: microsoft.quantum.random.drawrandomint
+  summary: 指定した包括範囲内にランダムな整数を描画します。
+- uid: microsoft.quantum.random.drawrandompauli
+  summary: ランダムな P# li 値を描画します。
+- uid: microsoft.quantum.random.maybechooseelement
+  summary: データの配列とそのインデックスに対する分布を指定すると、はランダムに要素を選択しようとします。
+newtypes:
+- uid: microsoft.quantum.random.bigdiscretedistribution
+  summary: 任意のサイズの整数に対する uni可変分布確率分布を表します。
+- uid: microsoft.quantum.random.complexdistribution
+  summary: 複素数に対する uninumbers の確率分布を表します。
+- uid: microsoft.quantum.random.continuousdistribution
+  summary: 実数に対する uninumbers 確率分布を表します。
+- uid: microsoft.quantum.random.discretedistribution
+  summary: 整数に対するユニバリエーションの確率分布を表します。
+metadata:
+  ms.openlocfilehash: 04ceecba6c304e33452dd5eac014f59522a76e91
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864133"

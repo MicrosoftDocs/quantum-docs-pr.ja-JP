@@ -1,6 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.diagnostics
 name: Microsoft.Quantum.Diagnostics
+summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、アサート操作や要求関数など、診断の目的に役立つ関数と操作が含まれています。"
 functions:
 - uid: microsoft.quantum.diagnostics.allequalityfactb
   summary: ブール値の2つの配列が等しいことをアサートします。
@@ -35,6 +36,10 @@ functions:
 - uid: microsoft.quantum.diagnostics.nearequalityfactd
   summary: 古典的な浮動小数点値が、最小の許容範囲 (1e-10) までの予測値を持つことをアサートします。
 operations:
+- uid: microsoft.quantum.diagnostics.allowatmostncallsca
+  summary: この操作とその adjoint の呼び出しの間に、指定された操作が特定の回数だけ呼び出されることをアサートします。
+- uid: microsoft.quantum.diagnostics.allowatmostnqubits
+  summary: この操作とその adjoint の呼び出しの間には、指定された数の追加の qubits が使用され、ステートメントを使用して割り当てられます。
 - uid: microsoft.quantum.diagnostics.assertallzero
   summary: 指定された qubits はすべて $ \ket {0} $ 状態です。
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
@@ -67,6 +72,8 @@ operations:
     このため、この操作では、テスト対象の各操作を1回だけ呼び出す必要がありますが、割り当てられる qubits は2倍必要です。
 
     このアサーションを使用して、最適化されたバージョンの操作がその単純な実装と同じように動作すること、またはクォンタム以外の入力の範囲に対して動作する操作が既知のケースと一致することを確認できます。
+- uid: microsoft.quantum.diagnostics.assertphase
+  summary: 等しい法則状態のフェーズに予期される値があることをアサートします。
 - uid: microsoft.quantum.diagnostics.assertqubit
   summary: Qubit `q` が Pauli Z 演算子の予期される eigenstate にあることをアサートします。
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
@@ -74,23 +81,24 @@ operations:
     予期される状態の qubit をアサートします。
 
 
-    `expected`複合ベクター、$ \ket{\psi} = \begin{bmatrix}a & b\ end {bmatrix} ^ {\mathrm{T}} $ を表します。
+    `expected` 複合ベクター、$ \ket{\psi} = \begin{bmatrix}a & b\ end {bmatrix} ^ {\mathrm{T}} $ を表します。
 
     各 $a $、$b $ を表す組の最初の要素は複素数の実数部ですが、2番目の要素は虚数部です。
 
     最後の引数は、アサーションが行われる許容範囲を定義します。
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
   summary: '`q`指定された許容範囲を上限として、Pauli Z 演算子の予期される eigenstate に qubit があることをアサートします。'
+- uid: microsoft.quantum.diagnostics.dumpoperation
+  summary: 操作が指定された場合、現在の実行ターゲットで使用できるようになった操作に関する診断が表示されます。
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
   summary: 型を読み込むとき、またはテスト目的で呼び出すことができる代替名を定義できる、コンパイラで認識される属性。
 - uid: microsoft.quantum.diagnostics.test
   summary: 単体テストをマークするために使用されるコンパイラ認識属性。
-summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、アサート操作や要求関数など、診断の目的に役立つ関数と操作が含まれています。"
 metadata:
-  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 16c457188160a3e0d2b4d04b40af0dabbbdc0f0a
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884564"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863044"

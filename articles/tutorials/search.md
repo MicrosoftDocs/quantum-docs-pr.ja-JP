@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.search
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5c23d71209eb484a510f102e8b581ba4ec21829a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f2ae56bdca893e8a317c16d0a993da15b9f021b5
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869666"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863118"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>チュートリアル:Q\# でグローバーの検索アルゴリズムを実装する
 
@@ -42,7 +42,7 @@ ms.locfileid: "87869666"
 
 ## <a name="write-the-code"></a>コードを作成する
 
-1. Quantum Development Kit を使用して、 [ Q# コマンドラインアプリケーション用の新しいプロジェクトを作成](xref:microsoft.quantum.install.standalone)します。 プロジェクトに `Grover` というタイトルを付けます。
+1. Quantum Development Kit を使用して、 [ Q# アプリケーションの新しいプロジェクトを作成](xref:microsoft.quantum.install.standalone)します。 プロジェクトに `Grover` というタイトルを付けます。
 
 1. 新しいプロジェクトで次のコードを `Program.qs` ファイルに追加します。
 
@@ -56,7 +56,7 @@ ms.locfileid: "87869666"
 
 1. 次に、新しいプログラムを実行し Q# て、でマークされた項目を検索し `ReflectAboutMarked` ます。
 
-### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Q#Visual Studio または Visual Studio Code を使用したコマンドラインアプリケーション
+### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>Q# Visual Studio または Visual Studio Code を使用したアプリケーション
 
 実行可能ファイルは、プロジェクトの構成とコマンドライン オプションに応じて、シミュレーターまたはリソース推定機能で `@EntryPoint()` 属性でマークされた操作または関数を実行します。
 

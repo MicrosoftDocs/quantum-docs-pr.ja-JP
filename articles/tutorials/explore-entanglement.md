@@ -1,5 +1,5 @@
 ---
-title: での結び付き検証Q#
+title: での結び付き検証 Q#
 description: でクォンタムプログラムを記述する方法について説明 Q# します。 Quantum Development Kit (QDK) を使用してベル状態アプリケーションを開発する
 author: geduardo
 ms.author: v-edsanc@microsoft.com
@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c66d26b5ea253d6fc2633fbe52fa35ba703d185d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869700"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863437"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>チュートリアル:Q\# でのもつれの確認
 
@@ -32,7 +32,7 @@ Bell という名前は、ベル状態を表しています。これは、量子
 
 また、QDK をインストールしなくても、 Q# プログラミング言語の概要と、クォンタムコンピューティングの最初の概念を確認することで、この解説に従うことができます。
 
-## <a name="in-this-tutorial-youll-learn-how-to"></a>このチュートリアルでは、次の方法について説明します。
+## <a name="in-this-tutorial-youll-learn-how-to"></a>このチュートリアルで学習する内容は次のとおりです。
 
 > [!div class="checklist"]
 > * Q での操作の作成と結合\#
@@ -52,11 +52,11 @@ Bell という名前は、ベル状態を表しています。これは、量子
 
 ## <a name="creating-a-no-locq-project"></a>プロジェクトの作成 Q#
 
-まず、新しいプロジェクトを作成する必要があり Q# ます。 このチュートリアルでは、 [VS Code のコマンドラインアプリケーション](xref:microsoft.quantum.install.standalone)に基づいて環境を使用します。
+まず、新しいプロジェクトを作成する必要があり Q# ます。 このチュートリアルでは、 [ Q# VS Code のアプリケーション](xref:microsoft.quantum.install.standalone)に基づいて環境を使用します。
 
 新しいプロジェクトを作成するには VS Code 次のようにします。 
 
-1. [ **View**  ->  **コマンドパレット**の表示] をクリックし、[ ** Q# 新しいプロジェクトの作成**] を選択します。
+1. **[表示]**  ->  **[コマンド パレット]** をクリックして、 **[Q#: 新しいプロジェクトの作成]** を選択します。
 2. **[Standalone console application]\(スタンドアロン コンソール アプリケーション\)** をクリックします。
 3. プロジェクトを保存する場所に移動して、 **[プロジェクトの作成]** をクリックします。
 4. プロジェクトが正常に作成されたら、右下にある **[Open new project...]\(新しいプロジェクトを開く...\)** をクリックします。
@@ -125,7 +125,7 @@ Q#操作は、クォンタムサブルーチンです。 つまり、これは�
 
 `SetQubitState` 操作の効果を示すため、`TestBellState` 操作を追加します。 この操作では、`Zero` または `One` を入力として受け取り、その入力で `SetQubitState` 操作を何回か呼び出して、`Zero` が量子ビットの測定から返された回数と `One` が返された回数をカウントします。 当然ながら、`TestBellState` 操作のこの最初のシミュレーションでは、`Zero` がパラメーターとして設定された量子ビットのすべての測定で `Zero` を返し、`One` がパラメーターとして設定された量子ビットのすべての測定で `One` を返すことが想定されます。 さらに、 `TestBellState` 法則と entangを示すためのコードをに追加します。
 
-`Bell.qs` ファイルの名前空間内、`SetQubitState` 操作の終了後に次の操作を追加します。
+`Program.qs` ファイルの名前空間内、`SetQubitState` 操作の終了後に次の操作を追加します。
 
 ```qsharp
    operation TestBellState(count : Int, initial : Result) : (Int, Int) {
@@ -161,15 +161,15 @@ Q#操作は、クォンタムサブルーチンです。 つまり、これは�
 
 先ほどの例の `numOnes` のように、値を変更できる変数が必要な場合は、`mutable` キーワードを使用して変数を宣言できます。 可変変数の値は、`setQubitState` ステートメントを使用して変更できます。
 
-どちらの場合も、変数の型はコンパイラによって推論されます。 Q#変数の型の注釈は必要ありません。
+どちらの場合も、変数の型はコンパイラによって推論されます。 Q# 変数の型の注釈は必要ありません。
 
 #### <a name="about-using-statements-in-q"></a>`using`Q のステートメントについて\#
 
 `using`ステートメントもに特別です Q# 。 これは、コードのブロックで使用するために量子ビットを割り当てる場合に使用されます。 では Q# 、複雑なアルゴリズムの有効期間全体にわたって存在するリソースが固定されるのではなく、すべての qubits が動的に割り当てられ、解放されます。 `using` ステートメントは、ブロックの最初で一連の量子ビットを割り当て、ブロックの最後でその量子ビットを解放します。
 
-## <a name="execute-the-code-from-the-command-line"></a>コマンドラインからコードを実行する
+## <a name="run-the-code-from-the-command-prompt"></a>コマンドプロンプトからコードを実行する
 
-コードを実行するには、コマンドを指定したときに実行さ*れる*呼び出し可能なコンパイラを指定する必要があり `dotnet run` ます。 これは、呼び出し可能な Q# ( `@EntryPoint()` この場合は操作) の直前に行を追加することで、ファイルを単純に変更することで行われます。 `TestBellState` 完全なコードは次のようになります。
+コードを実行するには、コマンドを指定したときに実行さ *れる* 呼び出し可能なコンパイラを指定する必要があり `dotnet run` ます。 これは、呼び出し可能な Q# ( `@EntryPoint()` この場合は操作) の直前に行を追加することで、ファイルを単純に変更することで行われます。 `TestBellState` 完全なコードは次のようになります。
 
 ```qsharp
 namespace Bell {
@@ -208,7 +208,7 @@ namespace Bell {
 }
 ```
 
-プログラムを実行するには、 `count` `initial` コマンドラインから引数と引数を指定する必要があります。 たとえば、とのように選択し `count = 1000` `initial = One` ます。 次のコマンドを入力します。
+プログラムを実行するには、 `count` `initial` コマンドプロンプトから引数と引数を指定する必要があります。 たとえば、とのように選択し `count = 1000` `initial = One` ます。 次のコマンドを入力します。
 
 ```dotnetcli
 dotnet run --count 1000 --initial One
@@ -235,7 +235,7 @@ Test results (# of 0s, # of 1s):
 
 で Q# は、が法則に qubits を配置する方法をどのように表すかを見てみましょう。  量子ビットの状態は、0 と 1 の重ね合わせにできることを思い出してください。  これを行うには、`Hadamard` 操作を使用します。 量子ビットが従来の状態のいずれか (測定で常に `One` または `Zero` を返す) である場合、`Hadamard` (`H`) 操作によって、量子ビットの測定で 50% の `Zero` および 50% の `One` を返す状態に量子ビットが配置されます。  概念上、量子ビットは `Zero` と `One` の中間にあると考えることができます。  ここで、`TestBellState` 操作をシミュレートすると、測定後の結果は、ほぼ同数の `Zero` と `One` を返します。  
 
-### <a name="x-flips-qubit-state"></a>`X`qubit 状態を反転します
+### <a name="x-flips-qubit-state"></a>`X` qubit 状態を反転します
 
 まず、量子ビットを反転してみます (量子ビットが `Zero` の状態にある場合は `One` になり、その逆も同様になります)。 これは、`TestBellState` で測定する前に `X` 操作を実行することで実現されます。
 
@@ -265,7 +265,7 @@ Test results (# of 0s, # of 1s):
 
 次に、qubits のクォンタムプロパティについて説明します。
 
-### <a name="h-prepares-superposition"></a>`H`法則を準備する
+### <a name="h-prepares-superposition"></a>`H` 法則を準備する
 
 必要なのは、先ほどの実行の `X` 操作を `H` すなわち Hadamard 操作に置き換えることだけです。 これは、量子ビットを 0 から 1 まで完全に反転させるのではなく、半分だけ反転します。 `TestBellState` の行を置き換えると、次のようになります。
 
@@ -413,8 +413,8 @@ Test results (# of 0s, # of 1s, # of agreements)
 
 概要で述べたように、最初の量子ビットの統計情報は変わっていませんが (50-50 の確率で 0 または 1)、2 番目の量子ビットを測定すると、最初の量子ビットを測定した結果と__常に__同じになります。これは、もつれ状態にあるからです。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-このチュートリアル[Grover の検索](xref:microsoft.quantum.quickstarts.search)では、最も人気のあるクォンタムコンピューティングアルゴリズムの1つである Grover search をビルドして実行する方法を示します。また、 Q# クォンタムコンピューティングに関する実際の問題を解決するために使用できるプログラムの便利な例を紹介します。  
+このチュートリアル [Grover の検索](xref:microsoft.quantum.quickstarts.search) では、最も人気のあるクォンタムコンピューティングアルゴリズムの1つである Grover search をビルドして実行する方法を示します。また、 Q# クォンタムコンピューティングに関する実際の問題を解決するために使用できるプログラムの便利な例を紹介します。  
 
 「 [Quantum 開発キットの概要」では](xref:microsoft.quantum.welcome)、プログラミングについて学習するためのより多くの方法を推奨して Q# います。

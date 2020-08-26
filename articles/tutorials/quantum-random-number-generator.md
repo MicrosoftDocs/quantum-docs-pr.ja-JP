@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8db892091794cb1166e41744572d8938d975abf2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869768"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863621"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>チュートリアル:Q\# で量子乱数ジェネレーターを実装する
 
@@ -23,11 +23,11 @@ ms.locfileid: "87869768"
 ## <a name="prerequisites"></a>前提条件
 
 - Microsoft [Quantum 開発キット](xref:microsoft.quantum.install)。
-- Q# [ Q# コマンドラインからを使用](xref:microsoft.quantum.install.standalone)するか、 [Python ホストプログラム](xref:microsoft.quantum.install.python)または[C# ホストプログラム](xref:microsoft.quantum.install.cs)を使用して、のプロジェクトを作成します。
+- Q# [ Q# アプリケーション](xref:microsoft.quantum.install.standalone)、 [Python ホストプログラム](xref:microsoft.quantum.install.python)、または[C# ホストプログラム](xref:microsoft.quantum.install.cs)のいずれかのプロジェクトを作成します。
 
 ## <a name="write-a-no-locq-operation"></a>操作を記述する Q#
 
-### <a name="no-locq-operation-code"></a>Q#操作コード
+### <a name="no-locq-operation-code"></a>Q# 操作コード
 
 1. Program.qs ファイルの内容を次のコードに置き換えます。
 
@@ -64,13 +64,13 @@ ms.locfileid: "87869768"
 
 ## <a name="creating-a-complete-random-number-generator"></a>完全な乱数ジェネレーターの作成
 
-これで、ランダムなビットを生成する操作ができるようになりました。これを Q# 使用して、完全なクォンタム乱数ジェネレーターを構築できます。 コマンドラインアプリケーションを使用することも、 Q# ホストプログラムを使用することもできます。
+これで、ランダムなビットを生成する操作ができるようになりました。これを Q# 使用して、完全なクォンタム乱数ジェネレーターを構築できます。 アプリケーションを使用することも、 Q# ホストプログラムを使用することもできます。
 
 
 
-### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Q#Visual Studio または Visual Studio Code を使用したコマンドラインアプリケーション](#tab/tabid-qsharp)
+### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>[Q# Visual Studio または Visual Studio Code を使用したアプリケーション](#tab/tabid-qsharp)
 
-完全なコマンドラインアプリケーションを作成するには Q# 、次のエントリポイントをプログラムに追加し Q# ます。 
+完全なアプリケーションを作成するには Q# 、次のエントリポイントをプログラムに追加し Q# ます。 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
@@ -92,13 +92,13 @@ dotnet build
 dotnet run --no-build
 ```
 
-### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Visual Studio Code またはコマンド ラインを使用した Python](#tab/tabid-python)
+### <a name="python-with-visual-studio-code-or-the-command-prompt"></a>[Visual Studio Code またはコマンドプロンプトを使用した Python](#tab/tabid-python)
 
 Python から新しいプログラムを実行するには Q# 、次のコードをとして保存し `host.py` ます。
 
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
-次に、コマンド ラインから Python ホスト プログラムを実行できます。
+次に、コマンドプロンプトから Python ホストプログラムを実行します。
 
 ```bash
 $ python host.py
@@ -112,7 +112,7 @@ C# から新しいプログラムを実行するには Q# 、 `Driver.cs` 次の
 
 :::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 
-次に、コマンド ラインから C# ホスト プログラムを実行できます (Visual Studio では、F5 キーを押す必要があります)。
+次に、コマンドプロンプトから C# ホストプログラムを実行できます (Visual Studio では、F5 キーを押す必要があります)。
 
 ```bash
 $ dotnet run

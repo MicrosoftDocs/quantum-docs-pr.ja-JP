@@ -1,6 +1,6 @@
 ---
 title: プログラムを実行する方法 Q#
-description: プログラムを実行するさまざまな方法の概要を説明し Q# ます。 Python または .NET 言語のコマンドライン、 Q# jupyter notebook、およびクラシックホストプログラム。
+description: プログラムを実行するさまざまな方法の概要を説明し Q# ます。 Q#Python または .net 言語のコマンドプロンプト、jupyter notebook、およびクラシックホストプログラム。
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 05/15/2020
@@ -9,31 +9,31 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8e3fa83700417a4ffaf9e3be91796c9e9513b253
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: e44a366b7eea133499beb44dbb338a02174c0073
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869734"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863191"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>プログラムを実行する方法 Q#
 
 Quantum Development Kit の最大の強みの1つは、プラットフォームと開発環境全体での柔軟性です。
-ただし、これは、新しい Q# ユーザーが、[インストールガイド](xref:microsoft.quantum.install)に記載されている多くのオプションによって混乱を招き、圧倒される可能性があることも意味します。
+ただし、これは、新しい Q# ユーザーが、 [インストールガイド](xref:microsoft.quantum.install)に記載されている多くのオプションによって混乱を招き、圧倒される可能性があることも意味します。
 このページでは、プログラムの実行時の動作につい Q# て説明し、ユーザーが実行できるさまざまな方法を比較します。
 
 主な違いは、を Q# 実行できることです。
 - スタンドアロンアプリケーションとして、 Q# は関連する唯一の言語であり、プログラムは直接呼び出されます。 このカテゴリには、次の2つの方法があります。
   - コマンドラインインターフェイス
-  - Q#Jupyter Notebook
-- Python または .NET 言語 (C# や F # など) で記述された追加の*ホストプログラム*を使用して、プログラムを呼び出し、返された結果をさらに処理することができます。
+  - Q# Jupyter Notebook
+- Python または .NET 言語 (C# や F # など) で記述された追加の *ホストプログラム*を使用して、プログラムを呼び出し、返された結果をさらに処理することができます。
 
 これらのプロセスとその違いについて理解を深めるために、単純なプログラムを考えて、 Q# 実行する方法を比較します。
 
 ## <a name="basic-no-locq-program"></a>基本 Q# プログラム
 
 基本的な量子プログラムは、法則の状態が $ \ket $ および $ \ket $ の qubit を準備し、それを測定し、結果を返すことで構成される場合があり {0} {1} ます。これは、これら2つの状態のうち、確率が等しい場合に、ランダムに発生します。
-実際には、このプロセスは、クォンタムの[乱数ジェネレーター](xref:microsoft.quantum.quickstarts.qrng)のクイックスタートの中核になっています。
+実際には、このプロセスは、クォンタムの [乱数ジェネレーター](xref:microsoft.quantum.quickstarts.qrng) のクイックスタートの中核になっています。
 
 では Q# 、これは次のコードによって実行されます。
 
@@ -45,7 +45,7 @@ Quantum Development Kit の最大の強みの1つは、プラットフォーム�
 ```
 
 ただし、このコードだけをで実行することはできません Q# 。
-そのためには、操作の本体を構成する必要があります。この[操作](xref:microsoft.quantum.guide.basics#q-operations-and-functions)は、直接または別の操作によって---呼び出されたときに実行されます。 そのため、次の形式の操作を記述できます。
+そのためには、操作の本体を構成する必要があります。この [操作](xref:microsoft.quantum.guide.basics#q-operations-and-functions)は、直接または別の操作によって---呼び出されたときに実行されます。 そのため、次の形式の操作を記述できます。
 ```qsharp
     operation MeasureSuperposition() : Result {
         using (q = Qubit()) {
@@ -63,10 +63,10 @@ Quantum Development Kit の最大の強みの1つは、プラットフォーム�
 呼び出し可能なは、によって呼び出され、実行され Q# ます。
 ただし、完全なファイルを構成するには、さらにいくつかの追加機能が必要です `*.qs` Q# 。
 
-すべての Q# 型と呼び出し可能 (定義したものと言語に固有の型の両方) は、*名前空間*内で定義されます。これらの名前は、参照可能な完全な名前を提供します。
+すべての Q# 型と呼び出し可能 (定義したものと言語に固有の型の両方) は、 *名前空間*内で定義されます。これらの名前は、参照可能な完全な名前を提供します。
 
 たとえば、およびの [`H`](xref:microsoft.quantum.intrinsic.h) 各 [`MResetZ`](xref:microsoft.quantum.measurement.mresetz) 操作は、 [`Microsoft.Quantum.Instrinsic`](xref:microsoft.quantum.intrinsic) [`Microsoft.Quantum.Measurement`](xref:microsoft.quantum.measurement) 名前空間と名前空間 ( [ Q# 標準ライブラリ](xref:microsoft.quantum.qsharplibintro)の一部) にあります。
-そのため、常に*完全な*名前を使用してを呼び出すことができます `Microsoft.Quantum.Intrinsic.H(<qubit>)` が、 `Microsoft.Quantum.Measurement.MResetZ(<qubit>)` 常にこの操作を実行すると、コードが乱雑になることがあります。
+そのため、常に *完全な* 名前を使用してを呼び出すことができます `Microsoft.Quantum.Intrinsic.H(<qubit>)` が、 `Microsoft.Quantum.Measurement.MResetZ(<qubit>)` 常にこの操作を実行すると、コードが乱雑になることがあります。
 
 ステートメントを `open` 使用すると、上記の操作本体で行ったように、より簡潔な短縮形で呼び出し可能なを参照できます。
 Q#このため、操作を含む完全なファイルは、独自の名前空間を定義し、操作が使用する呼び出しの名前空間を開いて、次の操作を行うことで構成されます。
@@ -86,7 +86,7 @@ namespace NamespaceName {
 ```
 
 > [!NOTE]
-> 名前空間は、開いたときに*別名*を付けることもできます。これは、2つの名前空間の呼び出し可能な名前または型名が競合する場合に役立ちます。
+> 名前空間は、開いたときに *別名* を付けることもできます。これは、2つの名前空間の呼び出し可能な名前または型名が競合する場合に役立ちます。
 > たとえば、代わりにを使用してから、を使用してを呼び出すこともでき `open Microsoft.Quantum.Instrinsic as NamespaceWithH;` `H` `NamespaceWithH.H(<qubit>)` ます。
 
 > [!NOTE]
@@ -103,26 +103,26 @@ namespace NamespaceName {
 最初に、実行される特定の呼び出し可能なは、同じ名前空間で定義されている他の呼び出し可能な型と型にアクセスします。
 また、 [ Q# ライブラリ](xref:microsoft.quantum.libraries)からアクセスすることもできますが、フルネームを使用するか、上記のステートメントを使用して参照する必要があり `open` ます。
 
-その後、呼び出し可能なものが*[ターゲットコンピューター](xref:microsoft.quantum.machines)* 上で実行されます。
+その後、呼び出し可能なものが *[ターゲットコンピューター](xref:microsoft.quantum.machines)* 上で実行されます。
 このようなターゲットマシンは、実際の quantum ハードウェア、または QDK の一部として提供されている複数のシミュレーターにすることができます。
-ここでの目的のために、最も役に立つターゲットコンピューターは、[フルステートシミュレーター](xref:microsoft.quantum.machines.full-state-simulator)のインスタンスです。これは `QuantumSimulator` 、ノイズフリーのクォンタムコンピューターで実行されているかのようにプログラムの動作を計算します。
+ここでの目的のために、最も役に立つターゲットコンピューターは、 [フルステートシミュレーター](xref:microsoft.quantum.machines.full-state-simulator)のインスタンスです。これは `QuantumSimulator` 、ノイズフリーのクォンタムコンピューターで実行されているかのようにプログラムの動作を計算します。
 
 ここまでは、特定の Q# 呼び出し可能が実行されたときの動作について説明しました。
 がスタンドアロンアプリケーションとホストプログラムのどちらで使用されているかにかかわらず Q# 、この一般的なプロセスは同じ---であるため、QDK の柔軟性があります。
-クォンタム開発キットを呼び出すさまざまな方法の違いにより、呼び出し可能な呼び出しの実行*方法*と、結果が返される方法を区別して Q# います。
+クォンタム開発キットを呼び出すさまざまな方法の違いにより、呼び出し可能な呼び出しの実行 *方法* と、結果が返される方法を区別して Q# います。
 具体的には、 
 1. 実行される呼び出し元を示します。 Q#
 2. 可能性のある呼び出し可能な引数の提供方法
 3. 実行するターゲットコンピューターを指定します。
 4. 結果が返される方法。
 
-まず、コマンドラインからスタンドアロンアプリケーションを使用してこれがどのように行われるかについて説明 Q# し、次に Python および C# ホストプログラムの使用に進みます。
+まず、コマンドプロンプトからスタンドアロンアプリケーションを使用してこれがどのように行われるかについて説明 Q# し、次に Python および C# ホストプログラムの使用に進みます。
 Jupyter Notebook のスタンドアロンアプリケーションは、 Q# 最初の3つとは異なり、プライマリ機能はローカルファイルを中心にしていません Q# 。
 
 > [!NOTE]
 > これらの例では説明しませんが、実行メソッド間の1つの共通点として、プログラム内から Q# (またはなどによって) 出力されるすべてのメッセージは、 [`Message`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) 通常、それぞれのコンソールに出力されます。
 
-## <a name="no-locq-from-the-command-line"></a>Q#コマンドラインから
+## <a name="no-locq-from-the-command-prompt"></a>Q# コマンドプロンプトから
 プログラムの記述を開始する最も簡単な方法の1つ Q# は、個別のファイルと2番目の言語をまったく気にすることがないようにすることです。
 QDK 拡張機能を使用して Visual Studio Code または Visual Studio を使用すると、 Q# 1 つのファイルから呼び出し可能なものだけを実行するシームレスな作業フローを実現でき Q# ます。
 
@@ -130,14 +130,14 @@ QDK 拡張機能を使用して Visual Studio Code または Visual Studio を�
 ```dotnetcli
 dotnet run
 ```
-をコマンドラインで実行します。
+」と入力します。
 最も単純なワークフローは、ターミナルのディレクトリの場所がファイルと同じ場合です Q# Q# 。たとえば、VS Code の統合ターミナルを使用して、ファイルの編集と共に簡単に処理できます。
 ただし、 [ `dotnet run` コマンド](https://docs.microsoft.com/dotnet/core/tools/dotnet-run)は多くのオプションを受け入れます。プログラムは、 `--project <PATH>` ファイルの場所を指定するだけで別の場所から実行することもできます Q# 。
 
 
 ### <a name="add-entry-point-to-no-locq-file"></a>ファイルへのエントリポイントの追加 Q#
 
-ほとんど Q# のファイルには複数の呼び出し可能が含まれているため、当然ながら、コマンドを指定したときに実行さ*れる呼び出し元*をコンパイラに知らせる必要があり `dotnet run` ます。
+ほとんど Q# のファイルには複数の呼び出し可能が含まれているため、当然ながら、コマンドを指定したときに実行さ *れる呼び出し元* をコンパイラに知らせる必要があり `dotnet run` ます。
 これは、ファイル自体を単純に変更することで行われ Q# ます。 
     - 呼び出し可能なの直前に行を追加 `@EntryPoint()` します。
 
@@ -157,11 +157,11 @@ namespace NamespaceName {
 }
 ```
 
-これで、コマンドラインからを呼び出すと、が `dotnet run` `MeasureSuperposition` 実行され、返された値がターミナルに直接出力されます。
+これで、コマンドプロンプトからを呼び出すと、が `dotnet run` `MeasureSuperposition` 実行され、返された値がターミナルに直接出力されます。
 そのため、またはのどちらかが表示され `One` `Zero` ます。 
 
 より多くの呼び出し可能を定義しているかどうかは関係ありません `MeasureSuperposition` 。実行されるのはのみです。
-また、呼び出し元が宣言の前に[ドキュメントコメント](xref:microsoft.quantum.guide.filestructure#documentation-comments)を含んでいる場合は問題ありません `@EntryPoint()` 。属性は、単純にその上に配置できます。
+また、呼び出し元が宣言の前に [ドキュメントコメント](xref:microsoft.quantum.guide.filestructure#documentation-comments) を含んでいる場合は問題ありません `@EntryPoint()` 。属性は、単純にその上に配置できます。
 
 ### <a name="callable-arguments"></a>呼び出し可能引数
 
@@ -203,7 +203,7 @@ dotnet run -n 4
 
 ### <a name="different-target-machines"></a>異なるターゲットコンピューター
 
-これまでの操作からの出力が実際の qubits でのアクションの予想される結果であるため、コマンドラインからの既定のターゲットコンピューターが完全な状態の quauntum シミュレーターであることは明らかです `QuantumSimulator` 。
+これまでの操作からの出力が実際の qubits でのアクションの予想される結果であるため、コマンドラインからの既定のターゲットコンピューターが完全な状態のクォンタムシミュレーターであることは明らかです `QuantumSimulator` 。
 ただし、オプション `--simulator` (または短縮形) を使用して、特定のターゲットコンピューターで実行するように指定することもでき `-s` ます。
 
 たとえば、次のように実行でき [`ResourcesEstimator`](xref:microsoft.quantum.machines.resources-estimator) ます。
@@ -226,7 +226,7 @@ Width           4
 BorrowedWidth   0
 ```
 
-これらのメトリックが示す内容の詳細については、「[リソースの推定機能: 報告](xref:microsoft.quantum.machines.resources-estimator#metrics-reported)されるメトリック」を参照してください。
+これらのメトリックが示す内容の詳細については、「 [リソースの推定機能: 報告](xref:microsoft.quantum.machines.resources-estimator#metrics-reported)されるメトリック」を参照してください。
 
 ### <a name="command-line-execution-summary"></a>コマンドライン実行の概要
 <br/>
@@ -238,13 +238,13 @@ BorrowedWidth   0
 両方の種類のオプションを指定する場合は、固有のオプションを指定し、その後に区切り記号を指定してから、固有のオプションを `dotnet` 指定する必要があり `--` Q# ます。
 たとえば、上記の操作に対してパスと数値 qubits を指定するした場合は、を使用して実行さ `dotnet run --project <PATH> -- -n <n>` れます。
 
-## <a name="no-locq-with-host-programs"></a>Q#ホストプログラムを使用する
+## <a name="no-locq-with-host-programs"></a>Q# ホストプログラムを使用する
 
-ファイルを Q# 手に置いた場合、コマンドラインから直接操作または関数を呼び出す代わりに、別のクラシック言語で*ホストプログラム*を使用することができます。 具体的には、Python または C# や F # などの .NET 言語で行うことができます (簡潔にするために、ここでは C# についてのみ説明します)。
-相互運用性を実現するにはもう少しセットアップが必要ですが、これらの詳細については、[インストールガイド](xref:microsoft.quantum.install)を参照してください。
+ファイルを Q# 手に置いて、コマンドプロンプトから直接操作または関数を呼び出す代わりに、別のクラシック言語で *ホストプログラム* を使用する方法があります。 具体的には、Python または C# や F # などの .NET 言語で行うことができます (簡潔にするために、ここでは C# についてのみ説明します)。
+相互運用性を実現するにはもう少しセットアップが必要ですが、これらの詳細については、 [インストールガイド](xref:microsoft.quantum.install)を参照してください。
 
 簡単に言うと、この状況で `*.py` は、 `*.cs` ファイルと同じ場所にホストプログラムファイル (やなど) が含まれるようになりました Q# 。
-これが実行される*ホスト*プログラムになり、実行中にファイルから特定の操作と関数を呼び出すことができ Q# Q# ます。
+これが実行される *ホスト* プログラムになり、実行中にファイルから特定の操作と関数を呼び出すことができ Q# Q# ます。
 相互運用性の中核となるのは、コンパイラを使用して、 Q# ファイルの内容を Q# ホストプログラムからアクセスできるようにし、それらを呼び出すことができるようにすることです。
 
 ホストプログラムを使用する主な利点の1つは、プログラムによって返される古典的なデータを Q# ホスト言語でさらに処理できることです。
@@ -256,7 +256,7 @@ BorrowedWidth   0
 <img src="../media/hostprograms_host_program_diagram.png" alt="Q# program from a host program" width="700">
 
 > [!NOTE]
-> `@EntryPoint()`コマンドラインアプリケーションに使用される属性は、 Q# ホストプログラムでは使用できません。
+> `@EntryPoint()`アプリケーションに使用される属性は、 Q# ホストプログラムでは使用できません。
 > Q#ホストによって呼び出されているファイルにエラーがある場合は、エラーが発生します。 
 
 別のホストプログラムを使用する場合は、ファイルに対する変更は必要ありません `*.qs` Q# 。
@@ -332,7 +332,7 @@ print(multi_qubit_resources)
 
 次のような結果が出力されます。
 
-```python
+```output
 Single qubit:
 1
 {'CNOT': 0, 'QubitClifford': 1, 'R': 0, 'Measure': 1, 'T': 0, 'Depth': 0, 'Width': 1, 'BorrowedWidth': 0}
@@ -341,6 +341,56 @@ Multiple qubits:
 [0, 1, 1, 1]
 {'CNOT': 0, 'QubitClifford': 4, 'R': 0, 'Measure': 4, 'T': 0, 'Depth': 0, 'Width': 4, 'BorrowedWidth': 0}
 ```
+
+#### <a name="using-no-locq-code-from-other-projects-or-packages"></a>Q#他のプロジェクトまたはパッケージからのコードの使用
+
+既定では、 `import qsharp` コマンドは、現在のフォルダー内のすべてのファイルを読み込み、 `.qs` その Q# 操作と関数を Python スクリプト内から使用できるようにします。
+
+別のフォルダーからコードを読み込むには、 Q# [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects)を使用して、 `.csproj` プロジェクトのファイル (つまり Q# 、を参照するプロジェクト) への参照を追加し `Microsoft.Quantum.Sdk` ます。
+このコマンドは `.qs` 、とそのサブフォルダーを含むフォルダー内のすべてのファイルをコンパイル `.csproj` します。 また、またはから参照されるプロジェクトを通じて参照されるパッケージも、そのファイルで再帰的に読み込まれ `PackageReference` Q# `ProjectReference` `.csproj` ます。
+
+たとえば、次の Python コードは、現在のフォルダーに対する相対パスを参照して外部プロジェクトをインポートし、その操作の1つを呼び出し Q# ます。
+
+```python
+import qsharp
+qsharp.projects.add("../qrng/Qrng.csproj")
+from Qrng import SampleQuantumRandomNumberGenerator
+print(f"Qrng result: {SampleQuantumRandomNumberGenerator.simulate()}")
+```
+
+この結果、次のような出力が生成されます。
+
+```output
+Adding reference to project: ../qrng/Qrng.csproj
+Qrng result: 0
+```
+
+コードを含む外部パッケージを読み込むに Q# は、 [ `qsharp.packages` API](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages)を使用します。
+
+現在の Q# フォルダー内のコードが外部のプロジェクトまたはパッケージに依存している場合は、 `import qsharp` 依存関係がまだ読み込まれていないため、の実行時にエラーが発生することがあります。
+コマンドの実行中に必要な外部パッケージまたはプロジェクトを読み込むには、Python スクリプトが格納されているフォルダーに、を Q# `import qsharp` 参照するファイルが含まれていることを確認し `.csproj` `Microsoft.Quantum.Sdk` ます。 その中で、 `.csproj` プロパティを `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` に追加し `<PropertyGroup>` ます。 これにより Q# `ProjectReference` `PackageReference` `.csproj` 、コマンドの実行中に、で見つかった項目または項目を再帰的に読み込むように指示され `import qsharp` ます。
+
+たとえば、 `.csproj` パッケージを自動的に読み込む単純なファイルを次に示し Q# `Microsoft.Quantum.Chemistry` ます。
+
+```xml
+<Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Quantum.Chemistry" Version="0.12.20072031" />
+    </ItemGroup>
+</Project>
+```
+
+> [!NOTE]
+> 現在、このカスタム `<IQSharpLoadAutomatically>` プロパティは python ホストで要求されていますが、将来は `.csproj` python スクリプトと同じフォルダーにあるファイルの既定の動作になる可能性があります。
+
+> [!NOTE]
+> 現在 `<QsharpCompile>` 、の設定は `.csproj` Python ホストによって無視され、 `.qs` のフォルダー (サブフォルダーを含む) 内のすべてのファイルが `.csproj` 読み込まれ、コンパイルされます。 設定のサポートは `.csproj` 今後改善される予定です (詳細については、「 [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) 」を参照してください)。
+
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
@@ -359,7 +409,7 @@ using NamespaceName;                              // make the Q# namespace avail
 ```
 
 次に、C# の名前空間、他のいくつかのビットと部分 (次の完全なコードブロックを参照) と、必要なすべてのクラシックプログラミング (呼び出しが許容されるように引数を計算するなど) を宣言し Q# ます。
-この場合、後者は必要ありませんが、このような使用例については、 [.net 相互運用性のサンプル](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet)を参照してください。
+この場合、後者は必要ありませんが、このような使用例については、  [.net 相互運用性のサンプル](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet)を参照してください。
 
 #### <a name="target-machines"></a>ターゲット コンピューター
 
@@ -424,7 +474,7 @@ namespace host
 }
 ```
 
-C# ファイルの位置で、「」と入力すると、コマンドラインからホストプログラムを実行できます。
+C# ファイルの場所では、「」と入力して、コマンドプロンプトからホストプログラムを実行できます。
 ```dotnetcli
 dotnet run
 ```
@@ -526,8 +576,8 @@ BorrowedWidth   0
 
 ***
 
-## <a name="no-locq-jupyter-notebooks"></a>Q#Jupyter Notebook
-Q#Jupyter Notebook では、I カーネルを使用します Q# 。これにより、 Q# すべての命令、メモ、およびその他のコンテンツと共に、呼び出し可能なを1つのノートブックで定義、コンパイル、および実行することが---ます。
+## <a name="no-locq-jupyter-notebooks"></a>Q# Jupyter Notebook
+Q# Jupyter Notebook では、I カーネルを使用します Q# 。これにより、 Q# すべての命令、メモ、およびその他のコンテンツと共に、呼び出し可能なを1つのノートブックで定義、コンパイル、および実行することが---ます。
 つまり、ファイルの内容をインポートして使用することはできますが、 `*.qs` Q# 実行モデルでは必要ありません。
 
 ここでは、上で定義した操作を実行する方法について詳しく説明します Q# が、jupyter notebook の使用方法の概要については、「 Q# 概要」と「 [ Q# jupyter notebook](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)」を参照してください。
@@ -541,12 +591,12 @@ Jupyter Notebook では Q# 、 Q# ファイルの名前空間内と同様にコ�
 
 > [!NOTE]
 > [Microsoft の quantum](xref:microsoft.quantum.intrinsic)および[microsoft の quantum](xref:microsoft.quantum.canon) (やなど) からの呼び出し [`H`](xref:microsoft.quantum.intrinsic.h) は、 [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) jupyter notebook のセル内で定義されている操作で自動的に使用できるようになります。 Q#
-> ただし、外部ソースファイルからのコードには当てはまりません Q# ([概要 Q# と Jupyter notebook](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)に示されているプロセス)。 
+> ただし、外部ソースファイルからのコードには当てはまりません Q# ( [概要 Q# と Jupyter notebook](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)に示されているプロセス)。 
 > 
 
 同様に、操作を定義するには、コードの記述 Q# とセルの実行のみが必要です。
 
-<img src="../media/hostprograms_jupyter_op_def_crop.png" alt="Jupyter cell defining Q# operations" width="600">
+<img src="../media/hostprograms_jupyter_op_def_crop.png" alt="Jupyter cell defining Q# operations" width="773">
 
 出力には、これらの操作が一覧表示されます。これらの操作は、今後のセルから呼び出すことができます。
 
@@ -555,12 +605,49 @@ Jupyter Notebook では Q# 、 Q# ファイルの名前空間内と同様にコ�
 特定の対象コンピューターで操作を実行する機能は、 [I Q# マジックコマンド](xref:microsoft.quantum.guide.quickref.iqsharp)を使用して提供されます。
 たとえば、はを使用し、を使用し `%simulate` `QuantumSimulator` `%estimate` `ResourcesEstimator` ます。
 
-<img src="../media/hostprograms_jupyter_no_args_sim_est_crop.png" alt="Simulate and estimate resources Jupyter cell" width="500">
+<img src="../media/hostprograms_jupyter_no_args_sim_est_crop.png" alt="Jupyter cell simulating a Q# operation and running resource estimation" width="773">
 
 ### <a name="passing-inputs-to-functions-and-operations"></a>関数および操作への入力の引き渡し
 
-現在、実行マジックコマンドは、引数を受け取らない操作でのみ使用できます。 そのため、を実行するには、次に引数を指定し `MeasureSuperpositionArray` て操作を呼び出す "ラッパー" 操作を定義する必要があります。
+操作に入力を渡すには、 Q# 引数をペアとして `key=value` 実行マジックコマンドに渡すことができます。
+そのため、 `MeasureSuperpositionArray` 4 つの qubits を使用してを実行するには、次のように実行し `%simulate MeasureSuperpositionArray n=4` ます。
 
-<img src="../media/hostprograms_jupyter_wrapper_def_sim_crop.png" alt="Wrapper function and simulate Jupyter cell" width="550">
+<img src="../media/hostprograms_jupyter_args_sim_crop.png" alt="Jupyter cell simulating a Q# operation with arguments" width="773">
 
-この操作は `%estimate` 、やその他の実行コマンドと同様に使用できます。
+このパターンは `%estimate` 、やその他の実行コマンドと同様に使用できます。
+
+### <a name="using-no-locq-code-from-other-projects-or-packages"></a>Q#他のプロジェクトまたはパッケージからのコードの使用
+
+既定では、 Q# Jupyter Notebook は現在のフォルダーにあるすべてのファイルを読み込み、その `.qs` Q# 操作と機能を Notebook 内から使用できるようにします。 [ `%who` マジックコマンド](xref:microsoft.quantum.iqsharp.magic-ref.who)では、現在使用可能なすべての操作と関数が一覧表示され Q# ます。
+
+別のフォルダーからコードを読み込むには、 Q# [ `%project` マジックコマンド](xref:microsoft.quantum.iqsharp.magic-ref.project)を使用して、 `.csproj` プロジェクトのファイル (つまり Q# 、を参照するプロジェクト) への参照を追加し `Microsoft.Quantum.Sdk` ます。 このコマンドを実行する `.qs` `.csproj` と、(およびサブフォルダー) を含むフォルダー内のすべてのファイルがコンパイルされます。 また、またはから参照されるプロジェクトを通じて参照されるパッケージも、そのファイルで再帰的に読み込まれ `PackageReference` Q# `ProjectReference` `.csproj` ます。 
+
+たとえば、次のセルは、現在の Q# フォルダーを基準としてプロジェクトパスが参照される外部プロジェクトからの操作をシミュレートします。
+
+<img src="../media/hostprograms_jupyter_project_crop.png" alt="Jupyter cell simulating a Q# operation from an external project" width="773">
+
+コードを含む外部パッケージを読み込むには Q# 、 [ `%package` マジックコマンド](xref:microsoft.quantum.iqsharp.magic-ref.package)を使用します。
+パッケージを読み込むと、パッケージの一部であるすべてのアセンブリに含まれている任意のカスタムマジックコマンドまたは表示エンコーダーも使用できるようになります。
+
+ノートブックの初期化時に外部パッケージまたはプロジェクトを読み込むには Q# 、notebook フォルダーにを参照するファイルが含まれていることを確認し `.csproj` `Microsoft.Quantum.Sdk` ます。 その中で、 `.csproj` プロパティを `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` に追加し `<PropertyGroup>` ます。 これにより、 Q# `ProjectReference` notebook の読み込み時に、 `PackageReference` で見つかった項目または項目を再帰的に読み込むように指示され `.csproj` ます。
+
+たとえば、 `.csproj` パッケージを自動的に読み込む単純なファイルを次に示し Q# `Microsoft.Quantum.Chemistry` ます。
+
+```xml
+<Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Quantum.Chemistry" Version="0.12.20072031" />
+    </ItemGroup>
+</Project>
+```
+
+> [!NOTE]
+> 現在、このカスタム `<IQSharpLoadAutomatically>` プロパティは Jupyter Notebook ホストで要求されてい Q# ますが、今後、 `.csproj` Notebook ファイルと同じフォルダーにあるファイルの既定の動作になる可能性があります。
+
+> [!NOTE]
+> 現在 `<QsharpCompile>` 、の設定は `.csproj` Jupyter Notebook ホストによって無視され、 Q# `.qs` のフォルダー (サブフォルダーを含む) 内のすべてのファイルが `.csproj` 読み込まれ、コンパイルされます。 設定のサポートは `.csproj` 今後改善される予定です (詳細については、「 [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) 」を参照してください)。

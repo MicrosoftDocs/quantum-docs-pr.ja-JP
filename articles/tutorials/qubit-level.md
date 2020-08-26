@@ -1,5 +1,5 @@
 ---
-title: で qubit レベルのプログラムを作成およびシミュレートするQ#
+title: で qubit レベルのプログラムを作成およびシミュレートする Q#
 description: 個々の qubit レベルで動作するクォンタムプログラムの記述とシミュレーションに関するステップバイステップのチュートリアル
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,12 +9,12 @@ ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 22c79e4e01db1a0d0c291d0dcff81dbfa8df5cd3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869717"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863333"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>チュートリアル: Q で qubit レベルのプログラムを記述してシミュレートする\#
 
@@ -22,7 +22,7 @@ ms.locfileid: "87869717"
 
 Q#は主に大規模なクォンタムプログラム用の高レベルのプログラミング言語として作成されていますが、特定の qubits に直接対処するクォンタムプログラムの下位レベルを調べる場合にも簡単に使用できます。
 の柔軟性に Q# より、ユーザーはこのような抽象化レベルから量子システムにアプローチできます。このチュートリアルでは、qubits 自体について説明します。
-具体的には、多くの大きなクォンタムアルゴリズムに不可欠なサブルーチンである[Quantum フーリエ変換](https://en.wikipedia.org/wiki/Quantum_Fourier_transform)の内部を見てみます。
+具体的には、多くの大きなクォンタムアルゴリズムに不可欠なサブルーチンである [Quantum フーリエ変換](https://en.wikipedia.org/wiki/Quantum_Fourier_transform)の内部を見てみます。
 
 クォンタム情報処理のこの下位ビューは、システムの特定の qubits に対するゲートの順次アプリケーションを表す "[クォンタム回線](xref:microsoft.quantum.concepts.circuits)" の観点からよく説明されていることに注意してください。
 
@@ -38,20 +38,20 @@ Q#は主に大規模なクォンタムプログラム用の高レベルのプロ
 * 既に QDK をインストールしている場合は、バージョンが[最新](xref:microsoft.quantum.update)であることを確認する
 
 
-## <a name="in-this-tutorial-youll-learn-how-to"></a>このチュートリアルでは、次の方法について説明します。
+## <a name="in-this-tutorial-youll-learn-how-to"></a>このチュートリアルで学習する内容は次のとおりです。
 
 > [!div class="checklist"]
-> * クォンタム操作の定義Q#
-> * Q#コマンドラインから直接、またはクラシックホストプログラムを使用して操作を呼び出す
+> * クォンタム操作の定義 Q#
+> * Q#コマンドプロンプトから直接、またはクラシックホストプログラムを使用して操作を呼び出す
 > * Qubit 割り当てから測定出力へのクォンタム操作をシミュレートします
 > * 操作全体でクォンタムシステムのシミュレートされた wavefunction がどのように変化するかを観察する
 
 Microsoft の Quantum 開発キットでクォンタムプログラムを実行するのは、通常、次の2つの部分で構成されています。
 1. プログラム自体は、クォンタムプログラミング言語を使用して実装され、 Q# クォンタムコンピューターまたはクォンタムシミュレーターで実行するために呼び出されます。 次のもので構成されます。 
-    - Q#操作: クォンタムレジスタに作用するサブルーチン、および 
-    - Q#functions: クォンタムアルゴリズム内で使用される古典サブルーチン。
+    - Q# 操作: クォンタムレジスタに作用するサブルーチン、および 
+    - Q# functions: クォンタムアルゴリズム内で使用される古典サブルーチン。
 2. クォンタムプログラムを呼び出すときに使用するエントリポイントと、実行するターゲットコンピューターを指定します。
-    これは、コマンドラインから直接行うことも、Python や C# などの従来のプログラミング言語で記述されたホストプログラムを使用して行うこともできます。
+    これは、コマンドプロンプトから直接行うことも、Python や C# などの従来のプログラミング言語で記述されたホストプログラムを使用して行うこともできます。
     このチュートリアルでは、どの方法を使用するかについて説明します。
 
 ## <a name="allocate-qubits-and-define-quantum-operations"></a>Qubits の割り当てとクォンタム操作の定義
@@ -61,7 +61,7 @@ Microsoft の Quantum 開発キットでクォンタムプログラムを実行�
 さらに、関数を使用して、 [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) 3 つの qubit システムのシミュレートされた wavefunction が操作間でどのように変化するかを観察します。
 
 最初の手順として、 Q# プロジェクトとファイルを作成します。
-この手順は、プログラムの呼び出しに使用する環境によって異なります。詳細については、それぞれの[インストールガイド](xref:microsoft.quantum.install)を参照してください。
+この手順は、プログラムの呼び出しに使用する環境によって異なります。詳細については、それぞれの [インストールガイド](xref:microsoft.quantum.install)を参照してください。
 
 ここでは、ファイルのコンポーネントについて順を追って説明しますが、コードは以下の完全なブロックとしても使用できます。
 
@@ -92,7 +92,7 @@ namespace NamespaceQFT {
 現時点では、この操作は引数を取らず、この例では何---も返されません。この場合、Python では、C# または空のタプルのに類似したオブジェクトを返すことを記述し `Unit` `void` `Tuple[()]` ます。
 後で、評価結果の配列を返すようにこの値を変更し、その時点で `Unit` がに置き換えられ `Result[]` ます。 
 
-### <a name="allocate-qubits-with-using"></a>に qubits を割り当てる`using`
+### <a name="allocate-qubits-with-using"></a>に qubits を割り当てる `using`
 この操作では Q# 、最初に次のステートメントを使用して、3つの qubits のレジスタを割り当て `using` ます。
 
 ```qsharp
@@ -114,7 +114,7 @@ namespace NamespaceQFT {
 ### <a name="applying-single-qubit-and-controlled-gates"></a>シングル qubit および制御ゲートの適用
 
 次に、操作自体を構成するゲートを適用します。
-Q#には、名前空間の操作として多くの基本的なクォンタムゲートが既に含まれてい [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) ますが、これらは例外ではありません。 
+Q# には、名前空間の操作として多くの基本的なクォンタムゲートが既に含まれてい [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) ますが、これらは例外ではありません。 
 
 操作内では、呼び出し Q# 可能なものを呼び出すステートメントが順番に実行されます。
 したがって、最初に適用するゲートは、 [`H`](xref:microsoft.quantum.intrinsic.h) 最初の qubit への (Hadamard) です。
@@ -134,10 +134,10 @@ Q#には、名前空間の操作として多くの基本的なクォンタムゲ
 
 #### <a name="controlled-operations"></a>制御される操作
 
-Q#を使用すると、1つまたは複数のコントロール qubits に対する操作の実行条件を非常に簡単に指定できます。
+Q# を使用すると、1つまたは複数のコントロール qubits に対する操作の実行条件を非常に簡単に指定できます。
 一般に、を呼び出しの前にを付けるだけで、 `Controlled` 操作の引数は次のように変更されます。
 
- `Op(<normal args>)`$ \ から $ `Controlled Op([<control qubits>], (<normal args>))` 。
+ `Op(<normal args>)` $ \ から $ `Controlled Op([<control qubits>], (<normal args>))` 。
 
 Control qubits が1つの qubits であっても、配列として指定されている必要があることに注意してください。
 
@@ -157,7 +157,7 @@ Control qubits が1つの qubits であっても、配列として指定され�
 さらに、 `Double` `2.0` 整数で除算する `2` と型エラーがスローされるため、(例:) で除算します。 
 
 > [!TIP]
-> `R1(π/2)`と `R1(π/4)` は、 `S` and `T` 演算 (でも) に相当し `Microsoft.Quantum.Intrinsic` ます。
+> `R1(π/2)` と `R1(π/4)` は、 `S` and `T` 演算 (でも) に相当し `Microsoft.Quantum.Intrinsic` ます。
 
 
 関連 `H` する操作および制御された回転を2番目と3番目の qubits に適用した後、次のようになります。
@@ -249,11 +249,11 @@ Q#ファイルと操作が完了すると、quantum プログラムを呼び出�
 ファイルで操作を定義したので、この操作を呼び出して、 Q# `.qs` 返されたすべてのクラシックデータを観察する必要があります。
 ここでは、返されるものはありません (上記の操作によって定義された操作が返されることを思い出して `Unit` ください) が、後で Q# 測定結果 () の配列を返すように操作を変更する場合 `Result[]` は、このことに対処します。
 
-プログラムは、 Q# それを呼び出すために使用される環境全体にわたって普及していますが、そのための方法は当然変わります。 そのため、「コマンドラインアプリケーションからの作業」また Q# は「Python または C# でのホストプログラムの使用」に対応するタブの指示に従ってください。
+プログラムは、 Q# それを呼び出すために使用される環境全体にわたって普及していますが、そのための方法は当然変わります。 そのため、「アプリケーションからの作業」 Q# または「Python または C# でのホストプログラムの使用」に対応するタブの指示に従ってください。
 
-#### <a name="command-line"></a>[コマンド ライン](#tab/tabid-cmdline)
+#### <a name="command-prompt"></a>[コマンド プロンプト](#tab/tabid-cmdline)
 
-Q#コマンドラインからプログラムを実行する場合は、ファイルにわずかな変更しか必要あり Q# ません。
+Q#コマンドプロンプトからプログラムを実行する場合は、ファイルにわずかな変更しか必要あり Q# ません。
 
 `@EntryPoint()`操作の定義の前にある行にを追加するだけです。
 
@@ -389,7 +389,7 @@ Qubit が `2` "最も重要" であるということは、基本的な状態ベ
 * **`    ---`**: 振幅のフェーズをグラフィカルに表示します。
 * **`[ 0.0000 rad ]`**: フェーズの数値 (ラジアン)。
 
-大きさとフェーズの両方がグラフィック表示で表示されます。 大きさの表現は簡単です。の棒が表示され、 `*` 確率が高いほど、棒が大きくなります。 フェーズについては、「[テストおよびデバッグ:](xref:microsoft.quantum.guide.testingdebugging#dump-functions)山の範囲に基づいて可能なシンボル表現のダンプ関数」を参照してください。
+大きさとフェーズの両方がグラフィック表示で表示されます。 大きさの表現は簡単です。の棒が表示され、 `*` 確率が高いほど、棒が大きくなります。 フェーズについては、「 [テストおよびデバッグ:](xref:microsoft.quantum.guide.testingdebugging#dump-functions) 山の範囲に基づいて可能なシンボル表現のダンプ関数」を参照してください。
 
 
 そのため、この出力は、プログラミングされたゲートによって状態が変換されたことを示しています。
@@ -445,7 +445,7 @@ $ $ \begin{align} \ket{\psi} \_ {final} &= \ frac {1} {\ sqrt {8} } \ 左 (\ket 
 
 キーワードは、 `set` を使用してバインドされた変数を再割り当てするために常に使用され `mutable` ます。
 
-#### <a name="return-resultarray"></a>返し`resultArray`
+#### <a name="return-resultarray"></a>返し `resultArray`
 
 3つの qubits がすべて測定され、結果がに追加されたので `resultArray` 、以前と同じように qubits をリセットし、割り当てを解除します。
 `using`ブロックの終了後に、を挿入します。
@@ -499,10 +499,10 @@ $ $ \begin{align} \ket{\psi} \_ {final} &= \ frac {1} {\ sqrt {8} } \ 左 (\ket 
 }
 ```
 
-コマンドラインから作業している場合、返された配列は、実行の終了時にコンソールに直接出力されます。
+コマンドプロンプトから作業している場合、返された配列は、実行の最後にコンソールに直接出力されます。
 それ以外の場合は、返された配列を処理するようにホストプログラムを更新します。
 
-#### <a name="command-line"></a>[コマンド ライン](#tab/tabid-cmdline)
+#### <a name="command-prompt"></a>[コマンド プロンプト](#tab/tabid-cmdline)
 
 返される配列についての理解を深めるために、コンソールに出力され `Message` Q# ます。次のステートメントの直前に、ファイルにもう1つを追加でき `return` ます。
 
@@ -672,9 +672,9 @@ Press any key to continue...
 ***
 
 この出力は、次のようないくつかの点を示しています。
-1. 返された結果を事前測定値と比較する `DumpMachine` と、それ以降の状態に関する QFT 法則は明確に示さ_れません_。
+1. 返された結果を事前測定値と比較する `DumpMachine` と、それ以降の状態に関する QFT 法則は明確に示さ _れません_ 。
     測定値で返されるのは、システムの wavefunction のその状態の振幅によって決まります。
-2. この後の測定値から、測定値によって `DumpMachine` 状態が_変更_され、基準値に対応する1つの基礎状態に法則の初期状態から投影されます。
+2. この後の測定値から、測定値によって `DumpMachine` 状態が _変更_ され、基準値に対応する1つの基礎状態に法則の初期状態から投影されます。
 
 この操作を何度も繰り返す場合は、結果の統計情報が表示されます。これにより、各ショットに対してランダムな結果が得られる、QFT の状態の法則が均等に重み付けされます。
 _ただし_、非効率的で不完全もありませんが、これによって、基本的な状態の相対的な振幅のみが再現されます。
@@ -701,13 +701,13 @@ _ただし_、非効率的で不完全もありませんが、これによって
 概要で説明したように、のほとんどの機能は、 Q# 個々の qubits を処理する心配をすることができるという事実を備えています。
 実際には、フルスケールの適用可能なクォンタムプログラムを開発する場合は、 `H` 特定のローテーションの前または後に操作が実行されるかどうかを心配します。 
 
-これらのライブラリには、 Q# [qft](xref:microsoft.quantum.canon.qft)操作が含まれています。この操作は、任意の数の qubits に対して実行して適用することができます。
+これらのライブラリには、 Q# [qft](xref:microsoft.quantum.canon.qft) 操作が含まれています。この操作は、任意の数の qubits に対して実行して適用することができます。
 試してみるには、ファイル内にと同じ内容の新しい操作を定義し Q# `Perform3QubitQFT` ます。ただし、最初から2行目までのすべてのものを `H` `SWAP` 置き換えます。
 ```qsharp
             let register = BigEndian(qs);    //from Microsoft.Quantum.Arithmetic
             QFT(register);                   //from Microsoft.Quantum.Canon
 ```
-最初の行は、 [`BigEndian`](xref:microsoft.quantum.arithmetic.bigendian) qubits の割り当てられた配列の式を作成するだけです `qs` 。これは、 [qft](xref:microsoft.quantum.canon.qft)操作が引数として受け取るものです。
+最初の行は、 [`BigEndian`](xref:microsoft.quantum.arithmetic.bigendian) qubits の割り当てられた配列の式を作成するだけです `qs` 。これは、 [qft](xref:microsoft.quantum.canon.qft) 操作が引数として受け取るものです。
 これは、レジスタ内の qubits のインデックスの順序に対応します。
 
 これらの操作にアクセスできるようにするには、 `open` ファイルの先頭にそれぞれの名前空間のステートメントを追加し Q# ます。
