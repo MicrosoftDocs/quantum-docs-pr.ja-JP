@@ -3,42 +3,18 @@ uid: microsoft.quantum.canon.assertphase
 name: AssertPhase
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
-  等しい法則状態のフェーズに予期される値があることをアサートします。
-
-
-  具体的には、任意の real t に対して $ \frac{e ^ {i t}} {\ sqrt{2}} (e ^ {{0} k} \ k{1}) $ として表現されるクォンタムの状態のフェーズ $ \ phi $ が、予期される値を持つことをアサートします。
-examples: >-
-  次のアサートが成功`qubit`しました: is in state $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/{0}2} \ k + e ^ {i 0.5} \ sqrt {1/{1}2} \ k $;
-
-
-  - `AssertPhase(0.0,qubit,10e-10);`
-
-
-  `qubit`状態は、$ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2} \ k{0}+ e ^ {-i 0.5} \ sqrt {1/2} \ k{1}$; です
-
-
-  - `AssertPhase(0.5,qubit,10e-10);`
-
-
-  `qubit`状態は、$ \ket{\psi} = e ^ {-i 2.2} \ sqrt {1/2} \ k{0}+ e ^ {i 0.2} \ sqrt {1/2} \ k{1}$; です
-
-
-  - `AssertPhase(-1.2,qubit,10e-10);`
+summary: AssertPhase は非推奨となりました。 代わりに、@"microsoft.quantum.diagnostics.assertphase" を使用してください。
 syntax: 'operation AssertPhase (expected : Double, qubit : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Double, qubit : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: 期待される値 $ \ phi \ in (-\ pi, \ pi) $。
     isPrimitive: true
     uid: Double
   - name: qubit
-    summary: 予期される状態を格納する qubit。
     isPrimitive: true
     uid: Qubit
   - name: tolerance
-    summary: 実際と予想される差に対する絶対許容値。
     isPrimitive: true
     uid: Double
 output:
@@ -47,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: ecfc39806fb1ffe504c76889fb36949b4fee2ed4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 17fa383f5fd8e710f8c83920abe0727663506bfb
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674314"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863282"

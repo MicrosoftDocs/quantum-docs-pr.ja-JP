@@ -53,9 +53,9 @@ functions:
 - uid: microsoft.quantum.math.complexpolarascomplex
   summary: 複素数型の複素数を `ComplexPolar` 型の複素数に変換 `Complex` します。
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: に最も近い `fraction` 、分母が以下である継続分数の値を検索します。`denominatorBound`
+  summary: に最も近い `fraction` 、分母が以下である継続分数の値を検索します。 `denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: に最も近い `fraction` 、分母が以下である継続分数の値を検索します。`denominatorBound`
+  summary: に最も近い `fraction` 、分母が以下である継続分数の値を検索します。 `denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: 指定された角度のコサインを返します。
 - uid: microsoft.quantum.math.cosh
@@ -243,17 +243,17 @@ newtypes:
 summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、従来の数学関数とデータ型が含まれています。"
 operations:
 - uid: microsoft.quantum.math.randomint
-  summary: 0以上、指定された上限を下回る、一様にサンプリングされたランダムな整数を生成します。
+  summary: "\n> [!WARNING]\n> 非推奨\n\nRandomInt は非推奨となりました。 代わりに、@\"microsoft.quantum.random.drawrandomint\" を使用してください。"
 - uid: microsoft.quantum.math.randomintpow2
-  summary: 指定したビット数で表現できるすべての整数から一様にサンプリングされたランダムな整数を生成します。
+  summary: "\n> [!WARNING]\n> 非推奨\n\nRandomIntPow2 は非推奨となりました。 代わりに、@\"microsoft.quantum.random.drawrandomint\" を使用してください。"
 - uid: microsoft.quantum.math.randomreal
-  summary: 0以上、1未満の間隔でランダムな実数を返します。
+  summary: "\n> [!WARNING]\n> 非推奨\n\nRandomReal は非推奨となりました。 代わりに、@\"microsoft.quantum.random.drawrandomdouble\" を使用してください。"
 - uid: microsoft.quantum.math.randomsinglequbitpauli
-  summary: シングル qubit の1つの演算子をランダムに一様に返します。
+  summary: "\n> [!WARNING]\n> 非推奨\n\nRandomSingleQubitPauli は非推奨となりました。 代わりに、@\"microsoft.quantum.random.drawrandompauli\" を使用してください。"
 metadata:
-  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 9df4513399d0b2d1ac534c7ba106189483ef49cc
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326496"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863062"

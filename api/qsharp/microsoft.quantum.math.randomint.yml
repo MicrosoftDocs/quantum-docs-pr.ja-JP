@@ -3,26 +3,23 @@ uid: microsoft.quantum.math.randomint
 name: RandomInt
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: 0以上、指定された上限を下回る、一様にサンプリングされたランダムな整数を生成します。
-remarks: この関数は<xref:microsoft.quantum.intrinsic.random>を呼び出します。そのため、の`Random`実装によってはがランダムになります。
+summary: RandomInt は非推奨となりました。 代わりに、@"microsoft.quantum.random.drawrandomint" を使用してください。
 syntax: 'operation RandomInt (maxInt : Int) : Int'
 input:
   content: '(maxInt : Int)'
   types:
   - name: maxInt
-    summary: この操作によって返される最大の整数より1大きい整数。
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: 指定された間隔からランダムに $ 一様に $x 整数。つまり、$ \ Pr (x) = \ frac{1}{\texttt{maxInt}} $ を使用します。
-    isPrimitive: true
+  - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 578761c1710484913122227fb3b37330702ea038
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: aacaa92c47492e49544241bd7a47519ce8413fe8
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682746"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863529"

@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertphase
+name: AssertPhase
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: >-
+  等しい法則状態のフェーズに予期される値があることをアサートします。
+
+
+  この操作では、 {2} {0} 任意の real $t $ に対して $ \frac{e ^ {i t}} {\ sqrt} (e ^ {k} \ k) $ として表現されるクォンタムの状態のフェーズ $/phi $ が、予期される値であることをアサートし {1} ます。
+examples: >-
+  次のアサートが成功しました: `qubit` is in state $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2} \ k {0} + e ^ {i 0.5} \ sqrt {1/2} \ k {1} $;
+
+
+  - `AssertPhase(0.0,qubit,10e-10);`
+
+
+  `qubit` 状態は、$ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2} \ k {0} + e ^ {-i 0.5} \ sqrt {1/2} \ k {1} $; です
+
+
+  - `AssertPhase(0.5,qubit,10e-10);`
+
+
+  `qubit` 状態は、$ \ket{\psi} = e ^ {-i 2.2} \ sqrt {1/2} \ k {0} + e ^ {i 0.2} \ sqrt {1/2} \ k {1} $; です
+
+
+  - `AssertPhase(-1.2,qubit,10e-10);`
+syntax: 'operation AssertPhase (expected : Double, qubit : Qubit, tolerance : Double) : Unit'
+input:
+  content: '(expected : Double, qubit : Qubit, tolerance : Double)'
+  types:
+  - name: expected
+    summary: 期待される値 $ \ phi \ in (-\ pi, \ pi) $。
+    isPrimitive: true
+    uid: Double
+  - name: qubit
+    summary: 予期される状態を格納する qubit。
+    isPrimitive: true
+    uid: Qubit
+  - name: tolerance
+    summary: 実際と予想される差に対する絶対許容値。
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+metadata:
+  ms.openlocfilehash: 5be9fdb82a955282a824b06dd921e6a59a0828a2
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864153"

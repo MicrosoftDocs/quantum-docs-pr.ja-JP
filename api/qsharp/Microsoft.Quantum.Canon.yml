@@ -450,11 +450,7 @@ operations:
 - uid: microsoft.quantum.canon.assertlessthanphasele
   summary: "\n> [!WARNING]\n> 非推奨\n\nAssertLessThanPhaseLE は非推奨となりました。 代わりに、@\"microsoft.quantum.arithmetic.assertphaselessthan\" を使用してください。\n@\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\" を使用してください。"
 - uid: microsoft.quantum.canon.assertphase
-  summary: >-
-    等しい法則状態のフェーズに予期される値があることをアサートします。
-
-
-    具体的には、任意の real t に対して $ \frac{e ^ {i t}} {\ sqrt {2} } (e ^ {k} \ k) $ として表現されるクォンタムの状態のフェーズ $ \ phi $ が、予期される値を持つことをアサートし {0} {1} ます。
+  summary: "\n> [!WARNING]\n> 非推奨\n\nAssertPhase は非推奨となりました。 代わりに、@\"microsoft.quantum.diagnostics.assertphase\" を使用してください。"
 - uid: microsoft.quantum.canon.cascadeccnot
   summary: "\n> [!WARNING]\n> 非推奨\n\nCascadeCCNOT は非推奨となりました。 代わりに、@\"microsoft.quantum.canon.applyccnotchain\" を使用してください。"
 - uid: microsoft.quantum.canon.cascadecnot
@@ -585,9 +581,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> 非推奨\n\nResultStack は非推奨とされました。"
 metadata:
-  ms.openlocfilehash: ab6e8a58dd163e4a9b2ea299e544a4e487d61e23
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 72e806d0a44fdcc372ab0d10edcaceb501713180
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884682"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88862944"

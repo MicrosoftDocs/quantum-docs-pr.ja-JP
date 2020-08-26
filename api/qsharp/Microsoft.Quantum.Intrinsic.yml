@@ -84,14 +84,9 @@ operations:
 
     > [!WARNING]
 
-    > この操作では、とは**逆**の符号規則を使用 @"microsoft.quantum.intrinsic.r" し、に含まれる $ 1/2 $ の係数は含まれません @"microsoft.quantum.intrinsic.r1" 。
+    > この操作では、とは **逆** の符号規則を使用 @"microsoft.quantum.intrinsic.r" し、に含まれる $ 1/2 $ の係数は含まれません @"microsoft.quantum.intrinsic.r1" 。
 - uid: microsoft.quantum.intrinsic.random
-  summary: >-
-    ランダム操作は、入力として double の配列を取得し、ランダムに選択されたインデックスをとして配列に返し `Int` ます。
-
-    特定のインデックスを選択する確率は、そのインデックス位置にある配列要素の値に比例します。
-
-    0に等しい配列要素は無視され、インデックスは返されません。 配列要素が0未満の場合、または配列要素がゼロより大きい場合、操作は失敗します。
+  summary: "\n> [!WARNING]\n> 非推奨\n\nランダムの使用は非推奨とされました。 代わりに、@\"microsoft.quantum.random.drawcategorical\" を使用してください。"
 - uid: microsoft.quantum.intrinsic.reset
   summary: 1つの qubit を指定すると、それを測定し、安全に解放できるように、それが | 0 ⟩状態であることを確認します。
 - uid: microsoft.quantum.intrinsic.resetall
@@ -106,7 +101,7 @@ operations:
 
     > [!WARNING]
 
-    > この操作では、とは**逆**の符号規則を使用 @"microsoft.quantum.intrinsic.r" します。
+    > この操作では、とは **逆** の符号規則を使用 @"microsoft.quantum.intrinsic.r" します。
 - uid: microsoft.quantum.intrinsic.rx
   summary: "指定された角度で $x $ 軸についての回転を適用します。\n\n\\begin{align} R_x (-シータ) \\mathrel{: =} e ^ {-i \\ シータ \\ sigma_x/2} = \\begin{bmatrix}/cos \\frac{\\theta} {2} &-i\\ sin \\frac{\\theta} {2} \\\\ \\\\ -i\\ sin \\frac{\\theta} {2} & \\ cos \\frac{\\theta} {2} \\end{bmatrix}.  \n\\end{align}"
 - uid: microsoft.quantum.intrinsic.ry
@@ -157,9 +152,9 @@ operations:
 
     \end{align}
 metadata:
-  ms.openlocfilehash: c0be1da035393f32fa2949214d79ecb8a4c5ccb3
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 87002c73fd66a4b05e690daec1bed37d09708118
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885233"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88862705"

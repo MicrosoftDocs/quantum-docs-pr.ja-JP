@@ -9,96 +9,96 @@ uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8db892091794cb1166e41744572d8938d975abf2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869768"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863621"
 ---
-# <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a><span data-ttu-id="c543c-103">チュートリアル:Q\# で量子乱数ジェネレーターを実装する</span><span class="sxs-lookup"><span data-stu-id="c543c-103">Tutorial: Implement a Quantum Random Number Generator in Q\#</span></span>
+# <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a><span data-ttu-id="e5b4f-103">チュートリアル:Q\# で量子乱数ジェネレーターを実装する</span><span class="sxs-lookup"><span data-stu-id="e5b4f-103">Tutorial: Implement a Quantum Random Number Generator in Q\#</span></span>
 
-<span data-ttu-id="c543c-104">で記述されたクォンタムアルゴリズムの簡単な例 Q# は、クォンタム乱数ジェネレーターです。</span><span class="sxs-lookup"><span data-stu-id="c543c-104">A simple example of a quantum algorithm written in Q# is a quantum random number generator.</span></span> <span data-ttu-id="c543c-105">このアルゴリズムでは、量子力学の性質を活用し、乱数を生成します。</span><span class="sxs-lookup"><span data-stu-id="c543c-105">This algorithm leverages the nature of quantum mechanics to produce a random number.</span></span>
+<span data-ttu-id="e5b4f-104">で記述されたクォンタムアルゴリズムの簡単な例 Q# は、クォンタム乱数ジェネレーターです。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-104">A simple example of a quantum algorithm written in Q# is a quantum random number generator.</span></span> <span data-ttu-id="e5b4f-105">このアルゴリズムでは、量子力学の性質を活用し、乱数を生成します。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-105">This algorithm leverages the nature of quantum mechanics to produce a random number.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="c543c-106">前提条件</span><span class="sxs-lookup"><span data-stu-id="c543c-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="e5b4f-106">前提条件</span><span class="sxs-lookup"><span data-stu-id="e5b4f-106">Prerequisites</span></span>
 
-- <span data-ttu-id="c543c-107">Microsoft [Quantum 開発キット](xref:microsoft.quantum.install)。</span><span class="sxs-lookup"><span data-stu-id="c543c-107">The Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).</span></span>
-- <span data-ttu-id="c543c-108">Q# [ Q# コマンドラインからを使用](xref:microsoft.quantum.install.standalone)するか、 [Python ホストプログラム](xref:microsoft.quantum.install.python)または[C# ホストプログラム](xref:microsoft.quantum.install.cs)を使用して、のプロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="c543c-108">Create a Q# project for either [using Q# from the command line](xref:microsoft.quantum.install.standalone), or with a [Python host program](xref:microsoft.quantum.install.python) or [C# host program](xref:microsoft.quantum.install.cs).</span></span>
+- <span data-ttu-id="e5b4f-107">Microsoft [Quantum 開発キット](xref:microsoft.quantum.install)。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-107">The Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).</span></span>
+- <span data-ttu-id="e5b4f-108">Q# [ Q# アプリケーション](xref:microsoft.quantum.install.standalone)、 [Python ホストプログラム](xref:microsoft.quantum.install.python)、または[C# ホストプログラム](xref:microsoft.quantum.install.cs)のいずれかのプロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-108">Create a Q# project for either a [Q# application](xref:microsoft.quantum.install.standalone), with a [Python host program](xref:microsoft.quantum.install.python), or a [C# host program](xref:microsoft.quantum.install.cs).</span></span>
 
-## <a name="write-a-no-locq-operation"></a><span data-ttu-id="c543c-109">操作を記述する Q#</span><span class="sxs-lookup"><span data-stu-id="c543c-109">Write a Q# operation</span></span>
+## <a name="write-a-no-locq-operation"></a><span data-ttu-id="e5b4f-109">操作を記述する Q#</span><span class="sxs-lookup"><span data-stu-id="e5b4f-109">Write a Q# operation</span></span>
 
-### <a name="no-locq-operation-code"></a><span data-ttu-id="c543c-110">Q#操作コード</span><span class="sxs-lookup"><span data-stu-id="c543c-110">Q# operation code</span></span>
+### <a name="no-locq-operation-code"></a><span data-ttu-id="e5b4f-110">Q# 操作コード</span><span class="sxs-lookup"><span data-stu-id="e5b4f-110">Q# operation code</span></span>
 
-1. <span data-ttu-id="c543c-111">Program.qs ファイルの内容を次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="c543c-111">Replace the contents of the Program.qs file with the following code:</span></span>
+1. <span data-ttu-id="e5b4f-111">Program.qs ファイルの内容を次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-111">Replace the contents of the Program.qs file with the following code:</span></span>
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-<span data-ttu-id="c543c-112">「[量子コンピューティングについて](xref:microsoft.quantum.overview.understanding)」という記事で述べたように、キュービットとは、重ね合わせに入ることができる量子情報の単位です。</span><span class="sxs-lookup"><span data-stu-id="c543c-112">As mentioned in our [Understanding quantum computing](xref:microsoft.quantum.overview.understanding) article, a qubit is a unit of quantum information that can be in superposition.</span></span> <span data-ttu-id="c543c-113">測定されるとき、キュービットは 0 か 1 だけになります。</span><span class="sxs-lookup"><span data-stu-id="c543c-113">When measured, a qubit can only be either 0 or 1.</span></span> <span data-ttu-id="c543c-114">ただし、実行中、キュービットの状態は測定で 0 または 1 を読み取る可能性を表わします。</span><span class="sxs-lookup"><span data-stu-id="c543c-114">However, during execution the state of the qubit represents the probability of reading either a 0 or a 1 with a measurement.</span></span> <span data-ttu-id="c543c-115">この確率論的な状態が重ね合わせと呼ばれています。</span><span class="sxs-lookup"><span data-stu-id="c543c-115">This probabilistic state is known as superposition.</span></span> <span data-ttu-id="c543c-116">この確率を使用し、乱数を生成できます。</span><span class="sxs-lookup"><span data-stu-id="c543c-116">We can use this probability to generate random numbers.</span></span>
+<span data-ttu-id="e5b4f-112">「[量子コンピューティングについて](xref:microsoft.quantum.overview.understanding)」という記事で述べたように、キュービットとは、重ね合わせに入ることができる量子情報の単位です。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-112">As mentioned in our [Understanding quantum computing](xref:microsoft.quantum.overview.understanding) article, a qubit is a unit of quantum information that can be in superposition.</span></span> <span data-ttu-id="e5b4f-113">測定されるとき、キュービットは 0 か 1 だけになります。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-113">When measured, a qubit can only be either 0 or 1.</span></span> <span data-ttu-id="e5b4f-114">ただし、実行中、キュービットの状態は測定で 0 または 1 を読み取る可能性を表わします。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-114">However, during execution the state of the qubit represents the probability of reading either a 0 or a 1 with a measurement.</span></span> <span data-ttu-id="e5b4f-115">この確率論的な状態が重ね合わせと呼ばれています。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-115">This probabilistic state is known as superposition.</span></span> <span data-ttu-id="e5b4f-116">この確率を使用し、乱数を生成できます。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-116">We can use this probability to generate random numbers.</span></span>
 
-<span data-ttu-id="c543c-117">この操作では、 Q# `Qubit` にネイティブなデータ型を導入 Q# します。</span><span class="sxs-lookup"><span data-stu-id="c543c-117">In our Q# operation, we introduce the `Qubit` datatype, native to Q#.</span></span> <span data-ttu-id="c543c-118">`Qubit` は `using` ステートメントでのみ割り当てることができます。</span><span class="sxs-lookup"><span data-stu-id="c543c-118">We can only allocate a `Qubit` with a `using` statement.</span></span> <span data-ttu-id="c543c-119">割り当て後、キュービットは常に `Zero` 状態になります。</span><span class="sxs-lookup"><span data-stu-id="c543c-119">When it gets allocated, a qubit is always in the `Zero`  state.</span></span> 
+<span data-ttu-id="e5b4f-117">この操作では、 Q# `Qubit` にネイティブなデータ型を導入 Q# します。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-117">In our Q# operation, we introduce the `Qubit` datatype, native to Q#.</span></span> <span data-ttu-id="e5b4f-118">`Qubit` は `using` ステートメントでのみ割り当てることができます。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-118">We can only allocate a `Qubit` with a `using` statement.</span></span> <span data-ttu-id="e5b4f-119">割り当て後、キュービットは常に `Zero` 状態になります。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-119">When it gets allocated, a qubit is always in the `Zero`  state.</span></span> 
 
-<span data-ttu-id="c543c-120">`H` 操作を使用することで、`Qubit` を重ね合わせに入れることができます。</span><span class="sxs-lookup"><span data-stu-id="c543c-120">Using the `H` operation, we are able to put our `Qubit` in superposition.</span></span> <span data-ttu-id="c543c-121">キュービットを測定し、その値を読み取るには、`M` 組み込み操作を使用します。</span><span class="sxs-lookup"><span data-stu-id="c543c-121">To measure a qubit and read its value, you use the `M` intrinsic operation.</span></span>
+<span data-ttu-id="e5b4f-120">`H` 操作を使用することで、`Qubit` を重ね合わせに入れることができます。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-120">Using the `H` operation, we are able to put our `Qubit` in superposition.</span></span> <span data-ttu-id="e5b4f-121">キュービットを測定し、その値を読み取るには、`M` 組み込み操作を使用します。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-121">To measure a qubit and read its value, you use the `M` intrinsic operation.</span></span>
 
-<span data-ttu-id="c543c-122">重ね合わせに `Qubit` を入れ、測定することで、コードを呼び出すたびに結果は異なる値になります。</span><span class="sxs-lookup"><span data-stu-id="c543c-122">By putting our `Qubit` in superposition and measuring it, our result will be a different value each time the code is invoked.</span></span>
+<span data-ttu-id="e5b4f-122">重ね合わせに `Qubit` を入れ、測定することで、コードを呼び出すたびに結果は異なる値になります。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-122">By putting our `Qubit` in superposition and measuring it, our result will be a different value each time the code is invoked.</span></span>
 
-<span data-ttu-id="c543c-123">`Qubit` の割り当てが解除されるとき、`Zero` 状態に明示的に戻される必要があります。戻されない場合、シミュレーターからランタイム エラーが報告されます。</span><span class="sxs-lookup"><span data-stu-id="c543c-123">When a `Qubit` is deallocated it must be explicitly set back to the `Zero` state, otherwise the simulator will report a runtime error.</span></span> <span data-ttu-id="c543c-124">これを実現する簡単な方法は `Reset` を呼び出すことです。</span><span class="sxs-lookup"><span data-stu-id="c543c-124">An easy way to achieve this is invoking `Reset`.</span></span>
+<span data-ttu-id="e5b4f-123">`Qubit` の割り当てが解除されるとき、`Zero` 状態に明示的に戻される必要があります。戻されない場合、シミュレーターからランタイム エラーが報告されます。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-123">When a `Qubit` is deallocated it must be explicitly set back to the `Zero` state, otherwise the simulator will report a runtime error.</span></span> <span data-ttu-id="e5b4f-124">これを実現する簡単な方法は `Reset` を呼び出すことです。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-124">An easy way to achieve this is invoking `Reset`.</span></span>
 
-### <a name="visualizing-the-code-with-the-bloch-sphere"></a><span data-ttu-id="c543c-125">ブロッホ球でコードを視覚化する</span><span class="sxs-lookup"><span data-stu-id="c543c-125">Visualizing the code with the Bloch sphere</span></span>
+### <a name="visualizing-the-code-with-the-bloch-sphere"></a><span data-ttu-id="e5b4f-125">ブロッホ球でコードを視覚化する</span><span class="sxs-lookup"><span data-stu-id="e5b4f-125">Visualizing the code with the Bloch sphere</span></span>
 
-<span data-ttu-id="c543c-126">ブロッホ球では、北極は古典的な値 **0** を表し、南極は古典的な値 **1** を表します。</span><span class="sxs-lookup"><span data-stu-id="c543c-126">In the Bloch sphere, the north pole represents the classical value **0** and the south pole represents the classical value **1**.</span></span> <span data-ttu-id="c543c-127">重ね合わせは球上の点で表わすことができます (矢印で表わされています)。</span><span class="sxs-lookup"><span data-stu-id="c543c-127">Any superposition can be represented by a point on the sphere (represented by an arrow).</span></span> <span data-ttu-id="c543c-128">矢印の端が極に近づけば近づくほど、測定時、その極に割り当てられる古典的な値にキュービットがなる確率が高くなります。</span><span class="sxs-lookup"><span data-stu-id="c543c-128">The closer the end of the arrow to a pole the higher the probability the qubit collapses into the classical value assigned to that pole when measured.</span></span> <span data-ttu-id="c543c-129">たとえば、下の赤い矢印で表わされているキュービットの状態では、測定したとき、値 **0** が与えられる可能性が高くなります。</span><span class="sxs-lookup"><span data-stu-id="c543c-129">For example, the qubit state represented by the red arrow below has a higher probability of giving the value **0** if we measure it.</span></span>
+<span data-ttu-id="e5b4f-126">ブロッホ球では、北極は古典的な値 **0** を表し、南極は古典的な値 **1** を表します。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-126">In the Bloch sphere, the north pole represents the classical value **0** and the south pole represents the classical value **1**.</span></span> <span data-ttu-id="e5b4f-127">重ね合わせは球上の点で表わすことができます (矢印で表わされています)。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-127">Any superposition can be represented by a point on the sphere (represented by an arrow).</span></span> <span data-ttu-id="e5b4f-128">矢印の端が極に近づけば近づくほど、測定時、その極に割り当てられる古典的な値にキュービットがなる確率が高くなります。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-128">The closer the end of the arrow to a pole the higher the probability the qubit collapses into the classical value assigned to that pole when measured.</span></span> <span data-ttu-id="e5b4f-129">たとえば、下の赤い矢印で表わされているキュービットの状態では、測定したとき、値 **0** が与えられる可能性が高くなります。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-129">For example, the qubit state represented by the red arrow below has a higher probability of giving the value **0** if we measure it.</span></span>
 
 <img src="~/media/qrng-Bloch.png" width="175" alt="A qubit state with a high probability of measuring zero">
 
-<span data-ttu-id="c543c-130">この表現を利用し、コードの動作を視覚化できます。</span><span class="sxs-lookup"><span data-stu-id="c543c-130">We can use this representation to visualize what the code is doing:</span></span>
+<span data-ttu-id="e5b4f-130">この表現を利用し、コードの動作を視覚化できます。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-130">We can use this representation to visualize what the code is doing:</span></span>
 
-* <span data-ttu-id="c543c-131">まず、状態 **0** で初期化されたキュービットから始め、`H` を適用し、**0** と **1** の確率が同じになる重ね合わせを作成します。</span><span class="sxs-lookup"><span data-stu-id="c543c-131">First we start with a qubit initialized in the state **0** and apply `H` to create a superposition in which the probabilities for **0** and **1** are the same.</span></span>
+* <span data-ttu-id="e5b4f-131">まず、状態 **0** で初期化されたキュービットから始め、`H` を適用し、**0** と **1** の確率が同じになる重ね合わせを作成します。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-131">First we start with a qubit initialized in the state **0** and apply `H` to create a superposition in which the probabilities for **0** and **1** are the same.</span></span>
 
 <img src="~/media/qrng-H.png" width="450" alt="Preparing a qubit in superposition">
 
-* <span data-ttu-id="c543c-132">次に、キュービットを測定し、出力を保存します。</span><span class="sxs-lookup"><span data-stu-id="c543c-132">Then we measure the qubit and save the output:</span></span>
+* <span data-ttu-id="e5b4f-132">次に、キュービットを測定し、出力を保存します。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-132">Then we measure the qubit and save the output:</span></span>
 
 <img src="~/media/qrng-meas.png" width="450" alt="Measuring a qubit and saving the output">
 
-<span data-ttu-id="c543c-133">測定の結果は完全にランダムになるため、ランダム ビットが 1 つ取得されました。</span><span class="sxs-lookup"><span data-stu-id="c543c-133">Since the outcome of the measurement is completely random, we have obtained a random bit.</span></span> <span data-ttu-id="c543c-134">この操作を複数回呼び出し、整数を作成できます。</span><span class="sxs-lookup"><span data-stu-id="c543c-134">We can call this operation several times to create integers.</span></span> <span data-ttu-id="c543c-135">たとえば、操作を 3 回呼び出してランダム ビットを 3 つ取得する場合、ランダムの 3 ビット数 (つまり、0 から 7 までの乱数) を構築できます。</span><span class="sxs-lookup"><span data-stu-id="c543c-135">For example, if we call the operation three times to obtain three random bits, we can build random 3-bit numbers (that is, a random number between 0 and 7).</span></span>
+<span data-ttu-id="e5b4f-133">測定の結果は完全にランダムになるため、ランダム ビットが 1 つ取得されました。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-133">Since the outcome of the measurement is completely random, we have obtained a random bit.</span></span> <span data-ttu-id="e5b4f-134">この操作を複数回呼び出し、整数を作成できます。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-134">We can call this operation several times to create integers.</span></span> <span data-ttu-id="e5b4f-135">たとえば、操作を 3 回呼び出してランダム ビットを 3 つ取得する場合、ランダムの 3 ビット数 (つまり、0 から 7 までの乱数) を構築できます。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-135">For example, if we call the operation three times to obtain three random bits, we can build random 3-bit numbers (that is, a random number between 0 and 7).</span></span>
 
 
-## <a name="creating-a-complete-random-number-generator"></a><span data-ttu-id="c543c-136">完全な乱数ジェネレーターの作成</span><span class="sxs-lookup"><span data-stu-id="c543c-136">Creating a complete random number generator</span></span>
+## <a name="creating-a-complete-random-number-generator"></a><span data-ttu-id="e5b4f-136">完全な乱数ジェネレーターの作成</span><span class="sxs-lookup"><span data-stu-id="e5b4f-136">Creating a complete random number generator</span></span>
 
-<span data-ttu-id="c543c-137">これで、ランダムなビットを生成する操作ができるようになりました。これを Q# 使用して、完全なクォンタム乱数ジェネレーターを構築できます。</span><span class="sxs-lookup"><span data-stu-id="c543c-137">Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator.</span></span> <span data-ttu-id="c543c-138">コマンドラインアプリケーションを使用することも、 Q# ホストプログラムを使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="c543c-138">We can use the Q# command line applications or use a host program.</span></span>
+<span data-ttu-id="e5b4f-137">これで、ランダムなビットを生成する操作ができるようになりました。これを Q# 使用して、完全なクォンタム乱数ジェネレーターを構築できます。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-137">Now that we have a Q# operation that generates random bits, we can use it to build a complete quantum random number generator.</span></span> <span data-ttu-id="e5b4f-138">アプリケーションを使用することも、 Q# ホストプログラムを使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-138">We can use a Q# application or use a host program.</span></span>
 
 
 
-### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[<span data-ttu-id="c543c-139">Q#Visual Studio または Visual Studio Code を使用したコマンドラインアプリケーション</span><span class="sxs-lookup"><span data-stu-id="c543c-139">Q# command line applications with Visual Studio or Visual Studio Code</span></span>](#tab/tabid-qsharp)
+### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>[<span data-ttu-id="e5b4f-139">Q# Visual Studio または Visual Studio Code を使用したアプリケーション</span><span class="sxs-lookup"><span data-stu-id="e5b4f-139">Q# applications with Visual Studio or Visual Studio Code</span></span>](#tab/tabid-qsharp)
 
-<span data-ttu-id="c543c-140">完全なコマンドラインアプリケーションを作成するには Q# 、次のエントリポイントをプログラムに追加し Q# ます。</span><span class="sxs-lookup"><span data-stu-id="c543c-140">To create the full Q# command line application, add the following entry point to your Q# program:</span></span> 
+<span data-ttu-id="e5b4f-140">完全なアプリケーションを作成するには Q# 、次のエントリポイントをプログラムに追加し Q# ます。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-140">To create the full Q# application, add the following entry point to your Q# program:</span></span> 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
-<span data-ttu-id="c543c-141">実行可能ファイルは、プロジェクトの構成とコマンドライン オプションに応じて、シミュレーターまたはリソース推定機能で `@EntryPoint()` 属性でマークされた操作または関数を実行します。</span><span class="sxs-lookup"><span data-stu-id="c543c-141">The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.</span></span>
+<span data-ttu-id="e5b4f-141">実行可能ファイルは、プロジェクトの構成とコマンドライン オプションに応じて、シミュレーターまたはリソース推定機能で `@EntryPoint()` 属性でマークされた操作または関数を実行します。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-141">The executable will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.</span></span>
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-34":::
 
-<span data-ttu-id="c543c-142">Visual Studio では、Ctrl キーを押しながら F5 キーを押すだけでスクリプトを実行します。</span><span class="sxs-lookup"><span data-stu-id="c543c-142">In Visual Studio, simply press Ctrl + F5 to execute the script.</span></span>
+<span data-ttu-id="e5b4f-142">Visual Studio では、Ctrl キーを押しながら F5 キーを押すだけでスクリプトを実行します。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-142">In Visual Studio, simply press Ctrl + F5 to execute the script.</span></span>
 
-<span data-ttu-id="c543c-143">VS Code では、ターミナルで次のように入力して、Program.qs の初回のビルドを行います。</span><span class="sxs-lookup"><span data-stu-id="c543c-143">In VS Code, build the Program.qs the first time by typing the below in the terminal:</span></span>
+<span data-ttu-id="e5b4f-143">VS Code では、ターミナルで次のように入力して、Program.qs の初回のビルドを行います。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-143">In VS Code, build the Program.qs the first time by typing the below in the terminal:</span></span>
 
 ```dotnetcli
 dotnet build
 ```
 
-<span data-ttu-id="c543c-144">以降の実行では、再度ビルドする必要はありません。</span><span class="sxs-lookup"><span data-stu-id="c543c-144">For subsequent runs, there is no need to build it again.</span></span> <span data-ttu-id="c543c-145">これを実行するには、次のコマンドを入力して、Enter キーを押します。</span><span class="sxs-lookup"><span data-stu-id="c543c-145">To run it, type the following command and press enter:</span></span>
+<span data-ttu-id="e5b4f-144">以降の実行では、再度ビルドする必要はありません。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-144">For subsequent runs, there is no need to build it again.</span></span> <span data-ttu-id="e5b4f-145">これを実行するには、次のコマンドを入力して、Enter キーを押します。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-145">To run it, type the following command and press enter:</span></span>
 
 ```dotnetcli
 dotnet run --no-build
 ```
 
-### <a name="python-with-visual-studio-code-or-the-command-line"></a>[<span data-ttu-id="c543c-146">Visual Studio Code またはコマンド ラインを使用した Python</span><span class="sxs-lookup"><span data-stu-id="c543c-146">Python with Visual Studio Code or the Command Line</span></span>](#tab/tabid-python)
+### <a name="python-with-visual-studio-code-or-the-command-prompt"></a>[<span data-ttu-id="e5b4f-146">Visual Studio Code またはコマンドプロンプトを使用した Python</span><span class="sxs-lookup"><span data-stu-id="e5b4f-146">Python with Visual Studio Code or the command prompt</span></span>](#tab/tabid-python)
 
-<span data-ttu-id="c543c-147">Python から新しいプログラムを実行するには Q# 、次のコードをとして保存し `host.py` ます。</span><span class="sxs-lookup"><span data-stu-id="c543c-147">To run your new Q# program from Python, save the following code as `host.py`:</span></span>
+<span data-ttu-id="e5b4f-147">Python から新しいプログラムを実行するには Q# 、次のコードをとして保存し `host.py` ます。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-147">To run your new Q# program from Python, save the following code as `host.py`:</span></span>
 
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
-<span data-ttu-id="c543c-148">次に、コマンド ラインから Python ホスト プログラムを実行できます。</span><span class="sxs-lookup"><span data-stu-id="c543c-148">You can then run your Python host program from the command line:</span></span>
+<span data-ttu-id="e5b4f-148">次に、コマンドプロンプトから Python ホストプログラムを実行します。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-148">You can then run your Python host program from the command prompt:</span></span>
 
 ```bash
 $ python host.py
@@ -106,13 +106,13 @@ Preparing Q# environment...
 ..The random number generated is 42
 ```
 
-### <a name="c-with-visual-studio-code-or-visual-studio"></a>[<span data-ttu-id="c543c-149">Visual Studio Code または Visual Studio を使用する C#</span><span class="sxs-lookup"><span data-stu-id="c543c-149">C# with Visual Studio Code or Visual Studio</span></span>](#tab/tabid-csharp)
+### <a name="c-with-visual-studio-code-or-visual-studio"></a>[<span data-ttu-id="e5b4f-149">Visual Studio Code または Visual Studio を使用する C#</span><span class="sxs-lookup"><span data-stu-id="e5b4f-149">C# with Visual Studio Code or Visual Studio</span></span>](#tab/tabid-csharp)
 
-<span data-ttu-id="c543c-150">C# から新しいプログラムを実行するには Q# 、 `Driver.cs` 次の c# コードを含むようにを変更します。</span><span class="sxs-lookup"><span data-stu-id="c543c-150">To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:</span></span>
+<span data-ttu-id="e5b4f-150">C# から新しいプログラムを実行するには Q# 、 `Driver.cs` 次の c# コードを含むようにを変更します。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-150">To run your new Q# program from C#, modify `Driver.cs` to include the following C# code:</span></span>
 
 :::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 
-<span data-ttu-id="c543c-151">次に、コマンド ラインから C# ホスト プログラムを実行できます (Visual Studio では、F5 キーを押す必要があります)。</span><span class="sxs-lookup"><span data-stu-id="c543c-151">You can then run your C# host program from the command line (in Visual Studio you should press F5):</span></span>
+<span data-ttu-id="e5b4f-151">次に、コマンドプロンプトから C# ホストプログラムを実行できます (Visual Studio では、F5 キーを押す必要があります)。</span><span class="sxs-lookup"><span data-stu-id="e5b4f-151">You can then run your C# host program from the command prompt (in Visual Studio you should press F5):</span></span>
 
 ```bash
 $ dotnet run
