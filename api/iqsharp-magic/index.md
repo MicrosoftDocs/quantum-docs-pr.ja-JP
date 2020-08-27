@@ -3,14 +3,14 @@ title: IQ# マジック コマンド
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 08/25/2020
 ms.topic: article
-ms.openlocfilehash: 971787adae03af35d2e5b408fb88356a8b7df90a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: d6bf8407e40be092689b38cf90514c88f798cc2f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870704"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862960"
 ---
 # <a name="iq-magic-commands"></a>IQ# マジック コマンド
 | マジック コマンド | まとめ |
@@ -35,7 +35,9 @@ ms.locfileid: "86870704"
 | [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen) | 現在開かれている名前空間とそのエイリアスを一覧表示します。 |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | NuGet パッケージを読み込む機能を提供します。 |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | このカーネルの現在のパフォーマンス メトリックを報告します。 |
+| [`%project`](xref:microsoft.quantum.iqsharp.magic-ref.project) | Q# プロジェクト参照を表示または追加する機能を提供します。 |
 | [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | 指定された関数または操作を QuantumSimulator ターゲット マシンで実行します。 |
 | [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) | 指定された関数または操作を ToffoliSimulator ターゲット マシンで実行します。 |
+| [`%trace`](xref:microsoft.quantum.iqsharp.magic-ref.trace) | 指定された操作の実行パスを視覚化します。 |
 | [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who) | 現在のセッションで使用できる Q# 操作を一覧表示します。 |
 | [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace) | 現在のワークスペースに関連するアクションを提供します。 |

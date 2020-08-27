@@ -38,10 +38,14 @@
   name: '%package マジック コマンド'
 - href: performance.md
   name: '%performance マジック コマンド'
+- href: project.md
+  name: '%project マジック コマンド'
 - href: simulate.md
   name: '%simulate マジック コマンド'
 - href: toffoli.md
   name: '%toffoli マジック コマンド'
+- href: trace.md
+  name: '%trace マジック コマンド'
 - href: who.md
   name: '%who マジック コマンド'
 - href: workspace.md

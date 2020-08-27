@@ -10,12 +10,12 @@ uid: microsoft.quantum.install
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 378970dc911ea5a794590f8336ffc6d3f9673285
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 3aafe78d5910027e2836f7dce72c064e75fc4436
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867575"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863707"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum Development Kit (QDK) のインストール
 
@@ -33,7 +33,7 @@ Q# プログラムは、Visual Studio Code または Visual Studio を使用す�
 
 QDK のインストールを続行し、Q# プロジェクトを作成するために、適切なセットアップを選択してください。
 
-[Q# コマンド ライン アプリケーションを使用した開発](xref:microsoft.quantum.install.standalone) - コマンド ラインから Q# を操作する場合は、この方法を選択します。 これには、次のオプションのようなドライバーやホスト プログラムは必要ありません。
+[Q# アプリケーションを使用した開発](xref:microsoft.quantum.install.standalone) - コマンド プロンプトから Q# を操作する場合は、この方法を選択します。 これには、次のオプションのようなドライバーやホスト プログラムは必要ありません。
 
 [Q# Jupyter Notebook を使用した開発](xref:microsoft.quantum.install.jupyter) - テキストが埋め込まれたセル内で Q# コードを実行するか、量子コンピューティングの対話型チュートリアルを作成する場合は、この環境を選択します。 
 

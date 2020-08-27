@@ -6,7 +6,7 @@ items:
     items:
       - name: インストールの概要
         href: index.md
-      - name: Q# コマンド ライン アプリケーション
+      - name: Q# アプリケーション
         href: install-command-line.md
       - name: Q# Jupyter Notebook
         href: install-jupyter.md
