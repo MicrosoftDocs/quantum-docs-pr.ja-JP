@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e44a366b7eea133499beb44dbb338a02174c0073
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: f1eca44dabd72cd107d72d3b9e3ad1081c19c27d
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863191"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992192"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>プログラムを実行する方法 Q#
 
@@ -346,7 +346,7 @@ Multiple qubits:
 
 既定では、 `import qsharp` コマンドは、現在のフォルダー内のすべてのファイルを読み込み、 `.qs` その Q# 操作と関数を Python スクリプト内から使用できるようにします。
 
-別のフォルダーからコードを読み込むには、 Q# [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects)を使用して、 `.csproj` プロジェクトのファイル (つまり Q# 、を参照するプロジェクト) への参照を追加し `Microsoft.Quantum.Sdk` ます。
+別のフォルダーからコードを読み込むには、 Q# [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects)を使用して、 `.csproj` プロジェクトのファイル (つまり Q# 、を参照するプロジェクト) への参照を追加し `Microsoft.Quantum.Sdk` ます。
 このコマンドは `.qs` 、とそのサブフォルダーを含むフォルダー内のすべてのファイルをコンパイル `.csproj` します。 また、またはから参照されるプロジェクトを通じて参照されるパッケージも、そのファイルで再帰的に読み込まれ `PackageReference` Q# `ProjectReference` `.csproj` ます。
 
 たとえば、次の Python コードは、現在のフォルダーに対する相対パスを参照して外部プロジェクトをインポートし、その操作の1つを呼び出し Q# ます。
@@ -365,7 +365,7 @@ Adding reference to project: ../qrng/Qrng.csproj
 Qrng result: 0
 ```
 
-コードを含む外部パッケージを読み込むに Q# は、 [ `qsharp.packages` API](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages)を使用します。
+コードを含む外部パッケージを読み込むに Q# は、 [ `qsharp.packages` API](https://docs.microsoft.com/python/qsharp-core/qsharp.packages.packages)を使用します。
 
 現在の Q# フォルダー内のコードが外部のプロジェクトまたはパッケージに依存している場合は、 `import qsharp` 依存関係がまだ読み込まれていないため、の実行時にエラーが発生することがあります。
 コマンドの実行中に必要な外部パッケージまたはプロジェクトを読み込むには、Python スクリプトが格納されているフォルダーに、を Q# `import qsharp` 参照するファイルが含まれていることを確認し `.csproj` `Microsoft.Quantum.Sdk` ます。 その中で、 `.csproj` プロパティを `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` に追加し `<PropertyGroup>` ます。 これにより Q# `ProjectReference` `PackageReference` `.csproj` 、コマンドの実行中に、で見つかった項目または項目を再帰的に読み込むように指示され `import qsharp` ます。

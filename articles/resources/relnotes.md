@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f94c20281c5a242aac6a731a5091264dc2847712
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 70d0c9b61e49d4ee6142edbe2767310403885f01
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863759"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992260"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -32,7 +32,7 @@ ms.locfileid: "88863759"
 
 - 新しい[名前空間](xref:microsoft.quantum.random)で、プログラム内からランダムな値をサンプリングするためのより便利な方法が提供されます。 Q# ([QuantumLibraries # 311](https://github.com/microsoft/QuantumLibraries/pull/311)、 [qsharp-runtime # 328](https://github.com/microsoft/qsharp-runtime/pull/328))
 - 新しい[ `DumpOperation` 操作](xref:microsoft.quantum.diagnostics.dumpoperation)による改良された[Microsoft の Quantum 名前空間](xref:microsoft.quantum.diagnostics)と、qubit 割り当てと oracle 呼び出しを制限するための新しい操作。 ([QuantumLibraries # 302](https://github.com/microsoft/QuantumLibraries/pull/302))
-- 現在[ `%project` ](xref:microsoft.quantum.iqsharp.magic-ref.project)の Q# [ `qsharp.projects` ](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) Q# ワークスペースフォルダー外のプロジェクトへの参照をサポートする Python での新しいマジックコマンド (I および API)。 この機能の現在の制限については、「 [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) 」を参照してください。 
+- 現在[ `%project` ](xref:microsoft.quantum.iqsharp.magic-ref.project)の Q# [ `qsharp.projects` ](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects) Q# ワークスペースフォルダー外のプロジェクトへの参照をサポートする Python での新しいマジックコマンド (I および API)。 この機能の現在の制限については、「 [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) 」を参照してください。 
 - `.csproj`I/Python ホストのファイルの自動読み込みをサポートし Q# ます。これにより、初期化時に外部プロジェクトまたはパッケージ参照を読み込むことができます。 詳細については、 [ Q# Python および Jupyter notebook で](xref:microsoft.quantum.guide.host-programs)のの使用に関するガイドを参照してください。
 - より隣人サンプルが追加されました。
 - 単純に調整可能結合が追加されました。
@@ -69,7 +69,7 @@ ms.locfileid: "88863759"
 - 移動された操作:
   - `Microsoft.Quantum.Intrinsic.Assert` は `Microsoft.Quantum.Diagnostics.AssertMeasurement` になりました
   - `Microsoft.Quantum.Intrinsic.AssertProb` は `Microsoft.Quantum.Diagnostics.AssertMeasurementProbability` になりました
-- バグの修正 
+- バグ修正 
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、 [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 、 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)については、closed pr の完全な一覧を参照してください。  
 

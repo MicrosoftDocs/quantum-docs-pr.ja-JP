@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d5338eb740716d9d7f408703347f572688bbccb2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1892431c3e332385a5bcefa357eb64a9fac3f381
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868187"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992243"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Quantum Development Kit (QDK) リソースの推定機能
 
@@ -69,7 +69,7 @@ BorrowedWidth   0
 
 ### <a name="invoking-the-resources-estimator-from-python"></a>Python からリソースの推定機能を呼び出す
 
-インポートされた操作で、Python ライブラリの[estimate_resources ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable)メソッドを使用し Q# ます。
+インポートされた操作で、Python ライブラリの [estimate_resources ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) メソッドを使用し Q# ます。
 
 ```python
 qubit_result = myOperation.estimate_resources()
@@ -77,7 +77,7 @@ qubit_result = myOperation.estimate_resources()
 
 ### <a name="invoking-the-resources-estimator-from-the-command-line"></a>コマンドラインからリソースの推定機能を呼び出す
 
-コマンドラインからプログラムを実行する場合は、 Q# **--シミュレーター** (または **-s**ショートカット) パラメーターを使用して、対象のコンピューターを指定し `ResourcesEstimator` ます。 次のコマンドは、リソースの推定機能を使用してプログラムを実行します。 
+コマンドラインからプログラムを実行する場合は、 Q# **--シミュレーター** (または **-s** ショートカット) パラメーターを使用して、対象のコンピューターを指定し `ResourcesEstimator` ます。 次のコマンドは、リソースの推定機能を使用してプログラムを実行します。 
 
 ```dotnetcli
 dotnet run -s ResourcesEstimator
@@ -85,7 +85,7 @@ dotnet run -s ResourcesEstimator
 
 ### <a name="invoking-the-resources-estimator-from-juptyer-notebooks"></a>Juptyer Notebook からリソースの推定機能を呼び出す
 
-この Q# 操作を実行するには、I マジック command [% 推定](xref:microsoft.quantum.iqsharp.magic-ref.simulate)を使用し Q# ます。
+この Q# 操作を実行するには、I マジック command [% 推定](xref:microsoft.quantum.iqsharp.magic-ref.simulate) を使用し Q# ます。
 
 ```
 %estimate myOperation
@@ -130,7 +130,7 @@ namespace Quantum.MyProgram
 |__測定値__    |測定の実行回数。  |
 |__R__    |`T`、Clifford、および P# li の各操作を除く、任意の1つの qubit 回転の実行回数。  |
 |__T__    |操作の実行回数 `T` とその活用 ( `T` 操作、T_x = h. t .h、T_y = Hy. t. hy など)。  |
-|__[奥行]__|操作によって実行されるクォンタム回線の深さの下限。 Q# 既定では、深さメトリックはゲートだけをカウントし `T` ます。 詳細については、「[深度カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)」を参照してください。   |
+|__[奥行]__|操作によって実行されるクォンタム回線の深さの下限。 Q# 既定では、深さメトリックはゲートだけをカウントし `T` ます。 詳細については、「 [深度カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)」を参照してください。   |
 |__Width__    |操作の実行中に割り当てられた qubits の最大数の下限 Q# 。 __深さ__と__幅__の両方の下限を同時に達成できない可能性があります。  |
 |__BorrowedWidth__    |操作内で借用される qubits の最大数 Q# 。  |
 
