@@ -2,7 +2,7 @@
   items:
     - name: API リファレンス
       href: index.md
-    - name: 'Q# ライブラリ'
+    - name: Q# ライブラリ
       topicHref: qsharp/index.md
       href: qsharp/toc.yml
     - name: .NET ライブラリ
@@ -14,6 +14,6 @@
         - name: 量子化学
           href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry'
     - name: Python ライブラリ
-      href: 'https://docs.microsoft.com/python/qsharp'
-    - name: 'IQ# マジック コマンド'
+      href: 'https://docs.microsoft.com/python/qsharp-core/qsharp'
+    - name: IQ# マジック コマンド
       href: iqsharp-magic/toc.yml
