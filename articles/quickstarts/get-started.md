@@ -9,12 +9,12 @@ ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ff5eb9984da0b22a65f3919599ee18605a206fa0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 06198f3b5b806bab49abf9fca38b5d2f15cfb65f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867519"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863751"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Quantum Development Kit (QDK) の概要
 
@@ -36,7 +36,7 @@ Quantum 開発キットには、Q# を使用して量子プログラムを開発
 * [Q# でのもつれの確認](xref:microsoft.quantum.write-program) - このチュートリアルでは、量子プログラミングの基本的な概念を示す Q# プログラムの記述方法について説明します。
     コーディングを開始する準備ができていない場合でも、QDK をインストールせずに説明を読み進めることで、Q# プログラミング言語の概要と量子コンピューティングの最初の概念を理解することができます。
 * [グローバーの検索アルゴリズム](xref:microsoft.quantum.quickstarts.search) - この Q# プログラムの例では、低レベルの量子演算を抽象化する方法を探ることで、量子アルゴリズムを表すための Q# の能力を確認します。
-    このチュートリアルでは、Visual Studio または Visual Studio Code を使用して、Q# コマンド ライン アプリケーションとしてプログラムを開発する手順について説明します。
+    このチュートリアルでは、Visual Studio または Visual Studio Code を使用して、Q# アプリケーションとしてプログラムを開発する手順について説明します。
 
 ### <a name="learning-further"></a>今後の学習
 * [量子コンピューティングの Microsoft Learn モジュール](https://docs.microsoft.com/learn/browse/?term=quantum)は、ご自身のペースとスケジュールで中核概念を習得できるように構成されています。 [最初のモジュール](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/)では、QDK で量子プログラムを作成する方法の基本を学習できます。

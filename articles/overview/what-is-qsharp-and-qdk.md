@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.q-sharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3ee9e897eb142bbc9503a617cc3e25c1a665ff35
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 5db574b0380ffa1616cb3959d84925854df4e321
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866946"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863771"
 ---
 # <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Q# プログラミング言語と QDK とは
 
@@ -24,7 +24,7 @@ Q# は、量子アルゴリズムを開発および実行するための Microso
 
 ## <a name="what-can-i-do-with-the-qdk"></a>QDK でできること
 
-QDK は Q# 用のフル機能の開発キットであり、さまざまな環境で実行できる量子アプリケーションを開発するために、一般的なツールと言語で使用できます。 Q# プログラムはコマンド ライン アプリとして、または Jupyter Notebook 経由で実行でき、また、ホスト プログラムとして Python または .NET を使用することもできます。
+QDK は Q# 用のフル機能の開発キットであり、さまざまな環境で実行できる量子アプリケーションを開発するために、一般的なツールと言語で使用できます。 Q# プログラムは、コンソール アプリケーションとして Jupyter Notebook 経由で実行するか、または Python または .NET ホスト プログラムを使用することができます。
 
 ### <a name="develop-in-common-tools-and-environments"></a>一般的なツールと環境で開発する
 
@@ -48,7 +48,7 @@ QDK は Q# 用のフル機能の開発キットであり、さまざまな環境
 
 ## <a name="how-does-no-locq-work"></a>Q# のしくみ
 
-Q# プログラムは、スタンドアロンのコマンド ライン アプリケーションとしてコンパイルすることも、Python または .NET 言語で記述されたホスト プログラムによって呼び出すこともできます。
+Q# プログラムは、スタンドアロン アプリケーションとしてコンパイルすることも、Python または .NET 言語で記述されたホスト プログラムによって呼び出すこともできます。
 
 プログラムをコンパイルして実行すると、量子シミュレーターのインスタンスが作成され、それに Q# コードが渡されます。 シミュレーターでは、Q# コードを使用して量子ビット (量子粒子のシミュレーション) を作成し、変換を適用してその状態を変更します。 その後、シミュレーター内の量子演算の結果がプログラムに返されます。  
 
@@ -60,7 +60,7 @@ Q# プログラムは、スタンドアロンのコマンド ライン アプリ
 
 Q# コンパイラ、Q# ライブラリ、量子シミュレーターなど、Q# プログラムの作成と実行に必要なものはすべて、ローカル コンピューターからインストールして実行できます。 最終的には、実際の量子コンピューターで Q# プログラムをリモートで実行できるようになりますが、それまでは、QDK で提供される量子シミュレーターによって正確で信頼性の高い結果が得られます。
 
-- [Q# をコマンド ラインから](xref:microsoft.quantum.install.standalone)実行する方法で開始するのが最も簡単です。
+- [Q# アプリケーション](xref:microsoft.quantum.install.standalone) の開発は、作業を開始するための最も簡単な方法です。
 
 - スタンドアロンの [Jupyter Notebook を IQ#](xref:microsoft.quantum.install.jupyter) (Q# プログラムをコンパイル、シミュレート、視覚化するための Jupyter の拡張機能) で実行します。
 

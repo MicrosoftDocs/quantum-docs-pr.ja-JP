@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.cs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 24318380e0e63957a51961762a33446fe0121b21
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867558"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863674"
 ---
 # <a name="develop-with-no-locq-and-net"></a>Q# と .NET を使用した開発
 
@@ -25,16 +25,16 @@ Q# は、C# や F# などの .NET 言語とうまく動作するように構築�
 
 ## <a name="prerequisites"></a>前提条件
 
-- [Q# コマンド ライン プロジェクトで使用するための](xref:microsoft.quantum.install.standalone) Quantum 開発キットをインストールしていること。
+- [Q# プロジェクトで使用するための](xref:microsoft.quantum.install.standalone) Quantum 開発キットをインストールしていること。
 
 ## <a name="creating-a-no-locq-library-and-a-net-host"></a>Q# ライブラリと .NET ホストを作成する
 
 最初の手順として、Q# ライブラリのプロジェクトと、Q# ライブラリで定義された演算と関数を呼び出す .NET ホストのプロジェクトを作成します。
 
 お使いの開発環境に対応するタブの指示に従ってください。
-Visual Studio または VS Code 以外のエディターを使用している場合は、コマンド ラインの手順に従ってください。
+Visual Studio または VS Code 以外のエディターを使用している場合は、コマンド プロンプトの手順に従ってください。
 
-### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code またはコマンド ライン](#tab/tabid-cmdline)
+### <a name="visual-studio-code-or-command-prompt"></a>[Visual Studio Code またはコマンド プロンプト](#tab/tabid-cmdline)
 
 - 新しい Q# ライブラリを作成する
 
@@ -106,4 +106,4 @@ Q# コンパイラは、それぞれの Q# の演算と関数に対して .NET �
     
 ## <a name="next-steps"></a>次のステップ
 
-これで、Q# コマンド ライン プログラムと .NET との相互運用性の両方に対して Quantum 開発キットを設定することができたので、[初めての量子プログラム](xref:microsoft.quantum.quickstarts.qrng)を作成して実行することができます。
+これで、Q# アプリケーションと .NET との相互運用性の両方に対して Quantum 開発キットを設定することができたので、[初めての量子プログラム](xref:microsoft.quantum.quickstarts.qrng)を作成して実行することができます。

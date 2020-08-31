@@ -1,5 +1,5 @@
 ---
-title: Q# コマンド ライン アプリケーションを使用した開発
+title: Q# アプリケーションを使用した開発
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020
@@ -9,14 +9,14 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a287dd76162a05d72af7e9d1e46533425283e2a
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867609"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863660"
 ---
-# <a name="develop-with-no-locq-command-line-applications"></a>Q# コマンド ライン アプリケーションを使用した開発
+# <a name="develop-with-no-locq-applications"></a>Q# アプリケーションを使用した開発
 
 Q# プログラムはそれ自体で実行可能です。C#、F#、Python などのホスト言語のドライバーは必要ありません。
 
@@ -26,7 +26,7 @@ Q# プログラムはそれ自体で実行可能です。C#、F#、Python など
 
 ## <a name="installation"></a>インストール
 
-Q# コマンド ライン アプリケーションはどの IDE でもビルドできますが、Q# アプリケーションをローカルで開発する場合は Visual Studio Code (VS Code) または Visual Studio IDE を使用することをお勧めします。 Web ブラウザーを使用してクラウドで開発する場合は、Visual Studio Codespaces をお勧めします。 これらの環境での開発には、警告、構文の強調表示、プロジェクト テンプレートなど、QDK 拡張機能の豊富な機能が用意されています。 
+Q# アプリケーションはどの IDE でもビルドできますが、Q# アプリケーションをローカルで開発する場合は Visual Studio Code (VS Code) または Visual Studio IDE を使用することをお勧めします。 Web ブラウザーを使用してクラウドで開発する場合は、Visual Studio Codespaces をお勧めします。 これらの環境での開発には、警告、構文の強調表示、プロジェクト テンプレートなど、QDK 拡張機能の豊富な機能が用意されています。 
 
 VS Code を構成するには:
 
@@ -45,7 +45,7 @@ Visual Studio Codespaces を構成するには:
 3. これで、新しい環境を起動し、[VS Codespaces のクラウド IDE](https://online.visualstudio.com/environments) を使用してブラウザーで開発を開始できるようになりました。 または、VS Code のローカル インストールを使用して、[リモート環境](https://docs.microsoft.com/visualstudio/online/how-to/vscode)として Codespaces を使用することもできます。
 
 
-別の環境の QDK をインストールするには、コマンド ラインで次のように入力します。
+別の環境の QDK をインストールするには、コマンド プロンプトで次のように入力します。
 
 ```dotnetcli
 dotnet new -i Microsoft.Quantum.ProjectTemplates
@@ -94,7 +94,7 @@ Q# の `Hello World` アプリケーションを作成して、Visual Studio の
 > [!NOTE]
 > 1 つの Visual Studio ソリューションに複数のプロジェクトがある場合は、ソリューションに含まれるすべてのプロジェクトが、ソリューションと同じフォルダーまたはそのサブフォルダーのいずれかに存在する必要があります。  
 
-### <a name="other-editors-with-the-command-line"></a>[コマンド ラインを使用した他のエディター](#tab/tabid-cmdline)
+### <a name="other-editors-with-the-command-prompt"></a>[コマンド プロンプトを使用した他のエディター](#tab/tabid-cmdline)
 
 Q# の `Hello World` アプリケーションを作成して、インストールを確認します。
 

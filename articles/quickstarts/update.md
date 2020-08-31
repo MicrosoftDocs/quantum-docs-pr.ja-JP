@@ -10,12 +10,12 @@ uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 84782d1628dd100c0939b2b12aa0a9aa8ab2b80e
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866759"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863641"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum 開発キット (QDK) を更新する
 
@@ -37,7 +37,7 @@ Q# の演算をホストするために C# と Python のどちらを使用し�
     dotnet --version
     ```
 
-    出力が `3.1.100` 以上であることを確認します。 そうでない場合、[最新バージョン](https://dotnet.microsoft.com/download)をインストールして、もう一度確認します。 その後、自分の設定 (Visual Studio、Visual Studio Code、または直接コマンド ラインで) に応じて次の手順に従います。
+    出力が `3.1.100` 以上であることを確認します。 そうでない場合、[最新バージョン](https://dotnet.microsoft.com/download)をインストールして、もう一度確認します。 その後、自分の設定 (Visual Studio、Visual Studio Code、またはコマンド プロンプトから直接) に応じて次の手順に従います。
 
 ### <a name="update-no-locq-projects-in-visual-studio"></a>Visual Studio で Q# プロジェクトを更新する
  
@@ -84,9 +84,9 @@ Q# の演算をホストするために C# と Python のどちらを使用し�
 
 1. Visual Studio Code で、更新するプロジェクトが含まれるフォルダーを開きます。
 2. **[ターミナル]**  ->  **[新しいターミナル]** を選択します。
-3. コマンド ラインを使用する更新の手順に従います (すぐ下にあります)。
+3. コマンド プロンプトを使用する更新の手順に従います (すぐ下にあります)。
 
-### <a name="update-no-locq-projects-using-the-command-line"></a>コマンド ラインを使用して Q# プロジェクトを更新する
+### <a name="update-no-locq-projects-using-the-command-prompt"></a>コマンド プロンプトを使用して Q# プロジェクトを更新する
 
 1. メイン プロジェクト ファイルが含まれているフォルダーに移動します。
 
@@ -309,7 +309,7 @@ QDK を更新するプロセスは、開発の言語と環境に応じて異な�
 
 1. .NET 用 Quantum プロジェクト テンプレートを更新します
 
-    コマンドラインから:
+    コマンド プロンプトで以下を実行します。
 
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
