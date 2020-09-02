@@ -2,16 +2,16 @@
 uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
 name: IncrementPhaseByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   整数定数によって、qubit レジスタのモジュール単位インクリメントを実行します。
 
 
-  $ と $y `increment` $ `target`によって`modulus`エンコードされた整数を $N $a $ を意味します。
+  $ `increment` `modulus` と `target` $y $ によってエンコードされた整数を $N $a $ を意味します。
 
   その後、次の変換が実行されます。 \begin{align} \ket{y} \ mapare \ket{(y + a) \ 演算子名 {mod} N} \end{align} 整数は、QFT ではリトルエンディアン形式でエンコードされます。
 remarks: >-
-  は、 `target`の最上位ビットが0に設定されていることを前提としています。
+  は `target` 、の最上位ビットが0に設定されていることを前提としています。
 
   また、target の値が $N $ 未満であることを前提としています。
 
@@ -30,7 +30,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: $ が追加さ $a れる、フェーズでエンコードされ`increment`たリトルエンディアン形式の整数 $y $。
+    summary: $ が追加さ $a れる、フェーズでエンコードされたリトルエンディアン形式の整数 $y $ `increment` 。
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: e97f88d64d9188d18b10ed7f67adc0225167c466
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 92c20afa6753d80a10a38d8c787efab3a295fc2b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676849"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342841"
