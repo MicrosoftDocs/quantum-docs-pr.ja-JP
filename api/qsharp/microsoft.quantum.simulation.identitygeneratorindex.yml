@@ -2,14 +2,14 @@
 uid: microsoft.quantum.simulation.identitygeneratorindex
 name: IdentityGeneratorIndex
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: Id の進化操作に対応する、ゼロ Hamiltonian `H = 0`() と一致するジェネレーターインデックスを返します。
+namespace: microsoft.quantum.simulation
+summary: Id の進化操作に対応する、ゼロ Hamiltonian () と一致するジェネレーターインデックスを返し `H = 0` ます。
 syntax: 'function IdentityGeneratorIndex (idxTerm : Int) : Microsoft.Quantum.Simulation.GeneratorIndex'
 input:
   content: '(idxTerm : Int)'
   types:
   - name: idxTerm
-    summary: この入力は無視され、 <xref:microsoft.quantum.simulation.generatorsystem>ユーザー定義型との一貫性のために定義されています。
+    summary: この入力は無視され、ユーザー定義型との一貫性のために定義されてい <xref:microsoft.quantum.simulation.generatorsystem> ます。
     isPrimitive: true
     uid: Int
 output:
@@ -18,9 +18,9 @@ output:
   - summary: Hamiltonian $H = $0 での進化を表すジェネレーターインデックス。
     uid: microsoft.quantum.simulation.generatorindex
 metadata:
-  ms.openlocfilehash: b498cc055bed2fcc69ac28548fc08b2bbaa74430
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 680788feec5703ff6a9f23c5367070e7694f524a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683054"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330040"
