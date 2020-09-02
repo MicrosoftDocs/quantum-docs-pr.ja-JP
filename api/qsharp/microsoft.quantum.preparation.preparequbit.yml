@@ -2,17 +2,17 @@
 uid: microsoft.quantum.preparation.preparequbit
 name: PrepareQubit
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  指定された Pauli 演算子の`Zero`+ 1 () eigenstate で qubit を準備します。
+  `Zero`指定された Pauli 演算子の + 1 () eigenstate で qubit を準備します。
 
   Id 演算子が指定されている場合、qubit は下回っ mixed 状態で準備されます。
 
 
-  Qubit が最初に $ \ket{0}$ 状態であった場合、この操作は、指定された p li 演算子の $ + $1 eigenstate の qubit を準備`PauliI`します。または、の場合は<xref:microsoft.quantum.preparation.preparesinglequbitidentity>、代わりに下回っ mixed 状態 (を参照) で qubit を準備します。
+  Qubit が最初に $ \ket $ 状態であった場合 {0} 、この操作は、指定された p li 演算子の $ + $1 eigenstate の qubit を準備します。または、の場合は、 `PauliI` 代わりに下回っ mixed 状態 (を参照) で qubit を準備し <xref:microsoft.quantum.preparation.preparesinglequbitidentity> ます。
 
 
-  Qubit が $ \ket{0}$ 以外の状態であった場合、この操作では次のゲートが適用さ`PauliX`れます。 $H `PauliY`$ for、$HS `PauliZ` $ <xref:microsoft.quantum.preparation.preparesinglequbitidentity> for `PauliI`、$I $ for および for。
+  Qubit が $ \ket $ 以外の状態であった場合 {0} 、この操作では次のゲートが適用されます。 $H $ for `PauliX` 、$HS $ for `PauliY` 、$I $ for `PauliZ` および <xref:microsoft.quantum.preparation.preparesinglequbitidentity> for `PauliI` 。
 syntax: 'operation PrepareQubit (basis : Pauli, qubit : Qubit) : Unit'
 input:
   content: '(basis : Pauli, qubit : Qubit)'
@@ -31,9 +31,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 70032bd9174bb987206e2084e2788e5ac7169ae7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f42cb0ab28168124c7589606c34446d35013a325
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681119"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331383"

@@ -2,13 +2,13 @@
 uid: microsoft.quantum.errorcorrection.syndromemeasop
 name: SyndromeMeasOp
 type: newtype
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: エラー修正コードブロックのより隣人を測定するために使用される操作を表します。
 remarks: >-
   このシグネチャは、 `(LogicalRegister => Syndrome)` の qubits と、補助 qubits `LogicalRegister` の後に補助 qubits の測定値を指定して、 `Syndrome` これらの測定値を表す値を抽出する操作を表し `Result[]` ます。
 
 
-  ### <a name="examples"></a>使用例
+  ### <a name="examples"></a>例
 
   ビットフリップコード $S = \ langle ZZI、IZZ \rangle $ のメジャー syndromes を、非フォールトトレラントな方法でスクラッチ qubits を使用して測定します。
 
@@ -24,9 +24,9 @@ seeAlso:
 - logicalregister
 - syndrome
 metadata:
-  ms.openlocfilehash: e4c011bcbe4200fe894962e0432f4c5c358d0295
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 529eea0e693460624c8cd842bf04a5ce499fad4e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885751"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349624"
