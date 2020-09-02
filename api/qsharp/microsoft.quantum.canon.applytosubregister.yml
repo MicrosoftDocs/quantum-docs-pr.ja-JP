@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.applytosubregister
 name: ApplyToSubregister
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: インデックスの配列によって指定された qubits を使用して、レジスタのサブレジスタに操作を適用します。
 examples: >-
-  次の3つの qubit 状態を{1}作成します{2}。 ${0}\_\ frac{0}\_{\ sqrt{0}} \ket 2 ({1}\_\ket 1 \{1}k (3 + \ket 1 \ k) $:
+  次の3つの qubit 状態を作成します。 $ \ frac {1} {\ sqrt {2} } \ket {0} \_ 2 (\ket {0} \_ 1 \ k ( {0} 3 + \ket {1} \_ 1 \ k {1} ) $:
 
 
   ```qsharp
@@ -49,9 +49,9 @@ seeAlso:
 - applytosubregisterc
 - applytosubregisterca
 metadata:
-  ms.openlocfilehash: 89c488fd593e6f81a1c811e0b507a69a9f891be9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 00e62624cf1bfc9460316a03c02770fb585df3ba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674564"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357291"

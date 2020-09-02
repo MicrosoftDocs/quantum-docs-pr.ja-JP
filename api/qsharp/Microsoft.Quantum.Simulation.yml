@@ -4,49 +4,49 @@ name: Microsoft.Quantum.Simulation
 summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、クォンタムシステムのダイナミクスをシミュレートする一貫の関数と操作が含まれています。"
 functions:
 - uid: microsoft.quantum.simulation.addgeneratorsystems
-  summary: 新しい`GeneratorSystem`を`GeneratorSystem`作成するために、2つのを追加します。
+  summary: '`GeneratorSystem`新しいを作成するために、2つのを追加し `GeneratorSystem` ます。'
 - uid: microsoft.quantum.simulation.blockencodingbylcu
   summary: >-
-    対象の演算子をにエンコード`BlockEncoding`します。
+    対象の演算子をにエンコード `BlockEncoding` します。
 
 
-    これにより`BlockEncoding` 、一部の演算子 $H = \ sum_ {j} | \ alpha_j | をエンコードする、$U = P\ cdot V\ Cdot P ^/ダガー $ が構築されます。U_j $ は、unitaries います。 通常、$P $ は、$P{0}\_\ket a = \ sum_j \ sqrt{\ alpha_j\|/\ vec-alpha\|\_2} \ket{j}\_a $、$V = \ sum_ {j} \ket{j}\bra{j}\_aotimes U_j $ という状態の準備を行うためのものです。
+    これにより、 `BlockEncoding` 一部の演算子 $H = \ sum_ {j} | \ alpha_j | をエンコードする、$U = P\ cdot V\ Cdot P ^/ダガー $ が構築されます。U_j $ は、unitaries います。 通常、$P $ は、$P \ket {0} \_ a = \ sum_j \ sqrt{\ alpha_j/ \| \ vec-alpha \| \_ 2} \ket{j} \_ a $、$V = \ sum_ {j} \ket{j}\bra{j} \_ aotimes U_j $ という状態の準備を行うためのものです。
 - uid: microsoft.quantum.simulation.blockencodingreflectionbylcu
   summary: >-
-    対象の演算子をにエンコード`BlockEncodingReflection`します。
+    対象の演算子をにエンコード `BlockEncodingReflection` します。
 
 
-    これにより`BlockEncodingReflection` 、一部の演算子 $H = \ sum_ {j} | \ alpha_j | をエンコードする、$U = P\ cdot V\ Cdot P ^/ダガー $ が構築されます。U_j $ は、unitaries います。 通常、$P $ は、$P{0}\_\ket a \ sum_j \ sqrt{\ alpha_j\|/\ vec-alpha\|\_2} \ket{j}\_a $、$V = \ sum_ {j} \ket{j}\bra{j}\_aotimes U_j $ という状態の準備を行うためのものです。
+    これにより、 `BlockEncodingReflection` 一部の演算子 $H = \ sum_ {j} | \ alpha_j | をエンコードする、$U = P\ cdot V\ Cdot P ^/ダガー $ が構築されます。U_j $ は、unitaries います。 通常、$P $ は、$P \ket {0} \_ a \ sum_j \ sqrt{\ alpha_j/ \| \ vec-alpha \| \_ 2} \ket{j} \_ a $、$V = \ sum_ {j} \ket{j}\bra{j} \_ aotimes U_j $ という状態の準備を行うためのものです。
 - uid: microsoft.quantum.simulation.blockencodingtoreflection
   summary: >-
-    を`BlockEncoding`等価`BLockEncodingReflection`のに変換します。
+    を等価のに変換 `BlockEncoding` `BLockEncodingReflection` します。
 
 
-    つまり、$H $ of `BlockEncoding`演算子をエンコードする $U $ という文字列を指定した場合は、 `BlockEncodingReflection`同じ演算子をエンコードする $U ' $ に変換しますが $U ' ^ ダガー = U ' $ も満たされます。
+    つまり、 `BlockEncoding` $H $ of 演算子をエンコードする $U $ という文字列を指定した場合は、 `BlockEncodingReflection` 同じ演算子をエンコードする $U ' $ に変換しますが $U ' ^ ダガー = U ' $ も満たされます。
 
     これにより、$U $ の補助レジスタのサイズが 1 qubit だけ増加します。
 - uid: microsoft.quantum.simulation.getgeneratorsystemfunction
-  summary: 内の`GeneratorIndex`関数を取得`GeneratorSystem`します。
+  summary: '`GeneratorIndex`内の関数を取得 `GeneratorSystem` します。'
 - uid: microsoft.quantum.simulation.getgeneratorsystemnterms
-  summary: 内の用語の数を取得`GeneratorSystem`します。
+  summary: 内の用語の数を取得 `GeneratorSystem` します。
 - uid: microsoft.quantum.simulation.identitygeneratorindex
-  summary: Id の進化操作に対応する、ゼロ Hamiltonian `H = 0`() と一致するジェネレーターインデックスを返します。
+  summary: Id の進化操作に対応する、ゼロ Hamiltonian () と一致するジェネレーターインデックスを返し `H = 0` ます。
 - uid: microsoft.quantum.simulation.identitygeneratorsystem
-  summary: Id 進化操作に対応する、ゼロ Hamiltonian `H = 0`と一貫性のあるジェネレーターシステムを返します。
+  summary: Id 進化操作に対応する、ゼロ Hamiltonian と一貫性のあるジェネレーターシステムを返し `H = 0` ます。
 - uid: microsoft.quantum.simulation.identitytimedependentgeneratorsystem
-  summary: Hamiltonian `H(s) = 0`と一貫性のある時間に依存するジェネレーターシステムを返します。
+  summary: Hamiltonian と一貫性のある時間に依存するジェネレーターシステムを返し `H(s) = 0` ます。
 - uid: microsoft.quantum.simulation.interpolatedevolution
   summary: 一定のスケジュールで2つのジェネレーターの間を補間し、結果として得られる時間に依存するジェネレーターの下で、シミュレートされた進化を qubit レジスタに適用する操作を返します。
 - uid: microsoft.quantum.simulation.interpolategeneratorsystems
-  summary: 2つ`TimeDependentGeneratorSystem` `GeneratorSystem`のの間の線形補間を表すを返します。
+  summary: '`TimeDependentGeneratorSystem`2 つのの間の線形補間を表すを返し `GeneratorSystem` ます。'
 - uid: microsoft.quantum.simulation.intstopaulis
   summary: 整数の配列をシングル qubit の演算子の配列に変換します。
 - uid: microsoft.quantum.simulation.inttopauli
   summary: 整数をシングル qubit の P# li 演算子に変換します。
 - uid: microsoft.quantum.simulation.multiplygeneratorindex
-  summary: 内の係数を乗算`GeneratorIndex`します。
+  summary: 内の係数を乗算 `GeneratorIndex` します。
 - uid: microsoft.quantum.simulation.multiplygeneratorsystem
-  summary: 内のすべての用語の係数を`GeneratorSystem`乗算します。
+  summary: 内のすべての用語の係数を乗算し `GeneratorSystem` ます。
 - uid: microsoft.quantum.simulation.pauliblockencoding
   summary: >-
     Hamiltonian のブロックエンコードのユニタリを作成します。
@@ -54,42 +54,42 @@ functions:
 
     Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $ は、$ $ \ $P $ という実数の合計によって記述されます。
 - uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
-  summary: によって記述さ`GeneratorIndex`れた、によって記述されたの係数を抽出します。
+  summary: によって記述された、によって記述されたの係数を抽出 `GeneratorIndex` します。
 - uid: microsoft.quantum.simulation.paulievolutionfunction
   summary: Dynamical generator を simulatable ゲートのセットとして表し、拡張を p にします。
 - uid: microsoft.quantum.simulation.paulievolutionset
   summary: Dynamical generator を simulatable ゲートのセットとして表し、拡張を p にします。
 - uid: microsoft.quantum.simulation.paulistringfromgenidx
-  summary: によって記述される psystem.string li 文字列とその qubit インデックスを抽出し`GeneratorIndex`ます。
+  summary: によって記述される psystem.string li 文字列とその qubit インデックスを抽出し `GeneratorIndex` ます。
 - uid: microsoft.quantum.simulation.quantumwalkbyqubitization
   summary: ブロックエンコードのリフレクションをクォンタムウォークに変換します。
 - uid: microsoft.quantum.simulation.sumgeneratorsystems
-  summary: 新しい GeneratorSystem `GeneratorSystem`を作成するために、複数のを追加します。
+  summary: '`GeneratorSystem`新しい GeneratorSystem を作成するために、複数のを追加します。'
 - uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm
-  summary: '`TimeDependentSimulationAlgorithm`Trotter – Suzuki 分解を使用して、時間に依存する型の式を解決する、ユニタリ演算子に近い関数。'
+  summary: '`TimeDependentSimulationAlgorithm` Trotter – Suzuki 分解を使用して、時間に依存する型の式を解決する、ユニタリ演算子に近い関数。'
 - uid: microsoft.quantum.simulation.trottersimulationalgorithm
-  summary: '`SimulationAlgorithm`Trotter – Suzuki 分解を使用して、時間の進化演算子_exp (-iHt)_ を概算する関数。'
+  summary: '`SimulationAlgorithm` Trotter – Suzuki 分解を使用して、時間の進化演算子 _exp (-iHt)_ を概算する関数。'
 - uid: microsoft.quantum.simulation.trotterstep
-  summary: Trotter – Suzuki 分解を使用して、 `EvolutionGenerator` 「」で説明されているシステムによる時間の短縮の単一の時間ステップを実装します。
+  summary: Trotter – Suzuki 分解を使用して、「」で説明されているシステムによる時間の短縮の単一の時間ステップを実装 `EvolutionGenerator` します。
 operations:
 - uid: microsoft.quantum.simulation.adiabaticstateenergyunitary
-  summary: を使用して状態の`statePrepUnitary`準備を実行し、その後、を使用して`adiabaticUnitary`adiabatic 状態の準備を行い`phaseEstAlgorithm`ます。 `qpeUnitary`最後に、を使用して、結果の状態に関してフェーズの推定を行います。
+  summary: を使用して状態の準備を実行し、その後、を使用して `statePrepUnitary` adiabatic 状態の準備を行い `adiabaticUnitary` ます。最後に、を使用して、結果の状態に関してフェーズの推定を行い `qpeUnitary` `phaseEstAlgorithm` ます。
 - uid: microsoft.quantum.simulation.estimateenergy
-  summary: を使用して、自動的`statePrepUnitary`に割り当てられた入力状態フェーズ推定にを`qpeUnitary`適用して、状態の`phaseEstAlgorithm`準備を実行します。
+  summary: を `statePrepUnitary` 使用して、自動的に割り当てられた入力状態フェーズ推定にを適用して、状態の準備を実行し `qpeUnitary` `phaseEstAlgorithm` ます。
 - uid: microsoft.quantum.simulation.estimateenergywithadiabaticevolution
-  summary: 自動的`statePrepUnitary`に割り当てら`adiabaticUnitary` `qpeUnitary` `phaseEstAlgorithm`れた入力状態にを適用することによって状態の準備を実行した後、を使用して adiabatic 状態の準備を実行した後、を使用して結果の状態に関する最後のフェーズ推定を実行します。
+  summary: 自動的に割り当てられた入力状態にを適用することによって状態の準備を実行した後、を使用して adiabatic 状態の準備を実行した後、を使用して `statePrepUnitary` `adiabaticUnitary` `qpeUnitary` 結果の状態に関する最後のフェーズ推定を実行し `phaseEstAlgorithm` ます。
 newtypes:
 - uid: microsoft.quantum.simulation.blockencoding
   summary: >-
     任意の演算子が左上のブロックでエンコードされる場合の、その中の任意の演算子を指定します。
 
 
-    `BlockEncoding` $U つまり、は、$H $ \ket _a $ に対応する、任意の演算子を、システムレジスタ`s`に対して作用する、${0}$ という補助型の上位左ブロックにエンコードすることを意味します。 つまり、以下のようになります。
+    $U つまり、は、 `BlockEncoding` $H $ \ket _a $ に対応する、任意の演算子を、システムレジスタに対して作用する、$ `s` $ という補助型の上位左ブロックにエンコードすることを意味し {0} ます。 つまり、以下のようになります。
 
 
-    $ $ \begin{align} (\bra{0}_a \ otimes I_s) U (\ket{0}_a/otimes I_s) = H \end{align} $ $。
+    $ $ \begin{align} (\bra {0} _a \ otimes I_s) U (\ket {0} _a/otimes I_s) = H \end{align} $ $。
 - uid: microsoft.quantum.simulation.blockencodingreflection
-  summary: リフレクションで`BlockEncoding`もあるを表します。
+  summary: '`BlockEncoding`リフレクションでもあるを表します。'
 - uid: microsoft.quantum.simulation.evolutiongenerator
   summary: >-
     Dynamical generator を simulatable ゲートのセットとして表し、拡張をその基準として表します。
@@ -101,13 +101,13 @@ newtypes:
     時間に依存する dynamical ジェネレーターを表します。
 
 
-    `Double`パラメーターは、$ [0, 1] $ のスケジュールです。
+    パラメーターは、 `Double` $ [0, 1] $ のスケジュールです。
 - uid: microsoft.quantum.simulation.evolutionset
   summary: >-
     シミュレーションアルゴリズムを実装するために簡単に実装して使用できるゲートのセットを表します。
 
 
-    セット内の要素は、によっ<xref:microsoft.quantum.simulation.generatorindex>てインデックスが作成され、各セットは`GeneratorIndex`から<xref:microsoft.quantum.simulation.evolutionunitary>の関数によって記述されます。これは、時間を表す実数によってパラメーター化された操作です。
+    セット内の要素は、によってインデックスが作成され、  <xref:microsoft.quantum.simulation.generatorindex> 各セットはからの関数によって記述され `GeneratorIndex` ます。これは  <xref:microsoft.quantum.simulation.evolutionunitary> 、時間を表す実数によってパラメーター化された操作です。
 - uid: microsoft.quantum.simulation.evolutionunitary
   summary: >-
     ユニタリ時間の進化演算子を表します。
@@ -116,13 +116,13 @@ newtypes:
     1つ目のパラメーターは、時間の進化の期間であり、2番目のパラメーターは、ユニタリによって実行される qubit レジスタです。
 - uid: microsoft.quantum.simulation.generatorindex
   summary: >-
-    すべての dynamical ジェネレーター (Hermitian 演算子など) のセットに含まれる1つのプリミティブ用語を表します。これは、を通じ`EvolutionSet`てジェネレーターによる時間の進化にジェネレーターからのマップが存在します。
+    すべての dynamical ジェネレーター (Hermitian 演算子など) のセットに含まれる1つのプリミティブ用語を表します。これは、を通じてジェネレーターによる時間の進化にジェネレーターからのマップが存在します。 `EvolutionSet`
 
 
     最初の要素 (Int [], Double []) は、1つの用語にインデックスが付けられています。たとえば、P# li 文字列の場合は、係数0.5 を使用して、([1, 1, 2], [0.5]) によってインデックスが作成されます。 また、X cos φ + Y sin φなど、連続変数によってパラメーター化された Hamiltonians は、インスタンスを ([], [φ]) で表すことができます。 2番目の要素は、ジェネレーターが動作するサブシステムのインデックスを生成します。
 - uid: microsoft.quantum.simulation.generatorsystem
   summary: >-
-    Es の`GeneratorIndex`コレクションを表します。
+    Es のコレクションを表し `GeneratorIndex` ます。
 
 
     このコレクションを1つのインデックス整数を使用して繰り返し処理します。コレクションのサイズは既知であると見なされます。
@@ -131,18 +131,18 @@ newtypes:
     時間に依存しないシミュレーションアルゴリズムを表します。
 
 
-    時間に依存しないシミュレーション手法では、<xref:microsoft.quantum.simulation.evolutiongenerator>
+    時間に依存しないシミュレーション手法では、 <xref:microsoft.quantum.simulation.evolutiongenerator>
 
     ある期間の時間の進化を時間単位で指定します。
 - uid: microsoft.quantum.simulation.timedependentblockencoding
   summary: >-
-    クロックレジスタ`BlockEncoding`によって制御されるを表します。
+    `BlockEncoding`クロックレジスタによって制御されるを表します。
 
 
-    `TimeDependentBlockEncoding` $U つまり、は、クロックレジスタ`d`の状態 $ \ket{k} _d $ によって制御される、任意の演算子 $H _k 関心`s`があることを示す、任意の演算子関連する任意の演算子を、補助状態 $ \ket{0}_a $ に対応する左上のブロックにエンコードすることを意味します。 つまり、以下のようになります。
+    $U つまり、は、 `TimeDependentBlockEncoding` クロックレジスタの状態 $ \ket{k} _d $ によって制御される、 `d` 任意の演算子 $H _k 関心があることを示す、任意の演算子関連する任意の演算子を、 `s` 補助状態 $ \ket _a $ に対応する左上のブロックにエンコードすることを意味し {0} ます。 つまり、以下のようになります。
 
 
-    $ $ \begin{align} (\bra{0}\_a\ otimes I_ {ds}) U (\ket{0}\_I_ a {ds}) = \ sum_ {k} \ket{k}\bra{k}\_dotimes H_k。
+    $ $ \begin{align} (\bra {0} \_ a\ otimes I_ {ds}) U (\ket {0} \_ I_ a {ds}) = \ sum_ {k} \ket{k}\bra{k} \_ dotimes H_k。
 
     \end{align} $ $。
 - uid: microsoft.quantum.simulation.timedependentgeneratorsystem
@@ -152,15 +152,15 @@ newtypes:
     時間に依存するシミュレーションアルゴリズムを表します。
 
 
-    時間に依存するシミュレーション手法では、<xref:microsoft.quantum.simulation.evolutionschedule>
+    時間に依存するシミュレーション手法では、 <xref:microsoft.quantum.simulation.evolutionschedule>
 
     ある期間の時間の進化を時間単位で示します。
 - uid: microsoft.quantum.simulation.unitary
   summary: は、ユニタリ演算子での進化を表します。
 metadata:
-  ms.openlocfilehash: cdcfc7e688b576d0e7941695ad0a63b030bb5692
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 74d082bba204cc4d162aa30b6ccc5b8ec402a17c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675459"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340767"

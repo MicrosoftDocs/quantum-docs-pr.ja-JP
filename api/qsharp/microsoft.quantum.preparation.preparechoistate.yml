@@ -2,15 +2,15 @@
 uid: microsoft.quantum.preparation.preparechoistate
 name: PrepareChoiState
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: 指定された操作について、指定された参照およびターゲットレジスタに Jamiłkowski 状態を準備します。
-remarks: 'Jamiłkowski state $J (-ラムダ) $ of クォンタムプロセスは、$ $ \begin{align} J (\ ラムダ) \mathrel{: =} として定義されています (& a)。 (& a)\!J (& a)\!: =} (&)、\langle\boldone $ $ where $ |X\rangle\!\rangle $ は、列スタック規則内のマトリックス $X $ の*ベクター化*です。 この状態についての従来の説明を学習すると、任意の入力状態に作用する $-ラムダ $ の効果に関する完全な情報が得られ、*量子プロセス tomography*の基盤が形成されます。'
+remarks: 'Jamiłkowski state $J (-ラムダ) $ of クォンタムプロセスは、$ $ \begin{align} J (\ ラムダ) \mathrel{: =} として定義されています (& a)。 (& a) J (& a): =} (& \! \! )、\langle\boldone $ $ where $ |X\rangle \! \rangle $ は、列スタック規則内のマトリックス $X $ の *ベクター化* です。 この状態についての従来の説明を学習すると、任意の入力状態に作用する $-ラムダ $ の効果に関する完全な情報が得られ、 *量子プロセス tomography*の基盤が形成されます。'
 syntax: 'operation PrepareChoiState (op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[]) : Unit'
 input:
   content: '(op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[])'
   types:
   - name: op
-    summary: 操作 $ \ ラムダ $ Jamiłkowski state $J (-ラムダ)/2 ^ N $ を準備します。ここで $N $ は、が動作する`op` qubits の数です。
+    summary: 操作 $ \ ラムダ $ Jamiłkowski state $J (-ラムダ)/2 ^ N $ を準備します。ここで $N $ は、が動作する qubits の数です `op` 。
     isOperation: true
     input:
       types:
@@ -22,12 +22,12 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: reference
-    summary: の`op`アクションの参照として使用される、$ \ket{00\cdots 0} $ 状態から始まる qubits のレジスタ。
+    summary: のアクションの参照として使用される、$ \ket{00\cdots 0} $ 状態から始まる qubits のレジスタ `op` 。
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: '`op`が適用される $ \ket{00\cdots 0} $ 状態の最初の qubits のレジスタ。'
+    summary: が適用される $ \ket{00\cdots 0} $ 状態の最初の qubits のレジスタ `op` 。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -41,9 +41,9 @@ seeAlso:
 - preparechoistatec
 - preparechoistateca
 metadata:
-  ms.openlocfilehash: c23954131c9ef7c609089e3f58b3577151409993
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c545443d583b55a60f4119ff1a266a290d34f4b9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681167"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331570"

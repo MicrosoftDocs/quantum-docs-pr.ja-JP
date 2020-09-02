@@ -2,7 +2,7 @@
 uid: microsoft.quantum.amplitudeamplification.reflectionphases
 name: ReflectionPhases
 type: newtype
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: 振幅増幅での部分的な反射のシーケンスのフェーズ。
 remarks: >-
   最初のパラメーターは、開始状態に関するリフレクションのフェーズの配列です。 2番目のパラメーターは、ターゲットの状態に関するリフレクションのフェーズの配列です。
@@ -10,9 +10,9 @@ remarks: >-
   両方の配列の長さは同じである必要があります。 多くの場合、開始状態とターゲット状態に関する最後のフェーズに関する最初のフェーズでは、グローバルフェーズシフトが導入され、$0 $ に設定できます。
 syntax: newtype ReflectionPhases = (Double[], Double[]);
 metadata:
-  ms.openlocfilehash: 84d2c006997f8a2a3c9b121581b5dd58804a806d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4a0ed1c01dc6cd14d2569064d769d7057087db48
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680114"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340359"

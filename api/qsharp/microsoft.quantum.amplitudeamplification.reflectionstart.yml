@@ -2,7 +2,7 @@
 uid: microsoft.quantum.amplitudeamplification.reflectionstart
 name: ReflectionStart
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: 振幅増幅に対する一般的な入力状態である、すべてゼロの string | 0... 0 〉に関する反射を構築します。
 syntax: 'function ReflectionStart () : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
@@ -11,14 +11,14 @@ input:
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: 状態`ReflectionOracle` $ \ket{0\cdots 0} $ を反映する。
+  - summary: '`ReflectionOracle`状態 $ \ket{0\cdots 0} $ を反映する。'
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
 - microsoft.quantum.canon.reflectionoracle
 metadata:
-  ms.openlocfilehash: ab686a67cd7cd46b7651b4ca79ec79fff664116d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f79d2b494a407e5d6d9cb750794823ea2faa8302
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680095"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340274"

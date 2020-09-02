@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.approximatelyapplydiagonalunitary
 name: ApproximatelyApplyDiagonalUnitary
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   複雑なフェーズの配列を、qubits のレジスタの数値ベースの状態に適用し、指定された許容範囲に従って小さな回転角度を切り捨てます。
 
@@ -15,9 +15,9 @@ summary: >-
   $ $ \begin{align} U = \ sum ^ {2 ^ n-1} _ {j = 0} e ^ {i \ theta_j} \ket{j}\bra{j}.
 
   \end{align} $ $
-remarks: '`coefficients`$ 2 ^ n $ 未満の値が指定されている場合は、$ \ theta_j = $0.0 という要素が埋め込まれます。'
+remarks: '`coefficients` $ 2 ^ n $ 未満の値が指定されている場合は、$ \ theta_j = $0.0 という要素が埋め込まれます。'
 syntax: 'operation ApproximatelyApplyDiagonalUnitary (tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
-references: '- クォンタムロジック回線の合成、Shende、Stephen、Igor、igor または Markovhttps://arxiv.org/abs/quant-ph/0406176'
+references: '- クォンタムロジック回線の合成、Shende、Stephen、Igor、igor または Markov https://arxiv.org/abs/quant-ph/0406176'
 input:
   content: '(tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - applydiagonalunitary
 metadata:
-  ms.openlocfilehash: ec183b0a42a3e2382a395a4711390c2ab8e9eb85
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f67d8807ec5e7931b415a132b77e9653b3d1c0a6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674462"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357087"
