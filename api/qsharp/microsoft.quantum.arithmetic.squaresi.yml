@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.squaresi
 name: SquareSI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 2乗符号`xs`付き整数。結果を`result`に格納します。最初はゼロである必要があります。
+namespace: microsoft.quantum.arithmetic
+summary: 2乗符号付き整数 `xs` 。結果をに格納します `result` 。最初はゼロである必要があります。
 remarks: 実装は、整数の平方根に依存します。
 syntax: 'operation SquareSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:
@@ -13,7 +13,7 @@ input:
     summary: n ビット整数から二乗 (SignedLittleEndian)
     uid: microsoft.quantum.arithmetic.signedlittleendian
   - name: result
-    summary: 2n ビット結果 (SignedLittleEndian) は、初期状態では $ \ket{0}$ である必要があります。
+    summary: 2n ビット結果 (SignedLittleEndian) は、初期状態では $ \ket $ である必要があり {0} ます。
     uid: microsoft.quantum.arithmetic.signedlittleendian
 output:
   content: Unit
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: e4a212094c38d370e2489b586ee8014131bef9dc
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ee4e8a7ad27fdfb03f590f229a1c0e344a985ff6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676597"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352667"

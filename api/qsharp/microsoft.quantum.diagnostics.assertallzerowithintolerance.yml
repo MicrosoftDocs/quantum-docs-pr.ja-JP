@@ -2,19 +2,19 @@
 uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
 name: AssertAllZeroWithinTolerance
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
-summary: 指定された qubits のアサートはすべて{0}、指定された許容範囲内の $ \ket $ 状態にあります。
+namespace: microsoft.quantum.diagnostics
+summary: 指定された qubits のアサートはすべて、指定された許容範囲内の $ \ket {0} $ 状態にあります。
 syntax: 'operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit'
 input:
   content: '(qubits : Qubit[], tolerance : Double)'
   types:
   - name: qubits
-    summary: $ \Ket{0}$ 状態になるようにアサートされた qubits。
+    summary: $ \Ket $ 状態になるようにアサートされた qubits {0} 。
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: tolerance
-    summary: 状態を $ \ket{0}$ 状態にするための精度
+    summary: 状態を $ \ket $ 状態にするための精度 {0}
     isPrimitive: true
     uid: Double
 output:
@@ -28,9 +28,9 @@ functors:
 seeAlso:
 - assertqubitwithintolerance
 metadata:
-  ms.openlocfilehash: ae55998333d6bc3a4d8b41341842147d80dcd183
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 547180aac49fde1525a7477d9ec75b302912fe2b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677298"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337570"

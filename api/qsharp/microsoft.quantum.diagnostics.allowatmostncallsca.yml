@@ -2,7 +2,7 @@
 uid: microsoft.quantum.diagnostics.allowatmostncallsca
 name: AllowAtMostNCallsCA
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: この操作とその adjoint の呼び出しの間に、指定された操作が特定の回数だけ呼び出されることをアサートします。
 remarks: この操作は、サポートされていない非 op ターゲットに置き換えることができます。
 examples: >-
@@ -56,9 +56,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 05a5791a9ec42aad2a2e90bb048204c642e68511
-  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.openlocfilehash: 70c12ee6d605a6132770ec07f69a889e46eecdc1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "88864179"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337877"

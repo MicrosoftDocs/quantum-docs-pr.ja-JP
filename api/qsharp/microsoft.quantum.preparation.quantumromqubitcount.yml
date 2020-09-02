@@ -2,8 +2,8 @@
 uid: microsoft.quantum.preparation.quantumromqubitcount
 name: QuantumROMQubitCount
 type: function
-namespace: Microsoft.Quantum.Preparation
-summary: によって`QuantumROM`返された操作に割り当てる必要がある qubits の合計数を返します。
+namespace: microsoft.quantum.preparation
+summary: によって返された操作に割り当てる必要がある qubits の合計数を返し `QuantumROM` ます。
 syntax: 'function QuantumROMQubitCount (targetError : Double, nCoeffs : Int) : (Int, (Int, Int))'
 input:
   content: '(targetError : Double, nCoeffs : Int)'
@@ -13,7 +13,7 @@ input:
     isPrimitive: true
     uid: Double
   - name: nCoeffs
-    summary: で`QuantumROM`指定された係数の数。
+    summary: で指定された係数の数 `QuantumROM` 。
     isPrimitive: true
     uid: Int
 output:
@@ -23,7 +23,7 @@ output:
       ## <a name="first-parameter"></a>最初のパラメーター
 
 
-      は、 `(x,(y,z))`割り当て`x = y + z`ら`y`れた qubits の合計数、は`LittleEndian`レジスタ`z`の Qubits の数、はガベージ qubits の数であるタプルです。
+      は、 `(x,(y,z))` `x = y + z` 割り当てられた qubits の合計数、は `y` レジスタの qubits の数、は `LittleEndian` `z` ガベージ qubits の数であるタプルです。
     types:
     - isPrimitive: true
       uid: Int
@@ -33,9 +33,9 @@ output:
       - isPrimitive: true
         uid: Int
 metadata:
-  ms.openlocfilehash: 717de1097641dcbabf6441424e88d77b71e05738
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 897b91f985883ede77c3920c541bea53097d434c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685115"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331247"
