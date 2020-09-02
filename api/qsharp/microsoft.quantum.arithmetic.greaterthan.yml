@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.greaterthan
 name: GreaterThan
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Qubit レジスタにエンコードされた2つの整数の間で、比較の結果に基づいてターゲットの qubit を反転させることにより、より大きい比較を適用します。
 
@@ -14,7 +14,7 @@ references: >-
   - Cuccaro、Draper、Samuel、Kutin、David Petrie の: "新しいクォンタム ripple-キャリー追加回路", 2004 ですが、このようになります。
     https://arxiv.org/abs/quant-ph/0410184v1
 
-  - トーマス Haener、Martin Roetteler、Krysta: "2n + 2 qubits と Toffoli ベースのモジュール乗算を使用したファクタリング"、2016https://arxiv.org/abs/1611.07995
+  - トーマス Haener、Martin Roetteler、Krysta: "2n + 2 qubits と Toffoli ベースのモジュール乗算を使用したファクタリング"、2016 https://arxiv.org/abs/1611.07995
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit)'
   types:
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 64c96858ea4bf1449a5ddd18f0f7cca45d09fb17
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b6e2a3faab9db052cf77b987e5d7ba1578eb4081
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679610"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341940"

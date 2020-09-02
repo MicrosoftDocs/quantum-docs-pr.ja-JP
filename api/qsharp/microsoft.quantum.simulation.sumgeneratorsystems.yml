@@ -2,27 +2,27 @@
 uid: microsoft.quantum.simulation.sumgeneratorsystems
 name: SumGeneratorSystems
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: 新しい GeneratorSystem `GeneratorSystem`を作成するために、複数のを追加します。
+namespace: microsoft.quantum.simulation
+summary: '`GeneratorSystem`新しい GeneratorSystem を作成するために、複数のを追加します。'
 syntax: 'function SumGeneratorSystems (generatorSystems : Microsoft.Quantum.Simulation.GeneratorSystem[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(generatorSystems : Microsoft.Quantum.Simulation.GeneratorSystem[])'
   types:
   - name: generatorSystems
-    summary: '`GeneratorSystem[]` 型の配列です。'
+    summary: '`GeneratorSystem[]` 型の配列。'
     isArray: true
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: 入力`GeneratorSystem`ジェネレーターシステムの合計であるシステムを表す。
+  - summary: '`GeneratorSystem`入力ジェネレーターシステムの合計であるシステムを表す。'
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 metadata:
-  ms.openlocfilehash: 5474e35cb303a6f490794a77483aafd609724eaa
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cf4fe3793578c1050f7a95773112985ad671a695
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687322"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328391"

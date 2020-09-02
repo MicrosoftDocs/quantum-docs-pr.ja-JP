@@ -2,7 +2,7 @@
 uid: microsoft.quantum.synthesis.applytransposition
 name: ApplyTransposition
 type: operation
-namespace: Microsoft.Quantum.Synthesis
+namespace: microsoft.quantum.synthesis
 summary: この操作では、インデックスの振幅を、 `a` `b` 長さ $n $ の指定した状態ベクトルのインデックス位置の振幅でスワップし `register` ます。  が `a` に等しい場合 `b` 、状態ベクトルは変更されません。
 examples: >-
   2つの qubits に対して、number of 法則 # | 1 \ \rangle $、$ | 2 \ \rangle $、$ | 3 \ \rangle $ という uniform を準備します。
@@ -41,9 +41,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: de888c27a7d897492283c7285c6d2d828fe5821b
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: caffae137e4e1fa23ef087c4fbb30179a43dd8c0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85886573"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327991"

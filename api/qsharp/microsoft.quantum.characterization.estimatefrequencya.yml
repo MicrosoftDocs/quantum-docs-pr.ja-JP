@@ -2,8 +2,8 @@
 uid: microsoft.quantum.characterization.estimatefrequencya
 name: EstimateFrequencyA
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: Adjointable と測定値の準備を行うと、は、指定された数の試行`Zero`を実行して、その測定が成功する頻度 (を返します) を推定します。
+namespace: microsoft.quantum.characterization
+summary: Adjointable と測定値の準備を行うと、は、 `Zero` 指定された数の試行を実行して、その測定が成功する頻度 (を返します) を推定します。
 remarks: Adjointable 操作の場合、操作の呼び出しなどの特定の仮定を行うと、qubits がまったく同じ状態になるように準備することができます。これにより、ターゲットマシンでパフォーマンスを最適化することができます。
 syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
 input:
@@ -46,13 +46,13 @@ input:
 output:
   content: Double
   types:
-  - summary: '\Hat{p} (P (\ket{00 \ ドット 0} \bra{00 \) $) $ が`Zero`返さ $M れる頻度の推定 $ $ は、バイアスをかける二項分出し $ \hat{p} = n\_{\uparrow}/n\_{\text{measurements}} $ を使用して取得します。\_ここで、$n {\uparrow} $ `Zero`は観測された結果の数です。'
+  - summary: '\Hat{p} (P (\ket{00 \ ドット 0} \bra{00 \) $) $ が返さ $M れる頻度の推定 $ $ は、 `Zero` バイアスをかける二項分出し $ \hat{p} = n \_ {\uparrow}/n {\text{measurements}} $ を使用して取得し \_ ます。ここで、$n \_ {\uparrow} $ は観測された結果の数です `Zero` 。'
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 064f6d3cf9c075d635ed27ac4192b5aa4045e4d8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 00d54b9dec4e2b57002b04dda4072b9d186baba4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677697"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354537"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
 name: EvaluatePolynomialFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: 固定小数点表現で多項式を評価します。
 syntax: 'operation EvaluatePolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
@@ -17,7 +17,7 @@ input:
     summary: 多項式を評価する固定小数点数を入力します。
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: $P (x) $ を保持する固定小数点数を出力します。 最初は、状態が ${0}\ket $ である必要があります。
+    summary: $P (x) $ を保持する固定小数点数を出力します。 最初は、状態が $ \ket $ である必要があり {0} ます。
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7907702d8919060c630ce410d1cfcb995b4ed37a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5a30a25c7e11c2000abeb9ac4613385666c660fb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679638"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342025"

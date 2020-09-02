@@ -2,24 +2,24 @@
 uid: microsoft.quantum.arithmetic.littleendianasbigendian
 name: LittleEndianAsBigEndian
 type: function
-namespace: Microsoft.Quantum.Arithmetic
-summary: '`LittleEndian` Qubit の順序を逆に`BigEndian`して、qubit レジスタを qubit レジスタに変換します。'
+namespace: microsoft.quantum.arithmetic
+summary: Qubit の `LittleEndian` 順序を逆にして、qubit レジスタを `BigEndian` qubit レジスタに変換します。
 syntax: 'function LittleEndianAsBigEndian (input : Microsoft.Quantum.Arithmetic.LittleEndian) : Microsoft.Quantum.Arithmetic.BigEndian'
 input:
   content: '(input : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: input
-    summary: 形式での`LittleEndian` qubit レジスタ。
+    summary: 形式での qubit レジスタ `LittleEndian` 。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Microsoft.Quantum.Arithmetic.BigEndian
   types:
-  - summary: 形式での`BigEndian` qubit レジスタ。
+  - summary: 形式での qubit レジスタ `BigEndian` 。
     uid: microsoft.quantum.arithmetic.bigendian
 metadata:
-  ms.openlocfilehash: 179ed8c442a92cee65cab540b83921a4dfb99002
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 014b80a8cb065f6900209a33f599053913ce9c68
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676817"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341889"

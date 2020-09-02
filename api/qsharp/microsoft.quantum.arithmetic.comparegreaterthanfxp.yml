@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
 name: CompareGreaterThanFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: クォンタムレジスタに格納されている2つの固定小数点数を比較し、結果のフリップを制御します。
 remarks: 現在の実装では、2つの固定小数点数が同じポイント位置と同じ数の qubits を持つ必要があります。
 syntax: 'operation CompareGreaterThanFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit) : Unit'
@@ -16,7 +16,7 @@ input:
     summary: 比較する2番目の固定小数点数。
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: 比較の結果。 は、の場合`fp1 > fp2`には反転されます。
+    summary: 比較の結果。 は、の場合には反転され `fp1 > fp2` ます。
     isPrimitive: true
     uid: Qubit
 output:
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 851baa02ebf746966b5534a96f1c1bc285632bc2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 68b23de42a62a20d33cc713649df8714706dc592
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679811"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327412"

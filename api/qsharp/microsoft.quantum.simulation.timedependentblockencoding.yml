@@ -2,22 +2,22 @@
 uid: microsoft.quantum.simulation.timedependentblockencoding
 name: TimeDependentBlockEncoding
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  クロックレジスタ`BlockEncoding`によって制御されるを表します。
+  `BlockEncoding`クロックレジスタによって制御されるを表します。
 
 
-  `TimeDependentBlockEncoding` $U つまり、は、クロックレジスタ`d`の状態 $ \ket{k} _d $ によって制御される、任意の演算子 $H _k 関心`s`があることを示す、任意の演算子関連する任意の演算子を、補助状態 $ \ket{0}_a $ に対応する左上のブロックにエンコードすることを意味します。 つまり、以下のようになります。
+  $U つまり、は、 `TimeDependentBlockEncoding` クロックレジスタの状態 $ \ket{k} _d $ によって制御される、 `d` 任意の演算子 $H _k 関心があることを示す、任意の演算子関連する任意の演算子を、 `s` 補助状態 $ \ket _a $ に対応する左上のブロックにエンコードすることを意味し {0} ます。 つまり、以下のようになります。
 
 
-  $ $ \begin{align} (\bra{0}\_a\ otimes I_ {ds}) U (\ket{0}\_I_ a {ds}) = \ sum_ {k} \ket{k}\bra{k}\_dotimes H_k。
+  $ $ \begin{align} (\bra {0} \_ a\ otimes I_ {ds}) U (\ket {0} \_ I_ a {ds}) = \ sum_ {k} \ket{k}\bra{k} \_ dotimes H_k。
 
   \end{align} $ $。
 syntax: newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 6a9bb3648a24eae7fd5279c4300ece7b169fb00a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6c61073bec751dca528d65c03c3631b881a27520
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687302"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328357"
