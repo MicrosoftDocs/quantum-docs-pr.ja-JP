@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.indexof
 name: IndexOf
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 指定された述語を満たす配列内の最初の要素の最初のインデックスを返します。 そのような要素が存在しない場合は、-1 を返します。
 examples: >-
-  は、 `IsEven : Int -> Bool`入力が偶数の場合`true`にのみを返す関数であるとします。 次に、これをと共`IndexOf`に使用して、配列内の最初の偶数の要素を検索できます。
+  は、 `IsEven : Int -> Bool` 入力が偶数の場合にのみを返す関数であるとし `true` ます。 次に、これをと共に使用して、 `IndexOf` 配列内の最初の偶数の要素を検索できます。
 
 
   ```Q#
@@ -38,13 +38,13 @@ input:
 output:
   content: Int
   types:
-  - summary: が true である`idx` `predicate(arr[idx])`ような最小のインデックス。そのような要素が存在しない場合は-1。
+  - summary: '`idx`が true であるような最小のインデックス `predicate(arr[idx])` 。そのような要素が存在しない場合は-1。'
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 6fb95357096751e53f601a9c855ff656e2dd1b34
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6b0097c4feb41a00f0d9c1fcb4c2b5dbcaa186ef
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680995"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352123"

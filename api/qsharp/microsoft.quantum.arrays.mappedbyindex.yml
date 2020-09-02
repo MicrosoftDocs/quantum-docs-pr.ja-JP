@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.mappedbyindex
 name: MappedByIndex
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 配列と、配列のインデックス付き要素に対して定義された関数を指定すると、関数の下にある元の配列のイメージで構成される新しい配列を返します。
 examples: >-
   次の2つの行は等価です。
@@ -28,7 +28,7 @@ input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: 要素とその`(Int, 'T)`インデックス`'U`をマップするために使用されるからへの関数。
+    summary: "`(Int, 'T)` `'U` 要素とそのインデックスをマップするために使用されるからへの関数。"
     isFunction: true
     input:
       types:
@@ -41,28 +41,28 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: 上`'T`の要素の配列。
+    summary: 上の要素の配列 `'T` 。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: 関数によってマップされる要素の配列`'U[]` `mapper`
+  - summary: "`'U[]`関数によってマップされる要素の配列 `mapper` 。"
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: 要素の`array`型。
+  summary: 要素の型 `array` 。
 - uid: "'U"
-  summary: '`mapper`関数の結果の型。'
+  summary: 関数の結果の型 `mapper` 。
 seeAlso:
 - mapped
 metadata:
-  ms.openlocfilehash: 64741df4a3d7b7937f13614ffc9c7c7ec1aa3f7b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d6f50c3fe90998431b71050a953ec5dc08e31e92
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680930"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351936"

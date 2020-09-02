@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.drawmany
 name: DrawMany
 type: operation
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 指定された数のサンプルに対して操作を繰り返し、配列内の出力を収集します。
 examples: >-
   次の例では、一度に1ビットをサンプリングする操作を指定して、整数を示します。
@@ -50,9 +50,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.repeat
 metadata:
-  ms.openlocfilehash: 8ed96fbb8b543cf8f9f167304e45e5f4fd82ad44
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: a4f3ab6f4224a9b5a293fe458ad653171983a6cc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85886771"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352395"

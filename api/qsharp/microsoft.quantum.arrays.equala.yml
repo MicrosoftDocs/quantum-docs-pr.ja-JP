@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.equala
 name: EqualA
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 同じ型の2つの配列と、配列の要素のペアに対して定義されている述語を指定すると、配列が等しいかどうかがチェックされます。
 remarks: >-
-  この関数は、ジェネリック型に対して定義されています。つまり、2つの配列`'T[]`と関数`equal: ('T, 'T) -> Bool`がある場合、この関数は、 `Bool`配列が等しいかどうかを示す値を返します。
+  この関数は、ジェネリック型に対して定義されています。つまり、2つの配列と関数がある場合、 `'T[]` `equal: ('T, 'T) -> Bool` この関数は、 `Bool` 配列が等しいかどうかを示す値を返します。
 
   2つの配列が等しいと見なされるには、長さが同じで、配列内の同じ位置にある要素が等しい必要があります。
 examples: >-
@@ -59,18 +59,18 @@ output:
   content: Bool
   types:
   - summary: >-
-      と`array2`が`true`等しい場合`array1`にのみ、値を指定します。
+      `true`とが等しい場合にのみ、値を指定し `array1` `array2` ます。
 
-      つまり、両方の配列の長さが同じで、すべての要素がで`equal`定義されたとおりに等しい場合です。
+      つまり、両方の配列の長さが同じで、すべての要素がで定義されたとおりに等しい場合です `equal` 。
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
   summary: 各配列の要素の型。
 metadata:
-  ms.openlocfilehash: d2af5ff8e2d66e6162c73c3854670451a00dcf50
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9f3083483b7720efb4f8eda89d2de224543c236e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676493"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352378"

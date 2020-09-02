@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arrays.fold
 name: Fold
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 配列`f` `array`を使用して関数を反復`f(f(f(initialState, array[0]), array[1]), ...)`処理し、を返します。
+namespace: microsoft.quantum.arrays
+summary: 配列を使用して関数を反復処理し `f` `array` 、を返し `f(f(f(initialState, array[0]), array[1]), ...)` ます。
 examples: >-
   ```qsharp
 
@@ -45,18 +45,18 @@ input:
 output:
   content: "'State"
   types:
-  - summary: のすべての`array`要素を反復処理した後に、フォルダーによって返される最終的な状態。
+  - summary: のすべての要素を反復処理した後に、フォルダーによって返される最終的な状態 `array` 。
     uid: "'State"
     isLocal: true
 typeParameters:
 - uid: "'State"
-  summary: 関数が操作する`folder`状態の型。つまり、最初の引数としてを受け取り、を返します。
+  summary: 関数が操作する状態の型 `folder` 。つまり、最初の引数としてを受け取り、を返します。
 - uid: "'T"
-  summary: 要素の`array`型。
+  summary: 要素の型 `array` 。
 metadata:
-  ms.openlocfilehash: d02d20c049e8b8d21214028efcd6a647067bf71f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 584344137b498a9c5348cb1f0a0cb85aeec127bd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676441"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352310"
