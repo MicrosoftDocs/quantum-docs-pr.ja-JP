@@ -2,8 +2,8 @@
 uid: microsoft.quantum.simulation.adiabaticstateenergyunitary
 name: AdiabaticStateEnergyUnitary
 type: operation
-namespace: Microsoft.Quantum.Simulation
-summary: を使用して状態の`statePrepUnitary`準備を実行し、その後、を使用して`adiabaticUnitary`adiabatic 状態の準備を行い`phaseEstAlgorithm`ます。 `qpeUnitary`最後に、を使用して、結果の状態に関してフェーズの推定を行います。
+namespace: microsoft.quantum.simulation
+summary: を使用して状態の準備を実行し、その後、を使用して `statePrepUnitary` adiabatic 状態の準備を行い `adiabaticUnitary` ます。最後に、を使用して、結果の状態に関してフェーズの推定を行い `qpeUnitary` `phaseEstAlgorithm` ます。
 syntax: 'operation AdiabaticStateEnergyUnitary (statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[]) : Double'
 input:
   content: '(statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[])'
@@ -33,7 +33,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: この oracle では、dynamical ジェネレーターでの時間 $ \ デルタ t $ の進化を表す $ (グランドステート $ \ket{\phi} $ およびグラウンドステートエネルギー $E = \ phi\\, \ デルタ t $) を $U 表す oracle。
+    summary: この oracle では、dynamical ジェネレーターでの時間 $ \ デルタ t $ の進化を表す $ (グランドステート $ \ket{\phi} $ およびグラウンドステートエネルギー $E = \ phi \\ , \ デルタ t $) を $U 表す oracle。
     isOperation: true
     input:
       types:
@@ -51,7 +51,7 @@ input:
     summary: >-
       特定のユニタリ操作に対してフェーズ推定を実行する操作。
 
-      詳細については、「[反復フェーズの推定](/quantum/libraries/characterization#iterative-phase-estimation)」を参照してください。
+      詳細については、「 [反復フェーズの推定](/quantum/libraries/characterization#iterative-phase-estimation) 」を参照してください。
     isOperation: true
     input:
       types:
@@ -75,9 +75,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 2e8e3917b6f3f741fba3f03aeb467a8785b5325c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f1c5f554eb94f50102a11af53b449b793e2d694d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687115"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330278"

@@ -2,13 +2,13 @@
 uid: microsoft.quantum.simulation.blockencodingbylcu
 name: BlockEncodingByLCU
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  対象の演算子をにエンコード`BlockEncoding`します。
+  対象の演算子をにエンコード `BlockEncoding` します。
 
 
-  これにより`BlockEncoding` 、一部の演算子 $H = \ sum_ {j} | \ alpha_j | をエンコードする、$U = P\ cdot V\ Cdot P ^/ダガー $ が構築されます。U_j $ は、unitaries います。 通常、$P $ は、$P{0}\_\ket a = \ sum_j \ sqrt{\ alpha_j\|/\ vec-alpha\|\_2} \ket{j}\_a $、$V = \ sum_ {j} \ket{j}\bra{j}\_aotimes U_j $ という状態の準備を行うためのものです。
-remarks: この`BlockEncoding`実装は、 `BlockEncodingReflection`のプロパティを提供します。
+  これにより、 `BlockEncoding` 一部の演算子 $H = \ sum_ {j} | \ alpha_j | をエンコードする、$U = P\ cdot V\ Cdot P ^/ダガー $ が構築されます。U_j $ は、unitaries います。 通常、$P $ は、$P \ket {0} \_ a = \ sum_j \ sqrt{\ alpha_j/ \| \ vec-alpha \| \_ 2} \ket{j} \_ a $、$V = \ sum_ {j} \ket{j}\bra{j} \_ aotimes U_j $ という状態の準備を行うためのものです。
+remarks: この `BlockEncoding` 実装は、のプロパティを提供 `BlockEncodingReflection` します。
 syntax: "function BlockEncodingByLCU (statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl)) : (('T, 'S) => Unit is Adj + Ctl)"
 input:
   content: "(statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl))"
@@ -46,7 +46,7 @@ input:
 output:
   content: (('T, 'S) => Unit is Adj + Ctl)
   types:
-  - summary: $U $ はレジスタ`a`に対して共同で`s`動作し、$H $ をブロックエンコードし、$U ^ ダガー = U $ を満たすことができます。
+  - summary: $U $ はレジスタに対して共同で動作し、 `a` `s` $H $ をブロックエンコードし、$U ^ ダガー = U $ を満たすことができます。
     isOperation: true
     input:
       types:
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 581170f33001b0fef6606a39085b36c7f9559ac0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9886496e446a9dfc0b302be0077f35b3190ff9e4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686906"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330193"

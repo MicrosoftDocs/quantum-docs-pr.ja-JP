@@ -2,17 +2,17 @@
 uid: microsoft.quantum.simulation.evolutionset
 name: EvolutionSet
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
   シミュレーションアルゴリズムを実装するために簡単に実装して使用できるゲートのセットを表します。
 
 
-  セット内の要素は、によっ<xref:microsoft.quantum.simulation.generatorindex>てインデックスが作成され、各セットは`GeneratorIndex`から<xref:microsoft.quantum.simulation.evolutionunitary>の関数によって記述されます。これは、時間を表す実数によってパラメーター化された操作です。
+  セット内の要素は、によってインデックスが作成され、  <xref:microsoft.quantum.simulation.generatorindex> 各セットはからの関数によって記述され `GeneratorIndex` ます。これは  <xref:microsoft.quantum.simulation.evolutionunitary> 、時間を表す実数によってパラメーター化された操作です。
 syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
 metadata:
-  ms.openlocfilehash: 0db782c1909c6121078f251f34bbffd5b49a4d8e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 747986d1374a343827373ef85ac66720ca3c74b6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686995"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343198"

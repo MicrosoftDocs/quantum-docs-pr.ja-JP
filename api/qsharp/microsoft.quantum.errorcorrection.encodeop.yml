@@ -2,7 +2,7 @@
 uid: microsoft.quantum.errorcorrection.encodeop
 name: EncodeOp
 type: newtype
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: >-
   指定されたスクラッチを使用して、物理レジスタを論理レジスタにエンコードする操作を表します。
 
@@ -10,9 +10,9 @@ summary: >-
   最初の引数はエンコードされる物理レジスタとして取得され、2番目の引数は使用されるスクラッチレジスタとして使用されます。
 syntax: newtype EncodeOp = ((Qubit[], Qubit[]) => Microsoft.Quantum.ErrorCorrection.LogicalRegister);
 metadata:
-  ms.openlocfilehash: 610b9de9ccf236855c8669ac7df41fde6c297533
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7962cc819dc32f48ac2e2e48e6039aa451ec7a26
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684959"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336313"

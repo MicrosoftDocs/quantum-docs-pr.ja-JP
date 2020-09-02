@@ -2,7 +2,7 @@
 uid: microsoft.quantum.errorcorrection.bitfliprecoveryfn
 name: BitFlipRecoveryFn
 type: function
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: ⟦ 3, 1, 1 ⟧ビットフリップコードのテーブル参照によって指定されたより隣人測定の復旧 p 操作のための関数です。
 syntax: 'function BitFlipRecoveryFn () : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
@@ -11,14 +11,14 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: より隣人の測定`RecoveryFn`値`Result[]`を受け取り、検出された`Pauli[]`エラーを修正する操作を返す型の関数。
+  - summary: '`RecoveryFn`より隣人の測定値を受け取り、 `Result[]` `Pauli[]` 検出されたエラーを修正する操作を返す型の関数。'
     uid: microsoft.quantum.errorcorrection.recoveryfn
 seeAlso:
 - microsoft.quantum.canon.recoveryfn
 metadata:
-  ms.openlocfilehash: aeb20fcef86b26fd61f3bbe2594547f1ae212b4c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fc6b353eaa67d82b2c49f8c795acd0dd11ab921b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683885"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336653"
