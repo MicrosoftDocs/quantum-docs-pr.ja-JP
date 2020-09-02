@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.lookupfunction
 name: LookupFunction
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 配列が指定されている場合、その配列の要素を返す関数を返します。
-remarks: この関数は、引数として関数を受け取る`Int -> 'T`関数や操作と相互運用する場合に主に役立ちます。 これは、たとえば、ジェネレーター表現ライブラリ内で、配列全体をメモリに記録する必要がないようにするために関数が使用される場合などに共通します。
+remarks: この関数は、 `Int -> 'T` 引数として関数を受け取る関数や操作と相互運用する場合に主に役立ちます。 これは、たとえば、ジェネレーター表現ライブラリ内で、配列全体をメモリに記録する必要がないようにするために関数が使用される場合などに共通します。
 syntax: "function LookupFunction (array : 'T[]) : (Int -> 'T)"
 input:
   content: "(array : 'T[])"
@@ -17,7 +17,7 @@ input:
 output:
   content: (Int -> 'T)
   types:
-  - summary: その`f(idx) == f[idx]`よう`f`な関数。
+  - summary: '`f`そのような関数 `f(idx) == f[idx]` 。'
     isFunction: true
     input:
       types:
@@ -31,9 +31,9 @@ typeParameters:
 - uid: "'T"
   summary: 参照関数として表される配列の要素の型。
 metadata:
-  ms.openlocfilehash: 4d911a3952c273e050c75e4d785e6812d54f5fa1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d8f92bec0999e01b570aebc0a6dcdc327fa8761b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680966"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352004"

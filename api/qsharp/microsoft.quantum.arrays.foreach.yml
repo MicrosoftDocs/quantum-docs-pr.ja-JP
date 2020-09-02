@@ -2,15 +2,15 @@
 uid: microsoft.quantum.arrays.foreach
 name: ForEach
 type: operation
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 配列と、配列の要素に対して定義されている操作が指定された場合、は、操作の下にある元の配列のイメージで構成される新しい配列を返します。
-remarks: "この操作は、ジェネリック型に対して定義されます。つまり、 `'T[]`配列と操作`action : 'T -> 'U`がある場合は、配列の要素をマップし、型`'U[]`の新しい配列を生成できます。"
+remarks: "この操作は、ジェネリック型に対して定義されます。つまり、配列と操作がある場合は、 `'T[]` `action : 'T -> 'U` 配列の要素をマップし、型の新しい配列を生成でき `'U[]` ます。"
 syntax: "operation ForEach (action : ('T => 'U), array : 'T[]) : 'U[]"
 input:
   content: "(action : ('T => 'U), array : 'T[])"
   types:
   - name: action
-    summary: 各要素に`'T`適用`'U`されるからへの操作。
+    summary: "`'T` `'U` 各要素に適用されるからへの操作。"
     isOperation: true
     input:
       types:
@@ -21,26 +21,26 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: 上`'T`の要素の配列。
+    summary: 上の要素の配列 `'T` 。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: 操作によってマップされる要素の配列`'U[]` `action`
+  - summary: "`'U[]`操作によってマップされる要素の配列 `action` 。"
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: 要素の`array`型。
+  summary: 要素の型 `array` 。
 - uid: "'U"
-  summary: '`action`操作の結果の種類。'
+  summary: 操作の結果の種類 `action` 。
 metadata:
-  ms.openlocfilehash: af4b6b469017e4cee581a9bdd96ef6171d9b1deb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c630f23c57ccba1588e553641acf61312411f146
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681034"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352276"
