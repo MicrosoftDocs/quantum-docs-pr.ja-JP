@@ -2,9 +2,9 @@
 uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
 name: EstimateRealOverlapBetweenStates
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: それぞれの状態のコピーを準備する2つの操作を実行すると、各操作によって準備された状態間の重複部分が推定されます。
-remarks: この操作では、Hadamard テストを使用して、$ $ \begin{align} \braket{\psi | の実数部を検索します。V ^ {\ dagger} U |\psi} \end{align} $ $ ここで、$ \ket{\psi} $ はによっ`commonPreparation`て準備された状態であり $U、$ `preparation1`はのアクションのユニタリ表現で`preparation2`あり、$V $ はに対応します。
+remarks: この操作では、Hadamard テストを使用して、$ $ \begin{align} \braket{\psi | の実数部を検索します。V ^ {\ dagger} U |\psi} \end{align} $ $ ここで、$ \ket{\psi} $ はによって準備された状態であり `commonPreparation` $U、$ はのアクションのユニタリ表現で `preparation1` あり、$V $ はに対応し `preparation2` ます。
 syntax: 'operation EstimateRealOverlapBetweenStates (commonPreparation : (Qubit[] => Unit is Adj), preparation1 : (Qubit[] => Unit is Adj + Ctl), preparation2 : (Qubit[] => Unit is Adj + Ctl), nQubits : Int, nMeasurements : Int) : Double'
 references: '- Aharonov *et al.* [/0511096 のように](https://arxiv.org/abs/quant-ph/0511096)なります。'
 input:
@@ -55,7 +55,7 @@ input:
     - Adjoint
     - Controlled
   - name: nQubits
-    summary: 、 `preparation1`、および`preparation2` all が動作する`commonPreparation`qubits の数。
+    summary: 、、および all が動作する qubits の数 `commonPreparation` `preparation1` `preparation2` 。
     isPrimitive: true
     uid: Int
   - name: nMeasurements
@@ -71,9 +71,9 @@ seeAlso:
 - microsoft.quantum.characterization.estimateimagoverlapbetweenstates
 - microsoft.quantum.characterization.estimateoverlapbetweenstates
 metadata:
-  ms.openlocfilehash: 425a9bde577f8c52b0e4fb5f4fe1cb1ecbe1a38d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5d1fab5e1bc6125db90c01002aac2f4c2e330af6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677662"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354469"

@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.amplitudeamplification
 name: Microsoft.Quantum.AmplitudeAmplification
-summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、振幅増幅を実行するための関数と操作が含まれています。\n\n # <a name=\"description\"></a>[説明]\n 無関係の部分反射を使用した振幅増幅は、ここで実装されている振幅増幅の最も一般的な形式です。\n\n これは、操作 AmpAmpObliviousByReflectionPhases を通じて呼び出されます。\n\n これには`ancillaRegister` 、と`systemRegister`の2つのレジスタがあります。\n\n これは、レジスタにのみ作用する型`ReflectionOracle`の反射に対して`ancillaRegister` 、2つの oracles を受け入れます。\n\n これは、両方のレジスタに共同で動作する`ObliviousOracle` 、型の無関係の特殊な振幅増幅を許可します。\n\n へ`ancillaRegister`の入力状態は、最初のリフレクション演算子 $I-2 \\ k {s} \\ bra {s} $ という一意の $-$1 eigenstate と想定されます。\n\n ターゲットクォンタムの状態に関する反射は、多くの場合、計算ベース $ \\ket{0\\cdots 0} $ からその状態を準備する oracle へのアクセスを前提として実装されます。\n\n これらの oracles の規則では、2つのレジスタが必要`flagQubit`です。1つはシングル qubit レジスタ、もう1つはフロントシャードレジスタレジスタに登録します。\n\n 型`StateOracle`の oracle は、両方のレジスタに共同で動作し、{1} `flagQubit`レジスタ内の $ \\ket $ によってフラグが設定されたターゲット状態を、いくつかの実際の振幅で作成します。\n\n このフラグ`ReflectionOracle`の状態に関するリフレクションは、操作`TargetStateReflectionOracle`によって生成されます。\n\n への`ReflectionOracle`入力状態に関するリフレクション`ancillaRegister`は、を反転することによって生成され、$ \\ket{0\\cdots 0} $ と ReflectionStart () を反映します。\n\n 型`DeterministicStateOracle`の oracle は、 `qubitState`レジスタに対して動作し、フラグなしでターゲットの状態を正確に作成します。\n\n `AmpAmpObliviousByOraclePhases`は、反射ではなく oracles `StateOracle`とを`ObliviousOracle`受け入れる無関係の振幅増幅のバージョンです。\n\n 振幅増幅は特殊なケースで、無関係の振幅増幅で`ObliviousOracle`あることに注意してください。は id 演算子で、システム`systemRegister` qubits は存在しません。つまり、は空です。\n\n これは、操作`AmpAmByReflectionPhases`とを`AmpAmpByOraclePhases`通じて呼び出されます。\n\n Grover search の標準的なケースでの部分的な反射のフェーズは、AmpAmpPhasesStandard 関数によって提供されます。\n\n たとえば、AmpAmpByOracle >-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases という依存関係があります。"
+summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、振幅増幅を実行するための関数と操作が含まれています。\n\n # <a name=\"description\"></a>説明\n 無関係の部分反射を使用した振幅増幅は、ここで実装されている振幅増幅の最も一般的な形式です。\n\n これは、操作 AmpAmpObliviousByReflectionPhases を通じて呼び出されます。\n\n これには、との2つのレジスタがあり `ancillaRegister` `systemRegister` ます。\n\n これは `ReflectionOracle` 、レジスタにのみ作用する型の反射に対して、2つの oracles を受け入れ `ancillaRegister` ます。\n\n これは、 `ObliviousOracle` 両方のレジスタに共同で動作する、型の無関係の特殊な振幅増幅を許可します。\n\n への入力状態は、 `ancillaRegister` 最初のリフレクション演算子 $I-2 \\ k {s} \\ bra {s} $ という一意の $-$1 eigenstate と想定されます。\n\n ターゲットクォンタムの状態に関する反射は、多くの場合、計算ベース $ \\ket{0\\cdots 0} $ からその状態を準備する oracle へのアクセスを前提として実装されます。\n\n これらの oracles の規則では、2つのレジスタが必要です。1つはシングル qubit レジスタ、もう1つはフロントシャー `flagQubit` ドレジスタレジスタに登録します。\n\n 型の oracle は、 `StateOracle` 両方のレジスタに共同で動作し、レジスタ内の $ \\ket $ によってフラグが設定されたターゲット状態を、 {1} `flagQubit` いくつかの実際の振幅で作成します。\n\n `ReflectionOracle`このフラグの状態に関するリフレクションは、操作によって生成され `TargetStateReflectionOracle` ます。\n\n への `ReflectionOracle` 入力状態に関するリフレクション `ancillaRegister` は、を反転することによって生成され、$ \\ket{0\\cdots 0} $ と ReflectionStart () を反映します。\n\n 型の oracle は、 `DeterministicStateOracle` レジスタに対して動作し、 `qubitState` フラグなしでターゲットの状態を正確に作成します。\n\n `AmpAmpObliviousByOraclePhases` は、反射ではなく oracles とを受け入れる無関係の振幅増幅のバージョンです `StateOracle` `ObliviousOracle` 。\n\n 振幅増幅は特殊なケースで、無関係の振幅増幅であることに注意してください。 `ObliviousOracle` は id 演算子で、システム qubits は存在しません。つまり、 `systemRegister` は空です。\n\n これは、操作とを通じて呼び出され `AmpAmByReflectionPhases` `AmpAmpByOraclePhases` ます。\n\n Grover search の標準的なケースでの部分的な反射のフェーズは、AmpAmpPhasesStandard 関数によって提供されます。\n\n たとえば、AmpAmpByOracle >-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases という依存関係があります。"
 functions:
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
   summary: "\n> [!WARNING]\n> 非推奨\n\nAmpAmpByOracle は非推奨となりました。 代わりに、@\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\" を使用してください。\n@\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\" を使用してください。"
@@ -39,10 +39,10 @@ functions:
   summary: 標準の振幅増幅の部分的なリフレクションフェーズを計算します。
 - uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
   summary: >-
-    フラグ qubit で一意にマークされたターゲット状態に関するを構築し`ReflectionOracle`ます。
+    `ReflectionOracle`フラグ qubit で一意にマークされたターゲット状態に関するを構築します。
 
 
-    ターゲット状態では、1つの qubit が1に設定され、それ以外{1}の場合は 0: $ \ket _f $ になります。
+    ターゲット状態では、1つの qubit が1に設定され、それ以外の場合は 0: $ \ket {1} _f $ になります。
 operations:
 - uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
   summary: "\n> [!WARNING]\n> 非推奨\n\nAmpAmpRUSByOracle は非推奨となりました。 代わりに、@\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\" を使用してください。\n@\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\" を使用してください。"
@@ -58,9 +58,9 @@ newtypes:
 - uid: microsoft.quantum.amplitudeamplification.rotationphases
   summary: 振幅増幅での単一 qubit 回転のシーケンスのフェーズ。
 metadata:
-  ms.openlocfilehash: 7f8b98826812e842a582d7940c5dc892a056e1fa
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c64b38175c55e3f71f0746d9a7e65ea5e78b7383
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675511"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341345"

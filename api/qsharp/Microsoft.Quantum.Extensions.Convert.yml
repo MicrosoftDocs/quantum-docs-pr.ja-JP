@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.extensions.convert
 name: Microsoft.Quantum.Extensions.Convert
-summary: " # <a name=\"summary\"></a>まとめ\n これらは、Q # 型システム内で関連する .NET CLR の system.string 名前空間の関数の一部です。\n\n # <a name=\"remarks\"></a>Remarks\n Bool、Int、Double 型の関数の複数のバージョンがある場合、対応する関数にはサフィックス B、I、および D があります。"
+summary: " # <a name=\"summary\"></a>まとめ\n これらは、Q # 型システム内で関連する .NET CLR の system.string 名前空間の関数の一部です。\n\n # <a name=\"remarks\"></a>解説\n Bool、Int、Double 型の関数の複数のバージョンがある場合、対応する関数にはサフィックス B、I、および D があります。"
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
   summary: "\n> [!WARNING]\n> 非推奨\n\nBigIntToBools は非推奨となりました。 代わりに、@\"microsoft.quantum.convert.bigintasboolarray\" を使用してください。\n@\"microsoft.quantum.convert.bigintasboolarray\" を使用してください。"
@@ -24,9 +24,9 @@ functions:
 - uid: microsoft.quantum.extensions.convert.tostringiformat
   summary: "\n> [!WARNING]\n> 非推奨\n\nToStringIFormat は非推奨とされます。 代わりに、@\"microsoft.quantum.convert.intasstringwithformat\" を使用してください。\n@\"microsoft.quantum.convert.intasstringwithformat\" を使用してください。"
 metadata:
-  ms.openlocfilehash: 8196882d8f7edf417f65bcd1651ecb770c4286f4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6f307cfeabec132c2b3b3953f30a2b0ad208f57a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673287"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341022"

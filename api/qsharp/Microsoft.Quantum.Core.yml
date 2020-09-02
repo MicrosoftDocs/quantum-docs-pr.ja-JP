@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.core
 name: Microsoft.Quantum.Core
-summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、Q # コア関数と操作が含まれています。\n\n # <a name=\"remarks\"></a>Remarks\n この名前空間は、Q # コンパイラによって自動的に開かれるので、この名前空間のすべての要素を常に使用できます。"
+summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、Q # コア関数と操作が含まれています。\n\n # <a name=\"remarks\"></a>解説\n この名前空間は、Q # コンパイラによって自動的に開かれるので、この名前空間のすべての要素を常に使用できます。"
 functions:
 - uid: microsoft.quantum.core.default
   summary: 指定された型の既定のインスタンスを返します。
@@ -23,9 +23,9 @@ newtypes:
 - uid: microsoft.quantum.core.entrypoint
   summary: 実行可能ファイルのエントリポイントをマークするために使用される、コンパイラが認識する属性。
 metadata:
-  ms.openlocfilehash: 7533708473cff8902745ed67c235244ea9b2234b
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 354a8e2c221007f27ff409dc4b75b0d5953d9f67
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885270"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341260"

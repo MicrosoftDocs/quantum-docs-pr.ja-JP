@@ -7,13 +7,13 @@ operations:
   summary: >-
     現在借用で使用可能な qubits の数を返します。
 
-    これには未使用の qubits が含まれます。つまり、これにはによって`GetQubitsAvailableToUse`返される qubits が含まれます。
+    これには未使用の qubits が含まれます。つまり、これにはによって返される qubits が含まれ `GetQubitsAvailableToUse` ます。
 - uid: microsoft.quantum.environment.getqubitsavailabletouse
   summary: 現在使用できる qubits の数を返します。
 metadata:
-  ms.openlocfilehash: bd6d442aabb179f4c5fea0a0f48efaa472ec00cf
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7f597d8f429089b0ebf2c22cef1d1b98ea270402
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673344"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341158"

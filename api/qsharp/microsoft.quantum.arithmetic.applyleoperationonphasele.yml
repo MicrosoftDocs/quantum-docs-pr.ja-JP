@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arithmetic.applyleoperationonphasele
 name: ApplyLEOperationOnPhaseLE
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 型<xref:microsoft.quantum.arithmetic.littleendian>のターゲットレジスタに対し<xref:microsoft.quantum.arithmetic.phaselittleendian>てレジスタを入力として受け取る操作を適用します。
-remarks: レジスタは、を使用`LittleEndian` <xref:microsoft.quantum.canon.qftle>することによってに変換され、その後、の`op`適用後に元の表現に戻されます。
+namespace: microsoft.quantum.arithmetic
+summary: <xref:microsoft.quantum.arithmetic.phaselittleendian>型のターゲットレジスタに対してレジスタを入力として受け取る操作を適用 <xref:microsoft.quantum.arithmetic.littleendian> します。
+remarks: レジスタは、を使用することによってに変換され、その後、 `LittleEndian` <xref:microsoft.quantum.canon.qftle> の適用後に元の表現に戻され `op` ます。
 syntax: 'operation ApplyLEOperationOnPhaseLE (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
@@ -32,9 +32,9 @@ seeAlso:
 - microsoft.quantum.canon.applyleoperationonphaselec
 - microsoft.quantum.canon.applyleoperationonphaseleca
 metadata:
-  ms.openlocfilehash: 6aaa5b3d3b2411a28bdb8f11b44670982f5b6c16
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c48126248242f009c1030735067fff03b885bda0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672866"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341649"

@@ -2,10 +2,10 @@
 uid: microsoft.quantum.characterization.measureidentity
 name: MeasureIdentity
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: Qubits のレジスタで id 演算子を測定します。
 remarks: >-
-  $/を完了した $ は eigenvalue $1 $ のみを持ち、負の eigenvalue を持たないため、この操作`Zero`は常にを返します。これは eigenvalue $ + 1 = (-1) ^ 0 $ に相当します。の`register`状態を折りたたむことはできません。
+  $/を完了した $ は eigenvalue $1 $ のみを持ち、負の eigenvalue を持たないため、この操作は常にを返し `Zero` ます。これは eigenvalue $ + 1 = (-1) ^ 0 $ に相当します。の状態を折りたたむことはできません `register` 。
 
 
   実際には、この操作は役に立ちませんが、プロセス tomography のコンテキストでは、クォンタムプロセスのトレース保持に関する情報を提供するので役立ちます。
@@ -23,13 +23,13 @@ input:
 output:
   content: Result
   types:
-  - summary: 結果の値`Zero`。
+  - summary: 結果の値 `Zero` 。
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 28dd3655c883c02b798e6e4cdf39c70100c6535b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9b6b8bfbf8d13bf1415afadd0b520551201cd3d2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677634"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354300"

@@ -8,9 +8,9 @@ operations:
 - uid: microsoft.quantum.characterization.discretephaseestimationiteration
   summary: ユニタリ oracle の整数の累乗を使用して、反復 (クラシックデプロイ制御) フェーズの推定アルゴリズムの単一の反復処理を実行します。
 - uid: microsoft.quantum.characterization.estimatefrequency
-  summary: 準備と測定値を指定すると、指定された数の試行`Zero`回数を実行することで、測定が成功する頻度 (を返します) を推定します。
+  summary: 準備と測定値を指定すると、指定された数の試行回数を実行することで、測定が成功する頻度 (を返します) を推定し `Zero` ます。
 - uid: microsoft.quantum.characterization.estimatefrequencya
-  summary: Adjointable と測定値の準備を行うと、は、指定された数の試行`Zero`を実行して、その測定が成功する頻度 (を返します) を推定します。
+  summary: Adjointable と測定値の準備を行うと、は、 `Zero` 指定された数の試行を実行して、その測定が成功する頻度 (を返します) を推定します。
 - uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
   summary: それぞれの状態のコピーを準備する2つの操作を実行すると、各操作によって準備された状態の重複部分の虚数部が推定されます。
 - uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
@@ -22,15 +22,15 @@ operations:
 - uid: microsoft.quantum.characterization.measureidentity
   summary: Qubits のレジスタで id 演算子を測定します。
 - uid: microsoft.quantum.characterization.quantumphaseestimation
-  summary: 指定された oracle `U`に対してクォンタムフェーズ推定`targetState`アルゴリズムを実行し、フェーズをビッグエンディアンクォンタムレジスタに読み込みます。
+  summary: 指定された oracle に対してクォンタムフェーズ推定アルゴリズムを実行し `U` `targetState` 、フェーズをビッグエンディアンクォンタムレジスタに読み込みます。
 - uid: microsoft.quantum.characterization.robustphaseestimation
-  summary: 指定された oracle `U`および eigenstate に対して、反復的ではない堅牢なクォンタムフェーズの推定アルゴリズムを実行し、ハイゼンベルグ limit での差異のスケーリングにより、フェーズの1つの実際の値の見積もりを提供します。
+  summary: 指定された oracle および eigenstate に対して、反復的ではない堅牢なクォンタムフェーズの推定アルゴリズムを実行 `U` し、ハイゼンベルグ limit での差異のスケーリングにより、フェーズの1つの実際の値の見積もりを提供します。
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: 特定の目的のチャネルを指定して、tomography の単一の qubit プロセス測定を実行します。
 metadata:
-  ms.openlocfilehash: 2ae4ee28cf6e87a3fde1f8107194760c388b462c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b8b7c1b7e6fc3dad00e62d7722ef4cb38b96b82f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673359"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341481"
