@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.chunks
 name: Chunks
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 配列を同じ長さの複数の部分に分割します。
-remarks: がで`nElements`割り切れない場合、出力の最後の要素は`nElements`より`Length(arr)`も短い場合があることに注意してください。
+remarks: '`nElements`がで割り切れない場合、出力の最後の要素はよりも短い場合があることに注意 `Length(arr)` `nElements` してください。'
 syntax: "function Chunks (nElements : Int, arr : 'T[]) : 'T[][]"
 input:
   content: "(nElements : Int, arr : 'T[])"
@@ -28,9 +28,9 @@ output:
       uid: "'T"
       isLocal: true
 metadata:
-  ms.openlocfilehash: 283141b3d6826faff9451b122dc0d602edc34500
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 68d4dbf14be8372445eaa0d8034101d314363b00
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676553"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352480"

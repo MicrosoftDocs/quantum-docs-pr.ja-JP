@@ -2,12 +2,12 @@
 uid: microsoft.quantum.diagnostics.dumpmachine
 name: DumpMachine
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: 現在のターゲットコンピューターの状態をダンプします。
 remarks: >-
   このメソッドを使用すると、ターゲットコンピューターの現在の状態に関する情報をファイルまたはその他の場所にダンプできます。
 
-  生成される実際の情報との`location`セマンティクスは、各ターゲットコンピューターに固有です。 ただし、空のタプルを場所として`()`指定する () か`location` 、パラメーターを省略するだけで、通常はコンソールに出力を生成します。
+  生成される実際の情報とのセマンティクス `location` は、各ターゲットコンピューターに固有です。 ただし、空のタプルを場所として指定 `()` する () か、パラメーターを省略するだけで、 `location` 通常はコンソールに出力を生成します。
 
 
   Quantum 開発キットの一部として配布されたローカルの完全な状態シミュレーターでは、このメソッドは、wave 関数を1次元の複素数の配列として書き込むファイルのパスを含む文字列を想定しています。各要素は、対応する状態を測定する確率の振幅を表します。
@@ -22,13 +22,13 @@ input:
 output:
   content: Unit
   types:
-  - summary: なし。
+  - summary: '[なし] :'
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 7511e0bdded689c84cb90794860dd79e48950414
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7b30ac476cd8c3f5db5344d7ac9cabffd670f1a1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82656573"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337367"

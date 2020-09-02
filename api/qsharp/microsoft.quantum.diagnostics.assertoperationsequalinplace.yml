@@ -2,22 +2,22 @@
 uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
 name: AssertOperationsEqualInPlace
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: >-
   2つの操作を指定すると、すべての入力状態で同じ動作をするようにアサートされます。
 
 
-  このアサーションは、フォームのすべての状態に対して操作のアクションを確認することによって実装されます。 $V 0/otimes V_ {n-1} $ です。 $V _k $ は、状態 ${0}\ket $、${1}\ket $、$ \ket{+} $、$ \ket{i} $ (+ 1 eigenstate of pauli Y 演算子) です
+  このアサーションは、フォームのすべての状態に対して操作のアクションを確認することによって実装されます。 $V 0/otimes V_ {n-1} $ です。 $V _k $ は、状態 $ \ket {0} $、$ \ket {1} $、$ \ket{+} $、$ \ket{i} $ (+ 1 eigenstate of Pauli Y 演算子) です
 
 
   このアサーションは $n $ qubits を使用し、比較対象の操作の複数の呼び出しを必要とします。
 syntax: 'operation AssertOperationsEqualInPlace (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
-references: 州 $ \ket{0}$、$ \ket{1}$、$ \ket{+} $ および $ \ket{i} $ の基礎は、語[ *、m.* ](https://arxiv.org/abs/quant-ph/9610001).........................................
+references: 州 $ \ket {0} $、$ \ket {1} $、$ \ket{+} $ および $ \ket{i} $ の基礎は、語 [ *、m.* ](https://arxiv.org/abs/quant-ph/9610001).........................................
 input:
   content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
-    summary: 操作`givenU`と`expectedU`演算を実行する qubits $n $ の数。
+    summary: 操作と演算を実行する qubits $n $ の数 `givenU` `expectedU` 。
     isPrimitive: true
     uid: Int
   - name: givenU
@@ -33,7 +33,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: expectedU
-    summary: 比較対象の $n $ qubits `givenU`に対する参照操作です。
+    summary: 比較対象の $n $ qubits に対する参照操作 `givenU` です。
     isOperation: true
     input:
       types:
@@ -54,9 +54,9 @@ output:
 seeAlso:
 - assertoperationsequalreferenced
 metadata:
-  ms.openlocfilehash: 007bb4b3dedd5a95fc464608fe8160784b02341b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 477ee177c1db07a9e92d11599ed3d7c0a822e10e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82657031"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337565"
