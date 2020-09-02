@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.transformedoperation
 name: TransformedOperation
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: 関数と操作が指定された場合、指定された関数によって入力が変換される新しい操作を返します。
 examples: >-
-  次の呼び出しで@"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian"は、を使用して@"Microsoft.Quantum.Arithmetic.BigEndian" 、入力用に設計された操作@"Microsoft.Quantum.Arithmetic.LittleEndian"を、型の入力を受け入れる操作に変換します。
+  次の呼び出しでは、を使用して、入力用に設計された操作を、 @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" @"Microsoft.Quantum.Arithmetic.BigEndian" 型の入力を受け入れる操作に変換し @"Microsoft.Quantum.Arithmetic.LittleEndian" ます。
 
 
   ```qsharp
@@ -42,7 +42,7 @@ input:
 output:
   content: ('U => Unit)
   types:
-  - summary: 新しい操作 tbat は、 `fn`入力を使用してを呼び出し、その結果`op`の出力をに渡します。
+  - summary: 新しい操作 tbat は、 `fn` 入力を使用してを呼び出し、その結果の出力をに渡し `op` ます。
     isOperation: true
     input:
       types:
@@ -59,9 +59,9 @@ seeAlso:
 - applywithinputtransformation
 - compose
 metadata:
-  ms.openlocfilehash: a2ac6d6682fdbe064e655e5af9a9e8454edac5d3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8ee80817b6753c3b5fd001f59e421fbcf70c08f0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678076"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354979"

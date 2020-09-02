@@ -2,25 +2,25 @@
 uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
 name: PauliCoefficientFromGenIdx
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: によって記述さ`GeneratorIndex`れた、によって記述されたの係数を抽出します。
+namespace: microsoft.quantum.simulation
+summary: によって記述された、によって記述されたの係数を抽出 `GeneratorIndex` します。
 syntax: 'function PauliCoefficientFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Double'
 input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
   - name: generatorIndex
-    summary: '`GeneratorIndex`Pをエンコードする型。'
+    summary: '`GeneratorIndex` Pをエンコードする型。'
     uid: microsoft.quantum.simulation.generatorindex
 output:
   content: Double
   types:
-  - summary: によって記述される用語の`GeneratorIndex`係数。
+  - summary: によって記述される用語の係数 `GeneratorIndex` 。
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 8fbf424210cde86aa57068f2f5d2b7a1c85033a7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3a4eaf64844b4087338a85d9c878b1a51ea96484
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682531"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329632"

@@ -2,12 +2,12 @@
 uid: microsoft.quantum.arithmetic.dividei
 name: DivideI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   2つのクォンタム整数を除算します。
 
 
-  `xs`は残り`xs - floor(xs/ys) * ys` `result`を保持し、を`floor(xs/ys)`保持します。
+  `xs` は残りを保持し、を `xs - floor(xs/ys) * ys` `result` 保持 `floor(xs/ys)` します。
 remarks: >-
   は、標準のシフトと減算のアプローチを使用して除算を実装します。
 
@@ -23,7 +23,7 @@ input:
     summary: $n $-bit 除数
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: $ bit の結果 $n は、最初は状態 $ \ket{0}$ である必要があり、整数除算の結果に置き換えられます。
+    summary: $ bit の結果 $n は、最初は状態 $ \ket $ である必要があり、 {0} 整数除算の結果に置き換えられます。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 05f4b6766910af24a956bfa14bca615633ed1031
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1a426cc92da9db4c1155d2653451031ca37e3965
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679692"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342161"
