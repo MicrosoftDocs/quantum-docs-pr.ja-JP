@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelserca
 name: ApplyIfElseRCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   古典的な結果の値に応じて、2つのいずれかのユニタリ操作を適用します。
 
 
-  `result`結果が返された場合、 `zeroOp`は`zeroInput` 、がと等しい`result` `Zero`ときにを入力とし`oneOp(oneInput)`て`result == One`操作を適用し、when にを適用します。
+  結果が返された場合 `result` 、 `zeroOp` `zeroInput` は、がと等しいときにを入力として操作を適用し、when にを `result` 適用し `Zero` `oneOp(oneInput)` `result == One` ます。
 syntax: "operation ApplyIfElseRCA (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U))"
   types:
   - name: result
-    summary: また`oneOp`はが適用されて`zeroOp`いるかどうかを判断するために使用される測定結果。
+    summary: またはが適用されているかどうかを判断するために使用される測定結果 `zeroOp` `oneOp` 。
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: の場合`result == Zero`に適用される、ユニタリ操作。
+    summary: の場合に適用される、ユニタリ操作 `result == Zero` 。
     isOperation: true
     input:
       types:
@@ -31,11 +31,11 @@ input:
     - Adjoint
     - Controlled
   - name: zeroInput
-    summary: 時`zeroOp` `result == Zero`に提供される入力。
+    summary: 時に提供される入力 `zeroOp` `result == Zero` 。
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: の場合`result == One`に適用される、ユニタリ操作。
+    summary: の場合に適用される、ユニタリ操作 `result == One` 。
     isOperation: true
     input:
       types:
@@ -49,7 +49,7 @@ input:
     - Adjoint
     - Controlled
   - name: oneInput
-    summary: 時`oneOp` `result == One`に提供される入力。
+    summary: 時に提供される入力 `oneOp` `result == One` 。
     uid: "'U"
     isLocal: true
 output:
@@ -59,9 +59,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: 条件付きで適用される`zeroOp`操作の入力型。
+  summary: '`zeroOp`条件付きで適用される操作の入力型。'
 - uid: "'U"
-  summary: 条件付きで適用される`oneOp`操作の入力型。
+  summary: '`oneOp`条件付きで適用される操作の入力型。'
 functors:
 - Adjoint
 - Controlled
@@ -72,9 +72,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: a1182abedfbb4905ec65f5e720d82a1766aa5d65
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bc9f0b3b1504adf1a3ea435a7a4440c6509dd547
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672722"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350185"

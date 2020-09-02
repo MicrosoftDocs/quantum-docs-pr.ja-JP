@@ -6,9 +6,9 @@ operations:
 - uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
   summary: 指定された oracle および eigenstate からの古典的な測定結果に対するベイジアン推定を概算するランダムウォークを使用して反復フェーズ推定を実行します。
 metadata:
-  ms.openlocfilehash: 8f4ca8b0f5f16f5eae8b6db42e1da32cfc3a778f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d643722f4e2a8c6d076ce3d6d7bc8a7df879b5cc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82706705"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340869"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.oracles.obliviousoracle
 name: ObliviousOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
   Oracle for 無関係の振幅増幅を表します。
 
@@ -12,16 +12,16 @@ summary: >-
 
   - $ Act $O ancilla register $a $。
 
-  - システム登録 $s $ は、必要な $U $ が適用され、レジスタ $a $ が状態 $ \ket{t}\_a $ にあることを示しています。
+  - システム登録 $s $ は、必要な $U $ が適用され、レジスタ $a $ が状態 $ \ket{t} a $ にあることを示しています \_ 。
 remarks: >-
-  この oracle で定義されている $ $\_O\ket {s} a\ket\_{\ psi\_} s =\_\lambda\ket{t} a U \ket{\psi} s + \sqrt{1-| \ ラムダ | ^ 2} \ket{t ^\_\ perp} a\ cドット $ $ \ket{t}\_\_\_a $ でフラグが設定されたベースで、任意のシステム状態 $ \ket{\psi} s $ に対して、ancilla state $ \ket{s} a $ を使用して、任意のシステム状態 $ s $ に対して、を実装します。 $U
+  この oracle で定義されている $ $ O\ket {s} \_ a\ket {\ psi} \_ s = \Lambda\ket{t} \_ a U \ket{\psi} \_ s + \sqrt{1-| \ ラムダ | ^ 2} \ket{t ^ \ perp} \_ a\ cドット $ $ \_ \ket{t} a $ でフラグが設定されたベースで、任意のシステム状態 $ \ket{\psi} s $ に対して、ancilla state $ \ket{s} a $ を使用して、任意のシステム状態 $ s \_ $ に対し \_ て、を実装します。 $U
 
-  最初のパラメーターは、$ \ket{s}\_a $ の qubit レジスタです。 2番目のパラメーターは、$ \ket{\psi}\_s $ の qubit レジスタです。
+  最初のパラメーターは、$ \ket{s} a $ の qubit レジスタです \_ 。 2番目のパラメーターは、$ \ket{\psi} s $ の qubit レジスタです \_ 。
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 9d7a799a9069e6d7eb3470d62322f803a68eb2e6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c88ad3b0a4fe6067a0e52972c23587d5835c779e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681250"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332012"

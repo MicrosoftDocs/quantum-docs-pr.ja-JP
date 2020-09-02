@@ -2,11 +2,11 @@
 uid: microsoft.quantum.canon.applytoeachindexca
 name: ApplyToEachIndexCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   レジスタ内のインデックスが付けられた各要素に単一の qubit 演算を適用します。
 
-  修飾子`CA`は、single qubit 操作が adjointable で制御可能であることを示します。
+  修飾子は、 `CA` single qubit 操作が adjointable で制御可能であることを示します。
 syntax: "operation ApplyToEachIndexCA (singleElementOperation : ((Int, 'T) => Unit is Adj + Ctl), register : 'T[]) : Unit"
 input:
   content: "(singleElementOperation : ((Int, 'T) => Unit is Adj + Ctl), register : 'T[])"
@@ -46,9 +46,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytoeachindex
 metadata:
-  ms.openlocfilehash: 75372ebc47be61ad273456ac1f0413667df12938
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 82fffd6223d8c3b0375db7f939f6da24f550235e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674809"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357665"

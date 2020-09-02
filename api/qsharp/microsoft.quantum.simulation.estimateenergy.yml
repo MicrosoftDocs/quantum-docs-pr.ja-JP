@@ -2,8 +2,8 @@
 uid: microsoft.quantum.simulation.estimateenergy
 name: EstimateEnergy
 type: operation
-namespace: Microsoft.Quantum.Simulation
-summary: を使用して、自動的`statePrepUnitary`に割り当てられた入力状態フェーズ推定にを`qpeUnitary`適用して、状態の`phaseEstAlgorithm`準備を実行します。
+namespace: microsoft.quantum.simulation
+summary: を `statePrepUnitary` 使用して、自動的に割り当てられた入力状態フェーズ推定にを適用して、状態の準備を実行し `qpeUnitary` `phaseEstAlgorithm` ます。
 syntax: 'operation EstimateEnergy (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
@@ -25,7 +25,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: この oracle では、dynamical ジェネレーターでの時間 $ \ デルタ t $ の進化を表す $ (グランドステート $ \ket{\phi} $ およびグラウンドステートエネルギー $E = \ phi\\, \ デルタ t $) を $U 表す oracle。
+    summary: この oracle では、dynamical ジェネレーターでの時間 $ \ デルタ t $ の進化を表す $ (グランドステート $ \ket{\phi} $ およびグラウンドステートエネルギー $E = \ phi \\ , \ デルタ t $) を $U 表す oracle。
     isOperation: true
     input:
       types:
@@ -43,7 +43,7 @@ input:
     summary: >-
       特定のユニタリ操作に対してフェーズ推定を実行する操作。
 
-      詳細については、「[反復フェーズの推定](/quantum/libraries/characterization#iterative-phase-estimation)」を参照してください。
+      詳細については、「 [反復フェーズの推定](/quantum/libraries/characterization#iterative-phase-estimation) 」を参照してください。
     isOperation: true
     input:
       types:
@@ -62,9 +62,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: d7f32999782763bbb6224afc2c764188c718379b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9cd5b90932550d1830cd3a14d3d0688ab9675366
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686875"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343385"

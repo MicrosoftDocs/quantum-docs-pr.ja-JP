@@ -2,11 +2,11 @@
 uid: microsoft.quantum.canon.applytofirstthreequbitsca
 name: ApplyToFirstThreeQubitsCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   レジスタ内の最初の3つの qubits に操作を適用します。
 
-  修飾子`CA`は、操作が制御可能であり、adjointable であることを示します。
+  修飾子は、 `CA` 操作が制御可能であり、adjointable であることを示します。
 remarks: >-
   このようにすると、次の記述と同じ結果が得られます。
 
@@ -54,9 +54,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytofirstthreequbits
 metadata:
-  ms.openlocfilehash: c0800e1cc6efbe43448d3792140497ac50ec1c33
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8e8c655dde71c1303ddae1b9e1917cdf7848a890
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674722"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357431"

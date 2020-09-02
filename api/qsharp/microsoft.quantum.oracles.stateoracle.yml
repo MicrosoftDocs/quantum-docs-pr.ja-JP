@@ -2,7 +2,7 @@
 uid: microsoft.quantum.oracles.stateoracle
 name: StateOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
   状態の準備のための oracle を表します。
 
@@ -12,16 +12,16 @@ summary: >-
 
   - フラグ qubit $f $ にインデックスを付ける整数。
 
-  - 必要なクォンタムの状態 $ \ket{\psi}\_s $ を格納する $s $ がシステムに登録されます。
+  - 必要なクォンタムの状態 $ \ket{\psi} s $ を格納する $s $ がシステムに登録され \_ ます。
 remarks: >-
-  {0}\_$ $ O\ket {f}{0}\_\ket s = \lambda\ket{1}\_f\ket {\\_psi} s + \sqrt{1-| \ ラムダ | ^ 2} \ket{0}\_fcドット $ $ によって定義されているこの oracle は、計算ベース{0}\_の状態 $ \ket {{0}\_f} \ket s $ を使用して\_、$ \ket{\psi}{1}\_f $ によってフラグが設定されたターゲットの状態 $ \ket s $
+  $ $ O\ket {0} \_ {f} \ket {0} \_ s = \lambda\ket {1} \_ f\ket {\ psi} \_ s + \sqrt{1-| \ ラムダ | ^ 2} \ket fcドット $ $ によって定義されているこの oracle {0} \_ は、計算ベースの状態 $ \ket {0} \_ {f} \ket s $ を使用して、 {0} \_ \_ $ \ket{\psi} {1} f $ によってフラグが設定されたターゲットの状態 $ \ket s $ \_
 
-  最初のパラメーターは、$ \ket{0}\_f $ の qubit レジスタのインデックスです。 2番目のパラメーターには、両方のレジスタがあります。
+  最初のパラメーターは、$ \ket f $ の qubit レジスタのインデックスです {0} \_ 。 2番目のパラメーターには、両方のレジスタがあります。
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: fe7ced83927d709bcc6fe82d8866b221446c7d73
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1a303e51638a792fb31ee7cca58bd3662d86897b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673481"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331757"

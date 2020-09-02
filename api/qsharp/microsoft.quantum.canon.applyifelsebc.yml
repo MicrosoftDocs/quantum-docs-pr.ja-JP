@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelsebc
 name: ApplyIfElseBC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   クラシックビットの値に応じて、制御可能な2つの操作のいずれか1つを適用します。
 
 
-  が指定さ`bit`れている場合`trueOp`は`trueInput` `bit` 、が`true`のときの入力とし`falseOp(falseInput)`て`bit`の`false`操作を適用し、がのときに適用されます。
+  が指定され `bit` `trueOp` ている `trueInput` 場合は、がのときの入力としての操作を適用 `bit` し、 `true` がのときに適用され `falseOp(falseInput)` `bit` `false` ます。
 syntax: "operation ApplyIfElseBC (bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U))"
   types:
   - name: bit
-    summary: また`falseOp`はが適用されるか`trueOp`どうかを判断するために使用されるブール値。
+    summary: またはが適用されるかどうかを判断するために使用されるブール値 `trueOp` `falseOp` 。
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: がの場合`bit`に適用される制御`true`可能な操作。
+    summary: がの場合に適用される制御可能 `bit` な操作 `true` 。
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Controlled
   - name: trueInput
-    summary: が`trueOp` `true`の場合`bit`に提供される入力。
+    summary: がの場合に提供される入力 `trueOp` `bit` `true` 。
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: がの場合`bit`に適用される制御`false`可能な操作。
+    summary: がの場合に適用される制御可能 `bit` な操作 `false` 。
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: falseInput
-    summary: が`falseOp` `false`の場合`bit`に提供される入力。
+    summary: がの場合に提供される入力 `falseOp` `bit` `false` 。
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: 条件付きで適用される`trueOp`操作の入力型。
+  summary: '`trueOp`条件付きで適用される操作の入力型。'
 - uid: "'U"
-  summary: 条件付きで適用される`falseOp`操作の入力型。
+  summary: '`falseOp`条件付きで適用される操作の入力型。'
 functors:
 - Controlled
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: c1d7c1fdf83b5ec87b8d5e8b22c45bb00072f69a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1cd8df26dabaaa13d39fc194ae958f71e3b618ac
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675000"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350389"
