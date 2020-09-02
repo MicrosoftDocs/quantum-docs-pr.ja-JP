@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.inputencoder
 name: InputEncoder
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: 係数と許容範囲を指定すると、は、各係数を計算ベース状態の対応する振幅として準備する状態準備操作を返します。
 syntax: 'function InputEncoder (coefficients : Double[]) : Microsoft.Quantum.MachineLearning.StateGenerator'
 input:
@@ -19,9 +19,9 @@ output:
   - summary: 指定された係数を特定のレジスタの入力状態として準備する状態準備操作。
     uid: microsoft.quantum.machinelearning.stategenerator
 metadata:
-  ms.openlocfilehash: b1a45c2ce026ab15f1134167355fb131d9b0022e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 88bb75d8e6e330cdc7d157b80581413333c9b371
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684526"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336058"

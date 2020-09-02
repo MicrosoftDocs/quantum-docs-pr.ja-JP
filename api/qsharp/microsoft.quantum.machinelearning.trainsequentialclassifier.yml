@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.trainsequentialclassifier
 name: TrainSequentialClassifier
 type: operation
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: シーケンシャル分類子の構造に基づいて、指定されたラベル付きトレーニングセットで分類器をトレーニングします。
 syntax: 'operation TrainSequentialClassifier (models : Microsoft.Quantum.MachineLearning.SequentialModel[], samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : (Microsoft.Quantum.MachineLearning.SequentialModel, Int)'
 input:
@@ -17,7 +17,7 @@ input:
     isArray: true
     uid: microsoft.quantum.machinelearning.labeledsample
   - name: options
-    summary: トレーニング時に使用する構成詳細@"microsoft.quantum.machinelearning.trainingoptions"に@"microsoft.quantum.machinelearning.defaulttrainingoptions"ついては、「」を参照してください。
+    summary: トレーニング時に使用する構成詳細については、「」を参照してください @"microsoft.quantum.machinelearning.trainingoptions" @"microsoft.quantum.machinelearning.defaulttrainingoptions" 。
     uid: microsoft.quantum.machinelearning.trainingoptions
   - name: trainingSchedule
     summary: トレーニング手順でトレーニングデータからサンプルを選択するときに使用するサンプリングスケジュール。
@@ -40,9 +40,9 @@ seeAlso:
 - microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
 - microsoft.quantum.machinelearning.validatesequentialclassifier
 metadata:
-  ms.openlocfilehash: e5a9d2c6747ee970bfd01b266e2f10f45d514f06
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b8b0873395a3d75ea06f655a08d0de496c1f4449
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684308"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335497"

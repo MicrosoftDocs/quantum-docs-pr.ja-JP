@@ -2,18 +2,18 @@
 uid: microsoft.quantum.arithmetic.incrementbymodularinteger
 name: IncrementByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   整数定数によって、qubit レジスタのモジュール単位インクリメントを実行します。
 
 
-  $ と $y `increment` $ `target`によって`modulus`エンコードされた整数を $N $a $ を意味します。
+  $ `increment` `modulus` と `target` $y $ によってエンコードされた整数を $N $a $ を意味します。
 
   その後、次の変換が実行されます。 \begin{align} \ket{y} \ mapare \ket{(y + a) \ 演算子名 {mod} N} \end{align} 整数はリトルエンディアン形式でエンコードされます。
 remarks: >-
   Target の初期値が $N $ より小さく、$ $a $ が $N $ より小さいことを前提としています。
 
-  は、 <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> `PhaseLittleEndian`ベースで同じ操作を実装することに注意してください。
+  は <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> 、ベースで同じ操作を実装することに注意して `PhaseLittleEndian` ください。
 syntax: 'operation IncrementByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -27,7 +27,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: $A $ が追加`LittleEndian`される`increment`形式の整数 $y $。
+    summary: '`LittleEndian` `increment` $A $ が追加される形式の整数 $y $。'
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -40,9 +40,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementphasebymodularinteger
 metadata:
-  ms.openlocfilehash: 53faa65d67629d0e4c73efc03724cb4b4b30675d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2f91365a06304e6e4e6b71783a941192f4a7121e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679545"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342875"
