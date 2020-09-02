@@ -2,7 +2,7 @@
 uid: microsoft.quantum.measurement.measurepaulis
 name: MeasurePaulis
 type: operation
-namespace: Microsoft.Quantum.Measurement
+namespace: microsoft.quantum.measurement
 summary: 複数のマルチビット演算子の配列を指定すると、指定された測定ガジェットを使用してそれぞれを測定し、結果の配列を返します。
 syntax: 'operation MeasurePaulis (paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result)) : Result[]'
 input:
@@ -38,14 +38,14 @@ input:
 output:
   content: Result[]
   types:
-  - summary: の`paulis`各要素を測定`target`して取得した結果の配列。
+  - summary: の各要素を測定して取得した結果の配列 `paulis` `target` 。
     isArray: true
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: de1f100a19cda847cfb253fe1dfa01079b9ba676
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 27bb4a6164f8db6a82c1beeb7de1107735870ef0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685177"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332471"

@@ -2,10 +2,10 @@
 uid: microsoft.quantum.logical.or
 name: Or
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: 2つの値の論理和を返します。
 remarks: >-
-  `or`演算子とは異なり、この関数はショートサーキットではなく、両方の入力が完全に評価されます。
+  演算子とは異なり `or` 、この関数はショートサーキットではなく、両方の入力が完全に評価されます。
 
 
   ショートサーキットの動作は、次のようになります。
@@ -33,13 +33,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`または`a` `b`のいずれかがの`true`場合にのみ。'
+  - summary: '`true``a`またはのいずれか `b` がの場合にのみ `true` 。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: fb3d62473ec3fd7c40b44bfa919b69d54c5d0218
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e95ecbda0b5a51b7380d77f514af76644689757c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683565"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345085"

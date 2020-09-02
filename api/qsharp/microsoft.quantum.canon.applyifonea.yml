@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.applyifonea
 name: ApplyIfOneA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   従来の結果値が1である adjointable 操作を適用します。
 
 
-  が`op` `result` `target` `op`の場合`result` 、操作と結果の値がに適用され`One`ます。 の`Zero`場合、には`target`何も起こりません。
+  `op`がの場合、操作と結果の値がに適用され `result` `op` `target` `result` `One` ます。 `Zero`の場合、には何も起こりません `target` 。
 
-  サフィックス`A`は、適用される操作が adjointable であることを示します。
+  サフィックスは、 `A` 適用される操作が adjointable であることを示します。
 syntax: "operation ApplyIfOneA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj), target : 'T))"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 041b9f1f97ec5fe615b6ff83fe7c69bf5a7d0894
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 55fb934d46e192337b911dc52f1d4f45e227bff2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672680"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358243"

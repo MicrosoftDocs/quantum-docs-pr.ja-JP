@@ -2,12 +2,12 @@
 uid: microsoft.quantum.bitwise.xor
 name: Xor
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: >-
   2つの整数のビットごとの排他的 OR (XOR) を返します。
 
-  これにより、組み込み`^^^`演算子と同じ計算が実行されます。
-remarks: 詳細については、「 [C# ^ 演算子](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/xor-operator)」を参照してください。
+  これにより、組み込み演算子と同じ計算が実行され `^^^` ます。
+remarks: 詳細については、「 [C# ^ 演算子](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/xor-operator) 」を参照してください。
 examples: >-
   ```qsharp
 
@@ -34,9 +34,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 8b7da5a00592a071617d775d71fb7f07931cf299
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5df8cd3ce94d5868776955e26797dbbe265b5390
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680554"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350950"

@@ -2,16 +2,16 @@
 uid: microsoft.quantum.canon.applyifa
 name: ApplyIfA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   クラシックビットで条件付き adjointable 操作を適用します。
 
 
-  `op`操作`bit`とビット値を指定した場合`op`は、 `target`が`bit` `true`の場合はに適用されます。 の`false`場合、には`target`何も起こりません。
+  操作とビット値を指定した場合は、 `op` `bit` `op` がの場合はに適用され `target` `bit` `true` ます。 `false`の場合、には何も起こりません `target` 。
 
-  サフィックス`A`は、適用される操作が adjointable であることを示します。
+  サフィックスは、 `A` 適用される操作が adjointable であることを示します。
 examples: >-
-  次の例では、値の`Bool`配列として指定された古典的なビット文字列によって表される計算基準の状態に qubits のレジスタを準備します。
+  次の例では、値の配列として指定された古典的なビット文字列によって表される計算基準の状態に qubits のレジスタを準備し `Bool` ます。
 
 
   ```Q#
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: fca10f4a39c8cdc3941d9a7d06e47e1c6dfefa74
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f020deb737a40a8a31284aded74a07b3e79469bf
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676334"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350542"
