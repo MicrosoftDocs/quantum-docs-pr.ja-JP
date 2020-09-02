@@ -18,9 +18,9 @@ functions:
 - uid: microsoft.quantum.convert.boolarrayaspauli
   summary: ビット文字列を指定した場合は、single qubit の演算子の配列として表されるマルチ qubit の P# li 演算子を返します。
 - uid: microsoft.quantum.convert.boolarrayasresultarray
-  summary: '`Bool[]`型`Result[]`を型に変換し`true` `One` `false`ます。ここで、はにマップさ`Zero`れ、はにマップされます。'
+  summary: 型を `Bool[]` 型に変換 `Result[]` `true` します。ここで、はにマップされ、 `One` `false` はにマップされ `Zero` ます。
 - uid: microsoft.quantum.convert.boolasresult
-  summary: '`Bool`型`Result`を型に変換し`true` `One` `false`ます。ここで、はにマップさ`Zero`れ、はにマップされます。'
+  summary: 型を `Bool` 型に変換 `Result` `true` します。ここで、はにマップされ、 `One` `false` はにマップされ `Zero` ます。
 - uid: microsoft.quantum.convert.boolasstring
   summary: 指定したブール値を等価の文字列形式に変換します。
 - uid: microsoft.quantum.convert.doubleasstring
@@ -47,20 +47,20 @@ functions:
 - uid: microsoft.quantum.convert.pauliarrayasint
   summary: シングル qubit の演算子の配列として表されるマルチ qubit の Pan Li 演算子を整数にエンコードします。
 - uid: microsoft.quantum.convert.rangeasintarray
-  summary: Start. で`arr`列挙された整数の配列を作成します。ステップ..終わり。
+  summary: Start. で列挙された整数の配列を作成します `arr` 。ステップ..終わり。
 - uid: microsoft.quantum.convert.resultarrayasboolarray
-  summary: '`Result[]`型`Bool[]`を型に変換し`One` `true` `Zero`ます。ここで、はにマップさ`false`れ、はにマップされます。'
+  summary: 型を `Result[]` 型に変換 `Bool[]` `One` します。ここで、はにマップされ、 `true` `Zero` はにマップされ `false` ます。
 - uid: microsoft.quantum.convert.resultarrayasint
   summary: リトルエンディアン形式の結果の文字列から正の整数を生成します。
 - uid: microsoft.quantum.convert.resultasbool
-  summary: '`Result`型`Bool`を型に変換し`One` `true` `Zero`ます。ここで、はにマップさ`false`れ、はにマップされます。'
+  summary: 型を `Result` 型に変換 `Bool` `One` します。ここで、はにマップされ、 `true` `Zero` はにマップされ `false` ます。
 operations:
 - uid: microsoft.quantum.convert.call
   summary: 指定された入力を使用して関数を呼び出します。
 metadata:
-  ms.openlocfilehash: d435979692fe94efb64af82f4a7a949cb2341ef8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7ab5e02631823dcf4dee36f98c14212b43381b74
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677010"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341362"

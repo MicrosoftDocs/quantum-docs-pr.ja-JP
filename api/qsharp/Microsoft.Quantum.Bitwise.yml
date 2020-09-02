@@ -6,7 +6,7 @@ functions:
   summary: >-
     2つの整数のビットごとの AND を返します。
 
-    これにより、組み込み`&&&`演算子と同じ計算が実行されます。
+    これにより、組み込み演算子と同じ計算が実行され `&&&` ます。
 - uid: microsoft.quantum.bitwise.leftshiftedi
   summary: 指定されたビット数だけ左にある数値のビットごとの表現をシフトします。
 - uid: microsoft.quantum.bitwise.leftshiftedl
@@ -15,12 +15,12 @@ functions:
   summary: >-
     整数のビットごとの NOT を返します。
 
-    これにより、組み込み`~~~`演算子と同じ計算が実行されます。
+    これにより、組み込み演算子と同じ計算が実行され `~~~` ます。
 - uid: microsoft.quantum.bitwise.or
   summary: >-
     2つの整数のビットごとの OR を返します。
 
-    これにより、組み込み`|||`演算子と同じ計算が実行されます。
+    これにより、組み込み演算子と同じ計算が実行され `|||` ます。
 - uid: microsoft.quantum.bitwise.parity
   summary: 整数のビットごとのパリティを返します (そのバイナリ表現に奇数の数値が含まれている場合は1、それ以外の場合は 0)。
 - uid: microsoft.quantum.bitwise.rightshiftedi
@@ -33,14 +33,14 @@ functions:
   summary: >-
     2つの整数のビットごとの排他的 OR (XOR) を返します。
 
-    これにより、組み込み`^^^`演算子と同じ計算が実行されます。
+    これにより、組み込み演算子と同じ計算が実行され `^^^` ます。
 - uid: microsoft.quantum.bitwise.zbits
   summary: P# li 演算子の配列の Z ビットを表す整数を返します。
 summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、典型的なデータ型のビットごとの表現を操作するための関数が含まれています。"
 metadata:
-  ms.openlocfilehash: fb52d02d38d31b96b46dfc469ee07ee62e29a9d4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 02fa75fd66a8f6dfeda42bc7e9e8832b34ecba40
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673376"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341583"

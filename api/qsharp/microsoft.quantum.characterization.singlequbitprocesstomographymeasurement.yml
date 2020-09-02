@@ -2,7 +2,7 @@
 uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
 name: SingleQubitProcessTomographyMeasurement
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: 特定の目的のチャネルを指定して、tomography の単一の qubit プロセス測定を実行します。
 remarks: この操作によって返される結果に対する分布は、2つの qubit 状態 tomography の特殊なケースです。 $ \Rho = J (\ ラムダ)/$2 を $ \ Lambda $ の Jamiłkowski 状態にします。 次に、上記の分布は $ $ \begin{align}/Pr (\texttt{Zero} | \rho; と同じになります。M) = \ 演算子 name{tr} (M \rho)、\end{align} $ $ where $M = 2 (\ bold done + P) ^ \mathrm{T}/2 \ cdot (\ done + Q)/$2 は、$P $ および $Q $ に対応する有効な測定値です。
 syntax: 'operation SingleQubitProcessTomographyMeasurement (preparation : Pauli, measurement : Pauli, channel : (Qubit => Unit)) : Result'
@@ -32,15 +32,15 @@ output:
   content: Result
   types:
   - summary: >-
-      確率が`Zero` $ $ \Begin{align} \ Pr (\Texttt{Zero} | \ ラムダ; の結果P, Q) = \ 演算子名 {\frac{\boldone + Q}{2} \Lambda\left [\Frac{\boldone + P}{2} \ right] \ right)。
+      `Zero`確率が $ $ \Begin{align} \ Pr (\texttt{Zero} | \ ラムダ; の結果P, Q) = \ 演算子名 {\frac{\boldone + Q} {2} \Lambda\left [\frac{\boldone + P} {2} \ right] \ right)。
 
       \end{align} $ $
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: f554910a414666c6d61a96932a932b9320426360
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 030ca1ba45df6ea1fc37b994c30bd4f862a6b923
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677580"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354248"
