@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelsebca
 name: ApplyIfElseBCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   従来のビットの値に応じて、2つのいずれかのユニタリ操作を適用します。
 
 
-  が指定さ`bit`れている場合`trueOp`は`trueInput` `bit` 、が`true`のときの入力とし`falseOp(falseInput)`て`bit`の`false`操作を適用し、がのときに適用されます。
+  が指定され `bit` `trueOp` ている `trueInput` 場合は、がのときの入力としての操作を適用 `bit` し、 `true` がのときに適用され `falseOp(falseInput)` `bit` `false` ます。
 syntax: "operation ApplyIfElseBCA (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U))"
   types:
   - name: bit
-    summary: また`falseOp`はが適用されるか`trueOp`どうかを判断するために使用されるブール値。
+    summary: またはが適用されるかどうかを判断するために使用されるブール値 `trueOp` `falseOp` 。
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: がの`bit` `true`場合に適用される、使用するユニタリ操作。
+    summary: がの場合に適用される、使用するユニタリ操作 `bit` `true` 。
     isOperation: true
     input:
       types:
@@ -31,11 +31,11 @@ input:
     - Adjoint
     - Controlled
   - name: trueInput
-    summary: が`trueOp` `true`の場合`bit`に提供される入力。
+    summary: がの場合に提供される入力 `trueOp` `bit` `true` 。
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: がの`bit` `false`場合に適用される、使用するユニタリ操作。
+    summary: がの場合に適用される、使用するユニタリ操作 `bit` `false` 。
     isOperation: true
     input:
       types:
@@ -49,7 +49,7 @@ input:
     - Adjoint
     - Controlled
   - name: falseInput
-    summary: が`falseOp` `false`の場合`bit`に提供される入力。
+    summary: がの場合に提供される入力 `falseOp` `bit` `false` 。
     uid: "'U"
     isLocal: true
 output:
@@ -59,9 +59,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: 条件付きで適用される`trueOp`操作の入力型。
+  summary: '`trueOp`条件付きで適用される操作の入力型。'
 - uid: "'U"
-  summary: 条件付きで適用される`falseOp`操作の入力型。
+  summary: '`falseOp`条件付きで適用される操作の入力型。'
 functors:
 - Adjoint
 - Controlled
@@ -72,9 +72,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: 3f0d704d33fc1d3e964e804c2ff68cb893069445
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 608808f776ac0d187571adc415abc0c7d1666ef9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672765"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350355"

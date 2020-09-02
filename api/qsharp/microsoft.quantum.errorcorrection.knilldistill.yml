@@ -2,12 +2,12 @@
 uid: microsoft.quantum.errorcorrection.knilldistill
 name: KnillDistill
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: >-
   Knill マジック state 取り組みアルゴリズムを実装します。
 
 
-  マジックステート $ $ \begin{align}{8} \cos\frac{\pi} \ket{0} + \ sin \frac{\pi}{8} \ket{1} \end{align} の15の概数コピーを指定すると、$ $ により高品質のコピーが1つ生成されます。
+  マジックステート $ $ \begin{align} \cos\frac{\pi} \ket + \ sin \frac{\pi} \ket \end{align} の15の概数コピーを指定すると {8} {0} {8} {1} 、$ $ により高品質のコピーが1つ生成されます。
 remarks: >-
   Knill のアルゴリズムに従います。
 
@@ -20,20 +20,20 @@ input:
   content: '(roughMagic : Qubit[])'
   types:
   - name: roughMagic
-    summary: マジック状態の概数コピーを含む 15 qubits のレジスタ。 この取り組みプロシージャを適用すると`roughMagic[0]` 、1つの高品質のコピーが含まれ、レジスタの残りの部分は $ \ket{00\cdots 0} $ 状態にリセットされます。
+    summary: マジック状態の概数コピーを含む 15 qubits のレジスタ。 この取り組みプロシージャを適用する `roughMagic[0]` と、1つの高品質のコピーが含まれ、レジスタの残りの部分は $ \ket{00\cdots 0} $ 状態にリセットされます。
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Bool
   types:
-  - summary: の`true`場合、プロシージャは成功し、高品質のコピーが受け入れられます。 の`false`場合、プロシージャは失敗し、レジスタの状態は未定義であると見なされます。
+  - summary: の場合、 `true` プロシージャは成功し、高品質のコピーが受け入れられます。 の場合、 `false` プロシージャは失敗し、レジスタの状態は未定義であると見なされます。
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 5a8e4c43ff21491b35efedb8f60717979e44f0ed
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 979a318e036fbe1585809ce7ba0152b68b4a840e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682360"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350117"

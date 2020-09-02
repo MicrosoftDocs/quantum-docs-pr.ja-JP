@@ -2,7 +2,7 @@
 uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
 name: MeasureStabilizerGenerators
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: 安定板グループの特定のジェネレーターセットを測定します。
 remarks: >-
   これは、指定されたジェネレーターのセットが通勤されているかどうかを確認しません。
@@ -16,7 +16,7 @@ input:
     summary: >-
       Multiqubit P# li 演算子の配列。
 
-      たとえば、 `stabilizerGroup[0]`は、シングル Qubit の P# li マトリックスのリストです。これは、安定板のジェネレーターです。
+      たとえば、 `stabilizerGroup[0]` は、シングル qubit の P# li マトリックスのリストです。これは、安定板のジェネレーターです。
     isArray: true
     types:
     - isArray: true
@@ -46,9 +46,9 @@ output:
   - summary: 測定の結果。
     uid: microsoft.quantum.errorcorrection.syndrome
 metadata:
-  ms.openlocfilehash: d89455e8341d053053e110a6cfccd19e206d38d8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fe7e1d75d6108d3f1c8288560c011af14bf6529b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682309"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350015"
