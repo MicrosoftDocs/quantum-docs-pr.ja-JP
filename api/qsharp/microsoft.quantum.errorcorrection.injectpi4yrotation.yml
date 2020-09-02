@@ -2,15 +2,15 @@
 uid: microsoft.quantum.errorcorrection.injectpi4yrotation
 name: InjectPi4YRotation
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: >-
   Y 軸について1つの qubit をπ/4 で回転します。
 
 
-  に対して`Y`π/4 回転を実行します。
+  に対してπ/4 回転を実行 `Y` します。
 
 
-  回転はマジック状態を使用して実行されます。つまり、$ $ \begin{align}{8} \cos\frac{\pi} \ket{0} + \ sin \frac{\pi}{8} \ket{1}という状態のコピーです。
+  回転はマジック状態を使用して実行されます。つまり、$ $ \begin{align} \cos\frac{\pi} {8} \ket {0} + \ sin \frac{\pi} \ket という状態のコピー {8} です {1} 。
 
   \end{align} $ $
 remarks: >-
@@ -38,7 +38,7 @@ remarks: >-
   ```
 
 
-  この操作では`Adjoint` 、ファンクタがサポートされます。この場合、同じマジック状態が使用されますが、データ qubit への影響は $-\ pi/4 $ $Y $-ローテーションです。
+  この操作では、ファンクタがサポートされます。この `Adjoint` 場合、同じマジック状態が使用されますが、データ qubit への影響は $-\ pi/4 $ $Y $-ローテーションです。
 syntax: 'operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit'
 input:
   content: '(data : Qubit, magic : Qubit)'
@@ -48,7 +48,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: magic
-    summary: マジック状態の最初の qubit。 この操作の次のアプリケーション`magic`は、$ \ket{0}$ 状態に戻ります。
+    summary: マジック状態の最初の qubit。 この操作の次のアプリケーション `magic` は、$ \ket {0} $ 状態に戻ります。
     isPrimitive: true
     uid: Qubit
 output:
@@ -59,9 +59,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: cb0efd896b4d8f9b4b81c061b644a1e2f7f74e96
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bf39fac578e364b5b228490484525f044d40b29d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684876"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336228"

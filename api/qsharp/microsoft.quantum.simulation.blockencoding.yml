@@ -2,20 +2,20 @@
 uid: microsoft.quantum.simulation.blockencoding
 name: BlockEncoding
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
   任意の演算子が左上のブロックでエンコードされる場合の、その中の任意の演算子を指定します。
 
 
-  `BlockEncoding` $U つまり、は、$H $ \ket _a $ に対応する、任意の演算子を、システムレジスタ`s`に対して作用する、${0}$ という補助型の上位左ブロックにエンコードすることを意味します。 つまり、以下のようになります。
+  $U つまり、は、 `BlockEncoding` $H $ \ket _a $ に対応する、任意の演算子を、システムレジスタに対して作用する、$ `s` $ という補助型の上位左ブロックにエンコードすることを意味し {0} ます。 つまり、以下のようになります。
 
 
-  $ $ \begin{align} (\bra{0}_a \ otimes I_s) U (\ket{0}_a/otimes I_s) = H \end{align} $ $。
+  $ $ \begin{align} (\bra {0} _a \ otimes I_s) U (\ket {0} _a/otimes I_s) = H \end{align} $ $。
 syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 400173be551747127198f8cee52390a2694dbfe4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 514a67e646d9fa224bc80fdbadef7397f8e23fff
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681094"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330227"

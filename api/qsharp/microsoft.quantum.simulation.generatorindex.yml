@@ -2,21 +2,21 @@
 uid: microsoft.quantum.simulation.generatorindex
 name: GeneratorIndex
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  すべての dynamical ジェネレーター (Hermitian 演算子など) のセットに含まれる1つのプリミティブ用語を表します。これは、を通じ`EvolutionSet`てジェネレーターによる時間の進化にジェネレーターからのマップが存在します。
+  すべての dynamical ジェネレーター (Hermitian 演算子など) のセットに含まれる1つのプリミティブ用語を表します。これは、を通じてジェネレーターによる時間の進化にジェネレーターからのマップが存在します。 `EvolutionSet`
 
 
   最初の要素 (Int [], Double []) は、1つの用語にインデックスが付けられています。たとえば、P# li 文字列の場合は、係数0.5 を使用して、([1, 1, 2], [0.5]) によってインデックスが作成されます。 また、X cos φ + Y sin φなど、連続変数によってパラメーター化された Hamiltonians は、インスタンスを ([], [φ]) で表すことができます。 2番目の要素は、ジェネレーターが動作するサブシステムのインデックスを生成します。
 remarks: >-
   > [!WARNING]
 
-  > の解釈`GeneratorIndex`は、特定のジェネレーターセットへの参照とは異なり、定義されていません。
+  > の解釈は、 `GeneratorIndex` 特定のジェネレーターセットへの参照とは異なり、定義されていません。
 
 
   ### <a name="examples"></a>例
 
-  を<xref:microsoft.quantum.simulation.paulievolutionset>使用すると、$ \ pi X_2 X_5 Y_9 $ は次のように表されます。
+  を使用する  <xref:microsoft.quantum.simulation.paulievolutionset> と、$ \ pi X_2 X_5 Y_9 $ は次のように表されます。
 
 
   ```qsharp
@@ -29,9 +29,9 @@ seeAlso:
 - evolutionset
 - paulievolutionset
 metadata:
-  ms.openlocfilehash: d633ecdc11075eb45a40a58bb2a1ca67af577c3c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b291cc0b0adc4799e49403fb76f0f47dbadcaf5c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82655158"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330176"

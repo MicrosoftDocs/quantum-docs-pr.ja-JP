@@ -2,11 +2,11 @@
 uid: microsoft.quantum.errorcorrection.decodefromsteanecode
 name: DecodeFromSteaneCode
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: エンコードされていないクォンタムレジスタを⟦7、1、3⟧ Steane 量子コードでエンコードされたクォンタムレジスタにマップする逆エンコード操作。
 remarks: 選択したデコーダーは、⟦7、1、3⟧ Steane code の CSS コードプロパティを使用します。つまり、X エラーと Z エラーを個別に修正します。 コードのプロパティとして、X の位置 (それぞれ、適用される Z 補正) は X の3ビットエンコーディング、それぞれ Z より隣人は整数であると見なされます。
 syntax: 'operation DecodeFromSteaneCode (logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : (Qubit[], Qubit[])'
-references: '- D. Gottesman、"安定板のコードとクォンタムのエラーの修正" 博士、Thesis、Caltech、1997;https://arxiv.org/abs/quant-ph/9705052'
+references: '- D. Gottesman、"安定板のコードとクォンタムのエラーの修正" 博士、Thesis、Caltech、1997; https://arxiv.org/abs/quant-ph/9705052'
 input:
   content: '(logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
@@ -29,9 +29,9 @@ seeAlso:
 - steanecodedecoder
 - logicalregister
 metadata:
-  ms.openlocfilehash: 0256c1bf847009b6ea6f712aece34219f5c5ff8d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 498222c08ca292571c674b4e249004bd5ba56450
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685051"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336534"
