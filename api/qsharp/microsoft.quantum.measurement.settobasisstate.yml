@@ -2,9 +2,9 @@
 uid: microsoft.quantum.measurement.settobasisstate
 name: SetToBasisState
 type: operation
-namespace: Microsoft.Quantum.Measurement
+namespace: microsoft.quantum.measurement
 summary: Qubit を測定し、必要に応じてビットフリップを適用することによって、指定された計算基準の状態に qubit を設定します。
-remarks: この操作の不変性として`M(q)` 、の`SetToBasisState(result, q)`直後に`result`を呼び出すと、が返されます。
+remarks: この操作の不変性として、の直後にを呼び出すと、 `M(q)` `SetToBasisState(result, q)` が返され `result` ます。
 syntax: 'operation SetToBasisState (desired : Result, target : Qubit) : Unit'
 input:
   content: '(desired : Result, target : Qubit)'
@@ -23,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 002ca4716f0aa57c0ddd4f33d421402c068ad244
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1bd8b8d83ff2bee3dfb1f4a696ddc3b493a2bb82
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681357"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332250"

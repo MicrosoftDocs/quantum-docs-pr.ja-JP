@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.andladder
 name: AndLadder
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   ターゲット qubits のレジスタで、制御された "AND はしご" を実行します。
 
 
-  この操作は、次の計算基準のマッピングによって記述された変換を\_適用します $ $ \begin{align}\_\ket{x 1,\_\ ドット, x n}\_\ket{y 1, \ ドット, y {n-\_1}} \ map\ket{\_\ket{x 1, \\_ドット, x n}\_y 1 \ oplus (x 1 \ 陸 x\_2), \\_ドット, y {n-\_1} \ oplus (x 1 \\_\ket{x x\_{n-1}}, \end{align} $ $ where $ 1,\_\ \ ($ 1\_, \) ドット, x n} $ は`controls`、の計算ベースの\_状態を示します。 $\_\ket{y 1、\ ドット、y {n-1}} $ は、 `targets`の計算ベースの状態を表します。
+  この操作は、次の計算基準のマッピングによって記述された変換を適用します $ $ \begin{align} \ket{x \_ 1, \ ドット, x \_ n} \ket{y \_ 1, \ ドット, y \_ {n-1}} \ map\ket{\ket{x \_ 1, \ ドット, x \_ n} y \_ 1 \ oplus (x \_ 1 \ 陸 x \_ 2), \ ドット, y \_ {n-1} \ oplus (x \_ 1 \ \ket{x x \_ \_ {n-1}}, \end{align} $ $ where $ \_ 1, \ \ ($ 1, \) ドット, x \_ n} $ は、の計算ベースの状態を示し `controls` \_ ます。 $ \ket{y 1、\ ドット、y \_ {n-1}} $ は、の計算ベースの状態を表し `targets` ます。
 remarks: >-
-  - および<xref:microsoft.quantum.canon.applymulticontrolledc> <xref:microsoft.quantum.canon.applymulticontrolledca>の一部として使用されます。
+  - およびの一部として使用され <xref:microsoft.quantum.canon.applymulticontrolledc> <xref:microsoft.quantum.canon.applymulticontrolledca> ます。
 
   - 説明とサーキットの図については、図4.10 のセクション4.3 を参照してください & 語。
 syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
@@ -24,14 +24,14 @@ input:
     summary: >-
       およびはしごのコントロールとして使用される qubits のレジスタ。
 
-      この操作では、計算ベース`controls`の状態が不変になります。
+      この操作では、計算ベースの状態が `controls` 不変になります。
 
-      の`controls`長さは2以上でなければなりません`targets`。また、の長さは1以上にする必要があります。
+      の長さは2以上でなければなりません。また、の長さは `controls` 1 以上にする必要があり `targets` ます。
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targets
-    summary: の`targets`長さは1以上、の`controls`長さから1を引いた値にする必要があります。
+    summary: の長さは `targets` 1 以上、の長さから1を引いた値にする必要があり `controls` ます。
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -43,9 +43,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 4cc74315145176fd3a2258a3d92b2f2dfb4d66d3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 194e562588a7ea244b39795ea1c489a07a7fbfba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676394"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350882"

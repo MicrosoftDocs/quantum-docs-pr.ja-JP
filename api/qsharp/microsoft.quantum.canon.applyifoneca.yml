@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.applyifoneca
 name: ApplyIfOneCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   古典的な結果値が1であることを条件とする、一連の検索操作を適用します。
 
 
-  が`op` `result` `target` `op`の場合`result` 、操作と結果の値がに適用され`One`ます。 の`Zero`場合、には`target`何も起こりません。
+  `op`がの場合、操作と結果の値がに適用され `result` `op` `target` `result` `One` ます。 `Zero`の場合、には何も起こりません `target` 。
 
-  サフィックス`CA`は、適用される操作が、ユニタリ (制御可能および adjointable) であることを示します。
+  サフィックスは、 `CA` 適用される操作が、ユニタリ (制御可能および adjointable) であることを示します。
 syntax: "operation ApplyIfOneCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
@@ -52,9 +52,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: f8837e549ec1fc70b76e8151a211c4bf9f71168e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1e4aa4a8b7d4947ee72b322aaccb0b360992f1f9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672644"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358209"

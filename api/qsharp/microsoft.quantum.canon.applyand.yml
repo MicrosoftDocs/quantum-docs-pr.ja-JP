@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.applyand
 name: ApplyAnd
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   測定を使用して adjoint 演算を実行し、両方のコントロール qubit が1の状態である場合にのみ、指定されたターゲット qubit を反転します。
 
@@ -17,7 +17,7 @@ references: >-
 
   - Gidney: "半分に of クォンタムの追加", Quantum 2, ページ 74, 2018 [Arxiv: 1709.06648](https://arxiv.org/abs/1709.06648) doi: 10.1103/PhysRevA. 85.044302
 
-  - Mathias Soeken: "Quantum Oracle 回線とクリスマスツリーパターン"、 [2019 年12月19日のブログ記事](https://msoeken.github.io/blog_qac.html)(注: 複数の制御された構築について説明します)
+  - Mathias Soeken: "Quantum Oracle 回線とクリスマスツリーパターン"、 [2019 年12月19日のブログ記事](https://msoeken.github.io/blog_qac.html) (注: 複数の制御された構築について説明します)
 input:
   content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
   types:
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 2f040fd932236547baecaba241d44a8b9842bbe2
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 7c507e8bf535802a4484535e4b608315eca70bba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884588"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350865"
