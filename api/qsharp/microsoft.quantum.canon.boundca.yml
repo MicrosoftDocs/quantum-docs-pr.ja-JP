@@ -2,11 +2,11 @@
 uid: microsoft.quantum.canon.boundca
 name: BoundCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   1つの入力に対して動作する操作の配列を指定すると、によって、指定された各操作を順番に実行する新しい操作が生成されます。
 
-  修飾子`CA`は、配列内のすべての操作が adjointable および制御可能であることを示します。
+  修飾子は、 `CA` 配列内のすべての操作が adjointable および制御可能であることを示します。
 examples: >-
   同等のものを次に示します。
 
@@ -69,9 +69,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.bound
 metadata:
-  ms.openlocfilehash: 0144486e675bfb18d4e171a4a8cfec7e5a8be2ae
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3a843acbb186750e23d35b3c3e38ce76b369392e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675951"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356900"

@@ -2,14 +2,14 @@
 uid: microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases
 name: RotationPhasesAsReflectionPhases
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: シングル qubit 回転として指定されたフェーズを部分反射として指定されたフェーズに変換します。
 syntax: 'function RotationPhasesAsReflectionPhases (rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
 references: >-
   では、次の規則を使用します。
 
 
-  - [ *G.H. Low, 語、* ](https://arxiv.org/abs/1707.05391)単一の qubit 回転フェーズをリフレクション演算子のフェーズに関連付けることができます。
+  - [ *G.H. Low, 語、* ](https://arxiv.org/abs/1707.05391) 単一の qubit 回転フェーズをリフレクション演算子のフェーズに関連付けることができます。
 input:
   content: '(rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases)'
   types:
@@ -22,9 +22,9 @@ output:
   - summary: 部分的な反射として指定されたフェーズを実装する操作。
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
 metadata:
-  ms.openlocfilehash: 9fde93767d1ac0d99b6d0f27db00cfe672315831
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a11d124796a0e164c7a8348c76a720e704d49dc9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680070"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339560"

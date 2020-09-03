@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.delayedca
 name: DelayedCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: 指定された引数を使用して指定された操作を適用する操作を返します。
 syntax: "function DelayedCA (op : ('T => Unit is Ctl + Adj), arg : 'T) : (Unit => Unit is Ctl + Adj)"
 input:
@@ -23,13 +23,13 @@ input:
     - Adjoint
     - Controlled
   - name: arg
-    summary: 操作`op`が適用される入力。
+    summary: 操作が適用される入力 `op` 。
     uid: "'T"
     isLocal: true
 output:
   content: (Unit => Unit is Ctl + Adj)
   types:
-  - summary: 入力と共に適用`op`される新しい操作`arg`
+  - summary: 入力と共に適用される新しい操作 `op``arg`
     isOperation: true
     input:
       types:
@@ -49,9 +49,9 @@ seeAlso:
 - microsoft.quantum.canon.delayed
 - microsoft.quantum.canon.delay
 metadata:
-  ms.openlocfilehash: 49f8d45df6b59fa1dec9f0ba42f54f43a48f0ed5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0b3bcbc7835135dc7fe2a561dc6ebad7f0a9c7d7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675607"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356407"
