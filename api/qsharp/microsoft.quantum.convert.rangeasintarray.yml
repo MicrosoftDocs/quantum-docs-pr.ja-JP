@@ -2,8 +2,8 @@
 uid: microsoft.quantum.convert.rangeasintarray
 name: RangeAsIntArray
 type: function
-namespace: Microsoft.Quantum.Convert
-summary: Start. で`arr`列挙された整数の配列を作成します。ステップ..終わり。
+namespace: microsoft.quantum.convert
+summary: Start. で列挙された整数の配列を作成します `arr` 。ステップ..終わり。
 examples: >-
   ```qsharp
 
@@ -17,20 +17,20 @@ input:
   content: '(range : Range)'
   types:
   - name: range
-    summary: 配列`Range`に変換`start..step..end`する値の。
+    summary: '`Range` `start..step..end` 配列に変換する値の。'
     isPrimitive: true
     uid: Range
 output:
   content: Int[]
   types:
-  - summary: によって`range`反復処理される値に対応する整数の新しい配列。
+  - summary: によって反復処理される値に対応する整数の新しい配列 `range` 。
     isArray: true
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: f909319a624459b2453db2ac73d3ceaec38f6911
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 22077ab84984e3701fef26c28fefefd325ea4627
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677385"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338319"

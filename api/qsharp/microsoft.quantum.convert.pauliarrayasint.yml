@@ -2,7 +2,7 @@
 uid: microsoft.quantum.convert.pauliarrayasint
 name: PauliArrayAsInt
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: シングル qubit の演算子の配列として表されるマルチ qubit の Pan Li 演算子を整数にエンコードします。
 remarks: >-
   各 P\begin{align} Li 演算子は、次の2つのビットを使用してエンコードすることができます: $ $ \ bold 完了 \ mapに 00,、\ quad X-mapに 01,、\ quad Y-マップ
@@ -10,7 +10,7 @@ remarks: >-
   \end{align} $ $
 
 
-  これらの演算子`[P0, ..., Pn]`の配列を指定した場合、この関数は、ビッグエンディアン順`bits(Pn) ... bits(P0)`で各 pan li 演算子のマッピングを連結することによって、バイナリ拡張を含む整数を返します。
+  これらの演算子の配列を指定した `[P0, ..., Pn]` 場合、この関数は、ビッグエンディアン順で各 Pan li 演算子のマッピングを連結することによって、バイナリ拡張を含む整数を返し `bits(Pn) ... bits(P0)` ます。
 syntax: 'function PauliArrayAsInt (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Int
   types:
-  - summary: 次に示すよう`paulis`に、一意に識別する整数。
+  - summary: '`paulis`次に示すように、一意に識別する整数。'
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 170218ccf1ec4ee1183a7a69ff1e0969f595cac4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e0ec584f77489d019a501ff31074e730152218f7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677389"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338295"
