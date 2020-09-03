@@ -2,7 +2,7 @@
 uid: microsoft.quantum.logical.greaterthanorequali
 name: GreaterThanOrEqualI
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: 数値がもう1つの数値以上の場合にのみ true を返します。
 remarks: >-
   同等のものを次に示します。
@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true``a`がより大きいか、またはと等しい場合に`b`のみ。'
+  - summary: '`true``a`がより大きいか、またはと等しい場合にのみ `b` 。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 78c69a4e3e0463b965b69969e384aaf396471b91
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 72f63c48cf6da7affac2d2fb40fdd0500ccabdfb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684755"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345748"

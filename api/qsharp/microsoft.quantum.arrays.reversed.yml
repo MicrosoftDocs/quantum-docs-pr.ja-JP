@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.reversed
 name: Reversed
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 入力配列と同じ要素が逆順に含まれる配列を作成します。
 syntax: "function Reversed (array : 'T[]) : 'T[]"
 input:
@@ -16,7 +16,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: 要素`array[Length(array) - 1]`を格納している配列。 `array[0]`.
+  - summary: 要素を格納している配列 `array[Length(array) - 1]` 。 `array[0]`.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -24,9 +24,9 @@ typeParameters:
 - uid: "'T"
   summary: 配列要素の型。
 metadata:
-  ms.openlocfilehash: f7424045ae518a2ea4c91724a0811d1ce5aaabd9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ee68cb5aa0207b5a09fd02146cda4c0067c79130
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680841"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351715"

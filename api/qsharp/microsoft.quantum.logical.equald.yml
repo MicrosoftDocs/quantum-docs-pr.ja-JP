@@ -2,7 +2,7 @@
 uid: microsoft.quantum.logical.equald
 name: EqualD
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: 2つの入力が等しい場合にのみ true を返します。
 remarks: >-
   同等のものを次に示します。
@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true``a`がに等しい場合に`b`のみ。'
+  - summary: '`true``a`がに等しい場合にのみ `b` 。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: ff3d3a0843a0199a56ae7c80ed83b5ff86516b16
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b3a4ac7da26847d3c07031ac843ee336eac5773d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685935"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346054"

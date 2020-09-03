@@ -2,7 +2,7 @@
 uid: microsoft.quantum.logical.lessthand
 name: LessThanD
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: 数値が別の数値より小さい場合にのみ true を返します。
 remarks: >-
   同等のものを次に示します。
@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true``a`が厳密により`b`小さい場合にのみ。'
+  - summary: '`true``a`が厳密により小さい場合にのみ `b` 。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 01c5098422585515f7f693e56a1cf188b3301829
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b200fc6ee34b0a8c178e06f8726ac1da07e5978c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684722"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345697"
