@@ -2,12 +2,12 @@
 uid: microsoft.quantum.convert.intasboolarray
 name: IntAsBoolArray
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: 返された配列に対してリトルエンディアン表現を使用して、正の整数のバイナリ表現を生成します。
 remarks: >-
-  入力`bits`は 0 ~ 63 の範囲で指定する必要があります。
+  入力は `bits` 0 ~ 63 の範囲で指定する必要があります。
 
-  入力`number`は0から $ 2 ^ {\texttt{bits}}-$1 の間でなければなりません。
+  入力は `number` 0 から $ 2 ^ {\texttt{bits}}-$1 の間でなければなりません。
 syntax: 'function IntAsBoolArray (number : Int, bits : Int) : Bool[]'
 input:
   content: '(number : Int, bits : Int)'
@@ -17,20 +17,20 @@ input:
     isPrimitive: true
     uid: Int
   - name: bits
-    summary: の`number`バイナリ表現に含まれるビット数。
+    summary: のバイナリ表現に含まれるビット数 `number` 。
     isPrimitive: true
     uid: Int
 output:
   content: Bool[]
   types:
-  - summary: を表す`number`ブール値の配列。
+  - summary: を表すブール値の配列 `number` 。
     isArray: true
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: f14af582713f5d08e29b54a1e1758b4efbeea094
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 529ef27e63bd637c3994fd3c37d1d707a9bde5b8
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82659186"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338557"

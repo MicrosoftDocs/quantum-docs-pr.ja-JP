@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.iteratethroughcartesianpower
 name: IterateThroughCartesianPower
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   整数範囲のデカルト乗の各インデックスに演算を適用します。
 
 
-  範囲`0..(bound - 1)`のデカルト乗の各要素に対して、反復的に操作を適用します。
+  範囲のデカルト乗の各要素に対して、反復的に操作を適用 `0..(bound - 1)` します。
 examples: >-
-  操作`op`を指定した場合、次の2つのスニペットは同等です。
+  操作を指定した `op` 場合、次の2つのスニペットは同等です。
 
 
   ```Q#
@@ -39,7 +39,7 @@ input:
   content: '(power : Int, bound : Int, op : (Int[] => Unit))'
   types:
   - name: power
-    summary: 範囲`0..(bound - 1)`が発生する必要があるデカルト指数。
+    summary: 範囲が発生する必要があるデカルト指数 `0..(bound - 1)` 。
     isPrimitive: true
     uid: Int
   - name: bound
@@ -66,9 +66,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.iteratethroughcartesianproduct
 metadata:
-  ms.openlocfilehash: a6f2d0e1f99c6cf7038803271af974a1c5fca465
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ed106ae6d6b84b2b00644709751e57153aec91fb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679069"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356169"
