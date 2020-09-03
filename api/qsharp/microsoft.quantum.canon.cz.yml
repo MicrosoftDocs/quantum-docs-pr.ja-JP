@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.cz
 name: CZ
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   CS-CZ ゲートを qubits のペアに適用します。
 
 
-  $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & \\ \\ 0 0 & 0 & 1 & \\ \\ 0 0 & 0 & 0 &-1 \end{align}、$ $。ここでは、行と列がクォンタムの概念ガイドに従って編成されています。
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 0 \\ \\ & 0 & 1 & 0 0 & \\ \\ 0 & 0 &-1 \end{align}、$ $。ここでは、行と列がクォンタムの概念ガイドに従って編成されています。
 remarks: >-
   次と同じです。
 
@@ -38,9 +38,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: ebece418cac216516b6c34ca22ead35275ac37c7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 56173b63ca5d5da72a350315213671fbb1cf7367
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680264"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356560"
