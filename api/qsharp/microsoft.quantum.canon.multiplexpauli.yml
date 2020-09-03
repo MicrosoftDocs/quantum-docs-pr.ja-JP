@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.multiplexpauli
 name: MultiplexPauli
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Qubits の配列に条件付きの回転を適用します。
 
@@ -18,7 +18,7 @@ summary: >-
 
 
   ##
-remarks: '`coefficients`$ 2 ^ n $ 未満の値が指定されている場合は、$ \ theta_j = $0.0 という要素が埋め込まれます。'
+remarks: '`coefficients` $ 2 ^ n $ 未満の値が指定されている場合は、$ \ theta_j = $0.0 という要素が埋め込まれます。'
 syntax: 'operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 input:
   content: '(coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
@@ -50,9 +50,9 @@ functors:
 seeAlso:
 - approximatelymultiplexpauli
 metadata:
-  ms.openlocfilehash: 202a1caec428d83027de127b08f05a8e07a63caa
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 53905a1537a81a3abbab32f350e748dd674cdebf
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678776"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355889"

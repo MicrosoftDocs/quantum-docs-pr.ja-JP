@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.multiplexoperations
 name: MultiplexOperations
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   数値の状態の配列によって制御される操作の配列を適用します。
 
@@ -11,9 +11,9 @@ summary: >-
 
 
   $U = \ sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
-remarks: '`coefficients`$ 2 ^ n $ 未満の値が指定されている場合、id 要素が埋め込まれます。 この実装では、$n-$1 補助 qubits を使用します。'
+remarks: '`coefficients` $ 2 ^ n $ 未満の値が指定されている場合、id 要素が埋め込まれます。 この実装では、$n-$1 補助 qubits を使用します。'
 syntax: "operation MultiplexOperations (unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
-references: '- クォンタムの速度を Childs、Dmitri Maslov、Yunseong、Neil、Ross、人民 Su を使用して最初のクォンタムシミュレーションに向けてhttps://arxiv.org/abs/1711.10980'
+references: '- クォンタムの速度を Childs、Dmitri Maslov、Yunseong、Neil、Ross、人民 Su を使用して最初のクォンタムシミュレーションに向けて https://arxiv.org/abs/1711.10980'
 input:
   content: "(unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
   types:
@@ -48,9 +48,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 8cb4744c27da953a997f01b26aac6b952998cc78
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 96a3438148a2acb7e75f8b9791aa686dae6e5641
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885374"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355931"
