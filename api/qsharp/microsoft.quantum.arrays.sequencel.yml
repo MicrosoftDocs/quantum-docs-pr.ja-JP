@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.sequencel
 name: SequenceL
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 指定された間隔で整数の配列を取得します。
-remarks: と`from` `to`の差は、 `Int`値に適合する必要があります。
+remarks: との差は、 `from` `to` 値に適合する必要があり `Int` ます。
 examples: >-
   ```qsharp
 
@@ -24,20 +24,20 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: to
-    summary: より`from`小さくない間隔の包括終了インデックス。
+    summary: より小さくない間隔の包括終了インデックス `from` 。
     isPrimitive: true
     uid: BigInt
 output:
   content: BigInt[]
   types:
-  - summary: 数値`from`のシーケンス ( `from + 1`,...) `to`を格納している配列。
+  - summary: 数値のシーケンス ( `from` `from + 1` ,...) を `to` 格納している配列。
     isArray: true
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 7271856286009cfd1651f19f69f932e79d79c2bf
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c39259d5c39ff523464b1defc3c29c7dca6551ee
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680805"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351664"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.bitwise.leftshiftedi
 name: LeftShiftedI
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: 指定されたビット数だけ左にある数値のビットごとの表現をシフトします。
 remarks: >-
   同等のものを次に示します。
@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: Int
   - name: amount
-    summary: を左にシフトするとき`value`に使用するビット数。
+    summary: を左にシフトするときに使用するビット数 `value` 。
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: ビットで`amount`左`value`にシフトされたの値。
+  - summary: ビットで左にシフトされたの値 `value` `amount` 。
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: e63653304eced80526b26e0ad05d1e4ed4aeb682
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cab8f84fe6e4b268bb93c555dd58077377d8a9af
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680687"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351302"

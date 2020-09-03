@@ -2,17 +2,17 @@
 uid: microsoft.quantum.arrays.subarray
 name: Subarray
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 配列と場所のリストを受け取り、指定した場所に一致する元の配列の要素から新しい配列を作成します。
 remarks: >-
-  関数は、ジェネリック型に対して定義されます。つまり、配列`'T[]`と、サブ配列を`Int[]`定義している場所のリストがある場合は、そのように定義されます。
+  関数は、ジェネリック型に対して定義されます。つまり、配列と、サブ配列を定義している `'T[]` 場所のリストがある場合は、そのように定義されます。 `Int[]`
 
   サブ配列の構築は、参照を維持するのではなく、指定された配列の新しいディープコピーを生成することに基づいています。
 
 
-  の`Length(indices) < Length(array)`場合、この関数はの`array`サブセットを返します。 一方、に繰り返し要素が`indices`含まれている場合は、の`array`対応する要素も同様に繰り返されます。
+  `Length(indices) < Length(array)`の場合、この関数はのサブセットを返し `array` ます。 一方、に `indices` 繰り返し要素が含まれている場合は、の対応する要素も `array` 同様に繰り返されます。
 
-  と`indices` `array`の長さが同じである場合、この関数は`array`の順列を提供します。
+  `indices`との `array` 長さが同じである場合、この関数はの順列を提供 `array` します。
 syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
 input:
   content: "(indices : Int[], array : 'T[])"
@@ -23,24 +23,24 @@ input:
     isPrimitive: true
     uid: Int
   - name: array
-    summary: 上`'T`の要素の配列。
+    summary: 上の要素の配列 `'T` 。
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: インデックスが`out` `out[idx] == array[indices[idx]]`サブ配列に対応する要素の配列。
+  - summary: '`out`インデックスがサブ配列に対応する要素の配列 `out[idx] == array[indices[idx]]` 。'
     isArray: true
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: 要素の`array`型。
+  summary: 要素の型 `array` 。
 metadata:
-  ms.openlocfilehash: 2740a39d1b7c1c56aed4f9107c65d339c5fb4c1a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1d5739f49e32ec4548cb24df2106dec0866a94cb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675113"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351630"
