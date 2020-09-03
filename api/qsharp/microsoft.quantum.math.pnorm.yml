@@ -2,12 +2,12 @@
 uid: microsoft.quantum.math.pnorm
 name: PNorm
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
-  の`Double`ベクトル`L(p)`の基準を返します。
+  `L(p)`のベクトルの基準を返し `Double` ます。
 
 
-  つまり、 `Double[]`$ $x 型の $ が指定されている場合、$-$p $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $ が返されます。
+  つまり、$ $x 型の $ が指定されている場合、 `Double[]` $-$p $ \| x \| \_ p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $ が返されます。
 syntax: 'function PNorm (p : Double, array : Double[]) : Double'
 input:
   content: '(p : Double, array : Double[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Double
   types:
-  - summary: $P $-標準 $\|x\|_p $。
+  - summary: $P $-標準 $ \| x \| _p $。
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 5583e7d14c7363538ca11f48564ebac7240f511b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0f267609a04e66b6a445a92473a223a776fdccda
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684044"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333508"

@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.multiplysi
 name: MultiplySI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 符号付き整数`xs`を符号付き`ys`整数で乗算し、 `result`結果をに格納します。最初はゼロである必要があります。
+namespace: microsoft.quantum.arithmetic
+summary: 符号付き整数 `xs` を符号付き整数で乗算 `ys` し、結果をに格納し `result` ます。最初はゼロである必要があります。
 syntax: 'operation MultiplySI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
@@ -15,7 +15,7 @@ input:
     summary: n ビット乗数 (SignedLittleEndian)
     uid: microsoft.quantum.arithmetic.signedlittleendian
   - name: result
-    summary: 2n ビット結果 (SignedLittleEndian) は、初期状態では $ \ket{0}$ である必要があります。
+    summary: 2n ビット結果 (SignedLittleEndian) は、初期状態では $ \ket $ である必要があり {0} ます。
     uid: microsoft.quantum.arithmetic.signedlittleendian
 output:
   content: Unit
@@ -26,9 +26,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: b8710ecce1986b43e50a8b0567ae4746bda1589e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e81995b6dfb20ddd3e3e3139831d3cc43bfd60da
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679449"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353398"

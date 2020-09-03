@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.multiplyi
 name: MultiplyI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 整数`xs`を整数`ys`で乗算し、結果を`result`に格納します。最初はゼロである必要があります。
+namespace: microsoft.quantum.arithmetic
+summary: 整数 `xs` を整数で乗算 `ys` し、結果をに格納し `result` ます。最初はゼロである必要があります。
 remarks: >-
   標準のシフトアンド追加アプローチを使用して乗算を実装します。
 
@@ -19,7 +19,7 @@ input:
     summary: $n $-bit 乗数 (LittleEndian)
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: $ 2n $ ビット結果 (LittleEndian) は、初期状態で $ \ket{0}$ である必要があります。
+    summary: $ 2n $ ビット結果 (LittleEndian) は、初期状態で $ \ket $ である必要があり {0} ます。
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: fcb55b47c0d5ca82736e8c3da14190daffd2b414
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 67e1ef577bf36cf524d2468bc191d2b381c800df
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679490"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353381"

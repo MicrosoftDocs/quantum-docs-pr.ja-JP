@@ -2,13 +2,13 @@
 uid: microsoft.quantum.intrinsic.r
 name: R
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
   指定された P# li 軸についての回転を適用します。
 
 
-  \begin{align} R_ {\ mu} (\ シータ) \mathrel{: =} e ^ {-i \ シータ \ sigma_ {/mu}/2}、\end{align} where $ \ mu \ \{i, X, Y, Z\}$ です。
-remarks: で`pauli = PauliI`呼び出された場合、この操作は*グローバルフェーズ*を適用します。 このフェーズは、 `Controlled`ファンクタで使用する場合に重要になります。
+  \begin{align} R_ {\ mu} (\ シータ) \mathrel{: =} e ^ {-i \ シータ \ sigma_ {/mu}/2}、\end{align} where $ \ mu \ \{ i, X, Y, Z \} $ です。
+remarks: で呼び出された場合 `pauli = PauliI` 、この操作は *グローバルフェーズ*を適用します。 このフェーズは、ファンクタで使用する場合に重要になり `Controlled` ます。
 syntax: 'operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit'
 input:
   content: '(pauli : Pauli, theta : Double, qubit : Qubit)'
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d6655f674d7bd6b92cfb0e81e588bdcd48380bf4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cce17b8a189abc907642269b825855df0e7c51b1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681774"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346802"
