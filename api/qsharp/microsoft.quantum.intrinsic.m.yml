@@ -2,7 +2,7 @@
 uid: microsoft.quantum.intrinsic.m
 name: M
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
   P$Z $ ベースで1つの qubit の測定を実行します。
 
@@ -30,13 +30,13 @@ input:
 output:
   content: Result
   types:
-  - summary: '`Zero`$ + $1 eigenvalue が観測されている`One`場合は、$-$1 eigenvalue が観測されている場合はです。'
+  - summary: '`Zero` $ + $1 eigenvalue が観測されている場合は、 `One` $-$1 eigenvalue が観測されている場合はです。'
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: e13f82aa3489fcd1d0c5121f436ae1f600675957
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ad1e5bf7258451ec922416663e72e4386d16c23d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683759"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346972"

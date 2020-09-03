@@ -2,9 +2,9 @@
 uid: microsoft.quantum.math.modulusi
 name: ModulusI
 type: function
-namespace: Microsoft.Quantum.Math
-summary: 剰余`value` `modulus`の正規の residue を計算します。
-remarks: 'この関数は、演算子`%`が C# および Q # で動作する方法とは異なり、値が負の場合でも`modulus - 1`、結果は常に 0 ~ の正の整数になります。'
+namespace: microsoft.quantum.math
+summary: 剰余の正規の residue を計算 `value` `modulus` します。
+remarks: 'この関数は、演算子が `%` C# および Q # で動作する方法とは異なり、 `modulus - 1` 値が負の場合でも、結果は常に 0 ~ の正の整数になります。'
 syntax: 'function ModulusI (value : Int, modulus : Int) : Int'
 input:
   content: '(value : Int, modulus : Int)'
@@ -20,13 +20,13 @@ input:
 output:
   content: Int
   types:
-  - summary: 0から、 `modulus - 1`剰余で割り切れた`value - r`整数 $r $
+  - summary: 0から、 `modulus - 1` `value - r` 剰余で割り切れた整数 $r $
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: d804caa4e5eba1e8d6293d33164255ea4768900c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 63d8e1ed1083be193b976ea7c4086f7bfdad7a69
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686652"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89334052"
