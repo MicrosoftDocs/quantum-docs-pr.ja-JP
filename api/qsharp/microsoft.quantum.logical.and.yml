@@ -2,10 +2,10 @@
 uid: microsoft.quantum.logical.and
 name: And
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: 2つの値のブール値の組み合わせを返します。
 remarks: >-
-  `and`演算子とは異なり、この関数はショートサーキットではなく、両方の入力が完全に評価されます。
+  演算子とは異なり `and` 、この関数はショートサーキットではなく、両方の入力が完全に評価されます。
 
 
   ショートサーキットの動作は、次のようになります。
@@ -33,13 +33,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true``a`と`b`の両方`true`がである場合にのみ。'
+  - summary: '`true``a`と `b` の両方がである場合にのみ `true` 。'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 01c26ef3804d484d2cfbd6f54261ad80b8f66594
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 79d3e2fb5499e10a73c4ead1c19d36f09b721f98
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674087"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346275"
