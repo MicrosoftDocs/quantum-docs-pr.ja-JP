@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a287dd76162a05d72af7e9d1e46533425283e2a
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: a630b2307f5d95321fb26f480d7a441ddba846fc
+ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863660"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358260"
 ---
 # <a name="develop-with-no-locq-applications"></a>Q# アプリケーションを使用した開発
 
@@ -41,7 +41,7 @@ Visual Studio を構成するには:
 Visual Studio Codespaces を構成するには:
 
 1. [Azure アカウント](https://azure.microsoft.com/free/)を作成します。
-2. Codespaces 環境を作成します。 [クイックスタート ガイド](https://docs.microsoft.com/visualstudio/online/quickstarts/browser)に従ってください。 Codespace を作成するときに、[Git リポジトリ] フィールドに「`microsoft/Quantum`」と入力して、QDK 固有の設定を読み込むことをお勧めします。
+2. Codespaces 環境を作成します。 [クイックスタート ガイド](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser)に従ってください。 Codespace を作成するときに、[Git リポジトリ] フィールドに「`microsoft/Quantum`」と入力して、QDK 固有の設定を読み込むことをお勧めします。
 3. これで、新しい環境を起動し、[VS Codespaces のクラウド IDE](https://online.visualstudio.com/environments) を使用してブラウザーで開発を開始できるようになりました。 または、VS Code のローカル インストールを使用して、[リモート環境](https://docs.microsoft.com/visualstudio/online/how-to/vscode)として Codespaces を使用することもできます。
 
 
