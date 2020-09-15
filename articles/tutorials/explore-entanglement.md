@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
+ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863437"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90063242"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>チュートリアル:Q\# でのもつれの確認
 
@@ -112,7 +112,7 @@ Q#操作は、クォンタムサブルーチンです。 つまり、これは�
 
 操作の引数は、かっこ内にタプルとして指定します。
 
-操作の戻り値の型は、コロンの後に指定します。 この場合、`SetQubitState` 操作には戻り値がないため、`Unit` を返すように設定されています。 これは、 Q# `unit` F # では、C# ではに似ていますが、 `void` Python では空のタプル () に相当し `Tuple[()]` ます。
+操作の戻り値の型は、コロンの後に指定します。 この場合、`SetQubitState` 操作には戻り値がないため、`Unit` を返すように設定されています。 これは、 Q# `unit` F # では、C# ではに似ていますが、 `void` Python では空のタプル (は `()` 型ヒントで表される) に相当し `Tuple[()]` ます。
 
 最初の操作で2つのクォンタム操作を使用しました Q# 。
 
@@ -413,7 +413,7 @@ Test results (# of 0s, # of 1s, # of agreements)
 
 概要で述べたように、最初の量子ビットの統計情報は変わっていませんが (50-50 の確率で 0 または 1)、2 番目の量子ビットを測定すると、最初の量子ビットを測定した結果と__常に__同じになります。これは、もつれ状態にあるからです。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このチュートリアル [Grover の検索](xref:microsoft.quantum.quickstarts.search) では、最も人気のあるクォンタムコンピューティングアルゴリズムの1つである Grover search をビルドして実行する方法を示します。また、 Q# クォンタムコンピューティングに関する実際の問題を解決するために使用できるプログラムの便利な例を紹介します。  
 
