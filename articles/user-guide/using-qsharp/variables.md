@@ -1,24 +1,24 @@
 ---
-title: の変数Q#
-description: 説明の入力
+title: の変数 Q#
+description: でさまざまな変数を使用する方法について説明します。 Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867847"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835878"
 ---
-# <a name="variables-in-no-locq"></a>の変数Q#
+# <a name="variables-in-no-locq"></a>の変数 Q#
 
-Q#変更可能なシンボルと変更できないシンボル、または式にバインド/割り当てられている*変数*を区別します。
+Q# 変更可能なシンボルと変更できないシンボル、または式にバインド/割り当てられている *変数*を区別します。
 一般に、変更できないシンボルを使用することをお勧めします。これにより、コンパイラはより多くの最適化を実行できるためです。
 
 バインディングの左側は、記号の組と式の右辺で構成されています。
@@ -40,12 +40,12 @@ let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 > [!NOTE]
 > 前の例では、ステートメントの右辺の式が明確であるため、新しい変数の型を明示的に指定する必要はありません `let` 。コンパイラは正しい型を推論します。 
 
-を使用して定義された変数 `let` は*変更*できません。つまり、変数を定義すると、どのような方法でも変更できなくなります。
+を使用して定義された変数 `let` は *変更*できません。つまり、変数を定義すると、どのような方法でも変更できなくなります。
 これにより、操作のバリアントを適用するために変数に対して並べ替えを行う従来のロジックの最適化など、いくつかの有益な最適化が可能に `Adjoint` なります。
 
 ## <a name="mutable-variables"></a>変更可能な変数
 
-で変数を作成する代わりに、キーワードを使用して `let` `mutable` 最初に作成した後で再バインドできる変更*可能*な変数を作成し `set` ます。
+で変数を作成する代わりに、キーワードを使用して `let` `mutable` 最初に作成した後で再バインドできる変更 *可能* な変数を作成し `set` ます。
 
 ステートメントの一部として宣言およびバインドされているシンボルは `mutable` 、後でコード内で別の値に再バインドできます。 シンボルが後でコード内で再バインドされる場合、その型は変更されず、新しくバインドされた値はその型と互換性がある必要があります。
 
@@ -58,7 +58,7 @@ let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 
 #### <a name="apply-and-reassign-statements"></a>Apply ステートメントと再割り当てステートメント
 
-特定の種類の `set` -ステートメント (*適用および再割り当て*ステートメント) は、右辺が二項演算子のアプリケーションで構成されており、結果が演算子の左辺の引数に再バインドされる場合に、簡単に連結できる方法を提供します。 たとえば、
+特定の種類の `set` -ステートメント ( *適用および再割り当て* ステートメント) は、右辺が二項演算子のアプリケーションで構成されており、結果が演算子の左辺の引数に再バインドされる場合に、簡単に連結できる方法を提供します。 たとえば、次のように入力します。
 
 ```qsharp
 mutable counter = 0;
@@ -91,7 +91,7 @@ for (q in qubits) {
 
 #### <a name="update-and-reassign-statements"></a>更新と再割り当てのステートメント
 
-右側に[コピーと更新の式](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions)がある場合も同様の連結が存在します。
+右側に [コピーと更新の式](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) がある場合も同様の連結が存在します。
 それに応じて、ユーザー定義型および*配列項目*の*名前付き項目*に対して、*更新と再割り当て*のステートメントが存在します。  
 
 ```qsharp
@@ -161,7 +161,7 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 ## <a name="tuple-deconstruction"></a>タプル分解
 
 1つの変数を割り当てるだけでなく、 `let` `mutable` キーワードまたはその他のバインド構成要素 (など) を使用して、 `set` [タプル型](xref:microsoft.quantum.guide.types#tuple-types)の内容をアンパックできます。
-このフォームの割り当ては、そのタプルの要素を*分解*と言います。
+このフォームの割り当ては、そのタプルの要素を *分解* と言います。
 
 バインドの右側がタプルの場合は、代入時にそのタプルを分解できます。
 このような deconstructions には、入れ子になった組を含めることができます。また、右辺の組の構造がシンボルの組の形状と互換性がある限り、完全または部分的な分解は有効です。
@@ -185,7 +185,7 @@ let (r1, r2) = MeasureTwice(q1, PauliX, q2, PauliY);
 - ループの3つの部分 `repeat` / `until` (本文、テスト、および修正) はすべて1つのスコープとして機能するので、本文にバインドされているシンボルはテストとフィックスアップで使用できます。
 
 両方の種類のループでは、ループの各パスが独自のスコープ内で実行されるため、以前のパスからのバインドは、後のパスでは使用できません。
-これらのループの詳細については、「[制御フロー](xref:microsoft.quantum.guide.controlflow)」を参照してください。
+これらのループの詳細については、「 [制御フロー](xref:microsoft.quantum.guide.controlflow)」を参照してください。
 
 内部ブロックは、外側のブロックからシンボルバインドを継承します。
 シンボルをバインドできるのは、ブロックごとに1回だけです。スコープ内にある別のシンボルと同じ名前のシンボルを定義することはできません ("シャドウ" はありません)。
@@ -239,4 +239,4 @@ if (a == b) {
 
 ## <a name="next-steps"></a>次のステップ
 
-での[Qubits の使用](xref:microsoft.quantum.guide.qubits)について説明 Q# します。
+での [Qubits の使用](xref:microsoft.quantum.guide.qubits) について説明 Q# します。

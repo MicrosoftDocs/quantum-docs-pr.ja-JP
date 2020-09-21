@@ -1,29 +1,29 @@
 ---
-title: Q#ファイル構造
+title: Q# ファイル構造
 description: ファイルの構造と構文について説明し Q# ます。
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 98b3a2e35186989b8191cc566a5d5310bc26eafc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867932"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833308"
 ---
-# <a name="no-locq-file-structure"></a>Q#ファイル構造
+# <a name="no-locq-file-structure"></a>Q# ファイル構造
 
 ファイルは、一連の Q# *名前空間宣言*で構成されます。
 各名前空間宣言には、ユーザー定義型、操作、および関数の宣言が含まれており、任意の数の宣言を任意の順序で含めることができます。
-名前空間内の宣言の詳細については、「[ユーザー定義型](xref:microsoft.quantum.guide.types#user-defined-types)、[操作](xref:microsoft.quantum.guide.operationsfunctions#defining-new-operations)、および[関数](xref:microsoft.quantum.guide.operationsfunctions#defining-new-functions)」を参照してください。
+名前空間内の宣言の詳細については、「 [ユーザー定義型](xref:microsoft.quantum.guide.types#user-defined-types)、 [操作](xref:microsoft.quantum.guide.operationsfunctions#defining-new-operations)、および [関数](xref:microsoft.quantum.guide.operationsfunctions#defining-new-functions)」を参照してください。
 
 名前空間の宣言の外側に表示されるテキストは、コメントだけです。
-特に、名前空間のドキュメントコメントは、宣言の前に記述します。 詳細については、この記事の[ドキュメントコメント](#documentation-comments)を参照してください。 
+特に、名前空間のドキュメントコメントは、宣言の前に記述します。 詳細については、この記事の [ドキュメントコメント](#documentation-comments) を参照してください。 
 
 ## <a name="namespace-declarations"></a>名前空間の宣言
 
@@ -66,7 +66,7 @@ namespace NS {
 ディレクティブは、 `open` ファイル内の名前空間ブロック全体に適用されます。
 このため、前と同じファイルに追加の名前空間を定義した場合、 Q# `NS` 2 番目の名前空間で定義されている操作/関数/型は、その中に open ディレクティブを繰り返していない限り、またはにアクセスできません `Microsoft.Quantum.Intrinsic` `Microsoft.Quantum.Math` 。 
 
-現在の名前空間で開かれて*いない*別の名前空間で定義されている型または呼び出し可能を参照するには、完全修飾名で参照する必要があります。
+現在の名前空間で開かれて *いない* 別の名前空間で定義されている型または呼び出し可能を参照するには、完全修飾名で参照する必要があります。
 たとえば、名前空間からという名前の操作を指定した場合は、 `Op` `X.Y` 次のようになります。
 
 * `X.Y.Op` `X.Y` 現在のブロックで名前空間が既に開かれている場合を除き、完全修飾名で参照する必要があります。 
@@ -76,9 +76,9 @@ namespace NS {
 通常は、ディレクティブを使用して名前空間を含めることをお勧め `open` します。
 2つの名前空間で同じ名前の構造体を定義し、現在のソースが両方のコンストラクトを使用する場合は、完全修飾名を使用する必要があります。
 
-Q#は、他の .NET 言語として名前を付ける場合と同じ規則に従います。
+Q# は、他の .NET 言語として名前を付ける場合と同じ規則に従います。
 ただし、で Q# は、名前空間への相対参照はサポートされません。
-たとえば、名前空間が開いている場合、 `a.b` という名前の操作への参照は、 `c.d` 完全名を持つ操作に解決*されません* `a.b.c.d` 。
+たとえば、名前空間が開いている場合、 `a.b` という名前の操作への参照は、 `c.d` 完全名を持つ操作に解決 *されません* `a.b.c.d` 。
 
 ## <a name="formatting"></a>書式設定
 
@@ -91,7 +91,7 @@ Q#は、他の .NET 言語として名前を付ける場合と同じ規則に従
 
 ## <a name="statement-blocks"></a>ステートメントブロック
 
-Q#ステートメントは、中かっこで囲まれたステートメントブロックにグループ化され `{ }` ます。 ステートメントブロックは、開始位置で始まり、 `{` 終わりで終わり `}` ます。
+Q# ステートメントは、中かっこで囲まれたステートメントブロックにグループ化され `{ }` ます。 ステートメントブロックは、開始位置で始まり、 `{` 終わりで終わり `}` ます。
 
 別のブロック内で構文的に囲まれたステートメントブロックは、それを含むブロックのサブブロックと見なされます。コンテナーとサブブロックは、外部ブロックと内部ブロックとも呼ばれます。
 
@@ -105,7 +105,7 @@ Q#ステートメントは、中かっこで囲まれたステートメントブ
 3つのスラッシュで始まるコメント `///` は、名前空間、操作、特殊化、関数、または型定義の直前に出現するときに、コンパイラによって特別に処理されます。
 その場合、コンパイラは、定義されている呼び出し可能またはユーザー定義型のドキュメントとして、他の .NET 言語と同じように扱います。
 
-コメント内で `///` は、API ドキュメントの一部として表示されるテキストは[Markdown](https://daringfireball.net/projects/markdown/syntax)として書式設定され、ドキュメントのさまざまな部分が特別な名前付きヘッダーによって示されます。
+コメント内で `///` は、API ドキュメントの一部として表示されるテキストは [Markdown](https://daringfireball.net/projects/markdown/syntax)として書式設定され、ドキュメントのさまざまな部分が特別な名前付きヘッダーによって示されます。
 Markdown では、拡張機能を使用して、 `@"<ref target>"` での操作、関数、およびユーザー定義型の相互参照を Q# 行います。 `<ref target>`参照先のコードオブジェクトの完全修飾名で置き換えます。
 ドキュメントエンジンによっては、追加の Markdown 拡張機能がサポートされている場合もあります。
 
@@ -156,4 +156,4 @@ operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
 
 ## <a name="next-steps"></a>次のステップ
 
-の[操作と関数](xref:microsoft.quantum.guide.operationsfunctions)について説明 Q# します。
+の [操作と関数](xref:microsoft.quantum.guide.operationsfunctions) について説明 Q# します。

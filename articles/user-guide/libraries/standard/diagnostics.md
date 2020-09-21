@@ -3,17 +3,17 @@ title: Q#標準ライブラリの診断
 description: Q#クォンタムプログラムで間違いやエラーをキャッチするために使用される標準ライブラリの診断関数と操作について説明します。
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 11ce1bc86db0c5aa0f81ba7d0f2d6ec3463b178c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868544"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835572"
 ---
 # <a name="diagnostics"></a>診断 #
 
@@ -33,21 +33,21 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`には `(String -> Unit)` 、デバッグログメッセージを出力するという署名が含まれてい Q# ます。
+> `Message` には `(String -> Unit)` 、デバッグログメッセージを出力するという署名が含まれてい Q# ます。
 
 と呼び出しによって、 <xref:microsoft.quantum.diagnostics.dumpmachine> <xref:microsoft.quantum.diagnostics.dumpregister> ターゲットコンピューターは、現在割り当てられている qubits または特定の qubits のレジスタに関する診断情報をそれぞれ提供するように指示します。
 各ターゲットコンピューターは、ダンプ命令への応答として提供される診断情報によって異なります。
-たとえば、[完全な状態シミュレーター](xref:microsoft.quantum.machines.full-state-simulator)ターゲットコンピューターは、ホストプログラムに対して、内部で使用されて qubits のレジスタを表す状態ベクターを提供します。
-これに対して、 [Toffoli シミュレーター](xref:microsoft.quantum.machines.toffoli-simulator)ターゲットコンピューターは、qubit ごとに1つのクラシックビットを提供します。
+たとえば、 [完全な状態シミュレーター](xref:microsoft.quantum.machines.full-state-simulator) ターゲットコンピューターは、ホストプログラムに対して、内部で使用されて qubits のレジスタを表す状態ベクターを提供します。
+これに対して、 [Toffoli シミュレーター](xref:microsoft.quantum.machines.toffoli-simulator) ターゲットコンピューターは、qubit ごとに1つのクラシックビットを提供します。
 
  [完全な状態シミュレーターの](xref:microsoft.quantum.machines.full-state-simulator)出力の詳細については `DumpMachine` 、「[テストおよびデバッグ](xref:microsoft.quantum.guide.testingdebugging#dump-functions)」の記事の「ダンプ関数」を参照してください。
 
 
 ## <a name="facts-and-assertions"></a>ファクトとアサーション ##
 
-「[テストおよびデバッグ](xref:microsoft.quantum.guide.testingdebugging)」で説明したように、シグネチャまたはを持つ関数または操作は、 `Unit -> Unit` `Unit => Unit` それぞれ*単体テスト*としてマークできます。
+「 [テストおよびデバッグ](xref:microsoft.quantum.guide.testingdebugging)」で説明したように、シグネチャまたはを持つ関数または操作は、 `Unit -> Unit` `Unit => Unit` それぞれ *単体テスト*としてマークできます。
 各単体テストは、通常、小さいクォンタムプログラムと、そのプログラムの正確性をチェックする1つ以上の条件で構成されます。
-これらの条件は、入力の値を確認する_ファクト_、または入力として渡された1つ以上の qubits の状態をチェックする_アサーション_のいずれかの形式で指定できます。
+これらの条件は、入力の値を確認する _ファクト_、または入力として渡された1つ以上の qubits の状態をチェックする _アサーション_のいずれかの形式で指定できます。
 
 たとえば、は、 `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` $1 + 1 = $2 という数学的な事実を表しますが、は `AssertQubit(One, qubit)` 測定が確実性を `qubit` 持つを返す条件を表し `One` ます。
 前者の場合は、値のみを指定して条件の正確性を確認できます。後者の場合、アサーションを評価するには、qubit の状態に関する情報を把握しておく必要があります。
@@ -62,24 +62,24 @@ Q#標準ライブラリには、次のようなファクトを表すためのさ
 
 ### <a name="testing-qubit-states"></a>Qubit 状態のテスト ###
 
-実際には、アサーションは、クォンタム機構の古典シミュレーションが、[複製なしの定理](https://arxiv.org/abs/quant-ph/9607018)に従う必要がないという事実に依存しています。これは、ターゲットマシンにシミュレーターを使用するときに、非物理測定とアサーションを行うことができるようにするためです。
+実際には、アサーションは、クォンタム機構の古典シミュレーションが、 [複製なしの定理](https://arxiv.org/abs/quant-ph/9607018)に従う必要がないという事実に依存しています。これは、ターゲットマシンにシミュレーターを使用するときに、非物理測定とアサーションを行うことができるようにするためです。
 そのため、ハードウェアに展開する前に、古典シミュレーターで個々の操作をテストすることができます。
 アサーションの評価が許可されていないターゲットコンピューターでは、の呼び出しは <xref:microsoft.quantum.diagnostics.assertmeasurement> 無視しても安全です。
 
 一般的に、この操作は、指定されたすべての指定された qubits が指定された <xref:microsoft.quantum.diagnostics.assertmeasurement> 結果を常に取得することをアサートします。
-アサーションが失敗した場合、指定したメッセージを使用してを呼び出すことにより、実行が終了し `fail` ます。
+アサーションが失敗した場合、実行は、指定されたメッセージを使用してを呼び出すことによって終了し `fail` ます。
 既定では、この操作は実装されていません。これをサポートするシミュレーターは、ランタイムチェックを実行する実装を提供する必要があります。
-`AssertMeasurement`に署名があり `((Pauli[], Qubit[], Result, String) -> ())` ます。
+`AssertMeasurement` に署名があり `((Pauli[], Qubit[], Result, String) -> ())` ます。
 `AssertMeasurement`は、出力の種類として空のタプルを持つ関数であるため、を呼び出しても、 `AssertMeasurement` プログラム内では影響を受けることはありません Q# 。
 
 操作関数は、指定された型の指定された <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> qubits を測定することをアサートします。これは、一定の許容範囲内で指定された確率で特定の結果を取得します。
 許容範囲は加法です (など `abs(expected-actual) < tol` )。
-アサーションが失敗した場合、指定したメッセージを使用してを呼び出すことにより、実行が終了し `fail` ます。
+アサーションが失敗した場合、実行は、指定されたメッセージを使用してを呼び出すことによって終了し `fail` ます。
 既定では、この操作は実装されていません。これをサポートするシミュレーターは、ランタイムチェックを実行する実装を提供する必要があります。
-`AssertMeasurementProbability`に署名があり `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` ます。 1つ目のパラメーターは、 `Double` 結果の目的の確率を示し、2番目のパラメーターは許容範囲です。
+`AssertMeasurementProbability` に署名があり `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` ます。 1つ目のパラメーターは、 `Double` 結果の目的の確率を示し、2番目のパラメーターは許容範囲です。
 
 1つの測定値をアサートする以外にも、シミュレーターで使用される古典的な情報を使用して qubit の内部状態を表すことが、コピーに適しているということを使用します。これは、実際にアサーションをテストするために測定を実行する必要がないためです。
-具体的には、これにより、実際のハードウェアでは不可能な*互換性*のない測定を行うことができます。
+具体的には、これにより、実際のハードウェアでは不可能な *互換性* のない測定を行うことができます。
 
 `P : Qubit => Unit`入力が $ \ket $ という状態にあるときに、状態 $ \ket{\psi} $ を準備する操作であるとし {0} ます。
 $ \Ket{\psi '} $ を、によって準備された実際の状態にし `P` ます。
@@ -145,11 +145,11 @@ $T $ が進化時間を表している場合は、期待どおりに ^ & $U ^ (t
 
 ただし、この2つの方法では、調査中の操作のさまざまなプロパティをテストします。
 インプレースアサーションでは各操作が複数回呼び出されるため、各入力状態につき1回、ランダムな選択と測定の結果が呼び出し間で変わる可能性があります。
-これに対し、参照されるアサーションは、各操作を1回だけ呼び出します。これにより、操作が1回の*ショットで*等しいことが確認されます。
+これに対し、参照されるアサーションは、各操作を1回だけ呼び出します。これにより、操作が1回の *ショットで*等しいことが確認されます。
 これらのテストはどちらも、クォンタムプログラムの正確性を確保するために役立ちます。
 
 
-## <a name="further-reading"></a>もっと読む ##
+## <a name="further-reading"></a>参考記事 ##
 
 - <xref:microsoft.quantum.guide.testingdebugging>
 - <xref:microsoft.quantum.diagnostics>

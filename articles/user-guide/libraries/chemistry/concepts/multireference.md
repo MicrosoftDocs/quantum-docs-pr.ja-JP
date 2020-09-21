@@ -2,29 +2,29 @@
 title: 相関波動関数
 description: Microsoft Quantum の化学ライブラリを使用して、wavefunctions での動的および非動的な相関関係について説明します。
 author: guanghaolow
-ms.author: gulow@microsoft.com
+ms.author: gulow
 ms.date: 05/28/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.multireference
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0066d676205901d4f2d41538684f9ba57407eb82
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 420fc8e108852f6548e2147693e089f5ce970aa9
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869564"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835487"
 ---
 # <a name="correlated-wavefunctions"></a>相関波動関数
 
-多くのシステム (特に均衡ジオメトリの近くにある) では、 [Fock](xref:microsoft.quantum.chemistry.concepts.hartreefock)理論では、単一決定の参照状態を通じて分子プロパティの定性的な説明が提供されます。 ただし、定量的精度を実現するには、相関関係の影響も考慮する必要があります。 
+多くのシステム (特に均衡ジオメトリの近くにある) では、 [Fock](xref:microsoft.quantum.chemistry.concepts.hartreefock) 理論では、単一決定の参照状態を通じて分子プロパティの定性的な説明が提供されます。 ただし、定量的精度を実現するには、相関関係の影響も考慮する必要があります。 
 
 このコンテキストでは、動的と非動的の相関関係を dinstinguish することが重要です。
 Dynamical の相関関係は、原子のような傾向があるとしても、電子的な斥力のようなものではありません。 この効果は、参照状態の原子の excitations を考慮することによって、モデル化にすることができます。 非動的な相関関係は、wavefunction が取り出しの順序で2つ以上の構成によって支配されている場合に発生します。これは、システムの定性的な説明だけを達成する場合でも同様です。
 これには、要因の法則があり、multireference wavefunction の例があります。
 
-化学ライブラリを使用すると、法則の要因として、multireference の問題に取り出し order wavefunction を指定することができます。 この方法は、スパース multireference wavefunctions と呼ばれ、法則を指定するのに十分な数のコンポーネントだけがある場合に有効です。 また、このライブラリには、汎用化されたユニタリ (クラスター ansatz) を使用した単一の決定参照の上に動的な相関関係を含めるメソッドも用意されています。 さらに、クォンタムコンピューターでこれらの状態を生成するクォンタム回線も構築されます。 これらの状態は[Broombridge スキーマ](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)で指定できます。また、化学ライブラリを使用してこれらの状態を手動で指定する機能も用意されています。
+化学ライブラリを使用すると、法則の要因として、multireference の問題に取り出し order wavefunction を指定することができます。 この方法は、スパース multireference wavefunctions と呼ばれ、法則を指定するのに十分な数のコンポーネントだけがある場合に有効です。 また、このライブラリには、汎用化されたユニタリ (クラスター ansatz) を使用した単一の決定参照の上に動的な相関関係を含めるメソッドも用意されています。 さらに、クォンタムコンピューターでこれらの状態を生成するクォンタム回線も構築されます。 これらの状態は [Broombridge スキーマ](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)で指定できます。また、化学ライブラリを使用してこれらの状態を手動で指定する機能も用意されています。
 
 ## <a name="sparse-multi-reference-wavefunction"></a>スパースマルチ参照 wavefunction
 マルチ参照 $N の状態 $ \ket{\ psi_ {\ rm {MCSCF}}} $ は、$-の線形の組み合わせとして明示的に指定することができます。

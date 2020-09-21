@@ -1,20 +1,20 @@
 ---
 title: 2番目の量子化
 description: クォンタムプログラミングで電子構造をモデル化するための2番目の量子化アプローチについて説明します。
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ba77c499d6830b1f78bba39e20b15c4ebe9433fc
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869462"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835810"
 ---
 # <a name="second-quantization"></a>2番目の量子化
 
@@ -77,7 +77,7 @@ Quantum の化学ライブラリでは、これらの規則を使用できます
 ```
 
 Fermionic システムの場合、P# li 除外の原則を使用すると、1つのスピン回転に複数の電子日が同時に存在するのを防ぐことができます。
-つまり、$ \ psi_1 $ as \ begin{\begin{cases}} \ psi_1 \rightarrow \ket {0} _1 &-$ \ psi_1 $ が使用されていない場合、この2つの有効な状態を書き込むことができます。\\\
+つまり、$ \ psi_1 $ as \ begin{\begin{cases}} \ psi_1 \rightarrow \ket {0} _1 &-$ \ psi_1 $ が使用されていない場合、この2つの有効な状態を書き込むことができます。 \\\
 {1}$ \ psi_1 $ が占有されている場合、\ket _1 & \ text{ \end{cases}、このエンコードは、1つのクォンタムビットとして電子職業を格納できることを意味するため、quantum コンピューターには適しています。
 
 $ 2N $ spin orbitals の職業状態は、同様に $ 2N $ qubits に格納できます。

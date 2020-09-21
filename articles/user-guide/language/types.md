@@ -1,40 +1,40 @@
 ---
-title: 型Q#
+title: 型 Q#
 description: プログラミング言語で使用されるさまざまな型について説明し Q# ます。
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b034af0b1d3b967b5680403341813407e4412f93
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c4a3e6563b8cabee87d1db6b9cb1c1f1c1a7131b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869598"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835827"
 ---
-# <a name="types-in-no-locq"></a>型Q#
+# <a name="types-in-no-locq"></a>型 Q#
 
-この記事では、 Q# 型モデルと、型を指定して操作するための構文について説明します。 これらの型の式を作成および操作する方法の詳細については、「[型式](xref:microsoft.quantum.guide.expressions)」を参照してください。
+この記事では、 Q# 型モデルと、型を指定して操作するための構文について説明します。 これらの型の式を作成および操作する方法の詳細については、「 [型式](xref:microsoft.quantum.guide.expressions)」を参照してください。
 
 Q#は*厳密に型指定*された言語であることに注意してください。これは、これらの型を慎重に使用することで、コンパイル時にプログラムに関して強力な保証を提供するのに役立ち Q# ます。
 最も強力な保証を提供するには、の型間の変換を、 Q# その変換を表す関数の呼び出しを使用して明示的に行う必要があります。 
-Q#には、名前空間の一部として、さまざまな関数が用意されて <xref:microsoft.quantum.convert> います。
+Q# には、名前空間の一部として、さまざまな関数が用意されて <xref:microsoft.quantum.convert> います。
 一方、互換性のある型へのアップキャストは暗黙的に行われます。 
 
-Q#には、直接使用されるプリミティブ型と、他の型から新しい型を生成するためのさまざまな方法が用意されています。
+Q# には、直接使用されるプリミティブ型と、他の型から新しい型を生成するためのさまざまな方法が用意されています。
 この記事の残りの部分では、それぞれについて説明します。
 
 ## <a name="primitive-types"></a>プリミティブ型
 
-言語には、 Q# 次の*プリミティブ型*が用意されています。これらはすべて、プログラムで直接使用でき Q# ます。 これらのプリミティブ型を使用して、新しい型を作成することもできます。
+言語には、 Q# 次の *プリミティブ型*が用意されています。これらはすべて、プログラムで直接使用でき Q# ます。 これらのプリミティブ型を使用して、新しい型を作成することもできます。
 
 - この `Int` 型は、64ビット符号付き整数 (、、など) を表し `2` `107` `-5` ます。
 - 型は、、、など、 `BigInt` 任意のサイズの符号付き整数を表し `2L` `107L` `-5L` ます。
-   この型は .NET に基づいています。<xref:System.Numerics.BigInteger>
+   この型は .NET に基づいています。 <xref:System.Numerics.BigInteger>
    型のパラメーターに変換されます。
 
 - 型は、、、など `Double` の倍精度浮動小数点数を表し `0.0` `-1.3` `4e-7` ます。
@@ -53,11 +53,11 @@ Q#には、直接使用されるプリミティブ型と、他の型から新し
    これは `PauliI` 、 `PauliX` `PauliY` `PauliZ` 型の定数である、、、およびの4つの値を持つ列挙型 `Pauli` です。
 - 型は、 `Result` 測定の結果を表します。
    これは、 `One` `Zero` 型の定数であるとの2つの値を持つ列挙 `Result` 型です。
-   `Zero`+ 1 eigenvalue が測定されたことを示します。`One`-1 eigenvalue が測定されたことを示します。
+   `Zero` + 1 eigenvalue が測定されたことを示します。 `One` -1 eigenvalue が測定されたことを示します。
 
 、、、、、、、およびの各定数 `true` `false` は、 `PauliI` `PauliX` `PauliY` `PauliZ` `One` `Zero` で予約されているすべての記号です Q# 。
 
-## <a name="array-types"></a>配列型
+## <a name="array-types"></a>配列の型
 
 * 有効な型について Q# は、その型の値の配列を表す型があります。
     たとえば、とは、 `Qubit[]` `(Bool, Pauli)[]` `Qubit` 値と組値の配列を表し `(Bool, Pauli)` ます。
@@ -65,15 +65,15 @@ Q#には、直接使用されるプリミティブ型と、他の型から新し
 * 配列の配列も有効です。 前の例を展開すると、配列の配列 `(Bool, Pauli)` が示され `(Bool, Pauli)[][]` ます。
 
 > [!NOTE] 
-> この例は、 `(Bool, Pauli)[][]` 四角形の2次元配列ではなく、配列のジャグ配列を表しています。 Q#は、四角形多次元配列をサポートしていません。
+> この例は、 `(Bool, Pauli)[][]` 四角形の2次元配列ではなく、配列のジャグ配列を表しています。 Q# は、四角形多次元配列をサポートしていません。
 
 * 配列の値は Q# 、のように、配列の要素を角かっこで囲むことによって、ソースコードで記述でき `[PauliI, PauliX, PauliY, PauliZ]` ます。
 配列内のすべての項目の共通基本型によって、配列リテラルの型が決定されます。 そのため、共通の基本型を持たない要素を含む配列を構築すると、エラーが発生します。  
-例については、「[呼び出し許容の配列](xref:microsoft.quantum.guide.expressions#arrays-of-callables)」を参照してください。
+例については、「 [呼び出し許容の配列](xref:microsoft.quantum.guide.expressions#arrays-of-callables)」を参照してください。
 
     > [!WARNING]
     > 作成された配列の要素は変更できません。
-    > 変更された配列を作成するには、[更新と再割り当てのステートメント](xref:microsoft.quantum.guide.variables#update-and-reassign-statements)、または[コピーと更新の式](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions)を使用します。
+    > 変更された配列を作成するには、 [更新と再割り当てのステートメント](xref:microsoft.quantum.guide.variables#update-and-reassign-statements) 、または [コピーと更新の式](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions)を使用します。
 
 * または、キーワードを使用して、配列のサイズから配列を作成することもでき `new` ます。
 
@@ -106,10 +106,10 @@ Q#には、直接使用されるプリミティブ型と、他の型から新し
 たとえば、 `(3, false)` は、型がタプル型であるタプルです `(Int, Bool)` 。
 組の配列、配列の組、サブタプルの組などを作成することもできます。
 
-* 0.3 の Q# 場合、 `Unit` は空のタプルの*型*の名前です。 `()` は空のタプルの*値*に使用されます。
+* 0.3 の Q# 場合、 `Unit` は空のタプルの *型* の名前です。 `()` は空のタプルの *値* に使用されます。
 
 * タプルインスタンスは変更できません。
-Q#には、作成されたタプルの内容を変更する機構が用意されていません。
+Q# には、作成されたタプルの内容を変更する機構が用意されていません。
 
 
 
@@ -126,7 +126,7 @@ Q#には、作成されたタプルの内容を変更する機構が用意され
 
 特に、これは、1つの引数を受け取るか、単一の値を返すとして、入力タプルまたは出力タプル型に1つのフィールドがある操作または関数を表示できることを意味します。
 
-このプロパティは、_シングルトンタプルの等価性_と呼ばれています。
+このプロパティは、 _シングルトンタプルの等価性_と呼ばれています。
 
 
 ## <a name="user-defined-types"></a>ユーザー定義型
@@ -155,10 +155,10 @@ newtype Complex = (Double, Double);
 ```
 このステートメントは、型の2つの匿名項目を持つ新しい型を作成し `Double` ます。   
 
-ユーザー定義型では、匿名項目以外に、バージョン0.7 以降の*名前付き項目*もサポートされ Q# ます。 たとえば、 `Re` 複素数の実数部と虚数部を表す double 型の項目に、という名前を指定でき `Im` ます。 
+ユーザー定義型では、匿名項目以外に、バージョン0.7 以降の *名前付き項目* もサポートされ Q# ます。 たとえば、 `Real` 複素数の実数部と虚数部を表す double 型の項目に、という名前を指定でき `Imag` ます。 
 
 ```qsharp
-newtype Complex = (Re : Double, Im : Double);
+newtype Complex = (Real : Double, Imag : Double);
 ```
 ユーザー定義型の1つの項目に名前を付けることは、すべての項目に名前を付ける必要があることを意味するわけではありません。名前付き項目と名前のない項目の任意の組み合わせがサポートされます。 さらに、内部項目にもという名前を付けることができます。
 次の例に示すように、型には `Nested` 基になる型があり、型 `(Double, (Int, String))` の項目だけ `Int` が名前付きで、他のすべての項目は匿名になります。 
@@ -167,22 +167,22 @@ newtype Complex = (Re : Double, Im : Double);
 newtype Nested = (Double, (ItemName : Int, String)); 
 ```
 
-名前付き項目には、*アクセス演算子*を使用して直接アクセスできるという利点があり `::` ます。 
+名前付き項目には、 *アクセス演算子*を使用して直接アクセスできるという利点があり `::` ます。 
 
 ```qsharp
 function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
-    return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
+    return Complex(c1::Real + c2::Real, c1::Imag + c2::Imag);
 }
 ```
 
 潜在的に複雑なタプル型の短いエイリアスを提供するだけでなく、そのような型を定義することの大きな利点は、特定の値の意図を文書化できることです。
-の例に戻る `Complex` と、ユーザー定義型として2d 極座標座標を定義することもできます。
+の例に戻ると `Complex` 、ユーザー定義型として極座標表現を定義することもできます。
 
 ```qsharp
-newtype Polar = (Radius : Double, Phase : Double);
+newtype ComplexPolar = (Magnitude : Double, Argument : Double);
 ```
 
-との両方に基になる型がある場合でも、 `Complex` `Polar` `(Double, Double)` 2 つの型は完全には互換性がないため Q# 、極座標を使用して複雑な数値演算関数を誤って呼び出した場合のリスクを最小限に抑えることができます。
+との両方に基になる型がある場合でも、 `Complex` `ComplexPolar` `(Double, Double)` 2 つの型は完全には互換性がないため Q# 、極座標を使用して複雑な数値演算関数を誤って呼び出した場合のリスクを最小限に抑えることができます。
 
 #### <a name="access-anonymous-items-with-the-unwrap-operator"></a>ラップ解除演算子を使用した匿名項目へのアクセス
 
@@ -226,7 +226,7 @@ let realUnit = Complex(1.0, 0.0);
 let imaginaryUnit = Complex(0.0, 1.0);
 ```
 
-または、[コピーと更新の式](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions)を使用して、既存の値から新しい値を作成することもできます。 配列の場合と同様に、コピーと更新の式では、指定した名前付き項目を除き、元の式のすべての項目値がコピーされます。 これらの例外の場合、これらの項目の値は、式の右辺に定義されている値になります。 配列項目に使用できるその他の言語構成要素 (たとえば、 [update および-再割り当てステートメント](xref:microsoft.quantum.guide.variables#update-and-reassign-statements)) は、ユーザー定義型の名前付き項目にも存在します。
+または、 [コピーと更新の式](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions)を使用して、既存の値から新しい値を作成することもできます。 配列の場合と同様に、コピーと更新の式では、指定した名前付き項目を除き、元の式のすべての項目値がコピーされます。 これらの例外の場合、これらの項目の値は、式の右辺に定義されている値になります。 配列項目に使用できるその他の言語構成要素 (たとえば、 [update および-再割り当てステートメント](xref:microsoft.quantum.guide.variables#update-and-reassign-statements)) は、ユーザー定義型の名前付き項目にも存在します。
 
 ```qsharp
 newtype ComplexArray = (Count : Int, Data : Complex[]);
@@ -259,10 +259,10 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 次の型 `'Tinput` が `'Tresult` あります。
 
-* `('Tinput => 'Tresult)`は、任意の*操作*の基本型です。たとえば、のように `((Qubit, Pauli) => Result)` なります。
-* `('Tinput -> 'Tresult)`は、任意の*関数*の基本型です。たとえば、のように `(Int -> Int)` なります。 
+* `('Tinput => 'Tresult)` は、任意の *操作*の基本型です。たとえば、のように `((Qubit, Pauli) => Result)` なります。
+* `('Tinput -> 'Tresult)` は、任意の *関数*の基本型です。たとえば、のように `(Int -> Int)` なります。 
 
-これらは呼び出し可能の*シグネチャ*と呼ばれます。
+これらは呼び出し可能の *シグネチャ* と呼ばれます。
 
 * すべて Q# の呼び出しが、1つの値を入力として受け取り、1つの値を出力として返します。
 * 入力値と出力値の両方に組を使用できます。
@@ -271,9 +271,9 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 ### <a name="functors"></a>ファンクター
 
-*関数*型は、シグネチャによって完全に指定されます。 たとえば、角度のサインを計算する関数には型があり `(Double -> Double)` ます。 
+*関数* 型は、シグネチャによって完全に指定されます。 たとえば、角度のサインを計算する関数には型があり `(Double -> Double)` ます。 
 
-*操作に*は、操作の種類の一部として表現されるいくつかの追加の特性があります。 このような特性*には、操作でサポート*される機能に関する情報が含まれます。
+*操作に* は、操作の種類の一部として表現されるいくつかの追加の特性があります。 このような特性 *には、操作でサポート* される機能に関する情報が含まれます。
 たとえば、操作の実行が他の qubits の状態に依存している場合は、ファンクタをサポートする必要があり `Controlled` ます。操作に逆のがある場合は、ファンクタをサポートする必要があり `Adjoint` ます。
 
 > [!NOTE]
@@ -288,7 +288,7 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 ### <a name="type-parameterized-functions-and-operations"></a>型パラメーターの関数と操作
 
-呼び出し可能な型には、*型パラメーター*を含めることができます。
+呼び出し可能な型には、 *型パラメーター*を含めることができます。
 1つの引用符で始まる記号を使用して、型パラメーターを指定します。たとえば、 `'A` は有効な型パラメーターです。
 型パラメーター化された呼び出しを定義する方法の詳細と詳細については、「 [」の Q# 「操作と関数](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)」を参照してください。
 
@@ -298,7 +298,7 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 型パラメーターの呼び出し可能な呼び出しを呼び出す場合は、同じ型パラメーターを持つすべての引数が同じ型である必要があります。
 
-Q#には、ユーザーが型パラメーターの代わりに使用できる型を制約する機構が用意されていません。
+Q# には、ユーザーが型パラメーターの代わりに使用できる型を制約する機構が用意されていません。
 
 ## <a name="next-steps"></a>次のステップ
 

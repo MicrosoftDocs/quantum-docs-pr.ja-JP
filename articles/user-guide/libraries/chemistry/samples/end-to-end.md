@@ -2,18 +2,18 @@
 title: NWChem クォンタムプログラムのサンプル
 description: NWChem 入力デッキを使用して、量子化学シミュレーションのゲート数を取得する例を紹介します。
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 986ff2c2ff144c57bd01ddeea0467d0168fd9334
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759717"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835759"
 ---
 # <a name="end-to-end-with-nwchem"></a>NWChem を使用したエンド ツー エンド #
 
@@ -47,13 +47,13 @@ Import-Module InvokeNWChem.psm1
 
 > [!NOTE]
 > 既定では、Windows によって、すべてのスクリプトまたはモジュールの実行がセキュリティ対策として禁止されます。
-> などのモジュールを Windows で実行できるようにするには `Invoke-NWChem.psm1` 、実行ポリシーの変更が必要になることがあります。
+> などのモジュールを Windows で実行できるようにするには、 `Invoke-NWChem.psm1` ポリシーの変更が必要になることがあります。
 > これを行うには、次のコマンドを実行し `Set-ExecutionPolicy` ます。
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope Process
 > ```
-> PowerShell を終了すると、実行ポリシーが元に戻されます。
-> 実行ポリシーを保存する場合は、次のように別の値を使用し `-Scope` ます。
+> PowerShell を終了すると、ポリシーは元に戻ります。
+> ポリシーを保存する場合は、次のように別の値を使用し `-Scope` ます。
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 > ```

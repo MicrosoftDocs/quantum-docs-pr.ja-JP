@@ -2,19 +2,19 @@
 title: の操作と関数 Q#
 description: 操作と関数を定義して呼び出す方法、および制御される操作と adjoint 操作の特殊化。
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c2ce999ea2a0fe7204f402fedb4cd3a3c15bd44b
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759426"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833481"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>の操作と関数 Q#
 
@@ -73,9 +73,7 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 の多くの操作の場合と同様に、操作が1つの処理を実装する場合は、 Q# *adjointed* または *制御*されたときに操作がどのように動作するかを定義できます。 操作の *adjoint* 特殊化では、操作の "逆" の動作を指定します。一方、 *制御* された特殊化では、そのアプリケーションが特定のクォンタムレジスタの状態に条件を適用する場合の操作方法を指定します。
 
-クォンタム操作の adjoints は、クォンタムコンピューティングの多くの側面にとって非常に重要です。 役に立つプログラミング手法と共に説明されているこのような状況の例につい Q# ては、この記事の [活用](#conjugations) を参照してください。 
-
-操作の制御されたバージョンは、すべてのコントロール qubits が指定された状態にある場合にのみ、基本操作を効果的に適用する新しい操作です。
+クォンタム操作の adjoints は、クォンタムコンピューティングの多くの側面にとって非常に重要です。 役に立つプログラミング手法と共に説明するこのような状況の例につい Q# ては、「 [制御フロー: 活用](xref:microsoft.quantum.guide.controlflow#conjugations)」を参照してください。 操作の制御されたバージョンは、すべてのコントロール qubits が指定された状態にある場合にのみ、基本操作を効果的に適用する新しい操作です。
 コントロール qubits が法則内にある場合、基本操作は一貫の適切な部分に適用されます。
 したがって、制御された操作は、多くの場合、entangを生成するために使用されます。
 
@@ -364,46 +362,6 @@ function ConjugateUnitaryWith(
 
 ユーザー定義型は、サブタイプとしてではなく、基になる型のラップされたバージョンとして扱われます。
 これは、基になる型の値がであると予想される場合に、ユーザー定義型の値が使用できないことを意味します。
-
-
-### <a name="conjugations"></a>活用
-
-従来のビットとは対照的に、qubits を再設定すると、qubits の差が大きくなっても残りの計算には望ましくない影響が生じる可能性があるため、量子メモリの解放は若干複雑になります。 これらの効果は、メモリを解放する前に、実行された計算を適切に "元に戻す" ことで回避できます。 クォンタムコンピューティングの一般的なパターンは次のようになります。 
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    outerOperation(target);
-    innerOperation(target);
-    Adjoint outerOperation(target);
-}
-```
-
-0.9 リリース以降、では、 Q# 前の変換を実装する活用形ステートメントがサポートされています。 このステートメントを使用すると、 `ApplyWith` 次のように操作を実装できます。
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    within{ 
-        outerOperation(target);
-    }
-    apply {
-        innerOperation(target);
-    }
-}
-```
-このような活用形ステートメントは、外部および内部の変換を操作として簡単に利用できなくても、複数のステートメントで構成されるブロックで記述する方が便利な場合に、はるかに便利になります。 
-
-内部ブロックで定義されているステートメントの逆変換は、コンパイラによって自動的に生成され、適用ブロックの完了後に実行されます。
-内部ブロックの一部として使用される変更可能な変数は、適用ブロックで再バインドできないため、生成された変換は、ブロック内の計算の adjoint であることが保証されます。 
 
 
 ## <a name="defining-new-functions"></a>新しい関数の定義

@@ -1,26 +1,26 @@
 ---
 title: プリミティブ操作カウンター-Quantum 開発キット
-description: Microsoft QDK プリミティブ操作カウンターについて説明します。このカウンターは、クォンタムトレースシミュレーターを使用して、プログラム内の操作によって使用されるプリミティブ実行を追跡し Q# ます。
+description: Microsoft QDK プリミティブ操作カウンターについて説明します。このカウンターは、クォンタムトレースシミュレーターを使用して、プログラム内の操作によって使用されるプリミティブプロセスを追跡し Q# ます。
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ceb70cef6dc0a4530b992b5a529248a8b283c17f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8ee9ce25e680112e2f3c68d82ae9267c1b0fb355
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868238"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835980"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>クォンタムトレースシミュレーター: プリミティブ操作カウンター
 
-プリミティブ操作カウンターは、Quantum Development Kit[クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の一部です。 クォンタムプログラムで呼び出されたすべての操作で使用されるプリミティブ実行の数をカウントします。 
+プリミティブ操作カウンターは、Quantum Development Kit [クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の一部です。 クォンタムプログラムで呼び出されたすべての操作によって使用されるプリミティブプロセスの数をカウントします。 
 
-すべて <xref:microsoft.quantum.intrinsic> の操作は、単一の qubit 回転、T 演算、単一の Qubit Clifford 操作、CNOT 操作、およびマルチ Qubit pobservable li の測定値で表現されます。 プリミティブ操作カウンターは、操作の[呼び出しグラフ](https://en.wikipedia.org/wiki/Call_graph)のすべての端に対する統計を集計して収集します。
+すべて <xref:microsoft.quantum.intrinsic> の操作は、単一の qubit 回転、T 演算、単一の Qubit Clifford 操作、CNOT 操作、およびマルチ Qubit pobservable li の測定値で表現されます。 プリミティブ操作カウンターは、操作の [呼び出しグラフ](https://en.wikipedia.org/wiki/Call_graph)のすべての端に対する統計を集計して収集します。
 
 ## <a name="invoking-the-primitive-operation-counter"></a>プリミティブ操作カウンターを呼び出しています
 
@@ -77,7 +77,7 @@ string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter]
 
 ## <a name="see-also"></a>関連項目
 
-- Quantum Development Kit[クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の概要。
+- Quantum Development Kit [クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro) の概要。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API リファレンス。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>API リファレンス。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.PrimitiveOperationsGroupsNames>API リファレンス。

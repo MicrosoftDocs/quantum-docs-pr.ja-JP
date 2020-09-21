@@ -1,20 +1,20 @@
 ---
 title: 電子システムの Quantum モデル
 description: クォンタムモデリングを使用して分子の電子システムをシミュレートする方法について説明します。
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantummodels
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f6b652ef3e315ded5b4e39fd65a2f6be7070d7fa
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4ff3d11bfd4dae5489fc4b7efe4da4ccda00882f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869479"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833923"
 ---
 # <a name="quantum-models-for-electronic-systems"></a>電子システムの Quantum モデル
 
@@ -36,7 +36,7 @@ $E ^ {-i\ hat {H} t} $ のためのユニタリ行列表現を構築するには
 
 使用できる適切なベースは多数あります。また、問題に対応するための適切な基準を選択することは、多くの場合、量子化学の最先端です。
 おそらく、最も単純な基本的なセットは、hydrogen に似たアトムの Schrödinger 式 ($ \hat{H} $ の eigenfunctions) に対する (orthogonalized) ソリューションであるということです。
-平面や実数など、その他の基準セットを使用することもできます。詳細については、通常のテキスト[「分子の電子構造理論」](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572)を参照してください。
+平面や実数など、その他の基準セットを使用することもできます。詳細については、通常のテキスト [「分子の電子構造理論」](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) を参照してください。
 
 上記のモデルで使用されている状態は任意であるように見えますが、量子化メカニズムによって、自然な状態になる場合があります。
 特に、すべての有効な電子 quantum の状態は、電子ラベルの交換の下で対称である必要があります。

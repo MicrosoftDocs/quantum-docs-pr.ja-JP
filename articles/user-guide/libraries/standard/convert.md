@@ -3,21 +3,21 @@ title: 標準ライブラリでの型変換 Q#
 description: 標準ライブラリの一般的な型変換関数とユーザー定義型変換関数について説明し Q# ます。
 author: cgranade
 uid: microsoft.quantum.libraries.convert
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2319bf453f5fbf6bd068859ea65562423d3ff4d0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: aa8a1ad624067906998d2735c7a95174a163ce97
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868517"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835606"
 ---
 # <a name="type-conversions"></a>型変換 #
 
-Q#は、**厳密に型指定**された言語です。
+Q# は、 **厳密に型指定** された言語です。
 特に、 Q# は、個別の型の間で暗黙的にキャストされません。 たとえば、 `1 + 2.0` は有効な式ではありません Q# 。
 では、には、 Q# 指定された型の新しい値を構築するためのさまざまな型変換関数が用意されています。
 

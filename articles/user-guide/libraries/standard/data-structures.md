@@ -3,18 +3,18 @@ title: 標準ライブラリのデータ構造 Q#
 description: Microsoft 標準ライブラリのデータ構造、oracles、dynamical ジェネレーターについて説明し Q# ます。
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868522"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835589"
 ---
 # <a name="data-structures-and-modeling"></a>データ構造とモデリング #
 
@@ -71,14 +71,14 @@ ApplyToEach(
 
 ## <a name="oracles"></a>Oracles ##
 
-フェーズの[推定](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm)と[振幅増幅](https://en.wikipedia.org/wiki/Amplitude_amplification)の資料では、oracle の概念が頻繁に表示されます。
+フェーズの [推定](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) と [振幅増幅](https://en.wikipedia.org/wiki/Amplitude_amplification) の資料では、oracle の概念が頻繁に表示されます。
 ここで、oracle という用語は、qubits のセットに対して動作し、その回答をフェーズとして返すブラックボックスクォンタムサブルーチンを指します。
 多くの場合、このサブルーチンは、他のいくつかのパラメーターに加えて oracle を受け入れるクォンタムアルゴリズムへの入力と考えることができます。また、一連のクォンタム操作を適用し、このクォンタムサブルーチンの呼び出しを基本的なゲートと同様に処理します。
 当然ながら、より大きなアルゴリズムを実際に実装するためには、oracle の根本的な分解を基本的なゲートに提供する必要がありますが、このような分解は、oracle を呼び出すアルゴリズムを理解するためには必要ありません。
 では Q# 、この抽象化は、操作がファーストクラスの値であることによって表されます。これにより、操作を、ブラックボックス方式でクォンタムアルゴリズムの実装に渡すことができます。
 さらに、ユーザー定義型を使用して、さまざまな oracle 表現をタイプセーフな方法でラベル付けすることで、さまざまな種類のブラックボックス操作を誤って混同ことが困難になります。
 
-このような oracles は、 [Grover の検索](https://en.wikipedia.org/wiki/Grover%27s_algorithm)やクォンタムシミュレーションアルゴリズムなどの有名な例を含む、さまざまなコンテキストで表示されます。
+このような oracles は、 [Grover の検索](https://en.wikipedia.org/wiki/Grover%27s_algorithm) やクォンタムシミュレーションアルゴリズムなどの有名な例を含む、さまざまなコンテキストで表示されます。
 ここでは、振幅増幅とフェーズ推定の2つのアプリケーションに必要な oracles に焦点を当てています。
 最初に、振幅増幅の oracles について説明してから、フェーズの推定に進みます。
 
@@ -160,8 +160,8 @@ is Adj + Ctl {
 
 > [!TIP]
 > これらのサンプルでは、次に示す oracle の両方の型について説明します。
-> 連続クエリ oracles の詳細については、 [ **PhaseEstimation**サンプル](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation)を参照してください。
-> 離散クエリ oracles の詳細については、 [ **IsingPhaseEstimation**サンプル](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)を参照してください。
+> 連続クエリ oracles の詳細については、 [ **PhaseEstimation**サンプル](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation)を参照してください。
+> 離散クエリ oracles の詳細については、 [ **IsingPhaseEstimation**サンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)を参照してください。
 
 Oracle の最初の種類は、個別のクエリとして oracle を呼び出し、ユーザー定義型で表現します。単に、1つのインテキスト <xref:microsoft.quantum.oracles.discreteoracle> 行列を使用します。
 $U $ が、推定する値を持つユニタリの場合、$U $ の oracle は $U $ を実装するサブルーチンの単なるスタンドアロンです。
@@ -211,8 +211,8 @@ $ $ \begin{align} U (t) & = \ left (e ^ {-iH \_ 0 t/r} e ^ {-ih \_ 1 t/r} \ cド
 Dynamical generator モデリングライブラリは、単純なジェネレーターの観点から、複雑なジェネレーターを体系的にエンコードするためのフレームワークを提供します。 そのような説明は、シミュレーションライブラリなどに渡すことによって、選択したシミュレーションアルゴリズムによって時間の進化を実装し、多くの詳細情報が自動的に処理されるようにすることができます。
 
 > [!TIP]
-> 以下で説明する dynamical generator ライブラリについては、「」のサンプルを参照してください。 整理モデルに基づく例については、「 [ **isinggenerators**のサンプル](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators)」を参照してください。
-> 分子 Hydrogen に基づく例については、 [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line)と[**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui)のサンプルを参照してください。
+> 以下で説明する dynamical generator ライブラリについては、「」のサンプルを参照してください。 整理モデルに基づく例については、「 [ **isinggenerators**のサンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators)」を参照してください。
+> 分子 Hydrogen に基づく例については、 [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) と [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui) のサンプルを参照してください。
 
 ### <a name="complete-description-of-a-generator"></a>ジェネレーターの完全な説明 ###
 

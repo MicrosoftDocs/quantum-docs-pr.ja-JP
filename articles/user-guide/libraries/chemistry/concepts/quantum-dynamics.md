@@ -1,24 +1,24 @@
 ---
 title: クォンタム Dynamics
 description: Quantum dynamics とクラシック dynamics の類似点と相違点について説明します。
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantumdynamics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e63ec497f2a7747e172d5fbdc249fe4064c482b6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: fb54416ecdc38ea90999f33cb673c2c9e4c5f8d7
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869496"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833873"
 ---
 # <a name="quantum-dynamics"></a>クォンタム Dynamics
 
-多くの場合、量子力学は、クォンタムの初期状態 $ \ket{\psi (0)} $ が時間の経過と共にどのように変化するかを理解することを目指しています (Dirac 表記の詳細については、「クォンタムコンピューティングに関する[概念ドキュメント](xref:microsoft.quantum.concepts.dirac)」を参照してください)。
+多くの場合、量子力学は、クォンタムの初期状態 $ \ket{\psi (0)} $ が時間の経過と共にどのように変化するかを理解することを目指しています (Dirac 表記の詳細については、「クォンタムコンピューティングに関する [概念ドキュメント](xref:microsoft.quantum.concepts.dirac) 」を参照してください)。
 具体的には、この初期状態では、クォンタム状態、進化時間、およびクォンタム dynamical システムの仕様により、クォンタム状態 $ \ket{\psi (t)} $ が検索されます。
 量子力学の説明に進む前に、前の手順を実行して古典的な dynamics について考えることをお勧めします。これは、量子力学が従来の dynamics とどのように異なるのかについての洞察を提供するためです。
 
@@ -34,7 +34,7 @@ Hamiltonian 力学では、システムの総エネルギーおよび (一般化
 具体的には、$f (x, p, t) $ は、システムの $ と momenta $p $ $x の一般化された位置のいくつかの関数であり、$H (x, p, t) $ を Hamiltonian 関数にします。
 たとえば、$f (x, p, t) = x (t) $ および $H (x, p, t) = p ^ 2 (t)/2m-V (x, t) $ を取得した場合、上記の例の Newtonian dynamics が復旧されます。
 一般性では、\begin{align} \frac{d}{dt} f &= \ partial_t f-(\ partial_x H \ partial_p f + \ partial_p H \ partial_x f) \\ \\ & \ defeq \ partial_t f + \\ {f, h \\ } です。
-ここ $ \\ {f, H \\ } $ は、\end{align} を定義するときに中心的な役割を果たすことがあるため、随所は[ポアソンかっこ](https://en.wikipedia.org/wiki/Poisson_bracket)と呼ばれ、クラシック dynamics ではが表示されます。
+ここ $ \\ {f, H \\ } $ は、\end{align} を定義するときに中心的な役割を果たすことがあるため、随所は [ポアソンかっこ](https://en.wikipedia.org/wiki/Poisson_bracket) と呼ばれ、クラシック dynamics ではが表示されます。
 
 クォンタム dynamics は、まったく同じ言語で記述できます。
 Hamiltonian (または総エネルギー) によって、すべての閉鎖された量子システムの力学が完全に指定されます。
@@ -43,7 +43,7 @@ Hamiltonian (または総エネルギー) によって、すべての閉鎖さ�
 実際には、commute のようなものではありません。 \n e px $ $xp ます。
 
 これらの非通勤オブジェクトを記述するための適切な数学的概念は演算子です。これは $x $ と $p $ が、マトリックスの概念と一致する個別の値セットだけを受け取ることができる場合に使用します。
-したがって、わかりやすくするために、quantum システムは有限で、[ベクターとマトリックス](xref:microsoft.quantum.concepts.vectors)を使用して記述できると想定しています。
+したがって、わかりやすくするために、quantum システムは有限で、 [ベクターとマトリックス](xref:microsoft.quantum.concepts.vectors)を使用して記述できると想定しています。
 さらに、これらのマトリックスを Hermitian する必要があります (つまり、マトリックスの共役転置が元のマトリックスと同じであることを意味します)。
 これにより、マトリックスの固有値が実際の値であることが保証されます。架空の数値が返されないというような数量を測定する場合に、この条件が適用されることを保証します。
 

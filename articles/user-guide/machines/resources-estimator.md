@@ -2,19 +2,19 @@
 title: クォンタムリソースの推定-Quantum 開発キット
 description: クォンタムコンピューターで特定の操作のインスタンスを実行するために必要なリソースを推定する、Microsoft QDK リソースの推定機能について説明し Q# ます。
 author: anpaz-msft
-ms.author: anpaz@microsoft.com
+ms.author: anpaz
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1892431c3e332385a5bcefa357eb64a9fac3f381
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992243"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835929"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Quantum Development Kit (QDK) リソースの推定機能
 

@@ -2,19 +2,19 @@
 title: テストとデバッグ
 description: 単体テスト、ファクトとアサーション、およびダンプ関数を使用して、クォンタムプログラムをテストおよびデバッグする方法について説明します。
 author: tcNickolas
-ms.author: mamykhai@microsoft.com
+ms.author: mamykhai
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2b5276da594ba263177d435c1153f6d96e29c4e8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 2f2181d388a59c1c6c5a0f13c9aa49d5fa1e51ae
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867915"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833168"
 ---
 # <a name="testing-and-debugging"></a>テストとデバッグ
 
@@ -23,10 +23,10 @@ ms.locfileid: "87867915"
 
 ## <a name="unit-tests"></a>単体テスト
 
-従来のプログラムをテストする一般的な方法の1つは、*単体テスト*と呼ばれる小さなプログラムを作成することです。これにより、ライブラリでコードを実行し、出力を予想される出力と比較します。
-たとえば、 `Square(2)` `4` $ 2 ^ 2 = $4 の*priori*がわかっているため、がを返すようにすることができます。
+従来のプログラムをテストする一般的な方法の1つは、 *単体テスト*と呼ばれる小さなプログラムを作成することです。これにより、ライブラリでコードを実行し、出力を予想される出力と比較します。
+たとえば、 `Square(2)` `4` $ 2 ^ 2 = $4 の *priori* がわかっているため、がを返すようにすることができます。
 
-Q#は、クォンタムプログラムの単体テストの作成をサポートしています。これは、 [Xunit](https://xunit.github.io/)単体テストフレームワーク内でテストとして実行できます。
+Q# は、クォンタムプログラムの単体テストの作成をサポートしています。これは、 [Xunit](https://xunit.github.io/) 単体テストフレームワーク内でテストとして実行できます。
 
 ### <a name="creating-a-test-project"></a>テストプロジェクトの作成
 
@@ -75,13 +75,13 @@ Q#型の引数を受け取り、を返すすべての操作または関数は `U
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-ソリューションごとの1回限りの設定として、[**テスト**] メニューの [テストの設定] を選択し、[**既定のプロセッサアーキテクチャ > X64 >** ます。
+ソリューションごとの1回限りの設定として、[ **テスト** ] メニューの [テストの設定] を選択し、[ **既定のプロセッサアーキテクチャ > X64 >** ます。
 
 > [!TIP]
 > Visual Studio の既定のプロセッサアーキテクチャ設定は、各ソリューションのソリューションオプション () ファイルに格納され `.suo` ます。
-> このファイルを削除する場合は、プロセッサアーキテクチャとして**X64**を選択する必要があります。
+> このファイルを削除する場合は、プロセッサアーキテクチャとして **X64** を選択する必要があります。
 
-プロジェクトをビルドし、[**テスト**] メニューを開き、[ **Windows > テストエクスプローラー**] を選択します。 **Allocatequbit**は、[**テストを実行しない**] グループのテストの一覧に表示されます。 [**すべて実行**] を選択するか、この個々のテストを実行します。
+プロジェクトをビルドし、[ **テスト** ] メニューを開き、[ **Windows > テストエクスプローラー**] を選択します。 **Allocatequbit** は、[ **テストを実行しない** ] グループのテストの一覧に表示されます。 [ **すべて実行** ] を選択するか、この個々のテストを実行します。
 
 #### <a name="command-line--visual-studio-code"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
 
@@ -127,7 +127,7 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-テストエクスプローラーでテストを実行し、テストをクリックすると、テストの実行に関する情報がパネルに表示されます (成功/失敗の状態、経過時間、および出力へのリンク)。 [**出力**] をクリックして、新しいウィンドウでテスト出力を開きます。
+テストエクスプローラーでテストを実行し、テストをクリックすると、テストの実行に関する情報がパネルに表示されます (成功/失敗の状態、経過時間、および出力へのリンク)。 [ **出力** ] をクリックして、新しいウィンドウでテスト出力を開きます。
 
 ![テスト出力](~/media/unit-test-output.png)
 
@@ -140,7 +140,7 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 ## <a name="facts-and-assertions"></a>ファクトとアサーション
 
-の関数には Q# _論理的_な副作用がないため、プログラム内から、 Q# 出力の種類が空のタプルである関数の実行によって他の種類の影響が発生しないようにすることはできません `()` 。
+の関数には Q# _論理的_ な副作用がないため、プログラム内から、 Q# 出力の種類が空のタプルである関数の実行によって他の種類の影響が発生しないようにすることはできません `()` 。
 つまり、ターゲットコンピューターは、この省略によって `()` 次のコードの動作が変更されないことを保証して、が返す関数を実行しないことを選択でき Q# ます。
 この動作により `()` 、関数 (など `Unit` ) が、アサーションの埋め込みとプログラムへのデバッグロジックに便利なツールとして返さ Q# れます。 
 
@@ -181,7 +181,7 @@ operation AssertQubitsAreAvailable() : Unit
 ただし、そのグローバル状態を使用し `Bool` て、関数への入力として単純な値を生成することができ `Fact` ます。
 
 これらのアイデアを基にして構築さ[れた準備は](xref:microsoft.quantum.libraries.standard.prelude)、2つの便利なアサーションを提供 <xref:microsoft.quantum.diagnostics.assertmeasurement> し、 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 両方とも操作としてモデル化されて `()` います。 これらのアサーションは、特定の対象測定、測定が実行されるクォンタムレジスタ、および仮定の結果を記述する P# li オペレーターを受け取ります。
-シミュレーションによって動作するターゲットコンピューターは、[複製なしの定理](https://en.wikipedia.org/wiki/No-cloning_theorem)によってバインドされないため、このようなアサーションに合格するレジスタに支障をきたすことなく、このような測定を実行できます。
+シミュレーションによって動作するターゲットコンピューターは、 [複製なしの定理](https://en.wikipedia.org/wiki/No-cloning_theorem)によってバインドされないため、このようなアサーションに合格するレジスタに支障をきたすことなく、このような測定を実行できます。
 次に、シミュレーターは、前の関数と同様に、 `PositivityFact` 仮定の結果が実際に観測されていない場合に計算を停止できます。
 
 ```qsharp
@@ -205,7 +205,7 @@ using (register = Qubit())
 
 ### <a name="dumpmachine"></a>DumpMachine
 
-Quantum 開発キットの一部として配布された完全な状態のクォンタムシミュレーターは、クォンタムシステム全体の[wave 関数](https://en.wikipedia.org/wiki/Wave_function)を、1次元の複素数の配列としてファイルに書き込みます。各要素は、コンピューティングベースの状態を測定する確率の振幅 ($ \ket{n} = \ket{b_ {n-1}...) を表します。b_1b_0} $ (bits $ \{ b_i $ の場合) \} 。 たとえば、2つの qubits のみが割り当てられ、クォンタム状態が $ $ \begin{align} \ket{\psi} = \ frac {1} {\ sqrt {2} } \ket {00} -\frac{(1 + i)} \ket であるコンピューターでは、 {2} {10} \end{align} $ $ を呼び出すと、次の出力が生成され <xref:microsoft.quantum.diagnostics.dumpmachine> ます。
+Quantum 開発キットの一部として配布された完全な状態のクォンタムシミュレーターは、クォンタムシステム全体の [wave 関数](https://en.wikipedia.org/wiki/Wave_function) を、1次元の複素数の配列としてファイルに書き込みます。各要素は、コンピューティングベースの状態を測定する確率の振幅 ($ \ket{n} = \ket{b_ {n-1}...) を表します。b_1b_0} $ (bits $ \{ b_i $ の場合) \} 。 たとえば、2つの qubits のみが割り当てられ、クォンタム状態が $ $ \begin{align} \ket{\psi} = \ frac {1} {\ sqrt {2} } \ket {00} -\frac{(1 + i)} \ket であるコンピューターでは、 {2} {10} \end{align} $ $ を呼び出すと、次の出力が生成され <xref:microsoft.quantum.diagnostics.dumpmachine> ます。
 
 ```
 # wave function for qubits with ids (least to most significant): 0;1
@@ -333,7 +333,7 @@ namespace Samples {
 
 ### <a name="dumpregister"></a>DumpRegister
 
-<xref:microsoft.quantum.diagnostics.dumpregister>はと同じように動作し <xref:microsoft.quantum.diagnostics.dumpmachine> ますが、情報の量を対応する qubits に限定するために、qubits の配列も取得する点が異なります。
+<xref:microsoft.quantum.diagnostics.dumpregister> はと同じように動作し <xref:microsoft.quantum.diagnostics.dumpmachine> ますが、情報の量を対応する qubits に限定するために、qubits の配列も取得する点が異なります。
 
 と同様に <xref:microsoft.quantum.diagnostics.dumpmachine> 、によって生成される情報は <xref:microsoft.quantum.diagnostics.dumpregister> ターゲットコンピューターによって異なります。 完全な状態のクォンタムシミュレーターでは、と同じ形式で指定された qubits によって生成されるクォンタムサブシステムのグローバルフェーズまで、wave 関数がファイルに書き込まれ <xref:microsoft.quantum.diagnostics.dumpmachine> ます。  たとえば、2つの qubits のみが割り当てられ、クォンタム状態が $ $ \begin{align} \ket{\psi} = \ frac {1} {\ sqrt {2} } \ket {00} -\frac{(1 + i)} \ket =-e ^ {であるマシンをもう一度実行します。 {2} {10} -i \ pi/4} ((\ frac {1} {\ sqrt {2} } \ket {0} -\frac{(1 + i)} {2} \ket {1} ) \ otimes \frac{-(1 + i)} {\ sqrt {2} } \ket {0} )、\end{align} $ $ を呼び出すと <xref:microsoft.quantum.diagnostics.dumpregister> 、次の出力が生成され `qubit[0]` ます。
 
@@ -384,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a>デバッグ
 
-`Assert`およびの `Dump` 関数と操作の上で、は、 Q# 標準の Visual Studio デバッグ機能のサブセットをサポートしています。[行ブレークポイントの設定](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)、 [F10 を使用したコードのステップ](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)実行、および[クラシック変数の値の検査](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)は、シミュレーターでのコードの実行中に可能です。
+`Assert`およびの `Dump` 関数と操作の上で、は、 Q# 標準の Visual Studio デバッグ機能のサブセットをサポートしています。[行ブレークポイントの設定](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)、 [F10 を使用したコードのステップ](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)実行、および[クラシック変数の値の検査](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)は、シミュレーターでコードを実行するときにすべて可能です。
 
-Visual Studio Code でのデバッグでは、OmniSharp によって強化された Visual Studio Code 拡張機能のために C# によって提供されるデバッグ機能を利用し、[最新バージョン](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)をインストールする必要があります。 
+Visual Studio Code でのデバッグでは、OmniSharp によって強化された Visual Studio Code 拡張機能のために C# によって提供されるデバッグ機能を利用し、 [最新バージョン](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)をインストールする必要があります。 

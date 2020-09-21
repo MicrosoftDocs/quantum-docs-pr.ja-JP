@@ -1,24 +1,24 @@
 ---
 title: 量子ビットの操作
-description: 説明の入力
+description: での qubits の使用について説明します。 Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6808a852ee0de7d3a38ea44e9637eeaa6bea382a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: aa942a61280553ae4e51cd5ddcc85c0df935dab1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867864"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835861"
 ---
 # <a name="working-with-qubits"></a>量子ビットの操作
 
-Qubits は、クォンタムコンピューティングにおける情報の基本的なオブジェクトです。 Qubits の概要については、「[クォンタムコンピューティングについ](xref:microsoft.quantum.overview.understanding)て」を参照してください。また、数学表現の詳細については、「 [qubits](xref:microsoft.quantum.concepts.qubit)」を参照してください。 
+Qubits は、クォンタムコンピューティングにおける情報の基本的なオブジェクトです。 Qubits の概要については、「 [クォンタムコンピューティングについ](xref:microsoft.quantum.overview.understanding)て」を参照してください。また、数学表現の詳細については、「 [qubits](xref:microsoft.quantum.concepts.qubit)」を参照してください。 
 
 この記事では、プログラムで qubits を使用して操作する方法について説明し Q# ます。 
 
@@ -28,18 +28,18 @@ Qubits は、クォンタムコンピューティングにおける情報の基�
 ## <a name="allocating-qubits"></a>割り当て (Qubits を)
 
 物理 qubits は、quantum コンピューターの貴重なリソースであるため、コンパイラのジョブの一部として、それらが可能な限り効率的に使用されていることを確認する必要があります。
-そのため、 Q# 特定のステートメントブロック内で使用するには、qubits を*割り当てる*必要があります。
-Qubits を1つの qubits として割り当てることも、*レジスタ*と呼ばれる qubits の配列として割り当てることもできます。 
+そのため、 Q# 特定のステートメントブロック内で使用するには、qubits を *割り当てる* 必要があります。
+Qubits を1つの qubits として割り当てることも、 *レジスタ*と呼ばれる qubits の配列として割り当てることもできます。 
 
 ### <a name="clean-qubits"></a>Clean qubits
 
 ステートメントを使用して、 `using` ステートメントブロック中に使用する新しい qubits を割り当てます。
 
 ステートメントは、キーワードと、 `using` その後にかっこで囲まれたバインディング `( )` と、qubits が使用可能なステートメントブロックで構成されます。
-バインディングは、ステートメントと同じパターンに従い `let` ます。1つの記号または記号の組、等号 (= `=` )、1つの値、または*初期化子*の一致するタプルのいずれかです。
+バインディングは、ステートメントと同じパターンに従い `let` ます。1つの記号または記号の組、等号 (= `=` )、1つの値、または *初期化子*の一致するタプルのいずれかです。
 
 初期化子は、として指定された1つの qubit、 `Qubit()` または qubit の配列 (は式) に対して使用でき `Qubit[n]` `n` `Int` ます。
-たとえば、
+たとえば、次のように入力します。
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -68,7 +68,7 @@ using ((auxiliary, register) = (Qubit(), Qubit[5])) {
 これらの状態は不明であるため、クォンタムコンピューターのメモリの他の部分との間でも、これらは "ダーティな" qubits と呼ばれることがよくあります。
 
 バインディングは、ステートメントと同じパターンおよび規則に従い `using` ます。
-たとえば、
+たとえば、次のように入力します。
 ```qsharp
 borrowing (qubit = Qubit()) {
     // ...
@@ -85,7 +85,7 @@ Qubits を借りている場合、システムはまず、使用中であるが�
 このような qubits が不足している場合は、新しい qubits を割り当てて要求を完了します。
 
 ダーティ qubits の既知のユースケースの中では、incrementers の少数の qubits と実装のみを必要とする、マルチ制御の CNOT ゲートの実装があります。
-での使用例につい Q# ては、この記事の「[貸し出し Qubits の例](#borrowing-qubits-example)」を参照するか、 [*2n + 2 qubits と Toffoli ベースのモジュール乗算 (Based*](https://arxiv.org/abs/1611.07995) 、roetteler、および svore 2017) を使用して、借り qubits を利用するアルゴリズムを確認してください。
+での使用例につい Q# ては、この記事の「 [貸し出し Qubits の例](#borrowing-qubits-example) 」を参照するか、 [*2n + 2 qubits と Toffoli ベースのモジュール乗算 (Based*](https://arxiv.org/abs/1611.07995) 、roetteler、および svore 2017) を使用して、借り qubits を利用するアルゴリズムを確認してください。
 
 ## <a name="intrinsic-operations"></a>組み込みの操作
 
@@ -93,11 +93,11 @@ Qubits を借りている場合、システムはまず、使用中であるが�
 これは、 Q# 実行可能なアクションがすべて操作として定義されているため、プログラムが qubit を使用して実行できることです。
 
 この記事では、 Q# qubits との対話に使用できるいくつかの便利な操作について説明します。
-これらおよび他の詳細については、「[組み込みの操作と関数](xref:microsoft.quantum.libraries.standard.prelude)」を参照してください。 
+これらおよび他の詳細については、「 [組み込みの操作と関数](xref:microsoft.quantum.libraries.standard.prelude)」を参照してください。 
 
 1つ目の方法として、単 qubit の Pare Li 演算子 $X $、$Y $、および $Z $ は、 Q# [`X`](xref:microsoft.quantum.intrinsic.x) それぞれが型を持つ組み込みの操作である、、およびによって表され [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) `(Qubit => Unit is Adj + Ctl)` ます。
 
-「組み込みの[操作と関数](xref:microsoft.quantum.libraries.standard.prelude)」で説明されているように、$ $X `X` は、ビットフリップ演算または NOT gate として考えられます。
+「組み込みの [操作と関数](xref:microsoft.quantum.libraries.standard.prelude)」で説明されているように、$ $X `X` は、ビットフリップ演算または NOT gate として考えられます。
 操作を使用して、 `X` $ \ket{s_0 s_1 \ ドット s_n} $ の形式の状態を準備できます。これは、一部のクラシックビット文字列 $s $:
 
 ```qsharp
@@ -150,7 +150,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 ### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>1つの qubit を基準にして測定する `PauliZ`
 
 演算を使用します [`M`](xref:microsoft.quantum.intrinsic.m) 。この操作は組み込みの非イン数値演算であり、1つの qubit を `PauliZ` 基準にして、その結果に古典的な値を割り当てます。
-`M`には、予約された戻り値の型があります `Result` 。これは、値を取得するか、測定された `Zero` `One` 状態 $ \ket {0} $ または $ \ket $-に対応します。これは、 {1} 結果がクォンタムの状態ではなくなったことを示します。
+`M` には、予約された戻り値の型があります `Result` 。これは、値を取得するか、測定された `Zero` `One` 状態 $ \ket {0} $ または $ \ket $-に対応します。これは、 {1} 結果がクォンタムの状態ではなくなったことを示します。
 
 単純な例として、次の操作があります。この操作では、$ \ket $ 状態に1つの qubit が割り当てられ、 {0} Hadamard 操作が適用され、その `H` 結果が基になり `PauliZ` ます。
 
@@ -197,7 +197,7 @@ operation MeasureIfAllQubitsAreZero(qubits : Qubit[], pauli : Pauli) : Bool {
 
 ## <a name="borrowing-qubits-example"></a>借りた Qubits の例
 
-次の関数のように、キーワードを使用するキャノンの例があり `borrowing` `MultiControlledXBorrow` ます。 が `controls` 操作に追加する制御 qubits を `X` 示す場合、この実装によって追加されるダーティ[ancillas](xref:microsoft.quantum.glossary#ancilla)の数はに `Length(controls)-2` なります。
+次の関数のように、キーワードを使用するキャノンの例があり `borrowing` `MultiControlledXBorrow` ます。 が `controls` 操作に追加する制御 qubits を `X` 示す場合、この実装によって追加されるダーティ [ancillas](xref:microsoft.quantum.glossary#ancilla) の数はに `Length(controls)-2` なります。
 
 ```qsharp
 operation MultiControlledXBorrow ( controls : Qubit[] , target : Qubit ) : Unit
@@ -245,4 +245,4 @@ is Adj + Ctl {
 
 ## <a name="next-steps"></a>次のステップ
 
-の[制御フロー](xref:microsoft.quantum.guide.controlflow)について説明 Q# します。
+の [制御フロー](xref:microsoft.quantum.guide.controlflow) について説明 Q# します。

@@ -1,24 +1,24 @@
 ---
 title: クォンタムコンピューティングの学習リソース |Microsoft Docs
 description: クォンタムコンピューターのプログラミングの詳細については、「クォンタムコンピューティングの詳細」トピックを参照してください。
-author: QuantumWriter
+author: bradben
 uid: microsoft.quantum.more-information
-ms.author: nawiebe@microsoft.com
+ms.author: v-benbra
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7c5063fccbe73478aeb917e0cd2fe2f7fe51c070
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 91b4c052fd7f20906433a4bb481f113acbe789ea
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866844"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834178"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>その他の量子コンピューティング学習リソース
 
-「[クォンタムコンピューティングの概念](xref:microsoft.quantum.concepts.intro)」セクションで説明されているツールは、quantum ソフトウェアのあらゆる開発者を対象としていますが、クォンタムコンピューターのプログラミングとアルゴリズムの設計に関してよく知られている内容の深さや幅には意味がありません。  クォンタムコンピューティングは迅速に開発できるフィールドであるため、問題を解決するためにこれらのツールを最大限に活用する方法を学ぶために必要なすべての情報が含まれたリソースは1つもありません。  このため、クォンタムコンピューターのプログラミングの最先端と美しさについて学習する必要がある参照リストをコンパイルしました。
+「 [クォンタムコンピューティングの概念](xref:microsoft.quantum.concepts.intro) 」セクションで説明されているツールは、quantum ソフトウェアのあらゆる開発者を対象としていますが、クォンタムコンピューターのプログラミングとアルゴリズムの設計に関してよく知られている内容の深さや幅には意味がありません。  クォンタムコンピューティングは迅速に開発できるフィールドであるため、問題を解決するためにこれらのツールを最大限に活用する方法を学ぶために必要なすべての情報が含まれたリソースは1つもありません。  このため、クォンタムコンピューターのプログラミングの最先端と美しさについて学習する必要がある参照リストをコンパイルしました。
 このセクションには、クォンタムコンピューティングに関するトピックの詳細な説明が含まれています。
 
 ## <a name="basic-quantum-computing"></a>基本的なクォンタムコンピューティング ##

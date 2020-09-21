@@ -2,19 +2,19 @@
 title: Broombridge スキーマ仕様 (ver 0.2)
 description: Microsoft quantum 化学ライブラリの Broombridge 量子化学スキーマ v 0.2 の仕様について詳しく説明します。
 author: guanghaolow
-ms.author: gulow@microsoft.com
+ms.author: gulow
 ms.date: 05/28/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3d935ec9de7e9b93bcdb00a4e13fc7bfce33b0aa
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 851d10c0137deecf8e861aad30b5e08a9ae61754
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869088"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833772"
 ---
 # <a name="broombridge-specification-v02"></a>Broombridge Specification v 0.2 #
 
@@ -49,14 +49,14 @@ YAML にシリアル化されるオブジェクトに `"$schema"` は、値が `
 
 _Quantity オブジェクト_は JSON オブジェクトであり、 `units` テーブル1に示されている許容値のいずれかの値を持つプロパティを持つ必要があります。
 
-Quantity オブジェクトは、そのプロパティに加えて1つのプロパティがある場合、_単純な quantity オブジェクト_です `value` `units` 。
+Quantity オブジェクトは、そのプロパティに加えて1つのプロパティがある場合、 _単純な quantity オブジェクト_ です `value` `units` 。
 プロパティの値は `value` 数値である必要があります。
 
 Quantity オブジェクトは、その_bounded quantity object_ `lower` `upper` プロパティに加えてプロパティがある場合は、制限された quantity オブジェクトです `units` 。
 `lower`プロパティとプロパティの値は `upper` 数値である必要があります。
 範囲指定された quantity オブジェクトには、値が数値であるプロパティが含まれる場合があり `value` ます。
 
-Quantity オブジェクトは、そのプロパティに加えてプロパティとプロパティがある場合に、_スパース配列の quantity オブジェクト_です `format` `values` `units` 。
+Quantity オブジェクトは、そのプロパティに加えてプロパティとプロパティがある場合に、 _スパース配列の quantity オブジェクト_ です `format` `values` `units` 。
 の値は `format` 文字列である必要があり `sparse` ます。
 プロパティの値は `values` 配列である必要があります。
 の各要素 `values` は、スパース配列の量のインデックスと値を表す配列である必要があります。

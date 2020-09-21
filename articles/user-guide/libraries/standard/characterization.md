@@ -9,19 +9,19 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b226f355771f2b65399ebe00cc3de9429a3cebb0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868629"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759911"
 ---
 # <a name="quantum-characterization-and-statistics"></a>クォンタムの特性と統計 #
 
 実用的なクォンタムアルゴリズムを開発するために、操作の効果を特徴付けることが重要です。
 これは、クォンタムシステムのすべての測定値が1ビットの情報を生成するため、困難です。
 このような概念を表すために必要な多くの情報をユーザーが収集できるように、1つのクォンタム状態だけを使用して、eigenvalue を学習するには、多くの測定の結果を合成する必要があります。
-クォンタムの状態は特に厄介です。これは、[複製なしの定理](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem)は、状態のコピーを作成できるようにするため、状態の1つのコピーから任意のクォンタム状態を学習する方法がないことを示すためです。
+クォンタムの状態は特に厄介です。これは、 [複製なしの定理](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) は、状態のコピーを作成できるようにするため、状態の1つのコピーから任意のクォンタム状態を学習する方法がないことを示すためです。
 ユーザーからのクォンタム状態のこの難読化は、" Q# クォンタムプログラム" に対して状態を公開したり定義*is*したりしないという事実に反映されます。
 このため、操作と状態を黒色のボックスとして扱うことによって、クォンタムの特性を解決します。このアプローチは、クォンタムの特性、検証、検証 (QCVV) の実験的プラクティスによく似ています。
 
@@ -33,7 +33,7 @@ ms.locfileid: "87868629"
 ## <a name="iterative-phase-estimation"></a>反復フェーズの推定 ##
 
 クォンタムの特性に関してクォンタムプログラミングを見ると、クォンタムフェーズの推定に代わる便利な方法となります。
-つまり、$n $-qubit レジスタにクォンタムフェーズの推定と同様にフェーズのバイナリ表現を含めるように準備するのではなく、*クラシック*エージェントが測定を使用してクォンタムシステムのプロパティを学習するプロセスとして、フェーズ推定を表示できます。
+つまり、$n $-qubit レジスタにクォンタムフェーズの推定と同様にフェーズのバイナリ表現を含めるように準備するのではなく、 *クラシック* エージェントが測定を使用してクォンタムシステムのプロパティを学習するプロセスとして、フェーズ推定を表示できます。
 ここでは、フェーズ kickback を使用して、ブラックボックスの操作のアプリケーションを不明な角度で回転させますが、回転の直後の各手順で回転する ancilla qubit を測定します。
 これには、クォンタムケースで説明されているフェーズ kickback を実行するために1つの追加の qubit だけが必要であるという利点があります。そのため、各ステップの測定結果から反復的な方法を学習します。  
 以下の各方法では、実験を設計するためのさまざまな戦略と、フェーズを学習するためのさまざまなデータ処理方法を使用します。  各ユーザーには、厳密なエラーの範囲、前の情報の組み込み、エラーの許容、メモリ limitted の古典コンピューターでの実行など、それぞれ固有の利点があります。
@@ -74,7 +74,7 @@ Bayes ' 定理は、フェーズ推定の結果の状態が \begin{align} \frac{
 ### <a name="bayesian-phase-estimation"></a>ベイジアンフェーズの推定 ###
 
 > [!TIP]
-> 実際のベイジアンフェーズ推定の詳細については、 [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation)サンプルを参照してください。
+> 実際のベイジアンフェーズ推定の詳細については、 [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation) サンプルを参照してください。
 
 ベイジアンフェーズの推定の概念は単純です。
 フェーズ推定プロトコルから測定統計を収集した後、ベイジアン推論を使用して結果を処理し、パラメーターの推定値を指定します。
@@ -87,7 +87,7 @@ $X = \ket{+} \ ロウ {+}-\ket \bra $ であることに注意 {-} {-} してく
 入力状態が $ \ket{\psi}\ket{\phi} $ であることを指定して、最初の qubit の測定を観察する確率は、 `Zero` $ $ です。 \ Pr (\texttt{Zero} | \ psi) = \ left | \braket{+ | \psi}/right | ^ 2 です。 [ `PauliX` ](xref:microsoft.quantum.concepts.pauli)
 \ket{\psi} 反復フェーズ推定の場合は、$ = R_1 (m [\phi-\theta]) \ket{+} $ があります。この場合、\begin{align} \ Pr (\texttt{Zero} | \ phi; m, \ シータ) & = \ left |\braket{+ |R_1 (m [\phi-\theta]) |+} \ right | ^ 2 \\ \\ & = \ left | \frac12 \ left (\bra {0} + \bra {1} \ right) \ left (\ket {0} + e ^ {i m [\phi-\theta]} \ket/ {1} right) \ right | ^ 2 \\ \\ & = \ left | \frac{1 + e ^ {i m [\phi-\theta]}} {2} \ right | ^ 2 \\ \\ & = \ cos ^ 2 (m [\phi-\theta]/2) \ tag{★} \ label{eq:}。
 \end{align} は、反復的なフェーズ推定は、決まる正弦波関数の振幅頻度を学習することで構成されます。これにより、コインをその sinusoid によって指定されたバイアスと反転させることができます。
-従来の古典的な用語の後で、$ \eqref{eq: フェーズ-予測確率} $ を呼び出して、反復フェーズ推定の*尤度関数*を呼び出します。
+従来の古典的な用語の後で、$ \eqref{eq: フェーズ-予測確率} $ を呼び出して、反復フェーズ推定の *尤度関数* を呼び出します。
 
 `Result`反復フェーズの推定確率関数を観察した後、Bayes のルールを使用して、その観測に従っていると判断する必要があることを規定することができます。
 具体的に、\ begin{\frac{\Pr} \ pr (-phi | d) = (d | \ phi) \ pr (\ phi)} {\ int \ pr (d | \ phi) \ pr (& phi) {\mathrm d} \phi}/pr (¥ phi)、\ end{ \\ \Texttt{Zero}, \texttt{One}} $ の場合は、\ end{,} \\ $ はで、$ \ `Result` Pr (\ phi) $ は以前の信条について説明します。 $d
@@ -99,20 +99,20 @@ $X = \ket{+} \ ロウ {+}-\ket \bra $ であることに注意 {-} {-} してく
 これを確認するには、$ bit 変数 $x $ $n を学習します。
 以前のディストリビューション $ \ Pr (x) $ は $x $ の $ 2 ^ n $ 仮定値をサポートしています。
 つまり、$x $ の推定精度が高い場合、ベイジアンフェーズの推定には、膨大なメモリと処理時間が必要になることがあります。
-クォンタムシミュレーションなどの一部のアプリケーションでは、必要な limitted の精度によって、そのような方法では、Shor のアルゴリズムなどの他のアプリケーションでは、そのフェーズの推定手順で正確なベイジアン推論を使用できません。  このため、[ランダムウォークフェーズの推定 (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation)や、[堅牢なフェーズの推定](xref:microsoft.quantum.characterization.robustphaseestimation)などの非ベイジアンアプローチについても、おおよそのベイジアンメソッドの実装を提供しています。
+クォンタムシミュレーションなどの一部のアプリケーションでは、必要な limitted の精度によって、そのような方法では、Shor のアルゴリズムなどの他のアプリケーションでは、そのフェーズの推定手順で正確なベイジアン推論を使用できません。  このため、 [ランダムウォークフェーズの推定 (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) や、 [堅牢なフェーズの推定](xref:microsoft.quantum.characterization.robustphaseestimation)などの非ベイジアンアプローチについても、おおよそのベイジアンメソッドの実装を提供しています。
 
 ### <a name="robust-phase-estimation"></a>堅牢なフェーズの推定 ###
 
-測定結果からのフェーズの見積もりの*posteriori*ベイジアン再構築の最大数は、最悪の場合には指数関数的に難しくなります。 このため、ほとんどの実用的なフェーズ推定アルゴリズムでは再構築の一部の品質を犠牲にしています。これは従来の後処理の多くを反映しています。これにより、polynomially は、実行される測定値に応じてスケーリングされます。
+測定結果からのフェーズの見積もりの *posteriori* ベイジアン再構築の最大数は、最悪の場合には指数関数的に難しくなります。 このため、ほとんどの実用的なフェーズ推定アルゴリズムでは再構築の一部の品質を犠牲にしています。これは従来の後処理の多くを反映しています。これにより、polynomially は、実行される測定値に応じてスケーリングされます。
 
-このような従来の処理後の手順の例として、[堅牢なフェーズ推定アルゴリズム](https://arxiv.org/abs/1502.02677)と、上記の署名と入力があります。 この例では、入力の $U が $ $ が型としてパッケージ化されていることを前提 `DiscreteOracle` としています。したがって、制御された $U $ の整数の累乗のみをクエリします。 レジスタ内の入力状態 `Qubit[]` が eigenstate $U \ket{\psi} = e ^ {i\ phi} \ k {\ psi} $ の場合、堅牢なフェーズの推定アルゴリズムはとして $/phi $ の推定 $ \hat{\phi}\in [-\ pi, \ pi) を返し `Double` ます。
+このような従来の処理後の手順の例として、 [堅牢なフェーズ推定アルゴリズム](https://arxiv.org/abs/1502.02677)と、上記の署名と入力があります。 この例では、入力の $U が $ $ が型としてパッケージ化されていることを前提 `DiscreteOracle` としています。したがって、制御された $U $ の整数の累乗のみをクエリします。 レジスタ内の入力状態 `Qubit[]` が eigenstate $U \ket{\psi} = e ^ {i\ phi} \ k {\ psi} $ の場合、堅牢なフェーズの推定アルゴリズムはとして $/phi $ の推定 $ \hat{\phi}\in [-\ pi, \ pi) を返し `Double` ます。
 
 堅牢なフェーズの推定の最も重要な機能は、他の多くの便利なバリエーションと共有されています。 $ \hat{\phi} $ の再構築の品質は、意味のあるハイゼンベルグに限定されています。 つまり、true 値から $ \hat{\phi} $ の偏差が $-シグマ $ の場合、$/シグマ $ はクエリの合計数に反比例しています。これは、制御された $U $ (つまり、$ \ シグマ = \mathcal{O} (1/Q) $) に対して作成された $Q クエリの合計数に比例します。 現在、偏差の定義は、異なる推定アルゴリズムによって異なります。 場合によっては、$ \mathcal{O} (1) の確率が少なくとも、推定エラー $ | \hat{\phi}-\phi | \_ であることを意味することがあります。\circ\le、シグマ $、いくつかの循環メジャー $ \ circ $。 堅牢なフェーズの推定については、周期的な差異は、厳密には $-シグマ ^ 2 = \mathbb{E} \_ \hat{\phi} [( \_ -mod {2 \ pi} (\hat{\phi}-\phi +-pi)--pi) ^ 2] $ になります。これは、周期的なフェーズを1つの有限の間隔 $ (-\ pi, lt pi] $ にラップ より正確に言えば、堅牢なフェーズの推定の標準偏差は、不等ず $ $ \begin{align} 2.0 \ pi/Q/\end{align} $ {n}/le 10.7 \ pi/Q, $ $ に適合します。下限は asymptotically large $Q $ の上限に達し、上限は小さいサンプルサイズでも保証されます。  入力によって選択された $ $n、$Q $ を暗黙的に定義することに注意して `bitsPrecision` ください。
 
 関連するその他の詳細には、たとえば、$1 $ ancilla qubit だけの小さな領域のオーバーヘッド、またはプロシージャが非アダプティブであることを意味します。つまり、必要なクォンタム実験のシーケンスは、中間測定結果に依存しません。 この後の例では、フェーズ推定アルゴリズムの選択が重要であるため、1つは、などのドキュメントと、その @"microsoft.quantum.characterization.robustphaseestimation" 実装に関する詳細情報と参照されるパブリケーションを参照する必要があります。
 
 > [!TIP]
-> 堅牢なフェーズ推定を使用するサンプルは多数あります。 さまざまな物理システムのグラウンドステートエネルギーを抽出するフェーズの推定については、「 [ **H2 シミュレーション**のサンプル](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line)」、「 [ **simpleising**サンプル](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)」、および「" [**モデルのモデル**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)化" サンプルを参照してください。
+> 堅牢なフェーズ推定を使用するサンプルは多数あります。 さまざまな物理システムのグラウンドステートエネルギーを抽出するフェーズの推定については、「 [ **H2 シミュレーション**のサンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)」、「 [ **simpleising**サンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)」、および「" [**モデルのモデル**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)化" サンプルを参照してください。
 
 
 ### <a name="continuous-oracles"></a>継続的 Oracles ###
@@ -120,7 +120,7 @@ $X = \ket{+} \ ロウ {+}-\ket \bra $ であることに注意 {-} {-} してく
 また、前に使用した oracle モデルから汎用化して、キャノンの種類でモデル化された継続時間の oracles を実現することもでき <xref:microsoft.quantum.oracles.continuousoracle> ます。
 1つのユニタリ演算子ではなく $ $U、$U (t) U (s) $ = $U (t + s) $ のように、\mathbb{R} $ の $t \ の $U (t) $ の一連のユニタリ演算子を使用します。
 これは、個別のケースよりも弱いステートメントです <xref:microsoft.quantum.oracles.discreteoracle> \, 。固定の $ \ デルタ t $ に対して $t = m \ デルタ t $ を制限することによってを構築できるためです。
-$U (t) = \ exp (i H t) $ in a operator $H $ ($ \ exp $[は、](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups) [「高度なマトリックス](xref:microsoft.quantum.concepts.matrix-advanced)」で説明されているマトリックス指数)。
+$U (t) = \ exp (i H t) $ in a operator $H $ ($ \ exp $ [は、](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups) [「高度なマトリックス](xref:microsoft.quantum.concepts.matrix-advanced)」で説明されているマトリックス指数)。
 $H $ の eigenstate $ \ket{\phi} $ ($H \ket{\phi} = \ phi \ket{\phi} $ は、すべて $t $, \ begin{\ket{\phi}.} U (t) \ket{\phi} = e ^ {i \ phi t} に対して $U (t) $ という eigenstate も使用されます。
 \end{equation}
 
@@ -130,7 +130,7 @@ $H $ の eigenstate $ \ket{\phi} $ ($H \ket{\phi} = \ phi \ket{\phi} $ は、す
 
 ### <a name="random-walk-phase-estimation"></a>ランダムウォークフェーズの推定 ###
 
-Q#では、反復フェーズ推定から取得したデータレコードに対してランダムなウォークを行うことによって動作するクォンタムデバイスの近くに使用するように設計された、ベイジアンフェーズ推定についての実用的な概算を提供しています。
+Q# では、反復フェーズ推定から取得したデータレコードに対してランダムなウォークを行うことによって動作するクォンタムデバイスの近くに使用するように設計された、ベイジアンフェーズ推定についての実用的な概算を提供しています。
 このメソッドは、アダプティブで完全に決定的であり、メモリオーバーヘッドが非常に少ない推定フェーズ $ \hat{\phi} $ でのエラーのほぼ最適化されたスケーリングを可能にします。
 
 このプロトコルでは、前の分布がガウスであることを前提として、おおよそのベイジアン推論方法が使用されます。

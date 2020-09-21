@@ -3,22 +3,22 @@ title: Q#標準 libararies フロー制御
 description: Microsoft 標準ライブラリのフロー制御操作と関数について説明し Q# ます。
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1cfef50cf2bbecd2043972a662edd8120c5570ec
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868578"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835623"
 ---
 # <a name="higher-order-control-flow"></a>上位制御フロー #
 
-標準ライブラリの主要な役割の1つは、高レベルのアルゴリズムアイデアを[量子プログラム](https://en.wikipedia.org/wiki/Quantum_programming)として簡単に表現できるようにすることです。
+標準ライブラリの主要な役割の1つは、高レベルのアルゴリズムアイデアを [量子プログラム](https://en.wikipedia.org/wiki/Quantum_programming)として簡単に表現できるようにすることです。
 そのため、 Q# キャノンはさまざまなフロー制御の構成要素を提供しており、それぞれが関数と操作の部分的な適用を使用して実装されています。
 すぐに例にジャンプする場合は、レジスタに "CNOT はしご" を構築したいケースを考えてみます。
 
@@ -86,7 +86,7 @@ ApplyToEachCA(Adjoint U, register);
 同様に、 <xref:microsoft.quantum.canon.applytoeachindex> は、フォームのパターンを表すのに便利です。また、は、 `U(0, targets[0]); U(1, targets[1]); ...` 入力でサポートされている機能の組み合わせごとにバージョンを提供します。
 
 > [!TIP]
-> `ApplyToEach`は、以外の入力を受け取る操作で使用できるように、型指定されたパラメーターです `Qubit` 。
+> `ApplyToEach` は、以外の入力を受け取る操作で使用できるように、型指定されたパラメーターです `Qubit` 。
 > たとえば、 `codeBlocks` が復旧する必要がある値の配列であるとし <xref:microsoft.quantum.errorcorrection.logicalregister> ます。
 > 次に `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` 、エラー修正コード `code` と復旧関数 `recoveryFn` を各ブロックに個別に適用します。
 > これは、従来の入力に対しても保持されます。で `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` は、$-pi/$2 の回転が $X $ に対して適用され、$Y $ に関する $pi/$3 の回転が適用されます。
@@ -120,7 +120,7 @@ function Sum(xs : Int[]) {
 
 > [!NOTE]
 > $U $ をファクタリングするもう1つの結果は、ファンクタをに適用する方法さえわからないことです `Controlled` `U` 。
-> `ApplyWithCA`したがって、想定されるほど弱いシグネチャがあります。
+> `ApplyWithCA` したがって、想定されるほど弱いシグネチャがあります。
 > ```qsharp
 > ApplyWithCA<'T> : (('T => Unit is Adj),
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
@@ -162,7 +162,7 @@ U(1, time / Float(nSteps), target);
 // ...
 ```
 
-この時点で、Trotter – Suzuki 拡張については、*クォンタムメカニズムをまったく参照する*必要がなくなりました。
+この時点で、Trotter – Suzuki 拡張については、 *クォンタムメカニズムをまったく参照する*必要がなくなりました。
 拡張は、実質的には $ \eqref{eq: trotter-0} $ によって実現される非常に具体的な反復パターンです。
 この反復パターンは、次の方法で実装され <xref:microsoft.quantum.canon.decomposeintotimestepsca> ます。
 

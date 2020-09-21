@@ -1,6 +1,6 @@
 ---
 title: 高度なマトリックスの概念説明: クォンタムアルゴリズムの記述とシミュレーションに使用される基本的なツールである固有ベクトル、eigenvalues、および matrix 指数について説明します。
-author: QuantumWriter uid: microsoft. quantum................: nawiebe@microsoft.com ms. date: 12/11/2017 ms. topic: article no loc:
+author: QuantumWriter uid: benbra:: 12/11/2017 ミリ秒。トピック: 記事の場所は含まれていません (& a):
 - "Q#"
 - "$$v"
 - "$$"
@@ -87,7 +87,7 @@ author: QuantumWriter uid: microsoft. quantum................: nawiebe@microsoft
 ---
 # <a name="advanced-matrix-concepts"></a>高度なマトリックスの概念 #
 
-マトリックスの操作を[*Eigenvalues、固有ベクトル*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors)、[*指数*](https://en.wikipedia.org/wiki/Matrix_exponential)に拡張しました。これにより、クォンタムアルゴリズムの記述と実装に必要なツールの基本的なセットが形成されます。
+マトリックスの操作を [*Eigenvalues、固有ベクトル*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) 、 [*指数*](https://en.wikipedia.org/wiki/Matrix_exponential) に拡張しました。これにより、クォンタムアルゴリズムの記述と実装に必要なツールの基本的なセットが形成されます。
 
 ## <a name="eigenvalues-and-eigenvectors"></a>Eigenvalues と固有ベクトル ##
 
@@ -108,19 +108,19 @@ $$
 
 $$\begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix} 、 \begin{bmatrix} 0 \\\\ 1 \\\\ 0 \end{bmatrix} 、 \begin{bmatrix} 0 \\\\ 0 \\\\ 1\end{bmatrix}$$
 
-このマトリックスの固有ベクトルは $ $ 、それぞれ d_1、 $ d_2 $ 、および $ d_3 $ です。 $D_1 $ 、 $ d_2 $ 、 $ d_3 が個別の数値の場合 $ 、これらのベクター (およびそのマルチプル) はマトリックス d の唯一の固有ベクトルです $ $ 。一般に、対角線マトリックスの場合は、固有値と固有ベクトルを簡単に読み取ることができます。 固有値は、対角線に表示されるすべての数値であり、それぞれの固有ベクトルは1つのエントリが1で、 $ $ 残りのエントリが0に等しい単位ベクターです $ $ 。
+このマトリックスの固有ベクトルは  $ $ 、それぞれ d_1、 $ d_2 $ 、および $ d_3 $ です。 $D_1 $ 、 $ d_2 $ 、 $ d_3 が個別の数値の場合 $ 、これらのベクター (およびそのマルチプル) はマトリックス d の唯一の固有ベクトルです $ $ 。一般に、対角線マトリックスの場合は、固有値と固有ベクトルを簡単に読み取ることができます。 固有値は、対角線に表示されるすべての数値であり、それぞれの固有ベクトルは1つのエントリが1で、 $ $ 残りのエントリが0に等しい単位ベクターです $ $ 。
 
 上の例では、D の固有ベクトル $ が $ 3 次元ベクトルのベースになっていることに注意して $ $ ください。 ベースはベクターのセットであり、ベクターを線形の組み合わせとして書き込むことができます。 より明示的、 $ v_1 $ 、 $ v_2 $ 、および v_3 は、 $ $ $ $ $ = $ 何らかの数値 $ v_1 $ 、 $ a_2 $ 、および v_2 $ $ に対して v a_1 a_3 + v_3 a_1 + a_2 a_3 として記述することができます。
 
 Hermitian matrix (自己 adjoint とも呼ばれます) は複雑な四角形行列で、独自の複素共役転置と同じであることに注意してください。さらに、ユニタリ行列は、その逆が adjoint または複雑な共役転置と等しい複合正方形行列です。
-基本的には、Hermitian およびユニタリ行列は、クォンタムコンピューティングで検出された唯一のマトリックスで、次をアサートする、[*スペクトル定理*](https://en.wikipedia.org/wiki/Spectral_theorem)と呼ばれる一般的な結果があります。 Hermitian またはマトリックス m の場合は、 $ $ 1 つの $ $ $ = \dagger $ 対角線のマトリックス d に $ 対し $ て m u ^ D u が使用されます。さらに、D の対角線のエントリは $ $ M の固有値になり $ $ ます。
+基本的には、Hermitian およびユニタリ行列は、クォンタムコンピューティングで検出された唯一のマトリックスで、次をアサートする、 [*スペクトル定理*](https://en.wikipedia.org/wiki/Spectral_theorem)と呼ばれる一般的な結果があります。 Hermitian またはマトリックス m の場合は、 $ $ 1 つの $ $ $ = \dagger $ 対角線のマトリックス d に $ 対し $ て m u ^ D u が使用されます。さらに、D の対角線のエントリは $ $ M の固有値になり $ $ ます。
 
 固有ベクトルの固有値とを計算する方法は既にわかって $ $ います D。この定理を使用して、 $ v $ が $ $ eigenvalue c の eigenvector ( $ $ つまり、Dv cv) である場合、 $ = $ $ U ^ \dagger v は $ $ $ eigenvalue c の eigenvector になり $ $ ます。 これは、
 
 $$M (U ^ \dagger v) = u ^ \dagger d u (u ^ \dagger v) = U ^ \dagger d (u u ^ \dagger ) v = u ^ \dagger d v = c u ^ \dagger v$$
 
 ## <a name="matrix-exponentials"></a>マトリックス指数
-指数関数と完全に同じように[*行列指数*](https://en.wikipedia.org/wiki/Matrix_exponential)を定義することもできます。  マトリックス a の行列指数は $ 、 $ として表すことができます。
+指数関数と完全に同じように [*行列指数*](https://en.wikipedia.org/wiki/Matrix_exponential) を定義することもできます。  マトリックス a の行列指数は $ 、 $ として表すことができます。
 
 $$
 e ^ A = \boldone + a + \frac { a ^ 2 } { 2! } + \frac {^ 3 } { 3!}+\cdots
