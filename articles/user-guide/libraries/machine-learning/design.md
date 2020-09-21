@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 60e694e9f7c2f01a6679ef960f5a7774c8bd6a62
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c87a84654cda04f81115a83684f0e125d23a77bc
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868944"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759223"
 ---
 # <a name="design-your-own-classifier"></a>独自の分類器を設計する
 
@@ -30,7 +30,7 @@ ms.locfileid: "87868944"
 
 分類器を作成するには、サーキットモデルでパラメーター化制御循環を連結します。 これを行うには、 [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) クォンタム Machine Learning ライブラリで定義されている型を使用できます。 この型は、ターゲットの qubit のインデックス、制御 qubit のインデックスの配列、回転の軸、およびモデルを定義するパラメーターの配列内の関連付けられたパラメーターのインデックスを決定する4つの引数を受け取ります。
 
-分類器の例を見てみましょう。 [ハーフ衛星サンプル](https://github.com/microsoft/Quantum/tree/master/samples/machine-learning/half-moons)では、ファイルで定義されている次の分類子を見つけることができ `Training.qs` ます。
+分類器の例を見てみましょう。 [ハーフ衛星サンプル](https://github.com/microsoft/Quantum/tree/main/samples/machine-learning/half-moons)では、ファイルで定義されている次の分類子を見つけることができ `Training.qs` ます。
 
 ```qsharp
     function ClassifierStructure() : ControlledRotation[] {
@@ -59,7 +59,7 @@ ms.locfileid: "87868944"
 
  ![ローカルローテーションレイヤー](~/media/local_rotations_layer.PNG)
 
-サーキットの設計を効率化するために使用できるすべてのツールを検出するには、 [Quantum Machine Learning ライブラリの API リファレンスを参照](xref:microsoft.quantum.machinelearning)することをお勧めします。
+サーキットの設計を効率化するために使用できるすべてのツールを検出するには、 [Quantum Machine Learning ライブラリの API リファレンスを参照](xref:microsoft.quantum.machinelearning) することをお勧めします。
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -1,6 +1,6 @@
 ---
 title: 量子コンピューティングにおける qubit の説明: 量子コンピューティングにおける情報の基本単位である qubit について説明します。
-author: QuantumWriter uid: microsoft..... author: nawiebe@microsoft.com ms. date: 12/11/2017 ms. topic: article no loc:
+author: QuantumWriter uid: benbra: v-ミリ秒。 date: 12/11/2017 ms. topic: article no loc (次のようになります。
 - "Q#"
 - "$$v"
 - "$$"
@@ -96,21 +96,21 @@ author: QuantumWriter uid: microsoft..... author: nawiebe@microsoft.com ms. date
 
 $$\begin{bmatrix}1 \\\\ 0 \end{bmatrix} 、 \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} 、 \begin{bmatrix} \frac { 1 } { \sqrt { 2 } } \\\\ \frac { 1 } { \sqrt { 2 } } \end{bmatrix} 、 \begin{bmatrix} \frac { 1 } { \sqrt { 2 } } \\\\ \frac { -1 } { \sqrt { 2 } } \end{bmatrix} 、 \text { } \begin{bmatrix} \frac { 1 } { \sqrt { 2 } } \\\\ \frac { i } { \sqrt { 2 } } \end{bmatrix} 。      $$
 
-クォンタム状態ベクトル $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ と $ \begin{bmatrix} 0 1 は、 \\\\ \end{bmatrix} $ 特別な役割を持ちます。 これらの2つのベクトルは、qubit の状態を表すベクター空間の基礎となります。 これは、すべてのクォンタム状態ベクトルをこれらの基礎ベクトルの合計として書き込むことができることを意味します。 具体的には、ベクター $ \begin{bmatrix} x \\\\ y は \end{bmatrix} $ $ x \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} + y \begin{bmatrix} 0 1 と \\\\ \end{bmatrix} して書き込むことができ $ ます。 これらのベクトルの回転は、qubit の完全に有効な基準として機能しますが、そのためには、*コンピューティングベース*を呼び出すことによって、この方法を選択します。
+クォンタム状態ベクトル $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ と $ \begin{bmatrix} 0 1 は、 \\\\ \end{bmatrix} $ 特別な役割を持ちます。 これらの2つのベクトルは、qubit の状態を表すベクター空間の基礎となります。 これは、すべてのクォンタム状態ベクトルをこれらの基礎ベクトルの合計として書き込むことができることを意味します。 具体的には、ベクター $ \begin{bmatrix} x \\\\ y は \end{bmatrix} $ $ x \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} + y \begin{bmatrix} 0 1 と \\\\ \end{bmatrix} して書き込むことができ $ ます。 これらのベクトルの回転は、qubit の完全に有効な基準として機能しますが、そのためには、 *コンピューティングベース*を呼び出すことによって、この方法を選択します。
 
 この2つのクォンタム状態は、古典的なビットの2つの状態 (つまり0と 1) に対応するために用意さ $ $ $ $ れています。 標準的な規則は、
 
-$$0 \equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} 、 \qquad 1 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} 、$$
+$$0 \equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix} 、 \qquad 1 \equiv \begin{bmatrix} 0 \\\\  1 \end{bmatrix} 、$$
 
 反対の選択肢も同様に実行できます。 このため、1つの1つの qubit クォンタム状態ベクトルの無限数が不足しています。その他のすべてのクォンタム状態はありません。
 
 ## <a name="measuring-a-qubit"></a>Qubit の測定
 
-ここで、qubit を表す方法を理解したところで、[*測定*](https://en.wikipedia.org/wiki/Measurement_in_quantum_mechanics)の概念について説明することによって、これらの状態が表すものの直感を取得できます。 測定値は、qubit で "注目" する非公式のアイデアに相当します。これにより、クォンタムの状態が、 $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ または $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ の2つのクラシック状態のいずれかに直ちに折りたたまれます。 クォンタム状態ベクターによって指定された qubit $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ が測定されると $ 、 $ 確率が $ | \alpha | ^ 2 で結果 $ $ 1 が $ 確率が $ | \beta | ^ 2 $ の結果0が得られます。   結果が $ 0 の $ 場合、qubit の新しい状態は $ \begin{bmatrix} 1 \\\\ 0 です \end{bmatrix} $ 。結果1では、 $ $ その状態は $ \begin{bmatrix} 0 \\\\ 1 に \end{bmatrix} $ なります。 $ $ 正規化条件 $ | \alpha | ^ 2 + | \beta | ^ 2 = 1 $ が原因で、これらの確率が合計1になることに注意してください。
+ここで、qubit を表す方法を理解したところで、 [*測定*](https://en.wikipedia.org/wiki/Measurement_in_quantum_mechanics)の概念について説明することによって、これらの状態が表すものの直感を取得できます。 測定値は、qubit で "注目" する非公式のアイデアに相当します。これにより、クォンタムの状態が、 $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ または $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ の2つのクラシック状態のいずれかに直ちに折りたたまれます。 クォンタム状態ベクターによって指定された qubit $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ が測定されると $ 、 $ 確率が $ | \alpha | ^ 2 で結果 $ $ 1 が $ 確率が $ | \beta | ^ 2 $ の結果0が得られます。   結果が $ 0 の $ 場合、qubit の新しい状態は $ \begin{bmatrix} 1 \\\\ 0 です \end{bmatrix} $ 。結果1では、 $ $ その状態は $ \begin{bmatrix} 0 \\\\ 1 に \end{bmatrix} $ なります。 $ $ 正規化条件 $ | \alpha | ^ 2 + | \beta | ^ 2 = 1 $ が原因で、これらの確率が合計1になることに注意してください。
 
 測定のプロパティは、クォンタム状態ベクターの全体的な符号が無関係であることも意味します。 ベクターを否定することは、 $ \alpha \right 矢印 \alpha $ と $ \beta \right 矢印 \beta $ に相当します。 0と1を測定する確率は、 $ $ $ $ 用語の大きさの二乗によって異なるため、このような記号を挿入しても確率は変わりません。 このようなフェーズは一般に[ `` *グローバルなフェーズ*' '](https://en.wikipedia.org/wiki/Phase_factor)と呼ばれ、より一般的には、 $ { \phi } $ 午後1時ではなく、 $ e ^ i $ の形式にすることができます。
 
-測定の最後の重要なプロパティは、必ずしもすべてのクォンタム状態ベクトルが破損するとは限りません。 状態 1 0 で、古典状態0に対応する qubit を開始する $ \begin{bmatrix} \\\\ \end{bmatrix} $ $ $ と、この状態を測定すると常に結果0が生成され、 $ $ クォンタムの状態は変更されません。 この意味では、古典ビットのみ (つまり、 $ \begin{bmatrix} 1 0 または 0 1 の qubits) がある場合、 \\\\ \end{bmatrix} $ 測定に $ \begin{bmatrix} よって \\\\ \end{bmatrix} $ システムが破損することはありません。 これは、従来のコンピューターで実行する場合と同様に、古典的なデータをレプリケートして、quantum のコンピューターで操作できることを意味します。 ただし、両方の状態の情報を一度に保存する機能は、クォンタムデータをむやみにコピーする機能であるクラシックデプロイとその他の robs コンピューターよりも大きくなります。また、"[複製なし" 定理](https://en.wikipedia.org/wiki/No-cloning_theorem)を参照してください。
+測定の最後の重要なプロパティは、必ずしもすべてのクォンタム状態ベクトルが破損するとは限りません。 状態 1 0 で、古典状態0に対応する qubit を開始する $ \begin{bmatrix} \\\\ \end{bmatrix} $ $ $ と、この状態を測定すると常に結果0が生成され、 $ $ クォンタムの状態は変更されません。 この意味では、古典ビットのみ (つまり、 $ \begin{bmatrix} 1 0 または 0 1 の qubits) がある場合、 \\\\ \end{bmatrix} $ 測定に $ \begin{bmatrix} よって \\\\ \end{bmatrix} $ システムが破損することはありません。 これは、従来のコンピューターで実行する場合と同様に、古典的なデータをレプリケートして、quantum のコンピューターで操作できることを意味します。 ただし、両方の状態の情報を一度に保存する機能は、クォンタムデータをむやみにコピーする機能であるクラシックデプロイとその他の robs コンピューターよりも大きくなります。また、" [複製なし" 定理](https://en.wikipedia.org/wiki/No-cloning_theorem)を参照してください。
 
 ## <a name="visualizing-qubits-and-transformations-using-the-bloch-sphere"></a>Bloch 球を使用した Qubits と変換の視覚化
 
@@ -120,15 +120,15 @@ $ $ [*Bloch 球*](https://en.wikipedia.org/wiki/Bloch_sphere)表現を使用し�
 ![Bloch 球](~/media/concepts_bloch.png)
 
 この図の矢印は、クォンタム状態ベクトルがポイントしている方向を示しています。矢印の各変換は、カーディナル軸の1つについての回転と考えることができます。
-クォンタムの計算は、一連の回転として考えていますが、強力な直感であるため、この直感を使用してアルゴリズムを設計および記述するのは困難です。 Q#このような回転を記述する言語を提供することで、この問題を軽減します。
+クォンタムの計算は、一連の回転として考えていますが、強力な直感であるため、この直感を使用してアルゴリズムを設計および記述するのは困難です。 Q# このような回転を記述する言語を提供することで、この問題を軽減します。
 
 ## <a name="single-qubit-operations"></a>シングル Qubit 操作
 
 Quantum コンピューターでは、クォンタム状態ベクターのローテーションをエミュレートできる、一連の汎用クォンタムゲートを適用してデータを処理します。
 この universality の概念は、universality の概念に似ています。これは、入力ビットのすべての変換を有限長回線を使用して実行できる場合に、ゲートセットがユニバーサルと見なされる従来の (つまり、古典的な) コンピューティングの概念に似ています。
 クォンタムコンピューティングでは、qubit で実行できる有効な変換は、ユニタリの変換と測定です。
-クォンタムの変換を反転させる必要があるため、 *adjoint 操作*または複雑な共役転置は、クォンタムの計算に非常に重要です。
-Q#は、ゲートシーケンスを自動的に adjoint にコンパイルするメソッドを提供することによってこれを反映します。これにより、多くの場合、プログラマがコード adjoint を手にする必要がなくなります。 この例を次に示します。
+クォンタムの変換を反転させる必要があるため、 *adjoint 操作* または複雑な共役転置は、クォンタムの計算に非常に重要です。
+Q# は、ゲートシーケンスを自動的に adjoint にコンパイルするメソッドを提供することによってこれを反映します。これにより、多くの場合、プログラマがコード adjoint を手にする必要がなくなります。 この例を次に示します。
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -138,14 +138,14 @@ is Adj { // Auto-generate the adjoint of the operation
 ```
 
 これは簡単な例ですが (xref: のような < > 操作は自己完結型であるため)、より複雑な qubit 操作にとってどのように役立つかを確認できます。
-詳細については、「[操作と関数](xref:microsoft.quantum.guide.operationsfunctions)」を参照してください。
+詳細については、「 [操作と関数](xref:microsoft.quantum.guide.operationsfunctions)」を参照してください。
 
-クラシックコンピューターでは、1つのビットを1ビットにマップする関数は4つだけです。 これに対して、クォンタムコンピューターの1つの qubit には無限の数のユニタリ変換があります。 したがって、[*ゲート*](https://en.wikipedia.org/wiki/Quantum_logic_gate)と呼ばれるプリミティブなクォンタム操作の有限のセットでは、クォンタムコンピューティングで許可されている無限の一連のユニタリ変換を正確にレプリケートできません。 つまり、従来のコンピューティングとは異なり、クォンタムコンピューターでは、限られた数のゲートを使用して、可能なすべてのクォンタムプログラムを正確に実装することはできません。 そのため、コンピューターを使用することは、従来のコンピューターの場合と同じ意味では一般的ではありません。 結果として、一連のゲートがクォンタムコンピューティングのために*汎用*であると言うと、実際には、従来のコンピューティングの場合よりも若干弱いことを意味します。
-Universality の場合、クォンタムコンピューターでは、有限の長さのゲートシーケンスを使用して、有限エラー内のすべてのユニタリ行列を*概算*する必要があります。
+クラシックコンピューターでは、1つのビットを1ビットにマップする関数は4つだけです。 これに対して、クォンタムコンピューターの1つの qubit には無限の数のユニタリ変換があります。 したがって、 [*ゲート*](https://en.wikipedia.org/wiki/Quantum_logic_gate)と呼ばれるプリミティブなクォンタム操作の有限のセットでは、クォンタムコンピューティングで許可されている無限の一連のユニタリ変換を正確にレプリケートできません。 つまり、従来のコンピューティングとは異なり、クォンタムコンピューターでは、限られた数のゲートを使用して、可能なすべてのクォンタムプログラムを正確に実装することはできません。 そのため、コンピューターを使用することは、従来のコンピューターの場合と同じ意味では一般的ではありません。 結果として、一連のゲートがクォンタムコンピューティングのために *汎用* であると言うと、実際には、従来のコンピューティングの場合よりも若干弱いことを意味します。
+Universality の場合、クォンタムコンピューターでは、有限の長さのゲートシーケンスを使用して、有限エラー内のすべてのユニタリ行列を *概算* する必要があります。
 言い換えると、一連のゲートは、このセットからのゲートの積として、任意のユニタリ変換がほぼ書き込み可能である場合に、ユニバーサルゲートセットになります。 指定されたエラーが発生した場合は、 $ ゲート { } セットから G_N G_ 1、G_ { 2 } 、\ lドット $ のゲートが存在する必要があります。
 
 $$
-G_N G_ { N-1 } \cdots G_2 G_1-約 U です。$$
+G_N G_ { N-1 } \cdots G_2 G_1-約 U です。 $$
 
 マトリックス乗算の規則は、このシーケンスの最初のゲート演算を右から左に乗算することであるため、 $ G_N $ は、実際にはクォンタム状態ベクターに適用される最後のゲート演算です。 より具体的に言うと、このようなゲートセットは、すべての誤差許容範囲に対してユニバーサルであることを意味し $ > ます。たとえば、 $ $ G_1、\ lドットが存在し $ ます。これは、G_N G_1 G_N と U の間の距離が $ $ $ $ 最大で、非常に大きく $ $ なります。 理想的には、N の値に $ $ 対してこの距離を超えると、 $ $ poly は $ 1/\ イプシロンでスケーリング $ できます。
 
@@ -165,10 +165,10 @@ $$
 Y = \begin{bmatrix} 0 & -i \\\\ i & 0 \end{bmatrix} = T ^ 2ht ^ 4 HT ^ 6、 \qquad Z = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix} = T ^ 4。
 $$
 
-ここでは、操作 $ X $ 、 $ Y、 $ Z は特に頻繁に使用され、 $ $ creator Wolfgang p Li の後に[*p li 演算子*](https://en.wikipedia.org/wiki/Pauli_matrices)という名前が付けられています。
+ここでは、操作 $ X $ 、 $ Y、 $ Z は特に頻繁に使用され、 $ $ creator Wolfgang p Li の後に [*p li 演算子*](https://en.wikipedia.org/wiki/Pauli_matrices) という名前が付けられています。
 非 Clifford ゲート ( $ T ゲート) と共に $ 、これらの操作は、1つの qubit のすべてのユニタリ変換を概算するように構成できます。
 
-これらの操作、Bloch 球表現、および実装の詳細につい Q# ては、「[組み込みの操作と関数](xref:microsoft.quantum.libraries.standard.prelude#intrinsic-operations-and-functions)」を参照してください。
+これらの操作、Bloch 球表現、および実装の詳細につい Q# ては、「 [組み込みの操作と関数](xref:microsoft.quantum.libraries.standard.prelude#intrinsic-operations-and-functions)」を参照してください。
 
 これらのプリミティブからどのようにしてユニタリ変換を構築できるかの例として、上の Bloch 球に示されている3つの変換は、ゲートシーケンス $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \mapsto HZH \begin{bmatrix} 1 0 0 1 に対応して \\\\ \end{bmatrix} = \begin{bmatrix} \\\\ \end{bmatrix} $ います。
 

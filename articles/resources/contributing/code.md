@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 956b0957a5261b8a77bf18d776fbcc2853bfbfe7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b27d084bbe2cda878efa6250c52c0ae628637850
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866911"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834892"
 ---
 # <a name="contributing-code"></a>コードの投稿
 
@@ -31,10 +31,10 @@ ms.locfileid: "87866911"
 
 ### <a name="unit-tests"></a>単体テスト
 
-キャノンなどの Q# ライブラリを構成する関数、操作、およびユーザー定義型は、 [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/)リポジトリでの開発の一部として自動的にテストされます。
-たとえば、新しいプル要求が開かれたときに、 [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/)構成によって、クォンタムプログラミングコミュニティが依存している既存の機能が、プル要求の変更によって中断されていないことが確認されます。
+キャノンなどの Q# ライブラリを構成する関数、操作、およびユーザー定義型は、 [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) リポジトリでの開発の一部として自動的にテストされます。
+たとえば、新しいプル要求が開かれたときに、 [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) 構成によって、クォンタムプログラミングコミュニティが依存している既存の機能が、プル要求の変更によって中断されていないことが確認されます。
 
-最新バージョンでは、 Q# 属性を使用して単体テストが定義され `@Test("QuantumSimulator")` ます。 引数には、"QuantumSimulator"、"ToffoliSimulator"、"TraceSimulator"、または実行ターゲットを指定する完全修飾名のいずれかを指定できます。 さまざまな実行ターゲットを定義するいくつかの属性が、同じ呼び出し可能にアタッチされる場合があります。 一部のテストでは、で終了[Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/)したすべて Q# の関数と操作を `Test` [xunit](https://xunit.github.io/)フレームワークに公開する、非推奨の Microsoft Quantum パッケージが引き続き使用されます。 単体テストを定義するために、このパッケージは不要になりました。 
+最新バージョンでは、 Q# 属性を使用して単体テストが定義され `@Test("QuantumSimulator")` ます。 引数には、"QuantumSimulator"、"ToffoliSimulator"、"TraceSimulator"、または実行ターゲットを指定する完全修飾名のいずれかを指定できます。 異なる実行ターゲットを定義するいくつかの属性が、同じ呼び出し可能にアタッチされている可能性があります。 一部のテストでは、で終了[Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/)したすべて Q# の関数と操作を `Test` [xunit](https://xunit.github.io/)フレームワークに公開する、非推奨の Microsoft Quantum パッケージが引き続き使用されます。 単体テストを定義するために、このパッケージは不要になりました。 
 
 次の関数は、 <xref:microsoft.quantum.canon.fst> <xref:microsoft.quantum.canon.snd> 関数と関数が両方とも代表的な例で正しい出力を返すようにするために使用されます。
 またはの出力が正しくない場合は、ステートメントを使用して `Fst` `Snd` テストが `fail` 失敗します。
@@ -56,7 +56,7 @@ function PairTest () : Unit {
 }
 ```
 
-より複雑な条件を確認するには、「標準ライブラリ」ガイドの[「テスト」セクション](xref:microsoft.quantum.libraries.diagnostics)の手法を使用します。
+より複雑な条件を確認するには、「標準ライブラリ」ガイドの [「テスト」セクション](xref:microsoft.quantum.libraries.diagnostics) の手法を使用します。
 たとえば、次のテストでは、によって呼び出されたがと同じものであることを確認し `H(q); X(q); H(q);` <xref:microsoft.quantum.canon.applywith> `Z(q)` ます。
 
 ```Q#

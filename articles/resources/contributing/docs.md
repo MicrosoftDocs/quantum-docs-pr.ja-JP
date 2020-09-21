@@ -9,32 +9,32 @@ uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1110f32a6486de1a346b115fa928a098749b6690
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 20e9f8126a290f52701b6b0e525d7669a605d4c9
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866878"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759681"
 ---
 # <a name="improving-documentation"></a>ドキュメントの改善
 
 Quantum 開発キットのドキュメントでは、さまざまな形式を採用しています。これは、クォンタム開発者が情報をすぐに利用できるようにするためのものです。
 
 [コードとしてのドキュメント](https://www.writethedocs.org/guide/docs-as-code/)の原則に従うと、すべての Quantum 開発キットのドキュメントはコードとして書式設定され、Quantum 開発キットの構築に使用されるソースコードと同じ方法で Git を使用して管理されます。
-ほとんどの場合、コードのバッキングドキュメントは、さまざまな形式の[Markdown](https://daringfireball.net/projects/markdown/)で構成されています。これは、高度な書式が設定されたテキストを、コマンドライン、ide、ソース管理で簡単に使用できるプレーンテキスト形式で記述するための言語です。
-同様に、以下で詳しく説明するように、 [MathJax](https://www.mathjax.org/)ライブラリを使用して、LaTeX 言語を使用したドキュメントの数値演算を可能にします。
+ほとんどの場合、コードのバッキングドキュメントは、さまざまな形式の [Markdown](https://daringfireball.net/projects/markdown/)で構成されています。これは、高度な書式が設定されたテキストを、コマンドライン、ide、ソース管理で簡単に使用できるプレーンテキスト形式で記述するための言語です。
+同様に、以下で詳しく説明するように、 [MathJax](https://www.mathjax.org/) ライブラリを使用して、LaTeX 言語を使用したドキュメントの数値演算を可能にします。
 
 
 ただし、ドキュメントの各形式は、詳細によって多少異なります。
 
-- **概念説明のドキュメント**は、に公開されている一連の記事で構成されています。このドキュメントでは、 https://docs.microsoft.com/quantum クォンタムコンピューティングの基本から、インターチェンジ形式の技術仕様までのすべてを説明しています。 これらの記事は[Docfx-Flavored Markdown (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)で記述されています。これは、豊富なドキュメントセットの作成に使用される Markdown バリアントです。
+- **概念説明のドキュメント**は、に公開されている一連の記事で構成されています。このドキュメントでは、 https://docs.microsoft.com/quantum クォンタムコンピューティングの基本から、インターチェンジ形式の技術仕様までのすべてを説明しています。 これらの記事は [Docfx-Flavored Markdown (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)で記述されています。これは、豊富なドキュメントセットの作成に使用される Markdown バリアントです。
 - **API リファレンス**は、にパブリッシュされた各 Q# 関数、操作、およびユーザー定義型のページのセットです https://docs.microsoft.com/qsharp/api/ 。 これらのページでは、それぞれの呼び出しに対する入力と操作、および例と詳細情報へのリンクが文書化されています。 API リファレンスは、 Q# 各リリースの一部としてソースコードの小さな DFM ドキュメントから自動的に抽出されます。
-- 各サンプルに含まれている**readme.txt <!----> **ファイルと kata は、そのサンプルまたは kata の使用方法、使用方法、および Quantum 開発キットの残りの部分にどのように関連しているかを説明しています。 これらのファイルは、 [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/)を使用して記述されています。これは、コードリポジトリに直接ドキュメントを添付する場合によく使用される dfm に代わるものです。
+- 各サンプルに含まれている **readme.txt <!----> ** ファイルと kata は、そのサンプルまたは kata の使用方法、使用方法、および Quantum 開発キットの残りの部分にどのように関連しているかを説明しています。 これらのファイルは、 [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/)を使用して記述されています。これは、コードリポジトリに直接ドキュメントを添付する場合によく使用される dfm に代わるものです。
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>概念説明のドキュメントに貢献する
 
 概念説明または README ドキュメントの改善に寄与するために、は、必要に応じて、microsoft [**docs/QuantumKatas-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr/
-)、 [**microsoft/quantum**](https://github.com/Microsoft/Quantum)、または[**microsoft/**](https://github.com/Microsoft/QuantumKatas)にプル要求を開始します。
+)、 [**microsoft/quantum**](https://github.com/Microsoft/Quantum)、または [**microsoft/**](https://github.com/Microsoft/QuantumKatas)にプル要求を開始します。
 ここでは、以下のプル要求について詳しく説明しますが、ここでは、ドキュメントを改善するために注意が必要ないくつかの点について説明します。
 
 - 閲覧者は、さまざまな背景から Quantum 開発キットのドキュメントにアクセスできます。 高校をはじめとする学生の方は、在籍期間の教職員を対象にして、quantum コンピューティングの研究を実行するすべての人が、ドキュメントを読むことができます。 可能な限り、閲覧者の一部に関する豊富な知識を前提としてはなりません。わかりやすい説明を入力したり、他のリソースへのリンクを提供して詳細を参照したりできる場合に最も役立ちます。
@@ -52,7 +52,7 @@ Quantum 開発キットのドキュメントでは、さまざまな形式を採
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
 ```
 
-このコマンドは、 [ `Game.qs` `chsh-game` サンプルから](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)4 行のファイルをインポートし、 Q# 構文の強調表示の目的でコードとしてマークします。
+このコマンドは、 [ `Game.qs` `chsh-game` サンプルから](https://github.com/microsoft/Quantum/blob/main/samples/algorithms/chsh-game/Game.qs)4 行のファイルをインポートし、 Q# 構文の強調表示の目的でコードとしてマークします。
 このコマンドを使用すると、概念説明の記事とサンプルリポジトリ間でコードが重複しないようにすることができます。これにより、ドキュメント内のサンプルコードは常に最新の状態になります。
 
 ## <a name="contributing-to-the-api-references"></a>API リファレンスへの貢献

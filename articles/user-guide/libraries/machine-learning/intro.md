@@ -1,19 +1,20 @@
 ---
 title: Quantum Machine Learning Library
+description: Quantum システムで machine learning を使用する方法について説明します
 author: alexeib2
-ms.author: alexei.bocharov@microsoft.com
+ms.author: alexeib
 ms.date: 11/22/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 65b0aa6a7f385765933d4d89ce34901f77cf76ec
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863103"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833810"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>クォンタム Machine Learning の概要
 
@@ -70,8 +71,8 @@ $-シータ $ 内のパラメーターの中間 (または最終) 値を指定�
 
 \Mathcal{D} $ のトレーニングケース $ (x, y) \ は、RULE1 による $ として $x 推論されるラベルが、実際には $y $ とは異なる場合に $b $ で *間違った分類* と見なされます。 誤分類の全体的な数は、分類器の *トレーニングスコア* であり、バイアス $b $ になります。 *最適*な分類子バイアス $b $ は、トレーニングスコアを最小化します。 事前計算済み確率推定値 $ \{ P (M = y_2 | を指定すると、これを簡単に確認できます。U (\ シータ) x) |(x, *) \in\mathcal{D} \} $,、最大 $ \ log_2 (| \mathcal{D} |) を作成することによって、間隔 $ (-0.5, + 0.5) $ のバイナリ検索で最適な分類子バイアスを見つけることができます。$ steps。
 
-### <a name="reference"></a>関連項目
+### <a name="reference"></a>リファレンス
 
 この情報は、コードの再生を開始するのに十分なものである必要があります。 ただし、このモデルの詳細については、 [ *「回線中心のクォンタム分類子」、「Alex Bocharov、Krysta svore、および Nathan Wiebe」* の提案をお読みください。](https://arxiv.org/abs/1804.00633)
 
-次の手順で示すコードサンプルに加えて、[このチュートリアル](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/QuantumClassification)の「クォンタム分類」も参照してください。 
+次の手順で示すコードサンプルに加えて、[このチュートリアル](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/QuantumClassification)の「クォンタム分類」も参照してください。 

@@ -1,6 +1,6 @@
 ---
 title: 複数の qubits の説明: 2 つ以上の qubits に対して操作を実行する方法について説明します。
-author: QuantumWriter uid: microsoft. quantum: nawiebe@microsoft.com ms. 日付: 12/11/2017 ミリ秒。トピック: 記事のない場所 (i 以外):
+author: bradben uid: benbra: v-ms. date: 12/11/2017 ミリ秒。 topic: article no loc (場所: 記事の場所):
 - "Q#"
 - "$$v"
 - "$$"
@@ -89,7 +89,7 @@ author: QuantumWriter uid: microsoft. quantum: nawiebe@microsoft.com ms. 日付:
 クォンタムコンピューティングの真の力は、qubits の数を増やすと明らかになります。
 クォンタムの状態ベクターのベクター空間の次元が、qubits の数で指数関数的に増加するため、この機能は部分的に発生します。
 つまり、1つの qubit をモデル化することはできますが、50-qubit クォンタムの計算をシミュレートすると、既存のスーパースーパーの制限が確実にプッシュされます。
-1つの追加の qubit だけで計算のサイズを大きくすると、状態を格納するために必要なメモリが*倍増*し、計算時間が約*2 倍*になります。
+1つの追加の qubit だけで計算のサイズを大きくすると、状態を格納するために必要なメモリが *倍増* し、計算時間が約 *2 倍* になります。
 このように計算能力が急速に倍増するのは、比較的少数の qubits を使用しているクォンタムコンピューターが、今日の最も強力なスーパースーパーコンピューターと明日のコンピューティングタスクに比べてはるかに長いためです。
 
 クォンタムの状態ベクターに指数的な増加があるのはなぜですか。  このセクションの目的は、シングル qubit 状態からマルチ qubit 状態を構築するために使用されるルールを確認することと、一般的な多対ビットクォンタムコンピュータを形成するためにゲートセットに含める必要があるゲート操作について説明することです。
@@ -97,7 +97,7 @@ author: QuantumWriter uid: microsoft. quantum: nawiebe@microsoft.com ms. 日付:
 
 ## <a name="representing-two-qubits"></a>2つの Qubits を表す
 2つの状態の間の主な違いは、2つの値が2次元ではなく4次元であることです。
-これは、2つの状態の計算基準が、1つの "1 つの" 状態のすべての製品によって形成されているためです。  たとえば、\begin{align}
+これは、2つの状態の計算基準が、1つの "1 つの" 状態のすべての製品によって形成されているためです。  たとえば、 \begin{align}
 00 \equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 1 0 0 0 \end{bmatrix} & = \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} 、 \qquad 01 \equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} = \begin{bmatrix} 0 \\\\ 1 \\\\ 0 \\\\ 0 \end{bmatrix} 、\\\\
 10 \equiv \begin{bmatrix} 0 \\\\ 1 1 0 0 0 \end{bmatrix} \otimes \begin{bmatrix} \\\\ \end{bmatrix} & = \begin{bmatrix} \\\\ \\\\ 1 \\\\ 0 \end{bmatrix} 、 \qquad 11 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} = \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} 0 0 0 1。
 \end{align}
@@ -122,7 +122,7 @@ $$
 
 $$\psi\otimes\phi = \begin{bmatrix}1/ \sqrt { 2 } \\\\ 0 \\\\ 0 \\\\ 1/ \sqrt { 2 } \end{bmatrix} 。$$ 
 
-このような2つの qubit 状態は、シングル qubit 状態の管理されていない製品として記述することはできません。2つの qubits は、[*あり*](https://en.wikipedia.org/wiki/Quantum_entanglement)であると言います。  疎に言うと、クォンタムの状態は、1つの qubit 状態の状態を維持したものと考えることはできません。そのため、状態が保持する情報は、qubit のいずれかに限定されません。  この情報は、2つの状態の間の相関関係でローカルではなく保存されます。  このような非局所情報は、古典的なコンピューティングに対するクォンタムコンピューティングの主要な特徴の1つであり、クォンタムの電話と[クォンタムのエラー修正](xref:microsoft.quantum.libraries.error-correction)[を含むさまざま](https://github.com/microsoft/Quantum/tree/master/samples/getting-started/teleportation)なクォンタムプロトコルに不可欠です。
+このような2つの qubit 状態は、シングル qubit 状態の管理されていない製品として記述することはできません。2つの qubits は、 [*あり*](https://en.wikipedia.org/wiki/Quantum_entanglement)であると言います。  疎に言うと、クォンタムの状態は、1つの qubit 状態の状態を維持したものと考えることはできません。そのため、状態が保持する情報は、qubit のいずれかに限定されません。  この情報は、2つの状態の間の相関関係でローカルではなく保存されます。  このような非局所情報は、古典的なコンピューティングに対するクォンタムコンピューティングの主要な特徴の1つであり、クォンタムの電話と[クォンタムのエラー修正](xref:microsoft.quantum.libraries.error-correction)[を含むさまざま](https://github.com/microsoft/Quantum/tree/main/samples/getting-started/teleportation)なクォンタムプロトコルに不可欠です。
 
 ## <a name="measuring-two-qubit-states"></a>2つのビット状態の測定 ##
 2つのビット状態の測定は、単一の qubit 測定と非常によく似ています。 状態の測定
@@ -137,29 +137,29 @@ $$
 確率 $ が $ $ | \alpha _ { 00 } | ^ 2、 $ $ 01 $ が $ 確率が 01 ^ 2、10が確率が 10 ^ 2、および確率が 11 ^ 2 である00を生成します。 | \alpha _ { } | $ $ $ $ | \alpha _ { } | $ $ $ $ | \alpha _ { } | $ 変数 $ \alpha _ { 00 } 、 \alpha _ { 01 } 、 \alpha _ { 10 } 、 $ および $ 11 は、この接続を明確にするために意図的に名前が付けられていました。 \alpha _ { } $ 測定の後、結果が00の場合、 $ $ 2 つの qubit システムのクォンタムの状態が折りたたまれ、現在の状態になります。
 
 $$
-    モスクワ\equiv
+    モスクワ \equiv
     \begin{bmatrix}
-        1\\\\ 
-        0\\\\ 
-        0\\\\ 
+        1 \\\\ 
+        0 \\\\ 
+        0 \\\\ 
         0 \end{bmatrix} 。
 $$
 
 2つの qubit クォンタム状態の1つの qubit だけを測定することもできます。 Qubits の1つだけを測定する場合、測定の影響はわずかに異なります。これは、状態全体が1つのサブシステムにのみ折りたたまれるのではなく、すべての状態が計算ベースの状態に折りたたまれないためです。  言い換えると、1つの qubit だけを測定すると、サブシステムの1つだけが折りたたまれますが、すべてが折りたたまれるわけではありません。  
 
-これを確認するには、次の状態の最初の qubit を測定することを検討し $ ます。これは、 $ 最初に "0" 状態に設定された2つの Qubit に Hadamard transform H を適用することによって形成されます。$$
+これを確認するには、次の状態の最初の qubit を測定することを検討し $ ます。これは、 $ 最初に "0" 状態に設定された2つの Qubit に Hadamard transform H を適用することによって形成されます。 $$
 H ^ 2 (1 0 1 0) 1 2 1 1 1 1 1 1-1 1-1 1 1-1-1 1-1-1 1-1-1 1-1-1 1 0 0 0 1 1 1 1 1 1 件の { \otimes } \left \begin{bmatrix} \\\\ \end{bmatrix} \otimes \begin{bmatrix} \\\\ \end{bmatrix} \right = \frac { } { } \begin{bmatrix} & & & \\\\ & & & \\\\ & & & \\\\ & & & \end{bmatrix} \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} = \frac { } { } \begin{bmatrix} 結果 0 1 2 \\\\ \\\\ \\\\ \end{bmatrix} \mapsto \begin{cases} \text { } = & \frac { } { \sqrt { } } \begin{bmatrix} 1 \\\\ 1 0 0 \\\\ \\\\ \end{bmatrix} \\\\ \text { 結果 } = 1 & \frac { 1 } { \sqrt { 2 } } \begin{bmatrix} 0 \\\\ 0 1 1 \\\\ \\\\ \end{bmatrix} \\\\ \end{cases} 。  
 $$
 どちらの結果も50% の発生確率があります。  どちらの場合も、結果は50% の確率で intuited ことができます。これは、最初の量子状態ベクトルが、 $ $ 最初の $ qubit の0とのスワップで不変であるという事実からです $ 。
 
-最初または2番目の qubit を測定するための数学的規則は単純です。  $E_k $ が $ k ^ { rm 番目の計算ベースのベクトルになるようにし、が } $ $ $ すべての e_k のセットになるようにします。これは、 $ 問題の $ qubit が $ $ その値 k の値1を受け取るようにし $ $ ます。  たとえば、最初の qubit の測定に関心がある場合、 $ $ は $ e_1 \equiv 10 $ と $ e_3 11 で構成され \equiv $ ます。  同様に、2番目の qubit に関心がある場合は、 $ $ $ e_2 \equiv 01 $ と e_3 11 で構成され $ \equiv $ ます。  その後、選択された qubit を1に測定する確率 $ $ は、状態ベクターになります。$\psi$
+最初または2番目の qubit を測定するための数学的規則は単純です。  $E_k $ が $ k ^ { rm 番目の計算ベースのベクトルになるようにし、が } $ $ $ すべての e_k のセットになるようにします。これは、 $ 問題の $ qubit が $ $ その値 k の値1を受け取るようにし $ $ ます。  たとえば、最初の qubit の測定に関心がある場合、 $ $ は $ e_1 \equiv 10 $ と $ e_3 11 で構成され \equiv $ ます。  同様に、2番目の qubit に関心がある場合は、 $ $ $ e_2 \equiv 01 $ と e_3 11 で構成され $ \equiv $ ます。  その後、選択された qubit を1に測定する確率 $ $ は、状態ベクターになります。 $\psi$
 
 $$
 P ( \text { 結果 } = 1) = \sum _ { e_k \text { セット } S } \psi ^ \dagger e_k e_k ^ \dagger \psi です。
 $$
 
 > [!NOTE]
->このドキュメントでは、リトルエンディアン形式を使用して計算のラベルを付けています。 リトルエンディアンフォーマットでは、最下位ビットが最初に表示されます。 たとえば、リトルエンディアン形式の4番目の数値は、ビット001の文字列で表されます。
+> このドキュメントでは、リトルエンディアン形式を使用して計算のラベルを付けています。 リトルエンディアンフォーマットでは、最下位ビットが最初に表示されます。 たとえば、リトルエンディアン形式の4番目の数値は、ビット001の文字列で表されます。
 
 各 qubit 測定 $ では0または1のみが生成されるため $ $ $ 、0を測定する確率 $ $ は単に $ 1-P ( \text { 結果 } = 1) になり $ ます。  その理由は、1を測定する確率に対してのみ、式を明示的に指定するためです $ $ 。
 
@@ -198,35 +198,35 @@ $$
 たとえば、CNOT (制御された) ゲートは、一般的に使用される2つの qubit ゲートであり、次のような種類の表で表されています。
 
 $$
-\operatorname{CNOT 1 \ 0 \ 0 \ 0 0 \ 1 \ 0 \ 0 0 \ 0 \ 0 \ } = \begin{bmatrix} \\\\ \\\\ 1 \\\\ 0 \ 0 \ 1 \ 0\end{bmatrix}
+\operatorname{CNOT 1 \ 0 \ 0 \ 0 0 \ 1 \ 0 \ 0 0 \ 0 \ 0 \ } = \begin{bmatrix}  \\\\ \\\\  1 \\\\  0 \ 0 \ 1 \ 0 \end{bmatrix}
 $$
 
 両方の qubit にシングル qubit ゲートを適用して、2つの qubit ゲートを形成することもできます。 たとえば、ゲートを適用する場合は、 
 
 $$
 \begin{bmatrix}
-a \ b \\\\ c \ d\end{bmatrix}
+a \ b \\\\ c \ d \end{bmatrix}
 $$
 
 and
 
 $$\begin{bmatrix}
-e \ f \\\\ g \ h\end{bmatrix}
+e \ f \\\\ g \ h \end{bmatrix}
 $$
 
-1番目と2番目の qubits に対して、これは、次のようになります。$$\begin{bmatrix}
-a \ b \\\\ c \ d\end{bmatrix}
+1番目と2番目の qubits に対して、これは、次のようになります。 $$\begin{bmatrix}
+a \ b \\\\ c \ d \end{bmatrix}
 \otimes 
 \begin{bmatrix}
-e \ f \\\\ g \ h\end{bmatrix}=
+e \ f \\\\ g \ h \end{bmatrix}=
     \begin{bmatrix}
-    ae \ af \ bf\\\\
-    ag \ ah \ bg \ bh\\\\
-    ce \ cf \ de \ df\\\\
+    ae \ af \ bf \\\\
+    ag \ ah \ bg \ bh \\\\
+    ce \ cf \ de \ df \\\\
     cg \ ch \ dg \ dh \end{bmatrix} 。$$
 そのため、いくつかの既知のシングル qubit ゲートの最新の製品を利用して、2つの qubit ゲートを形成できます。 2つの qubit ゲートの例 $ とし \otimes $ て、h h、 $ x \otimes \boldone $ 、および $ x Z があり \otimes $ ます。
 
-いずれの2つのシングル qubit ゲートでも2つのビットゲートが定義されていますが、その場合は、元の状態のままであることに注意してください。 すべての2つのビットゲートが、シングル qubit ゲートの全製品として書き込まれるとは限りません。  このようなゲートは、 *entangling*ゲートと呼ばれます。 Entangling ゲートの一例として、CNOT gate が挙げられます。
+いずれの2つのシングル qubit ゲートでも2つのビットゲートが定義されていますが、その場合は、元の状態のままであることに注意してください。 すべての2つのビットゲートが、シングル qubit ゲートの全製品として書き込まれるとは限りません。  このようなゲートは、 *entangling* ゲートと呼ばれます。 Entangling ゲートの一例として、CNOT gate が挙げられます。
 
 制御されていないゲートの背後にある直感は、任意のゲートに汎用化できます。  一般に、制御されたゲートは、特定の qubit が1の場合を除き、id として機能するゲートです (ie にはアクションがありません) $ $ 。  ここでは、制御されたユニタリを示します。この例では、x というラベルが付いた $ x $ $ \Lambda \_ (U) を使用し $ ます。  例として、 $ \Lambda 0 (u) e \_ { 1 } \otimes { \psi } = e \_ { 1 } \otimes U { \psi } $ と $ \Lambda \_ 0 (u) e \_ { 0 } \otimes { \psi } = e \_ { 0 です } \otimes { \psi } $ 。ここで、 $ e \_ 0 $ と $ e \_ 1 $ は、値 $ 0 および1に対応する1つの qubit の計算ベースのベクトルです $ $ $ 。  たとえば、次のような制御された $ z ゲートを考えてみます。 $$$
 \Lambda\_0 (Z) 1 0 0 0 0 1 0 0 0 1 0 0 0 0 = \begin{bmatrix} & & & \\\\ & & & \\\\ & & & \\\\ & & & -1 \end{bmatrix} = ( \boldone \otimes h) \operatorname { cnot } ( \boldone \otimes h)。
@@ -251,7 +251,7 @@ $$
 
 \begin{align}
 &(X \otimes \operatorname { cnot } _ { 12 } \otimes \boldone \otimes \boldone \otimes \boldone \otimes \boldone ) \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} \\\\ \end{bmatrix} \otimes \begin{bmatrix} \\\\ \end{bmatrix} \otimes \begin{bmatrix} \\\\ \end{bmatrix} \otimes \begin{bmatrix} \\\\ \end{bmatrix} \otimes \begin{bmatrix} \\\\ 0 1 0 1 1 0 1 0 0 1\end{bmatrix}\\\\
-&\qquad\qquad\equiv0011001。\end{align}
+&\qquad\qquad\equiv 0011001。 \end{align}
 
 多くの qubit システムでは、多くの場合、クォンタムコンピューターの一時的なメモリとして機能する qubit を割り当てたり、割り当てを解除したりする必要があります。  このような qubit は ancilla と呼ばれます。  既定では、qubit 状態は割り当て時に e_0 に初期化されると仮定し $ $ ます。  また、割り当てを解除する前に e_0 するために再び返されると想定 $ $ しています。  この想定は重要です。そのため、ancilla qubit が割り当て解除されたときに別の qubit レジスタを使用すると、割り当て解除のプロセスによって ancilla が破損する可能性があります。  このため、このような qubits は解放される前に初期状態に戻されると常に想定されています。
 

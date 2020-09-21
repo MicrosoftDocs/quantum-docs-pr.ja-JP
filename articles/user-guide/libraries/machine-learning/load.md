@@ -2,25 +2,25 @@
 title: 典型的データを読み込んでいます
 description: Microsoft Quantum Development Kit (QDK) を使用して、独自のデータセットを読み込んで分類器モデルをトレーニングする方法について説明します。
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.load
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 26ba7411c9ade1d6c4b606e8c12c10ade18fc584
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: cd6fdb6bb33a65ee02ac8c43f40df9abeff9c841
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868833"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833705"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>独自のデータセットを読み込んで分類する
 
 この短いチュートリアルでは、独自のデータセットを読み込んで、Quantum 開発キット (QDK) で分類器モデルをトレーニングする方法について説明します。
 
-データの格納には、 [JSON ファイル](https://en.wikipedia.org/wiki/JSON)などの標準化されたシリアル化形式を使用することを強くお勧めします。
+データの格納には、 [JSON ファイル](https://en.wikipedia.org/wiki/JSON) などの標準化されたシリアル化形式を使用することを強くお勧めします。
 このような形式では、Python や .NET エコシステムなどのさまざまなフレームワークとの高い互換性が提供されます。
 特に、サンプルから直接コードをコピーして貼り付けることができるように、データの読み込みにテンプレートを使用することをお勧めします。
 
@@ -146,7 +146,7 @@ $N = $2 のトレーニングデータセット $ (x, y) $ があるとします
 
 ### <a name="python"></a>[Python](#tab/tabid-python)
 
-Python には、JSON でシリアル化されたデータを操作するための[組み込み `json` パッケージ](https://docs.python.org/3.7/library/json.html)が用意されています。
+Python には、JSON でシリアル化されたデータを操作するための [組み込み `json` パッケージ](https://docs.python.org/3.7/library/json.html) が用意されています。
 
 :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="4-5,20-22":::
 

@@ -2,19 +2,19 @@
 title: で qubit レベルのプログラムを作成およびシミュレートする Q#
 description: 個々の qubit レベルで動作するクォンタムプログラムの記述とシミュレーションに関するステップバイステップのチュートリアル
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 0dbeee8e092c830576ba8f79733035cdeeac11de
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863333"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834960"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>チュートリアル: Q で qubit レベルのプログラムを記述してシミュレートする\#
 
@@ -132,9 +132,9 @@ Q# には、名前空間の操作として多くの基本的なクォンタム�
 `H`(Hadamard) ゲートを個々の qubits に適用するだけでなく、QFT 回線は主に制御された回転で構成され [`R1`](xref:microsoft.quantum.intrinsic.r1) ます。
 `R1(θ, <qubit>)`一般的な操作では、 {0} qubit の $ \ket $ コンポーネントが変更されず、$ \ket $ コンポーネントに $e ^ {i-シータ} $ の回転が適用され {1} ます。
 
-#### <a name="controlled-operations"></a>制御される操作
+#### <a name="controlled-operations"></a>制御された操作
 
-Q# を使用すると、1つまたは複数のコントロール qubits に対する操作の実行条件を非常に簡単に指定できます。
+Q# を使用すると、1つまたは複数のコントロール qubits に対して操作を実行する条件を非常に簡単にすることができます。
 一般に、を呼び出しの前にを付けるだけで、 `Controlled` 操作の引数は次のように変更されます。
 
  `Op(<normal args>)` $ \ から $ `Controlled Op([<control qubits>], (<normal args>))` 。
@@ -244,7 +244,7 @@ namespace NamespaceQFT {
 
 Q#ファイルと操作が完了すると、quantum プログラムを呼び出してシミュレートする準備ができました。
 
-## <a name="execute-the-program"></a>プログラムを実行する
+## <a name="run-the-program"></a>プログラムの実行
 
 ファイルで操作を定義したので、この操作を呼び出して、 Q# `.qs` 返されたすべてのクラシックデータを観察する必要があります。
 ここでは、返されるものはありません (上記の操作によって定義された操作が返されることを思い出して `Unit` ください) が、後で Q# 測定結果 () の配列を返すように操作を変更する場合 `Result[]` は、このことに対処します。
@@ -269,7 +269,7 @@ Q#コマンドプロンプトからプログラムを実行する場合は、フ
 dotnet run
 ```
 
-実行すると、次の出力がコンソールに出力され `Message` `DumpMachine` ます。
+完了すると、次の出力がコンソールに出力され `Message` `DumpMachine` ます。
 
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
@@ -314,9 +314,9 @@ C# ホストには、次の4つの部分があります。
     この例には何もありません。
 3. 量子アルゴリズムを実行します。 
     各 Q# 操作では、同じ名前の C# クラスが生成されます。 
-    このクラスには、操作を**非同期に**実行する `Run` メソッドがあります。
-    実行が非同期とは、実際のハードウェアでの実行が非同期になるということです。 
-    メソッドは非同期であるため `Run` 、メソッドを呼び出し `Wait()` ます。これは、タスクが完了するまで実行をブロックし、同期的に結果を返します。 
+    このクラスには、 `Run` 操作を **非同期**に実行するメソッドがあります。
+    実際のハードウェアで実行すると非同期に実行されるため、実行は非同期です。 
+    メソッドは非同期であるため `Run` 、メソッドを呼び出し `Wait()` ます。これにより、タスクが完了するまで実行がブロックされ、同期的に結果が返されます。 
 4. 返された操作の結果を処理します。
     現時点では、操作は何も返しません。
 
@@ -396,7 +396,7 @@ Qubit が `2` "最も重要" であるということは、基本的な状態ベ
 
 $ $ \ket{\psi} \_ {initial} = \ket {000} $ $
 
-to 
+を 
 
 $ $ \begin{align} \ket{\psi} \_ {final} &= \ frac {1} {\ sqrt {8} } \ 左 (\ket {000} + \ket {001} + \ket + \ket {010} {011} + \ket {100} + \ket {101} + \ket {110} + \ket {111} /right) \\ \\ &= \ frac {1} {\ sqrt{2 ^ n}} \ sum \_ {j = 0} ^ {2 ^ n-1} \ket{j}, \end{align} $ $
 
@@ -499,7 +499,7 @@ $ $ \begin{align} \ket{\psi} \_ {final} &= \ frac {1} {\ sqrt {8} } \ 左 (\ket 
 }
 ```
 
-コマンドプロンプトから作業している場合、返された配列は、実行の最後にコンソールに直接出力されます。
+コマンドプロンプトから作業している場合、返された配列は、実行の最後にコンソールに直接表示されます。
 それ以外の場合は、返された配列を処理するようにホストプログラムを更新します。
 
 #### <a name="command-prompt"></a>[コマンド プロンプト](#tab/tabid-cmdline)

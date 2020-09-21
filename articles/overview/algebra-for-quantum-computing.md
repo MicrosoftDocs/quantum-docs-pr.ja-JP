@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8b06eba9cadce84aca6f87e4451026ca2ffc794f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d7a8dff8d491a9ce6451148d2d27121f1c190ed0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867643"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759324"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>量子コンピューティングの線形代数
 
@@ -22,8 +22,8 @@ ms.locfileid: "87867643"
 
 [量子物理学の基本概念](xref:microsoft.quantum.overview.understanding)をよくわかっていることが量子コンピューティングの理解に役立つ可能性があるのと同様に、線形代数の基礎知識が、量子アルゴリズムの仕組みを理解するうえで役立つと考えられます。 少なくとも、**ベクトル**と**行列乗算**について理解しておくことをお勧めします。 これらの代数の概念についての知識を新たにする必要がある場合は、次のチュートリアルに基本的な説明があります。
 
-- [線形代数に関する Jupyter Notebook のチュートリアル](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
-- [複雑な算術演算に関する Jupyter Notebook のチュートリアル](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)
+- [線形代数に関する Jupyter Notebook のチュートリアル](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)
+- [複雑な算術演算に関する Jupyter Notebook のチュートリアル](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)
 - [量子計算の線形代数](https://cds.cern.ch/record/1522001/files/978-1-4614-6336-8_BookBackMatter.pdf)
 - [線形代数の基礎](https://www.math.ubc.ca/~carrell/NB.pdf)
 - [量子計算の概要](https://www.codeproject.com/Articles/5155638/Quantum-Computation-Primer-Part-1#exploring-quantum-superposition)

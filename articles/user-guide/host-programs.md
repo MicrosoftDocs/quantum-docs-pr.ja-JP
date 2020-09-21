@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f1eca44dabd72cd107d72d3b9e3ad1081c19c27d
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: f24c608ffc6522cb50f512de1a02b3db4b290e83
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992192"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759818"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>プログラムを実行する方法 Q#
 
@@ -250,7 +250,7 @@ BorrowedWidth   0
 ホストプログラムを使用する主な利点の1つは、プログラムによって返される古典的なデータを Q# ホスト言語でさらに処理できることです。
 これには、一部の高度なデータ処理 (で内部で実行できないものなど) があり Q# 、その結果に基づいてさらにアクションを呼び出すことができ Q# ます。また、結果をプロットするのと同じように簡単です。 Q#
 
-一般的なスキームを次に示します。以下では、Python と C# の特定の実装について説明します。 F # ホストプログラムを使用するサンプルについては、 [.net 相互運用性のサンプル](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet)を参照してください。
+一般的なスキームを次に示します。以下では、Python と C# の特定の実装について説明します。 F # ホストプログラムを使用するサンプルについては、 [.net 相互運用性のサンプル](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet)を参照してください。
 
 <br/>
 <img src="../media/hostprograms_host_program_diagram.png" alt="Q# program from a host program" width="700">
@@ -409,7 +409,7 @@ using NamespaceName;                              // make the Q# namespace avail
 ```
 
 次に、C# の名前空間、他のいくつかのビットと部分 (次の完全なコードブロックを参照) と、必要なすべてのクラシックプログラミング (呼び出しが許容されるように引数を計算するなど) を宣言し Q# ます。
-この場合、後者は必要ありませんが、このような使用例については、  [.net 相互運用性のサンプル](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet)を参照してください。
+この場合、後者は必要ありませんが、このような使用例については、  [.net 相互運用性のサンプル](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet)を参照してください。
 
 #### <a name="target-machines"></a>ターゲット コンピューター
 
@@ -580,7 +580,7 @@ BorrowedWidth   0
 Q# Jupyter Notebook では、I カーネルを使用します Q# 。これにより、 Q# すべての命令、メモ、およびその他のコンテンツと共に、呼び出し可能なを1つのノートブックで定義、コンパイル、および実行することが---ます。
 つまり、ファイルの内容をインポートして使用することはできますが、 `*.qs` Q# 実行モデルでは必要ありません。
 
-ここでは、上で定義した操作を実行する方法について詳しく説明します Q# が、jupyter notebook の使用方法の概要については、「 Q# 概要」と「 [ Q# jupyter notebook](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)」を参照してください。
+ここでは、上で定義した操作を実行する方法について詳しく説明します Q# が、jupyter notebook の使用方法の概要については、「 Q# 概要」と「 [ Q# jupyter notebook](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)」を参照してください。
 
 ### <a name="defining-operations"></a>定義 (操作を)
 
@@ -591,7 +591,7 @@ Jupyter Notebook では Q# 、 Q# ファイルの名前空間内と同様にコ�
 
 > [!NOTE]
 > [Microsoft の quantum](xref:microsoft.quantum.intrinsic)および[microsoft の quantum](xref:microsoft.quantum.canon) (やなど) からの呼び出し [`H`](xref:microsoft.quantum.intrinsic.h) は、 [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) jupyter notebook のセル内で定義されている操作で自動的に使用できるようになります。 Q#
-> ただし、外部ソースファイルからのコードには当てはまりません Q# ( [概要 Q# と Jupyter notebook](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)に示されているプロセス)。 
+> ただし、外部ソースファイルからのコードには当てはまりません Q# ( [概要 Q# と Jupyter notebook](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)に示されているプロセス)。 
 > 
 
 同様に、操作を定義するには、コードの記述 Q# とセルの実行のみが必要です。

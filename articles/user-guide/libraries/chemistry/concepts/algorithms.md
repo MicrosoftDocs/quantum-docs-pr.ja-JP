@@ -1,20 +1,20 @@
 ---
 title: Hamiltonian Dynamics のシミュレーション
 description: Trotter-Suzuki の数式と qubitization を使用して Hamiltonian のシミュレーションを操作する方法について説明します。
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 40f79a66ae95e20a8b1c19af735eedca5e3c15ef
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 299eb1484a697ad9d1577aabb44ccb61e908bae3
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869530"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834008"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics のシミュレーション
 
@@ -46,9 +46,9 @@ $R $ を時間の進化に使用されるステップの数にします。その
 Diagonalized 演算子は、Clifford 操作 (クォンタムコンピューティングの標準ゲート) を使用して実行できるため、簡単にシミュレートできます。
 さらに、これらの値が diagonalized されると、それらが作用する qubits のパリティを計算することで、それらの値を見つけることができます。
 
-たとえば、$ $ e ^ {-Ix/otimes X t} = (hotimes H) e ^ {-Iz\ otimes Z t} (hotimes H), $ $ where $ $ e ^ {-i Z/otimes Z t} = \begin{bmatrix} e ^ {-it &} の 0 & 0 & 0\\\
-        0 & e ^ {i t} & 0 & 0\\\
-        0 & 0 & e ^ {it} & 0\\\
+たとえば、$ $ e ^ {-Ix/otimes X t} = (hotimes H) e ^ {-Iz\ otimes Z t} (hotimes H), $ $ where $ $ e ^ {-i Z/otimes Z t} = \begin{bmatrix} e ^ {-it &} の 0 & 0 & 0 \\\
+        0 & e ^ {i t} & 0 & 0 \\\
+        0 & 0 & e ^ {it} & 0 \\\
         0 & 0 & 0 & e ^ {-it} \end{bmatrix}.
 $ $ ここ、$e ^ {-iHt} \ket {00} = e ^ {it} \ket {00} $ and $e ^ {-iht} \ket {01} = e ^ {-it} \ket {01} $。これは、$0 $ のパリティが $0 $ で、ビット文字列 $1 $ のパリティは $1 $ であるという事実の結果として直接確認できます。
 
@@ -63,10 +63,10 @@ $ $ ここ、$e ^ {-iHt} \ket {00} = e ^ {it} \ket {00} $ and $e ^ {-iht} \ket {
     }
 ```
 
-Fermionic Hamiltonians の場合、[ヨルダン– Wigner 分解](xref:microsoft.quantum.chemistry.concepts.jordanwigner)は、Hamiltonian を p li 演算子の合計に簡単にマップします。
+Fermionic Hamiltonians の場合、 [ヨルダン– Wigner 分解](xref:microsoft.quantum.chemistry.concepts.jordanwigner) は、Hamiltonian を p li 演算子の合計に簡単にマップします。
 これは、化学をシミュレートするために、上記のアプローチを簡単に調整できることを意味します。
-次に、このようなシミュレーションを化学内で実行する方法の例を、以下に示します。この例では、このようなシミュレーションを実行する方法を簡単に説明します。
-開始点は、コードでクラスのインスタンスとして表現される、Fermionic Hamiltonian の[ヨルダンの Wigner エンコード](xref:microsoft.quantum.chemistry.concepts.jordanwigner)です `JordanWignerEncoding` 。
+次に、このようなシミュレーションを化学内で実行する方法の簡単な例を、次の例に示します。この例では、このようなシミュレーションを使用して、すべてのを手動でループします。
+開始点は、コードでクラスのインスタンスとして表現される、Fermionic Hamiltonian の [ヨルダンの Wigner エンコード](xref:microsoft.quantum.chemistry.concepts.jordanwigner) です `JordanWignerEncoding` 。
 
 ```csharp
     // This example uses the following namespaces:
@@ -90,7 +90,7 @@ Fermionic Hamiltonians の場合、[ヨルダン– Wigner 分解](xref:microsof
 ```
 
 シミュレーションアルゴリズムによって利用されるヨルダン– Wigner 表現形式は、 Q# ユーザー定義型 `JordanWignerEncodingData` です。
-内で Q# は、この形式は便利な関数に渡されます。この関数は、 `TrotterStepOracle` Trotter-Suzuki インテグレーターを使用して、その実行に必要な他のパラメーターに加えて、時間の短縮に関する演算子を返します。
+内で Q# は、この形式は便利な関数に渡されます。この関数は、 `TrotterStepOracle` Trotter-Suzuki インテグレーターを使用して、その実行に必要なその他のパラメーターに加えて、時間の短縮に関する演算子を返します。
 
 ```qsharp
 // qSharpData passed from driver
@@ -118,7 +118,7 @@ using(qubits = Qubit[nQubits]){
 }
 ```
 
-重要なのは、この実装では、[クォンタムコンピューターを使用した電子構造 Hamiltonians のシミュレーション](https://arxiv.org/abs/1001.3855)で説明されているいくつかの最適化を適用し、必要なシングル qubit 回転数を最小限に抑えるためにクォンタム[化学のクォンタムアルゴリズムを改善](https://arxiv.org/abs/1403.1539)し、シミュレーションエラーを減らします。
+重要なのは、この実装では、 [クォンタムコンピューターを使用した電子構造 Hamiltonians のシミュレーション](https://arxiv.org/abs/1001.3855) で説明されているいくつかの最適化を適用し、必要なシングル qubit 回転数を最小限に抑えるためにクォンタム [化学のクォンタムアルゴリズムを改善](https://arxiv.org/abs/1403.1539) し、シミュレーションエラーを減らします。
 
 ## <a name="qubitization"></a>Qubitization
 
@@ -130,9 +130,9 @@ Qubitization は Trotter 数式よりも多くの qubits を必要とします�
 1つ目は、$H = \ sum_j h_j H_j、および $H _j $ および $h _j $0 です。
 Qubitization は、反射のペアを実行することで、$ $W = e ^ {\ pm i \ cos ^ {-1} (H/| h | _1)}, $ $ where $ | H | _1 = \ sum_j | h_j | $ と等価の演算子を実装します。
 次の手順では、ウォーク演算子の固有値を $e ^ {i\ pm \ cos ^ {-1} (E_k/| h | _1)} $ から変換します。ここで $E _k $ は $H $ の固有値 $e ^ {-iE_k t} $ です。
-これは、クォンタムの[シグナル処理](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.118.010501)など、さまざまなクォンタムの単数値の変換方法を使用して実現できます。
+これは、クォンタムの [シグナル処理](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.118.010501)など、さまざまなクォンタムの単数値の変換方法を使用して実現できます。
 
-または、静的な数量のみが必要な場合 (Hamiltonian の接地エネルギーなど)、その結果のコサインを取得することにより、$W $ に直接[位相推定](xref:microsoft.quantum.libraries.characterization)を適用して、結果からの地表エネルギーを推定することができます。
+または、静的な数量のみが必要な場合 (Hamiltonian の接地エネルギーなど)、その結果のコサインを取得することにより、$W $ に直接 [位相推定](xref:microsoft.quantum.libraries.characterization) を適用して、結果からの地表エネルギーを推定することができます。
 これは、クォンタムの単数値の変換方法を使用するのではなく、クラシックデプロイによってスペクトル変換を実行できるため、重要です。
 
 より詳細なレベルでは、qubitization の実装には、Hamiltonian のインターフェイスを提供する2つのサブルーチンが必要です。
@@ -145,7 +145,7 @@ $ 演算子は、実際には実際にはリフレクション操作であるこ
 
 2番目のサブルーチンは、$ & によって呼び出されます。
 Select 操作では、各 Hamiltonian terms _j $H にアクセスする手段が提供されていますが、prepare サブルーチンでは係数にアクセスするためのメソッドを使用 $h _j $,-begin{} \operatorname{Prepare}\ket {0} = \ sum_j \sqrt{\frac{h_j} {| H | _1}} \ket{j}.
-次に、乗算制御されたフェーズゲートを使用して、$ $ \Lambda\ket {0} ^ {/otimes n} = \begin{cases} \- \ket{x} & \ text{if} x = 0 と表示されます。\\\
+次に、乗算制御されたフェーズゲートを使用して、$ $ \Lambda\ket {0} ^ {/otimes n} = \begin{cases} \- \ket{x} & \ text{if} x = 0 と表示されます。 \\\
         \ket{x} & \text{otherwise} \end{cases}.
 $$
 
@@ -157,10 +157,10 @@ $ Qubitization を直接使用することはできませんが、$-\begin{align
 これらのサブルーチンは、で簡単に設定 Q# できます。
 例として、$H = X_1 + X_2 + Z_1 Z_2 $ という単純な qubit の横形式の Hamiltonian を考えてみます。
 この場合、 Q# $ 演算子を実装するコードはによって呼び出されますが、 <xref:microsoft.quantum.canon.multiplexoperations> $-演算子はを使用して実装することができ <xref:microsoft.quantum.preparation.preparearbitrarystate> ます。
-一例として、このモデルのシミュレーションを含む例[ Q# があります。](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)
+一例として、このモデルのシミュレーションを含む例[ Q# があります。](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)
 
 任意の化学の問題に対してこれらの手順を手動で指定すると、多くの労力が必要になります。これは、化学ライブラリを使用しても回避できます。
-上記の Trotter – Suzuki シミュレーションアルゴリズムと同様に、は、 `JordanWignerEncodingData` `QubitizationOracle` 実行に必要な他のパラメーターに加えて、ウォーク演算子を返す便利な関数に渡されます。
+上記の Trotter – Suzuki シミュレーションアルゴリズムと同様に、は、その `JordanWignerEncodingData` `QubitizationOracle` 実行に必要なその他のパラメーターに加えて、ウォーク演算子を返す便利な関数に渡されます。
 
 ```qsharp
 // qSharpData passed from driver
@@ -184,4 +184,4 @@ using(qubits = Qubit[nQubits]){
 
 重要な実装 <xref:microsoft.quantum.chemistry.jordanwigner.qubitizationoracle> は、PHamiltonians li 文字列の線形組み合わせとして指定された任意のに適用されます。
 化学シミュレーション用に最適化されたバージョンは、を使用して呼び出され <xref:microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle> ます。
-このバージョンは、「[量子回線での電子 Spectra のエンコード](https://arxiv.org/abs/1805.03662)」で説明されている手法を使用した t ゲートの数を最小限に抑えるために最適化されています。
+このバージョンは、「 [量子回線での電子 Spectra のエンコード](https://arxiv.org/abs/1805.03662)」で説明されている手法を使用した t ゲートの数を最小限に抑えるために最適化されています。

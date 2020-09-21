@@ -2,19 +2,19 @@
 title: QDK の組み込みの操作と関数
 description: QDK の組み込みの操作と関数について説明します。これには、従来の関数、ユニタリ、ローテーション、測定演算が含まれます。
 author: QuantumWriter
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4eb10e82a64381c503703be440be90e60f3a8622
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: dd507d0c644ae711a5e5a1dff9156f571cb0fa92
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863722"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833546"
 ---
 # <a name="the-prelude"></a>準備 #
 
@@ -240,7 +240,7 @@ Quantum 開発キットによって提供される実装では、従来の .NET 
 
 ### <a name="math"></a>数値演算 ###
 
-名前空間には、 <xref:microsoft.quantum.math> .net 基底クラスライブラリの[ `System.Math` クラス](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)の便利な関数が多数用意されています。
+名前空間には、 <xref:microsoft.quantum.math> .net 基底クラスライブラリの[ `System.Math` クラス](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true)の便利な関数が多数用意されています。
 これらの関数は、他の関数と同じ方法で使用でき Q# ます。
 
 ```qsharp

@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.cs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 24318380e0e63957a51961762a33446fe0121b21
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 96a1d0d75f3ff7de11407fd76479cbae86ce7571
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863674"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759274"
 ---
 # <a name="develop-with-no-locq-and-net"></a>Q# と .NET を使用した開発
 
@@ -88,7 +88,7 @@ Visual Studio または VS Code 以外のエディターを使用している場
 上の手順に従ってプロジェクトを設定したら、.NET コンソール アプリケーションから Q# を呼び出すことができます。
 Q# コンパイラは、それぞれの Q# の演算と関数に対して .NET クラスを作成します。これにより、量子プログラムをシミュレーターで実行できるようになります。
 
-たとえば、[.NET の相互運用性サンプル](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet)には、次の Q# の演算の例が含まれています。
+たとえば、[.NET の相互運用性サンプル](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet)には、次の Q# の演算の例が含まれています。
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 

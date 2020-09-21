@@ -16,7 +16,7 @@ summary: >-
 
   これは、 `0xE8L` 16 進数表記では、または10進表記のように、大きい整数で表すことができ `232L` ます。  サフィックスは、 `L` 定数が型であることを示し `BigInt` ます。
 
-  この表現の詳細については、 [真理テーブル kata](https://github.com/microsoft/QuantumKatas/tree/master/TruthTables)も参照してください。
+  この表現の詳細については、 [真理テーブル kata](https://github.com/microsoft/QuantumKatas/tree/main/TruthTables)も参照してください。
 
 
   実装では @"microsoft.quantum.intrinsic.cnot" 、およびゲートを使用し @"microsoft.quantum.intrinsic.r1" ます。
@@ -52,9 +52,9 @@ functors:
 seeAlso:
 - microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
 metadata:
-  ms.openlocfilehash: 782833d34462056413628504cca92f5333a04659
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: d07c1ae20f133d1215d1f6b0cdbd07a635039dda
+  ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89327992"
+  ms.lasthandoff: 09/17/2020
+  ms.locfileid: "90759358"

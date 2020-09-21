@@ -1,6 +1,6 @@
 ---
 title: 量子コンピューティングのベクトルとマトリックスの説明: ベクターとマトリックスを操作する方法の基本について説明します。
-author: QuantumWriter uid: microsoft.... author: nawiebe@microsoft.com ms. date: 12/11/2017 ms. topic: article no loc:
+author: QuantumWriter uid: benbra: v-ms. date: 12/11/2017 ms. topic: article no loc (場所の記事):
 - "Q#"
 - "$$v"
 - "$$"
@@ -85,21 +85,21 @@ author: QuantumWriter uid: microsoft.... author: nawiebe@microsoft.com ms. date:
 
 # <a name="vectors-and-matrices"></a>ベクターと行列
 
-ベクターとマトリックスについては、クォンタムコンピューティングを理解するために重要な知識があります。 次の簡単な概要を説明します。また、読者には、 *Strang、G. (1993) などの線形代数の標準参照を読むことをお勧めします。線形代数 (Vol. 3) の概要。Wellesley、MA: Wellesley を押す*か、[線形代数](http://joshua.smcvt.edu/linearalgebra/)などのオンライン参照をクリックします。
+ベクターとマトリックスについては、クォンタムコンピューティングを理解するために重要な知識があります。 次の簡単な概要を説明します。また、読者には、 *Strang、G. (1993) などの線形代数の標準参照を読むことをお勧めします。線形代数 (Vol. 3) の概要。Wellesley、MA: Wellesley を押す* か、 [線形代数](http://joshua.smcvt.edu/linearalgebra/)などのオンライン参照をクリックします。
 
-次元 (またはサイズ) n の列ベクター (または単なる[*vector*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v $ は、 $ $ $ 列として配置された n 個の $ 複素数 $ (v_1、v_2、\ lドット、v_n) のコレクションです $ 。
+次元 (またはサイズ) n の列ベクター (または単なる [*vector*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v $ は、 $ $ $ 列として配置された n 個の $ 複素数 $ (v_1、v_2、\ lドット、v_n) のコレクションです $ 。
 
 $$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \ vドット\\\\
-v_n\end{bmatrix}$$
+v_n \end{bmatrix}$$
 
-Vector v の標準 $ $ は $ \sqrt { \sum \_ i | v \_ i | ^ 2 } $ として定義されています。 ベクターは、基準が1である場合は単位基準 (または[*単位ベクトル*](https://en.wikipedia.org/wiki/Unit_vector)と呼ばれます) と呼ばれ $ $ ます。 [*ベクター v の adjoint*](https://en.wikipedia.org/wiki/Adjoint_matrix) $ は、 $ $ v ^ \dagger $ として定義されています。は、 $ \* $ 複雑な共役を示す次の行ベクトルとして定義されています。
+Vector v の標準 $ $ は $ \sqrt { \sum \_ i | v \_ i | ^ 2 } $ として定義されています。 ベクターは、基準が1である場合は単位基準 (または [*単位ベクトル*](https://en.wikipedia.org/wiki/Unit_vector)と呼ばれます) と呼ばれ $ $ ます。 [*ベクター v の adjoint*](https://en.wikipedia.org/wiki/Adjoint_matrix) $ は、 $ $ v ^ \dagger $ として定義されています。は、 $ \* $ 複雑な共役を示す次の行ベクトルとして定義されています。
 
 $$\begin{bmatrix}v_1 \\\\ \ vドット \\\\ v_n \end{bmatrix} ^ \dagger = \begin{bmatrix} v_1 ^ * & \cdots & v_n ^ *\end{bmatrix}$$
 
-2つのベクトルを乗算する最も一般的な方法は、[*内部製品*](https://en.wikipedia.org/wiki/Inner_product_space)(ドット積とも呼ばれます) を使用することです。  内側の製品は、あるベクターの射影を別のベクターに提供し、1つのベクターを他のより単純なベクターの合計として表現する方法を説明するうえで非常に重要です。  U と v の間の内部積 $ $ $ $ ( $ \left \langle u, v) \right \rangle $ は、として定義されます。
+2つのベクトルを乗算する最も一般的な方法は、 [*内部製品*](https://en.wikipedia.org/wiki/Inner_product_space)(ドット積とも呼ばれます) を使用することです。  内側の製品は、あるベクターの射影を別のベクターに提供し、1つのベクターを他のより単純なベクターの合計として表現する方法を説明するうえで非常に重要です。  U と v の間の内部積 $ $ $ $ ( $ \left \langle u, v) \right \rangle $ は、として定義されます。
 
 $$
 \langleu、v \rangle = u ^ \dagger v = u \_ 1 ^ { \* } v_1 + \cdots + u \_ n ^ { \* } v \_ n
@@ -114,21 +114,21 @@ u_1\\\\
 u_2\\\\
 \ vドット\\\\
 u_n \end{bmatrix} ~ \mathrm { と}~
-画像=\begin{bmatrix}
+画像 =\begin{bmatrix}
     v_1\\\\
     v_2\\\\
     \ vドット\\\\
     v_n \end{bmatrix} 、 ~ \mathrm {}~
-au + bv=\begin{bmatrix}
+au + bv =\begin{bmatrix}
 au_1 + bv_1\\\\
 au_2 + bv_2\\\\
 \ vドット\\\\
 au_n + bv_n \end{bmatrix} 。
 $$
 
-サイズ m n の[*マトリックス*](https://en.wikipedia.org/wiki/Matrix_(mathematics))は、 $ \times $ $ $ $ $ $ $ 次に示すように、m 行と n 列に配置された、全数の複素数のコレクションです。
+サイズ m n の [*マトリックス*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) は、 $ \times $ $ $ $ $ $ $ 次に示すように、m 行と n 列に配置された、全数の複素数のコレクションです。
 
-$$M= 
+$$M = 
 \begin{bmatrix}
 M_ { 11 } ~~ M_ { 12 } ~~ \cdots ~~ M_ { 1n}\\\\
 M_ { 21 } ~~ M_ { 22 } ~~ \cdots ~~ M_ { 2n}\\\\
@@ -180,10 +180,10 @@ $$\langlev、v2.0、v、 \rangle = \dagger = ^ \dagger u ^ { -1 } U v = ^ \dagge
 
 マトリックス $ m $ は、m m ^ の場合は[*Hermitian*](https://en.wikipedia.org/wiki/Hermitian_matrix)と言い $ = \dagger $ ます。
 
-最後に、サイズが m n の2つのマトリックス m の Kronecker[*製品 (また*](https://en.wikipedia.org/wiki/Tensor_product)は nq $ $ $ \times $ $ $ $ p q) は \times 、 $ $ サイズ mp の大きなマトリックス p m n で、次のように = \otimes $ $ \times $ M と n から取得され $ $ $ $ ます。
+最後に、サイズが m n の2つのマトリックス m の Kronecker [*製品 (また*](https://en.wikipedia.org/wiki/Tensor_product) は nq $ $ $ \times $ $ $ $ p q) は \times 、 $ $ サイズ mp の大きなマトリックス p m n で、次のように = \otimes $ $ \times $ M と n から取得され $ $ $ $ ます。
 
 \begin{align}
-    M \otimes N&=
+    M \otimes N &=
     \begin{bmatrix}
         M_ { 11 } ~~ \cdots ~~ M_ { 1n }\\\\
         \ddots\\\\
@@ -211,7 +211,7 @@ $$
     \begin{bmatrix}
         a \\\\ b \end{bmatrix} \otimes \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}=
     \begin{bmatrix}
-        a \begin{bmatrix} c \\\\ d \\\\ e\end{bmatrix}
+        a \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}
         \\\\[1.5 em] b \begin{bmatrix} c \\\\ d \\\\ e\end{bmatrix}
     \end{bmatrix}
     =\begin{bmatrix}c \\\\ a d \\\\ a e \\\\ b c \\\\ b d \\\\\end{bmatrix}
@@ -221,26 +221,26 @@ and
 
 $$
     \begin{bmatrix}
-        a \ b \\\\ c \ d\end{bmatrix}
+        a \ b \\\\ c \ d \end{bmatrix}
     \otimes 
     \begin{bmatrix}
-        e \ f \\\\ g \ h\end{bmatrix}
+        e \ f \\\\ g \ h \end{bmatrix}
      =
     \begin{bmatrix}
     ある\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     b\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     \\\\[1em] c\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     a\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     \end{bmatrix}
     =
     \begin{bmatrix}
-    ae \ af \ bf\\\\
-    ag \ ah \ bg \ bh\\\\
-    ce \ cf \ de \ df\\\\
+    ae \ af \ bf \\\\
+    ag \ ah \ bg \ bh \\\\
+    ce \ cf \ de \ df \\\\
     cg \ ch \ dg \ dh \end{bmatrix} 。
 $$
 

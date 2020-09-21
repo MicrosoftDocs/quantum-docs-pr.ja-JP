@@ -1,6 +1,6 @@
 ---
 title: P# li 測定の説明: 単一および複数のメジャーの測定演算を使用する方法について説明します。
-author: QuantumWriter uid: microsoft... 作成者: nawiebe@microsoft.com ms. date: 12/11/2017 ミリ秒。トピック: 記事はありません。
+author: bradben: benbra: ms. date: 12/11/2017 ミリ秒。 topic: article no loc (場所: 記事の内容は含まれません):
 - "Q#"
 - "$$v"
 - "$$"
@@ -143,8 +143,8 @@ $$
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {
-        H(q);
         Adjoint S(q);
+        H(q);
     } apply {
         set result = M(q);
     }
@@ -168,7 +168,7 @@ $$
 したがって、2つの Pauthentication Li z 演算子のすべての製品は、 $ $ $ + 1 と-1 の値で構成される2つのスペースで構成されるマトリックスを形成し $ $ $ ます。
 シングル qubit の場合と同様に、両方とも、アクセス可能なベクター空間の半分が $ + 1 eigspace に所属し、残りの半分が-1 の範囲に属していることを意味し $ $ $ ます。
 一般に、これに従うのは、Pdefinition Li の演算子と id のすべての情報が含まれているので、その製品の定義から簡単に確認でき $ $ ます。
-たとえば、オブジェクトに適用された
+たとえば、次のように入力します。
 
 $$
 \begin{align}
@@ -223,14 +223,14 @@ Z z の固有値は、 $ \otimes $ 各計算ベースベクトルを構成する
 その理由は、z z を測定すると、 $ \otimes $ $ $ これらの演算子の + 1 または-1 のいずれか $ $ の状態になります。
 $Z \otimes \mathbb { 1 } $ と $ \mathbb { 1 z を測定 } \otimes すると $ 、まずクォンタム状態ベクトルが z 1 の半分の領域に投影され、 $ 次に \otimes \mathbb { } $ 1 の半分の領域 $ \mathbb { } \otimes $ に投影されます。計算ベースのベクトルが4つあるため、両方の測定を実行すると、状態が4分の1に減少し、1つの計算ベースのベクトルに縮小されます。
 
-## <a name="correlations-between-qubits"></a>Qubits 間の相関関係
+## <a name="correlations-between-qubits"></a>量子ビット間の相関関係
 X x や z z などの P# li マトリックスの保存されていない製品を測定する別の方法として、 $ \otimes これらの $ $ \otimes $ 測定値を使用すると、2つの qubits 間の相関関係に格納されている情報を確認できます。
 $X \otimes \id $ を測定すると、最初の qubit にローカルに格納されている情報を確認できます。
 クォンタムコンピューティングではどちらの種類の測定も同等の価値がありますが、前者はクォンタムコンピューティングの能力を測定します。
 クォンタムコンピューティングでは、学習する情報が1つの qubit に格納されておらず、すべての qubit にローカルに格納されていないことがわかります。したがって、この情報は、結合測定 (z z など) を使用して参照することによってのみ、 $ \otimes マニフェストに $ なります。
 
 たとえば、エラー修正では、保護しようとしている状態について何も学習していないときに発生したエラーを確認したい場合がよくあります。
-[ビットフリップコードサンプル](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code)では、 $ z z や z z などの測定値を使用してこれを行う方法の例を示して \otimes \otimes \id $ $ \id \otimes \otimes $ います。 <--TODO: ビットフリップコードサンプルがオンボードになるとすぐに、これをサンプルブラウザーへのリンクに変更します。 -->
+[ビットフリップコードサンプル](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code)では、 $ z z や z z などの測定値を使用してこれを行う方法の例を示して \otimes \otimes \id $ $ \id \otimes \otimes $ います。 <--TODO: ビットフリップコードサンプルがオンボードになるとすぐに、これをサンプルブラウザーへのリンクに変更します。 -->
 
 $X \otimes Y \otimes Z などの任意の演算子 \otimes \boldone $ も測定できます。
 P# li 演算子のすべてのその他の製品には、2つの固有値- $ pm 1 しかあり $ ません。固有値はベクター空間全体の半分のスペースを構成します。

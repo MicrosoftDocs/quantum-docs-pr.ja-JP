@@ -1,51 +1,52 @@
 ---
-title: 制御フローQ#
+title: 制御フロー Q#
 description: ループ、条件、その他
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867949"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833514"
 ---
-# <a name="control-flow-in-no-locq"></a>制御フローQ#
+# <a name="control-flow-in-no-locq"></a>制御フロー Q#
 
 演算または関数内では、各ステートメントが順序どおりに実行されます。これは、その他の一般的な従来の言語と似ています。
 ただし、制御フローを変更するには、次の3つの方法があります。
 
 * `if` ステートメント
-* `for`for
-* `repeat-until-success`for
+* `for` for
+* `repeat-until-success` for
+* 活用 ( `apply-within` ステートメント)
 
-`if`および `for` 制御フローの構造は、ほとんどの一般的なプログラミング言語に慣れています。 [`Repeat-until-success`](#repeat-until-success-loop)ループについては、この記事の後半で説明します。
+`if`および `for` 制御フローの構造は、ほとんどの一般的なプログラミング言語に慣れています。 [`Repeat-until-success`](#repeat-until-success-loop) ループと [活用](#conjugations) については、この記事の後半で説明します。
 
-重要な点として、 `for` ループおよびステートメントは、 `if` [特殊化](xref:microsoft.quantum.guide.operationsfunctions)が自動生成される操作で使用できます。 このシナリオでは、ループの adjoint が方向を反転させ、 `for` 各反復の adjoint を取得します。
+重要な点として、 `for` ループおよびステートメントは、 `if` [特殊化](xref:microsoft.quantum.guide.operationsfunctions) が自動生成される操作で使用できます。 このシナリオでは、ループの adjoint が方向を反転させ、 `for` 各反復の adjoint を取得します。
 このアクションは、"靴と socks" の原則に従っています。 socks の後に靴を元に戻したい場合は、靴を元に戻してから、socks への配置を元に戻す必要があります。 
 
 ## <a name="if-else-if-else"></a>の場合は、それ以外の場合は。それ以外の場合は。
 
-ステートメントでは、 `if` 条件付き実行がサポートされています。
-キーワード、 `if` かっこで囲まれたブール式、およびステートメントブロック ( _then_ブロック) で構成されます。
-必要に応じて、任意の数の else 句を使用できます。各句は、キーワード、 `elif` かっこで囲まれたブール式、およびステートメントブロック ( _else_ブロック) で構成されます。
-最後に、ステートメントは、キーワードとそれ `else` に続く別のステートメントブロック ( _else_ブロック) で構成される else 句を使用して終了することもできます。
+ステートメントでは、 `if` 条件付き処理がサポートされています。
+キーワード、 `if` かっこで囲まれたブール式、およびステートメントブロック ( _then_ ブロック) で構成されます。
+必要に応じて、任意の数の else 句を使用できます。各句は、キーワード、 `elif` かっこで囲まれたブール式、およびステートメントブロック ( _else_ ブロック) で構成されます。
+最後に、ステートメントは、キーワードとそれ `else` に続く別のステートメントブロック ( _else_ ブロック) で構成される else 句を使用して終了することもできます。
 
 `if`条件が評価され、 *true*の場合は*then*ブロックが実行されます。
-条件が*false*の場合、最初の else if 条件が評価されます。true の場合は、 *else if*ブロックが実行されます。
+条件が *false*の場合、最初の else if 条件が評価されます。true の場合は、 *else if* ブロックが実行されます。
 それ以外の場合は、2番目の else-if ブロックが評価され、次に3番目のは、true 条件を持つ句が検出されるか、それ以上 else if 句が存在しなくなるまで続きます。
-元の*if*条件とすべての else-if 句が*false*と評価された場合、 *else*ブロックが実行されます (指定されている場合)。
+元の *if* 条件とすべての else-if 句が *false*と評価された場合、 *else* ブロックが実行されます (指定されている場合)。
 
 いずれかのブロックが実行されると、それ自体のスコープ内で実行されることに注意してください。
 `if`、 `elif` 、またはブロック内で行われたバインディングは、ブロックの終了後には `else` 参照できません。
 
-たとえば、
+たとえば、次のように入力します。
 
 ```qsharp
 if (result == One) {
@@ -103,14 +104,14 @@ for ((index, measured) in results) { // iterates over the tuple values in result
 }
 ```
 
-最後に、算術シフト左の二項演算子のを使用して `<<<` います。 詳細については、「[数値式](xref:microsoft.quantum.guide.expressions#numeric-expressions)」を参照してください。
+最後に、算術シフト左の二項演算子のを使用して `<<<` います。 詳細については、「 [数値式](xref:microsoft.quantum.guide.expressions#numeric-expressions)」を参照してください。
 
 ## <a name="repeat-until-success-loop"></a>繰り返し-成功ループ
 
 この言語では、 Q# 古典制御フローは qubits の測定結果に依存します。
 さらに、この機能により、unitaries を実装するための計算コストを削減できる強力なガジェットを実装できるようになります。
-この例として、の*繰り返しの成功*(ru) パターンが挙げられ Q# ます。
-これらの RU パターンは、基本的なゲートの観点から、*予想*低コストの確率論的プログラムです。発生したコストは、実際の実行と、考えられる複数の branchings のインターリーブによって異なります。
+この例として、の *繰り返しの成功* (ru) パターンが挙げられ Q# ます。
+これらの RU パターンは、基本的なゲートの観点から、 *予想* 低コストの確率論的プログラムです。発生したコストは、実際の実行と、考えられる複数の branchings のインターリーブによって異なります。
 
 繰り返し-成功 (RU) パターンを容易にするために、は Q# コンストラクトをサポートしています。
 
@@ -128,7 +129,7 @@ fixup {
 ループの本体が実行され、条件が評価されます。
 条件が true の場合、ステートメントは完了します。それ以外の場合は、フィックスアップが実行され、ステートメントがループ本体から開始され、再度実行されます。
 
-RUS ループの3つの部分 (本文、テスト、および修正) は、*繰り返しごとに*1 つのスコープとして扱われるので、本文にバインドされているシンボルはテストと修正の両方で使用できます。
+RUS ループの3つの部分 (本文、テスト、および修正) は、 *繰り返しごとに*1 つのスコープとして扱われるので、本文にバインドされているシンボルはテストと修正の両方で使用できます。
 ただし、修正の実行を完了すると、ステートメントのスコープが終了します。これにより、本体またはフィックスアップ中に作成されたシンボルバインドは、後続の繰り返しでは使用できなくなります。
 
 さらに、 `fixup` 多くの場合、ステートメントは便利ですが、必ずしも必要ではありません。
@@ -143,16 +144,17 @@ until (expression);
 
 は、有効な RUS パターンでもあります。
 
-その他の例と詳細については、この記事の「[繰り返し-成功の例](#repeat-until-success-examples)」を参照してください。
+その他の例と詳細については、この記事の「 [繰り返し-成功の例](#repeat-until-success-examples) 」を参照してください。
 
 > [!TIP]   
 > 関数内での繰り返しの成功ループの使用は避けてください。 *While*ループを使用して、関数内で対応する機能を提供します。 
 
-## <a name="while-loop"></a>While ループ
+## <a name="while-loop"></a>while ループ
 
 繰り返し-成功パターンには、クォンタム固有の connotation があります。 これらは、クォンタムアルゴリズムの特定のクラスで広く使用されているため、の専用言語構成要素 Q# です。 ただし、条件に基づいて中断されるループは、実行の長さがコンパイル時に不明であるため、クォンタムのランタイムでは特に注意して処理されます。 ただし、これらのループには従来の (非クォンタム) ハードウェアで実行されるコードのみが含まれているため、関数内での使用は問題ありません。 
 
-Q#したがって、では、関数内でのみ while ループを使用できます。 ステートメントは、 `while` キーワード、 `while` かっこで囲まれたブール式、およびステートメントブロックで構成されます。
+Q#したがって、では、関数内でのみ while ループを使用できます。
+ステートメントは、 `while` キーワード、 `while` かっこで囲まれたブール式、およびステートメントブロックで構成されます。
 ステートメントブロック (ループの本体) は、条件がと評価されている限り実行され `true` ます。
 
 ```qsharp
@@ -164,12 +166,51 @@ while (index < Length(arr) && item < 0) {
 }
 ```
 
+## <a name="conjugations"></a>活用
+
+従来のビットとは対照的に、qubits を再設定すると、qubits の差が大きくなっても残りの計算には望ましくない影響が生じる可能性があるため、量子メモリの解放は若干複雑になります。 これらの効果は、メモリを解放する前に、実行された計算を適切に "元に戻す" ことで回避できます。 クォンタムコンピューティングの一般的なパターンは次のようになります。 
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    outerOperation(target);
+    innerOperation(target);
+    Adjoint outerOperation(target);
+}
+```
+
+Q# では、前の変換を実装する活用形ステートメントがサポートされています。 このステートメントを使用すると、 `ApplyWith` 次のように操作を実装できます。
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    within{ 
+        outerOperation(target);
+    }
+    apply {
+        innerOperation(target);
+    }
+}
+```
+このような活用形ステートメントは、外部および内部の変換を操作として簡単に使用できない場合に便利ですが、複数のステートメントで構成されるブロックで記述する方が便利です。 
+
+内部ブロックで定義されているステートメントの逆変換は、コンパイラによって自動的に生成され、適用ブロックの完了後に実行されます。
+内部ブロックの一部として使用される変更可能な変数は、適用ブロックで再バインドできないため、生成された変換は、ブロック内の計算の adjoint であることが保証されます。 
+
 ## <a name="return-statement"></a>Return ステートメント
 
 Return ステートメントは、操作または関数の実行を終了し、値を呼び出し元に返します。
 これは、キーワードと、 `return` 適切な型の式、および終端のセミコロンで構成されます。
 
-たとえば、
+たとえば、次のように入力します。
 ```qsharp
 return 1;
 ```
@@ -194,12 +235,12 @@ Fail ステートメントは、操作の実行を終了し、呼び出し元に
 操作内の fail ステートメントの数に制限はありません。
 ステートメントがブロック内の fail ステートメントに続く場合、コンパイラは警告を生成することがあります。
 
-たとえば、
+たとえば、次のように入力します。
 
 ```qsharp
 fail $"Impossible state reached";
 ```
-または、挿入[文字列](xref:microsoft.quantum.guide.expressions#interpolated-strings)を使用します。
+または、挿入 [文字列](xref:microsoft.quantum.guide.expressions#interpolated-strings)を使用します。
 ```qsharp
 fail $"Syndrome {syn} is incorrect";
 ```
@@ -248,11 +289,11 @@ fixup {
 }
 ```
 
-### <a name="rus-without-fixup"></a>使用しない RU`fixup`
+### <a name="rus-without-fixup"></a>使用しない RU `fixup`
 
 この例では、修正手順のない RUS ループを示します。 このコードは、 {5} およびゲートを使用して、確率論的回線で重要な回転ゲート $V (& a) = (\ bold 終了 + 2 i Z)/\ sqrt $ を実装し `H` `T` ます。
 ループは、平均で $-frac {8} {5} $ 繰り返しで終了します。
-詳細については、「繰り返し-成功するまで」を参照してください。これは、[*シングル qubit 2014 Unitaries 非決定的に分解したもの*](https://arxiv.org/abs/1311.1074)です。
+詳細については、「繰り返し-成功するまで」を参照してください。これは、 [*シングル qubit 2014 Unitaries 非決定的に分解したもの*](https://arxiv.org/abs/1311.1074) です。
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -283,7 +324,7 @@ using (qubit = Qubit()) {
 * ループのより複雑な `fixup` 部分。これには、クォンタム操作が含まれます。 
 * ステートメントを使用して、 `AssertMeasurementProbability` プログラム内の指定した特定のポイントでクォンタムの状態を測定する確率を確認します。
 
-操作と操作の詳細につい [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) ては、「[テストおよびデバッグ](xref:microsoft.quantum.guide.testingdebugging)」を参照してください。
+操作と操作の詳細につい [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) ては、「 [テストおよびデバッグ](xref:microsoft.quantum.guide.testingdebugging)」を参照してください。
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {
@@ -330,8 +371,8 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-詳細については、次を参照してください。[標準ライブラリに用意されている単体テストのサンプル](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs)です。
+詳細については、次を参照してください。 [標準ライブラリに用意されている単体テストのサンプル](https://github.com/microsoft/Quantum/blob/main/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs)です。
 
 ## <a name="next-steps"></a>次のステップ
 
-での[テストとデバッグ](xref:microsoft.quantum.guide.testingdebugging)について説明 Q# します。
+での [テストとデバッグ](xref:microsoft.quantum.guide.testingdebugging) について説明 Q# します。

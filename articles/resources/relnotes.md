@@ -2,19 +2,19 @@
 title: Quantum Development Kit のリリース ノート
 description: Microsoft Quantum 開発キット プレビューの最新の更新について説明します。
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 70d0c9b61e49d4ee6142edbe2767310403885f01
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 5036b4d401bb775a7fee2252ca26e7725bc19004
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992260"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834144"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -48,7 +48,7 @@ ms.locfileid: "88992260"
 
 このリリースには、次のものが含まれています。
 
-- ノートブックで開かれ Q# ている名前空間は、今後のすべてのセルの実行で使用できるようになりました。 これにより、たとえば、各コードセルで関連する名前空間を開く必要がなく、ノートブックの上部にあるセルに1回だけ名前空間を開くことができます。 新しいマジックコマンドを実行すると、 `%lsopen` 現在開かれている名前空間の一覧が表示されます。
+- ノートブック内の開い Q# ている名前空間は、今後のすべてのセル計算で使用できるようになりました。 これにより、たとえば、各コードセルで関連する名前空間を開く必要がなく、ノートブックの上部にあるセルに1回だけ名前空間を開くことができます。 新しいマジックコマンドを実行すると、 `%lsopen` 現在開かれている名前空間の一覧が表示されます。
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、 [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 、 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)については、closed pr の完全な一覧を参照してください。  
 
@@ -69,7 +69,7 @@ ms.locfileid: "88992260"
 - 移動された操作:
   - `Microsoft.Quantum.Intrinsic.Assert` は `Microsoft.Quantum.Diagnostics.AssertMeasurement` になりました
   - `Microsoft.Quantum.Intrinsic.AssertProb` は `Microsoft.Quantum.Diagnostics.AssertMeasurementProbability` になりました
-- バグ修正 
+- バグの修正 
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、 [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 、 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)については、closed pr の完全な一覧を参照してください。  
 
@@ -132,7 +132,7 @@ ms.locfileid: "88992260"
 
 このリリースには、次のものが含まれています。
 
-- 新しい Quantum Machine Learning Library。詳細については、[QML ドキュメント ページ](https://docs.microsoft.com/quantum/libraries/machine-learning/?view=qsharp-preview)を参照してください
+- 新しい Quantum Machine Learning Library。詳細については、[QML ドキュメント ページ](xref:microsoft.quantum.machine-learning.concepts.intro)を参照してください
 - Q#バグの修正によって、NuGet パッケージの読み込み時に最大 10 20 倍のパフォーマンスが向上しました。
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
@@ -144,7 +144,7 @@ ms.locfileid: "88992260"
 このリリースには、次のものが含まれています。
 
 - 新規プロジェクトの作成時に Microsoft.Quantum.Development.Kit NuGet パッケージに代わって使用される新しい Microsoft.Quantum.SDK NuGet パッケージ。 Microsoft.Quantum.Development.Kit NuGet パッケージは、既存のプロジェクトで引き続きサポートされます。 
-- Q#新しい Microsoft. Quantum. SDK NuGet packge によって有効化されたコンパイラ拡張機能のサポート。詳細については、 [Github のドキュメント](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler)、[コンパイラ拡張機能のサンプル](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions)、および[ Q# 開発ブログ](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/)を参照してください。
+- Q#新しい Microsoft. Quantum. SDK NuGet packge によって有効化されたコンパイラ拡張機能のサポート。詳細については、 [Github のドキュメント](https://github.com/microsoft/qsharp-compiler/tree/main/src/QuantumSdk#extending-the-q-compiler)、[コンパイラ拡張機能のサンプル](https://github.com/microsoft/qsharp-compiler/tree/main/examples/CompilerExtensions)、および[ Q# 開発ブログ](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/)を参照してください。
 - .NET Core 3.1 のサポートが追加されました。古い .NET Core SDK バージョンでビルドすると、問題が発生する可能性があるため、バージョン 3.1.100 をインストールすることを強くお勧めします。
 - Microsoft.Quantum.QsCompiler.Experimental 下で新しいコンパイラ変換を使用できます
 - 出力状態ベクトルを HTML として公開する新しい機能Q#
@@ -160,7 +160,7 @@ ms.locfileid: "88992260"
 このリリースには、次のものが含まれています。
 
 - 単体テストの新しいテスト属性。ここで Q# 更新さ[here](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test)れた API ドキュメントを参照してください。[ここでは](xref:microsoft.quantum.guide.testingdebugging)、更新されたテスト & デバッグガイドを参照してください
-- Q#プログラムの実行エラーが発生した場合にスタックトレースを追加しました
+- プログラム実行エラーの場合にスタックトレースを追加しました Q#
 - [OmniSharp C# Visual Studio Code 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)の更新により、Visual Studio Code 内のブレークポイントがサポートされるようになります
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
@@ -182,7 +182,7 @@ ms.locfileid: "88992260"
 
 このリリースには、次のものが含まれています。
 
-- 言語サーバーを自己完結型の実行可能ファイルとしてデプロイする、Visual Studio Code および Visual Studio の拡張機能に対する更新。これにより、.NET Core SDK バージョンの依存関係がなくなります。  
+- 言語サーバーを自己完結型の実行可能ファイルとして展開するための Visual Studio 拡張機能 & Visual Studio Code を更新し、.NET Core SDK バージョンの依存関係を排除します。  
 - .NET Core 3.0 への移行
 - 新しい `Fail` メソッドの導入による、Microsoft.Quantum.Simulation.Core.IOperationFactory への破壊的な変更。 SimulatorBase を拡張しないカスタム シミュレーターのみに影響します。 詳細については、[GitHub で pull request を表示](https://github.com/microsoft/qsharp-runtime/pull/59)してください。
 - 非推奨の属性に対する新しいサポート
@@ -224,7 +224,7 @@ ms.locfileid: "88992260"
 このリリースには、次のものが含まれています。
 
 - 配列をスライスするための新しいインデックス作成場所。詳細については、[言語リファレンスを参照](xref:microsoft.quantum.guide.expressions#array-slices)してください。
-- [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry)でホストされている Dockerfile を追加しました。 [ Q# 詳細に](https://github.com/microsoft/iqsharp/blob/master/README.md)ついては、I リポジトリを参照してください。
+- [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry)でホストされている Dockerfile を追加しました。 [ Q# 詳細に](https://github.com/microsoft/iqsharp/blob/main/README.md)ついては、I リポジトリを参照してください。
 - [トレース シミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)に関する破壊的変更、構成設定の更新、名前の変更。[更新された名前については、.NET API ブラウザー](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration)を参照してください。
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)と[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)については、閉じられた PR の完全な一覧を参照してください。  
@@ -252,14 +252,14 @@ ms.locfileid: "88992260"
 
 ### <a name="library"></a>ライブラリ 
 
-このリリースでは数値ライブラリが追加されます。[新しい数値ライブラリを使用](xref:microsoft.quantum.numerics.usage)し、[新しいサンプル](https://github.com/microsoft/quantum/tree/master/Numerics)を試す方法の詳細を確認してください。  [PR #102](https://github.com/Microsoft/QuantumLibraries/pull/102)。  
+このリリースでは数値ライブラリが追加されます。[新しい数値ライブラリを使用](xref:microsoft.quantum.numerics.usage)し、[新しいサンプル](https://github.com/microsoft/quantum/tree/main/Numerics)を試す方法の詳細を確認してください。  [PR #102](https://github.com/Microsoft/QuantumLibraries/pull/102)。  
 
 このリリースでは、化学ライブラリが再編成され、拡張され、更新されます。
 * コンポーネントのモジュール性、拡張性、一般的なコードのクリーンアップを向上させます。  [PR #58](https://github.com/microsoft/QuantumLibraries/pull/58)。
 * [多重参照波動関数](xref:microsoft.quantum.chemistry.concepts.multireference) (スパース多重参照波動関数とユニタリ結合クラスターの両方) のサポートが追加されます。  [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110)。
 * (ご協力ありがとうございました) [1QBit](https://1qbit.com) の投稿者 ([@valentinS4t1qbit](https://github.com/ValentinS4t1qbit)):変分 ansatz を使用したエネルギー評価。 [PR #120](https://github.com/Microsoft/QuantumLibraries/pull/120)。
 * [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) スキーマを新しい[バージョン 0.2](xref:microsoft.quantum.libraries.chemistry.schema.spec_v_0_2) に更新し、ユニタリ結合クラスターの仕様を追加しています。 [問題 #65](https://github.com/microsoft/QuantumLibraries/issues/65)。
-* 化学ライブラリ関数に Python 相互運用性が追加されます。 この[サンプル](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration)をお試しください。 [問題 #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110)。
+* 化学ライブラリ関数に Python 相互運用性が追加されます。 この[サンプル](https://github.com/microsoft/Quantum/tree/main/Chemistry/PythonIntegration)をお試しください。 [問題 #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110)。
 
 ## <a name="version-061905"></a>バージョン 0.6.1905
 
@@ -349,7 +349,7 @@ QDK を更新する場合は、[インストール ガイド](xref:microsoft.qua
 
 - では、Jupyter Notebook のサポートが追加されています。これにより、について理解するのに役立ち Q# ます。  [新しい Jupyter Notebook のサンプルを確認し、独自のノートブックを作成する方法を学習してください](xref:microsoft.quantum.install)。 
 
-- Quantum Canon ライブラリに整数の加算器算術が追加されます。  [新しい整数の加算器を使用する方法が説明されている](https://github.com/microsoft/Quantum/blob/master/samples/arithmetic/AdderExample.ipynb)、Jupyter Notebook も参照してください。
+- Quantum Canon ライブラリに整数の加算器算術が追加されます。  [新しい整数の加算器を使用する方法が説明されている](https://github.com/microsoft/Quantum/blob/main/samples/arithmetic/AdderExample.ipynb)、Jupyter Notebook も参照してください。
 
 - コミュニティによって報告された DumpRegister に関する問題 ([#148](https://github.com/Microsoft/Quantum/issues/148)) のバグ修正。
 
@@ -635,7 +635,7 @@ Quantum Development Kit の以前のリリースでは .NET Framework のみが�
 
 #### <a name="testing"></a>テスト
 
-- テストは 64 ビット モードで実行する必要があります。 テストが BadImageFormatException で失敗する場合は、[テスト] メニューに移動し、[テストの設定]、[既定のプロセッサ アーキテクチャ]、[X64] の順に選択します。
+- テストは64ビットモードで実行する必要があります。 テストが BadImageFormatException で失敗する場合は、[テスト] メニューに移動し、[テストの設定]、[既定のプロセッサ アーキテクチャ]、[X64] の順に選択します。
 - テストによっては、実行に時間がかかります (コンピューターによっては、5 分ほどかかる場合があります)。 これは正常な動作です。場合によっては、20 個を超える量子ビットが使用されるため、現在、最大規模のテストは 23 個の量子ビットで実行されています。
 
 #### <a name="samples"></a>サンプル

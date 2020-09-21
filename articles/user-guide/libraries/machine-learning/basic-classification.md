@@ -2,19 +2,19 @@
 title: クォンタム Machine Learning ライブラリを使用した基本的な分類
 description: Q#Microsoft QDK の quantum Machine Learning ライブラリを使用して、で記述されたクォンタムシーケンシャル分類器を実行する方法について説明します。
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f9c3e7ab85c0f0d1a6063e593607d35c5cb76936
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 5dc4614b9992e2c6b9f8ff4b839c0929ec8cab7c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868969"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833719"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>基本分類: QDK でデータを分類する
 
@@ -70,7 +70,7 @@ ms.locfileid: "87868969"
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
-    F5 キーを押すと、プログラムは実行を開始し、新しいポップアップ ウィンドウに次の結果が表示されます。 
+    F5 キーを押すと、プログラムの実行が開始されます。 新しいウィンドウには、次の結果が表示されます。 
 
     ```bash
     $ dotnet run
@@ -88,10 +88,10 @@ ms.locfileid: "87868969"
 
 上記のコードで定義されている最も重要な関数と操作は次のとおりです。
 
-- `ClassifierStructure() : ControlledRotation[]`: この関数では、考慮する制御ゲートのレイヤーを追加することによって、サーキットモデルの構造を設定します。 この手順は、シーケンシャルなディープラーニングモデルでのニューロンのレイヤーの宣言に似ています。
-- `TrainHalfMoonModel() : (Double[], Double)`: この操作はコードの中核となる部分で、トレーニングを定義します。 ここでは、ライブラリに含まれるデータセットからサンプルを読み込みます。ここでは、トレーニングのハイパーパラメーターと初期パラメーターを設定し、ライブラリに含まれる操作を呼び出してトレーニングを開始し `TrainSequentialClassifier` ます。 パラメーターと、分類子を決定するバイアスを出力します。
-- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: この操作では、モデルを評価するための検証プロセスを定義します。 ここでは、検証用のサンプル、サンプルごとの測定数、および許容範囲を読み込みます。 検証用に選択されたサンプルのバッチに誤分類の数が出力されます。
+- `ClassifierStructure() : ControlledRotation[]` : この関数では、考慮する制御ゲートのレイヤーを追加することによって、サーキットモデルの構造を設定します。 この手順は、シーケンシャルなディープラーニングモデルでのニューロンのレイヤーの宣言に似ています。
+- `TrainHalfMoonModel() : (Double[], Double)` : この操作はコードの中核となる部分で、トレーニングを定義します。 ここでは、ライブラリに含まれるデータセットからサンプルを読み込みます。ここでは、トレーニングのハイパーパラメーターと初期パラメーターを設定し、ライブラリに含まれる操作を呼び出してトレーニングを開始し `TrainSequentialClassifier` ます。 パラメーターと、分類子を決定するバイアスを出力します。
+- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int` : この操作では、モデルを評価するための検証プロセスを定義します。 ここでは、検証用のサンプル、サンプルごとの測定数、および許容範囲を読み込みます。 検証用に選択されたサンプルのバッチに誤分類の数が出力されます。
 
 ## <a name="next-steps"></a>次のステップ
 
-まず、コードを使用して再生し、いくつかのパラメーターを変更してトレーニングにどのように影響するかを確認することができます。 次のチュートリアル「[独自の分類子の設計](xref:microsoft.quantum.libraries.machine-learning.design)」では、分類子の構造を定義する方法を学習します。
+まず、コードを使用して再生し、いくつかのパラメーターを変更してトレーニングにどのように影響するかを確認することができます。 次のチュートリアル「 [独自の分類子の設計](xref:microsoft.quantum.libraries.machine-learning.design)」では、分類子の構造を定義する方法を学習します。

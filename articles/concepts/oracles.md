@@ -1,6 +1,6 @@
 ---
 title: クォンタム oracles の説明: 別のアルゴリズムへの入力として使用される、クォンタム oracles、ブラックボックス操作の操作方法と定義方法について説明します。
-執筆者: cgranade uid: oracles: Christopher.Granade@microsoft.com ms. date: 07/11/2018 ms. topic: article no loc (次の説明を参照):
+執筆者: cgranade uid: oracles: chgranad ms. date: 07/11/2018 ms. topic: article no loc (次の説明を参照):
 - "Q#"
 - "$$v"
 - "$$"
@@ -148,9 +148,9 @@ $$
 フェーズ oracle が最初に計算ベースの状態 x でレジスタに対して動作する場合 $ \ket { } $ 、このフェーズはグローバルフェーズであるため、監視できません。
 ただし、このような oracle は、法則または制御された操作として適用される場合、非常に強力なリソースになります。
 たとえば、 $ $ 1 つの-qubit 関数 f の場合、oracle の O_f フェーズを考えてみましょう $ $ 。
-そうしたら$$
+そうしたら $$
 \begin{align}
-    O_f\ket{+}
+    O_f \ket{+}
         &=O_f ( \ket { 0 }  +  \ket { 1 } )/ \sqrt { 2 }\\\\
         &=((-1) ^ { f (0) } \ket { 0 } + (-1) ^ { f (1) } \ket { 1 } )/ \sqrt { 2 }\\\\
         &=(-1) ^ { f (0) } ( \ket { 0 } + (-1) ^ { f (1)-f (0) } \ket { 1 } )/ \sqrt { 2 }\\\\
@@ -161,7 +161,7 @@ $$
 一般的には、oracles の両方のビューを拡大して、1ビットだけではなく実数を返す古典関数を表すことができます。
 
 Oracle を実装する最適な方法を選択することは、特定のアルゴリズム内でこの oracle がどのように使用されるかに大きく依存します。
-たとえば、 [Deutsch アルゴリズム](https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm)は最初の方法で実装された oracle に依存しますが、 [Grover のアルゴリズム](https://en.wikipedia.org/wiki/Grover's_algorithm)は2番目の方法で実装された oracle に依存しています。
+たとえば、 [Deutsch アルゴリズム](https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm) は最初の方法で実装された oracle に依存しますが、 [Grover のアルゴリズム](https://en.wikipedia.org/wiki/Grover's_algorithm) は2番目の方法で実装された oracle に依存しています。
 
 
 詳細については、 [Gilyén *et*1711.00465](https://arxiv.org/abs/1711.00465)に関する説明をお勧めします。

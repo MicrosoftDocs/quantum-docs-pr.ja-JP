@@ -9,15 +9,15 @@ uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a2df4b829a3f4946c6de6e6b80ad72a5bc192b2c
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 05506f4099de754cd02d81fbd9200f2de091e37e
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869207"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759734"
 ---
 # <a name="obtaining-energy-level-estimates"></a>エネルギー準位の推定の取得
-エネルギーレベルの値の推定は、量子化学の主要なアプリケーションの1つです。 この記事では、分子 hydrogen の正規の例に対してこれを実行する方法について説明します。 このセクションで参照されているサンプルは、 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) 化学サンプルリポジトリにあります。 出力をプロットするより視覚的な例は [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) デモです。
+エネルギーレベルの値の推定は、量子化学の主要なアプリケーションの1つです。 この記事では、分子 hydrogen の正規の例に対してこれを実行する方法について説明します。 このセクションで参照されているサンプルは、 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) 化学サンプルリポジトリにあります。 出力をプロットするより視覚的な例は [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) デモです。
 
 ## <a name="estimating-the-energy-values-of-molecular-hydrogen"></a>分子 hydrogen のエネルギー値の推定
 
@@ -65,7 +65,7 @@ Hamiltonian をシミュレートするには、演算子を qubit 演算子に�
     var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
-次に、 `qSharpData` Hamiltonian を表すを関数に渡し `TrotterStepOracle` ます。 `TrotterStepOracle`Hamiltonian のリアルタイムの進化を近似するクォンタム操作を返します。 詳細については、「 [Hamiltonian dynamics のシミュレーション](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms)」を参照してください。
+次に、 `qSharpData` Hamiltonian を表すを関数に渡し `TrotterStepOracle` ます。 `TrotterStepOracle` Hamiltonian のリアルタイムの進化を近似するクォンタム操作を返します。 詳細については、「 [Hamiltonian dynamics のシミュレーション](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms)」を参照してください。
 
 ```qsharp
 // qSharpData passed from driver
@@ -83,7 +83,7 @@ let integratorOrder = 4;
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-この時点で、標準ライブラリの[フェーズ推定アルゴリズム](xref:microsoft.quantum.libraries.characterization)を使用して、前のシミュレーションを使用して、グラウンドの状態エネルギーを学習できます。 そのためには、クォンタムのグラウンドの状態に対して適切な概算を準備する必要があります。 このような概算の提案は、スキーマに記載されてい [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) ます。 ただし、これらの推奨事項を省略すると、既定の方法では、最長一致に多数の原子が追加され `hamiltonian.NElectrons` ます。これにより、対角線の 1 ~ 3 の注ぎが最小化されます。 フェーズの推定関数と操作は、DocFX 表記で[、名前空間](xref:microsoft.quantum.characterization)に用意されています。
+この時点で、標準ライブラリの [フェーズ推定アルゴリズム](xref:microsoft.quantum.libraries.characterization) を使用して、前のシミュレーションを使用して、グラウンドの状態エネルギーを学習できます。 そのためには、クォンタムのグラウンドの状態に対して適切な概算を準備する必要があります。 このような概算の提案は、スキーマに記載されてい [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) ます。 ただし、これらの推奨事項を省略すると、既定の方法では、最長一致に多数の原子が追加され `hamiltonian.NElectrons` ます。これにより、対角線の 1 ~ 3 の注ぎが最小化されます。 フェーズの推定関数と操作は、DocFX 表記で [、名前空間](xref:microsoft.quantum.characterization) に用意されています。
 
 次のスニペットは、化学シミュレーションライブラリによるリアルタイムの進化の出力を、クォンタムフェーズ推定と統合する方法を示しています。
 
@@ -156,5 +156,5 @@ using (var qsim = new QuantumSimulator())
 
 操作は、次の2つのパラメーターを返します。 
 
-- `energyEst`は、地表のエネルギーの推定値であり、平均に近い状態になる必要があり `-1.137` ます。 
-- `phaseEst`フェーズ推定アルゴリズムによって返される未加工のフェーズです。 これは、値が大きすぎるためにエイリアスが発生した場合に、エイリアスを診断するのに役立ち `trotterStep` ます。
+- `energyEst` は、地表のエネルギーの推定値であり、平均に近い状態になる必要があり `-1.137` ます。 
+- `phaseEst` フェーズ推定アルゴリズムによって返される未加工のフェーズです。 これは、値が大きすぎるためにエイリアスが発生した場合に、エイリアスを診断するのに役立ち `trotterStep` ます。

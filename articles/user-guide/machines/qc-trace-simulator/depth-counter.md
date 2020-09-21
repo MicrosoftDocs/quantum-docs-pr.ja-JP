@@ -2,19 +2,19 @@
 title: 深さカウンター-Quantum 開発キット
 description: クォンタムトレースシミュレーターを使用して、プログラムで呼び出されたすべての操作の深さのカウントを収集する Microsoft QDK の深さカウンターについて説明し Q# ます。
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5c54f6fc479203d30c68c4958329605d4323f9ea
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8280783adfcc2867c3a598a6f57d827125aadcfd
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868323"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833442"
 ---
 # <a name="quantum-trace-simulator-depth-counter"></a>クォンタムトレースシミュレーター: 深度カウンター
 
@@ -23,13 +23,13 @@ ms.locfileid: "87868323"
 
 ## <a name="depth-values"></a>深さの値
 
-既定では、すべての操作の深さは**0** `T` です。ただし、操作の深さは**1**です。 つまり、既定では、 `T` 操作の深さのみが計算されます (通常は望ましい)。 この深さカウンターは、操作の[呼び出しグラフ](https://en.wikipedia.org/wiki/Call_graph)のすべての端に対する統計を集計して収集します。
+既定では、すべての操作の深さは **0** `T` です。ただし、操作の深さは **1**です。 つまり、既定では、 `T` 操作の深さのみが計算されます (通常は望ましい)。 この深さカウンターは、操作の [呼び出しグラフ](https://en.wikipedia.org/wiki/Call_graph)のすべての端に対する統計を集計して収集します。
 
 すべて <xref:microsoft.quantum.intrinsic> の操作は、単一の qubit の回転、 <xref:microsoft.quantum.intrinsic.t> 操作、1つのシングル Qubit Clifford 操作、 <xref:microsoft.quantum.intrinsic.cnot> 操作、およびマルチ qubit pobservable li の測定値で表現されます。 ユーザーは、のフィールドを使用して、各プリミティブ操作の深さを設定でき `gateTimes` <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> ます。
 
 ## <a name="invoking-the-depth-counter"></a>深度カウンターを呼び出しています
 
-詳細カウンターを使用してクォンタムトレースシミュレーターを実行するには、インスタンスを作成し <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 、その `UseDepthCounter` プロパティを**true**に設定してから、 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> パラメーターとしてを使用して新しいインスタンスを作成する必要があり `QCTraceSimulatorConfiguration` ます。 
+詳細カウンターを使用してクォンタムトレースシミュレーターを実行するには、インスタンスを作成し <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 、その `UseDepthCounter` プロパティを **true**に設定してから、 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> パラメーターとしてを使用して新しいインスタンスを作成する必要があり `QCTraceSimulatorConfiguration` ます。 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -75,7 +75,7 @@ string csvSummary = sim.ToCSV()[MetricsCountersNames.depthCounter];
 
 ## <a name="see-also"></a>関連項目
 
-- Quantum Development Kit[クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の概要。
+- Quantum Development Kit [クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro) の概要。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API リファレンス。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>API リファレンス。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.DepthCounter>API リファレンス。

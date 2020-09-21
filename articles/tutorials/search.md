@@ -2,19 +2,19 @@
 title: 量子開発キットで Grover の検索アルゴリズムを実行する Q#
 description: Q#標準のクォンタムアルゴリズムの1つである Grover のアルゴリズムを示すプロジェクトをビルドします。
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f2ae56bdca893e8a317c16d0a993da15b9f021b5
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 86c6a651a117b788eb4c8fdd805ead7ab8f54dd7
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863118"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834807"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>チュートリアル:Q\# でグローバーの検索アルゴリズムを実装する
 
@@ -58,9 +58,9 @@ ms.locfileid: "88863118"
 
 ### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>Q# Visual Studio または Visual Studio Code を使用したアプリケーション
 
-実行可能ファイルは、プロジェクトの構成とコマンドライン オプションに応じて、シミュレーターまたはリソース推定機能で `@EntryPoint()` 属性でマークされた操作または関数を実行します。
+プログラムは、 `@EntryPoint()` プロジェクトの構成とコマンドラインオプションに応じて、シミュレーターまたはリソースの推定の属性でマークされた操作または関数を実行します。
 
-Visual Studio では、Ctrl キーを押しながら F5 キーを押すだけでスクリプトを実行します。
+Visual Studio で、Ctrl キーを押しながら F5 キーを押してスクリプトを実行します。
 
 VS Code では、ターミナルで次のように入力して、`Program.qs` の初回のビルドを行います。
 
@@ -89,7 +89,7 @@ operations.qs [options] [command]
 Commands:
 ```
 
-これは、使用するキュービットの数を指定しなかったためです。そのため、実行可能ファイルで使用できるコマンドがターミナルによって示されます。 5 つのキュービットを使用する場合は、次のように入力する必要があります。
+これは、使用する qubits の数を指定していないため、ターミナルは実行可能プログラムで使用可能なコマンドを表示するためです。 5つの qubits を使用する場合は、次のように入力する必要があります。
 
 ```Command line
 dotnet run --n-qubits 5
@@ -110,7 +110,7 @@ Reflecting about marked state...
 このチュートリアルを楽しんでいる場合は、以下のリソースを参照して、を使用して Q# 独自の quantum アプリケーションを作成する方法を確認してください。
 
 - [QDK 入門ガイドに戻る](xref:microsoft.quantum.welcome)
-- より一般的なグローバーの検索アルゴリズムの[サンプル](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)を試す
+- より一般的なグローバーの検索アルゴリズムの[サンプル](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/database-search)を試す
 - [グローバーの検索と Quantum Katas について学習する](xref:microsoft.quantum.overview.katas)
 - グローバーの検索アルゴリズムの背後にある量子コンピューティング手法である[振幅増幅][amplitude-amplification]について読む
 - [量子コンピューティングの概念](xref:microsoft.quantum.concepts.intro)

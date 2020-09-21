@@ -8,21 +8,21 @@ uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 78d6488ed5e3972f85f1e6cf1ba2d197596c4cc3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869309"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759717"
 ---
 # <a name="end-to-end-with-nwchem"></a>NWChem を使用したエンド ツー エンド #
 
-この記事では、Nw化学シミュレーションのゲート数を取得する例を、 [Nwchem](http://www.nwchem-sw.org/index.php/Main_Page)入力デッキから順に見ていきます。
-この例に進む前に、Docker がインストールされていることを確認してください。[インストールと検証のガイド](xref:microsoft.quantum.chemistry.concepts.installation)に従ってください。
+この記事では、Nw化学シミュレーションのゲート数を取得する例を、 [Nwchem](http://www.nwchem-sw.org/index.php/Main_Page) 入力デッキから順に見ていきます。
+この例に進む前に、Docker がインストールされていることを確認してください。 [インストールと検証のガイド](xref:microsoft.quantum.chemistry.concepts.installation)に従ってください。
 
-詳細:
+詳細情報:
 - [NWChem 入力デッキの構造](https://github.com/nwchemgit/nwchem/wiki/Getting-Started#input-file-structure)
-    - [Quantum 開発キットで使用する入力デックコマンド](https://github.com/nwchemgit/nwchem/tree/master/contrib/quasar)
+    - [Quantum 開発キットで使用する入力デックコマンド](https://github.com/nwchemgit/nwchem/tree/main/contrib/quasar)
 - [化学ライブラリと依存関係のインストール](xref:microsoft.quantum.chemistry.concepts.installation)
 - [リソースカウント](xref:microsoft.quantum.chemistry.examples.resourcecounts)
 
@@ -64,8 +64,8 @@ Import-Module InvokeNWChem.psm1
 Get-Command -Module InvokeNWChem
 ```
 
-次に、 `Get-GateCount` **GetGateCount**サンプルで提供されているコマンドをインポートします。
-詳細については、「」の[サンプルに記載されている手順](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount)を参照してください。
+次に、 `Get-GateCount` **GetGateCount** サンプルで提供されているコマンドをインポートします。
+詳細については、「」の [サンプルに記載されている手順](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/GetGateCount)を参照してください。
 次に、 `<runtime>` `win10-x64` `osx-x64` `linux-x64` オペレーティングシステムに応じて、、、またはのいずれかを使用して、次のを実行します。
 
 ```powershell
@@ -82,7 +82,7 @@ Get-Command Get-GateCount
 
 ## <a name="input-decks"></a>入力デッキ ##
 
-NWChem パッケージは、メモリ割り当て設定などの他のパラメーターと共に、解決するクォンタムの化学問題を指定する_入力デッキ_と呼ばれるテキストファイルを受け取ります。
+NWChem パッケージは、メモリ割り当て設定などの他のパラメーターと共に、解決するクォンタムの化学問題を指定する _入力デッキ_ と呼ばれるテキストファイルを受け取ります。
 この例では、NWChem に付属する事前に作成された入力デッキの1つを使用します。
 まず、 [nwchemgit/nwchem リポジトリ](https://github.com/nwchemgit/nwchem)を複製します。
 
@@ -95,7 +95,7 @@ NWChem パッケージは、メモリ割り当て設定などの他のパラメ�
 git clone https://github.com/nwchemgit/nwchem --depth 1
 ```
 
-リポジトリには、 `nwchemgit/nwchem` Quantum 開発キットで使用するためのさまざまな入力デッキが用意されており、 [ `QA/chem_library_tests` フォルダー](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests)の下に一覧表示されています。
+リポジトリには、 `nwchemgit/nwchem` Quantum 開発キットで使用するためのさまざまな入力デッキが用意されており、 [ `QA/chem_library_tests` フォルダー](https://github.com/nwchemgit/nwchem/tree/main/QA/chem_library_tests)の下に一覧表示されています。
 この例では、入力デッキを使用し `H4` ます。
 
 ```powershell
@@ -103,7 +103,7 @@ cd nwchem/QA/chem_library_tests/H4
 Get-Content h4_sto6g_0.000.nw
 ```
 
-分子は、4つの hydrogen アトムのシステムであり、1つの角度 ( `alpha` デッキの名前で示されているパラメーター) に依存する特定のジオメトリに配置されてい `h4_sto6g_alpha.nw` ます。 H4 は、1970年代以来の計算化学の既知の[分子ベンチマーク](https://onlinelibrary.wiley.com/doi/abs/10.1002/qua.560180511)です。 パラメーターは、 `sto6g` デッキが Slater の型の回転に対して表現を実装することを示しています。具体的には、6つのガウスベースの関数を使用した[設定](https://en.wikipedia.org/wiki/STO-nG_basis_sets)に関する表現です。 さらに、この入力デッキには、省略形 Engine (TCE) に対するいくつかの手順が含まれています。このエンジンは、NWChem を使用して、Quantum 開発キットとの相互運用に必要な情報を生成します。
+分子は、4つの hydrogen アトムのシステムであり、1つの角度 ( `alpha` デッキの名前で示されているパラメーター) に依存する特定のジオメトリに配置されてい `h4_sto6g_alpha.nw` ます。 H4 は、1970年代以来の計算化学の既知の [分子ベンチマーク](https://onlinelibrary.wiley.com/doi/abs/10.1002/qua.560180511) です。 パラメーターは、 `sto6g` デッキが Slater の型の回転に対して表現を実装することを示しています。具体的には、6つのガウスベースの関数を使用した [設定](https://en.wikipedia.org/wiki/STO-nG_basis_sets) に関する表現です。 さらに、この入力デッキには、省略形 Engine (TCE) に対するいくつかの手順が含まれています。このエンジンは、NWChem を使用して、Quantum 開発キットとの相互運用に必要な情報を生成します。
 
 ```
 ...
@@ -167,20 +167,20 @@ ElapsedMilliseconds : 721
 - さまざまな定義済みの入力デッキを試してみてください。たとえば、でパラメーターを変えることによって、 `alpha` `h4_sto6g_alpha.nw` 
 - `STO-nG`複数の選択を行うためのモデルの調査など、NWChem デッキを直接編集して、デッキを変更してみてください。 
 - で利用可能なその他の定義済みの NWChem 入力デッキを試してみてください。 `nwchem/qa/chem_library_tests`
-- NWChem から生成された定義済みの Broombridge YAML ベンチマークのスイートを試してみてください。 [Microsoft/Quantum リポジトリ](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)の一部として入手できます。 これらのベンチマークは次のとおりです。 
+- NWChem から生成された定義済みの Broombridge YAML ベンチマークのスイートを試してみてください。 [Microsoft/Quantum リポジトリ](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML)の一部として入手できます。 これらのベンチマークは次のとおりです。 
     - 分子 hydrogen (H2)、Beryllium (Be)、リチウム水素 (LiH) などの小さな分子
     - ozone (O3)、carotene、cytosine などのより大きな分子。 
-- Microsoft Quantum Development Kit のインターフェイスを特徴とするグラフィカルフロントエンドの[Emsl 矢印](https://arrows.emsl.pnnl.gov/api/qsharp_chem)を試してみてください。 
+- Microsoft Quantum Development Kit のインターフェイスを特徴とするグラフィカルフロントエンドの [Emsl 矢印](https://arrows.emsl.pnnl.gov/api/qsharp_chem) を試してみてください。 
 
 
 ## <a name="producing-broombridge-output-from-emsl-arrows"></a>EMSL 方向から Broombridge 出力を生成しています ##
 
-Web ベースのフロントエンドの EMSL 矢印の使用を開始するには、[ここで](https://arrows.emsl.pnnl.gov/api/qsharp_chem)ブラウザーに移動します。 
+Web ベースのフロントエンドの EMSL 矢印の使用を開始するには、 [ここで](https://arrows.emsl.pnnl.gov/api/qsharp_chem)ブラウザーに移動します。 
 
 > [!NOTE]
-> Web ブラウザーで EMSL 矢印を実行するには、JavaScript を有効にする必要があります。 ブラウザーで JavaScript を有効にする方法については、こちらの[手順](https://www.enable-javascript.com/)を参照してください。 
+> Web ブラウザーで EMSL 矢印を実行するには、JavaScript を有効にする必要があります。 ブラウザーで JavaScript を有効にする方法については、こちらの [手順](https://www.enable-javascript.com/) を参照してください。 
 
-最初に、[クエリ] ボックスに「分子」と入力します。``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
+最初に、[クエリ] ボックスに「分子」と入力します。 ``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
 
 多くの分子は、"1, 3, Trimethylxanthine" ではなく "caffeine" のように、普通名で入力できます。 
 
@@ -209,4 +209,4 @@ Get-GateCount -Format YAML qsharp_chem48443.yaml
 ```
 リソースの数を取得します。 
 
-EMSL の矢印のスタートページにあるタブからアクセスできる3D 分子 builder を利用でき ``Arrows Entry - 3D Builder`` ます。 表示されている分子の[JSMol](http://wiki.jmol.org/index.php/JSmol) 3d 画像をクリックすると、それを編集できるようになります。 原子を移動し、原子をドラッグして、分子間の距離が変化したり、原子を追加/削除したりすることができます。これらの選択のそれぞれに対して、 ``theory{qsharp_chem}`` [クエリ] ボックスに追加した後、Broombridge YAML スキーマのインスタンスを生成し、Quantum 化学ライブラリを使用してさらに詳細な調査を行うことができます。 
+EMSL の矢印のスタートページにあるタブからアクセスできる3D 分子 builder を利用でき ``Arrows Entry - 3D Builder`` ます。 表示されている分子の [JSMol](http://wiki.jmol.org/index.php/JSmol) 3d 画像をクリックすると、それを編集できるようになります。 原子を移動し、原子をドラッグして、分子間の距離が変化したり、原子を追加/削除したりすることができます。これらの選択のそれぞれに対して、 ``theory{qsharp_chem}`` [クエリ] ボックスに追加した後、Broombridge YAML スキーマのインスタンスを生成し、Quantum 化学ライブラリを使用してさらに詳細な調査を行うことができます。 

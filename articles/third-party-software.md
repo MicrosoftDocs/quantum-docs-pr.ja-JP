@@ -4,18 +4,18 @@ description: サードパーティのソフトウェアに関する通知と情�
 services: service-name-with-dashes-AZURE-ONLY
 keywords: SEO チャンプを確認せずに、キーワードを追加または編集しないでください。
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d76e9c8532dd7818941d182773a8f85a86becee
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 939dc681d6b9a89f02fd1f392b7fd84067d98e8f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869751"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834127"
 ---
 # <a name="third-party-software-notices-and-information"></a>サードパーティ製ソフトウェアに関する通知および情報
 
@@ -268,7 +268,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 特に記載がない限り、ソースとバイナリ形式の FParsec ライブラリは、簡略化された BSD ライセンスで配布されます。 簡略化された BSD ライセンス ( "2 ‐ clause BSD ライセンス") は、OSI ‐準拠の単純な非制限のライセンスです。 
 
-FParsec には、Unicode 文字データベース v から派生したデータが組み込まれています。 8.0.0、Copyright (c) 1991 \ u20122015 Unicode、Inc.、次の条項に従って配布されます。http://www.unicode.org/terms_of_use.html#Exhibit1 
+FParsec には、Unicode 文字データベース v から派生したデータが組み込まれています。 8.0.0、Copyright (c) 1991 \ u20122015 Unicode、Inc.、次の条項に従って配布されます。 http://www.unicode.org/terms_of_use.html#Exhibit1 
 
 Doc フォルダー内のドキュメントは、Creative Commons の‐ NonCommercial 3.0 のライセンス供与されたライセンスでライセンス供与されます。 この Creative Commons ライセンスでは、アクセス許可のない商用目的でドキュメントを使用することはできません。 つまり、たとえば、ドキュメントを書籍の形式で販売したり、広告で費用をかけるために web コンテンツファームに配置したりすることはできません。 ただし、ドキュメントのテキストから直接金額を得ることができない限り、商用の文脈でドキュメントを使用することができます (たとえば、商用の企業のイントラネットに配置してください)。 
 
@@ -284,6 +284,6 @@ Redistribution and use in source and binary forms, with or without modification,
 
 2.2 Creative Commons 属性‐ NonCommercial 3.0 Unported ライセンス
 
-概要https://creativecommons.org/licenses/by-nc/3.0/
+概要 https://creativecommons.org/licenses/by-nc/3.0/
 
-フルライセンスのテキスト:https://creativecommons.org/licenses/by-nc/3.0/legalcode 
+フルライセンスのテキスト: https://creativecommons.org/licenses/by-nc/3.0/legalcode 

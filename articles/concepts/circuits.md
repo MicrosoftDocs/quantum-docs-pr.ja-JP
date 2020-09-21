@@ -1,6 +1,6 @@
 ---
 タイトル: クォンタム回線の説明: 量子回線図を使用して、単純で複雑なクォンタム操作を視覚的に表現する方法について説明します。
-author: QuantumWriter uid: microsoft...... author: nawiebe@microsoft.com ms. date: 12/11/2017 ms. topic: article no loc:
+author: QuantumWriter uid: benbra: v-ms. date: 12/11/2017 ms. topic: article no loc (場所の記事):
 - "Q#"
 - "$$v"
 - "$$"
@@ -89,7 +89,7 @@ author: QuantumWriter uid: microsoft...... author: nawiebe@microsoft.com ms. dat
 
 $$\mathrm{Cnot } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left ( \ket { 00 }  +  \ket { 11 } \right )、$$
 
-このような複雑さを持つ操作は、クォンタムアルゴリズムとクォンタムエラー修正で広く普及しています。そのため、*量子回線図*と呼ばれるシンプルな方法で視覚化を行うことができます。
+このような複雑さを持つ操作は、クォンタムアルゴリズムとクォンタムエラー修正で広く普及しています。そのため、 *量子回線図*と呼ばれるシンプルな方法で視覚化を行うことができます。
 この下回っありのクォンタム状態を準備するためのサーキット図は次のとおりです。
 
 <!--- ![](.\media\1.svg) --->
@@ -109,7 +109,7 @@ $$\mathrm{Cnot } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } 
 <これを簡単に中央揃えする方法が見つからない!--拡張機能が必要な場合があります。-->
 ![シングル qubit レジスタで動作する Hadamard 操作のシンボル](~/media/2.svg)
 
-は、シングル qubit レジスタに対して動作する[Hadamard](xref:microsoft.quantum.intrinsic.h)操作です。
+は、シングル qubit レジスタに対して動作する [Hadamard](xref:microsoft.quantum.intrinsic.h) 操作です。
 
 クォンタムゲートは、ゲートが最初に qubits に適用されたときの左端のゲートと共に、時系列順に並べられます。
 つまり、回線をクォンタム状態のままにしている場合、ワイヤは図の各ゲートを通じて、左から右にクォンタムの状態を取り込みます。
@@ -156,7 +156,7 @@ $G = X $ と g Z では、 $ = $ ゲートの制御されたバージョンを�
 <これを簡単に中央揃えする方法が見つからない!--拡張機能が必要な場合があります。-->
 ![特別なケースの制御ゲートの回路図](~/media/6.svg)
 
-Q#操作の制御されたバージョンを自動的に生成するメソッドを提供します。これにより、プログラマはこれらの操作を手動でコーディングする必要がなくなります。 この例を次に示します。
+Q# 操作の制御されたバージョンを自動的に生成するメソッドを提供します。これにより、プログラマはこれらの操作を手動でコーディングする必要がなくなります。 この例を次に示します。
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -175,8 +175,8 @@ is Ctl { // Auto-generate the controlled specialization of the operation
 <これを簡単に中央揃えする方法が見つからない!--拡張機能が必要な場合があります。-->
 ![測定演算を表すシンボル](~/media/7.svg)
 
-Q#この目的のために[メジャー演算子](xref:microsoft.quantum.intrinsic.measure)を実装します。
-詳細については、[測定に関するセクション](xref:microsoft.quantum.libraries.standard.prelude#measurements)を参照してください。
+Q# この目的のために [メジャー演算子](xref:microsoft.quantum.intrinsic.measure) を実装します。
+詳細については、 [測定に関するセクション](xref:microsoft.quantum.libraries.standard.prelude#measurements) を参照してください。
 
 同様に、サブサーキット
 
@@ -188,7 +188,7 @@ Q#この目的のために[メジャー演算子](xref:microsoft.quantum.intrins
 
 ## <a name="teleportation-circuit-diagram"></a>受付回路の図
 クォンタムは、これらのコンポーネントを示す最良のクォンタムアルゴリズムであると考えられます。
-対応する[クォンタム kata](xref:microsoft.quantum.overview.katas)クォンタムを使用したハンズオンについては、結び付き使用と測定を使用して、quantum コンピューター内 (または quantum ネットワーク内の離れたコンピューター間) でデータを移動する方法について学ぶことができます。
+対応する [クォンタム kata](xref:microsoft.quantum.overview.katas) クォンタムを使用したハンズオンについては、結び付き使用と測定を使用して、quantum コンピューター内 (または quantum ネットワーク内の離れたコンピューター間) でデータを移動する方法について学ぶことができます。
 興味深いことに、実際には、qubit の値が何であるかを把握していなくても、特定の qubit の値を1つの qubit から別の値に移動することができます。
 これは、プロトコルが量子力学法に従って動作するために必要です。
 次に、クォンタムの例を示します。また、クォンタム回線の読み取り方法を示すために、回路の注釈付きバージョンも提供します。

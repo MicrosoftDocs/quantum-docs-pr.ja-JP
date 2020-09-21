@@ -2,19 +2,19 @@
 title: 量子乱数ジェネレーターの作成
 description: Q#クォンタムの乱数ジェネレーターを作成することによって、法則のような基本的なクォンタムの概念を示すプロジェクトをビルドします。
 author: bromeg
-ms.author: megbrow@microsoft.com
+ms.author: megbrow
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863621"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834042"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>チュートリアル:Q\# で量子乱数ジェネレーターを実装する
 
@@ -33,7 +33,7 @@ ms.locfileid: "88863621"
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-「[量子コンピューティングについて](xref:microsoft.quantum.overview.understanding)」という記事で述べたように、キュービットとは、重ね合わせに入ることができる量子情報の単位です。 測定されるとき、キュービットは 0 か 1 だけになります。 ただし、実行中、キュービットの状態は測定で 0 または 1 を読み取る可能性を表わします。 この確率論的な状態が重ね合わせと呼ばれています。 この確率を使用し、乱数を生成できます。
+「[量子コンピューティングについて](xref:microsoft.quantum.overview.understanding)」という記事で述べたように、キュービットとは、重ね合わせに入ることができる量子情報の単位です。 測定されるとき、キュービットは 0 か 1 だけになります。 ただし、操作が実行されている場合、qubit の状態は、0または1を測定値として読み取る確率を表します。 この確率論的な状態が重ね合わせと呼ばれています。 この確率を使用し、乱数を生成できます。
 
 この操作では、 Q# `Qubit` にネイティブなデータ型を導入 Q# します。 `Qubit` は `using` ステートメントでのみ割り当てることができます。 割り当て後、キュービットは常に `Zero` 状態になります。 
 
@@ -74,11 +74,11 @@ ms.locfileid: "88863621"
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
-実行可能ファイルは、プロジェクトの構成とコマンドライン オプションに応じて、シミュレーターまたはリソース推定機能で `@EntryPoint()` 属性でマークされた操作または関数を実行します。
+プログラムは、 `@EntryPoint()` プロジェクトの構成とコマンドラインオプションに応じて、シミュレーターまたはリソースの推定の属性でマークされた操作または関数を実行します。
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-34":::
 
-Visual Studio では、Ctrl キーを押しながら F5 キーを押すだけでスクリプトを実行します。
+Visual Studio で、Ctrl キーを押しながら F5 キーを押してスクリプトを実行します。
 
 VS Code では、ターミナルで次のように入力して、Program.qs の初回のビルドを行います。
 
