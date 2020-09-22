@@ -2,19 +2,19 @@
 title: Quantum 開発キット ライブラリ
 description: Microsoft Quantum 開発キットに含まれる標準、化学、数値の各ライブラリの概要。
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d61fe459362fdb5f3550768a26b34656a8a538a7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 90672b6ec78bf8305bdb3ab8326002cf8ce34bfe
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869105"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835725"
 ---
 # <a name="overview-of-no-locq-libraries"></a>Q# ライブラリの概要
 Quantum 開発キットには、Q# で量子アプリケーションを簡単に開発するためのいくつかのライブラリが用意されています。
