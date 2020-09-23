@@ -2,19 +2,19 @@
 title: Q# ユーザー ガイド
 description: ユーザー ガイドの目的と内容の概要
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4fae2949bdcab0c3735b40ef029d70bf7ea3fb9f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f0680e773c8233d6c4f1acb742b3cc38dbc069d5
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869632"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834756"
 ---
 # <a name="the-no-locq-user-guide"></a>Q# ユーザー ガイド
 
@@ -46,7 +46,7 @@ Q# ユーザー ガイドへようこそ。
 
 - [量子ビットの操作](xref:microsoft.quantum.guide.qubits):個々の量子ビットと量子ビットの系を扱うために使用する Q# の機能について説明します。具体的には、それらの割り当て、それらに対する演算の実行、それらの測定です。 
 
-- [制御フロー](xref:microsoft.quantum.guide.controlflow):Q# で使用できるプログラミング制御フロー パターンについて詳しく説明します。これには、多くの標準的な手法 (条件付き実行、for ループ、while ループなど) に加え、量子固有の "成功するまで繰り返す" パターンが含まれます。
+- [制御フロー](xref:microsoft.quantum.guide.controlflow):Q# で使用できるプログラミング制御フロー パターンについて詳しく説明します。これには、多くの標準的な手法 (条件付き処理、*for* ループ、*while* ループなど) に加え、量子固有の "*成功するまで繰り返す*" パターンが含まれます。
 
 - [テストとデバッグ](xref:microsoft.quantum.guide.testingdebugging):自分のコードが想定どおりに動作していることを確かめるためのいくつかの手法について説明します。 
     量子情報の一般的な不透明性により、量子プログラムのデバッグには特殊な手法が必要になる場合があります。 

@@ -2,19 +2,19 @@ expanded: true
 items:
   - name: QDK の概要
     href: get-started.md
-  - name: QDK をインストールする
+  - name: QDK を設定する
+    href: index.md
+  - name: 作業の開始の例
     items:
-      - name: インストールの概要
-        href: index.md
       - name: Q# アプリケーション
         href: install-command-line.md
-      - name: Q# Jupyter Notebook
+      - name: Jupyter Notebook を使用した Q#
         href: install-jupyter.md
-      - name: Q# と他の言語
-        items:
-          - name: Q# と Python
-            href: install-python.md
-          - name: Q# と .NET
-            href: install-cs.md
+      - name: Binder を使用した Q#
+        href: install-binder.md
+      - name: Q# と Python
+        href: install-python.md
+      - name: Q# と .NET
+        href: install-cs.md
   - name: QDK を更新する
     href: update.md

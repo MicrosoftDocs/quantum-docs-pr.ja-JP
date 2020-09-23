@@ -2,19 +2,19 @@
 title: 量子トレース シミュレーター - Quantum Development Kit
 description: Microsoft の量子コンピューター トレース シミュレーターを使用して、従来型のコードをデバッグし、Q# プログラムのリソース要件を見積もる方法について説明します。
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5d5efef037ff236bd040dfd88e94f7f3dd331aef
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 54a1f63461cfcc8146f7dc4d18d321238d77454d
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868221"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833361"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum Development Kit (QDK) の量子トレース シミュレーター
 
@@ -86,7 +86,7 @@ QDK には、プログラム内のバグを検出し、量子プログラム リ
 |-----| -----|
 |[個別入力チェッカー](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |共有量子ビットと競合する可能性があるかどうかを確認します |
 |[無効な量子ビット使用チェッカー](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |プログラムが既に解放されている量子ビットに操作を適用していないかどうかを確認します |
-|[プリミティブ操作カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | 量子プログラムで呼び出されたすべての操作によって使用されるプリミティブ実行の数をカウントします  |
+|[プリミティブ操作カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | 量子プログラムで呼び出されたすべての操作によって使用されるプリミティブ プロセスの数をカウントします  |
 |[深さのカウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |量子プログラムで呼び出された各操作の深さの下限を表すカウントを収集します   |
 |[幅のカウンター](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |量子プログラムの各操作によって割り当てられ、借用された量子ビットの数をカウントします |
 
