@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.columnat
+name: ColumnAt
+type: function
+namespace: microsoft.quantum.arrays
+summary: >-
+  マトリックスから列を抽出します。
+
+
+  この関数は、行方向の順序で行列内の列を抽出します。
+
+  行 corrsponds を最初のインデックスの要素アクセスに抽出すると、それ以上の処理は必要ありません。
+examples: >-
+  ```Q#
+
+  let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+  let column = ColumnAt(0, matrix);
+
+  // same as: column = [1, 4, 7]
+
+  ```
+syntax: "function ColumnAt (column : Int, matrix : 'T[][]) : 'T[]"
+input:
+  content: "(column : Int, matrix : 'T[][])"
+  types:
+  - name: column
+    summary: マトリックスの列
+    isPrimitive: true
+    uid: Int
+  - name: matrix
+    summary: 2次元行列 (行方向)
+    isArray: true
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: の各要素の型 `matrix` 。
+seeAlso:
+- microsoft.quantum.arrays.transposed
+- microsoft.quantum.arrays.diagonal
+metadata:
+  ms.openlocfilehash: 427ba7fe6430a1da759e9de927a566a19494288a
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494315"

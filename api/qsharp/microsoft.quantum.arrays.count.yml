@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.count
+name: Count
+type: function
+namespace: microsoft.quantum.arrays
+summary: 配列と、配列の要素に対して定義された述語を指定すると、は、述語を満たす要素で構成される配列の要素数を返します。
+remarks: 関数は、ジェネリック型に対して定義されます。つまり、配列と述語がある場合は、 `'T[]` `'T -> Bool` 要素をフィルター処理できます。
+examples: >-
+  次のコードは、"Count" 関数を示しています。
+
+  述語は、関数を使用して定義され @"microsoft.quantum.logical.greaterthani" ます。
+
+
+  ```Q#
+   let predicate = GreaterThanI(_, 5);
+   let count = Count(predicate, [2, 5, 9, 1, 8]);
+   // count = 2
+  ```
+syntax: "function Count (predicate : ('T -> Bool), array : 'T[]) : Int"
+input:
+  content: "(predicate : ('T -> Bool), array : 'T[])"
+  types:
+  - name: predicate
+    summary: "`'T`要素をフィルター処理するために使用されるブール値からブール型への関数。"
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: 上の要素の配列 `'T` 。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Int
+  types:
+  - summary: 述語を満たす内の要素の数 `array` 。
+    isPrimitive: true
+    uid: Int
+typeParameters:
+- uid: "'T"
+  summary: 要素の型 `array` 。
+metadata:
+  ms.openlocfilehash: cac44615a0b871cdb33de827d2ff9bc0c08935d3
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494312"
