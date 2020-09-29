@@ -2,19 +2,19 @@
 title: 量子コンピューターと量子シミュレータ
 description: 量子ハードウェア、量子シミュレーター、量子演算のしくみについて説明します。
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 299baea75865a4f0ece6b490cef3301dd2a672ac
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8691838b2d6c54baa40042245eee8c901a7ca965
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867711"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835011"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>量子コンピューターと量子シミュレータ
 
@@ -33,7 +33,7 @@ ms.locfileid: "87867711"
 
 ## <a name="quantum-simulators"></a>量子シミュレーター
 
-従来型コンピューターで実行される量子シミュレーターを使用すると、量子システムでの量子アルゴリズムの実行をシミュレートできます。  Microsoft の Quantum 開発キット (QDK) には、全状態ベクトル シミュレーターが、他の特殊な量子シミュレーターとともに含まれています。
+従来型コンピューターで実行される量子シミュレーターを使用すると、量子システムでの量子アルゴリズムの計算をシミュレートできます。  Microsoft の Quantum 開発キット (QDK) には、全状態ベクトル シミュレーターが、他の特殊な量子シミュレーターとともに含まれています。
 
 ## <a name="topological-qubit"></a>トポロジカル量子ビット
 

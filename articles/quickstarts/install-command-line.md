@@ -1,22 +1,25 @@
 ---
 title: Q# アプリケーションを使用した開発
-author: KittyYeungQ
-ms.author: kitty
-ms.date: 4/24/2020
+description: コマンド プロンプトから実行される Q# アプリケーションを作成する方法について説明します。
+author: bradben
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a630b2307f5d95321fb26f480d7a441ddba846fc
-ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+ms.openlocfilehash: 68f530d80e5c5f40dc2bcbb185879c3cb6f93f91
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358260"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834416"
 ---
 # <a name="develop-with-no-locq-applications"></a>Q# アプリケーションを使用した開発
+
+お使いの環境に対応するタブの指示に従ってください。
 
 Q# プログラムはそれ自体で実行可能です。C#、F#、Python などのホスト言語のドライバーは必要ありません。
 
@@ -63,14 +66,14 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 2. **[Standalone console application]\(スタンドアロン コンソール アプリケーション\)** をクリックします。
 3. プロジェクトを保存する場所に移動して、 **[プロジェクトの作成]** をクリックします。
 4. プロジェクトが正常に作成されたら、右下にある **[Open new project...]\(新しいプロジェクトを開く...\)** をクリックします。
-        
+
 プロジェクトを確認します。 `Program.qs` という名前のソース ファイルがあるはずです。これは、コンソールにメッセージを表示する簡単な演算を定義する Q# プログラムです。
 
 アプリケーションを実行するには:
+
 1. **[ターミナル]**  ->  **[新しいターミナル]** をクリックします。
 2. ターミナル プロンプトで、`dotnet run` と入力します。
 3. 出力ウィンドウに `Hello quantum world!` というテキストが表示されます。
-
 
 > [!NOTE]
 > 複数のルート フォルダーを持つワークスペースは、VS Code の Q# 拡張機能では現在サポートされていません。 1 つの VS Code ワークスペース内に複数のプロジェクトがある場合は、すべてのプロジェクトが同じルート フォルダー内に含まれている必要があります。
@@ -80,6 +83,7 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 Q# の `Hello World` アプリケーションを作成して、Visual Studio のインストールを確認します。
 
 新しい Q# アプリケーションを作成するには:
+
 1. Visual Studio を開き、 **[ファイル]**  ->  **[新規]**  ->  **[プロジェクト]** をクリックします。
 2. 検索ボックスに「`Q#`」と入力し、 **[Q# アプリケーション]** を選択して **[次へ]** をクリックします。
 3. アプリケーションの名前と場所を入力して、 **[作成]** をクリックします。
@@ -88,6 +92,7 @@ Q# の `Hello World` アプリケーションを作成して、Visual Studio の
 プロジェクトを確認します。 `Program.qs` という名前のソース ファイルがあるはずです。これは、コンソールにメッセージを表示する簡単な演算を定義する Q# プログラムです。
 
 アプリケーションを実行するには:
+
 1. **[デバッグ]**  ->  **[デバッグなしで開始]** を選択します。
 2. テキスト `Hello quantum world!` がコンソール ウィンドウに出力されます。
 
@@ -105,11 +110,13 @@ Q# の `Hello World` アプリケーションを作成して、インストー�
     ```
 
 1. 新しいアプリケーションを作成します。
+
     ```dotnetcli
     dotnet new console -lang Q# -o runSayHello
     ```
 
 1. アプリケーション ディレクトリに移動します。
+
     ```dotnetcli
     cd runSayHello
     ```
@@ -117,6 +124,7 @@ Q# の `Hello World` アプリケーションを作成して、インストー�
     このディレクトリには `Program.qs` という名前のファイルがあるはずです。これは、コンソールにメッセージを表示する簡単な演算を定義する Q# プログラムです。 このテンプレートをテキスト エディターで変更し、独自のクォンタム アプリケーションで上書きすることができます。 
 
 1. 以下のプログラムを実行します。
+
     ```dotnetcli
     dotnet run
     ```

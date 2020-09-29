@@ -3,18 +3,18 @@ uid: microsoft.quantum.welcome
 title: Quantum Development Kit (QDK) の概要
 description: Microsoft Quantum 開発キットを使用して Q# で量子プロジェクトのプログラミングを開始する方法について説明します。
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/10/2020
 ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 06198f3b5b806bab49abf9fca38b5d2f15cfb65f
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: e56b0e0455773481fbff6cfb7f4a6817cfc93d1a
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863751"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834501"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Quantum Development Kit (QDK) の概要
 
@@ -22,8 +22,8 @@ Microsoft Quantum Development Kit にようこそ。
 
 Quantum 開発キット (QDK) には、量子アプリケーション開発専用に設計されたプログラミング言語である Q# を使用して、独自の量子プログラムおよび実験を構築するために必要なあらゆるツールが含まれています。
 
-すぐに始めるには、まず [QDK インストール ガイド](xref:microsoft.quantum.install)を参照してください。
-Windows、Linux、または MacOS を搭載したマシンに Quantum 開発キットをインストールして、独自の量子プログラムを作成するための手順が示されます。
+すぐに始めるには、まず [QDK 設定ガイド](xref:microsoft.quantum.install)を参照してください。
+Windows、Linux、または MacOS を搭載したマシンに Quantum 開発キットを設定して、独自の量子プログラムを作成するための手順が示されます。
 
 量子コンピューティングを初めて利用する場合は、「[概要](xref:microsoft.quantum.overview.introduction)」セクションを参照して、量子コンピューターで何が実行できのか、および量子コンピューティングの基礎を確認してください。
 
@@ -33,8 +33,7 @@ Quantum 開発キットには、Q# を使用して量子プログラムを開発
 量子の力の利用を開始する場合は、チュートリアルを試すことができます。
 
 * [量子乱数ジェネレーター](xref:microsoft.quantum.quickstarts.qrng) - "Q# Hello World" スタイルのアプリケーションであり、量子の概念を簡単に紹介し、量子アプリケーションを数分でビルドして実行できます。
-* [Q# でのもつれの確認](xref:microsoft.quantum.write-program) - このチュートリアルでは、量子プログラミングの基本的な概念を示す Q# プログラムの記述方法について説明します。
-    コーディングを開始する準備ができていない場合でも、QDK をインストールせずに説明を読み進めることで、Q# プログラミング言語の概要と量子コンピューティングの最初の概念を理解することができます。
+* [Q# でのもつれの確認](xref:microsoft.quantum.write-program) - このチュートリアルでは、量子プログラミングの基本的な概念を示す Q# プログラムの記述方法について説明します。 コーディングを開始する準備ができていない場合でも、QDK をインストールせずに説明を読み進めることで、Q# プログラミング言語の概要と量子コンピューティングの最初の概念を理解することができます。
 * [グローバーの検索アルゴリズム](xref:microsoft.quantum.quickstarts.search) - この Q# プログラムの例では、低レベルの量子演算を抽象化する方法を探ることで、量子アルゴリズムを表すための Q# の能力を確認します。
     このチュートリアルでは、Visual Studio または Visual Studio Code を使用して、Q# アプリケーションとしてプログラムを開発する手順について説明します。
 
@@ -60,7 +59,7 @@ Quantum 開発キットには、Q# を使用して量子プログラムを開発
 ### <a name="no-locq-developer-guides"></a>Q# 開発者ガイド
 
 * 「[Q# ユーザー ガイド](xref:microsoft.quantum.guide)」では、Q# で量子プログラムを作成するための中核概念について詳しく説明します。
-* [量子シミュレーターとホスト アプリケーション](xref:microsoft.quantum.machines)では、量子アルゴリズムがどのように実行されるか、どの量子コンピューターを使用できるか、および量子プログラム用に Q# 以外のドライバーを書き込む方法について説明します。
+* [量子シミュレーターとホスト アプリケーション](xref:microsoft.quantum.machines)では、量子アルゴリズムがどのように計算されるか、どの量子コンピューターを使用できるか、および量子プログラム用に Q# 以外のドライバーを作成する方法について説明します。
 
 ### <a name="no-locq-libraries"></a>Q# ライブラリ
 
@@ -68,7 +67,7 @@ Quantum 開発キットには、Q# を使用して量子プログラムを開発
     トピックには、制御フロー、データ構造、エラー修正、テスト、デバッグが含まれます。 
 * [Q# 化学ライブラリ](xref:microsoft.quantum.chemistry.concepts.intro)では、量子化学シミュレーションをサポートする操作や関数について説明します。これは、量子コンピューティングの重要な応用です。 トピックには、ハミルトン力学や量子位相推定のシミュレーションなどが含まれます。
 * [Q# 数値ライブラリ](xref:microsoft.quantum.numerics.intro)では、対象のコンピューターのネイティブ操作に関して複雑な算術関数の表現をサポートする操作と関数について説明します。
-* [Q# ライブラリ リファレンス](xref:microsoft.quantum.standardlibsintro)には、名前空間別のライブラリ エンティティに関する参照情報が含まれています。
+* [Q# ライブラリ リファレンス](xref:microsoft.quantum.apiref-intro)には、名前空間別のライブラリ エンティティに関する参照情報が含まれています。
 
 ### <a name="general-quantum-computing"></a>一般的な量子コンピューティング
 

@@ -2,23 +2,23 @@
 title: Q# プログラミング言語と QDK とは
 description: Microsoft Quantum 開発キットと Q# プログラミング言語について、および量子プログラムの作成方法について説明します。
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5db574b0380ffa1616cb3959d84925854df4e321
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 21adfcc1c5321d87665adb39a3c838bbda0b8861
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863771"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834569"
 ---
 # <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Q# プログラミング言語と QDK とは
 
-Q# は、量子アルゴリズムを開発および実行するための Microsoft のオープンソース プログラミング言語です。 これは Quantum 開発キット (QDK) に含まれています。QDK には、[Q# ライブラリ](xref:microsoft.quantum.libraries)、[量子シミュレーター](xref:microsoft.quantum.machines)、[他のプログラミング環境用の拡張機能](xref:microsoft.quantum.install)、[API ドキュメント](xref:microsoft.quantum.standardlibsintro)が含まれています。 QDK には、標準の Q# ライブラリに加えて、化学、機械学習、数値のライブラリも含まれています。
+Q# は、量子アルゴリズムを開発および実行するための Microsoft のオープンソース プログラミング言語です。 これは Quantum 開発キット (QDK) に含まれています。QDK には、[Q# ライブラリ](xref:microsoft.quantum.libraries)、[量子シミュレーター](xref:microsoft.quantum.machines)、[他のプログラミング環境用の拡張機能](xref:microsoft.quantum.install)、[API ドキュメント](xref:microsoft.quantum.apiref-intro)が含まれています。 QDK には、標準の Q# ライブラリに加えて、化学、機械学習、数値のライブラリも含まれています。
 
 プログラミング言語としての Q# では、Python、C#、F# から一般的な要素を取り入れ、ループ、if/then ステートメント、共通データ型を使用してプログラムを作成するための基本的な手続き型のモデルをサポートします。 また、新しい量子固有のデータ構造と演算も導入されています。
 
@@ -54,7 +54,7 @@ Q# プログラムは、スタンドアロン アプリケーションとして�
 
 シミュレーター内で Q# コードを分離すると、アルゴリズムが量子物理学の法則に従うようになり、量子コンピューターで正しく実行できます。
 
-![qsharp-code-flow](~/media/qsharp-code-flow.png)
+![Qsharp コード フロー](~/media/qsharp-code-flow.png)
 
 ## <a name="how-do-i-use-the-qdk"></a>QDK の使用方法
 
