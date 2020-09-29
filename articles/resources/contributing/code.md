@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b27d084bbe2cda878efa6250c52c0ae628637850
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7a258a915a807b8e1ee7c2c9c062017d90f6a454
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834892"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91489767"
 ---
 # <a name="contributing-code"></a>コードの投稿
 
@@ -82,6 +82,10 @@ operation TestApplyWith() : Unit {
 
 ### Citations and References ### -->
 
+## <a name="pull-requests"></a>pull request
+
+作業内容を投稿する準備ができたら、GitHub 経由で対応するリポジトリにプル要求を送信してください。
+チームは、フィードバックをレビューして提供します。 すべてのコメントに応答して解決する必要があります。また、コードを分岐にマージする前に、すべてのチェックに合格する必要があり `main` ます。
 
 ## <a name="when-well-reject-a-pull-request"></a>プル要求を却下する場合
 
