@@ -10,9 +10,9 @@ remarks: >-
   両方の配列の長さは同じである必要があります。 多くの場合、開始状態とターゲット状態に関する最後のフェーズに関する最初のフェーズでは、グローバルフェーズシフトが導入され、$0 $ に設定できます。
 syntax: newtype ReflectionPhases = (Double[], Double[]);
 metadata:
-  ms.openlocfilehash: 4a0ed1c01dc6cd14d2569064d769d7057087db48
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 5fc46cf54e9feee07371d0507983c0968ed9e8c0
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89340359"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91463741"
