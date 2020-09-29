@@ -45,6 +45,8 @@ functions:
   summary: 数値が別の数値以下の場合にのみ true を返します。
 - uid: microsoft.quantum.logical.lessthanorequall
   summary: 数値が別の数値以下の場合にのみ true を返します。
+- uid: microsoft.quantum.logical.lexographiccomparison
+  summary: 比較関数を指定した場合は、lexographically が2つの配列を比較する新しい関数を返します。
 - uid: microsoft.quantum.logical.nearlyequald
   summary: 2つの入力がほぼ等しい場合 (つまり、許容範囲が 1e-12 の範囲内) の場合にのみ true を返します。
 - uid: microsoft.quantum.logical.not
@@ -70,9 +72,9 @@ functions:
 - uid: microsoft.quantum.logical.xor
   summary: 2つの値のブール型の排他的和を返します。
 metadata:
-  ms.openlocfilehash: 0ab7077bc2cdf9bc76f3da701a88869f8bb9bf85
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 006100b659daedbcca30fe443756a185a965ee1e
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89340104"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464336"

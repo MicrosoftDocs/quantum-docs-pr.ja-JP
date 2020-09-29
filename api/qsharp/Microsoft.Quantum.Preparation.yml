@@ -85,16 +85,16 @@ operations:
     Depolarizing channel $ $ \begin{align}/オメガ (\rho) \mathrel{を適用して、指定された qubit を $-bold done/$2 状態で準備します。 =} & lt ac {1} {4} \ sum_ {\ mu \ in \{ 0, 1, 2, 3 \} }-シグマ \_ {\rho} \_ ^ {-dagger}, \end{align} $ $ ここで、$ \rho \_ $ は混合状態を表す密度演算子で、$ $ は、混合の状態を表しています。 $i
 - uid: microsoft.quantum.preparation.prepareuniformsuperposition
   summary: >-
-    0 ~ をエンコードする州に対して一様な法則を作成し `nIndices` ます。
+    0 ~ をエンコードする州に対して一様な法則を作成し `nIndices - 1` ます。
 
 
     つまり、このユニタリ $U $ は、入力状態が $ \ket{0\cdots 0} $ の場合に、すべての数値の州 $0 $ に対して $M-$1 に対して uniform 法則を作成します。 つまり、$ $ \begin{align} U\ket {0} = \ frac {\ {1} sqsum_ rt{\ket{j}. {j = 0} ^ {m.-1}
 
     \end{align} $ $。
 metadata:
-  ms.openlocfilehash: 46bed785972355044c9ef9765ab957ca6d31e5f1
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 35645ba3566dbe0b8e9efa76fa4c3316ce7d5e47
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89339883"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464319"
