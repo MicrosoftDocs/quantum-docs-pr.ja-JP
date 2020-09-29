@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytorest
+name: ApplyToRest
+type: operation
+namespace: microsoft.quantum.canon
+summary: >-
+  配列の最初の要素以外のすべてに操作を適用します。
+
+
+  指定された操作 `op` とターゲットの配列が適用され `targets` `op(Rest(targets))` ます。
+examples: >-
+  次の Q # スニペットは同等です。
+
+
+  ```Q#
+
+  ApplyToRest(ApplyCNOTChain, register);
+
+  ApplyCNOTChain(Rest(register));
+
+  ```
+syntax: "operation ApplyToRest (op : ('T[] => Unit), targets : 'T[]) : Unit"
+input:
+  content: "(op : ('T[] => Unit), targets : 'T[])"
+  types:
+  - name: op
+    summary: 適用する操作。
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: targets
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 適用する操作の入力型。
+seeAlso:
+- microsoft.quantum.canon.applytoresta
+- microsoft.quantum.canon.applytorestc
+- microsoft.quantum.canon.applytorestca
+metadata:
+  ms.openlocfilehash: 0b64522f93ccbe0d3fe093c39e6dbb58cbc16fc1
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493911"
