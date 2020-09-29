@@ -387,6 +387,22 @@ operations:
     レジスタ内の最初の2つの qubits に操作を適用します。
 
     修飾子は、 `CA` 操作が制御可能であり、adjointable であることを示します。
+- uid: microsoft.quantum.canon.applytohead
+  summary: 配列の最初の要素に操作を適用します。
+- uid: microsoft.quantum.canon.applytoheada
+  summary: 配列の最初の要素に操作を適用します。
+- uid: microsoft.quantum.canon.applytoheadc
+  summary: 配列の最初の要素に操作を適用します。
+- uid: microsoft.quantum.canon.applytoheadca
+  summary: 配列の最初の要素に操作を適用します。
+- uid: microsoft.quantum.canon.applytomost
+  summary: 配列の最後の要素以外のすべてに操作を適用します。
+- uid: microsoft.quantum.canon.applytomosta
+  summary: 配列の最後の要素以外のすべてに操作を適用します。
+- uid: microsoft.quantum.canon.applytomostc
+  summary: 配列の最後の要素以外のすべてに操作を適用します。
+- uid: microsoft.quantum.canon.applytomostca
+  summary: 配列の最後の要素以外のすべてに操作を適用します。
 - uid: microsoft.quantum.canon.applytopartition
   summary: レジスタの特定のパーティションに2つの操作を適用して、2つの部分に分割します。
 - uid: microsoft.quantum.canon.applytopartitiona
@@ -404,6 +420,14 @@ operations:
     レジスタの特定のパーティションに2つの操作を適用して、2つの部分に分割します。
 
     修飾子は、 `CA` 操作が制御可能であり、adjointable であることを示します。
+- uid: microsoft.quantum.canon.applytorest
+  summary: 配列の最初の要素以外のすべてに操作を適用します。
+- uid: microsoft.quantum.canon.applytoresta
+  summary: 配列の最初の要素以外のすべてに操作を適用します。
+- uid: microsoft.quantum.canon.applytorestc
+  summary: 配列の最初の要素以外のすべてに操作を適用します。
+- uid: microsoft.quantum.canon.applytorestca
+  summary: 配列の最初の要素以外のすべてに操作を適用します。
 - uid: microsoft.quantum.canon.applytosubregister
   summary: インデックスの配列によって指定された qubits を使用して、レジスタのサブレジスタに操作を適用します。
 - uid: microsoft.quantum.canon.applytosubregistera
@@ -421,6 +445,14 @@ operations:
     インデックスの配列によって指定された qubits を使用して、レジスタのサブレジスタに操作を適用します。
 
     修飾子は、 `CA` 操作が制御可能であり、adjointable であることを示します。
+- uid: microsoft.quantum.canon.applytotail
+  summary: 配列の最後の要素に操作を適用します。
+- uid: microsoft.quantum.canon.applytotaila
+  summary: 配列の最後の要素に操作を適用します。
+- uid: microsoft.quantum.canon.applytotailc
+  summary: 配列の最後の要素に操作を適用します。
+- uid: microsoft.quantum.canon.applytotailca
+  summary: 配列の最後の要素に操作を適用します。
 - uid: microsoft.quantum.canon.applywith
   summary: 2つの操作を指定した場合、1つは conjugated として適用されます。
 - uid: microsoft.quantum.canon.applywitha
@@ -581,9 +613,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> 非推奨\n\nResultStack は非推奨とされました。"
 metadata:
-  ms.openlocfilehash: 969eec6767f3323e0470b0e968051bafb92d29ae
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 7346d86d3ff9db2146f37a3f402b60faebe442b7
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89341566"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464438"

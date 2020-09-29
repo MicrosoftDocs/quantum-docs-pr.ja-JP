@@ -8,40 +8,74 @@ functions:
   summary: 配列と、配列の要素に対して定義された述語が指定されている場合、配列の少なくとも1つの要素が述語を満たすかどうかを確認します。
 - uid: microsoft.quantum.arrays.chunks
   summary: 配列を同じ長さの複数の部分に分割します。
+- uid: microsoft.quantum.arrays.columnat
+  summary: マトリックスから列を抽出します。
 - uid: microsoft.quantum.arrays.constantarray
   summary: 指定された値と等しいすべての要素を使用して、指定された長さの配列を作成します。
+- uid: microsoft.quantum.arrays.count
+  summary: 配列と、配列の要素に対して定義された述語を指定すると、は、述語を満たす要素で構成される配列の要素数を返します。
+- uid: microsoft.quantum.arrays.cumulativefolded
+  summary: マップされたフォールドを1つの関数に結合します
+- uid: microsoft.quantum.arrays.diagonal
+  summary: 2次元配列の対角線要素の配列を返します。
+- uid: microsoft.quantum.arrays.elementat
+  summary: 配列の指定したインデックス位置にあるを返します。
+- uid: microsoft.quantum.arrays.elementsat
+  summary: 指定されたインデックスの範囲で配列の要素を返します。
+- uid: microsoft.quantum.arrays.emptyarray
+  summary: 指定された型の空の配列を返します。
 - uid: microsoft.quantum.arrays.enumerated
   summary: 配列が指定された場合、は、元の配列の要素と各要素のインデックスを含む新しい配列を返します。
 - uid: microsoft.quantum.arrays.equala
   summary: 同じ型の2つの配列と、配列の要素のペアに対して定義されている述語を指定すると、配列が等しいかどうかがチェックされます。
 - uid: microsoft.quantum.arrays.exclude
   summary: 指定されたインデックスリストの要素を除く、別の配列の要素を含む配列を返します。
+- uid: microsoft.quantum.arrays.excluding
+  summary: 指定されたインデックスリストの要素を除く、別の配列の要素を含む配列を返します。
 - uid: microsoft.quantum.arrays.filtered
   summary: 配列と、配列の要素に対して定義された述語が指定されている場合、は述語を満たす要素で構成される配列を返します。
+- uid: microsoft.quantum.arrays.flatmapped
+  summary: 配列と、配列要素をいくつかの出力配列にマップする関数を指定すると、配列要素ごとに連結された出力配列が返されます。
+- uid: microsoft.quantum.arrays.flattened
+  summary: 配列の配列を指定すると、すべての配列の連結が返されます。
 - uid: microsoft.quantum.arrays.fold
   summary: 配列を使用して関数を反復処理し `f` `array` 、を返し `f(f(f(initialState, array[0]), array[1]), ...)` ます。
 - uid: microsoft.quantum.arrays.head
   summary: 配列の最初の要素を返します。
+- uid: microsoft.quantum.arrays.headandrest
+  summary: 配列の最初の要素と残りのすべての要素の組を返します。
 - uid: microsoft.quantum.arrays.indexof
   summary: 指定された述語を満たす配列内の最初の要素の最初のインデックスを返します。 そのような要素が存在しない場合は、-1 を返します。
 - uid: microsoft.quantum.arrays.indexrange
   summary: 配列を指定した場合は、その配列のインデックスに対する範囲を返します。 for ループでの使用に適しています。
+- uid: microsoft.quantum.arrays.interleaved
+  summary: (ほぼ) 同じサイズの2つの配列を相互に保持します。
 - uid: microsoft.quantum.arrays.isempty
   summary: 配列が空の場合にのみ true を返します。
 - uid: microsoft.quantum.arrays.ispermutation
   summary: 指定された配列が順列を表す場合にのみ、true を出力します。
+- uid: microsoft.quantum.arrays.issorted
+  summary: 配列が指定されている場合、指定された比較関数によって定義されたとおりに配列が並べ替えられるかどうかを返します。
 - uid: microsoft.quantum.arrays.lookupfunction
   summary: 配列が指定されている場合、その配列の要素を返す関数を返します。
 - uid: microsoft.quantum.arrays.mapped
   summary: 配列と、配列の要素に対して定義されている関数を指定すると、関数の下にある元の配列のイメージで構成される新しい配列を返します。
 - uid: microsoft.quantum.arrays.mappedbyindex
   summary: 配列と、配列のインデックス付き要素に対して定義された関数を指定すると、関数の下にある元の配列のイメージで構成される新しい配列を返します。
+- uid: microsoft.quantum.arrays.mappedoverrange
+  summary: 入力として整数を受け取る範囲と関数を指定した場合は、関数の下の範囲値のイメージで構成される新しい配列を返します。
 - uid: microsoft.quantum.arrays.most
   summary: 最後の配列要素が削除される点を除いて、入力配列と等しい配列を作成します。
+- uid: microsoft.quantum.arrays.mostandtail
+  summary: 配列の最後の要素以外のすべてのタプルを返します。
 - uid: microsoft.quantum.arrays.padded
   summary: 指定された値で指定した長さまで、に埋め込まれた配列を返します。
 - uid: microsoft.quantum.arrays.partitioned
   summary: 配列を複数の部分に分割します。
+- uid: microsoft.quantum.arrays.prefixes
+  summary: 配列を指定すると、そのすべてのプレフィックスが返されます。
+- uid: microsoft.quantum.arrays.rectangulararrayfact
+  summary: 2次元配列に四角形の形状がある条件を表します。
 - uid: microsoft.quantum.arrays.rest
   summary: 最初の配列要素が削除される点を除いて、入力配列と等しい配列を作成します。
 - uid: microsoft.quantum.arrays.reversed
@@ -50,21 +84,63 @@ functions:
   summary: 指定された間隔で整数の配列を取得します。
 - uid: microsoft.quantum.arrays.sequencel
   summary: 指定された間隔で整数の配列を取得します。
+- uid: microsoft.quantum.arrays.sorted
+  summary: 配列が指定された場合、は、指定された比較関数によって並べ替えられた配列の要素を返します。
+- uid: microsoft.quantum.arrays.squarearrayfact
+  summary: 2次元配列に正方形の形状がある条件を表します。
 - uid: microsoft.quantum.arrays.subarray
   summary: 配列と場所のリストを受け取り、指定した場所に一致する元の配列の要素から新しい配列を作成します。
 - uid: microsoft.quantum.arrays.swapped
   summary: 配列内の2つの要素のスワップを適用します。
 - uid: microsoft.quantum.arrays.tail
   summary: 配列の最後の要素を返します。
+- uid: microsoft.quantum.arrays.transposed
+  summary: 配列の配列として表される行列の転置を返します。
 - uid: microsoft.quantum.arrays.tuplearrayasnestedarray
   summary: 2つのタプルのリストを入れ子になった配列に変換します。
+- uid: microsoft.quantum.arrays.unique
+  summary: 隣接する要素が等しくない新しい配列を返します。
+- uid: microsoft.quantum.arrays.unzipped
+  summary: 2組の配列を指定すると、2つの配列の組を返します。各配列には、入力配列の組の要素が含まれます。
 - uid: microsoft.quantum.arrays.where
   summary: 述語と配列が指定されている場合、述語が true である配列のインデックスを返します。
+- uid: microsoft.quantum.arrays.windows
+  summary: 長さの連続するすべてのサブを返し `size` ます。
 - uid: microsoft.quantum.arrays.zip
-  summary: 2つの配列を指定すると、は、各ペアに各元の配列の要素が含まれるように、ペアの新しい配列を返します。
+  summary: >-
+    2つの配列を指定すると、は、各ペアに各元の配列の要素が含まれるように、ペアの新しい配列を返します。
+
+    > [!WARNING]
+
+    > 非推奨
+
+
+    Zip は非推奨となりました。 代わりに、@"microsoft.quantum.arrays.zipped" を使用してください。
 - uid: microsoft.quantum.arrays.zip3
-  summary: 3つの配列を指定すると、3組の新しい配列が返されます。これにより、各3組には各元の配列の要素が含まれます。
+  summary: >-
+    3つの配列を指定すると、3組の新しい配列が返されます。これにより、各3組には各元の配列の要素が含まれます。
+
+    > [!WARNING]
+
+    > 非推奨
+
+
+    Array.zip3 は非推奨となりました。 代わりに、@"microsoft.quantum.arrays.zipped3" を使用してください。
 - uid: microsoft.quantum.arrays.zip4
+  summary: >-
+    4つの配列がある場合、4組の新しい配列を返して、各4組に各元の配列の要素が格納されるようにします。
+
+    > [!WARNING]
+
+    > 非推奨
+
+
+    Zip4 は非推奨となりました。 代わりに、@"microsoft.quantum.arrays.zipped4" を使用してください。
+- uid: microsoft.quantum.arrays.zipped
+  summary: 2つの配列を指定すると、は、各ペアに各元の配列の要素が含まれるように、ペアの新しい配列を返します。
+- uid: microsoft.quantum.arrays.zipped3
+  summary: 3つの配列を指定すると、3組の新しい配列が返されます。これにより、各3組には各元の配列の要素が含まれます。
+- uid: microsoft.quantum.arrays.zipped4
   summary: 4つの配列がある場合、4組の新しい配列を返して、各4組に各元の配列の要素が格納されるようにします。
 summary: " # <a name=\"summary\"></a>まとめ\n この名前空間には、データの配列を作成および操作するための関数が含まれています。"
 operations:
@@ -73,9 +149,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: 配列と、配列の要素に対して定義されている操作が指定された場合、は、操作の下にある元の配列のイメージで構成される新しい配列を返します。
 metadata:
-  ms.openlocfilehash: f84118178b46d8c65fbffa00562bbb1b21099353
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: af1527356d0b4962f6aba2aad79395a383fa3fab
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89341277"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464455"
