@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: ac9c060c157ba5ee3bc66852c42298ac8adcb3b3
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834025"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91492338"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>チュートリアル:Q\# でのもつれの確認
 
@@ -32,7 +32,7 @@ Bell という名前は、ベル状態を表しています。これは、量子
 
 また、QDK をインストールしなくても、 Q# プログラミング言語の概要と、クォンタムコンピューティングの最初の概念を確認することで、この解説に従うことができます。
 
-## <a name="in-this-tutorial-youll-learn-how-to"></a>このチュートリアルで学習する内容は次のとおりです。
+## <a name="in-this-tutorial-youll-learn-how-to"></a>このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
 > * Q での操作の作成と結合\#
@@ -83,7 +83,7 @@ Bell という名前は、ベル状態を表しています。これは、量子
 
 ### <a name="initialize-qubit-using-measurement"></a>測定を使用して qubit を初期化する
 
-次の最初のコードでは、で qubits を使用する方法を説明し Q# ます。  2つの操作を紹介 [`M`](xref:microsoft.quantum.intrinsic.m) し、 [`X`](xref:microsoft.quantum.intrinsic.x) qubit の状態を変換します。 このコード スニペットでは、量子ビットをパラメーターと見なす操作 `SetQubitState` が定義されています。もう 1 つのパラメーター `desired` は量子ビットが目的とする状態を表しています。  操作 `SetQubitState` は、操作 `M` を使用して、量子ビットに対する測定を実行します。  で Q# は、qubit 測定値は常に `Zero` またはを返し `One` ます。  測定値が目的の値と等しくない値を返す場合、 `SetQubitState` は qubit を "反転" します。つまり、演算子は演算を実行します。これにより、 `X` qubit 状態が戻り値の確率が返され、元に戻される新しい状態に変更 `Zero` され `One` ます。 これにより、は `SetQubitState` 常にターゲットの qubit を目的の状態にします。
+次の最初のコードスニペットでは、で qubits を使用する方法を説明し Q# ます。  2つの操作を紹介 [`M`](xref:microsoft.quantum.intrinsic.m) し、 [`X`](xref:microsoft.quantum.intrinsic.x) qubit の状態を変換します。 このコード スニペットでは、量子ビットをパラメーターと見なす操作 `SetQubitState` が定義されています。もう 1 つのパラメーター `desired` は量子ビットが目的とする状態を表しています。  操作 `SetQubitState` は、操作 `M` を使用して、量子ビットに対する測定を実行します。  で Q# は、qubit 測定値は常に `Zero` またはを返し `One` ます。  測定値が目的の値と等しくない値を返す場合、 `SetQubitState` は qubit を "反転" します。つまり、演算子は演算を実行します。これにより、 `X` qubit 状態が戻り値の確率が返され、元に戻される新しい状態に変更 `Zero` され `One` ます。 これにより、は `SetQubitState` 常にターゲットの qubit を目的の状態にします。
 
 の内容を `Program.qs` 次のコードに置き換えます。
 
@@ -112,7 +112,7 @@ Q#操作は、クォンタムサブルーチンです。 つまり、これは�
 
 操作の引数は、かっこ内にタプルとして指定します。
 
-操作の戻り値の型は、コロンの後に指定します。 この場合、`SetQubitState` 操作には戻り値がないため、`Unit` を返すように設定されています。 これは、 Q# `unit` F # では、C# ではに似ていますが、 `void` Python では空のタプル (は `()` 型ヒントで表される) に相当し `Tuple[()]` ます。
+操作の戻り値の型は、コロンの後に指定します。 この場合、この操作には `SetQubitState` 戻り値の型がないため、を返すように設定され `Unit` ます。 これは、 Q# `unit` F # では、C# ではに似ていますが、 `void` Python では空のタプル (は `()` 型ヒントで表される) に相当し `Tuple[()]` ます。
 
 最初の操作で2つのクォンタム操作を使用しました Q# 。
 
@@ -159,7 +159,7 @@ Q#操作は、クォンタムサブルーチンです。 つまり、これは�
 
 既定では、の変数 Q# は不変であり、バインド後に値を変更することはできません。 `let` キーワードは、不変変数のバインドを示すために使用します。 操作の引数は常に不変です。
 
-先ほどの例の `numOnes` のように、値を変更できる変数が必要な場合は、`mutable` キーワードを使用して変数を宣言できます。 可変変数の値は、`setQubitState` ステートメントを使用して変更できます。
+先ほどの例の `numOnes` のように、値を変更できる変数が必要な場合は、`mutable` キーワードを使用して変数を宣言できます。 可変変数の値は、`set` ステートメントを使用して変更できます。
 
 どちらの場合も、変数の型はコンパイラによって推論されます。 Q# 変数の型の注釈は必要ありません。
 
@@ -169,7 +169,7 @@ Q#操作は、クォンタムサブルーチンです。 つまり、これは�
 
 ## <a name="run-the-code-from-the-command-prompt"></a>コマンドプロンプトからコードを実行する
 
-コードを実行するには、コマンドを指定したときに実行さ *れる* 呼び出し可能なコンパイラを指定する必要があり `dotnet run` ます。 これは、呼び出し可能な Q# ( `@EntryPoint()` この場合は操作) の直前に行を追加することで、ファイルを単純に変更することで行われます。 `TestBellState` 完全なコードは次のようになります。
+コードを実行するには、コマンドを指定したときに実行するよう *にコンパイラに* 指示する必要があり `dotnet run` ます。 これは、呼び出し可能な Q# ( `@EntryPoint()` この場合は操作) の直前に行を追加することで、ファイルを単純に変更することで行われます。 `TestBellState` 完全なコードは次のようになります。
 
 ```qsharp
 namespace Bell {
@@ -237,7 +237,7 @@ Test results (# of 0s, # of 1s):
 
 ### <a name="x-flips-qubit-state"></a>`X` qubit 状態を反転します
 
-まず、量子ビットを反転してみます (量子ビットが `Zero` の状態にある場合は `One` になり、その逆も同様になります)。 これは、`TestBellState` で測定する前に `X` 操作を実行することで実現されます。
+まず、qubit を反転します (qubit が反転している状態であり、その逆も同様 `Zero` `One` です)。 これは、`TestBellState` で測定する前に `X` 操作を実行することで実現されます。
 
 ```qsharp
 X(qubit);
