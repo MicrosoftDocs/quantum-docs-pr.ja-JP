@@ -1,0 +1,81 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.sorted
+name: Sorted
+type: function
+namespace: microsoft.quantum.arrays
+summary: 配列が指定された場合、は、指定された比較関数によって並べ替えられた配列の要素を返します。
+remarks: >-
+  関数は `comparison` 推移的であると見なされ、 `comparison(a, b)` との場合はと `comparison(b, c)` 見なされ `comparison(a, c)` ます。 このプロパティがを保持していない場合、この関数の出力は正しくない可能性があります。
+
+
+  これは関数であるため、2つの要素が等しいと見なされた場合、つまり `comparison` `comparison(a, b)` とが `comparison(b, a)` 両方とも等しい場合でも、結果は完全に解釈され `true` ます。
+
+  特に、この関数によって実行される並べ替えは安定していることが保証されているので、2つの要素 `a` とが `b` 内で同じ順序で発生し、かつがの下に等しいと見なされると `array` `comparison` 、 `a` は出力の前にも表示され `b` ます。
+
+
+  次に例を示します。
+
+
+  ```Q#
+
+  function LastDigitLessThanOrEqual(left : Int, right : Int) : Bool {
+      return LessThanOrEqualI(
+          left % 10, right % 10
+      );
+  }
+
+
+  function SortedByLastDigit() : Int[] {
+      return Sorted(LastDigitLessThanOrEqual, [3, 37, 11, 17]);
+  }
+
+  // returns [11, 3, 37, 17].
+
+  ```
+examples: >-
+  次のスニペットは、整数の配列を昇順に並べ替えます。
+
+
+  ```Q#
+
+  let sortedArray = Sorted(LessThanOrEqualI, [3, 17, 11, -201, -11]);
+
+  ```
+syntax: "function Sorted (comparison : (('T, 'T) -> Bool), array : 'T[]) : 'T[]"
+input:
+  content: "(comparison : (('T, 'T) -> Bool), array : 'T[])"
+  types:
+  - name: comparison
+    summary: '`a` `b` がの場合に、以下の2つの要素を比較する関数 `comparison(a, b)` `true` 。'
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: 並べ替える配列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: の各要素の型 `array` 。
+metadata:
+  ms.openlocfilehash: d20fad7286845f21dbb7e609d2bec37ee14adb90
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494127"

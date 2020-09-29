@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.issorted
+name: IsSorted
+type: function
+namespace: microsoft.quantum.arrays
+summary: 配列が指定されている場合、指定された比較関数によって定義されたとおりに配列が並べ替えられるかどうかを返します。
+remarks: 関数は `comparison` 推移的であると見なされ、 `comparison(a, b)` との場合はと `comparison(b, c)` 見なされ `comparison(a, c)` ます。 このプロパティがを保持していない場合、この関数の出力は正しくない可能性があります。
+syntax: "function IsSorted (comparison : (('T, 'T) -> Bool), array : 'T[]) : Bool"
+input:
+  content: "(comparison : (('T, 'T) -> Bool), array : 'T[])"
+  types:
+  - name: comparison
+    summary: '`a` `b` がの場合に、以下の2つの要素を比較する関数 `comparison(a, b)` `true` 。'
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: チェックする配列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Bool
+  types:
+  - summary: '`true` 要素の各ペアと、その順序で発生する場合にのみ `a` `b` `array` 、 `comparison(a, b)` はに `true` なります。'
+    isPrimitive: true
+    uid: Bool
+typeParameters:
+- uid: "'T"
+  summary: の各要素の型 `array` 。
+metadata:
+  ms.openlocfilehash: 4cf457c3f53bd9acdcccf699d3c0047185953c9f
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494182"

@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.interleaved
+name: Interleaved
+type: function
+namespace: microsoft.quantum.arrays
+summary: >-
+  (ほぼ) 同じサイズの2つの配列を相互に保持します。
+
+
+  この関数は、2つの配列のインターリーブを返します。最初の配列の最初の要素、2番目の配列の最初の要素、およびなどが含まれます。
+
+
+  最初の配列は、2番目の配列と同じ長さであるか、または1つ以上の要素を持つことができます。
+examples: >-
+  ```Q#
+
+  // same as int1 = [1, -1, 2, -2, 3, -3]
+
+  let int1 = Interleaved([1, 2, 3], [-1, -2, -3])
+
+
+  // same as int2 = [false, true, false, true, false]
+
+  let int2 = Interleaved(ConstantArray(3, false), ConstantArray(2, true));
+
+  ```
+syntax: "function Interleaved (first : 'T[], second : 'T[]) : 'T[]"
+input:
+  content: "(first : 'T[], second : 'T[])"
+  types:
+  - name: first
+    summary: インターリーブされる最初の配列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+  - name: second
+    summary: インターリーブする2番目の配列。
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: インターリーブ配列
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: およびの各要素の型 `first` `second` 。
+metadata:
+  ms.openlocfilehash: 4decfb4189f8e7fd320c5fdb67fbeab73109fd66
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494206"
