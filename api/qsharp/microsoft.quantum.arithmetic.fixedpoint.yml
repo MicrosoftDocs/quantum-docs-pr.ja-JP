@@ -6,9 +6,9 @@ namespace: microsoft.quantum.arithmetic
 summary: 固定小数点数をエンコードする qubits のレジスタを表します。 は、バイナリポイントの左側にある qubits の数と等しい整数で構成されます。つまり、1以上の重みの qubits と、クォンタムレジスタです。
 syntax: newtype FixedPoint = (Int, Qubit[]);
 metadata:
-  ms.openlocfilehash: 003fdd7fbf4bf9e9d6252823e54c9fba0f0584e0
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 171cf0aa629c442d69b6efedb22d60f7f6ab0996
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89342008"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91461770"
