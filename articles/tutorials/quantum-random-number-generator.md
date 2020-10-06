@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: cefe35a10dd89c14d2f1abc3080d52ab125236d1
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834042"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771278"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>チュートリアル:Q\# で量子乱数ジェネレーターを実装する
 
@@ -33,7 +33,7 @@ ms.locfileid: "90834042"
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-「[量子コンピューティングについて](xref:microsoft.quantum.overview.understanding)」という記事で述べたように、キュービットとは、重ね合わせに入ることができる量子情報の単位です。 測定されるとき、キュービットは 0 か 1 だけになります。 ただし、操作が実行されている場合、qubit の状態は、0または1を測定値として読み取る確率を表します。 この確率論的な状態が重ね合わせと呼ばれています。 この確率を使用し、乱数を生成できます。
+「[量子コンピューティングについて](xref:microsoft.quantum.overview.understanding)」という記事で述べたように、キュービットとは、重ね合わせに入ることができる量子情報の単位です。 測定されるとき、キュービットは 0 か 1 だけになります。 ただし、測定の前に、qubit の状態は、0または1を測定値として読み取る確率を表します。 この確率論的な状態が重ね合わせと呼ばれています。 この確率を使用し、乱数を生成できます。
 
 この操作では、 Q# `Qubit` にネイティブなデータ型を導入 Q# します。 `Qubit` は `using` ステートメントでのみ割り当てることができます。 割り当て後、キュービットは常に `Zero` 状態になります。 
 

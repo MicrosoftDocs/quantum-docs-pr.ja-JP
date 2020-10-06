@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 28e880445bf61150d7940730009a5482298adae2
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 27038a86dc4854c397458d95529aca463d493fd6
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91492355"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771320"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -23,6 +23,12 @@ ms.locfileid: "91492355"
 インストール手順については、[インストール ガイド](xref:microsoft.quantum.install)を参照してください。
 
 更新手順については、[更新ガイド](xref:microsoft.quantum.update)を参照してください。
+
+## <a name="version-01220100504"></a>バージョン0.12.20100504
+
+*リリース日: 2020 年10月5日*
+
+このリリースでは、ノートブックの読み込みに影響するバグが修正されました Q# (「 [iqsharp # 331](https://github.com/microsoft/iqsharp/pull/331)」を参照してください)。
 
 ## <a name="version-01220092803"></a>バージョン0.12.20092803
 
@@ -66,7 +72,7 @@ ms.locfileid: "91492355"
 
 このリリースには、次のものが含まれています。
 
-- ノートブック内の開い Q# ている名前空間は、今後のすべてのセル計算で使用できるようになりました。 これにより、たとえば、各コードセルで関連する名前空間を開く必要がなく、ノートブックの上部にあるセルに1回だけ名前空間を開くことができます。 新しいマジックコマンドを実行すると、 `%lsopen` 現在開かれている名前空間の一覧が表示されます。
+- ノートブックで名前空間 Q# を開くと、今後のすべてのセルを実行するときに使用できるようになりました。 これにより、たとえば、各コードセルで関連する名前空間を開く必要がなく、ノートブックの上部にあるセルに1回だけ名前空間を開くことができます。 新しいマジックコマンドを実行すると、 `%lsopen` 現在開かれている名前空間の一覧が表示されます。
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)、 [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 、 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)については、closed pr の完全な一覧を参照してください。  
 
