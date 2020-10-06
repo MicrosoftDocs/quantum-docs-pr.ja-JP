@@ -9,12 +9,12 @@ uid: microsoft.quantum.numerics.usage
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 474fc74b9c92fbf28c0618a3090905d025699d32
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: dfcb8e9e5a15d0881750d67cf58d7ad47cbecd3a
+ms.sourcegitcommit: 897ace8b506adb2331e911ee5633dceced566174
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868799"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764133"
 ---
 # <a name="using-the-numerics-library"></a>数値ライブラリの使用
 
@@ -37,7 +37,7 @@ open Microsoft.Quantum.Arithmetic;
 
 1. **`LittleEndian`**: が最 `qArr : Qubit[]` `qArr[0]` 下位ビットを表している整数を表す qubit 配列。
 1. **`SignedLittleEndian`**: と同じです `LittleEndian` が、2の補数に格納されている符号付き整数を表している点が異なります。
-1. **`FixedPoint`**: Qubit 配列とバイナリポイント位置で構成される実数を表します。この値は、バイナリ `qArr2 : Qubit[]` `pos` ポイントの左側にあるバイナリの桁数をカウントします。 `qArr2`はと同じ方法で格納され `SignedLittleEndian` ます。
+1. **`FixedPoint`**: Qubit 配列とバイナリポイント位置で構成される実数を表します。この値は、バイナリ `qArr2 : Qubit[]` `pos` ポイントの左側にあるバイナリの桁数をカウントします。 `qArr2` はと同じ方法で格納され `SignedLittleEndian` ます。
 
 ## <a name="operations"></a>操作
 
@@ -95,7 +95,7 @@ operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
 
 クォンタム $x コンピューターで $ \ sin (x) $ などの smooth functions を評価するには ($ がクォンタム番号である)、 `FixedPoint` クォンタム開発キットの数値ライブラリでは、操作 `EvaluatePolynomialFxP` とを提供し `Evaluate[Even/Odd]PolynomialFxP` ます。
 
-1つ目のは、 `EvaluatePolynomialFxP` $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \ cドット + a_dx ^ d, $ $ という形式の多項式を評価できるようにします。ここで、$d $ は*度*を表します。 これを行うには、必要なのは多項式係数 `[a_0,..., a_d]` (型 `Double[]` )、入力、 `x : FixedPoint` および出力 `y : FixedPoint` (最初はゼロ) だけです。
+1つ目のは、 `EvaluatePolynomialFxP` $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \ cドット + a_dx ^ d, $ $ という形式の多項式を評価できるようにします。ここで、$d $ は *度*を表します。 これを行うには、必要なのは多項式係数 `[a_0,..., a_d]` (型 `Double[]` )、入力、 `x : FixedPoint` および出力 `y : FixedPoint` (最初はゼロ) だけです。
 ```qsharp
 EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
@@ -114,13 +114,13 @@ EvaluateOddPolynomialFxP([1.0, 2.0], x, y);
 
 ## <a name="more-samples"></a>その他のサンプル
 
-その他のサンプルについては、[メインサンプルリポジトリ](https://github.com/Microsoft/Quantum)を参照してください。
+その他のサンプルについては、 [メインサンプルリポジトリ](https://github.com/Microsoft/Quantum)を参照してください。
 
 まず、リポジトリを複製し、 `Numerics` サブフォルダーを開きます。
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Numerics
+cd Quantum/samples/numerics
 ```
 
 次に、の `cd` いずれかのサンプルフォルダーに入力し、を使用してサンプルを実行します。
