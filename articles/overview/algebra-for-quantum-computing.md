@@ -65,7 +65,7 @@ $$\frac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}\begin{bmatrix} 1 
 
 各量子ビットはベクトル空間であるため、単なる乗算はできないことに注意してください。 代わりに、**テンソル積**を使用します。これは、個々のベクトル空間から新しいベクトル空間を作成する関連演算であり、$\otimes$ 記号で表されます。 たとえば、2 つの量子ビットの状態 $\begin{bmatrix} a \\\\  b \end{bmatrix}$ と $\begin{bmatrix} c \\\\  d \end{bmatrix}$ のテンソル積を計算します。
 
-$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix} $$
+$$\begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$$
 
 結果は 4 次元行列になり、各要素は確率を表します。 たとえば、$ac$ は 0 と 0 に収縮する 2 つの量子ビットの確率であり、$ad$ は 0 と 1 の確率、というようになります。 
 
