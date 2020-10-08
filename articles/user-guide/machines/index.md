@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f40c63eed60379aa46a0cd9cfdd7d8de8c22c079
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833434"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771310"
 ---
 # <a name="quantum-simulators"></a>量子シミュレーター
 
@@ -24,7 +24,7 @@ ms.locfileid: "90833434"
 
 ## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a>Quantum Development Kit (QDK) の量子シミュレーター
 
-量子シミュレーターは、アルゴリズムに対して量子プリミティブを実装する役割を担います。 これには、`H`、`CNOT`、`Measure` などのプリミティブ操作だけでなく、量子ビットの管理と追跡も含まれます。 QDK には、同じ量子アルゴリズムの異なる実行モデルを表すさまざまなクラスの量子シミュレーターが含まれています。 
+量子シミュレーターは、アルゴリズムに対して量子プリミティブを実装する役割を担います。 これには、`H`、`CNOT`、`Measure` などのプリミティブ操作だけでなく、量子ビットの管理と追跡も含まれます。 QDK には、同じ量子アルゴリズムの異なるシミュレーション方法を表すさまざまなクラスの量子シミュレーターが含まれています。 
 
 
 それぞれの種類の量子シミュレーターは、これらのプリミティブに対して異なる実装を提供できます。 たとえば、[完全状態シミュレーター](xref:microsoft.quantum.machines.full-state-simulator)では、[量子状態ベクトル](xref:microsoft.quantum.glossary#quantum-state)を完全にシミュレートすることで、量子アルゴリズムが実行されます。一方、[量子コンピューターのトレース シミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)では、実際の量子状態はまったく考慮されません。 代わりに、アルゴリズムのゲート、量子ビット、およびその他のリソースの使用状況を追跡します。

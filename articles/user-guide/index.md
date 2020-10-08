@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f0680e773c8233d6c4f1acb742b3cc38dbc069d5
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 81f31a531a1b50ead332bb578ccf392ddced9e8d
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834756"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771381"
 ---
 # <a name="the-no-locq-user-guide"></a>Q# ユーザー ガイド
 
@@ -55,7 +55,7 @@ Q# ユーザー ガイドへようこそ。
 
 ### <a name="quantum-simulators-and-resource-estimators"></a>量子シミュレーターとリソース エスティメーター
 
-- [量子シミュレーターとホスト アプリケーション](xref:microsoft.quantum.machines):使用可能なさまざまなシミュレーターの概要と、ホスト プログラムとターゲット コンピューター間の一般的な実行モデル。
+- [量子シミュレーターとホスト アプリケーション](xref:microsoft.quantum.machines):使用可能なさまざまなシミュレーターの概要と、ホスト プログラムとターゲット マシンを連携させて Q# プログラムを実行する方法。
 
 - [完全状態シミュレーター](xref:microsoft.quantum.machines.full-state-simulator):完全な量子状態をシミュレートするターゲット コンピューター。 小規模のプログラムを完全に実行またはデバッグする場合に便利です (数十の量子ビット未満)。
 
