@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.simulators
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8691838b2d6c54baa40042245eee8c901a7ca965
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 714d8163a66feea2766a71886c6d07275098ac2f
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835011"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771368"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>量子コンピューターと量子シミュレータ
 
@@ -33,7 +33,7 @@ ms.locfileid: "90835011"
 
 ## <a name="quantum-simulators"></a>量子シミュレーター
 
-従来型コンピューターで実行される量子シミュレーターを使用すると、量子システムでの量子アルゴリズムの計算をシミュレートできます。  Microsoft の Quantum 開発キット (QDK) には、全状態ベクトル シミュレーターが、他の特殊な量子シミュレーターとともに含まれています。
+従来型コンピューターで実行される量子シミュレーターを使用すると、量子システムでの量子アルゴリズムの実行をシミュレートできます。  Microsoft の Quantum 開発キット (QDK) には、全状態ベクトル シミュレーターが、他の特殊な量子シミュレーターとともに含まれています。
 
 ## <a name="topological-qubit"></a>トポロジカル量子ビット
 

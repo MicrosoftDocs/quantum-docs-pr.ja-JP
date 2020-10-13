@@ -4,17 +4,17 @@ title: Quantum Development Kit (QDK) の概要
 description: Microsoft Quantum 開発キットを使用して Q# で量子プロジェクトのプログラミングを開始する方法について説明します。
 author: bradben
 ms.author: v-benbra
-ms.date: 5/10/2020
+ms.date: 9/29/2020
 ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e56b0e0455773481fbff6cfb7f4a6817cfc93d1a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8a60888bbf7dce1b85bce7a2aa8c994bb8570964
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834501"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771209"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Quantum Development Kit (QDK) の概要
 
@@ -34,13 +34,11 @@ Quantum 開発キットには、Q# を使用して量子プログラムを開発
 
 * [量子乱数ジェネレーター](xref:microsoft.quantum.quickstarts.qrng) - "Q# Hello World" スタイルのアプリケーションであり、量子の概念を簡単に紹介し、量子アプリケーションを数分でビルドして実行できます。
 * [Q# でのもつれの確認](xref:microsoft.quantum.write-program) - このチュートリアルでは、量子プログラミングの基本的な概念を示す Q# プログラムの記述方法について説明します。 コーディングを開始する準備ができていない場合でも、QDK をインストールせずに説明を読み進めることで、Q# プログラミング言語の概要と量子コンピューティングの最初の概念を理解することができます。
-* [グローバーの検索アルゴリズム](xref:microsoft.quantum.quickstarts.search) - この Q# プログラムの例では、低レベルの量子演算を抽象化する方法を探ることで、量子アルゴリズムを表すための Q# の能力を確認します。
-    このチュートリアルでは、Visual Studio または Visual Studio Code を使用して、Q# アプリケーションとしてプログラムを開発する手順について説明します。
+* [グローバーの検索アルゴリズム](xref:microsoft.quantum.quickstarts.search) - この Q# プログラムの例では、低レベルの量子演算を抽象化する方法を探ることで、量子アルゴリズムを表すための Q# の能力を確認します。 このチュートリアルでは、Visual Studio または Visual Studio Code を使用して、Q# アプリケーションとしてプログラムを開発する手順について説明します。
 
-### <a name="learning-further"></a>今後の学習
-* [量子コンピューティングの Microsoft Learn モジュール](https://docs.microsoft.com/learn/browse/?term=quantum)は、ご自身のペースとスケジュールで中核概念を習得できるように構成されています。 [最初のモジュール](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/)では、QDK で量子プログラムを作成する方法の基本を学習できます。
-* Q# プログラミングの詳細については、[Quantum Katas](https://github.com/Microsoft/QuantumKatas) に関する説明をご覧ください。これは、Q# のプログラミング演習を通じて量子コンピューティングを紹介する、マイペースで進められるプログラミング演習のコレクションです。
-    これらの katas の多くは、Q# ノートブックとしても利用できます。 
+## <a name="learning-further"></a>今後の学習
+* Microsoft Learn では、量子コンピューティングの無料オンライン トレーニングを提供しています。 [量子コンピューティングの基礎](https://docs.microsoft.com/learn/paths/quantum-computing-fundamentals/)ラーニング パスでは、量子コンピューティングと量子アルゴリズムの基本的な概念が紹介されており、Q# を使用して量子プログラムの構築を開始することができます。
+* Q# プログラミングの詳細については、[Quantum Katas](https://github.com/Microsoft/QuantumKatas) に関する説明をご覧ください。これは、Q# のプログラミング演習を通じて量子コンピューティングを紹介する、マイペースで進められるプログラミング演習のコレクションです。 これらの katas の多くは、Q# ノートブックとしても利用できます。 
 * [サンプル リポジトリ](https://github.com/Microsoft/Quantum)では、Q# を使用して量子プログラムを作成する方法について複数の例を紹介しています。 これらのサンプルのほとんどは、オープンソースの[量子ライブラリ](https://github.com/Microsoft/QuantumLibraries)を使用して記述されています。これには、[標準](xref:microsoft.quantum.libraries.standard.intro)および[化学](xref:microsoft.quantum.chemistry.concepts.intro)ライブラリ (以下の詳細を参照) が含まれます。
 
 ## <a name="key-concepts-for-quantum-computing"></a>量子コンピューティングの主要な概念
@@ -59,7 +57,7 @@ Quantum 開発キットには、Q# を使用して量子プログラムを開発
 ### <a name="no-locq-developer-guides"></a>Q# 開発者ガイド
 
 * 「[Q# ユーザー ガイド](xref:microsoft.quantum.guide)」では、Q# で量子プログラムを作成するための中核概念について詳しく説明します。
-* [量子シミュレーターとホスト アプリケーション](xref:microsoft.quantum.machines)では、量子アルゴリズムがどのように計算されるか、どの量子コンピューターを使用できるか、および量子プログラム用に Q# 以外のドライバーを作成する方法について説明します。
+* [量子シミュレーターとホスト アプリケーション](xref:microsoft.quantum.machines)では、量子アルゴリズムがどのように実行されるか、どの量子コンピューターを使用できるか、および量子プログラム用に Q# 以外のドライバーを作成する方法について説明します。
 
 ### <a name="no-locq-libraries"></a>Q# ライブラリ
 

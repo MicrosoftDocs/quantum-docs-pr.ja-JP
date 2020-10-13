@@ -10,18 +10,18 @@ uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51de510907ea087d1f23d3ff65d268d6d455a493
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: b34d89ab33a4644c1dd4342949685f9bf84babd8
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834314"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771399"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Q# 用の Jupyter Notebook を使用した開発
 
 Q# 用の Jupyter Notebook で Q# の演算を開発するための QDK をインストールします。
 
-Jupyter Notebook には、手順書、ノート、その他のコンテンツが含まれるだけでなく、インプレース コードの計算が可能です。 この環境は、組み込まれた説明や、量子コンピューティングの対話型チュートリアルを使用しながら Q# コードを作成するのに最適です。 独自の Q# ノートブックの作成を開始するには、次の手順を実行する必要があります。
+Jupyter Notebook を使用すると、手順書、ノート、その他のコンテンツと共に、コードをインプレースで実行できます。 この環境は、組み込まれた説明や、量子コンピューティングの対話型チュートリアルを使用しながら Q# コードを作成するのに最適です。 独自の Q# ノートブックの作成を開始するには、次の手順を実行する必要があります。
 
 ## <a name="install-the-ino-locq-jupyter-kernel"></a>IQ# Jupyter カーネルをインストールする
 
