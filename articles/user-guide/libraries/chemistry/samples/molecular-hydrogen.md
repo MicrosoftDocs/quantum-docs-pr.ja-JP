@@ -1,27 +1,27 @@
 ---
 title: エネルギー準位の推定の取得
-description: Q#分子 hydrogen のエネルギーレベルの値を推定するサンプルプログラムについて説明します。
+description: :::no-loc(Q#):::分子 hydrogen のエネルギーレベルの値を推定するサンプルプログラムについて説明します。
 author: guanghaolow
 ms.author: gulow
 ms.date: 07/02/2020
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
-- Q#
-- $$v
-ms.openlocfilehash: 05506f4099de754cd02d81fbd9200f2de091e37e
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+- ':::no-loc(Q#):::'
+- ':::no-loc($$v):::'
+ms.openlocfilehash: 81fba0c52c854d61f9143659795fb4d3c3cee8b9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759734"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691536"
 ---
-# <a name="obtaining-energy-level-estimates"></a><span data-ttu-id="91734-103">エネルギー準位の推定の取得</span><span class="sxs-lookup"><span data-stu-id="91734-103">Obtaining energy level estimates</span></span>
-<span data-ttu-id="91734-104">エネルギーレベルの値の推定は、量子化学の主要なアプリケーションの1つです。</span><span class="sxs-lookup"><span data-stu-id="91734-104">Estimating the values of energy levels is one of the principal applications of quantum chemistry.</span></span> <span data-ttu-id="91734-105">この記事では、分子 hydrogen の正規の例に対してこれを実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="91734-105">This article outlines how you can perform this for the canonical example of molecular hydrogen.</span></span> <span data-ttu-id="91734-106">このセクションで参照されているサンプルは、 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) 化学サンプルリポジトリにあります。</span><span class="sxs-lookup"><span data-stu-id="91734-106">The sample referenced in this section is [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) in the chemistry samples repository.</span></span> <span data-ttu-id="91734-107">出力をプロットするより視覚的な例は [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) デモです。</span><span class="sxs-lookup"><span data-stu-id="91734-107">A more visual example that plots the output is the [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) demo.</span></span>
+# <a name="obtaining-energy-level-estimates"></a><span data-ttu-id="6fe1f-103">エネルギー準位の推定の取得</span><span class="sxs-lookup"><span data-stu-id="6fe1f-103">Obtaining energy level estimates</span></span>
+<span data-ttu-id="6fe1f-104">エネルギーレベルの値の推定は、量子化学の主要なアプリケーションの1つです。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-104">Estimating the values of energy levels is one of the principal applications of quantum chemistry.</span></span> <span data-ttu-id="6fe1f-105">この記事では、分子 hydrogen の正規の例に対してこれを実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-105">This article outlines how you can perform this for the canonical example of molecular hydrogen.</span></span> <span data-ttu-id="6fe1f-106">このセクションで参照されているサンプルは、 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) 化学サンプルリポジトリにあります。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-106">The sample referenced in this section is [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) in the chemistry samples repository.</span></span> <span data-ttu-id="6fe1f-107">出力をプロットするより視覚的な例は [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) デモです。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-107">A more visual example that plots the output is the [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) demo.</span></span>
 
-## <a name="estimating-the-energy-values-of-molecular-hydrogen"></a><span data-ttu-id="91734-108">分子 hydrogen のエネルギー値の推定</span><span class="sxs-lookup"><span data-stu-id="91734-108">Estimating the energy values of molecular hydrogen</span></span>
+## <a name="estimating-the-energy-values-of-molecular-hydrogen"></a><span data-ttu-id="6fe1f-108">分子 hydrogen のエネルギー値の推定</span><span class="sxs-lookup"><span data-stu-id="6fe1f-108">Estimating the energy values of molecular hydrogen</span></span>
 
-<span data-ttu-id="91734-109">最初の手順では、分子 hydrogen を表す Hamiltonian を構築します。</span><span class="sxs-lookup"><span data-stu-id="91734-109">The first step is to construct the Hamiltonian representing molecular hydrogen.</span></span> <span data-ttu-id="91734-110">これは NWChem ツールを使用して構築できますが、簡潔にするために、このサンプルでは Hamiltonian 用語を手動で追加します。</span><span class="sxs-lookup"><span data-stu-id="91734-110">Although you can construct this using the NWChem tool, for brevity, this sample adds the Hamiltonian terms manually.</span></span>
+<span data-ttu-id="6fe1f-109">最初の手順では、分子 hydrogen を表す Hamiltonian を構築します。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-109">The first step is to construct the Hamiltonian representing molecular hydrogen.</span></span> <span data-ttu-id="6fe1f-110">これは NWChem ツールを使用して構築できますが、簡潔にするために、このサンプルでは Hamiltonian 用語を手動で追加します。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-110">Although you can construct this using the NWChem tool, for brevity, this sample adds the Hamiltonian terms manually.</span></span>
 
 ```csharp
     // These orbital integrals are represented using the OrbitalIntegral
@@ -44,7 +44,7 @@ ms.locfileid: "90759734"
     var fermionHamiltonian = new OrbitalIntegralHamiltonian(orbitalIntegrals).ToFermionHamiltonian();
 ```
 
-<span data-ttu-id="91734-111">Hamiltonian をシミュレートするには、演算子を qubit 演算子に変換する必要があります。</span><span class="sxs-lookup"><span data-stu-id="91734-111">Simulating the Hamiltonian requires converting the fermion operators to qubit operators.</span></span> <span data-ttu-id="91734-112">この変換は、次のように、ヨルダン-Wigner エンコードを使用して実行されます。</span><span class="sxs-lookup"><span data-stu-id="91734-112">This conversion is performed through the Jordan-Wigner encoding as follows:</span></span>
+<span data-ttu-id="6fe1f-111">Hamiltonian をシミュレートするには、演算子を qubit 演算子に変換する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-111">Simulating the Hamiltonian requires converting the fermion operators to qubit operators.</span></span> <span data-ttu-id="6fe1f-112">この変換は、次のように Jordan-Wigner エンコードを使用して実行されます。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-112">This conversion is performed through the Jordan-Wigner encoding as follows:</span></span>
 
 ```csharp
     // The Jordan-Wigner encoding converts the fermion Hamiltonian, 
@@ -59,13 +59,13 @@ ms.locfileid: "90759734"
     var fermionWavefunction = fermionHamiltonian.CreateHartreeFockState(nElectrons);
 
     // This Jordan-Wigner data structure also contains a representation 
-    // of the Hamiltonian and wavefunction made for consumption by the Q# operations.
+    // of the Hamiltonian and wavefunction made for consumption by the :::no-loc(Q#)::: operations.
     var qSharpHamiltonianData = jordanWignerEncoding.ToQSharpFormat();
     var qSharpWavefunctionData = fermionWavefunction.ToQSharpFormat();
     var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
-<span data-ttu-id="91734-113">次に、 `qSharpData` Hamiltonian を表すを関数に渡し `TrotterStepOracle` ます。</span><span class="sxs-lookup"><span data-stu-id="91734-113">Next, pass `qSharpData`, which represents the Hamiltonian, to the `TrotterStepOracle` function.</span></span> <span data-ttu-id="91734-114">`TrotterStepOracle` Hamiltonian のリアルタイムの進化を近似するクォンタム操作を返します。</span><span class="sxs-lookup"><span data-stu-id="91734-114">`TrotterStepOracle` returns a quantum operation that approximates the real-time evolution of the Hamiltonian.</span></span> <span data-ttu-id="91734-115">詳細については、「 [Hamiltonian dynamics のシミュレーション](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="91734-115">For more information, see [Simulating Hamiltonian dynamics](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms).</span></span>
+<span data-ttu-id="6fe1f-113">次に、 `qSharpData` Hamiltonian を表すを関数に渡し `TrotterStepOracle` ます。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-113">Next, pass `qSharpData`, which represents the Hamiltonian, to the `TrotterStepOracle` function.</span></span> <span data-ttu-id="6fe1f-114">`TrotterStepOracle` Hamiltonian のリアルタイムの進化を近似するクォンタム操作を返します。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-114">`TrotterStepOracle` returns a quantum operation that approximates the real-time evolution of the Hamiltonian.</span></span> <span data-ttu-id="6fe1f-115">詳細については、「 [Hamiltonian dynamics のシミュレーション](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-115">For more information, see [Simulating Hamiltonian dynamics](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms).</span></span>
 
 ```qsharp
 // qSharpData passed from driver
@@ -83,9 +83,9 @@ let integratorOrder = 4;
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-<span data-ttu-id="91734-116">この時点で、標準ライブラリの [フェーズ推定アルゴリズム](xref:microsoft.quantum.libraries.characterization) を使用して、前のシミュレーションを使用して、グラウンドの状態エネルギーを学習できます。</span><span class="sxs-lookup"><span data-stu-id="91734-116">At this point, you can use the standard library's [phase estimation algorithms](xref:microsoft.quantum.libraries.characterization) to learn the ground state energy using the previous simulation.</span></span> <span data-ttu-id="91734-117">そのためには、クォンタムのグラウンドの状態に対して適切な概算を準備する必要があります。</span><span class="sxs-lookup"><span data-stu-id="91734-117">This requires preparing a good approximation to the quantum ground state.</span></span> <span data-ttu-id="91734-118">このような概算の提案は、スキーマに記載されてい [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) ます。</span><span class="sxs-lookup"><span data-stu-id="91734-118">Suggestions for such approximations are provided in the [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) schema.</span></span> <span data-ttu-id="91734-119">ただし、これらの推奨事項を省略すると、既定の方法では、最長一致に多数の原子が追加され `hamiltonian.NElectrons` ます。これにより、対角線の 1 ~ 3 の注ぎが最小化されます。</span><span class="sxs-lookup"><span data-stu-id="91734-119">However, absent these suggestions, the default approach adds a number of `hamiltonian.NElectrons` electrons to greedily minimize the diagonal one-electron term energies.</span></span> <span data-ttu-id="91734-120">フェーズの推定関数と操作は、DocFX 表記で [、名前空間](xref:microsoft.quantum.characterization) に用意されています。</span><span class="sxs-lookup"><span data-stu-id="91734-120">The phase estimation functions and operations are provided in DocFX notation in the [Microsoft.Quantum.Characterization](xref:microsoft.quantum.characterization) namespace.</span></span>
+<span data-ttu-id="6fe1f-116">この時点で、標準ライブラリの [フェーズ推定アルゴリズム](xref:microsoft.quantum.libraries.characterization) を使用して、前のシミュレーションを使用して、グラウンドの状態エネルギーを学習できます。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-116">At this point, you can use the standard library's [phase estimation algorithms](xref:microsoft.quantum.libraries.characterization) to learn the ground state energy using the previous simulation.</span></span> <span data-ttu-id="6fe1f-117">そのためには、クォンタムのグラウンドの状態に対して適切な概算を準備する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-117">This requires preparing a good approximation to the quantum ground state.</span></span> <span data-ttu-id="6fe1f-118">このような概算の提案は、スキーマに記載されてい [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) ます。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-118">Suggestions for such approximations are provided in the [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) schema.</span></span> <span data-ttu-id="6fe1f-119">ただし、これらの推奨事項を省略すると、既定の方法では、最長一致に多数の原子が追加され `hamiltonian.NElectrons` ます。これにより、対角線の 1 ~ 3 の注ぎが最小化されます。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-119">However, absent these suggestions, the default approach adds a number of `hamiltonian.NElectrons` electrons to greedily minimize the diagonal one-electron term energies.</span></span> <span data-ttu-id="6fe1f-120">フェーズの推定関数と操作は、DocFX 表記で [、名前空間](xref:Microsoft.Quantum.Characterization) に用意されています。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-120">The phase estimation functions and operations are provided in DocFX notation in the [Microsoft.Quantum.Characterization](xref:Microsoft.Quantum.Characterization) namespace.</span></span>
 
-<span data-ttu-id="91734-121">次のスニペットは、化学シミュレーションライブラリによるリアルタイムの進化の出力を、クォンタムフェーズ推定と統合する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="91734-121">The following snippet shows how the real-time evolution output by the chemistry simulation library integrates with quantum phase estimation.</span></span>
+<span data-ttu-id="6fe1f-121">次のスニペットは、化学シミュレーションライブラリによるリアルタイムの進化の出力を、クォンタムフェーズ推定と統合する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-121">The following snippet shows how the real-time evolution output by the chemistry simulation library integrates with quantum phase estimation.</span></span>
 
 ```qsharp
 operation GetEnergyByTrotterization (
@@ -124,7 +124,7 @@ operation GetEnergyByTrotterization (
 }
 ```
 
-<span data-ttu-id="91734-122">これで、ホストプログラムからコードを呼び出すことができ Q# ます。</span><span class="sxs-lookup"><span data-stu-id="91734-122">You can now invoke the Q# code from the host program.</span></span> <span data-ttu-id="91734-123">次の C# コードは、完全な状態のシミュレーターを作成し、を実行して `GetEnergyByTrotterization` 、グラウンドステートエネルギーを取得します。</span><span class="sxs-lookup"><span data-stu-id="91734-123">The following C# code creates a full-state simulator and runs `GetEnergyByTrotterization` to obtain the ground state energy.</span></span>
+<span data-ttu-id="6fe1f-122">これで、ホストプログラムからコードを呼び出すことができ :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-122">You can now invoke the :::no-loc(Q#)::: code from the host program.</span></span> <span data-ttu-id="6fe1f-123">次の C# コードは、完全な状態のシミュレーターを作成し、を実行して `GetEnergyByTrotterization` 、グラウンドステートエネルギーを取得します。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-123">The following C# code creates a full-state simulator and runs `GetEnergyByTrotterization` to obtain the ground state energy.</span></span>
 
 ```csharp
 using (var qsim = new QuantumSimulator())
@@ -154,7 +154,7 @@ using (var qsim = new QuantumSimulator())
 }
 ```
 
-<span data-ttu-id="91734-124">操作は、次の2つのパラメーターを返します。</span><span class="sxs-lookup"><span data-stu-id="91734-124">The operation returns two parameters:</span></span> 
+<span data-ttu-id="6fe1f-124">操作は、次の2つのパラメーターを返します。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-124">The operation returns two parameters:</span></span> 
 
-- <span data-ttu-id="91734-125">`energyEst` は、地表のエネルギーの推定値であり、平均に近い状態になる必要があり `-1.137` ます。</span><span class="sxs-lookup"><span data-stu-id="91734-125">`energyEst` is the estimate of the ground state energy and should be close to `-1.137` on average.</span></span> 
-- <span data-ttu-id="91734-126">`phaseEst` フェーズ推定アルゴリズムによって返される未加工のフェーズです。</span><span class="sxs-lookup"><span data-stu-id="91734-126">`phaseEst` is the raw phase returned by the phase estimation algorithm.</span></span> <span data-ttu-id="91734-127">これは、値が大きすぎるためにエイリアスが発生した場合に、エイリアスを診断するのに役立ち `trotterStep` ます。</span><span class="sxs-lookup"><span data-stu-id="91734-127">This useful for diagnosing aliasing when it occurs due to a `trotterStep` value that is too large.</span></span>
+- <span data-ttu-id="6fe1f-125">`energyEst` は、地表のエネルギーの推定値であり、平均に近い状態になる必要があり `-1.137` ます。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-125">`energyEst` is the estimate of the ground state energy and should be close to `-1.137` on average.</span></span> 
+- <span data-ttu-id="6fe1f-126">`phaseEst` フェーズ推定アルゴリズムによって返される未加工のフェーズです。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-126">`phaseEst` is the raw phase returned by the phase estimation algorithm.</span></span> <span data-ttu-id="6fe1f-127">これは、値が大きすぎるためにエイリアスが発生した場合に、エイリアスを診断するのに役立ち `trotterStep` ます。</span><span class="sxs-lookup"><span data-stu-id="6fe1f-127">This useful for diagnosing aliasing when it occurs due to a `trotterStep` value that is too large.</span></span>
