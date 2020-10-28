@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: ゴールデン interval 検索を使用して、範囲指定された期間にわたって、uni可変 ate 関数のローカル最小値を返します。
+  uid: Microsoft.Quantum.Optimization.LocalUnivariateMinimum
+- summary: 間隔の中間点を返します。
+  uid: Microsoft.Quantum.Optimization.Midpoint
+- summary: 間隔を指定すると、指定された期間をゴールデン比率の係数でコントラクトするプローブ間隔を返します。
+  uid: Microsoft.Quantum.Optimization.Probe
+- summary: 間隔の幅を返します。
+  uid: Microsoft.Quantum.Optimization.Width
+name: Microsoft.Quantum.Optimization
+newtypes:
+- summary: Uni可変 ate 関数を最適化した結果を表します。
+  uid: Microsoft.Quantum.Optimization.UnivariateOptimizationResult
+operations: []
+summary: 最小を検索するための関数と最適化を含みます。
+uid: Microsoft.Quantum.Optimization
+metadata:
+  ms.openlocfilehash: 0271a658d625f9781b12a9659c80495200a9ba54
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92723391"
