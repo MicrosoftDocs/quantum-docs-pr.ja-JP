@@ -1,0 +1,139 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpByOracle は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.AmplitudeAmplification.StandardAmplitudeAmplification> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.amplitudeamplification.standardamplitudeamplification" を使用してください。
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpByOracle
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpByOraclePhases は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromStatePreparation> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation" を使用してください。
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpByOraclePhases
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpByReflectionPhases は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromPartialReflections> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections" を使用してください。
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpByReflectionPhases
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpObliviousByOraclePhases は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromStatePreparation> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation" を使用してください。
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpObliviousByOraclePhases
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpObliviousByReflectionPhases は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromPartialReflections> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections" を使用してください。
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpObliviousByReflectionPhases
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpPhasesFixedPoint は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases" を使用してください。
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpPhasesFixedPoint
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpPhasesStandard は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.AmplitudeAmplification.StandardReflectionPhases> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.amplitudeamplification.standardreflectionphases" を使用してください。
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpPhasesStandard
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpRotationToReflectionPhases は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.AmplitudeAmplification.RotationPhasesAsReflectionPhases> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases" を使用してください。
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpRotationToReflectionPhases
+- summary: 部分的な反射による振幅増幅。
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromPartialReflections
+- summary: 部分的な反射のための oracles による振幅増幅。
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromStatePreparation
+- summary: 固定小数点の振幅増幅の部分的なリフレクションフェーズを計算します。
+  uid: Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases
+- summary: 部分的な反射にを指定して、無関係の振幅増幅を実装するユニタリを返します。
+  uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromPartialReflections
+- summary: 部分的な反射のために oracles による振幅増幅を無関係します。
+  uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromStatePreparation
+- summary: 振幅増幅に対する一般的な入力状態である、すべてゼロの string | 0... 0 〉に関する反射を構築します。
+  uid: Microsoft.Quantum.AmplitudeAmplification.ReflectionStart
+- summary: シングル qubit 回転として指定されたフェーズを部分反射として指定されたフェーズに変換します。
+  uid: Microsoft.Quantum.AmplitudeAmplification.RotationPhasesAsReflectionPhases
+- summary: 標準の振幅増幅アルゴリズム
+  uid: Microsoft.Quantum.AmplitudeAmplification.StandardAmplitudeAmplification
+- summary: 標準の振幅増幅の部分的なリフレクションフェーズを計算します。
+  uid: Microsoft.Quantum.AmplitudeAmplification.StandardReflectionPhases
+- summary: >-
+    `ReflectionOracle`フラグ qubit で一意にマークされたターゲット状態に関するを構築します。
+
+    ターゲット状態では、1つの qubit が1に設定され、それ以外の場合は 0: $ \ket {1} _f $ になります。
+  uid: Microsoft.Quantum.AmplitudeAmplification.TargetStateReflectionOracle
+name: Microsoft.Quantum.AmplitudeAmplification
+newtypes:
+- summary: 振幅増幅での部分的な反射のシーケンスのフェーズ。
+  uid: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
+- summary: 振幅増幅での単一 qubit 回転のシーケンスのフェーズ。
+  uid: Microsoft.Quantum.AmplitudeAmplification.RotationPhases
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > AmpAmpRUSByOracle は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.AmplitudeAmplification.ApplyFixedPointAmplification> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.amplitudeamplification.applyfixedpointamplification" を使用してください。
+
+  uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpRUSByOracle
+- summary: 指定された一連のフェーズと oracles を使用して、指定されたレジスタに振幅増幅を適用し、初期状態と最終状態を反映します。
+  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyAmplitudeAmplification
+- summary: Fixed-Point 振幅増幅アルゴリズム
+  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyFixedPointAmplification
+- summary: 部分的な反射を指定することによって、振幅増幅を無関係します。
+  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyObliviousAmplitudeAmplification
+- summary: <xref:microsoft.quantum.canon.targetstatereflectionoracle> の実装です。
+  uid: Microsoft.Quantum.AmplitudeAmplification.ApplyTargetStateReflectionOracle
+summary: この名前空間には、振幅増幅を実行するための関数と操作が含まれています。
+uid: Microsoft.Quantum.AmplitudeAmplification
+metadata:
+  ms.openlocfilehash: 7b95624eba1215e6b8be8f247c25a3931336b5fb
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92722448"

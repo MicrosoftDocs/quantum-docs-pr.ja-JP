@@ -1,0 +1,46 @@
+---
+uid: Microsoft.Quantum.MachineLearning.InferredLabel
+title: InferredLabel 関数
+ms.date: 10/26/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: function
+qsharp.namespace: Microsoft.Quantum.MachineLearning
+qsharp.name: InferredLabel
+qsharp.summary: Given a of classification probability and a bias, returns the label inferred from that probability.
+ms.openlocfilehash: 1d6edec94f731fe96da797f0c3d77e6eba565149
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92722518"
+---
+# <a name="inferredlabel-function"></a>InferredLabel 関数
+
+名前空間: [Microsoft. Quantum の e ラーニング](xref:Microsoft.Quantum.MachineLearning)
+
+パック [](https://nuget.org/packages/)
+
+
+分類の確率とバイアスが指定されている場合、はその確率から推論されたラベルを返します。
+
+```qsharp
+function InferredLabel (bias : Double, probability : Double) : Int
+```
+
+
+## <a name="input"></a>入力
+
+### <a name="bias--double"></a>バイアス: [Double](xref:microsoft.quantum.lang-ref.double)
+
+2つのクラス間のバイアス (通常は分類器のトレーニングの結果)。
+
+
+### <a name="probability--double"></a>確率: [Double](xref:microsoft.quantum.lang-ref.double)
+
+特定のサンプルの分類確率。通常は、その分類頻度を推定した結果になります。
+
+
+
+## <a name="output--int"></a>出力: [Int](xref:microsoft.quantum.lang-ref.int)
+
+指定された分類確率から推論されるラベル。
