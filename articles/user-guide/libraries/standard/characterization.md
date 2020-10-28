@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8dddc15354c32808e7ad1310bce233ee3dc93fe8
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835640"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692152"
 ---
 # <a name="quantum-characterization-and-statistics"></a>クォンタムの特性と統計 #
 
@@ -22,7 +22,7 @@ ms.locfileid: "90835640"
 これは、クォンタムシステムのすべての測定値が1ビットの情報を生成するため、困難です。
 このような概念を表すために必要な多くの情報をユーザーが収集できるように、1つのクォンタム状態だけを使用して、eigenvalue を学習するには、多くの測定の結果を合成する必要があります。
 クォンタムの状態は特に厄介です。これは、 [複製なしの定理](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) は、状態のコピーを作成できるようにするため、状態の1つのコピーから任意のクォンタム状態を学習する方法がないことを示すためです。
-ユーザーからのクォンタム状態のこの難読化は、" Q# クォンタムプログラム" に対して状態を公開したり定義*is*したりしないという事実に反映されます。
+ユーザーからのクォンタム状態のこの難読化は、" Q# クォンタムプログラム" に対して状態を公開したり定義 *is* したりしないという事実に反映されます。
 このため、操作と状態を黒色のボックスとして扱うことによって、クォンタムの特性を解決します。このアプローチは、クォンタムの特性、検証、検証 (QCVV) の実験的プラクティスによく似ています。
 
 特性は、前に説明した他の多くのライブラリとは異なります。
@@ -39,7 +39,7 @@ ms.locfileid: "90835640"
 以下の各方法では、実験を設計するためのさまざまな戦略と、フェーズを学習するためのさまざまなデータ処理方法を使用します。  各ユーザーには、厳密なエラーの範囲、前の情報の組み込み、エラーの許容、メモリ limitted の古典コンピューターでの実行など、それぞれ固有の利点があります。
 
 反復的なフェーズの推定については、ブラックボックスの操作として指定された $U $ のユニタリが考慮されます。
-[データ構造](xref:microsoft.quantum.libraries.data-structures)の oracles に関するセクションで説明したように、キャノンのモデルは、 Q# ユーザー定義型によって、 <xref:microsoft.quantum.oracles.discreteoracle> タプル型によって定義された演算を実行し `((Int, Qubit[]) => Unit : Adjoint, Controlled)` ます。
+[データ構造](xref:microsoft.quantum.libraries.data-structures)の oracles に関するセクションで説明したように、キャノンのモデルは、 Q# ユーザー定義型によって、 <xref:Microsoft.Quantum.Oracles.DiscreteOracle> タプル型によって定義された演算を実行し `((Int, Qubit[]) => Unit : Adjoint, Controlled)` ます。
 の場合、具体的に、の場合は `U : DiscreteOracle` `U(m)` $U ^ m $ を実装し `m : Int` ます。
 
 この定義では、反復フェーズの推定の各手順は、$ \ket{+} $ 状態の補助 qubit と初期状態 $ \ket{\phi} $ を準備しています。これは、$U [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) (m) $、つまり $U (m) \ket{\phi} = e ^ {im/phi} \ k {\ phi} $ と想定されています。  
@@ -99,7 +99,7 @@ $X = \ket{+} \ ロウ {+}-\ket \bra $ であることに注意 {-} {-} してく
 これを確認するには、$ bit 変数 $x $ $n を学習します。
 以前のディストリビューション $ \ Pr (x) $ は $x $ の $ 2 ^ n $ 仮定値をサポートしています。
 つまり、$x $ の推定精度が高い場合、ベイジアンフェーズの推定には、膨大なメモリと処理時間が必要になることがあります。
-クォンタムシミュレーションなどの一部のアプリケーションでは、必要な limitted の精度によって、そのような方法では、Shor のアルゴリズムなどの他のアプリケーションでは、そのフェーズの推定手順で正確なベイジアン推論を使用できません。  このため、 [ランダムウォークフェーズの推定 (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) や、 [堅牢なフェーズの推定](xref:microsoft.quantum.characterization.robustphaseestimation)などの非ベイジアンアプローチについても、おおよそのベイジアンメソッドの実装を提供しています。
+クォンタムシミュレーションなどの一部のアプリケーションでは、必要な limitted の精度によって、そのような方法では、Shor のアルゴリズムなどの他のアプリケーションでは、そのフェーズの推定手順で正確なベイジアン推論を使用できません。  このため、 [ランダムウォークフェーズの推定 (RWPE)](xref:Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation) や、 [堅牢なフェーズの推定](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation)などの非ベイジアンアプローチについても、おおよそのベイジアンメソッドの実装を提供しています。
 
 ### <a name="robust-phase-estimation"></a>堅牢なフェーズの推定 ###
 
@@ -112,14 +112,14 @@ $X = \ket{+} \ ロウ {+}-\ket \bra $ であることに注意 {-} {-} してく
 関連するその他の詳細には、たとえば、$1 $ ancilla qubit だけの小さな領域のオーバーヘッド、またはプロシージャが非アダプティブであることを意味します。つまり、必要なクォンタム実験のシーケンスは、中間測定結果に依存しません。 この後の例では、フェーズ推定アルゴリズムの選択が重要であるため、1つは、などのドキュメントと、その @"microsoft.quantum.characterization.robustphaseestimation" 実装に関する詳細情報と参照されるパブリケーションを参照する必要があります。
 
 > [!TIP]
-> 堅牢なフェーズ推定を使用するサンプルは多数あります。 さまざまな物理システムのグラウンドステートエネルギーを抽出するフェーズの推定については、「 [ **H2 シミュレーション**のサンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)」、「 [ **simpleising**サンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)」、および「" [**モデルのモデル**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)化" サンプルを参照してください。
+> 堅牢なフェーズ推定を使用するサンプルは多数あります。 さまざまな物理システムのグラウンドステートエネルギーを抽出するフェーズの推定については、「 [ **H2 シミュレーション** のサンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)」、「 [ **simpleising** サンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)」、および「" [**モデルのモデル**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)化" サンプルを参照してください。
 
 
 ### <a name="continuous-oracles"></a>継続的 Oracles ###
 
-また、前に使用した oracle モデルから汎用化して、キャノンの種類でモデル化された継続時間の oracles を実現することもでき <xref:microsoft.quantum.oracles.continuousoracle> ます。
+また、前に使用した oracle モデルから汎用化して、キャノンの種類でモデル化された継続時間の oracles を実現することもでき <xref:Microsoft.Quantum.Oracles.ContinuousOracle> ます。
 1つのユニタリ演算子ではなく $ $U、$U (t) U (s) $ = $U (t + s) $ のように、\mathbb{R} $ の $t \ の $U (t) $ の一連のユニタリ演算子を使用します。
-これは、個別のケースよりも弱いステートメントです <xref:microsoft.quantum.oracles.discreteoracle> \, 。固定の $ \ デルタ t $ に対して $t = m \ デルタ t $ を制限することによってを構築できるためです。
+これは、個別のケースよりも弱いステートメントです <xref:Microsoft.Quantum.Oracles.DiscreteOracle> \, 。固定の $ \ デルタ t $ に対して $t = m \ デルタ t $ を制限することによってを構築できるためです。
 $U (t) = \ exp (i H t) $ in a operator $H $ ($ \ exp $ [は、](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups) [「高度なマトリックス](xref:microsoft.quantum.concepts.matrix-advanced)」で説明されているマトリックス指数)。
 $H $ の eigenstate $ \ket{\phi} $ ($H \ket{\phi} = \ phi \ket{\phi} $ は、すべて $t $, \ begin{\ket{\phi}.} U (t) \ket{\phi} = e ^ {i \ phi t} に対して $U (t) $ という eigenstate も使用されます。
 \end{equation}
@@ -146,14 +146,14 @@ Q# では、反復フェーズ推定から取得したデータレコードに�
 
 キャノンによって提供される各フェーズの推定操作では、 Q# 最終的な推定値 $ \hat{\phi} $ から得られる品質をパラメーター化します。
 ただし、これらのさまざまな入力では、複数の入力が共通に共有されるため、品質パラメーターに対する部分的なアプリケーションによって共通のシグネチャが生成されます。
-たとえば、次の <xref:microsoft.quantum.characterization.robustphaseestimation> セクションで説明する操作には次のシグネチャがあります。
+たとえば、次の <xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation> セクションで説明する操作には次のシグネチャがあります。
 
 ```qsharp
 operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])  : Double
 ```
 
 `bitsPrecision`入力はに固有で `RobustPhaseEstimation` あり、 `oracle` と `eigenstate` は共通です。
-そのため、 **H2Sample**に示されているように、操作は、 `(DiscreteOracle, Qubit[]) => Unit` ユーザーが任意のフェーズ推定アルゴリズムを指定できるように、フォームの入力と共に反復フェーズ推定アルゴリズムを受け入れることができます。
+そのため、 **H2Sample** に示されているように、操作は、 `(DiscreteOracle, Qubit[]) => Unit` ユーザーが任意のフェーズ推定アルゴリズムを指定できるように、フォームの入力と共に反復フェーズ推定アルゴリズムを受け入れることができます。
 
 ```qsharp
 operation H2EstimateEnergy(

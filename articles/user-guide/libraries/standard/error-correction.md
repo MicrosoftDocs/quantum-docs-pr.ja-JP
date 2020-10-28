@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dad0db4d2aab27e5ae46d4df10ee050f785d8bb8
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835555"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692041"
 ---
 # <a name="error-correction"></a>エラーの修正 #
 
@@ -61,7 +61,7 @@ $Z 0 Z_1 \ket {000} = \ket {000} $ で $Z 0 Z_1 \ket = \ket $ であることに
 | $X_2$ | $ \ket {001} $ | $ \ket {110} $ | $+$ | $-$ |
 
 したがって、2つの測定値の結果によって、どのビットフリップエラーが発生したかが一意に判断されますが、エンコードされた状態に関する情報は表示されません。
-これらの結果を *より隣人*と呼びます。また、より隣人を *復旧*の原因となったエラーにマッピングするプロセスについても説明します。
+これらの結果を *より隣人* と呼びます。また、より隣人を *復旧* の原因となったエラーにマッピングするプロセスについても説明します。
 特に、回復は、発生したより隣人を入力として受け取り、発生した可能性のあるエラーを修正する方法の処方箋を返す、 *古典* 的な推定手順であることを強調しています。
 
 > [!NOTE]
@@ -70,7 +70,7 @@ $Z 0 Z_1 \ket {000} = \ket {000} $ で $Z 0 Z_1 \ket = \ket $ であることに
 > 同様に、フェーズフリップ操作を適用する `Z` と $ \ket{\overline {1} } $ が $-\ket{\overline} $ にマップされる {1} ため、$ \ket{\overline{+}} $ が $ \ket{\overline} $ にマップされ {-} ます。
 > 一般的には、コードを作成して、より多くのエラーを処理したり、$ errors $Z 処理したり、$ errors を $X したりすることができます。
 
-すべてのコード状態で同じように動作するクォンタムエラー修正の測定値を記述できるという洞察は、安定板の *形式*の本質です。
+すべてのコード状態で同じように動作するクォンタムエラー修正の測定値を記述できるという洞察は、安定板の *形式* の本質です。
 キャノンは、 Q# 安定板のコードに対してエンコードを記述し、それをエラーからどのように回復するかを説明するためのフレームワークを提供します。
 このセクションでは、このフレームワークとそのアプリケーションについて、いくつかの単純なクォンタムエラー修正コードについて説明します。
 
@@ -82,14 +82,14 @@ $Z 0 Z_1 \ket {000} = \ket {000} $ で $Z 0 Z_1 \ket = \ket $ であることに
 
 エラー修正コードを指定するために、 Q# キャノン社はいくつかの異なるユーザー定義型を提供しています。
 
-- <xref:microsoft.quantum.errorcorrection.logicalregister>`= Qubit[]`: Qubits のレジスタは、エラー修正コードのコードブロックとして解釈される必要があることを示します。
-- <xref:microsoft.quantum.errorcorrection.syndrome>`= Result[]`: 測定結果の配列を、コードブロックで測定されるより隣人として解釈する必要があることを示します。
-- <xref:microsoft.quantum.errorcorrection.recoveryfn>`= (Syndrome -> Pauli[])`: より隣人を解釈し、適用する必要のある修正を返すために、*古典*関数を使用する必要があることを示します。
-- <xref:microsoft.quantum.errorcorrection.encodeop>`= ((Qubit[], Qubit[]) => LogicalRegister)`: エラー修正コードのコードブロックを生成するために、操作がデータを表す qubits を新しい ancilla qubits と共に受け取ることを示します。
-- <xref:microsoft.quantum.errorcorrection.decodeop>`= (LogicalRegister => (Qubit[], Qubit[]))`: データ qubits にコードを修正するコードブロックとより隣人情報を表すために使用される ancilla qubits を分解されする操作であることを示します。
-- <xref:microsoft.quantum.errorcorrection.syndromemeasop>`= (LogicalRegister => Syndrome)`: コードブロックからより隣人情報を抽出するために使用する必要がある操作を表します。コードによって保護されている状態には支障がありません。
+- <xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister>`= Qubit[]`: Qubits のレジスタは、エラー修正コードのコードブロックとして解釈される必要があることを示します。
+- <xref:Microsoft.Quantum.ErrorCorrection.Syndrome>`= Result[]`: 測定結果の配列を、コードブロックで測定されるより隣人として解釈する必要があることを示します。
+- <xref:Microsoft.Quantum.ErrorCorrection.RecoveryFn>`= (Syndrome -> Pauli[])`: より隣人を解釈し、適用する必要のある修正を返すために、 *古典* 関数を使用する必要があることを示します。
+- <xref:Microsoft.Quantum.ErrorCorrection.EncodeOp>`= ((Qubit[], Qubit[]) => LogicalRegister)`: エラー修正コードのコードブロックを生成するために、操作がデータを表す qubits を新しい ancilla qubits と共に受け取ることを示します。
+- <xref:Microsoft.Quantum.ErrorCorrection.DecodeOp>`= (LogicalRegister => (Qubit[], Qubit[]))`: データ qubits にコードを修正するコードブロックとより隣人情報を表すために使用される ancilla qubits を分解されする操作であることを示します。
+- <xref:Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp>`= (LogicalRegister => Syndrome)`: コードブロックからより隣人情報を抽出するために使用する必要がある操作を表します。コードによって保護されている状態には支障がありません。
 
-最後に、キャノンの <xref:microsoft.quantum.errorcorrection.qecc> エラー修正コードを定義するために必要な他の型を収集するための型を提供します。 各安定板クォンタムコードに関連付けられているコードの長さは $n $、論理 qubits の数 $k $、および最小距離 $d $ で、多くの場合、⟦ $n $、$k $、$d $ ⟧の表記でグループ化します。 たとえば、関数は、 <xref:microsoft.quantum.errorcorrection.bitflipcode> ⟦ 3, 1, 1 ⟧ビットフリップコードを定義します。
+最後に、キャノンの <xref:Microsoft.Quantum.ErrorCorrection.QECC> エラー修正コードを定義するために必要な他の型を収集するための型を提供します。 各安定板クォンタムコードに関連付けられているコードの長さは $n $、論理 qubits の数 $k $、および最小距離 $d $ で、多くの場合、⟦ $n $、$k $、$d $ ⟧の表記でグループ化します。 たとえば、関数は、 <xref:Microsoft.Quantum.ErrorCorrection.BitFlipCode> ⟦ 3, 1, 1 ⟧ビットフリップコードを定義します。
 
 ```qsharp
 let encodeOp = EncodeOp(BitFlipEncoder);
@@ -101,10 +101,10 @@ let syndMeasOp = SyndromeMeasOp(MeasureStabilizerGenerators([
 let code = QECC(encodeOp, decodeOp, syndMeasOp);
 ```
 
-`QECC`型に復旧関数が含ま*れていない*ことに注意してください。
+`QECC`型に復旧関数が含ま *れていない* ことに注意してください。
 これにより、コード自体の定義を変更することなく、エラーの修正に使用される復旧関数を変更できます。この機能は特に、復旧によって想定されるモデルに特性測定のフィードバックを組み込む場合に便利です。
 
-この方法でコードを定義すると、操作を使用して <xref:microsoft.quantum.errorcorrection.recover> エラーから回復できます。
+この方法でコードを定義すると、操作を使用して <xref:Microsoft.Quantum.ErrorCorrection.Recover> エラーから回復できます。
 
 ```qsharp
 let code = BitFlipCode();

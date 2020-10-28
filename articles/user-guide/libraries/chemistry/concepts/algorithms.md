@@ -1,6 +1,6 @@
 ---
 title: Hamiltonian Dynamics のシミュレーション
-description: Trotter-Suzuki の数式と qubitization を使用して Hamiltonian のシミュレーションを操作する方法について説明します。
+description: Trotter-Suzuki の数式と qubitization を使用して Hamiltonian シミュレーションを操作する方法について説明します。
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
@@ -9,12 +9,12 @@ uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 299eb1484a697ad9d1577aabb44ccb61e908bae3
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834008"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691884"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics のシミュレーション
 
@@ -28,13 +28,13 @@ Trotter – Suzuki 数式の背後にあるアイデアは単純なものです�
 特に、$H = \ sum_ {j = 1} ^ m H_j $ を Hamiltonian にします。
 次に、$ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ prod_ {j = 1} ^ m e ^ {-iH_j t} + O (m ^ 2 t ^ 2), $ $1 $t $。この近似値のエラーはごくわずかになります。
 $E ^ {-i H} $ が通常の指数の場合、この近似値のエラーは $O されません (m ^ 2 t ^ 2) $: 0 になります。
-このエラーは $e ^ {-iHt} $ が演算子指数であるために発生します。結果として、この数式を使用すると、$ terms _j $H (*つまり*、$H _j H_k \n e H_k H_j $ general) ではないことが原因でエラーが発生します。
+このエラーは $e ^ {-iHt} $ が演算子指数であるために発生します。結果として、この数式を使用すると、$ terms _j $H ( *つまり* 、$H _j H_k \n e H_k H_j $ general) ではないことが原因でエラーが発生します。
 
 $T $ が大きい場合でも、Trotter – Suzuki 式を使用して、短時間の一連の手順に分割することで、dynamics を正確にシミュレートできます。
 $R $ を時間の進化に使用されるステップの数にします。そのため、各時間ステップは、$t/r $ の時間に実行されます。 次に、$ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r)、$ $ は、$ $m t ^ 2/\ イプシロン $ として $r $ のスケールを設定した場合、$-イプシロン>$0 に対して最大 $/イプシロン $ にエラーを加えることを意味します。
 
 エラー条件がキャンセルされるように、一連の演算子指数を構築することで、より正確な概数を作成できます。
-このような最も単純な数式では、2番目の order Trotter Suzuki 式です。 $ $ U_2 (t) = \ left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2r} \ prod_ {j = m} の形式で取得します ^ 1 e ^ {-iH_j t/2r} \ right) ^ r = e ^ {-iht} + O (m ^ 3 t ^ 3/r ^ 2)、$ $ {3/2} t ^ {3/2}//sqrt {\ イプシロン} $ としてスケールする $r $ を選択すると、$-イプシロン>$0 の $-イプシロン $ より小さくすることができます。 $m
+最も単純な式、2番目の順序 Trotter-Suzuki 式、$ $ U_2 (t) = \ left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2r} \ prod_ {j = m} の形式で取得します ^ 1 e ^ {-iH_j t/2r} \ right) ^ r = e ^ {-iht} + O (m ^ 3 t ^ 3/r ^ 2)、$ $ {3/2} t ^ {3/2}//sqrt {\ イプシロン} $ としてスケールする $r $ を選択すると、$-イプシロン>$0 の $-イプシロン $ より小さくすることができます。 $m
 
 さらに上位の数式でも、特に ($ 2k $) $k>$0 の順序は、次のように再帰的に構築できます。 $ $ U_ {2k} (t) = [U_ {2k-2} (s_k \~ t)] ^ 2 U_ {2k-2} ([1-4s_k] t) [U_ {2k-2} (s_k \~ t)] ^ 2 = e ^ {-iht} + O ((m t) ^ {2k + 1}/r ^ {2k})、$ $ where $s _k = (4-4 ^ {1/(2k-1)}) ^ {-1} $。
 
@@ -52,7 +52,7 @@ Diagonalized 演算子は、Clifford 操作 (クォンタムコンピューテ�
         0 & 0 & 0 & e ^ {-it} \end{bmatrix}.
 $ $ ここ、$e ^ {-iHt} \ket {00} = e ^ {it} \ket {00} $ and $e ^ {-iht} \ket {01} = e ^ {-it} \ket {01} $。これは、$0 $ のパリティが $0 $ で、ビット文字列 $1 $ のパリティは $1 $ であるという事実の結果として直接確認できます。
 
-指数演算子は Q# 、次の操作を使用して直接実装でき <xref:microsoft.quantum.intrinsic.exp> ます。
+指数演算子は Q# 、次の操作を使用して直接実装でき <xref:Microsoft.Quantum.Intrinsic.Exp> ます。
 ```qsharp
     using(qubits = Qubit[2]){
         let pauliString = [PauliX, PauliX];
@@ -65,7 +65,7 @@ $ $ ここ、$e ^ {-iHt} \ket {00} = e ^ {it} \ket {00} $ and $e ^ {-iht} \ket {
 
 Fermionic Hamiltonians の場合、 [ヨルダン– Wigner 分解](xref:microsoft.quantum.chemistry.concepts.jordanwigner) は、Hamiltonian を p li 演算子の合計に簡単にマップします。
 これは、化学をシミュレートするために、上記のアプローチを簡単に調整できることを意味します。
-次に、このようなシミュレーションを化学内で実行する方法の簡単な例を、次の例に示します。この例では、このようなシミュレーションを使用して、すべてのを手動でループします。
+Jordan-Wigner 表現ですべてのを手動でループするのではなく、次の例では、このようなシミュレーションを化学内で実行する方法について簡単に説明します。
 開始点は、コードでクラスのインスタンスとして表現される、Fermionic Hamiltonian の [ヨルダンの Wigner エンコード](xref:microsoft.quantum.chemistry.concepts.jordanwigner) です `JordanWignerEncoding` 。
 
 ```csharp
@@ -156,7 +156,7 @@ $ Qubitization を直接使用することはできませんが、$-\begin{align
 
 これらのサブルーチンは、で簡単に設定 Q# できます。
 例として、$H = X_1 + X_2 + Z_1 Z_2 $ という単純な qubit の横形式の Hamiltonian を考えてみます。
-この場合、 Q# $ 演算子を実装するコードはによって呼び出されますが、 <xref:microsoft.quantum.canon.multiplexoperations> $-演算子はを使用して実装することができ <xref:microsoft.quantum.preparation.preparearbitrarystate> ます。
+この場合、 Q# $ 演算子を実装するコードはによって呼び出されますが、 <xref:Microsoft.Quantum.Canon.MultiplexOperations> $-演算子はを使用して実装することができ <xref:Microsoft.Quantum.Preparation.PrepareArbitraryState> ます。
 一例として、このモデルのシミュレーションを含む例[ Q# があります。](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)
 
 任意の化学の問題に対してこれらの手順を手動で指定すると、多くの労力が必要になります。これは、化学ライブラリを使用しても回避できます。
@@ -182,6 +182,6 @@ using(qubits = Qubit[nQubits]){
 }
 ```
 
-重要な実装 <xref:microsoft.quantum.chemistry.jordanwigner.qubitizationoracle> は、PHamiltonians li 文字列の線形組み合わせとして指定された任意のに適用されます。
-化学シミュレーション用に最適化されたバージョンは、を使用して呼び出され <xref:microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle> ます。
+重要な実装 <xref:Microsoft.Quantum.Chemistry.JordanWigner.QubitizationOracle> は、PHamiltonians li 文字列の線形組み合わせとして指定された任意のに適用されます。
+化学シミュレーション用に最適化されたバージョンは、を使用して呼び出され <xref:Microsoft.Quantum.Chemistry.JordanWigner.OptimizedQubitizationOracle> ます。
 このバージョンは、「 [量子回線での電子 Spectra のエンコード](https://arxiv.org/abs/1805.03662)」で説明されている手法を使用した t ゲートの数を最小限に抑えるために最適化されています。
