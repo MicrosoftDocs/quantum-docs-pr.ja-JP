@@ -1,5 +1,5 @@
 ---
-title: Q# 方
+title: Q# 基本操作
 description: 基本的な概念 Q#
 author: gillenhaalb
 ms.author: a-gibec
@@ -9,14 +9,14 @@ uid: microsoft.quantum.guide.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 86f6538cf383f4e7c14255b38cfb1c141c8f991b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: b3bc0841eabeac5d3968776f9dab3a02b1a1eef9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835521"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691634"
 ---
-# <a name="no-locq-basics"></a>Q# 方
+# <a name="no-locq-basics"></a>Q# 基本操作
 
 この記事では、の基本的な構成要素について簡単に説明し Q# ます。
 
@@ -28,7 +28,7 @@ Q#Quantum 開発キットの基本コンポーネントとして何が当ては�
 このビューの重要な結果として、 Q# プログラムは qubits 自体を直接モデル化するのではなく、クラシックデプロイによって制御されるコンピューターがこれらの qubits と対話する方法を説明します。
 仕様により、では、クォンタム Q# の状態やその他の量子機構のプロパティは直接定義されていません。
 たとえば、「 {0} {1} {2} [クォンタムコンピューティングの概念](xref:microsoft.quantum.concepts.intro) 」ガイドで説明されているように、$ \ket{+} = \ left (\ket + \ket/right)//sqrt $ という状態を検討してください。
-でこの状態を準備するには Q# 、まず、qubits が $ \ket $ 状態で初期化されていること {0} と、$ \ket{+} = H\ket $ という事実を使用し {0} ます。ここで、$H $ は、 [ `H` 操作](xref:microsoft.quantum.intrinsic.h)によって実装される[Hadamard transform](xref:microsoft.quantum.glossary#hadamard)です。 次の Q# ように、qubit を初期化して変換する基本的なコードを次に示します。
+でこの状態を準備するには Q# 、まず、qubits が $ \ket $ 状態で初期化されていること {0} と、$ \ket{+} = H\ket $ という事実を使用し {0} ます。ここで、$H $ は、 [ `H` 操作](xref:Microsoft.Quantum.Intrinsic.H)によって実装される[Hadamard transform](xref:microsoft.quantum.glossary#hadamard)です。 次の Q# ように、qubit を初期化して変換する基本的なコードを次に示します。
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -37,7 +37,7 @@ using (qubit = Qubit()) {
     // H is now applied, such that the qubit is in H|0⟩ = |+⟩, as desired.
 }
 ```
-の初期化、または *割り当て*の詳細については、「 [Qubits の操作](xref:microsoft.quantum.guide.qubits)」を参照してください。
+の初期化、または *割り当て* の詳細については、「 [Qubits の操作](xref:microsoft.quantum.guide.qubits)」を参照してください。
 
 ## <a name="quantum-states-in-no-locq"></a>クォンタム状態 Q#
 
@@ -45,24 +45,24 @@ using (qubit = Qubit()) {
 この方法では、各ターゲットコンピューター上でもクォンタムの状態を完全には認識できません。これは、コンピューターによって *は* 、解釈が異なる場合があります。 
 
 プログラムは、 Q# qubit の状態に introspect ことはできません。
-代わりに、プログラムはなどの操作を呼び出して、 [`Measure`](xref:microsoft.quantum.intrinsic.measure) qubit から情報を取得し、やなどの操作を呼び出して、 [`X`](xref:microsoft.quantum.intrinsic.x) [`H`](xref:microsoft.quantum.intrinsic.h) qubit の状態を操作できます。
+代わりに、プログラムはなどの操作を呼び出して、 [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) qubit から情報を取得し、やなどの操作を呼び出して、 [`X`](xref:Microsoft.Quantum.Intrinsic.X) [`H`](xref:Microsoft.Quantum.Intrinsic.H) qubit の状態を操作できます。
 これらの操作は *、実際には、* 特定のプログラムを実行するために使用されるターゲットコンピューターによってのみ具体的に行われ Q# ます。
 たとえば、 [フルステートシミュレーター](xref:microsoft.quantum.machines.full-state-simulator)でプログラムを実行すると、シミュレーターはシミュレートされたクォンタムシステムに対応する数学的操作を実行します。
-しかし、将来的に見てみると、ターゲットコンピューターが実際の quantum のコンピューターである場合、でこのような操作を呼び出すと、 Q# *実際*のクォンタムシステムに対応する*実際*の操作を実行するようにクォンタムコンピューターに指示します。たとえば、正確に時間がかかるレーザーパルスなどです。
+しかし、将来的に見てみると、ターゲットコンピューターが実際の quantum のコンピューターである場合、でこのような操作を呼び出すと、 Q# *実際* のクォンタムシステムに対応する *実際* の操作を実行するようにクォンタムコンピューターに指示します。たとえば、正確に時間がかかるレーザーパルスなどです。
 
 プログラムは、 Q# ターゲットコンピューターによって定義されたこれらの操作を結合して、クォンタムの計算を高速にする新しい高度な操作を作成します。
 このようにすることで、は、 Q# ターゲットコンピューターまたはシミュレーターの構造に関して一般的なものであるクォンタムとハイブリッドクォンタム–クラシックアルゴリズムのロジックを簡単に表現できるようになります。
 
 ## <a name="no-locq-operations-and-functions"></a>Q# 操作と関数
 
-具体的に, Q# プログラムは、 *操作*、 *関数*、およびすべてのユーザー定義型で構成されています。 
+具体的に, Q# プログラムは、 *操作* 、 *関数* 、およびすべてのユーザー定義型で構成されています。 
 
 操作は、クォンタムシステムの変換を記述するために使用され、プログラムの最も基本的なビルドブロックです Q# 。 で定義された各操作は、その Q# 後、任意の数の他の操作を呼び出すことができます。
 
 操作とは対照的に、関数は純粋に *決定的* な動作を記述するために使用され、古典的な値の計算以外には影響を与えません。 たとえば、プログラムの末尾にある qubits を測定し、測定結果を配列に追加するとします。
 この場合、 `Measure` は、ターゲットコンピューターに対して (実際またはシミュレートされた) qubits の測定を実行するように指示する *操作* です。 同時に、 *関数* は、返された結果を配列に追加する従来のプロセスを処理します。
 
-操作と関数は、 *呼び出し*が実行できると呼ばれています。 [の操作と関数 Q# ](xref:microsoft.quantum.guide.operationsfunctions)では、基になる構造と動作が導入され、詳細に説明されています。
+操作と関数は、 *呼び出し* が実行できると呼ばれています。 [の操作と関数 Q# ](xref:microsoft.quantum.guide.operationsfunctions)では、基になる構造と動作が導入され、詳細に説明されています。
 
 
 ## <a name="no-locq-syntax-overview"></a>Q# 構文の概要
@@ -94,8 +94,8 @@ Q# は、厳密に型指定された言語であり、型を慎重に使用す�
 let count = 5;
 ```
 
-より興味深い例として、 `for` 反復処理をサポートし、 *ステートメントブロック*を含むステートメントがあります。
-たとえば `qubits` 、記号が qubits のレジスタにバインドされているとします (技術的には、型の `Qubit[]` 場合は、型の配列の場合 `Qubit` )。 手段
+より興味深い例として、 `for` 反復処理をサポートし、 *ステートメントブロック* を含むステートメントがあります。
+たとえば `qubits` 、記号が qubits のレジスタにバインドされているとします (技術的には、型の `Qubit[]` 場合は、型の配列の場合 `Qubit` )。 THEN
 ```qsharp
 for (qubit in qubits) {
     H(qubit);

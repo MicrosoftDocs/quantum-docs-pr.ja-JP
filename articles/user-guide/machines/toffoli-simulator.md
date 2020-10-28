@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 82882f01d1b5c036faee71f18a18b2595107ddb7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 036896a33fa02db671a5fd07421160df164bd41d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835912"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690777"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Quantum 開発キット (QDK) Toffoli シミュレーター
 
@@ -67,7 +67,7 @@ dotnet run -s ToffoliSimulator
 Toffoli シミュレーターは次をサポートします。
 
 * 回転と累乗 Paulis (やなど `R` ) `Exp` は、結果の操作が `X` または id 行列と等しい場合に発生します。
-* 測定および [アサート](xref:microsoft.quantum.diagnostics.assertmeasurement) 操作。ただし、ponly の場合にのみ実行さ `Z` れます。 測定演算の確率は常に **0** または **1**であることに注意してください。Toffoli シミュレーターにはランダム性はありません。
+* 測定および [アサート](xref:Microsoft.Quantum.Diagnostics.AssertMeasurement) 操作。ただし、ponly の場合にのみ実行さ `Z` れます。 測定演算の確率は常に **0** または **1** であることに注意してください。Toffoli シミュレーターにはランダム性はありません。
 * `DumpMachine``DumpRegister`関数と関数。
 どちらの関数も `Z` 、各 qubit の現在の状態を出力し、1行に1つの qubit を出力します。
 

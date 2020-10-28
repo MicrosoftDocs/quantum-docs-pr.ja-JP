@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833514"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691090"
 ---
 # <a name="control-flow-in-no-locq"></a>制御フロー Q#
 
@@ -38,10 +38,10 @@ ms.locfileid: "90833514"
 必要に応じて、任意の数の else 句を使用できます。各句は、キーワード、 `elif` かっこで囲まれたブール式、およびステートメントブロック ( _else_ ブロック) で構成されます。
 最後に、ステートメントは、キーワードとそれ `else` に続く別のステートメントブロック ( _else_ ブロック) で構成される else 句を使用して終了することもできます。
 
-`if`条件が評価され、 *true*の場合は*then*ブロックが実行されます。
-条件が *false*の場合、最初の else if 条件が評価されます。true の場合は、 *else if* ブロックが実行されます。
+`if`条件が評価され、 *true* の場合は *then* ブロックが実行されます。
+条件が *false* の場合、最初の else if 条件が評価されます。true の場合は、 *else if* ブロックが実行されます。
 それ以外の場合は、2番目の else-if ブロックが評価され、次に3番目のは、true 条件を持つ句が検出されるか、それ以上 else if 句が存在しなくなるまで続きます。
-元の *if* 条件とすべての else-if 句が *false*と評価された場合、 *else* ブロックが実行されます (指定されている場合)。
+元の *if* 条件とすべての else-if 句が *false* と評価された場合、 *else* ブロックが実行されます (指定されている場合)。
 
 いずれかのブロックが実行されると、それ自体のスコープ内で実行されることに注意してください。
 `if`、 `elif` 、またはブロック内で行われたバインディングは、ブロックの終了後には `else` 参照できません。
@@ -69,7 +69,7 @@ if (i == 1) {
 }
 ```
 
-## <a name="for-loop"></a>For ループ
+## <a name="for-loop"></a>for ループ
 
 `for`ステートメントでは、整数範囲または配列に対する反復処理がサポートされています。
 ステートメントは、キーワードと、 `for` その後にシンボルまたは記号の組、キーワード、 `in` 型 `Range` または配列の式、すべてのかっこ内、およびステートメントブロックで構成されます。
@@ -129,7 +129,7 @@ fixup {
 ループの本体が実行され、条件が評価されます。
 条件が true の場合、ステートメントは完了します。それ以外の場合は、フィックスアップが実行され、ステートメントがループ本体から開始され、再度実行されます。
 
-RUS ループの3つの部分 (本文、テスト、および修正) は、 *繰り返しごとに*1 つのスコープとして扱われるので、本文にバインドされているシンボルはテストと修正の両方で使用できます。
+RUS ループの3つの部分 (本文、テスト、および修正) は、 *繰り返しごとに* 1 つのスコープとして扱われるので、本文にバインドされているシンボルはテストと修正の両方で使用できます。
 ただし、修正の実行を完了すると、ステートメントのスコープが終了します。これにより、本体またはフィックスアップ中に作成されたシンボルバインドは、後続の繰り返しでは使用できなくなります。
 
 さらに、 `fixup` 多くの場合、ステートメントは便利ですが、必ずしも必要ではありません。
@@ -147,7 +147,7 @@ until (expression);
 その他の例と詳細については、この記事の「 [繰り返し-成功の例](#repeat-until-success-examples) 」を参照してください。
 
 > [!TIP]   
-> 関数内での繰り返しの成功ループの使用は避けてください。 *While*ループを使用して、関数内で対応する機能を提供します。 
+> 関数内での繰り返しの成功ループの使用は避けてください。 *While* ループを使用して、関数内で対応する機能を提供します。 
 
 ## <a name="while-loop"></a>while ループ
 
@@ -324,7 +324,7 @@ using (qubit = Qubit()) {
 * ループのより複雑な `fixup` 部分。これには、クォンタム操作が含まれます。 
 * ステートメントを使用して、 `AssertMeasurementProbability` プログラム内の指定した特定のポイントでクォンタムの状態を測定する確率を確認します。
 
-操作と操作の詳細につい [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) ては、「 [テストおよびデバッグ](xref:microsoft.quantum.guide.testingdebugging)」を参照してください。
+操作と操作の詳細につい [`AssertMeasurement`](xref:Microsoft.Quantum.Diagnostics.assertmeasurement) [`AssertMeasurementProbability`](xref:Microsoft.Quantum.Diagnostics.assertmeasurementprobability) ては、「 [テストおよびデバッグ](xref:microsoft.quantum.guide.testingdebugging)」を参照してください。
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {

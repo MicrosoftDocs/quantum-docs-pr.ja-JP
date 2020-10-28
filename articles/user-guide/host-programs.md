@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2cb02617c81ee8b144ffe933f11b476ba6f4a23e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f1a4ef0616a8a3f1548b7a7207cf8cbb9dcc7260
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835963"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691693"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>プログラムを実行する方法 Q#
 
@@ -26,7 +26,7 @@ Quantum Development Kit の最大の強みの1つは、プラットフォーム�
 - スタンドアロンアプリケーションとして、 Q# は関連する唯一の言語であり、プログラムは直接呼び出されます。 このカテゴリには、次の2つの方法があります。
   - コマンドラインインターフェイス
   - Q# Jupyter Notebook
-- Python または .NET 言語 (C#、F # など) で記述された追加の *ホストプログラム*を使用して、プログラムを呼び出し、返された結果をさらに処理できます。
+- Python または .NET 言語 (C#、F # など) で記述された追加の *ホストプログラム* を使用して、プログラムを呼び出し、返された結果をさらに処理できます。
 
 これらのプロセスとその違いについて理解を深めるために、単純なプログラムを考えて、 Q# 実行する方法を比較します。
 
@@ -56,16 +56,16 @@ Quantum Development Kit の最大の強みの1つは、プラットフォーム�
 ```
 `MeasureSuperposition`入力を受け取らず、 [Result](xref:microsoft.quantum.guide.types)型の値を返す操作を定義しました。
 
-このページの例は操作のみで構成 Q# *operations*されていますが、ここで説明するすべての概念は、関数にも同様に関係 Q# *functions*します。そのため、これらのすべての概念を*呼び出し*が許容できるものとして参照します。 これらの違いについては、 [ Q# 「基本: 操作と関数](xref:microsoft.quantum.guide.basics#q-operations-and-functions)」で説明されています。これらの定義の詳細については、「[操作と関数](xref:microsoft.quantum.guide.operationsfunctions)」を参照してください。
+このページの例は操作のみで構成 Q# *operations* されていますが、ここで説明するすべての概念は、関数にも同様に関係 Q# *functions* します。そのため、これらのすべての概念を *呼び出し* が許容できるものとして参照します。 これらの違いについては、 [ Q# 「基本: 操作と関数](xref:microsoft.quantum.guide.basics#q-operations-and-functions)」で説明されています。これらの定義の詳細については、「[操作と関数](xref:microsoft.quantum.guide.operationsfunctions)」を参照してください。
 
 ### <a name="callable-defined-in-a-no-locq-file"></a>ファイルで定義された呼び出し可能 Q#
 
 呼び出し可能なは、によって呼び出され、実行され Q# ます。
 ただし、完全なファイルを構成するには、さらにいくつかの追加機能が必要です `*.qs` Q# 。
 
-すべての Q# 型と呼び出し可能 (定義したものと言語に固有の型の両方) は、 *名前空間*内で定義されます。これらの名前は、参照可能な完全な名前を提供します。
+すべての Q# 型と呼び出し可能 (定義したものと言語に固有の型の両方) は、 *名前空間* 内で定義されます。これらの名前は、参照可能な完全な名前を提供します。
 
-たとえば、およびの [`H`](xref:microsoft.quantum.intrinsic.h) 各 [`MResetZ`](xref:microsoft.quantum.measurement.mresetz) 操作は、 [`Microsoft.Quantum.Instrinsic`](xref:microsoft.quantum.intrinsic) [`Microsoft.Quantum.Measurement`](xref:microsoft.quantum.measurement) 名前空間と名前空間 ( [ Q# 標準ライブラリ](xref:microsoft.quantum.qsharplibintro)の一部) にあります。
+たとえば、およびの [`H`](xref:Microsoft.Quantum.Intrinsic.H) 各 [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) 操作は、 [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) 名前空間と名前空間 ( [ Q# 標準ライブラリ](xref:microsoft.quantum.qsharplibintro)の一部) にあります。
 そのため、常に *完全な* 名前を使用してを呼び出すことができます `Microsoft.Quantum.Intrinsic.H(<qubit>)` が、 `Microsoft.Quantum.Measurement.MResetZ(<qubit>)` 常にこの操作を実行すると、コードが乱雑になることがあります。
 
 ステートメントを `open` 使用すると、上記の操作本体で行ったように、より簡潔な短縮形で呼び出し可能なを参照できます。
@@ -90,8 +90,8 @@ namespace NamespaceName {
 > たとえば、代わりにを使用してから、を使用してを呼び出すこともでき `open Microsoft.Quantum.Instrinsic as NamespaceWithH;` `H` `NamespaceWithH.H(<qubit>)` ます。
 
 > [!NOTE]
-> すべての例外の1つとして、 [`Microsoft.Quantum.Core`](xref:microsoft.quantum.core) 常に自動的に開かれる名前空間があります。
-> そのため、のような呼び出し可能なは、 [`Length`](xref:microsoft.quantum.core.length) 常に直接使用できます。
+> すべての例外の1つとして、 [`Microsoft.Quantum.Core`](xref:Microsoft.Quantum.Core) 常に自動的に開かれる名前空間があります。
+> そのため、のような呼び出し可能なは、 [`Length`](xref:Microsoft.Quantum.Core.Length) 常に直接使用できます。
 
 ### <a name="running-on-target-machines"></a>ターゲットコンピューターでの実行
 
@@ -109,7 +109,7 @@ namespace NamespaceName {
 
 ここまでは、特定の Q# 呼び出し可能が実行されたときの動作について説明しました。
 がスタンドアロンアプリケーションとホストプログラムのどちらで使用されているかにかかわらず Q# 、この一般的なプロセスは同じ---であるため、QDK の柔軟性があります。
-クォンタム開発キットを呼び出す方法の違いにより、呼び出し可能な呼び出しの*how*実行方法 Q# と結果が返される方法が異なります。
+クォンタム開発キットを呼び出す方法の違いにより、呼び出し可能な呼び出しの *how* 実行方法 Q# と結果が返される方法が異なります。
 具体的には、次のような違いがあります。
 
 - Q#実行する呼び出し元を示す
@@ -121,7 +121,7 @@ namespace NamespaceName {
 Jupyter Notebook のスタンドアロンアプリケーションは、 Q# 最初の3つとは異なり、プライマリ機能はローカルファイルを中心にしていません Q# 。
 
 > [!NOTE]
-> これらの例では説明しませんが、run メソッド間の1つの共通点として、プログラム内から Q# (またはなどによって) 出力されるすべてのメッセージは、 [`Message`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) 通常、それぞれのコンソールに出力されます。
+> これらの例では説明しませんが、run メソッド間の1つの共通点として、プログラム内から Q# (またはなどによって) 出力されるすべてのメッセージは、 [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) [`DumpMachine`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) 通常、それぞれのコンソールに出力されます。
 
 ## <a name="no-locq-from-the-command-prompt"></a>Q# コマンドプロンプトから
 プログラムの記述を開始する最も簡単な方法の1つ Q# は、個別のファイルと2番目の言語をまったく気にすることがないようにすることです。
@@ -180,7 +180,7 @@ namespace NamespaceName {
     }
 ```
 返される値は、測定結果の配列です。
-[`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach)と [`ForEach`](xref:microsoft.quantum.arrays.foreach) は名前空間にあり [`Microsoft.Quantum.Canon`](xref:microsoft.quantum.canon) [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) 、 `open` それぞれに対して追加のステートメントが必要であることに注意してください。
+[`ApplyToEach`](xref:Microsoft.Quantum.Canon.ApplyToEach)と [`ForEach`](xref:Microsoft.Quantum.Arrays.ForEach) は名前空間にあり [`Microsoft.Quantum.Canon`](xref:Microsoft.Quantum.Canon) [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) 、 `open` それぞれに対して追加のステートメントが必要であることに注意してください。
 
 `@EntryPoint()`この新しい操作の前に属性を移動した場合 (ファイル内にはそのような行が1つだけ存在する場合があることに注意してください)、を使用して実行しようとすると、 `dotnet run` 必要な追加のコマンドラインオプションを示すエラーメッセージが表示されます。
 
@@ -593,7 +593,7 @@ Jupyter Notebook では Q# 、 Q# ファイルの名前空間内と同様にコ�
 このようなステートメントでセルを実行すると、その名前空間の定義がワークスペース全体で使用できるようになります。
 
 > [!NOTE]
-> [Microsoft の quantum](xref:microsoft.quantum.intrinsic)および[microsoft の quantum](xref:microsoft.quantum.canon) (たとえば、や) からの呼び出し [`H`](xref:microsoft.quantum.intrinsic.h) [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) 可能範囲は、jupyter notebook のセル内に定義されている操作で自動的に使用できるようになります。 Q#
+> [Microsoft の quantum](xref:Microsoft.Quantum.Intrinsic)および[microsoft の quantum](xref:Microsoft.Quantum.Canon) (たとえば、や) からの呼び出し [`H`](xref:Microsoft.Quantum.Intrinsic.H) [`ApplyToEach`](xref:Microsoft.Quantum.Canon.ApplyToEach) 可能範囲は、jupyter notebook のセル内に定義されている操作で自動的に使用できるようになります。 Q#
 > ただし、外部ソースファイルからのコードには当てはまりません Q# ( [概要 Q# と Jupyter notebook](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)に示されているプロセス)。 
 > 
 

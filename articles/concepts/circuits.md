@@ -89,7 +89,7 @@ author: QuantumWriter uid: benbra: v-ms. date: 12/11/2017 ms. topic: article no 
 
 $$\mathrm{Cnot } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left ( \ket { 00 }  +  \ket { 11 } \right )、$$
 
-このような複雑さを持つ操作は、クォンタムアルゴリズムとクォンタムエラー修正で広く普及しています。そのため、 *量子回線図*と呼ばれるシンプルな方法で視覚化を行うことができます。
+このような複雑さを持つ操作は、クォンタムアルゴリズムとクォンタムエラー修正で広く普及しています。そのため、 *量子回線図* と呼ばれるシンプルな方法で視覚化を行うことができます。
 この下回っありのクォンタム状態を準備するためのサーキット図は次のとおりです。
 
 <!--- ![](.\media\1.svg) --->
@@ -109,7 +109,7 @@ $$\mathrm{Cnot } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } 
 <これを簡単に中央揃えする方法が見つからない!--拡張機能が必要な場合があります。-->
 ![シングル qubit レジスタで動作する Hadamard 操作のシンボル](~/media/2.svg)
 
-は、シングル qubit レジスタに対して動作する [Hadamard](xref:microsoft.quantum.intrinsic.h) 操作です。
+は、シングル qubit レジスタに対して動作する [Hadamard](xref:Microsoft.Quantum.Intrinsic.H) 操作です。
 
 クォンタムゲートは、ゲートが最初に qubits に適用されたときの左端のゲートと共に、時系列順に並べられます。
 つまり、回線をクォンタム状態のままにしている場合、ワイヤは図の各ゲートを通じて、左から右にクォンタムの状態を取り込みます。
@@ -150,7 +150,7 @@ $ \Lambda $ 1 つの qubit の値が g のアプリケーションを制御す�
 ![単一制御ゲートのサーキットダイアグラム](~/media/5.svg)
 
 ここで、黒い円はゲートが制御されるクォンタムビットを表し、垂直方向のワイヤは、コントロール qubit が値1を受け取るときに適用されるユニタリを表し $ $ ます。
-$G = X $ と g Z では、 $ = $ ゲートの制御されたバージョンを記述するために、次の表記法を使用します (制御された x ゲートが[ $ cnot $ ゲート](xref:microsoft.quantum.intrinsic.cnot)であることに注意してください)。
+$G = X $ と g Z では、 $ = $ ゲートの制御されたバージョンを記述するために、次の表記法を使用します (制御された x ゲートが[ $ cnot $ ゲート](xref:Microsoft.Quantum.Intrinsic.CNOT)であることに注意してください)。
 
 <!--- ![](.\media\6.svg) --->
 <これを簡単に中央揃えする方法が見つからない!--拡張機能が必要な場合があります。-->
@@ -175,7 +175,7 @@ is Ctl { // Auto-generate the controlled specialization of the operation
 <これを簡単に中央揃えする方法が見つからない!--拡張機能が必要な場合があります。-->
 ![測定演算を表すシンボル](~/media/7.svg)
 
-Q# この目的のために [メジャー演算子](xref:microsoft.quantum.intrinsic.measure) を実装します。
+Q# この目的のために [メジャー演算子](xref:Microsoft.Quantum.Intrinsic.Measure) を実装します。
 詳細については、 [測定に関するセクション](xref:microsoft.quantum.libraries.standard.prelude#measurements) を参照してください。
 
 同様に、サブサーキット

@@ -107,7 +107,7 @@ author: bradben: benbra: ms. date: 9/1/2020 ms. topic: article uid: microsoft...
 
 ## <a name="clifford-group"></a>Clifford グループ
 
-[Bloch 球](xref:microsoft.quantum.glossary#bloch-sphere)の octants と、 [p li 演算子](xref:microsoft.quantum.glossary#pauli-operators)の効果の順列を占有する操作のセット。 これには、操作[ $ X $ ](xref:microsoft.quantum.intrinsic.x)、 [ $ Y $ ](xref:microsoft.quantum.intrinsic.y)、 [ $ Z $ ](xref:microsoft.quantum.intrinsic.z)、 [ $ H $ ](xref:microsoft.quantum.intrinsic.h) 、 [ $ S $ ](xref:microsoft.quantum.intrinsic.s)が含まれます。
+[Bloch 球](xref:microsoft.quantum.glossary#bloch-sphere)の octants と、 [p li 演算子](xref:microsoft.quantum.glossary#pauli-operators)の効果の順列を占有する操作のセット。 これには、操作[ $ X $ ](xref:Microsoft.Quantum.Intrinsic.X)、 [ $ Y $ ](xref:Microsoft.Quantum.Intrinsic.Y)、 [ $ Z $ ](xref:Microsoft.Quantum.Intrinsic.Z)、 [ $ H $ ](xref:Microsoft.Quantum.Intrinsic.H) 、 [ $ S $ ](xref:Microsoft.Quantum.Intrinsic.S)が含まれます。
 
 ## <a name="controlled"></a>た
 
@@ -115,7 +115,7 @@ author: bradben: benbra: ms. date: 9/1/2020 ms. topic: article uid: microsoft...
 
 ## <a name="dirac-notation"></a>Dirac 表記
 
-[クォンタムの状態](xref:microsoft.quantum.glossary#quantum-state)の表現を簡略化するシンボリックな略記 ( *bra k* notation とも呼ばれます)。  *Bra*部分は、行ベクター (たとえば a _1 a _2) を表し、 $ \bra { } = \begin{bmatrix} { } & { } \end{bmatrix} $ *k*部分は列ベクトル $ \ket { b } = \begin{bmatrix} b { _1 b _2 を表し } \\\\ { } \end{bmatrix} $ ます。 詳細については、「 [Dirac 表記](xref:microsoft.quantum.concepts.dirac)」を参照してください。
+[クォンタムの状態](xref:microsoft.quantum.glossary#quantum-state)の表現を簡略化するシンボリックな略記 ( *bra k* notation とも呼ばれます)。  *Bra* 部分は、行ベクター (たとえば a _1 a _2) を表し、 $ \bra { } = \begin{bmatrix} { } & { } \end{bmatrix} $ *k* 部分は列ベクトル $ \ket { b } = \begin{bmatrix} b { _1 b _2 を表し } \\\\ { } \end{bmatrix} $ ます。 詳細については、「 [Dirac 表記](xref:microsoft.quantum.concepts.dirac)」を参照してください。
 
 ## <a name="eigenvalue"></a>Eigenvalue
 
@@ -127,7 +127,7 @@ author: bradben: benbra: ms. date: 9/1/2020 ms. topic: article uid: microsoft...
 
 ## <a name="entanglement"></a>もつれ
 
-[Qubits](xref:microsoft.quantum.glossary#qubit)などのクォンタムパーティクルは、互いに独立して記述できないように、接続するか、または複数の*角度で傾ける*ことができます。 これらの測定結果は、無限に分離されている場合でも相関関係があります。 Entanglement、qubit の[状態](xref:microsoft.quantum.glossary#quantum-state)を[測定](xref:microsoft.quantum.glossary#measurement)するために不可欠です。  詳細については、「 [高度なマトリックスの概念](xref:microsoft.quantum.concepts.matrix-advanced)」を参照してください。
+[Qubits](xref:microsoft.quantum.glossary#qubit)などのクォンタムパーティクルは、互いに独立して記述できないように、接続するか、または複数の *角度で傾ける* ことができます。 これらの測定結果は、無限に分離されている場合でも相関関係があります。 Entanglement、qubit の[状態](xref:microsoft.quantum.glossary#quantum-state)を[測定](xref:microsoft.quantum.glossary#measurement)するために不可欠です。  詳細については、「 [高度なマトリックスの概念](xref:microsoft.quantum.concepts.matrix-advanced)」を参照してください。
 
 ## <a name="epr-pair"></a>EPR ペア
 
@@ -150,7 +150,7 @@ Q#純粋な古典的な言語 (非クォンタム) のサブルーチンの種�
 
 ## <a name="hadamard"></a>Hadamard
 
-Hadamard 操作 (Hadamard gate または transform とも呼ばれます) は、1つの[qubit](xref:microsoft.quantum.glossary#qubit)に作用し、0または1の偶数の[法則](xref:microsoft.quantum.glossary#superposition)に配置し $ \ket { ます ( } $ $ \ket { } $ qubit が初期状態である場合) $ \ket { } $ 。 で Q# は、この操作は定義済みの操作によって適用され [`H`](xref:microsoft.quantum.intrinsic.h) ます。
+Hadamard 操作 (Hadamard gate または transform とも呼ばれます) は、1つの[qubit](xref:microsoft.quantum.glossary#qubit)に作用し、0または1の偶数の[法則](xref:microsoft.quantum.glossary#superposition)に配置し $ \ket { ます ( } $ $ \ket { } $ qubit が初期状態である場合) $ \ket { } $ 。 で Q# は、この操作は定義済みの操作によって適用され [`H`](xref:Microsoft.Quantum.Intrinsic.H) ます。
 
 ## <a name="immutable"></a>変更不可
 
@@ -168,7 +168,7 @@ Hadamard 操作 (Hadamard gate または transform とも呼ばれます) は、
 
 関連する名前 (つまり、 [操作](xref:microsoft.quantum.glossary#operation)、 [関数](xref:microsoft.quantum.glossary#function)、および [ユーザー定義型](xref:microsoft.quantum.glossary#user-defined-type)) のコレクションのラベル。 たとえば、名前空間は、初期状態の準備に役立つ標準ライブラリで定義されているすべてのシンボルをラベル [付けします](xref:microsoft.quantum.preparation) 。
 
-## <a name="operation"></a>操作
+## <a name="operation"></a>Operation
 
 でのクォンタム計算の基本単位 Q# 。 これは、C、C++、または Python の関数、または C# または Java の静的メソッドとほぼ同じです。 詳細については、「 [操作と関数](xref:microsoft.quantum.guide.operationsfunctions)」を参照してください。
 
@@ -182,11 +182,11 @@ Hadamard 操作 (Hadamard gate または transform とも呼ばれます) は、
 
 ## <a name="partial-application"></a>部分アプリケーション
 
-必須の入力をすべて指定せずに [関数](xref:microsoft.quantum.glossary#function) または [操作](xref:microsoft.quantum.glossary#operation) を呼び出します。 これにより、今後のアプリケーションの実行中に、不足しているパラメーター (アンダースコアで示される) のみを必要とする新しい [呼び出し](xref:microsoft.quantum.glossary#callable) 可能が返されます。 たとえば、関数を指定する `MyFunc(x : int, y : int) : int {return x + y;}` と、その関数を新しい関数に部分的に適用でき `let NewFunc = MyFunc(_, 3)` ます。 その後、 `NewFunc(2)` 値 *5*を返すパラメーターを指定しないで、後で新しい関数を呼び出すことができます。  詳細については、「 [部分アプリケーション](xref:microsoft.quantum.guide.operationsfunctions#partial-application)」を参照してください。
+必須の入力をすべて指定せずに [関数](xref:microsoft.quantum.glossary#function) または [操作](xref:microsoft.quantum.glossary#operation) を呼び出します。 これにより、今後のアプリケーションの実行中に、不足しているパラメーター (アンダースコアで示される) のみを必要とする新しい [呼び出し](xref:microsoft.quantum.glossary#callable) 可能が返されます。 たとえば、関数を指定する `MyFunc(x : int, y : int) : int {return x + y;}` と、その関数を新しい関数に部分的に適用でき `let NewFunc = MyFunc(_, 3)` ます。 その後、 `NewFunc(2)` 値 *5* を返すパラメーターを指定しないで、後で新しい関数を呼び出すことができます。  詳細については、「 [部分アプリケーション](xref:microsoft.quantum.guide.operationsfunctions#partial-application)」を参照してください。
 
 ## <a name="pauli-operators"></a>P# li 演算子
 
-`X`、、 `Y` およびクォンタム操作として知られる3つの 2 x 2 つのユニタリ行列のセット `Z` 。 多くの場合、id マトリックス $ I は $ セットにも含まれています。  $I = \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \end{bmatrix} $ 、 $ X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} $ 、 $ Y = \begin{bmatrix} 0 & -i \\\\ i & 0 \end{bmatrix} $ 、 $ Z = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix} $ 。   詳細については、「 [Single qubit 操作](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)」を参照してください。
+`X`、、 `Y` およびクォンタム操作と呼ばれる 3 2 x 2 の1つのユニタリ行列のセット `Z` 。 多くの場合、id マトリックス $ I は $ セットにも含まれています。  $I = \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \end{bmatrix} $ 、 $ X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} $ 、 $ Y = \begin{bmatrix} 0 & -i \\\\ i & 0 \end{bmatrix} $ 、 $ Z = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix} $ 。   詳細については、「 [Single qubit 操作](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)」を参照してください。
 
 ## <a name="quantum-circuit-diagram"></a>クォンタム回線の図
 

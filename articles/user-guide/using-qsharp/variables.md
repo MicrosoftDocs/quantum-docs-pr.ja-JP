@@ -9,16 +9,16 @@ uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 67c71c09e004d77360902360fefc7a7752e4a829
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835878"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690930"
 ---
 # <a name="variables-in-no-locq"></a>の変数 Q#
 
-Q# 変更可能なシンボルと変更できないシンボル、または式にバインド/割り当てられている *変数*を区別します。
+Q# 変更可能なシンボルと変更できないシンボル、または式にバインド/割り当てられている *変数* を区別します。
 一般に、変更できないシンボルを使用することをお勧めします。これにより、コンパイラはより多くの最適化を実行できるためです。
 
 バインディングの左側は、記号の組と式の右辺で構成されています。
@@ -40,7 +40,7 @@ let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 > [!NOTE]
 > 前の例では、ステートメントの右辺の式が明確であるため、新しい変数の型を明示的に指定する必要はありません `let` 。コンパイラは正しい型を推論します。 
 
-を使用して定義された変数 `let` は *変更*できません。つまり、変数を定義すると、どのような方法でも変更できなくなります。
+を使用して定義された変数 `let` は *変更* できません。つまり、変数を定義すると、どのような方法でも変更できなくなります。
 これにより、操作のバリアントを適用するために変数に対して並べ替えを行う従来のロジックの最適化など、いくつかの有益な最適化が可能に `Adjoint` なります。
 
 ## <a name="mutable-variables"></a>変更可能な変数
@@ -92,7 +92,7 @@ for (q in qubits) {
 #### <a name="update-and-reassign-statements"></a>更新と再割り当てのステートメント
 
 右側に [コピーと更新の式](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) がある場合も同様の連結が存在します。
-それに応じて、ユーザー定義型および*配列項目*の*名前付き項目*に対して、*更新と再割り当て*のステートメントが存在します。  
+それに応じて、ユーザー定義型および *配列項目* の *名前付き項目* に対して、 *更新と再割り当て* のステートメントが存在します。  
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -110,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-配列の場合、 [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) 標準ライブラリでは、 Q# 多くの一般的な配列の初期化と操作に必要なツールが提供されるため、最初に配列項目を更新する必要がなくなります。 
+配列の場合、 [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) 標準ライブラリでは、 Q# 多くの一般的な配列の初期化と操作に必要なツールが提供されるため、最初に配列項目を更新する必要がなくなります。 
 
 必要に応じて、更新ステートメントと再割り当てステートメントで代替手段を提供します。
 
@@ -135,7 +135,7 @@ operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
 
 ```
 
-に用意されている配列のライブラリツールを使用すると、 [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) たとえば、インデックスの要素が指定された値を `Pauli` `i` 取得し、 `Pauli` その他のすべてのエントリが id () である型の配列を返す関数を簡単に定義でき `PauliI` ます。
+に用意されている配列のライブラリツールを使用すると、 [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) たとえば、インデックスの要素が指定された値を `Pauli` `i` 取得し、 `Pauli` その他のすべてのエントリが id () である型の配列を返す関数を簡単に定義でき `PauliI` ます。
 
 このような関数の2つの定義を次に示します。2つ目は、ツールを利用することです。
 
@@ -150,7 +150,7 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 }
 ```
 
-配列内の各インデックスを反復処理し、条件付きでまたはに設定するのではなく、を使用して `PauliI` `pauli` `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) 型の配列を作成 `PauliI` し、次にインデックスで特定の値を変更したコピーと更新の式を返すだけです `location` 。
+配列内の各インデックスを反復処理し、条件付きでまたはに設定するのではなく、を使用して `PauliI` `pauli` `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) 型の配列を作成 `PauliI` し、次にインデックスで特定の値を変更したコピーと更新の式を返すだけです `location` 。
 
 ```qsharp
 function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
@@ -201,7 +201,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-and
+および
 
 ```qsharp
 if (a == b) {

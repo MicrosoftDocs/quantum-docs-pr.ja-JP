@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e95a7cb9b74136ef9a6f51b4bbc32d1d93c43a0d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835844"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691604"
 ---
 # <a name="expressions-in-no-locq"></a>の式 Q#
 
@@ -40,7 +40,7 @@ let bigOne = bigZero + 1L;
 小数点、 `.` 、または "e" または "e" で示された指数部を使用して記述することもできます (その後は、負の符号と小数点以下の桁数のみが有効になります)。
 有効なリテラルは、、 `Double` `0.0` `1.2e5` 、 `1e-5` です。
 
-任意の要素型の配列式が指定されている場合は、 `Int` 組み込み関数を使用して式を作成できます。その際、 [`Length`](xref:microsoft.quantum.core.length) かっこで囲まれた配列式を使用します。
+任意の要素型の配列式が指定されている場合は、 `Int` 組み込み関数を使用して式を作成できます。その際、 [`Length`](xref:Microsoft.Quantum.Core.Length) かっこで囲まれた配列式を使用します。
 たとえば、 `a` が配列にバインドされている場合、 `Length(a)` は整数式になります。
 `b`が整数の配列の配列である場合 `Int[][]` 、は `Length(b)` のサブ配列の数です `b` `Length(b[1])` 。はの2番目のサブ配列の整数の数です `b` 。
 
@@ -111,7 +111,7 @@ let t = x == y;               // This will cause a compiler error.
 
 ## <a name="string-expressions"></a>文字列式
 
-Q#`fail`ステートメント ([制御フロー](xref:microsoft.quantum.guide.controlflow#fail-statement)で説明されています) および標準関数で文字列を使用できるようにし [`Message`](xref:microsoft.quantum.intrinsic.message) ます。 後者の特定の動作は、使用されるシミュレーターによって異なりますが、通常はプログラム中に呼び出されたときに、メッセージをホストコンソールに書き込み Q# ます。
+Q#`fail`ステートメント ([制御フロー](xref:microsoft.quantum.guide.controlflow#fail-statement)で説明されています) および標準関数で文字列を使用できるようにし [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) ます。 後者の特定の動作は、使用されるシミュレーターによって異なりますが、通常はプログラム中に呼び出されたときに、メッセージをホストコンソールに書き込み Q# ます。
 
 内の文字列 Q# は、リテラルまたは挿入文字列です。
 
@@ -128,7 +128,7 @@ Q#文字列補間の構文は、C# 構文のサブセットです。 次に示�
 
 * 文字列リテラルを挿入文字列として識別するため、先頭に `$` の記号を追加してください。 との間には、 `$` `"` 文字列リテラルを開始する空白文字を使用できません。
 
-* 次に、関数を使用して、 [`Message`](xref:microsoft.quantum.intrinsic.message) 他の式と共に測定の結果をコンソールに書き込む基本的な例を示し Q# ます。
+* 次に、関数を使用して、 [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) 他の式と共に測定の結果をコンソールに書き込む基本的な例を示し Q# ます。
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -189,7 +189,7 @@ C# の構文の詳細については、「 [*補間文字列*](https://docs.micr
 
 リテラル以外の唯一のタプル式は、タプル値にバインドされたシンボル、組配列の配列要素、およびタプルを返す呼び出し可能な呼び出しです。
 
-## <a name="user-defined-type-expressions"></a>ユーザー定義型の式
+## <a name="user-defined-type-expressions"></a>User-Defined 型式
 
 ユーザー定義型のリテラルは、型名の後に型の基本タプル型のタプルリテラルが含まれています。
 たとえば、 `IntPair` がに基づくユーザー定義型である場合、 `(Int, Int)` `IntPair(2, 3)` はその型の有効なリテラルです。
@@ -237,7 +237,7 @@ let g = Foo(arg)!;      // Syntax error
 
 エンティティへの参照である qubits と callables 指定できる場合、適切な既定値はありません。
 したがって、これらの型の場合、既定値は無効な参照です。これは、C# や Java などの言語での null 参照と同様に、ランタイムエラーを発生させずに使用することはできません。
-要素を安全に使用するには、qubits または callables 含む配列を既定値以外の値で初期化する必要があります。 適切な初期化ルーチンについては、「」を参照してください <xref:microsoft.quantum.arrays> 。
+要素を安全に使用するには、qubits または callables 含む配列を既定値以外の値で初期化する必要があります。 適切な初期化ルーチンについては、「」を参照してください <xref:Microsoft.Quantum.Arrays> 。
 
 各型の既定値は次のとおりです。
 
@@ -323,7 +323,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 もちろん、実際には、関連する部分のみが必要に応じて再作成されます。 これは、配列項目を更新できないため、配列のコピー方法に影響します。 既存の配列を変更するには、 *コピーと更新* のメカニズムを利用する必要があります。
 
-*コピーと更新*の式を使用して、既存の配列から新しい配列を作成することができます。この場合、との演算子を使用し `w/` `<-` ます。
+*コピーと更新* の式を使用して、既存の配列から新しい配列を作成することができます。この場合、との演算子を使用し `w/` `<-` ます。
 コピーと更新の式は、という形式の式です。 `expression1 w/ expression2 <- expression3`
 
 * `expression1` 何らかの型の型である必要があり `T[]` `T` ます。

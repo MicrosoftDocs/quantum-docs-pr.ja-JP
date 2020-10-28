@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fef3cea1c11e4fef49ddbf63adb34e07675049d2
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834195"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691743"
 ---
 # <a name="no-locq-style-guide"></a>Q# スタイルガイド #
 ## <a name="general-conventions"></a>一般規則 ##
@@ -113,7 +113,7 @@ Quantum 開発キットの提供では、quantum 開発者が簡単に読むこ�
 
 ### <a name="entry-points"></a>エントリ ポイント
 
-プログラムにエントリポイントを定義すると Q# 、コンパイラはその Q# エントリポイントが特定の名前 (例: [ `@EntryPoint()` ](xref:microsoft.quantum.core.entrypoint) `main` 、 `Main` 、または) を持つことを要求するのではなく、属性を認識し `__main__` ます。
+プログラムにエントリポイントを定義すると Q# 、コンパイラはその Q# エントリポイントが特定の名前 (例: [ `@EntryPoint()` ](xref:Microsoft.Quantum.Core.EntryPoint) `main` 、 `Main` 、または) を持つことを要求するのではなく、属性を認識し `__main__` ます。
 つまり、開発者の観点から見る Q# と、エントリポイントは、で注釈が付けられた通常の操作です `@EntryPoint()` 。
 さらに、エントリポイント Q# は、アプリケーション全体 (たとえば、スタンドアロンの実行可能プログラム) のエントリポイントである場合もあれば、 Q# プログラムとアプリケーションのホストプログラムとの間のインターフェイスである場合もあります Q# (つまり、 Q# Python または .net でを使用している場合) Q# 。
 
@@ -134,7 +134,7 @@ Quantum 開発キットの提供では、quantum 開発者が簡単に読むこ�
 | ☑ | `@EntryPoint() operation RunSimulation` | 操作名を使用してエントリポイントの目的を明確に伝えます。 |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | の使用 `Main` は、エントリポイントの目的を明確に伝えるものではなく、属性と重複し `@EntryPoint()` ます。 |
 
-***
+**_
 
 ### <a name="shorthand-and-abbreviations"></a>ショートハンドと省略形 ###
 
@@ -181,7 +181,7 @@ is Adj + Ctl {
 
 
 
-***
+_*_
 
 
 ### <a name="proper-nouns-in-names"></a>名前の正しい名詞 ###
@@ -208,14 +208,14 @@ While we must maintain the history and intellectual provenance of concepts in qu
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-***
+_*_
 
 ### <a name="type-conversions"></a>型変換 ###
 
 Q#は厳密かつ厳密に型指定された言語であるため、1つの型の値は、型変換関数への明示的な呼び出しを使用して、別の型の値としてのみ使用できます。
 これは、値が暗黙的に型を変更できるようにする言語 (例: 型の上位変換)、またはキャストを使用した場合とは対照的です。
 その結果、型変換関数はライブラリ開発で重要な役割を果たし、 Q# 名前付けに関してよく発生する決定の1つを構成します。
-ただし、型変換は常に _決定的_であるため、関数として記述することができます。そのため、上記のアドバイスに従ってください。
+ただし、型変換は常に _決定的_ であるため、関数として記述することができます。そのため、上記のアドバイスに従ってください。
 具体的には、型変換関数を動詞 (例::) または副詞 prepositional フレーズ () として指定しないことをお勧めし `ConvertToX` `ToX` ますが、ソースとターゲットの型 () を示す形容詞 prepositional 指定語句として名前を付ける必要があり `XAsY` ます。
 型変換関数の名前で配列の型を一覧表示する場合は、短縮形をお勧めし `Arr` ます。
 例外的な状況を発生させないように、を使用してすべての型変換関数に名前を付け、迅速に識別できるようにすることをお勧め `As` します。
@@ -235,7 +235,7 @@ Q#は厳密かつ厳密に型指定された言語であるため、1つの型�
 | ☒ | <s>`PauliArrFromBoolArr`</s> | 入力と出力の型が間違った順序で表示されています。 |
 | ☑ | `ResultArrAsBoolArr` | 入力型と出力型はどちらも明確です。 |
 
-***
+_*_
 
 ### <a name="private-or-internal-names"></a>プライベートまたは内部名 ###
 
@@ -256,13 +256,13 @@ Q#は厳密かつ厳密に型指定された言語であるため、1つの型�
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | `_`この操作が内部でのみ使用されることを示すために、アンダースコアを使用しないでください。 |
 | ☑ | `internal operation ApplyDecomposedOperation` | `internal`最初のキーワードは、この操作が内部でのみ使用されることを明確に示しています。 |
 
-***
+_*_
 ### <a name="variants"></a>バリアント ###
 
 この制限は、将来のバージョンのでは保持されない場合があり Q# ますが、現在のところ、関連する操作のグループ (入力によってサポートされる、または引数の具象型によって識別される関数) がある場合があります。
 これらのグループは、同じルート名を使用し、そのバリアントを示す 1 ~ 2 文字で区別できます。
 
-| サフィックス | 説明 |
+| サフィックス | 意味 |
 |--------|---------|
 | `A` | サポートが必要な入力 `Adjoint` |
 | `C` | サポートが必要な入力 `Controlled` |
@@ -280,7 +280,7 @@ Q#は厳密かつ厳密に型指定された言語であるため、1つの型�
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-***
+_*_
 
 ### <a name="arguments-and-variables"></a>引数と変数 ###
 
@@ -305,9 +305,9 @@ Q#関数または操作のコードの主な目的は、簡単に読み取り、
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-***
+_*_
 
-### <a name="user-defined-type-named-items"></a>ユーザー定義型の名前付き項目 ###
+### <a name="user-defined-type-named-items"></a>User-Defined 型の名前付き項目 ###
 
 ユーザー定義型の名前付き項目には `CamelCase` 、UDT コンストラクターへの入力でもという名前を付ける必要があります。
 これは、アクセサー表記 (例: `callable::Apply` ) またはコピーと更新の表記 () を使用する場合に、名前付き項目をローカルスコープ変数への参照から明確に分離するために役立ち `set arr w/= Data <- newData` ます。
@@ -329,7 +329,7 @@ Q#関数または操作のコードの主な目的は、簡単に読み取り、
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | 名前付き項目の先頭は大文字である必要があります。 |
 | ☒ | <s>`newtype Collection = (Length : Int, Get : Int -> (Qubit => Unit)) `</s> | 関数に解決される名前付きの項目は、動詞句としてではなく、名詞句として名前を付ける必要があります。 |
 
-***
+_*_
 
 ## <a name="input-conventions"></a>入力規則 ##
 
@@ -379,7 +379,7 @@ operation ApplyPhaseEstimationIteration(
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-***
+_*_
 
 ## <a name="documentation-conventions"></a>ドキュメントの表記規則 ##
 
@@ -451,7 +451,7 @@ is Adj + Ctl {
 }
 ```
 
-***
+_*_
 
 ## <a name="formatting-conventions"></a>書式設定の規則 ##
 
@@ -486,4 +486,4 @@ is Adj + Ctl {
 | ☑ | `Example(a, b, c)` | 入力タプル内の項目は、読みやすくするために適切に配置されています。 |
 | ☒ | <s>`Example (a, b, c)`</s> | 関数、操作、または UDT の名前の後にスペースは表示されません。 |
 
-***
+_**

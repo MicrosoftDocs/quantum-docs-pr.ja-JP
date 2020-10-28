@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: aa942a61280553ae4e51cd5ddcc85c0df935dab1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 9a3d7e03016332a04ac9d1610428b6fcd546d1f6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835861"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691581"
 ---
 # <a name="working-with-qubits"></a>量子ビットの操作
 
@@ -29,14 +29,14 @@ Qubits は、クォンタムコンピューティングにおける情報の基�
 
 物理 qubits は、quantum コンピューターの貴重なリソースであるため、コンパイラのジョブの一部として、それらが可能な限り効率的に使用されていることを確認する必要があります。
 そのため、 Q# 特定のステートメントブロック内で使用するには、qubits を *割り当てる* 必要があります。
-Qubits を1つの qubits として割り当てることも、 *レジスタ*と呼ばれる qubits の配列として割り当てることもできます。 
+Qubits を1つの qubits として割り当てることも、 *レジスタ* と呼ばれる qubits の配列として割り当てることもできます。 
 
 ### <a name="clean-qubits"></a>Clean qubits
 
 ステートメントを使用して、 `using` ステートメントブロック中に使用する新しい qubits を割り当てます。
 
 ステートメントは、キーワードと、 `using` その後にかっこで囲まれたバインディング `( )` と、qubits が使用可能なステートメントブロックで構成されます。
-バインディングは、ステートメントと同じパターンに従い `let` ます。1つの記号または記号の組、等号 (= `=` )、1つの値、または *初期化子*の一致するタプルのいずれかです。
+バインディングは、ステートメントと同じパターンに従い `let` ます。1つの記号または記号の組、等号 (= `=` )、1つの値、または *初期化子* の一致するタプルのいずれかです。
 
 初期化子は、として指定された1つの qubit、 `Qubit()` または qubit の配列 (は式) に対して使用でき `Qubit[n]` `n` `Int` ます。
 たとえば、次のように入力します。
@@ -95,7 +95,7 @@ Qubits を借りている場合、システムはまず、使用中であるが�
 この記事では、 Q# qubits との対話に使用できるいくつかの便利な操作について説明します。
 これらおよび他の詳細については、「 [組み込みの操作と関数](xref:microsoft.quantum.libraries.standard.prelude)」を参照してください。 
 
-1つ目の方法として、単 qubit の Pare Li 演算子 $X $、$Y $、および $Z $ は、 Q# [`X`](xref:microsoft.quantum.intrinsic.x) それぞれが型を持つ組み込みの操作である、、およびによって表され [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) `(Qubit => Unit is Adj + Ctl)` ます。
+1つ目の方法として、単 qubit の Pare Li 演算子 $X $、$Y $、および $Z $ は、 Q# [`X`](xref:Microsoft.Quantum.Intrinsic.X) それぞれが型を持つ組み込みの操作である、、およびによって表され [`Y`](xref:Microsoft.Quantum.Intrinsic.Y) [`Z`](xref:Microsoft.Quantum.Intrinsic.Z) `(Qubit => Unit is Adj + Ctl)` ます。
 
 「組み込みの [操作と関数](xref:microsoft.quantum.libraries.standard.prelude)」で説明されているように、$ $X `X` は、ビットフリップ演算または NOT gate として考えられます。
 操作を使用して、 `X` $ \ket{s_0 s_1 \ ドット s_n} $ の形式の状態を準備できます。これは、一部のクラシックビット文字列 $s $:
@@ -127,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > 後で、手動による制御フローを必要としない、この操作をよりコンパクトな方法で作成できます。
 
-組み込み操作によって表される \Ket transform $H $ を使用して、$ \ket{+} = \ left (\ket {0} + \ket {1} /right)/\ sqrt {2} $ and $ \ket = (\ket-Hadamard/right)/-sqrt $ などの状態を準備することもでき {-} {0} {1} {2} Q# [`H`](xref:microsoft.quantum.intrinsic.h) ます (型 (qubit => Unit is 形容詞 + Ctl) ')。
+組み込み操作によって表される \Ket transform $H $ を使用して、$ \ket{+} = \ left (\ket {0} + \ket {1} /right)/\ sqrt {2} $ and $ \ket = (\ket-Hadamard/right)/-sqrt $ などの状態を準備することもでき {-} {0} {1} {2} Q# [`H`](xref:Microsoft.Quantum.Intrinsic.H) ます (型 (qubit => Unit is 形容詞 + Ctl) ')。
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -145,11 +145,11 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 ## <a name="measurements"></a>測定
 
 個々の qubits の測定は、 [Bloch 球の p](xref:microsoft.quantum.glossary#bloch-sphere)li 軸によって表される異なるベースで実行できます。
-*計算基準*はベースを指し、 `PauliZ` 測定に最も一般的に使用されます。
+*計算基準* はベースを指し、 `PauliZ` 測定に最も一般的に使用されます。
 
 ### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>1つの qubit を基準にして測定する `PauliZ`
 
-演算を使用します [`M`](xref:microsoft.quantum.intrinsic.m) 。この操作は組み込みの非イン数値演算であり、1つの qubit を `PauliZ` 基準にして、その結果に古典的な値を割り当てます。
+演算を使用します [`M`](xref:Microsoft.Quantum.Intrinsic.M) 。この操作は組み込みの非イン数値演算であり、1つの qubit を `PauliZ` 基準にして、その結果に古典的な値を割り当てます。
 `M` には、予約された戻り値の型があります `Result` 。これは、値を取得するか、測定された `Zero` `One` 状態 $ \ket {0} $ または $ \ket $-に対応します。これは、 {1} 結果がクォンタムの状態ではなくなったことを示します。
 
 単純な例として、次の操作があります。この操作では、$ \ket $ 状態に1つの qubit が割り当てられ、 {0} Hadamard 操作が適用され、その `H` 結果が基になり `PauliZ` ます。
@@ -175,7 +175,7 @@ operation MeasureOneQubit() : Result {
 
 ### <a name="measure-one-or-more-qubits-in-specific-bases"></a>特定のベースの1つ以上の qubits を測定する
 
-特定のベースの1つ以上の qubits の配列を測定するには、操作を使用し [`Measure`](xref:microsoft.quantum.intrinsic.measure) ます。
+特定のベースの1つ以上の qubits の配列を測定するには、操作を使用し [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) ます。
 
 への入力 `Measure` は `Pauli` 、型 (たとえば、) の配列で `[PauliX, PauliZ, PauliZ]` あり、qubits の配列です。
 

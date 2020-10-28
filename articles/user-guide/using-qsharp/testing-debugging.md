@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.testingdebugging
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2f2181d388a59c1c6c5a0f13c9aa49d5fa1e51ae
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 5505086c5efac89f6940cde1ecae2ce629cfeda5
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833168"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690975"
 ---
 # <a name="testing-and-debugging"></a>テストとデバッグ
 
@@ -23,7 +23,7 @@ ms.locfileid: "90833168"
 
 ## <a name="unit-tests"></a>単体テスト
 
-従来のプログラムをテストする一般的な方法の1つは、 *単体テスト*と呼ばれる小さなプログラムを作成することです。これにより、ライブラリでコードを実行し、出力を予想される出力と比較します。
+従来のプログラムをテストする一般的な方法の1つは、 *単体テスト* と呼ばれる小さなプログラムを作成することです。これにより、ライブラリでコードを実行し、出力を予想される出力と比較します。
 たとえば、 `Square(2)` `4` $ 2 ^ 2 = $4 の *priori* がわかっているため、がを返すようにすることができます。
 
 Q# は、クォンタムプログラムの単体テストの作成をサポートしています。これは、 [Xunit](https://xunit.github.io/) 単体テストフレームワーク内でテストとして実行できます。
@@ -32,7 +32,7 @@ Q# は、クォンタムプログラムの単体テストの作成をサポー�
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Visual Studio 2019 を開きます。 [**ファイル**] メニューにアクセスし、[**新しい > プロジェクト**] を選択します。右上隅にあるを検索し、 `Q#` ** Q# テストプロジェクト**テンプレートを選択します。
+Visual Studio 2019 を開きます。 [ **ファイル** ] メニューにアクセスし、[ **新しい > プロジェクト** ] を選択します。右上隅にあるを検索し、 `Q#` **Q# テストプロジェクト** テンプレートを選択します。
 
 #### <a name="command-line--visual-studio-code"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
 
@@ -81,7 +81,7 @@ Q#型の引数を受け取り、を返すすべての操作または関数は `U
 > Visual Studio の既定のプロセッサアーキテクチャ設定は、各ソリューションのソリューションオプション () ファイルに格納され `.suo` ます。
 > このファイルを削除する場合は、プロセッサアーキテクチャとして **X64** を選択する必要があります。
 
-プロジェクトをビルドし、[ **テスト** ] メニューを開き、[ **Windows > テストエクスプローラー**] を選択します。 **Allocatequbit** は、[ **テストを実行しない** ] グループのテストの一覧に表示されます。 [ **すべて実行** ] を選択するか、この個々のテストを実行します。
+プロジェクトをビルドし、[ **テスト** ] メニューを開き、[ **Windows > テストエクスプローラー** ] を選択します。 **Allocatequbit** は、[ **テストを実行しない** ] グループのテストの一覧に表示されます。 [ **すべて実行** ] を選択するか、この個々のテストを実行します。
 
 #### <a name="command-line--visual-studio-code"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
 
@@ -121,13 +121,13 @@ $ dotnet test --filter "Name=AllocateQubit"
 ```
 
 
-***
+**_
 
-組み込み関数に <xref:microsoft.quantum.intrinsic.message> は型があり、 `(String -> Unit)` 診断メッセージを作成できます。
+組み込み関数に <xref:Microsoft.Quantum.Intrinsic.Message> は型があり、 `(String -> Unit)` 診断メッセージを作成できます。
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-テストエクスプローラーでテストを実行し、テストをクリックすると、テストの実行に関する情報がパネルに表示されます (成功/失敗の状態、経過時間、および出力へのリンク)。 [ **出力** ] をクリックして、新しいウィンドウでテスト出力を開きます。
+テストエクスプローラーでテストを実行し、テストをクリックすると、テストの実行に関する情報がパネルに表示されます (成功/失敗の状態、経過時間、および出力へのリンク)。 [_ *出力* ] * をクリックして、新しいウィンドウでテスト出力を開きます。
 
 ![テスト出力](~/media/unit-test-output.png)
 
@@ -136,7 +136,7 @@ $ dotnet test --filter "Name=AllocateQubit"
 各テストの成功/失敗の状態は、によってコンソールに出力され `dotnet test` ます。
 失敗したテストの場合は、エラーの診断に役立つ出力もコンソールに出力されます。
 
-***
+**_
 
 ## <a name="facts-and-assertions"></a>ファクトとアサーション
 
@@ -160,13 +160,13 @@ function PositivityFact(value : Double) : Unit
 定義上、この種のエラーは、 Q# ターゲットコンピューターが Q# ステートメントに到達した後にコードを実行しなくなったため、内からは確認できません `fail` 。
 したがって、への呼び出しを実行した後にを続行すると、入力が肯定的であることが `PositivityFact` 保証されます。
 
-名前空間の関数を使用するのと同じ動作を実装できることに注意して `PositivityFact` [`Fact`](xref:microsoft.quantum.diagnostics.fact) <xref:microsoft.quantum.diagnostics> ください。
+名前空間の関数を使用するのと同じ動作を実装できることに注意して `PositivityFact` [`Fact`](xref:Microsoft.Quantum.Diagnostics.fact) <xref:Microsoft.Quantum.Diagnostics> ください。
 
 ```qsharp
     Fact(value > 0, "Expected a positive number.");
 ```
 
-一方、*アサーション*はファクトと同様に使用されますが、ターゲットコンピューターの状態によって異なる場合があります。 それに応じて、これらは操作として定義されますが、ファクトは関数として定義されます (前の例のように)。
+一方、_Assertions * はファクトと同様に使用されますが、ターゲットコンピューターの状態によって異なる場合があります。 それに応じて、これらは操作として定義されますが、ファクトは関数として定義されます (前の例のように)。
 この違いを理解するには、アサーション内で次のファクトを使用することを検討してください。
 
 ```qsharp
@@ -176,11 +176,11 @@ operation AssertQubitsAreAvailable() : Unit
 }
 ```
 
-ここでは、操作を使用して、 <xref:microsoft.quantum.environment.getqubitsavailabletouse> 使用可能な qubits の数を返します。
+ここでは、操作を使用して、 <xref:Microsoft.Quantum.Environment.GetQubitsAvailableToUse> 使用可能な qubits の数を返します。
 これは、プログラムとその実行環境のグローバルな状態によって異なりますが、の定義 `AssertQubitsAreAvailable` も操作である必要があります。
 ただし、そのグローバル状態を使用し `Bool` て、関数への入力として単純な値を生成することができ `Fact` ます。
 
-これらのアイデアを基にして構築さ[れた準備は](xref:microsoft.quantum.libraries.standard.prelude)、2つの便利なアサーションを提供 <xref:microsoft.quantum.diagnostics.assertmeasurement> し、 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 両方とも操作としてモデル化されて `()` います。 これらのアサーションは、特定の対象測定、測定が実行されるクォンタムレジスタ、および仮定の結果を記述する P# li オペレーターを受け取ります。
+これらのアイデアを基にして構築さ[れた準備は](xref:microsoft.quantum.libraries.standard.prelude)、2つの便利なアサーションを提供 <xref:Microsoft.Quantum.Diagnostics.AssertMeasurement> し、 <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> 両方とも操作としてモデル化されて `()` います。 これらのアサーションは、特定の対象測定、測定が実行されるクォンタムレジスタ、および仮定の結果を記述する P# li オペレーターを受け取ります。
 シミュレーションによって動作するターゲットコンピューターは、 [複製なしの定理](https://en.wikipedia.org/wiki/No-cloning_theorem)によってバインドされないため、このようなアサーションに合格するレジスタに支障をきたすことなく、このような測定を実行できます。
 次に、シミュレーターは、前の関数と同様に、 `PositivityFact` 仮定の結果が実際に観測されていない場合に計算を停止できます。
 
@@ -197,15 +197,15 @@ using (register = Qubit())
 
 物理クォンタムハードウェアでは、複製なしの定理がクォンタムの状態を検査できない場合 `AssertMeasurement` 、 `AssertMeasurementProbability` 操作と操作は単 `()` に他の効果なしでを返します。
 
-名前空間には、 <xref:microsoft.quantum.diagnostics> `Assert` さらに高度な条件を確認できるファミリの機能がいくつか用意されています。 
+名前空間には、 <xref:Microsoft.Quantum.Diagnostics> `Assert` さらに高度な条件を確認できるファミリの機能がいくつか用意されています。 
 
 ## <a name="dump-functions"></a>ダンプ関数
 
-クォンタムプログラムのトラブルシューティングに役立つように、名前空間には、 <xref:microsoft.quantum.diagnostics> ターゲットコンピューターの現在の状態をファイルにダンプできる2つの関数 (および) が用意されて <xref:microsoft.quantum.diagnostics.dumpmachine> <xref:microsoft.quantum.diagnostics.dumpregister> います。 それぞれのの生成された出力は、ターゲットコンピューターによって異なります。
+クォンタムプログラムのトラブルシューティングに役立つように、名前空間には、 <xref:Microsoft.Quantum.Diagnostics> ターゲットコンピューターの現在の状態をファイルにダンプできる2つの関数 (および) が用意されて <xref:Microsoft.Quantum.Diagnostics.DumpMachine> <xref:Microsoft.Quantum.Diagnostics.DumpRegister> います。 それぞれのの生成された出力は、ターゲットコンピューターによって異なります。
 
 ### <a name="dumpmachine"></a>DumpMachine
 
-Quantum 開発キットの一部として配布された完全な状態のクォンタムシミュレーターは、クォンタムシステム全体の [wave 関数](https://en.wikipedia.org/wiki/Wave_function) を、1次元の複素数の配列としてファイルに書き込みます。各要素は、コンピューティングベースの状態を測定する確率の振幅 ($ \ket{n} = \ket{b_ {n-1}...) を表します。b_1b_0} $ (bits $ \{ b_i $ の場合) \} 。 たとえば、2つの qubits のみが割り当てられ、クォンタム状態が $ $ \begin{align} \ket{\psi} = \ frac {1} {\ sqrt {2} } \ket {00} -\frac{(1 + i)} \ket であるコンピューターでは、 {2} {10} \end{align} $ $ を呼び出すと、次の出力が生成され <xref:microsoft.quantum.diagnostics.dumpmachine> ます。
+Quantum 開発キットの一部として配布された完全な状態のクォンタムシミュレーターは、クォンタムシステム全体の [wave 関数](https://en.wikipedia.org/wiki/Wave_function) を、1次元の複素数の配列としてファイルに書き込みます。各要素は、コンピューティングベースの状態を測定する確率の振幅 ($ \ket{n} = \ket{b_ {n-1}...) を表します。b_1b_0} $ (bits $ \{ b_i $ の場合) \} 。 たとえば、2つの qubits のみが割り当てられ、クォンタム状態が $ $ \begin{align} \ket{\psi} = \ frac {1} {\ sqrt {2} } \ket {00} -\frac{(1 + i)} \ket であるコンピューターでは、 {2} {10} \end{align} $ $ を呼び出すと、次の出力が生成され <xref:Microsoft.Quantum.Diagnostics.DumpMachine> ます。
 
 ```
 # wave function for qubits with ids (least to most significant): 0;1
@@ -219,12 +219,12 @@ Quantum 開発キットの一部として配布された完全な状態のクォ
 残りの行は、デカルト形式と極座標形式の両方で、basis 状態ベクター $ \ket{n} $ を測定する確率の振幅を示しています。 最初の行の詳細は次のとおりです。
 
 * **`∣0❭:`** この行は、計算基礎の状態に対応します。 `0`
-* **`0.707107 +  0.000000 i`**: デカルト形式の確率の振幅。
-* **` == `**: 符号は、 `equal` 両方の同等の表現を分離します。
-* **`**********  `**: 大きさをグラフィカルに表示します。の数は、 `*` この状態ベクターを測定する確率に比例します。
-* **`[ 0.500000 ]`**: マグニチュードの数値
-* **`    ---`**: 振幅のフェーズをグラフィカルに表示します (次の出力を参照してください)。
-* **`[ 0.0000 rad ]`**: フェーズの数値 (ラジアン)。
+* **`0.707107 +  0.000000 i`** : デカルト形式の確率の振幅。
+* **` == `** : 符号は、 `equal` 両方の同等の表現を分離します。
+* **`**********  `** : 大きさをグラフィカルに表示します。の数は、 `*` この状態ベクターを測定する確率に比例します。
+* **`[ 0.500000 ]`** : マグニチュードの数値
+* **`    ---`** : 振幅のフェーズをグラフィカルに表示します (次の出力を参照してください)。
+* **`[ 0.0000 rad ]`** : フェーズの数値 (ラジアン)。
 
 大きさとフェーズの両方がグラフィック表示で表示されます。 マグニチュード表現は、水平方向です。の棒が大きいほど、 `*` 棒が大きくなる確率が大きくなります。 フェーズでは、次の記号を使用して範囲に基づく角度を表します。
 
@@ -299,7 +299,7 @@ Quantum 開発キットの一部として配布された完全な状態のクォ
 #### <a name="command-line--visual-studio-code"></a>[コマンドライン/Visual Studio Code](#tab/tabid-vscode)
 
   > [!TIP]
-  > 関数を使用し、メッセージに qubit 変数を渡すことによって、qubit id を見つけることができ <xref:microsoft.quantum.intrinsic.message> ます。次に例を示します。
+  > 関数を使用し、メッセージに qubit 変数を渡すことによって、qubit id を見つけることができ <xref:Microsoft.Quantum.Intrinsic.Message> ます。次に例を示します。
   >
   > ```qsharp
   > Message($"0={register2[0]}; 1={register2[1]}");
@@ -312,9 +312,9 @@ Quantum 開発キットの一部として配布された完全な状態のクォ
   > これは、インデックスを持つ qubit の id がであることを意味します。これは、 `0` `register2` `3` インデックスを持つ qubit `1` が id = であることを意味し `2` ます。
 
 
-***
+**_
 
-<xref:microsoft.quantum.diagnostics.dumpmachine>は名前空間の一部 <xref:microsoft.quantum.diagnostics> であるため、 `open` それにアクセスするためのステートメントを追加する必要があります。
+<xref:Microsoft.Quantum.Diagnostics.DumpMachine>は名前空間の一部 <xref:Microsoft.Quantum.Diagnostics> であるため、 `open` それにアクセスするためのステートメントを追加する必要があります。
 
 ```qsharp
 namespace Samples {
@@ -333,17 +333,17 @@ namespace Samples {
 
 ### <a name="dumpregister"></a>DumpRegister
 
-<xref:microsoft.quantum.diagnostics.dumpregister> はと同じように動作し <xref:microsoft.quantum.diagnostics.dumpmachine> ますが、情報の量を対応する qubits に限定するために、qubits の配列も取得する点が異なります。
+<xref:Microsoft.Quantum.Diagnostics.DumpRegister> はと同じように動作し <xref:Microsoft.Quantum.Diagnostics.DumpMachine> ますが、情報の量を対応する qubits に限定するために、qubits の配列も取得する点が異なります。
 
-と同様に <xref:microsoft.quantum.diagnostics.dumpmachine> 、によって生成される情報は <xref:microsoft.quantum.diagnostics.dumpregister> ターゲットコンピューターによって異なります。 完全な状態のクォンタムシミュレーターでは、と同じ形式で指定された qubits によって生成されるクォンタムサブシステムのグローバルフェーズまで、wave 関数がファイルに書き込まれ <xref:microsoft.quantum.diagnostics.dumpmachine> ます。  たとえば、2つの qubits のみが割り当てられ、クォンタム状態が $ $ \begin{align} \ket{\psi} = \ frac {1} {\ sqrt {2} } \ket {00} -\frac{(1 + i)} \ket =-e ^ {であるマシンをもう一度実行します。 {2} {10} -i \ pi/4} ((\ frac {1} {\ sqrt {2} } \ket {0} -\frac{(1 + i)} {2} \ket {1} ) \ otimes \frac{-(1 + i)} {\ sqrt {2} } \ket {0} )、\end{align} $ $ を呼び出すと <xref:microsoft.quantum.diagnostics.dumpregister> 、次の出力が生成され `qubit[0]` ます。
+と同様に <xref:Microsoft.Quantum.Diagnostics.DumpMachine> 、によって生成される情報は <xref:Microsoft.Quantum.Diagnostics.DumpRegister> ターゲットコンピューターによって異なります。 完全な状態のクォンタムシミュレーターでは、と同じ形式で指定された qubits によって生成されるクォンタムサブシステムのグローバルフェーズまで、wave 関数がファイルに書き込まれ <xref:Microsoft.Quantum.Diagnostics.DumpMachine> ます。  たとえば、2つの qubits のみが割り当てられ、クォンタム状態が $ $ \begin{align} \ket{\psi} = \ frac {1} {\ sqrt {2} } \ket {00} -\frac{(1 + i)} \ket =-e ^ {であるマシンをもう一度実行します。 {2} {10} -i \ pi/4} ((\ frac {1} {\ sqrt {2} } \ket {0} -\frac{(1 + i)} {2} \ket {1} ) \ otimes \frac{-(1 + i)} {\ sqrt {2} } \ket {0} )、\end{align} $ $ を呼び出すと <xref:Microsoft.Quantum.Diagnostics.DumpRegister> 、次の出力が生成され `qubit[0]` ます。
 
 ```
 # wave function for qubits with ids (least to most significant): 0
-∣0❭:    -0.707107 + -0.707107 i  ==     ******************** [ 1.000000 ]  /      [ -2.35619 rad ]
+∣0❭:    -0.707107 + -0.707107 i  ==     _******************* [ 1.000000 ]  /      [ -2.35619 rad ]
 ∣1❭:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 ```
 
-とを呼び出すと、次 <xref:microsoft.quantum.diagnostics.dumpregister> の出力が生成され `qubit[1]` ます。
+とを呼び出すと、次 <xref:Microsoft.Quantum.Diagnostics.DumpRegister> の出力が生成され `qubit[1]` ます。
 
 ```
 # wave function for qubits with ids (least to most significant): 1
@@ -351,13 +351,13 @@ namespace Samples {
 ∣1❭:    -0.500000 + -0.500000 i  ==     ***********          [ 0.500000 ]  /      [ -2.35619 rad ]
 ```
 
-一般に、別のレジスタによって使用されるレジスタの状態は、純粋な状態ではなく混合状態になります。 この場合、は <xref:microsoft.quantum.diagnostics.dumpregister> 次のメッセージを出力します。
+一般に、別のレジスタによって使用されるレジスタの状態は、純粋な状態ではなく混合状態になります。 この場合、は <xref:Microsoft.Quantum.Diagnostics.DumpRegister> 次のメッセージを出力します。
 
 ```
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-次の例は、 <xref:microsoft.quantum.diagnostics.dumpregister> コード内でとの両方を使用する方法を示してい <xref:microsoft.quantum.diagnostics.dumpmachine> Q# ます。
+次の例は、 <xref:Microsoft.Quantum.Diagnostics.DumpRegister> コード内でとの両方を使用する方法を示してい <xref:Microsoft.Quantum.Diagnostics.DumpMachine> Q# ます。
 
 ```qsharp
 namespace app

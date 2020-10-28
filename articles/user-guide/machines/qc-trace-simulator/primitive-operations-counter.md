@@ -9,22 +9,22 @@ uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8ee9ce25e680112e2f3c68d82ae9267c1b0fb355
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: bf75eb94696a489a587316928bc3f33baa4a1785
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835980"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690945"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>クォンタムトレースシミュレーター: プリミティブ操作カウンター
 
 プリミティブ操作カウンターは、Quantum Development Kit [クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の一部です。 クォンタムプログラムで呼び出されたすべての操作によって使用されるプリミティブプロセスの数をカウントします。 
 
-すべて <xref:microsoft.quantum.intrinsic> の操作は、単一の qubit 回転、T 演算、単一の Qubit Clifford 操作、CNOT 操作、およびマルチ Qubit pobservable li の測定値で表現されます。 プリミティブ操作カウンターは、操作の [呼び出しグラフ](https://en.wikipedia.org/wiki/Call_graph)のすべての端に対する統計を集計して収集します。
+すべて <xref:Microsoft.Quantum.Intrinsic> の操作は、単一の qubit 回転、T 演算、単一の Qubit Clifford 操作、CNOT 操作、およびマルチ Qubit pobservable li の測定値で表現されます。 プリミティブ操作カウンターは、操作の [呼び出しグラフ](https://en.wikipedia.org/wiki/Call_graph)のすべての端に対する統計を集計して収集します。
 
 ## <a name="invoking-the-primitive-operation-counter"></a>プリミティブ操作カウンターを呼び出しています
 
-プリミティブ操作カウンターを使用してクォンタムトレースシミュレーターを実行するには、インスタンスを作成し <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 、プロパティを true に設定した後、を `UsePrimitiveOperationsCounter` パラメーターとして使用して**true**新しいインスタンスを作成する必要があり <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> `QCTraceSimulatorConfiguration` ます。
+プリミティブ操作カウンターを使用してクォンタムトレースシミュレーターを実行するには、インスタンスを作成し <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 、プロパティを true に設定した後、を `UsePrimitiveOperationsCounter` パラメーターとして使用して **true** 新しいインスタンスを作成する必要があり <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> `QCTraceSimulatorConfiguration` ます。
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -34,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>C# ホストプログラムでのプリミティブ操作カウンターの使用
 
-このセクションで後述する C# の例では、 <xref:microsoft.quantum.intrinsic.t> <xref:microsoft.quantum.intrinsic.ccnot> 次のサンプルコードに基づいて、操作を実装するために必要な操作の数をカウントし Q# ます。
+このセクションで後述する C# の例では、 <xref:Microsoft.Quantum.Intrinsic.T> <xref:Microsoft.Quantum.Intrinsic.ccnot> 次のサンプルコードに基づいて、操作を実装するために必要な操作の数をカウントし Q# ます。
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

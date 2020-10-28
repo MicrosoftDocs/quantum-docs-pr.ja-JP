@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 20e9f8126a290f52701b6b0e525d7669a605d4c9
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759681"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691780"
 ---
 # <a name="improving-documentation"></a>ドキュメントの改善
 
@@ -27,9 +27,9 @@ Quantum 開発キットのドキュメントでは、さまざまな形式を採
 
 ただし、ドキュメントの各形式は、詳細によって多少異なります。
 
-- **概念説明のドキュメント**は、に公開されている一連の記事で構成されています。このドキュメントでは、 https://docs.microsoft.com/quantum クォンタムコンピューティングの基本から、インターチェンジ形式の技術仕様までのすべてを説明しています。 これらの記事は [Docfx-Flavored Markdown (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)で記述されています。これは、豊富なドキュメントセットの作成に使用される Markdown バリアントです。
-- **API リファレンス**は、にパブリッシュされた各 Q# 関数、操作、およびユーザー定義型のページのセットです https://docs.microsoft.com/qsharp/api/ 。 これらのページでは、それぞれの呼び出しに対する入力と操作、および例と詳細情報へのリンクが文書化されています。 API リファレンスは、 Q# 各リリースの一部としてソースコードの小さな DFM ドキュメントから自動的に抽出されます。
-- 各サンプルに含まれている **readme.txt <!----> ** ファイルと kata は、そのサンプルまたは kata の使用方法、使用方法、および Quantum 開発キットの残りの部分にどのように関連しているかを説明しています。 これらのファイルは、 [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/)を使用して記述されています。これは、コードリポジトリに直接ドキュメントを添付する場合によく使用される dfm に代わるものです。
+- **概念説明のドキュメント** は、に公開されている一連の記事で構成されています。このドキュメントでは、 https://docs.microsoft.com/quantum クォンタムコンピューティングの基本から、インターチェンジ形式の技術仕様までのすべてを説明しています。 これらの記事は [Docfx-Flavored Markdown (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)で記述されています。これは、豊富なドキュメントセットの作成に使用される Markdown バリアントです。
+- **API リファレンス** は、にパブリッシュされた各 Q# 関数、操作、およびユーザー定義型のページのセットです https://docs.microsoft.com/qsharp/api/ 。 これらのページでは、それぞれの呼び出しに対する入力と操作、および例と詳細情報へのリンクが文書化されています。 API リファレンスは、 Q# 各リリースの一部としてソースコードの小さな DFM ドキュメントから自動的に抽出されます。
+- 各サンプルに含まれている **readme.txt <!---->** ファイルと kata は、そのサンプルまたは kata の使用方法、使用方法、および Quantum 開発キットの残りの部分にどのように関連しているかを説明しています。 これらのファイルは、 [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/)を使用して記述されています。これは、コードリポジトリに直接ドキュメントを添付する場合によく使用される dfm に代わるものです。
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>概念説明のドキュメントに貢献する
 
@@ -46,7 +46,7 @@ Quantum 開発キットのドキュメントでは、さまざまな形式を採
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>概念説明の記事からサンプルコードを参照する
 
-[サンプルリポジトリ](https://github.com/Microsoft/Quantum)のコードを追加する場合は、特殊な Docfx-Flavored Markdown コマンドを使用して実行できます。
+[サンプルリポジトリ](https://github.com/Microsoft/Quantum)のコードを追加する場合は、特殊な DocFX-Flavored Markdown コマンドを使用して実行できます。
 
 ```markdown
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
@@ -138,7 +138,7 @@ API 参照の向上を促進するために、ドキュメントに記載され�
  }
 ```
 
-上記のコードの表示されているバージョンは、 [ `ControlledOnBitString` 関数の API ドキュメント](xref:microsoft.quantum.canon.controlledonbitstring)に表示されます。
+上記のコードの表示されているバージョンは、 [ `ControlledOnBitString` 関数の API ドキュメント](xref:Microsoft.Quantum.Canon.ControlledOnBitString)に表示されます。
 
 ドキュメント作成の一般的なプラクティスに加えて、API ドキュメントのコメントを記述する際には、次の点に注意してください。
 

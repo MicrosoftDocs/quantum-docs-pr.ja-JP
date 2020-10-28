@@ -9,14 +9,14 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1cfef50cf2bbecd2043972a662edd8120c5570ec
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835623"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690872"
 ---
-# <a name="higher-order-control-flow"></a>上位制御フロー #
+# <a name="higher-order-control-flow"></a>Higher-Order 制御フロー #
 
 標準ライブラリの主要な役割の1つは、高レベルのアルゴリズムアイデアを [量子プログラム](https://en.wikipedia.org/wiki/Quantum_programming)として簡単に表現できるようにすることです。
 そのため、 Q# キャノンはさまざまなフロー制御の構成要素を提供しており、それぞれが関数と操作の部分的な適用を使用して実装されています。
@@ -38,7 +38,7 @@ for (idxQubit in 0..nQubits - 2) {
 }
 ```
 
-ただし、などの <xref:microsoft.quantum.canon.applytoeachca> および配列操作関数で表現 <xref:microsoft.quantum.arrays.zip> されますが、これははるかに短く、読みやすくなります。
+ただし、などの <xref:Microsoft.Quantum.Canon.ApplyToEachCA> および配列操作関数で表現 <xref:Microsoft.Quantum.Arrays.Zipped> されますが、これははるかに短く、読みやすくなります。
 
 ```qsharp
 ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
@@ -50,7 +50,7 @@ ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 
 キャノンによって提供される主な抽象化の1つは、イテレーションのことです。
 たとえば、という形式の $U、1つの 1 qubit の $U である $ のような形式のユニタリを使用します。
-では Q# 、を使用し <xref:microsoft.quantum.arrays.indexrange> て、これをレジスタに対するループとして表すことができ `for` ます。
+では Q# 、を使用し <xref:Microsoft.Quantum.Arrays.IndexRange> て、これをレジスタに対するループとして表すことができ `for` ます。
 
 ```qsharp
 /// # Summary
@@ -83,16 +83,16 @@ ApplyToEachCA(Adjoint U, register);
 ```
 
 特に、これは、 `ApplyToEachCA` adjoint の特殊化が自動生成される操作に、の呼び出しが表示される可能性があることを意味します。
-同様に、 <xref:microsoft.quantum.canon.applytoeachindex> は、フォームのパターンを表すのに便利です。また、は、 `U(0, targets[0]); U(1, targets[1]); ...` 入力でサポートされている機能の組み合わせごとにバージョンを提供します。
+同様に、 <xref:Microsoft.Quantum.Canon.ApplyToEachIndex> は、フォームのパターンを表すのに便利です。また、は、 `U(0, targets[0]); U(1, targets[1]); ...` 入力でサポートされている機能の組み合わせごとにバージョンを提供します。
 
 > [!TIP]
 > `ApplyToEach` は、以外の入力を受け取る操作で使用できるように、型指定されたパラメーターです `Qubit` 。
-> たとえば、 `codeBlocks` が復旧する必要がある値の配列であるとし <xref:microsoft.quantum.errorcorrection.logicalregister> ます。
+> たとえば、 `codeBlocks` が復旧する必要がある値の配列であるとし <xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister> ます。
 > 次に `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` 、エラー修正コード `code` と復旧関数 `recoveryFn` を各ブロックに個別に適用します。
 > これは、従来の入力に対しても保持されます。で `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` は、$-pi/$2 の回転が $X $ に対して適用され、$Y $ に関する $pi/$3 の回転が適用されます。
 
 また、キャノンでは、 Q# 関数型プログラミングに慣れている古典的な列挙パターンもサポートしています。
-たとえば、は、 <xref:microsoft.quantum.arrays.fold> リストに対して関数を縮小するために、パターン $f (f (s \_ {\ text{\ text{\ text{\ text{\ text{\ text{\ text{\ text{\ text{\ text{/text{\), \_ \_ \ ドット) $) を実装します。
+たとえば、は、 <xref:Microsoft.Quantum.Arrays.Fold> リストに対して関数を縮小するために、パターン $f (f (s \_ {\ text{\ text{\ text{\ text{\ text{\ text{\ text{\ text{\ text{\ text{/text{\), \_ \_ \ ドット) $) を実装します。
 このパターンを使用すると、合計、製品、最小、最大化、およびその他の機能を実装できます。
 
 ```qsharp
@@ -103,12 +103,12 @@ function Sum(xs : Int[]) {
 }
 ```
 
-同様に、やなどの関数を <xref:microsoft.quantum.arrays.mapped> 使用して、 <xref:microsoft.quantum.arrays.mappedbyindex> の関数型プログラミングの概念を表現でき Q# ます。
+同様に、やなどの関数を <xref:Microsoft.Quantum.Arrays.Mapped> 使用して、 <xref:Microsoft.Quantum.Arrays.MappedByIndex> の関数型プログラミングの概念を表現でき Q# ます。
 
 ## <a name="composing-operations-and-functions"></a>操作と関数の作成 ##
 
 キャノンの take 操作および関数によって提供される制御フローの構造を入力として提供します。これにより、複数の操作または関数を1つの呼び出し可能に構成するのに役立ちます。
-たとえば、"^ {\ dagger} $ $UVU パターンは、 <xref:microsoft.quantum.canon.applywith> このパターンの抽象化として、キャノンが操作を提供するクォンタムプログラミングで非常に一般的です。
+たとえば、"^ {\ dagger} $ $UVU パターンは、 <xref:Microsoft.Quantum.Canon.ApplyWith> このパターンの抽象化として、キャノンが操作を提供するクォンタムプログラミングで非常に一般的です。
 この抽象化を使用すると、 `Controlled` シーケンスに対して動作 `U(qubit); V(qubit); Adjoint U(qubit);` する必要がないので、回線への compliation をより効率的に行うことができ `U` ます。
 これを確認するには、$c (U) $ を表す、 `Controlled U([control], target)` $c (V) $ を同じ方法で定義します。
 次に、任意の状態を $ \ket{\psi} $ にします。 \begin{align} c (U) c (V) c (U) ^ \ ダガー \ket/ {1} otimes \ket{\psi} & = \ket/ {1} otimes (uvu ^ {-dagger} \ket{\psi}) \\ \\ & = (\ bold 完了 \ otimes u) (c (V)) (\ bold Done/otimes u ^ ダガー) \ket/ {1} otimes \ket{\psi}.
@@ -126,7 +126,7 @@ function Sum(xs : Int[]) {
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
 > ```
 
-同様に、は、 <xref:microsoft.quantum.canon.bound> 他の一連の操作を順番に適用する操作を生成します。
+同様に、は、 <xref:Microsoft.Quantum.Canon.Bound> 他の一連の操作を順番に適用する操作を生成します。
 たとえば、次のような場合です。
 
 ```qsharp
@@ -141,7 +141,7 @@ Bound([H, X], qubit);
 ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 ```
 
-### <a name="time-ordered-composition"></a>時間順序の構成 ###
+### <a name="time-ordered-composition"></a>Time-Ordered コンポジション ###
 
 それでも、部分的なアプリケーションや従来の関数の観点からフロー制御を検討し、従来のフロー制御の観点からは、非常に高度なクォンタムの概念をモデル化することができます。
 このような類似性は、順序付け演算子が呼び出し操作の副作用と完全に対応していることを認識することによって正確になります。これは、他のすべての入力演算子の観点からの特定の呼び出しシーケンスを作成して、特定の順番演算子として動作するための命令を出力する従来のサブルーチンの呼び出しシーケンスを作成する
@@ -162,9 +162,9 @@ U(1, time / Float(nSteps), target);
 // ...
 ```
 
-この時点で、Trotter – Suzuki 拡張については、 *クォンタムメカニズムをまったく参照する*必要がなくなりました。
+この時点で、Trotter – Suzuki 拡張については、 *クォンタムメカニズムをまったく参照する* 必要がなくなりました。
 拡張は、実質的には $ \eqref{eq: trotter-0} $ によって実現される非常に具体的な反復パターンです。
-この反復パターンは、次の方法で実装され <xref:microsoft.quantum.canon.decomposeintotimestepsca> ます。
+この反復パターンは、次の方法で実装され <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA> ます。
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,
@@ -180,7 +180,7 @@ DecomposeIntoTimeStepsCA((2, U), 1);
 最後に、キャノンは、 `Controlled` クォンタム操作の条件を追加する方法を提供することで、ファンクタ上に構築されます。
 特に、クォンタムの算術演算では、$ \ket{0\cdots 0} $ 以外の計算ベースの状態に対する条件演算に共通です。
 上記の制御操作と関数を使用すると、1つのステートメントでより一般的なクォンタム条件を実行できます。
-で <xref:microsoft.quantum.canon.controlledonbitstring> は、そのしくみ (san の種類のパラメーター) に移動して、1つずつ分割します。
+で <xref:Microsoft.Quantum.Canon.ControlledOnBitString> は、そのしくみ (san の種類のパラメーター) に移動して、1つずつ分割します。
 最初に行う必要があるのは、任意の計算基準の状態に対してコントロールを実装する操作を実際に実行する操作を定義することです。
 ただし、この操作を直接呼び出すのではなく、 `_` 名前の先頭にを追加して、他の場所にある別の構造体の実装であることを示します。
 
@@ -212,8 +212,8 @@ $X ^ {\ dagger} = X $ であるため、これは $ \ket{0\dots 0} = X ^ {s \_ 0
 }
 ```
 
-ここでは、 <xref:microsoft.quantum.canon.applypaulifrombitstring> で使用するために、$P $ を適用し、そのターゲットに部分的に適用してい `ApplyWith` ます。
-ただし、*コントロール*レジスタを目的の形式に変換する必要があることに注意してください。したがって、内部操作はターゲットに部分的に適用され `(Controlled oracle)` ます。 *target*
+ここでは、 <xref:Microsoft.Quantum.Canon.ApplyPauliFromBitString> で使用するために、$P $ を適用し、そのターゲットに部分的に適用してい `ApplyWith` ます。
+ただし、 *コントロール* レジスタを目的の形式に変換する必要があることに注意してください。したがって、内部操作はターゲットに部分的に適用され `(Controlled oracle)` ます。 *target*
 これ `ApplyWith` により、必要に応じて、コントロールレジスタが $P $ に角かっこで囲みます。
 
 この時点では、これで完了ですが、新しい操作では、ファンクタを適用するような "感覚" にならないということがわかりません `Controlled` 。

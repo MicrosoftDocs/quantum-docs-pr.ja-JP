@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 701c36dd8c8b087a2728cd935aee0c2ffc4f59f9
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e54e92cc4a76ce9f9c5aead84f2b64320d6b4f1c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835946"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691126"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>クォンタムトレースシミュレーター: width カウンター
 
@@ -22,7 +22,7 @@ Width カウンターは、Quantum Development Kit [クォンタムトレース�
 
 ## <a name="invoking-the-width-counter"></a>Width カウンターを呼び出しています
 
-Width カウンターでクォンタムトレースシミュレーターを実行するには、インスタンスを作成し <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 、プロパティを true に設定した後、を `UseWidthCounter` パラメーターとして使用して**true**新しいインスタンスを作成する必要があり <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> `QCTraceSimulatorConfiguration` ます。 
+Width カウンターでクォンタムトレースシミュレーターを実行するには、インスタンスを作成し <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 、プロパティを true に設定した後、を `UseWidthCounter` パラメーターとして使用して **true** 新しいインスタンスを作成する必要があり <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> `QCTraceSimulatorConfiguration` ます。 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -32,7 +32,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-width-counter-in-a-c-host-program"></a>C# ホストプログラムでの width カウンターの使用
 
-このセクションで後述する C# の例では、 <xref:microsoft.quantum.intrinsic.x> 次のサンプルコードに基づいて、乗算制御演算の実装によって割り当てられた追加の qubits の数を計算し Q# ます。
+このセクションで後述する C# の例では、 <xref:Microsoft.Quantum.Intrinsic.X> 次のサンプルコードに基づいて、乗算制御演算の実装によって割り当てられた追加の qubits の数を計算し Q# ます。
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -44,7 +44,7 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-多重制御演算は、 <xref:microsoft.quantum.intrinsic.x> 合計5つの qubits に対して作用し、2つの [補助 qubits](xref:microsoft.quantum.glossary#ancilla)を割り当てます。入力幅は **5**です。 カウントを確認するには、次の C# プログラムを使用します。
+多重制御演算は、 <xref:Microsoft.Quantum.Intrinsic.X> 合計5つの qubits に対して作用し、2つの [補助 qubits](xref:microsoft.quantum.glossary#ancilla)を割り当てます。入力幅は **5** です。 カウントを確認するには、次の C# プログラムを使用します。
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();

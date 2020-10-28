@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3515279dd4d03b2a512035af0b13e084dd91f9dc
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 221479e616ff7a03c4ac20e0062125660314e95b
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835708"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691165"
 ---
 # <a name="design-your-own-classifier"></a>独自の分類器を設計する
 
@@ -28,7 +28,7 @@ ms.locfileid: "90835708"
 
 ## <a name="how-to-build-a-classifier-with-q"></a>Q で分類子を作成する方法\#
 
-分類器を作成するには、サーキットモデルでパラメーター化制御循環を連結します。 これを行うには、 [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) クォンタム Machine Learning ライブラリで定義されている型を使用できます。 この型は、ターゲットの qubit のインデックス、制御 qubit のインデックスの配列、回転の軸、およびモデルを定義するパラメーターの配列内の関連付けられたパラメーターのインデックスを決定する4つの引数を受け取ります。
+分類器を作成するには、サーキットモデルでパラメーター化制御循環を連結します。 これを行うには、 [`ControlledRotation`](xref:Microsoft.Quantum.MachineLearning.ControlledRotation) クォンタム Machine Learning ライブラリで定義されている型を使用できます。 この型は、ターゲットの qubit のインデックス、制御 qubit のインデックスの配列、回転の軸、およびモデルを定義するパラメーターの配列内の関連付けられたパラメーターのインデックスを決定する4つの引数を受け取ります。
 
 分類器の例を見てみましょう。 [ハーフ衛星サンプル](https://github.com/microsoft/Quantum/tree/main/samples/machine-learning/half-moons)では、ファイルで定義されている次の分類子を見つけることができ `Training.qs` ます。
 
@@ -47,7 +47,7 @@ ms.locfileid: "90835708"
     }
  ```
 
-ここで定義しているのは、要素の配列を返す関数であり `ControlledRotation` 、パラメーターの配列と共に、バイアスによってが定義され [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel) ます。 この型は、クォンタム Machine Learning ライブラリでは基本的なものであり、分類子を定義します。 上の関数で定義されている回線は、データセットの各サンプルに2つの特徴が含まれている分類子の一部です。 そのため、必要なのは2つの qubits だけです。 回路のグラフィカルな表現は次のとおりです。
+ここで定義しているのは、要素の配列を返す関数であり `ControlledRotation` 、パラメーターの配列と共に、バイアスによってが定義され [`SequentialModel`](xref:Microsoft.Quantum.MachineLearning.SequentialModel) ます。 この型は、クォンタム Machine Learning ライブラリでは基本的なものであり、分類子を定義します。 上の関数で定義されている回線は、データセットの各サンプルに2つの特徴が含まれている分類子の一部です。 そのため、必要なのは2つの qubits だけです。 回路のグラフィカルな表現は次のとおりです。
 
  ![回路モデルの例](~/media/circuit_model_1.PNG)
 
@@ -55,11 +55,11 @@ ms.locfileid: "90835708"
 
 ## <a name="use-the-library-functions-to-write-layers-of-gates"></a>ライブラリ関数を使用してゲートのレイヤーを作成する
 
-たとえば、MNIST データセットのような28×28ピクセルの画像など、インスタンスごとに784の機能を持つデータセットがあるとします。 この場合、回線の幅が十分に大きくなり、個々のゲートが個別に作成される可能性がありますが、現実的ではないタスクになります。 このため、Quantum Machine Learning ライブラリには、パラメーター化回転のレイヤーを自動的に生成するための一連のツールが用意されています。 たとえば、関数は、 [`LocalRotationsLayer`](xref:microsoft.quantum.machinelearning.localrotationslayer) 指定された軸に沿って制御されないシングル qubit 回転の配列を返します。レジスタ内の qubit ごとに1つの回転があり、それぞれが異なるモデルパラメーターによってパラメーター化されます。 たとえば、は `LocalRotationsLayer(4, X)` 次のゲートのセットを返します。
+たとえば、MNIST データセットのような28×28ピクセルの画像など、インスタンスごとに784の機能を持つデータセットがあるとします。 この場合、回線の幅が十分に大きくなり、個々のゲートが個別に作成される可能性がありますが、現実的ではないタスクになります。 このため、Quantum Machine Learning ライブラリには、パラメーター化回転のレイヤーを自動的に生成するための一連のツールが用意されています。 たとえば、関数は、 [`LocalRotationsLayer`](xref:Microsoft.Quantum.MachineLearning.LocalRotationsLayer) 指定された軸に沿って制御されないシングル qubit 回転の配列を返します。レジスタ内の qubit ごとに1つの回転があり、それぞれが異なるモデルパラメーターによってパラメーター化されます。 たとえば、は `LocalRotationsLayer(4, X)` 次のゲートのセットを返します。
 
  ![ローカルローテーションレイヤー](~/media/local_rotations_layer.PNG)
 
-サーキットの設計を効率化するために使用できるすべてのツールを検出するには、 [Quantum Machine Learning ライブラリの API リファレンスを参照](xref:microsoft.quantum.machinelearning) することをお勧めします。
+サーキットの設計を効率化するために使用できるすべてのツールを検出するには、 [Quantum Machine Learning ライブラリの API リファレンスを参照](xref:Microsoft.Quantum.MachineLearning) することをお勧めします。
 
 ## <a name="next-steps"></a>次のステップ
 

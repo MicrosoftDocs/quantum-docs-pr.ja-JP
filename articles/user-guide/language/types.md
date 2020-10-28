@@ -9,20 +9,20 @@ uid: microsoft.quantum.guide.types
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c4a3e6563b8cabee87d1db6b9cb1c1f1c1a7131b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 349138984387cc564cca18ea09c7bf161524b0b6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835827"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691623"
 ---
 # <a name="types-in-no-locq"></a>型 Q#
 
 この記事では、 Q# 型モデルと、型を指定して操作するための構文について説明します。 これらの型の式を作成および操作する方法の詳細については、「 [型式](xref:microsoft.quantum.guide.expressions)」を参照してください。
 
-Q#は*厳密に型指定*された言語であることに注意してください。これは、これらの型を慎重に使用することで、コンパイル時にプログラムに関して強力な保証を提供するのに役立ち Q# ます。
+Q#は *厳密に型指定* された言語であることに注意してください。これは、これらの型を慎重に使用することで、コンパイル時にプログラムに関して強力な保証を提供するのに役立ち Q# ます。
 最も強力な保証を提供するには、の型間の変換を、 Q# その変換を表す関数の呼び出しを使用して明示的に行う必要があります。 
-Q# には、名前空間の一部として、さまざまな関数が用意されて <xref:microsoft.quantum.convert> います。
+Q# には、名前空間の一部として、さまざまな関数が用意されて <xref:Microsoft.Quantum.Convert> います。
 一方、互換性のある型へのアップキャストは暗黙的に行われます。 
 
 Q# には、直接使用されるプリミティブ型と、他の型から新しい型を生成するためのさまざまな方法が用意されています。
@@ -30,7 +30,7 @@ Q# には、直接使用されるプリミティブ型と、他の型から新�
 
 ## <a name="primitive-types"></a>プリミティブ型
 
-言語には、 Q# 次の *プリミティブ型*が用意されています。これらはすべて、プログラムで直接使用でき Q# ます。 これらのプリミティブ型を使用して、新しい型を作成することもできます。
+言語には、 Q# 次の *プリミティブ型* が用意されています。これらはすべて、プログラムで直接使用でき Q# ます。 これらのプリミティブ型を使用して、新しい型を作成することもできます。
 
 - この `Int` 型は、64ビット符号付き整数 (、、など) を表し `2` `107` `-5` ます。
 - 型は、、、など、 `BigInt` 任意のサイズの符号付き整数を表し `2L` `107L` `-5L` ます。
@@ -98,7 +98,7 @@ Q# には、直接使用されるプリミティブ型と、他の型から新�
 タプルは、 Q# 値をまとめて1つの値に収集し、それらを簡単に渡すことができるように、全体で使用される強力な概念です。
 特に、組表記を使用すると、すべての操作と呼び出し可能が厳密に1つの入力を受け取り、1つの出力のみを返すことを表現できます。
 
-* 0個以上の異なる型 `T0` ( `T1` ,...) を指定する `Tn` と、新しい*タプル型*をとして表すことができます。 `(T0, T1, ..., Tn)`
+* 0個以上の異なる型 `T0` ( `T1` ,...) を指定する `Tn` と、新しい *タプル型* をとして表すことができます。 `(T0, T1, ..., Tn)`
 新しいタプル型を構築するために使用される型は、のように、それ自体をタプルにすることができ `(Int, (Qubit, Qubit))` ます。
 ただし、このような入れ子は常に有限ですが、タプル型は、それ自体を含む状況では使用できません。
 
@@ -126,7 +126,7 @@ Q# には、作成されたタプルの内容を変更する機構が用意さ�
 
 特に、これは、1つの引数を受け取るか、単一の値を返すとして、入力タプルまたは出力タプル型に1つのフィールドがある操作または関数を表示できることを意味します。
 
-このプロパティは、 _シングルトンタプルの等価性_と呼ばれています。
+このプロパティは、 _シングルトンタプルの等価性_ と呼ばれています。
 
 
 ## <a name="user-defined-types"></a>ユーザー定義型
@@ -167,7 +167,7 @@ newtype Complex = (Real : Double, Imag : Double);
 newtype Nested = (Double, (ItemName : Int, String)); 
 ```
 
-名前付き項目には、 *アクセス演算子*を使用して直接アクセスできるという利点があり `::` ます。 
+名前付き項目には、 *アクセス演算子* を使用して直接アクセスできるという利点があり `::` ます。 
 
 ```qsharp
 function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
@@ -259,8 +259,8 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 次の型 `'Tinput` が `'Tresult` あります。
 
-* `('Tinput => 'Tresult)` は、任意の *操作*の基本型です。たとえば、のように `((Qubit, Pauli) => Result)` なります。
-* `('Tinput -> 'Tresult)` は、任意の *関数*の基本型です。たとえば、のように `(Int -> Int)` なります。 
+* `('Tinput => 'Tresult)` は、任意の *操作* の基本型です。たとえば、のように `((Qubit, Pauli) => Result)` なります。
+* `('Tinput -> 'Tresult)` は、任意の *関数* の基本型です。たとえば、のように `(Int -> Int)` なります。 
 
 これらは呼び出し可能の *シグネチャ* と呼ばれます。
 
@@ -282,13 +282,13 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 `Controlled`操作の種類でおよび/またはファンクタのサポートを要求するには、 `Adjoint` 対応する特性を示す注釈を追加する必要があります。
 注釈 `is Ctl` (たとえば、) は、 `(Qubit => Unit is Ctl)` 操作が制御可能であることを示します。 つまり、その実行は、別の qubit または qubit の状態に依存します。 同様に、注釈は、操作に adjoint があることを示します。つまり、 `is Adj` 操作を連続して適用した後、その状態を状態に変更せずに状態を維持する "逆" にすることができます。 
 
-その型の操作がとのファンクタの両方をサポートしていることを要求する場合は、 `Adjoint` `Controlled` これをとして表現でき `(Qubit => Unit is Adj + Ctl)` ます。 たとえば、組み込みの P# li <xref:microsoft.quantum.intrinsic.x> 操作には型があり `(Qubit => Unit is Adj + Ctl)` ます。 
+その型の操作がとのファンクタの両方をサポートしていることを要求する場合は、 `Adjoint` `Controlled` これをとして表現でき `(Qubit => Unit is Adj + Ctl)` ます。 たとえば、組み込みの P# li <xref:Microsoft.Quantum.Intrinsic.X> 操作には型があり `(Qubit => Unit is Adj + Ctl)` ます。 
 
 すべての機能をサポートしていない操作の種類は、入力と出力の型だけで指定し、追加の注釈は付けません。
 
-### <a name="type-parameterized-functions-and-operations"></a>型パラメーターの関数と操作
+### <a name="type-parameterized-functions-and-operations"></a>Type-Parameterized の関数と操作
 
-呼び出し可能な型には、 *型パラメーター*を含めることができます。
+呼び出し可能な型には、 *型パラメーター* を含めることができます。
 1つの引用符で始まる記号を使用して、型パラメーターを指定します。たとえば、 `'A` は有効な型パラメーターです。
 型パラメーター化された呼び出しを定義する方法の詳細と詳細については、「 [」の Q# 「操作と関数](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)」を参照してください。
 

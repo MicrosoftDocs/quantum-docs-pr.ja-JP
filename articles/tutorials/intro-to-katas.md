@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.katas
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 097d7f70088b6ee84a1e91ee99be59149dd9e15b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 6b2eff2a457b809bd168b9b59ab013b7fc7541e6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834824"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691643"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Quantum Katas を使用して量子コンピューティングを学習する
 
@@ -55,7 +55,7 @@ katas を使用すれば任意の環境で学習することができます。
 |[量子ゲートの認識](https://github.com/microsoft/QuantumKatas/tree/main/BasicGates)|の基本的なクォンタムゲートについて理解を深めるために設計された一連の演習 Q# 。 基本的な単一量子ビットおよびマルチ量子ビット ゲート、adjoint ゲートと制御されたゲートに関する演習が含まれ、ゲートを使用して量子ビットの状態を変更する方法を学習します。|
 |[量子重ね合わせの作成](https://github.com/microsoft/QuantumKatas/tree/main/Superposition)|これらの演習を使用して、での法則とプログラミングの概念について理解を深めて Q# ください。 には、の基本的なシングル qubit ゲート、法則、およびフロー制御と再帰の演習が含まれてい Q# ます。|
 |[測定を使用した量子の状態の識別](https://github.com/microsoft/QuantumKatas/tree/main/Measurements)|演習を解いて、量子測定と直交状態および非直交状態について学びます。 |
-|[共同測定](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|共同パリティ測定について、および[測定](xref:microsoft.quantum.intrinsic.measure)操作を使用して量子の状態を区別する方法について説明します。|
+|[共同測定](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|共同パリティ測定について、および[測定](xref:Microsoft.Quantum.Intrinsic.Measure)操作を使用して量子の状態を区別する方法について説明します。|
 
 ### <a name="algorithms"></a>アルゴリズム
 

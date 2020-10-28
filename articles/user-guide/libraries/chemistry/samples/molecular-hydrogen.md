@@ -9,12 +9,12 @@ uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 05506f4099de754cd02d81fbd9200f2de091e37e
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 81fba0c52c854d61f9143659795fb4d3c3cee8b9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759734"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691536"
 ---
 # <a name="obtaining-energy-level-estimates"></a>エネルギー準位の推定の取得
 エネルギーレベルの値の推定は、量子化学の主要なアプリケーションの1つです。 この記事では、分子 hydrogen の正規の例に対してこれを実行する方法について説明します。 このセクションで参照されているサンプルは、 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) 化学サンプルリポジトリにあります。 出力をプロットするより視覚的な例は [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) デモです。
@@ -44,7 +44,7 @@ ms.locfileid: "90759734"
     var fermionHamiltonian = new OrbitalIntegralHamiltonian(orbitalIntegrals).ToFermionHamiltonian();
 ```
 
-Hamiltonian をシミュレートするには、演算子を qubit 演算子に変換する必要があります。 この変換は、次のように、ヨルダン-Wigner エンコードを使用して実行されます。
+Hamiltonian をシミュレートするには、演算子を qubit 演算子に変換する必要があります。 この変換は、次のように Jordan-Wigner エンコードを使用して実行されます。
 
 ```csharp
     // The Jordan-Wigner encoding converts the fermion Hamiltonian, 
@@ -83,7 +83,7 @@ let integratorOrder = 4;
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-この時点で、標準ライブラリの [フェーズ推定アルゴリズム](xref:microsoft.quantum.libraries.characterization) を使用して、前のシミュレーションを使用して、グラウンドの状態エネルギーを学習できます。 そのためには、クォンタムのグラウンドの状態に対して適切な概算を準備する必要があります。 このような概算の提案は、スキーマに記載されてい [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) ます。 ただし、これらの推奨事項を省略すると、既定の方法では、最長一致に多数の原子が追加され `hamiltonian.NElectrons` ます。これにより、対角線の 1 ~ 3 の注ぎが最小化されます。 フェーズの推定関数と操作は、DocFX 表記で [、名前空間](xref:microsoft.quantum.characterization) に用意されています。
+この時点で、標準ライブラリの [フェーズ推定アルゴリズム](xref:microsoft.quantum.libraries.characterization) を使用して、前のシミュレーションを使用して、グラウンドの状態エネルギーを学習できます。 そのためには、クォンタムのグラウンドの状態に対して適切な概算を準備する必要があります。 このような概算の提案は、スキーマに記載されてい [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) ます。 ただし、これらの推奨事項を省略すると、既定の方法では、最長一致に多数の原子が追加され `hamiltonian.NElectrons` ます。これにより、対角線の 1 ~ 3 の注ぎが最小化されます。 フェーズの推定関数と操作は、DocFX 表記で [、名前空間](xref:Microsoft.Quantum.Characterization) に用意されています。
 
 次のスニペットは、化学シミュレーションライブラリによるリアルタイムの進化の出力を、クォンタムフェーズ推定と統合する方法を示しています。
 

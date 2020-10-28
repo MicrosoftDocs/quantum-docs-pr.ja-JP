@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835929"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691863"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Quantum Development Kit (QDK) リソースの推定機能
 
@@ -130,13 +130,40 @@ namespace Quantum.MyProgram
 |__測定値__    |測定の実行回数。  |
 |__R__    |`T`、Clifford、および P# li の各操作を除く、任意の1つの qubit 回転の実行回数。  |
 |__T__    |操作の実行回数 `T` とその活用 ( `T` 操作、T_x = h. t .h、T_y = Hy. t. hy など)。  |
-|__[奥行]__|操作によって実行されるクォンタム回線の深さの下限。 Q# 既定では、深さメトリックはゲートだけをカウントし `T` ます。 詳細については、「 [深度カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)」を参照してください。   |
-|__Width__    |操作の実行中に割り当てられた qubits の最大数の下限 Q# 。 __深さ__と__幅__の両方の下限を同時に達成できない可能性があります。  |
+|__[奥行]__|操作によって実行されるクォンタム回線の深さ Q# ( [下記](#depth-width-and-qubitcount)参照)。 既定では、深さメトリックはゲートだけをカウントし `T` ます。 詳細については、「 [深度カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)」を参照してください。   |
+|__Width__|操作によって実行されるクォンタム回線の幅 Q# ( [下記](#depth-width-and-qubitcount)参照)。 既定では、深さメトリックはゲートだけをカウントし `T` ます。 詳細については、「 [深度カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)」を参照してください。   |
+|__QubitCount__    |操作の実行中に割り当てられた qubits の最大数の下限 Q# 。 このメトリックは、 __深さ__ と互換性がない場合があります (下記参照)。  |
 |__BorrowedWidth__    |操作内で借用される qubits の最大数 Q# 。  |
+
+
+## <a name="depth-width-and-qubitcount"></a>Depth、Width、および QubitCount
+
+レポートの深さと幅の推定は、相互に互換性があります。
+(以前はどちらの数値も実現可能でしたが、深度と幅には異なる回路が必要です)。現在、このペアのメトリックは両方とも同じ回線で同時に実現できます。
+
+次のメトリックがレポートされます。
+
+__深さ:__ ルート操作では、特定のゲート時間を想定して実行されます。
+操作を実行した場合は、操作の開始時と終了時の最新の qubit 可用性時間との間で行われた操作時間の差。
+
+__幅:__ ルート操作の場合-実際に使用された qubits の数 (とその操作を呼び出します)。
+操作が呼び出された操作または後続の操作の場合-操作の開始時に既に使用されている qubits に加えて、使用された qubits の数。
+
+再利用された qubits はこの数に寄与しないことに注意してください。
+たとえば、操作が開始される前に数個の qubits が解放され、この操作によって要求された (およびから呼び出された操作) が以前のリリース qubits を再利用することによって満たされた場合、操作の幅は0として報告されます。 成功した qubits は、幅には影響しません。
+
+__Qubitcount:__ ルート操作の場合-この操作を実行するのに十分な最小数の qubits (およびそこから呼び出された操作)。
+または後続の操作と呼ばれる操作の場合-この操作を個別に実行するのに十分な数の qubits。 この数値には入力 qubits は含まれません。 これには、借用した qubits が含まれます。
+
+2つの操作モードがサポートされています。 モードを選択するには、QCTraceSimulatorConfiguration. 最適化の深さを設定します。
+
+最適化の __深さ = true:__ QubitManager は、qubit の使用を要求されるたびに、新しい qubit が割り当てられないようにすることをお勧めします。 ルート操作の __深さ__ は、最小の深さ (下限) になります。 この深さでは、互換性のある __幅__ がレポートされます (両方とも同時に実現できます)。 この深さでは、この幅が最適でない可能性があることに注意してください。 再利用が想定されているため、ルート操作の場合、 __Qubitcount__ は Width よりも小さくなることがあります。
+
+最適化の __深さ = false:__ QubitManager は、qubits を再利用することをお勧めします。新たにリリースされた qubits を再利用して、新しいものを割り当てます。 ルート操作の __幅__ は、最小幅 (下限) になります。 互換性のある __深さ__ がレポートされます。 __Qubitcount__ は、借りていないことを前提として、ルート操作の __幅__ と同じになります。
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>測定結果の確率を指定する
 
-<xref:microsoft.quantum.diagnostics.assertmeasurementprobability>名前空間のを使用し <xref:microsoft.quantum.diagnostics> て、測定演算の予想される確率に関する情報を提供できます。 詳細については、「[クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 」を参照してください。
+<xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability>名前空間のを使用し <xref:Microsoft.Quantum.Diagnostics> て、測定演算の予想される確率に関する情報を提供できます。 詳細については、「[クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
