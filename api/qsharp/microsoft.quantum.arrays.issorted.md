@@ -1,0 +1,56 @@
+---
+uid: Microsoft.Quantum.Arrays.IsSorted
+title: IsSorted 関数
+ms.date: 10/26/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: function
+qsharp.namespace: Microsoft.Quantum.Arrays
+qsharp.name: IsSorted
+qsharp.summary: Given an array, returns whether that array is sorted as defined by a given comparison function.
+ms.openlocfilehash: 330c1f789585f64cf255bc74f8a9c1ccf81b009e
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92719102"
+---
+# <a name="issorted-function"></a>IsSorted 関数
+
+名前空間: [Microsoft. Quantum. 配列](xref:Microsoft.Quantum.Arrays)
+
+パック [](https://nuget.org/packages/)
+
+
+配列が指定されている場合、指定された比較関数によって定義されたとおりに配列が並べ替えられるかどうかを返します。
+
+```qsharp
+function IsSorted<'T> (comparison : (('T, 'T) -> Bool), array : 'T[]) : Bool
+```
+
+
+## <a name="input"></a>入力
+
+### <a name="comparison--tt---bool"></a>比較: (' t, ' t)-> [Bool](xref:microsoft.quantum.lang-ref.bool)
+
+`a` `b` がの場合に、以下の2つの要素を比較する関数 `comparison(a, b)` `true` 。
+
+
+### <a name="array--t"></a>配列: ' t []
+
+チェックする配列。
+
+
+
+## <a name="output--bool"></a>出力: [Bool](xref:microsoft.quantum.lang-ref.bool)
+
+`true` 要素の各ペアと、その順序で発生する場合にのみ `a` `b` `array` 、 `comparison(a, b)` はに `true` なります。
+
+## <a name="type-parameters"></a>型パラメーター
+
+### <a name="t"></a>&
+
+の各要素の型 `array` 。
+
+## <a name="remarks"></a>解説
+
+関数は `comparison` 推移的であると見なされ、 `comparison(a, b)` との場合はと `comparison(b, c)` 見なされ `comparison(a, c)` ます。 このプロパティがを保持していない場合、この関数の出力は正しくない可能性があります。
