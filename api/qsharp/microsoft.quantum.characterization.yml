@@ -1,0 +1,56 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.HeadMeasurement
+name: Microsoft.Quantum.Characterization
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.ApplyHadamardTest
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.ApplyHadamardTestOnSingleRegister
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.ApplySwapTest
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.ApplySwapTestOnSingleRegister
+- summary: ユニタリ oracle の任意の真の累乗を使用して、反復 (クラシックデプロイ制御) フェーズの推定アルゴリズムの単一の反復処理を実行します。
+  uid: Microsoft.Quantum.Characterization.ContinuousPhaseEstimationIteration
+- summary: ユニタリ oracle の整数の累乗を使用して、反復 (クラシックデプロイ制御) フェーズの推定アルゴリズムの単一の反復処理を実行します。
+  uid: Microsoft.Quantum.Characterization.DiscretePhaseEstimationIteration
+- summary: 準備と測定値を指定すると、指定された数の試行回数を実行することで、測定が成功する頻度 (を返します) を推定し `Zero` ます。
+  uid: Microsoft.Quantum.Characterization.EstimateFrequency
+- summary: Adjointable と測定値の準備を行うと、は、 `Zero` 指定された数の試行を実行して、その測定が成功する頻度 (を返します) を推定します。
+  uid: Microsoft.Quantum.Characterization.EstimateFrequencyA
+- summary: それぞれの状態のコピーを準備する2つの操作を実行すると、各操作によって準備された状態の重複部分の虚数部が推定されます。
+  uid: Microsoft.Quantum.Characterization.EstimateImagOverlapBetweenStates
+- summary: それぞれの状態のコピーを準備する2つの操作を実行すると、各操作によって準備された状態間の2乗された重複が推定されます。
+  uid: Microsoft.Quantum.Characterization.EstimateOverlapBetweenStates
+- summary: それぞれの状態のコピーを準備する2つの操作を実行すると、各操作によって準備された状態間の重複部分が推定されます。
+  uid: Microsoft.Quantum.Characterization.EstimateRealOverlapBetweenStates
+- summary: >+
+    > [!WARNING]
+
+    > MeasureAllZ は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Measurement.MeasureAllZ> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.measurement.measureAllZ" を使用してください。
+
+  uid: Microsoft.Quantum.Characterization.MeasureAllZ
+- summary: Qubits のレジスタで id 演算子を測定します。
+  uid: Microsoft.Quantum.Characterization.MeasureIdentity
+- summary: 指定された oracle に対してクォンタムフェーズ推定アルゴリズムを実行し `U` `targetState` 、フェーズをビッグエンディアンクォンタムレジスタに読み込みます。
+  uid: Microsoft.Quantum.Characterization.QuantumPhaseEstimation
+- summary: 指定された oracle および eigenstate に対して、反復的ではない堅牢なクォンタムフェーズの推定アルゴリズムを実行 `U` し、ハイゼンベルグ limit での差異のスケーリングにより、フェーズの1つの実際の値の見積もりを提供します。
+  uid: Microsoft.Quantum.Characterization.RobustPhaseEstimation
+- summary: 特定の目的のチャネルを指定して、tomography の単一の qubit プロセス測定を実行します。
+  uid: Microsoft.Quantum.Characterization.SingleQubitProcessTomographyMeasurement
+summary: この名前空間には、tomography やフェーズの推定など、クォンタムの状態とプロセスのプロパティを学習するための関数と操作が含まれています。
+uid: Microsoft.Quantum.Characterization
+metadata:
+  ms.openlocfilehash: a1d4837f03b6dff637c82d2c5b14823029bd2787
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92715668"
