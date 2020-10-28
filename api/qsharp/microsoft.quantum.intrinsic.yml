@@ -1,0 +1,135 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: メッセージのログを記録します。
+  uid: Microsoft.Quantum.Intrinsic.Message
+name: Microsoft.Quantum.Intrinsic
+newtypes: []
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > Assert の使用は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Diagnostics.AssertMeasurement> を使用してください。
+
+  uid: Microsoft.Quantum.Intrinsic.Assert
+- summary: >+
+    > [!WARNING]
+
+    > AssertProb は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> を使用してください。
+
+  uid: Microsoft.Quantum.Intrinsic.AssertProb
+- summary: ダブル制御された (CCNOT) ゲートを3つの qubits に適用します。
+  uid: Microsoft.Quantum.Intrinsic.CCNOT
+- summary: >-
+    制御されていない (CNOT) ゲートを qubits のペアに適用します。
+
+    \begin{align} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 0 & 0 & \\ \\ 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{bmatrix}、\end{align} where 行と列がクォンタムの概念ガイドに並べられます。
+  uid: Microsoft.Quantum.Intrinsic.CNOT
+- summary: >-
+    マルチ qubit の P# li 演算子の指数を適用します。
+
+    \begin{align} e ^ {i/シータ [P_0/otimes P_1/cドット P_ {N-1}]}, \end{align} ここで $P _i $ はの $i $ th 要素、 `paulis` where $N = $ `Length(paulis)` です。
+  uid: Microsoft.Quantum.Intrinsic.Exp
+- summary: >-
+    Dyadic の分数で指定された引数を使用して、マルチ qubit の P# li 演算子の指数を適用します。
+
+    \begin{align} e ^ {i \ pi k [P_0/otimes P_1/cドット P_ {N-1}]/2 ^ N}、\end{align} where $P _i $ はの $i $ th 要素、 `paulis` where $N = $ `Length(paulis)` です。
+  uid: Microsoft.Quantum.Intrinsic.ExpFrac
+- summary: >-
+    Hadamard 変換を1つの qubit に適用します。
+
+    \begin{align} H \mathrel{: =} \ frac {1} {\ sqrt {2} } \begin{bmatrix} 1 & 1 \\ \\ 1 &-1 \end{bmatrix}. \end{align}
+  uid: Microsoft.Quantum.Intrinsic.H
+- summary: 1つの qubit で id 操作 (no op) を実行します。
+  uid: Microsoft.Quantum.Intrinsic.I
+- summary: >-
+    P$Z $ ベースで1つの qubit の測定を実行します。
+
+    出力結果は、distribution \begin{align} (\texttt{Zero} | \ket{\psi}) = \braket{\psi | 0} \braket{0 | \psi}. によって得られます。 \end{align}
+  uid: Microsoft.Quantum.Intrinsic.M
+- summary: >-
+    指定した基底クラスの1つ以上の qubits の結合測定を実行します。
+
+    出力結果は、ディストリビューションによって得られます。 \begin{align} \ Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{/psi \ mid | \ left (\ done + P_0/otimes P_ {N-1} > right) \ mid P_1 |-psi}、\end{align} where $P _i $ は、の $i $ th 要素、 `bases` where $N = \texttt{Length} (\texttt{bases}) $ となります。 つまり、測定された `Result` 測定効果の eigenvalue が $ (-1) ^ d $ であるように、測定値は $ $d $ を返します。
+  uid: Microsoft.Quantum.Intrinsic.Measure
+- summary: >-
+    指定された P# li 軸についての回転を適用します。
+
+    \begin{align} R_ {\ mu} (\ シータ) \mathrel{: =} e ^ {-i \ シータ \ sigma_ {/mu}/2}、\end{align} where $ \ mu \ \{ i, X, Y, Z \} $ です。
+  uid: Microsoft.Quantum.Intrinsic.R
+- summary: >-
+    $ \Ket $ 状態に関する回転を {1} 、指定された角度で適用します。
+
+    \begin{align} R_1 (\ シータ) \mathrel{: =} \operatorname{diag} (1, e ^ {i\ シータ})。 \end{align}
+  uid: Microsoft.Quantum.Intrinsic.R1
+- summary: >-
+    {1}Dyadic の割合として指定された角度で、$ \ket $ 状態に関する回転を適用します。
+
+    \begin{align} R_1 (n, k) \mathrel{: =} \operatorname{diag} (1, e ^ {i \ pi k/2 ^ n})。 \end{align}
+
+    > [!WARNING] > この操作では、> の **逆** の符号規則を使用 @"microsoft.quantum.intrinsic.r" します。に含まれる $ 1/2 $ の > 係数は含まれません @"microsoft.quantum.intrinsic.r1" 。
+  uid: Microsoft.Quantum.Intrinsic.R1Frac
+- summary: >-
+    指定された P# li 軸に関する回転を、dyadic の分数として指定された角度だけ適用します。
+
+    \begin{align} R_ {\ mu} (n, k) \mathrel{: =} e ^ {i \ pi n \ sigma_ {/mu}/2 ^ k}、\end{align} where $ \ mu \ in \{ i, X, Y, Z \} $ です。
+
+    > [!WARNING] > この操作では、> とは **逆** の符号規則を使用し @"microsoft.quantum.intrinsic.r" ます。
+  uid: Microsoft.Quantum.Intrinsic.RFrac
+- summary: >+
+    > [!WARNING]
+
+    > ランダムの使用は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Random.DrawCategorical> を使用してください。
+
+  uid: Microsoft.Quantum.Intrinsic.Random
+- summary: 1つの qubit を指定すると、それを測定し、安全に解放できるように、それが | 0 ⟩状態であることを確認します。
+  uid: Microsoft.Quantum.Intrinsic.Reset
+- summary: Qubits の配列を指定した場合は、それらを測定し、安全に解放できるように、それらが | 0 ⟩状態であることを確認します。
+  uid: Microsoft.Quantum.Intrinsic.ResetAll
+- summary: >-
+    指定された角度で $x $ 軸についての回転を適用します。
+
+    \begin{align} R_x (-シータ) \mathrel{: =} e ^ {-i \ シータ \ sigma_x/2} = \begin{bmatrix}/cos \frac{\theta} {2} &-i\ sin \frac{\theta} {2} \\ \\ -i\ sin \frac{\theta} {2} & \ cos \frac{\theta} {2} \end{bmatrix}.   \end{align}
+  uid: Microsoft.Quantum.Intrinsic.Rx
+- summary: >-
+    指定された角度で $y $ 軸についての回転を適用します。
+
+    \begin{align} R_y (-シータ) \mathrel{: =} e ^ {-i \ シータ \ sigma_y/2} = \begin{bmatrix}/cos \frac{\theta} {2} &-\ sin \frac{\theta}/ {2} \\ \\ sin \frac{\theta} {2} & \ cos \frac{\theta} {2} \end{bmatrix}.   \end{align}
+  uid: Microsoft.Quantum.Intrinsic.Ry
+- summary: >-
+    指定された角度で $z $ 軸についての回転を適用します。
+
+    \begin{align} R_z (\ シータ) \mathrel{: =} e ^ {-i \ シータ \ sigma_z/2} = \begin{bmatrix} e ^ {-i \ シータ/2} & 0 \\ \\ 0 & e ^ {i/シータ/2} \end{bmatrix}. \end{align}
+  uid: Microsoft.Quantum.Intrinsic.Rz
+- summary: S ゲートを1つの qubit に適用します。
+  uid: Microsoft.Quantum.Intrinsic.S
+- summary: >-
+    スワップゲートを qubits のペアに適用します。
+
+    \begin{align} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & \\ \\ 1 \end{bmatrix}、\end{align} は行と列をクォンタムの概念ガイドに並べられます。
+  uid: Microsoft.Quantum.Intrinsic.SWAP
+- summary: T ゲートを1つの qubit に適用します。
+  uid: Microsoft.Quantum.Intrinsic.T
+- summary: >-
+    P# li $X $ gate を適用します。
+
+    \begin{align} \ sigma_x \mathrel{: =} \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \end{bmatrix}. \end{align}
+  uid: Microsoft.Quantum.Intrinsic.X
+- summary: >-
+    P# li $Y $ gate を適用します。
+
+    \begin{align} \ sigma_y \mathrel{: =} \begin{bmatrix} 0 &-i \\ \\ i & 0 \end{bmatrix}. \end{align}
+  uid: Microsoft.Quantum.Intrinsic.Y
+- summary: >-
+    P# li $Z $ gate を適用します。
+
+    \begin{align} \ sigma_z \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 &-1 \end{bmatrix}. \end{align}
+  uid: Microsoft.Quantum.Intrinsic.Z
+summary: ''
+uid: Microsoft.Quantum.Intrinsic
+metadata:
+  ms.openlocfilehash: b88a931baa553d2e075bec01ce112b58b4fc913c
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92721399"
