@@ -1,0 +1,18 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Environment
+newtypes: []
+operations:
+- summary: 現在借用で使用可能な qubits の数を返します。 これには未使用の qubits が含まれます。つまり、これにはによって返される qubits が含まれ `GetQubitsAvailableToUse` ます。
+  uid: Microsoft.Quantum.Environment.GetQubitsAvailableToBorrow
+- summary: 現在使用できる qubits の数を返します。
+  uid: Microsoft.Quantum.Environment.GetQubitsAvailableToUse
+summary: これらの関数は、クォンタムの計算が発生している環境に関する情報を提供します。
+uid: Microsoft.Quantum.Environment
+metadata:
+  ms.openlocfilehash: 04a3ffe56be7da2c9adc13e2b27fe9ce0f982c44
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92713181"
