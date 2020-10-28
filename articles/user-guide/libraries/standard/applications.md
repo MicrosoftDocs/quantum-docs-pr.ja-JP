@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 115cd65621afd8272887b36163b066a4e6a554d7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835657"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692164"
 ---
 # <a name="applications"></a>アプリケーション #
 
@@ -48,13 +48,13 @@ Hamiltonian のシミュレーションは、他の多くのクォンタムシ�
 
 クォンタムシミュレーションアルゴリズムでは、Hamiltonian の指定された説明を、Hamiltonian と呼ばれるおおよその時間の推移的な一連のプリミティブクォンタムゲートに変換します。
 
-Hamiltonian 分解されが Hermitian パーツの合計になる特殊なケースでは、Trotter Suzuki 分解は、Hamiltonians コンポーネントの合計に分解される Hermitian をシミュレートするための、特にシンプルで直感的なアルゴリズムです。 たとえば、このファミリのファーストオーダーインテグレーターは、$ $ \begin{align} U (t) & = \ left (e ^ {-iH 0 t/r} \_ e ^ {-ih \_ 1 t/r}/cドット e ^ {-ih \_ {d-1} t/r} \ right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\ |H \_ j \\ | ^ 2 t ^ 2/r)、\end{align} $ $ を使用して $r d $ terms の製品を使用します。 
+Hamiltonian 分解されが Hermitian パーツの合計になる特殊なケースでは、Trotter-Suzuki 分解は、Hermitian コンポーネントの合計に分解される Hamiltonians をシミュレートするための、特にシンプルで直感的なアルゴリズムです。 たとえば、このファミリのファーストオーダーインテグレーターは、$ $ \begin{align} U (t) & = \ left (e ^ {-iH 0 t/r} \_ e ^ {-ih \_ 1 t/r}/cドット e ^ {-ih \_ {d-1} t/r} \ right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\ |H \_ j \\ | ^ 2 t ^ 2/r)、\end{align} $ $ を使用して $r d $ terms の製品を使用します。 
 
 > [!TIP]
 > サンプルでは、Trotter-Suzuki シミュレーションアルゴリズムのアプリケーションについて説明します。
-> 各ターゲットコンピューターによって提供される組み込み操作のみを使用する場合は、 [ **simpleising**サンプル](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple)を参照してください。
-> Trotter-Suzuki library コントロール構造体を使用する場合は、 [ **IsingTrotter**サンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution)を参照してください。
-> Trotter-Suzuki library コントロール構造体を使用した分子 Hydrogen については、「 [ **H2 シミュレーション**のサンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)」を参照してください。
+> 各ターゲットコンピューターによって提供される組み込み操作のみを使用する場合は、 [ **simpleising** サンプル](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple)を参照してください。
+> Trotter-Suzuki library コントロール構造を使用した表示モデルについては、 [ **IsingTrotter** サンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution)を参照してください。
+> Trotter-Suzuki library コントロール構造を使用した分子 Hydrogen については、「 [ **H2 シミュレーション** のサンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)」を参照してください。
 
 多くの場合、シミュレーションアルゴリズムを実装する必要がありますが、その実装の詳細には関心がありません。 たとえば、2番目の命令インテグレーターは、$ $ \begin{align} U (t) & = \ left (e ^ {-iH \_ 0 t/2r} e ^ {-ih \_ 1 t/2r}/cドット e ^ {-ih \_ {d-1} t/2r} を近似します。 e ^ {-ih \_ {d-1} t/2r} \ cドット e ^ {-ih \_ 1 t/2r} e ^ {-ih \_ 0 t/2r} \ 右) ^ {r} + \mathcal{O} (d ^ 3 \ max_j \\ |H \_ j \\ | ^ 3 t ^ 3/r ^ 2)、$ 2rd $ terms の製品を使用する \end{align} $ $。 注文が大きいほど、さらに多くの用語と最適化されたバリエーションが必要になることがあります。その場合、指数には非常に重要な順序が必要になります 他の高度なアルゴリズムでは、中間ステップで ancilla qubits を使用することが必要になる場合もあります。 そのため、ユーザー定義型として、キャノンのシミュレーションアルゴリズムをパッケージ化します。
 
@@ -68,7 +68,7 @@ newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => Unit is 
 newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[]) => Unit : Adjoint, Controlled);
 ```
 
-例として、Trotter Suzuki 分解は、次のキャノン関数を使用して呼び出すことができます。パラメーターを使用すると、 `trotterStepSize` 各指数のシミュレーション期間と、 `trotterOrder` 目的のインテグレーターの順序を変更できます。
+例として、Trotter-Suzuki 分解は次のキャノン関数を使用して呼び出すことができます。パラメーターを使用すると、 `trotterStepSize` 各指数のシミュレーションの期間と、 `trotterOrder` 目的のインテグレーターの順序を変更できます。
 
 ```qsharp
 function TrotterSimulationAlgorithm(
@@ -87,8 +87,8 @@ function TimeDependentTrotterSimulationAlgorithm(
 ```
 
 > [!TIP]
-> シミュレーションライブラリのアプリケーションについては、「」のサンプルで説明されています。 を使用した表示モデルのフェーズ推定については `SimulationAlgorithm` 、 [ **IsingPhaseEstimation**サンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)を参照してください。
-> を使用した adiabatic モデルでの状態の準備の詳細について `TimeDependentSimulationAlgorithm` は、 [ **AdiabaticIsing**サンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)を参照してください。
+> シミュレーションライブラリのアプリケーションについては、「」のサンプルで説明されています。 を使用した表示モデルのフェーズ推定については `SimulationAlgorithm` 、 [ **IsingPhaseEstimation** サンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)を参照してください。
+> を使用した adiabatic モデルでの状態の準備の詳細について `TimeDependentSimulationAlgorithm` は、 [ **AdiabaticIsing** サンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)を参照してください。
 
 
 ### <a name="adiabatic-state-preparation--phase-estimation"></a>Adiabatic 状態の準備 & フェーズの推定 ###
@@ -132,15 +132,15 @@ operation EstimateAdiabaticStateEnergy(
 `nQubits` クォンタムの初期状態をエンコードするために使用される qubits の数です。 `statePrepUnitary` 計算基準 $ \ket{0\cdots 0} $ から開始状態を準備します。 `adiabaticUnitary` は、関数によって生成されるように、adiabatic 状態の準備を実装する、ユニタリ操作です  `InterpolatedEvolution` 。 `qpeUnitary` 結果として得られるクォンタムの状態に対してフェーズ推定を実行するために使用される、ユニタリ操作です。 `phaseEstAlgorithm` フェーズ推定アルゴリズムを選択します。
 
 > [!TIP]
-> Adiabatic の状態準備のアプリケーションについては、「」のサンプルで説明されています。 Adiabatic 状態の準備と関数の使用を手動による実装を使用している場合は、 `AdiabaticEvolution` [ **AdiabaticIsing**サンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)を参照してください。
-> Adiabatic モデルでのフェーズの推定と状態の準備については、 [ **IsingPhaseEstimation**サンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)を参照してください。
+> Adiabatic の状態準備のアプリケーションについては、「」のサンプルで説明されています。 Adiabatic 状態の準備と関数の使用を手動による実装を使用している場合は、 `AdiabaticEvolution` [ **AdiabaticIsing** サンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)を参照してください。
+> Adiabatic モデルでのフェーズの推定と状態の準備については、 [ **IsingPhaseEstimation** サンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)を参照してください。
 
 > [!TIP]
-> [分子 Hydrogen のシミュレーション](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)は、興味深い簡単なサンプルです。 O'Malley で報告されるモデルと実験結果 [。](https://arxiv.org/abs/1512.06860) に必要なのは、Pの Li マトリックスだけで、$ \ hat H = g \_ {0} I \_ 0i \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {Z \_ 1} + g \_ 3 {z \_ 0} {z 1} + g \_ \_ 4 {y 0} { \_ y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $ です。 これは、2つの Hydrogen アトムの間の距離 $R $ から計算される定数 $g $ が2つの qubits のみを必要とする有効な Hamiltonian です。 キャノン関数を使用すると、Paulis は unitaries に変換され、その後、Suzuki 分解を使用して短時間に進化します。 _2 $ グラウンドの状態に $H 対しては、adiabatic 状態の準備を使用せずに作成することができます。そのため、キャノンからのフェーズの推定を利用して、グラウンドの状態エネルギーを直接見つけることができます。
+> [分子 Hydrogen のシミュレーション](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)は、興味深い簡単なサンプルです。 O'Malley で報告されるモデルと実験結果 [。](https://arxiv.org/abs/1512.06860) に必要なのは、Pの Li マトリックスだけで、$ \ hat H = g \_ {0} I \_ 0i \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {Z \_ 1} + g \_ 3 {z \_ 0} {z 1} + g \_ \_ 4 {y 0} { \_ y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $ です。 これは、2つの Hydrogen アトムの間の距離 $R $ から計算される定数 $g $ が2つの qubits のみを必要とする有効な Hamiltonian です。 キャノン関数を使用すると、Paulis は unitaries 変換され、Trotter-Suzuki 分解を使用して短時間に進化します。 _2 $ グラウンドの状態に $H 対しては、adiabatic 状態の準備を使用せずに作成することができます。そのため、キャノンからのフェーズの推定を利用して、グラウンドの状態エネルギーを直接見つけることができます。
 
 ## <a name="shors-algorithm"></a>Shor のアルゴリズム ##
 Shor のアルゴリズムは、quantum コンピューターを使用して重要なクラシックデプロイ困難問題を解決できることを示しているため、クォンタムコンピューティングにおける最も重要な開発の1つです。
-Shor のアルゴリズムは、量子コンピューターを使用して大きな数値を因数分解するための高速な方法を提供します。これは *ファクタリング*と呼ばれる問題です。
+Shor のアルゴリズムは、量子コンピューターを使用して大きな数値を因数分解するための高速な方法を提供します。これは *ファクタリング* と呼ばれる問題です。
 現在の日常的な暗号システムのセキュリティは、ファクタリングのための高速アルゴリズムが存在しないという前提に基づいています。
 そのため、シャードまたはのアルゴリズムは、クォンタム後の世界におけるセキュリティに対する考え方に大きな影響を与えていました。
 
@@ -151,7 +151,7 @@ Shor のアルゴリズムは、ハイブリッドアルゴリズムと考える
 
 ### <a name="period-finding"></a>期間の検索 ###
 
-クォンタムのフーリエの変革とフェーズの推定がどのように動作するかを見てきました (「 [クォンタムアルゴリズム](xref:microsoft.quantum.libraries.standard.algorithms)」を参照)。これらのツールを使用して、 *期間検索*と呼ばれるクラシックデプロイハード計算の問題を解決できます。  次のセクションでは、期間の検索をファクタリングに適用する方法を説明します。
+クォンタムのフーリエの変革とフェーズの推定がどのように動作するかを見てきました (「 [クォンタムアルゴリズム](xref:microsoft.quantum.libraries.standard.algorithms)」を参照)。これらのツールを使用して、 *期間検索* と呼ばれるクラシックデプロイハード計算の問題を解決できます。  次のセクションでは、期間の検索をファクタリングに適用する方法を説明します。
 
 $ と $N $ $a 2 つの整数が指定されています。ここで $a<N $ の場合は、期間を検索することを目標と _してい_ ます。 n $ の場合、$r $ は $a $ {mod {Mod} N $ の最小正の整数として定義されます。  
 
@@ -178,8 +178,8 @@ QFT ゲートについては [既](xref:microsoft.quantum.libraries.standard.alg
 $ (A ^ nx) \ text{mod} N $ を実現するには、制御された $U _ {a ^ N} $ を適用します。ここで、$a ^ n \ text{mod} N $ クラシックデプロイを計算して、quantum 回線に接続します。  
 このようなモジュール式を実現する回路は、「 [クォンタム算術ドキュメント](./algorithms.md#arithmetic)」で説明されています。具体的には、制御された $U \_ {a ^ i} $ 操作を実装するには、モジュール式の累乗回路が必要です。
 
-上記の回線は [クォンタムフェーズ推定](xref:microsoft.quantum.characterization.quantumphaseestimation) に対応しており、順序の検索を明示的に有効にすると、必要な qubits の数を減らすことができます。 [ArXiv: quant-ph/0205095v3 のページ8で](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)説明されているように、Beauregard の方法に従うか、または Microsoft の Quantum で利用可能なフェーズの推定ルーチンの1つを使用できます。 たとえば、 [堅牢なフェーズの推定](xref:microsoft.quantum.characterization.robustphaseestimation) では、1つの追加の qubit も使用します。
- 
+上記の回線は [クォンタムフェーズ推定](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) に対応しており、順序の検索を明示的に有効にすると、必要な qubits の数を減らすことができます。 [ArXiv: quant-ph/0205095v3 のページ8で](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)説明されているように、Beauregard の方法に従うか、または Microsoft の Quantum で利用可能なフェーズの推定ルーチンの1つを使用できます。 たとえば、 [堅牢なフェーズの推定](xref:microsoft.quantum.characterization.robustphaseestimation) では、1つの追加の qubit も使用します。
+
 ### <a name="factoring"></a>取り入れる ###
 要素をファクタリングする目的は、$ $N 整数の2つの素要因を決定することです。 $ は、$ ビットの $n で $N $ です。  
 ファクタリングは、以下で説明する手順で構成されています。 これらの手順は、クラシック前処理ルーチン (1-4) という3つの部分に分かれています。$a \ text{mod} N $ (5) の順序を検索するためのクォンタムコンピューティングルーチン。また、従来の後処理ルーチンを通じて、順序から素数を導き出します (6-9)。
@@ -197,6 +197,6 @@ $ (A ^ nx) \ text{mod} N $ を実現するには、制御された $U _ {a ^ N} 
 9. $ \ Text{gcd} (a ^ {r/2}-1, N) $ が $N $ の重要な要素ではない場合、$-text{gcd} (a ^ {r/2}-1, N) $ を返します。
 
 
-ファクタリングアルゴリズムは確率論的です。これには、確率が少なくとも1つ含まれています。これは $r $ が偶数であることを示し、^ {r/2} \ neq-1 \ text{mod} N $ を $a して、素数を生成します。  (詳細については、 [Shor のオリジナルペーパー](https://doi.org/10.1109/SFCS.1994.365700)を参照してください[。詳細に](xref:microsoft.quantum.more-information)ついては、「」の*基本的なクォンタム計算*テキストのいずれかを参照してください)。
+ファクタリングアルゴリズムは確率論的です。これには、確率が少なくとも1つ含まれています。これは $r $ が偶数であることを示し、^ {r/2} \ neq-1 \ text{mod} N $ を $a して、素数を生成します。  (詳細については、 [Shor のオリジナルペーパー](https://doi.org/10.1109/SFCS.1994.365700)を参照してください [。詳細に](xref:microsoft.quantum.more-information)ついては、「」の *基本的なクォンタム計算* テキストのいずれかを参照してください)。
 素数が返されない場合は、単に手順 (1) からアルゴリズムを繰り返します。  $ 試行を $n た後、すべての試行が失敗した確率は、最大で $ 2 ^ {-n} $ になります。
 したがって、アルゴリズムを繰り返しても、成功する回数はほとんどありません。

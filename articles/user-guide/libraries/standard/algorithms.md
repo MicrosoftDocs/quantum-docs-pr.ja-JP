@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7ce13c5df3795656156cccf28640c0a4b0dcba2e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 982103876b00718aa3b42c6bc3a07d242cde7594
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835674"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692228"
 ---
 # <a name="quantum-algorithms"></a>クォンタムアルゴリズム #
 
@@ -49,8 +49,8 @@ Q# 無関係の振幅増幅の特殊化として振幅増幅を導入します�
 フーリエ変換は、古典的な分析の基本ツールであり、クォンタムの計算において非常に重要です。
 さらに、 *quantum のフーリエ変換* (qft) の効率が、クォンタムアルゴリズムを設計するときに選択する最初のツールの1つとして、従来のコンピューターで可能なことをはるかに上回ります。
 
-QFT のおおよその汎化として、 <xref:microsoft.quantum.canon.approximateqft> 目的のアルゴリズムの精度に対して厳密には必要のない回転を排除することによって、さらなる最適化を可能にする操作を提供します。
-おおよその QFT では、操作だけでなく、dyadic $Z $ ローテーション操作が必要です <xref:microsoft.quantum.intrinsic.rfrac> <xref:microsoft.quantum.intrinsic.h> 。
+QFT のおおよその汎化として、 <xref:Microsoft.Quantum.Canon.ApproximateQft> 目的のアルゴリズムの精度に対して厳密には必要のない回転を排除することによって、さらなる最適化を可能にする操作を提供します。
+おおよその QFT では、操作だけでなく、dyadic $Z $ ローテーション操作が必要です <xref:Microsoft.Quantum.Intrinsic.RFrac> <xref:Microsoft.Quantum.Intrinsic.H> 。
 入力と出力はビッグエンディアン---エンコーディングでエンコードされていると想定されています。つまり、qubit with index `0` は、バイナリ整数表現の左端 (最上位) でエンコードされます。
 これは、 [k 表記](xref:microsoft.quantum.concepts.dirac)と整合しています。これは、状態 $ \ket $ 内の3つの qubits のレジスタとして、 {100} $q 0 $ は状態 $ \ket $ に対応し、 {1} $q _1 $ と $q _2 $ は両方とも状態 $ \ket {0} $ になります。
 近似パラメーター $a $ は、$ ローテーション $Z の排除レベルを決定します。つまり、[0.. n] $ に $a ます。
@@ -103,15 +103,15 @@ Beauregard の追加には、Draper 追加記号、またはより具体的に�
 
 ### <a name="quantum-phase-estimation"></a>量子位相推定 ###
 
-クォンタムフーリエ変換の特に重要なアプリケーションの1つは、 *フェーズ推定*と呼ばれる問題である、ユニタリ演算子の固有値を学習することです。
+クォンタムフーリエ変換の特に重要なアプリケーションの1つは、 *フェーズ推定* と呼ばれる問題である、ユニタリ演算子の固有値を学習することです。
 ' $ \Ket{\phi} $ ' は、不明な eigenstate $/phi $, \ket{\phi} {\ phi} = \phi\ket{\phi}. を使用して $U $ の eigenstate であるため、$U $ と state $ $ のようにします。
 、oracle として $U $ にアクセスできるだけの場合は、制御され $Z た操作のターゲットに適用されている $ ローテーションをコントロールに反映させることで、フェーズ $-phi $ を学習できます。
 
 $V $ が $U $ の制御されたアプリケーションであるとします。たとえば、\begin{align} V (\ket/ {0} otimes \ket{\phi}) & = \ket/ {0} otimes \ket{\phi} \\ \\ \t extrm{and} V (\ket/ {1} otimes \ket{\phi}) & = e ^ {i \phi} \ket/ {1} otimes \ket{\phi}.
 \end{align}、直線性、\begin{align} V (\ket{+} \ otimes \ket{\phi}) & = \frac{(\ket/ {0} otimes \ket{\phi}) + e ^ {i \phi} (\ket/ {1} otimes \ket{\phi})} {/sqrt {2} }。
-\end{align} \begin{align} V (\ket{+}/otimes \ket{\phi}) & = \frac{\ket {0} + e ^ {i \phi} \ket {1} } {/sqrt {2} }/otimes \ket{\phi} \\ \\ & = (R_1 (\ phi) \ket{+}) \ otimes \ket{\phi}, \end{align} ($R _1 $ が操作によって適用されるユニタリ <xref:microsoft.quantum.intrinsic.r1> ) を見つけることができます。
+\end{align} \begin{align} V (\ket{+}/otimes \ket{\phi}) & = \frac{\ket {0} + e ^ {i \phi} \ket {1} } {/sqrt {2} }/otimes \ket{\phi} \\ \\ & = (R_1 (\ phi) \ket{+}) \ otimes \ket{\phi}, \end{align} ($R _1 $ が操作によって適用されるユニタリ <xref:Microsoft.Quantum.Intrinsic.R1> ) を見つけることができます。
 別の方法として、$V $ を適用した場合の効果は、$V $ に oracle としてしかアクセスできない場合でも、$R _1 $ を不明な角度で適用することとまったく同じです。
-そのため、この説明の残りの部分では、$R _1 (\ phi) $ の観点からフェーズの推定について説明します。これは、いわゆる *フェーズ kickback*を使用して実装します。
+そのため、この説明の残りの部分では、$R _1 (\ phi) $ の観点からフェーズの推定について説明します。これは、いわゆる *フェーズ kickback* を使用して実装します。
 
 このプロセスの後、コントロールとターゲットのレジスタは untangled のままであるため、$ \ket{\phi} $ を $U ^ $2 の制御されたアプリケーションのターゲットとして再利用して、2番目のコントロール qubit $R _1 (2 + phi) \ket{+} $ にすることができます。
 この方法では、\begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j-phi) \ket{+} \\ \\ & \ propto \ bigotimes_ {j = 0} ^ {n}/left (\ket + \ exp) の形式のレジスタを取得できます。 {0} (i 2 ^ {j} \ phi) \ket] {1} \\ \\ & \ sum_ {k = 0} ^ {2 ^ n-1} \ exp (i-phi k) \ket{k} \end{align}。ここで $n $ は、必要な精度のビット数です。また、$ {} \ propto $ を使用して {} 、正規化係数 $1/\ sqrt{2 ^ n} $ が抑制されていることを示しています。
@@ -119,4 +119,4 @@ $V $ が $U $ の制御されたアプリケーションであるとします。
 $-Phi = 2-pi p/2 ^ k $ が整数 $p $ であると仮定した場合、$ \ket{\psi} = p_1 p_0 \ket{p_n} $ として認識されます。ここで、$p _j $ は $j ^ {\t extrm{th} $ bit of $2/phi $ です。
 クォンタムのフーリエ変換の adjoint を適用するため、クォンタムの状態としてエンコードされたフェーズのバイナリ表現を取得します。
 
-で Q# は、これは操作によって実装されます。これは <xref:microsoft.quantum.characterization.quantumphaseestimation> <xref:microsoft.quantum.oracles.discreteoracle> $U ^ m $ の実装アプリケーションを、正の整数 $m $ の関数として取得します。
+で Q# は、これは操作によって実装されます。これは <xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation> <xref:Microsoft.Quantum.Oracles.DiscreteOracle> $U ^ m $ の実装アプリケーションを、正の整数 $m $ の関数として取得します。
