@@ -1,0 +1,116 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 係数と許容範囲が指定されている場合、は、指定された許容範囲に対して、計算ベース状態の対応する振幅として各係数を準備する状態準備操作を返します。
+  uid: Microsoft.Quantum.MachineLearning.ApproximateInputEncoder
+- summary: 1つ以上の制御された回転を指定した場合、は、モデルパラメーターのインデックスをシフトして1つのレイヤーを返します。これにより、異なるレイヤーが個別のモデルパラメーターによってパラメーター化されます。
+  uid: Microsoft.Quantum.MachineLearning.CombinedStructure
+- summary: 指定された軸に沿って1つの制御された回転の配列を返します。 qubits のレジスタで周期的に配置され、個別のモデルパラメーターによってパラメーター化されます。
+  uid: Microsoft.Quantum.MachineLearning.CyclicEntanglingLayer
+- summary: トレーニング分類子の既定のオプションセットを返します。
+  uid: Microsoft.Quantum.MachineLearning.DefaultTrainingOptions
+- summary: 特定の特徴ベクターをエンコードするために必要な qubits の数を返します。
+  uid: Microsoft.Quantum.MachineLearning.FeatureRegisterSize
+- summary: 分類の確率とバイアスが指定されている場合、はその確率から推論されたラベルを返します。
+  uid: Microsoft.Quantum.MachineLearning.InferredLabel
+- summary: 分類確率の配列とバイアスを指定すると、各確率から推論されたラベルが返されます。
+  uid: Microsoft.Quantum.MachineLearning.InferredLabels
+- summary: 係数と許容範囲を指定すると、は、各係数を計算ベース状態の対応する振幅として準備する状態準備操作を返します。
+  uid: Microsoft.Quantum.MachineLearning.InputEncoder
+- summary: 指定された軸に沿って非制御 (単 qubit) の回転の配列を返します。レジスタ内の qubit ごとに1つの回転があり、個別のモデルパラメーターによってパラメーター化されます。
+  uid: Microsoft.Quantum.MachineLearning.LocalRotationsLayer
+- summary: 一連の推定ラベルと一連の正しいラベルが指定されている場合、ラベルの各セットが異なる場所のインデックスを返します。
+  uid: Microsoft.Quantum.MachineLearning.Misclassifications
+- summary: 一連の推定ラベルと一連の正しいラベルが指定されると、によって、各ラベルのセットが異なるインデックスの数が返されます。
+  uid: Microsoft.Quantum.MachineLearning.NMisclassifications
+- summary: 指定されたシーケンシャル分類子を適用するために必要な qubits の数を返します。
+  uid: Microsoft.Quantum.MachineLearning.NQubitsRequired
+- summary: 個別のモデルパラメーターによってパラメーター化された、指定した軸に沿った単一の qubit 回転の配列を返します。
+  uid: Microsoft.Quantum.MachineLearning.PartialRotationsLayer
+- summary: 指定されたスケジュールを使用して、指定された配列をサンプリングします。
+  uid: Microsoft.Quantum.MachineLearning.Sampled
+- summary: 指定されたサンプリングスケジュール内の要素の数を返します。
+  uid: Microsoft.Quantum.MachineLearning.ScheduleLength
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._AllNearlyEqualD
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._CallFlipped
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._CanApplyTwoQubitCase
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._EncodeSample
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._Features
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._Flipped
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._Label
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._MisclassificationRate
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._NegativeLocations
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._TailMeasurement
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._UncontrolledSpanSequence
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._Unnegate
+- summary: ほぼ最小の誤分類スコアにつながるバイアス値を返します。
+  uid: Microsoft.Quantum.MachineLearning._UpdatedBias
+name: Microsoft.Quantum.MachineLearning
+newtypes:
+- summary: ターゲットと制御のインデックス、回転軸、およびモデルパラメーターベクターへのインデックスに関して、制御されたローテーションについて説明します。
+  uid: Microsoft.Quantum.MachineLearning.ControlledRotation
+- summary: このサンプルが属するクラスでラベル付けされたサンプル。
+  uid: Microsoft.Quantum.MachineLearning.LabeledSample
+- summary: 一連のサンプルからバッチを描画するためのスケジュール。
+  uid: Microsoft.Quantum.MachineLearning.SamplingSchedule
+- summary: 一連のパラメーター化および制御された回転、回転角度の割り当て、およびモデルによって認識される2つのクラス間のバイアスで構成される、クォンタム分類器モデルについて説明します。
+  uid: Microsoft.Quantum.MachineLearning.SequentialModel
+- summary: 指定された入力をシーケンシャルな分類子に準備する操作を記述します。
+  uid: Microsoft.Quantum.MachineLearning.StateGenerator
+- summary: トレーニングクォンタム分類子で使用されるオプションのコレクション。
+  uid: Microsoft.Quantum.MachineLearning.TrainingOptions
+- summary: 一連のサンプルに対して分類子が検証された結果。
+  uid: Microsoft.Quantum.MachineLearning.ValidationResults
+operations:
+- summary: 連続した分類子の構造とパラメーター化を指定した場合、は、分類子を qubits のレジスタに適用します。
+  uid: Microsoft.Quantum.MachineLearning.ApplySequentialClassifier
+- summary: 一連のサンプルと連続した分類子を指定すると、は各サンプルの分類子の出力を繰り返し測定することで、これらのサンプルの分類確率を推定します。
+  uid: Microsoft.Quantum.MachineLearning.EstimateClassificationProbabilities
+- summary: サンプルとシーケンシャル分類子が指定されている場合、は、指定されたサンプルの分類子の出力を繰り返し測定することで、そのサンプルの分類確率を推定します。
+  uid: Microsoft.Quantum.MachineLearning.EstimateClassificationProbability
+- summary: 特定のモデルのシーケンシャル分類器のトレーニンググラデーションと、エンコードされた入力を推定します。
+  uid: Microsoft.Quantum.MachineLearning.EstimateGradient
+- summary: シーケンシャル分類子の構造に基づいて、指定されたラベル付きトレーニングセットで分類器をトレーニングします。
+  uid: Microsoft.Quantum.MachineLearning.TrainSequentialClassifier
+- summary: シーケンシャルな分類子の構造に基づいて、特定のモデルから始まる特定のラベル付けされたトレーニングセットで分類器をトレーニングします。
+  uid: Microsoft.Quantum.MachineLearning.TrainSequentialClassifierAtModel
+- summary: 指定された一連のラベル付きサンプルに対して、特定のシーケンシャル分類子を検証します。
+  uid: Microsoft.Quantum.MachineLearning.ValidateSequentialClassifier
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._ApplyLEOperationToRawRegister
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._ApplyTwoQubitCase
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._EstimateDerivativeWithParameterShift
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._PrepareClassification
+- summary: 入力をランダムに再スケールし、特定の係数で拡大または縮小します。
+  uid: Microsoft.Quantum.MachineLearning._RandomlyRescale
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._ReflectAboutNegativeCoefficients
+- summary: データサンプルのサブセットに対して、順次分類器トレーニングの1つのエポックを実行します。
+  uid: Microsoft.Quantum.MachineLearning._RunSingleTrainingEpoch
+- summary: ミニバッチグラデーションの方向に1つのパラメーターの更新を試行します
+  uid: Microsoft.Quantum.MachineLearning._RunSingleTrainingStep
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._TrainSequentialClassifierAtModel
+summary: この名前空間は、クォンタム機械学習アプリケーションで使用される関数と操作を提供します。
+uid: Microsoft.Quantum.MachineLearning
+metadata:
+  ms.openlocfilehash: 3e77526589c4224697d7f47a5a6dc7e7edf45ef8
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92721034"
