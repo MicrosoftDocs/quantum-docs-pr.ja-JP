@@ -9,21 +9,21 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835589"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692234"
 ---
 # <a name="data-structures-and-modeling"></a>データ構造とモデリング #
 
 ## <a name="classical-data-structures"></a>典型的データ構造 ##
 
 また、ユーザー定義型を使用して、クォンタムの概念を表します。また、キャノンシステムの制御に使用される典型的なデータを操作するための操作、関数、および型も提供します。
-たとえば、関数は、 <xref:microsoft.quantum.arrays.reversed> 配列を入力として受け取り、同じ配列を逆の順序で返します。
+たとえば、関数は、 <xref:Microsoft.Quantum.Arrays.Reversed> 配列を入力として受け取り、同じ配列を逆の順序で返します。
 これは、型の配列に対して使用でき `Qubit[]` ます。これにより、整数のクォンタム表現間で変換を行うときに、不要な $/演算子 name{swap} $ ゲートが適用されるのを回避できます。
-同様に、前のセクションで説明したように、フォームの型は `(Int, Int -> T)` ランダムアクセスコレクションを表すのに役立ちます。そのため、関数は、 <xref:microsoft.quantum.arrays.lookupfunction> 配列型からこのような型を構築する便利な方法を提供します。
+同様に、前のセクションで説明したように、フォームの型は `(Int, Int -> T)` ランダムアクセスコレクションを表すのに役立ちます。そのため、関数は、 <xref:Microsoft.Quantum.Arrays.LookupFunction> 配列型からこのような型を構築する便利な方法を提供します。
 
 ### <a name="pairs"></a>ペア ###
 
@@ -38,7 +38,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 
 Canon には、配列を操作するための関数がいくつか用意されています。
 これらの関数は型パラメーター化されるため、任意の型の配列と共に使用でき Q# ます。
-たとえば、関数は、 <xref:microsoft.quantum.arrays.reversed> 入力とは逆の順序で要素を持つ新しい配列を返します。
+たとえば、関数は、 <xref:Microsoft.Quantum.Arrays.Reversed> 入力とは逆の順序で要素を持つ新しい配列を返します。
 これは、操作を呼び出すときに、クォンタムレジスタがどのように表されるかを変更するために使用できます。
 
 ```qsharp
@@ -49,14 +49,14 @@ QFT(BigEndian(Reversed(leRegister!)));
 QFT(LittleEndianAsBigEndian(leRegister));
 ```
 
-同様に、関数を使用して、 <xref:microsoft.quantum.arrays.subarray> 配列の要素の順序を変更したり、サブセットを取得したりできます。
+同様に、関数を使用して、 <xref:Microsoft.Quantum.Arrays.Subarray> 配列の要素の順序を変更したり、サブセットを取得したりできます。
 
 ```qsharp
 // Applies H to qubits 2 and 5.
 ApplyToEach(H, Subarray([2, 5], register));
 ```
 
-フロー制御と組み合わせると、などの配列操作関数は、 <xref:microsoft.quantum.arrays.zip> クォンタムプログラムを表現するための強力な方法を提供できます。
+フロー制御と組み合わせると、などの配列操作関数は、 <xref:Microsoft.Quantum.Arrays.Zipped> クォンタムプログラムを表現するための強力な方法を提供できます。
 
 ```qsharp
 // Applies X₃ Y₁ Z₇ to a register of any size.
@@ -64,7 +64,7 @@ ApplyToEach(
     ApplyPauli(_, register),
     Map(
         EmbedPauli(_, _, Length(register)),
-        Zip([PauliX, PauliY, PauliZ], [3, 1, 7])
+        Zipped([PauliX, PauliY, PauliZ], [3, 1, 7])
     )
 );
 ```
@@ -127,8 +127,8 @@ is Adj + Ctl {
 }
 ```
 
-この oracle は操作の特殊なケースであり <xref:microsoft.quantum.canon.rall1> 、リフレクションケース $ + phi = \ pi $ の代わりに任意のフェーズで回転できます。
-この場合、 `RAll1` は準備操作に似てい <xref:microsoft.quantum.intrinsic.r1> ます。これは、single qubit 状態 $ \ket $ の代わりに $ \ket{11\cdots1} $ を回転させる点です {1} 。
+この oracle は操作の特殊なケースであり <xref:Microsoft.Quantum.Canon.RAll1> 、リフレクションケース $ + phi = \ pi $ の代わりに任意のフェーズで回転できます。
+この場合、 `RAll1` は準備操作に似てい <xref:Microsoft.Quantum.Intrinsic.R1> ます。これは、single qubit 状態 $ \ket $ の代わりに $ \ket{11\cdots1} $ を回転させる点です {1} 。
 
 初期サブ空間をマークする oracle は同様に構築できます。
 擬似コードで:
@@ -139,7 +139,7 @@ is Adj + Ctl {
 4. すべての qubit に $ ゲート $X 適用します。
 5. すべての qubit に $ ゲート $H 適用します。
 
-今回は、前に説明した <xref:microsoft.quantum.canon.applywith> 操作と共にを使用する方法も示し <xref:microsoft.quantum.canon.rall1> ます。
+今回は、前に説明した <xref:Microsoft.Quantum.Canon.ApplyWith> 操作と共にを使用する方法も示し <xref:Microsoft.Quantum.Canon.RAll1> ます。
 
 ```qsharp
 operation ReflectAboutInitial(register : Qubit[]) : Unit
@@ -160,10 +160,10 @@ is Adj + Ctl {
 
 > [!TIP]
 > これらのサンプルでは、次に示す oracle の両方の型について説明します。
-> 連続クエリ oracles の詳細については、 [ **PhaseEstimation**サンプル](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation)を参照してください。
-> 離散クエリ oracles の詳細については、 [ **IsingPhaseEstimation**サンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)を参照してください。
+> 連続クエリ oracles の詳細については、 [ **PhaseEstimation** サンプル](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation)を参照してください。
+> 離散クエリ oracles の詳細については、 [ **IsingPhaseEstimation** サンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)を参照してください。
 
-Oracle の最初の種類は、個別のクエリとして oracle を呼び出し、ユーザー定義型で表現します。単に、1つのインテキスト <xref:microsoft.quantum.oracles.discreteoracle> 行列を使用します。
+Oracle の最初の種類は、個別のクエリとして oracle を呼び出し、ユーザー定義型で表現します。単に、1つのインテキスト <xref:Microsoft.Quantum.Oracles.DiscreteOracle> 行列を使用します。
 $U $ が、推定する値を持つユニタリの場合、$U $ の oracle は $U $ を実装するサブルーチンの単なるスタンドアロンです。
 たとえば、$U $ は、前に定義した振幅推定用の oracle $Q $ になることがあります。
 このマトリックスの固有値を使用して、初期状態とターゲット状態の間の重複を推定することができます $ \ sin ^ 2 (quadratically) $。それ以外の場合に必要なサンプルの数を減らすことができます。
@@ -173,7 +173,7 @@ $U $ が、推定する値を持つユニタリの場合、$U $ の oracle は $
 このような場合、ゲートの $ \ シータ $ という固定値を学習するために対話するサブルーチンは $ $ \begin{align} U & = R_z (-シータ) \\ \\ & = \begin{bmatrix} e ^ {-i/シータ/2} & 0 \\ \\ 0 & e ^ {i \ シータ/2} \end{bmatrix}.
 \end{align} $ $
 
-フェーズ推定で使用される oracle の2つ目の種類は、型によって表される、oracle の連続クエリです <xref:microsoft.quantum.oracles.continuousoracle> 。
+フェーズ推定で使用される oracle の2つ目の種類は、型によって表される、oracle の連続クエリです <xref:Microsoft.Quantum.Oracles.ContinuousOracle> 。
 フェーズ推定のための連続クエリ oracle では、$U (t) $ という形式を使用します。ここで $t $ はクラシックデプロイの既知の実数です。
 $ を固定の $U にした場合、連続クエリ oracle では $U (t) = U ^ t $ という形式が使用されます。
 これにより、個別のクエリモデルに直接実装できなかった $-sqrt{u} $ などのマトリックスに対してクエリを実行できます。
@@ -211,7 +211,7 @@ $ $ \begin{align} U (t) & = \ left (e ^ {-iH \_ 0 t/r} e ^ {-ih \_ 1 t/r} \ cド
 Dynamical generator モデリングライブラリは、単純なジェネレーターの観点から、複雑なジェネレーターを体系的にエンコードするためのフレームワークを提供します。 そのような説明は、シミュレーションライブラリなどに渡すことによって、選択したシミュレーションアルゴリズムによって時間の進化を実装し、多くの詳細情報が自動的に処理されるようにすることができます。
 
 > [!TIP]
-> 以下で説明する dynamical generator ライブラリについては、「」のサンプルを参照してください。 整理モデルに基づく例については、「 [ **isinggenerators**のサンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators)」を参照してください。
+> 以下で説明する dynamical generator ライブラリについては、「」のサンプルを参照してください。 整理モデルに基づく例については、「 [ **isinggenerators** のサンプル](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators)」を参照してください。
 > 分子 Hydrogen に基づく例については、 [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) と [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui) のサンプルを参照してください。
 
 ### <a name="complete-description-of-a-generator"></a>ジェネレーターの完全な説明 ###
@@ -261,7 +261,7 @@ newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
 
 1番目のパラメーターは、時間の長さを表します。この時間には、に含まれる係数が乗算され `GeneratorIndex` ます。 2番目のパラメーターは、ユニタリが動作する qubit レジスタです。 
 
-### <a name="time-dependent-generators"></a>時間に依存するジェネレーター ###
+### <a name="time-dependent-generators"></a>Time-Dependent ジェネレーター ###
 
 多くの場合、モデリングの時間に依存するジェネレーターにも興味があります。これは、Schrödinger 式 $ $ \begin{align} i\ frac {d \ket{\psi (t)}} {d t} & = \ hat H (t) \ket{\psi (t)}, \end{align} $ $ で発生する可能性があるためです。 この場合、上記の時間に依存しないジェネレーターからの拡張機能は簡単です。 $ $T すべての時間について Hamiltonian を記述するように固定されているのではなく、 `GeneratorSystem` `GeneratorSystemTimeDependent` ユーザー定義型を使用します。
 
