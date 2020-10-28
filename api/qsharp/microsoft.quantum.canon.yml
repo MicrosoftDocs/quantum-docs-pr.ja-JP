@@ -1,0 +1,780 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: の値が奇数の場合は1を返し、 `index` が偶数の場合は-1 を返し `index` ます。
+  uid: Microsoft.Quantum.Canon.Angle
+- summary: ''
+  uid: Microsoft.Quantum.Canon.AnyOutsideToleranceCP
+- summary: ''
+  uid: Microsoft.Quantum.Canon.AnyOutsideToleranceD
+- summary: インデックスに基づいてコントロール、ターゲット、ヘルパーの qubits を整列する
+  uid: Microsoft.Quantum.Canon.ArrangedQubits
+- summary: >+
+    > [!WARNING]
+
+    > BigEndianToLittleEndian は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.BigEndianToLittleEndian
+- summary: 1つの入力に対して動作する操作の配列を指定すると、によって、指定された各操作を順番に実行する新しい操作が生成されます。
+  uid: Microsoft.Quantum.Canon.Bound
+- summary: 1つの入力に対して動作する操作の配列を指定すると、によって、指定された各操作を順番に実行する新しい操作が生成されます。 修飾子は、 `A` 配列内のすべての操作が adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.BoundA
+- summary: 1つの入力に対して動作する操作の配列を指定すると、によって、指定された各操作を順番に実行する新しい操作が生成されます。 修飾子は、 `C` 配列内のすべての操作が制御可能であることを示します。
+  uid: Microsoft.Quantum.Canon.BoundC
+- summary: 1つの入力に対して動作する操作の配列を指定すると、によって、指定された各操作を順番に実行する新しい操作が生成されます。 修飾子は、 `CA` 配列内のすべての操作が adjointable および制御可能であることを示します。
+  uid: Microsoft.Quantum.Canon.BoundCA
+- summary: 操作 op が指定された場合、は、従来の制御ビットが true の場合に op を適用する新しい操作を返します。 `false`の場合、何も起こりません。
+  uid: Microsoft.Quantum.Canon.CControlled
+- summary: 操作 op が指定された場合、は、従来の制御ビットが true の場合に op を適用する新しい操作を返します。 `false`の場合、何も起こりません。 修飾子は、 `A` 操作が adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.CControlledA
+- summary: 操作 op が指定された場合、は、従来の制御ビットが true の場合に op を適用する新しい操作を返します。 `false`の場合、何も起こりません。 修飾子は、 `C` 操作が制御可能であることを示します。
+  uid: Microsoft.Quantum.Canon.CControlledC
+- summary: 操作 op が指定された場合、は、従来の制御ビットが true の場合に op を適用する新しい操作を返します。 `false`の場合、何も起こりません。 修飾子は、 `CA` 操作が制御可能であり、adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.CControlledCA
+- summary: 2つの関数の合成を返します。
+  uid: Microsoft.Quantum.Canon.Compose
+- summary: '`inner`指定された入力に対するとの構成の出力を返し `outer` ます。'
+  uid: Microsoft.Quantum.Canon.ComposedOutput
+- summary: 外部操作と内部操作では、外部操作によって内部操作を活用する新しい操作が返されます。
+  uid: Microsoft.Quantum.Canon.ConjugatedBy
+- summary: 外部操作と内部操作では、外部操作によって内部操作を活用する新しい操作が返されます。
+  uid: Microsoft.Quantum.Canon.ConjugatedByA
+- summary: 外部操作と内部操作では、外部操作によって内部操作を活用する新しい操作が返されます。
+  uid: Microsoft.Quantum.Canon.ConjugatedByC
+- summary: 外部操作と内部操作では、外部操作によって内部操作を活用する新しい操作が返されます。
+  uid: Microsoft.Quantum.Canon.ConjugatedByCA
+- summary: 制御レジスタの状態が指定したビットマスクに対応する場合に、ターゲットレジスタに oracle を適用する、ユニタリ操作を返します。
+  uid: Microsoft.Quantum.Canon.ControlledOnBitString
+- summary: 制御レジスタの状態が指定した正の整数に対応する場合に、ターゲットレジスタに oracle を適用する、ユニタリ演算子を返します。
+  uid: Microsoft.Quantum.Canon.ControlledOnInt
+- summary: >-
+    2つの入力に対して、カリー化された操作のバージョンを返します。
+
+    つまり、2つの入力を持つ演算が指定された場合、この関数は、isomorphism $f (x, y) \equiv f (x) (y) $ という値を適用して、1つの入力の操作を返す1つの入力の操作を返します。
+  uid: Microsoft.Quantum.Canon.CurriedOp
+- summary: >+
+    > [!WARNING]
+
+    > DecomposeIntoTimeStepsCA は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA> を使用してください。
+
+  uid: Microsoft.Quantum.Canon.DecomposeIntoTimeStepsCA
+- summary: 指定された操作に対して Trotter – Suzuki インテグレーターを実装する操作を返します。
+  uid: Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA
+- summary: 指定された引数を使用して指定された操作を適用する操作を返します。
+  uid: Microsoft.Quantum.Canon.Delayed
+- summary: 指定された引数を使用して指定された操作を適用する操作を返します。
+  uid: Microsoft.Quantum.Canon.DelayedA
+- summary: 指定された引数を使用して指定された操作を適用する操作を返します。
+  uid: Microsoft.Quantum.Canon.DelayedC
+- summary: 指定された引数を使用して指定された操作を適用する操作を返します。
+  uid: Microsoft.Quantum.Canon.DelayedCA
+- summary: Single qubit の P# li 演算子と qubit のインデックスが指定されている場合、そのインデックスの指定された単一の qubit 演算子と `PauliI` 他のすべてのインデックスで、マルチ qubit の P# li 演算子を返します。
+  uid: Microsoft.Quantum.Canon.EmbedPauli
+- summary: ペアが指定されている場合、最初の要素を返します。
+  uid: Microsoft.Quantum.Canon.Fst
+- summary: グレーのコードシーケンスを作成します
+  uid: Microsoft.Quantum.Canon.GrayCode
+- summary: 整数のハミング weight を計算します。つまり、2つのバイナリ拡張の1秒数を計算します。
+  uid: Microsoft.Quantum.Canon.HammingWeightI
+- summary: 演算または関数の出力を無視します。
+  uid: Microsoft.Quantum.Canon.Ignore
+- summary: 指定された結果値がと等しいかどうかをテスト `One` します。
+  uid: Microsoft.Quantum.Canon.IsResultOne
+- summary: 指定された結果値がと等しいかどうかをテスト `Zero` します。
+  uid: Microsoft.Quantum.Canon.IsResultZero
+- summary: >+
+    > [!WARNING]
+
+    > LittleEndianToBigEndian は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.LittleEndianToBigEndian
+- summary: 乗算制御された Z 回転の実装手順。
+  uid: Microsoft.Quantum.Canon.MultiplexZCoefficients
+- summary: >-
+    N-qubit number 状態 $ \ket{j} $ によって制御されている場合に _j $ の $V を適用する、乗算によって制御される、$ $U の数値演算を返します。
+
+    $U = \ sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
+  uid: Microsoft.Quantum.Canon.MultiplexerBruteForceFromGenerator
+- summary: >-
+    N-qubit number 状態 $ \ket{j} $ によって制御されている場合に _j $ の $V を適用する、乗算によって制御される、$ $U の数値演算を返します。
+
+    $U = \ sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
+  uid: Microsoft.Quantum.Canon.MultiplexerFromGenerator
+- summary: >-
+    操作を累乗します。
+
+    つまり、ゲート $U $ を表す操作が指定されている場合は、power $m $ に対して ^ m $ $U 新しい操作を返します。
+  uid: Microsoft.Quantum.Canon.OperationPow
+- summary: >-
+    操作を累乗します。 修飾子は、 `A` 操作が adjointable であることを示します。
+
+    つまり、ゲート $U $ を表す操作が指定されている場合は、power $m $ に対して ^ m $ $U 新しい操作を返します。
+  uid: Microsoft.Quantum.Canon.OperationPowA
+- summary: >-
+    操作を累乗します。 修飾子は、 `C` 操作が制御可能であることを示します。
+
+    つまり、ゲート $U $ を表す操作が指定されている場合は、power $m $ に対して ^ m $ $U 新しい操作を返します。
+  uid: Microsoft.Quantum.Canon.OperationPowC
+- summary: >-
+    操作を累乗します。 修飾子は、 `A` 操作が制御可能であり、adjointable であることを示します。
+
+    つまり、ゲート $U $ を表す操作が指定されている場合は、power $m $ に対して ^ m $ $U 新しい操作を返します。
+  uid: Microsoft.Quantum.Canon.OperationPowCA
+- summary: 操作をレジスタのインデックスの配列 (サブレジスタ) に制限します。
+  uid: Microsoft.Quantum.Canon.RestrictedToSubregister
+- summary: 操作をレジスタのインデックスの配列 (サブレジスタ) に制限します。 修飾子は、 `A` 操作が adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.RestrictedToSubregisterA
+- summary: 操作をレジスタのインデックスの配列 (サブレジスタ) に制限します。 修飾子は、 `C` 操作が制御可能であることを示します。
+  uid: Microsoft.Quantum.Canon.RestrictedToSubregisterC
+- summary: 操作をレジスタのインデックスの配列 (サブレジスタ) に制限します。 修飾子は、 `CA` 操作が制御可能であり、adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.RestrictedToSubregisterCA
+- summary: ペアが指定されると、はその2番目の要素を返します。
+  uid: Microsoft.Quantum.Canon.Snd
+- summary: >+
+    > [!WARNING]
+
+    > StackCapacity は非推奨となりました。
+
+  uid: Microsoft.Quantum.Canon.StackCapacity
+- summary: >+
+    > [!WARNING]
+
+    > StackLength の使用は推奨されていません。
+
+  uid: Microsoft.Quantum.Canon.StackLength
+- summary: >+
+    > [!WARNING]
+
+    > StackNew は非推奨となりました。
+
+  uid: Microsoft.Quantum.Canon.StackNew
+- summary: >+
+    > [!WARNING]
+
+    > StackPeek は非推奨となりました。
+
+  uid: Microsoft.Quantum.Canon.StackPeek
+- summary: >+
+    > [!WARNING]
+
+    > StackPop の使用は非推奨とされました。
+
+  uid: Microsoft.Quantum.Canon.StackPop
+- summary: >+
+    > [!WARNING]
+
+    > StackPush の使用は非推奨とされました。
+
+  uid: Microsoft.Quantum.Canon.StackPush
+- summary: 関数と操作が指定された場合、指定された関数によって入力が変換される新しい操作を返します。
+  uid: Microsoft.Quantum.Canon.TransformedOperation
+- summary: 関数と操作が指定された場合、指定された関数によって入力が変換される新しい操作を返します。
+  uid: Microsoft.Quantum.Canon.TransformedOperationA
+- summary: 関数と操作が指定された場合、指定された関数によって入力が変換される新しい操作を返します。
+  uid: Microsoft.Quantum.Canon.TransformedOperationC
+- summary: 関数と操作が指定された場合、指定された関数によって入力が変換される新しい操作を返します。
+  uid: Microsoft.Quantum.Canon.TransformedOperationCA
+- summary: Trotter シミュレーションアルゴリズムの再帰実装で Trotter ステップサイズを計算します。
+  uid: Microsoft.Quantum.Canon.TrotterStepSize
+- summary: 操作を返す関数を指定した場合、は、両方の入力をタプルとして受け取る新しい操作を返します。
+  uid: Microsoft.Quantum.Canon.UncurriedOp
+- summary: 操作を返す関数を指定した場合、は、両方の入力をタプルとして受け取る新しい操作を返します。 修飾子は、 `A` 操作が adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.UncurriedOpA
+- summary: 操作を返す関数を指定した場合、は、両方の入力をタプルとして受け取る新しい操作を返します。 修飾子は、 `C` 操作が制御可能であることを示します。
+  uid: Microsoft.Quantum.Canon.UncurriedOpC
+- summary: 操作を返す関数を指定した場合、は、両方の入力をタプルとして受け取る新しい操作を返します。 修飾子は、 `CA` 操作が制御可能であり、adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.UncurriedOpCA
+- summary: 指定された数の qubits に対するすべての重み-1 の Pan Li 演算子の配列を返します。
+  uid: Microsoft.Quantum.Canon.WeightOnePaulis
+- summary: ''
+  uid: Microsoft.Quantum.Canon.WithFirstInputApplied
+- summary: >+
+    > [!WARNING]
+
+    > XOR は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Logical.Xor> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.logical.xor" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.XOR
+name: Microsoft.Quantum.Canon
+newtypes:
+- summary: CCNOT gate の署名の種類。
+  uid: Microsoft.Quantum.Canon.CCNOTop
+- summary: >+
+    > [!WARNING]
+
+    > ResultStack は非推奨とされました。
+
+  uid: Microsoft.Quantum.Canon.ResultStack
+operations:
+- summary: ターゲット qubits のレジスタで、制御された "AND はしご" を実行します。
+  uid: Microsoft.Quantum.Canon.AndLadder
+- summary: 測定を使用して adjoint 演算を実行し、両方のコントロール qubit が1の状態である場合にのみ、指定されたターゲット qubit を反転します。
+  uid: Microsoft.Quantum.Canon.ApplyAnd
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyBound
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyBoundA
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyBoundC
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyBoundCA
+- summary: 2つの qubit レジスタの対応するビットで制御される CCNOT ゲートのカスケードを実装します。これは、いずれかのレジスタの次の qubit で動作します。 両方のレジスタでコントロールとして位置0にある qubits から、CCNOT はターゲットレジスタの位置1にある qubits に適用され、ターゲットレジスタの位置2の qubits に作用する位置1の qubits によって制御されます。その後、ターゲットの qubits に対するアクションで終了 `Length(nQubits)-1` します。
+  uid: Microsoft.Quantum.Canon.ApplyCCNOTChain
+- summary: Qubits のレジスタのパリティを計算します。
+  uid: Microsoft.Quantum.Canon.ApplyCNOTChain
+- summary: Qubits の配列のパリティをターゲットの qubits に計算します。
+  uid: Microsoft.Quantum.Canon.ApplyCNOTChainWithTarget
+- summary: ターゲットレジスタに対して、指定されたビットマスクによって指定された状態で制御される、一連の処理を実行します。
+  uid: Microsoft.Quantum.Canon.ApplyControlledOnBitString
+- summary: コントロールの登録状態が指定した正の整数に対応する場合は、ターゲットレジスタに対して、値の指定操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyControlledOnInt
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyCurriedOp
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyCurriedOpA
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyCurriedOpC
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyCurriedOpCA
+- summary: 複雑なフェーズの配列を、qubits のレジスタの数値ベースの状態に適用します。
+  uid: Microsoft.Quantum.Canon.ApplyDiagonalUnitary
+- summary: Fermionic SWAP を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyFermionicSWAP
+- summary: 従来のビットで条件付き操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIf
+- summary: クラシックビットで条件付き adjointable 操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfA
+- summary: クラシックビットで条件付きの制御可能な操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfC
+- summary: 古典的なビットに対して条件付きのユニタリ操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfCA
+- summary: 従来のビットの値に応じて、2つの操作のいずれかを適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfElseB
+- summary: 従来のビットの値に応じて、2つの adjointable 操作のいずれかを適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfElseBA
+- summary: クラシックビットの値に応じて、制御可能な2つの操作のいずれか1つを適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfElseBC
+- summary: 従来のビットの値に応じて、2つのいずれかのユニタリ操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfElseBCA
+- summary: 古典的な結果の値に応じて、2つの操作のいずれかを適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfElseR
+- summary: 従来の結果の値に応じて、2つの adjointable 操作のいずれかを適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfElseRA
+- summary: クラシック結果の値に応じて、制御可能な2つの操作のいずれかを適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfElseRC
+- summary: 古典的な結果の値に応じて、2つのいずれかのユニタリ操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfElseRCA
+- summary: 従来の結果値に対する条件付き操作を1として適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfOne
+- summary: 従来の結果値が1である adjointable 操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfOneA
+- summary: 古典的な結果値が1であるという制御可能な操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfOneC
+- summary: 古典的な結果値が1であることを条件とする、一連の検索操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfOneCA
+- summary: 従来の結果値に対する条件付き操作を0に適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfZero
+- summary: 従来の結果値が0である adjointable 操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfZeroA
+- summary: 古典的な結果値が0である制御可能な操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfZeroC
+- summary: 古典的な結果値に対して条件付きの、ゼロを指定した、ユニタリ操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyIfZeroCA
+- summary: 指定されたターゲットの qubit が、両方のコントロール qubit が1状態 (T 深度 1) である場合にのみ、測定を使用して adjoint 操作を実行します。
+  uid: Microsoft.Quantum.Canon.ApplyLowDepthAnd
+- summary: 1つの操作の制御された複数のバージョンを適用します。 修飾子は、 `C` single qubit 操作が制御可能であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyMultiControlledC
+- summary: 1つの操作の制御された複数のバージョンを適用します。 修飾子は、 `CA` single qubit 操作が制御可能で adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyMultiControlledCA
+- summary: ターゲット qubit が初期化されていることを前提として、複数の制御を行う Toffoli ゲートを実装します。  Adjoint 操作では、ターゲットの qubit が0にリセットされることを前提としています。
+  uid: Microsoft.Quantum.Canon.ApplyMultiplyControlledAnd
+- summary: ターゲット qubit が初期化されていることを前提として、複数の制御を行う Toffoli ゲートを実装します。  Adjoint 操作では、ターゲットの qubit が0にリセットされることを前提としています。  Rz の深さは1である必要がありますが、ヘルパーの qubits の数は qubits の数で指数で表示されます。
+  uid: Microsoft.Quantum.Canon.ApplyMultiplyControlledLowDepthAnd
+- summary: Qubit レジスタに対して同じ操作を複数回適用します。
+  uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOver
+- summary: Qubit レジスタに対して同じ操作を複数回適用します。
+  uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOverA
+- summary: Qubit レジスタに対して同じ操作を複数回適用します。
+  uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOverC
+- summary: Qubit レジスタに対して同じ操作を複数回適用します。
+  uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOverCA
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedly
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedlyA
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedlyC
+- summary: ''
+  uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedlyCA
+- summary: 指定された複数の演算子がある場合、対応する操作をレジスタに適用します。
+  uid: Microsoft.Quantum.Canon.ApplyPauli
+- summary: ブール値配列の対応するビットが指定された入力と一致する場合、配列内の各 qubit に対して P# li 演算子を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyPauliFromBitString
+- summary: リトルエンディアン表現内の整数を含むクォンタムレジスタに対して、Quantum フーリエ変換を実行します。
+  uid: Microsoft.Quantum.Canon.ApplyQuantumFourierTransform
+- summary: ビッグエンディアン表現に整数を含むクォンタムレジスタに対して、Quantum フーリエ変換を実行します。
+  uid: Microsoft.Quantum.Canon.ApplyQuantumFourierTransformBE
+- summary: >+
+    > [!WARNING]
+
+    > ApplyReversedOpBigEndianA は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.ApplyReversedOpBigEndianA
+- summary: >+
+    > [!WARNING]
+
+    > ApplyReversedOpBigEndianC は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.ApplyReversedOpBigEndianC
+- summary: >+
+    > [!WARNING]
+
+    > ApplyReversedOpBigEndianCA は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpBECA> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.ApplyReversedOpBigEndianCA
+- summary: >+
+    > [!WARNING]
+
+    > ApplyReversedOpLittleEndianA は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.ApplyReversedOpLittleEndianA
+- summary: >+
+    > [!WARNING]
+
+    > ApplyReversedOpLittleEndianC は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.ApplyReversedOpLittleEndianC
+- summary: >+
+    > [!WARNING]
+
+    > ApplyReversedOpLittleEndianCA は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.ApplyReversedOpLECA> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.ApplyReversedOpLittleEndianCA
+- summary: >+
+    > [!WARNING]
+
+    > ApplyRippleCarryComparatorLE は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.ApplyRippleCarryComparatorLE
+- summary: Ops とそのターゲットの一覧を配列に順番に適用します。
+  uid: Microsoft.Quantum.Canon.ApplySeriesOfOps
+- summary: Ops とそのターゲットの一覧を配列に順番に適用します。 (Adjoint)
+  uid: Microsoft.Quantum.Canon.ApplySeriesOfOpsA
+- summary: Ops とそのターゲットの一覧を配列に順番に適用します。 た
+  uid: Microsoft.Quantum.Canon.ApplySeriesOfOpsC
+- summary: Ops とそのターゲットの一覧を配列に順番に適用します。 (Adjoint + 制御)
+  uid: Microsoft.Quantum.Canon.ApplySeriesOfOpsCA
+- summary: レジスタ内の各要素に単一の qubit 演算を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToEach
+- summary: レジスタ内の各要素に単一の qubit 演算を適用します。 修飾子は、 `A` single qubit 操作が adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToEachA
+- summary: レジスタ内の各要素に単一の qubit 演算を適用します。 修飾子は、 `C` single qubit 操作が制御可能であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToEachC
+- summary: レジスタ内の各要素に単一の qubit 演算を適用します。 修飾子は、 `CA` single qubit 操作が制御可能で adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToEachCA
+- summary: レジスタ内のインデックスが付けられた各要素に単一の qubit 演算を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToEachIndex
+- summary: レジスタ内のインデックスが付けられた各要素に単一の qubit 演算を適用します。 修飾子は、 `A` single qubit 操作が adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToEachIndexA
+- summary: レジスタ内のインデックスが付けられた各要素に単一の qubit 演算を適用します。 修飾子は、 `C` single qubit 操作が制御可能であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToEachIndexC
+- summary: レジスタ内のインデックスが付けられた各要素に単一の qubit 演算を適用します。 修飾子は、 `CA` single qubit 操作が adjointable で制御可能であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToEachIndexCA
+- summary: 配列の特定の要素に操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToElement
+- summary: 配列の特定の要素に操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToElementA
+- summary: 配列の特定の要素に操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToElementC
+- summary: 配列の特定の要素に操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToElementCA
+- summary: レジスタ内の最初の qubit に操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToFirstQubit
+- summary: レジスタ内の最初の qubit に操作を適用します。 修飾子は、 `A` 操作が adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToFirstQubitA
+- summary: レジスタ内の最初の qubit に操作 op を適用します。 修飾子は、 `C` 操作が制御可能であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToFirstQubitC
+- summary: レジスタ内の最初の qubit に操作 op を適用します。 修飾子は、 `CA` 操作が制御可能であり、adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToFirstQubitCA
+- summary: レジスタ内の最初の3つの qubits に操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToFirstThreeQubits
+- summary: レジスタ内の最初の3つの qubits に操作を適用します。 修飾子は、 `A` 操作が adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsA
+- summary: レジスタ内の最初の3つの qubits に操作を適用します。 修飾子は、 `C` 操作が制御可能であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsC
+- summary: レジスタ内の最初の3つの qubits に操作を適用します。 修飾子は、 `CA` 操作が制御可能であり、adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsCA
+- summary: レジスタ内の最初の2つの qubits に操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToFirstTwoQubits
+- summary: レジスタ内の最初の2つの qubits に操作を適用します。 修飾子は、 `A` 操作が adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToFirstTwoQubitsA
+- summary: レジスタ内の最初の2つの qubits に操作を適用します。 修飾子は、 `C` 操作が制御可能であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToFirstTwoQubitsC
+- summary: レジスタ内の最初の2つの qubits に操作を適用します。 修飾子は、 `CA` 操作が制御可能であり、adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToFirstTwoQubitsCA
+- summary: 配列の最初の要素に操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToHead
+- summary: 配列の最初の要素に操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToHeadA
+- summary: 配列の最初の要素に操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToHeadC
+- summary: 配列の最初の要素に操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToHeadCA
+- summary: 配列の最後の要素以外のすべてに操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToMost
+- summary: 配列の最後の要素以外のすべてに操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToMostA
+- summary: 配列の最後の要素以外のすべてに操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToMostC
+- summary: 配列の最後の要素以外のすべてに操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToMostCA
+- summary: レジスタの特定のパーティションに2つの操作を適用して、2つの部分に分割します。
+  uid: Microsoft.Quantum.Canon.ApplyToPartition
+- summary: レジスタの特定のパーティションに2つの操作を適用して、2つの部分に分割します。 修飾子は、 `A` 操作が adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToPartitionA
+- summary: レジスタの特定のパーティションに2つの操作を適用して、2つの部分に分割します。 修飾子は、 `C` 操作が制御可能であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToPartitionC
+- summary: レジスタの特定のパーティションに2つの操作を適用して、2つの部分に分割します。 修飾子は、 `CA` 操作が制御可能であり、adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToPartitionCA
+- summary: 配列の最初の要素以外のすべてに操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToRest
+- summary: 配列の最初の要素以外のすべてに操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToRestA
+- summary: 配列の最初の要素以外のすべてに操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToRestC
+- summary: 配列の最初の要素以外のすべてに操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToRestCA
+- summary: インデックスの配列によって指定された qubits を使用して、レジスタのサブレジスタに操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToSubregister
+- summary: インデックスの配列によって指定された qubits を使用して、レジスタのサブレジスタに操作を適用します。 修飾子は、 `A` 操作が adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToSubregisterA
+- summary: インデックスの配列によって指定された qubits を使用して、レジスタのサブレジスタに操作を適用します。 修飾子は、 `C` 操作が制御可能であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToSubregisterC
+- summary: インデックスの配列によって指定された qubits を使用して、レジスタのサブレジスタに操作を適用します。 修飾子は、 `CA` 操作が制御可能であり、adjointable であることを示します。
+  uid: Microsoft.Quantum.Canon.ApplyToSubregisterCA
+- summary: 配列の最後の要素に操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToTail
+- summary: 配列の最後の要素に操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToTailA
+- summary: 配列の最後の要素に操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToTailC
+- summary: 配列の最後の要素に操作を適用します。
+  uid: Microsoft.Quantum.Canon.ApplyToTailCA
+- summary: 2つの操作を指定した場合、1つは conjugated として適用されます。
+  uid: Microsoft.Quantum.Canon.ApplyWith
+- summary: 2つの操作を指定した場合、1つは conjugated として適用されます。
+  uid: Microsoft.Quantum.Canon.ApplyWithA
+- summary: 2つの操作を指定した場合、1つは conjugated として適用されます。
+  uid: Microsoft.Quantum.Canon.ApplyWithC
+- summary: 2つの操作を指定した場合、1つは conjugated として適用されます。
+  uid: Microsoft.Quantum.Canon.ApplyWithCA
+- summary: 入力を受け入れる操作、その操作と互換性のある出力を返す関数、およびその関数への入力を指定すると、関数を使用して操作が適用され、操作によって予期される形式に入力が変換されます。
+  uid: Microsoft.Quantum.Canon.ApplyWithInputTransformation
+- summary: 入力を受け入れる操作、その操作と互換性のある出力を返す関数、およびその関数への入力を指定すると、関数を使用して操作が適用され、操作によって予期される形式に入力が変換されます。
+  uid: Microsoft.Quantum.Canon.ApplyWithInputTransformationA
+- summary: 入力を受け入れる操作、その操作と互換性のある出力を返す関数、およびその関数への入力を指定すると、関数を使用して操作が適用され、操作によって予期される形式に入力が変換されます。
+  uid: Microsoft.Quantum.Canon.ApplyWithInputTransformationC
+- summary: 入力を受け入れる操作、その操作と互換性のある出力を返す関数、およびその関数への入力を指定すると、関数を使用して操作が適用され、操作によって予期される形式に入力が変換されます。
+  uid: Microsoft.Quantum.Canon.ApplyWithInputTransformationCA
+- summary: クォンタムレジスタにおおよそのクォンタムフーリエ変換 (アク FT) を適用します。
+  uid: Microsoft.Quantum.Canon.ApproximateQFT
+- summary: 複雑なフェーズの配列を、qubits のレジスタの数値ベースの状態に適用し、指定された許容範囲に従って小さな回転角度を切り捨てます。
+  uid: Microsoft.Quantum.Canon.ApproximatelyApplyDiagonalUnitary
+- summary: Qubits の配列で条件付きの回転を適用し、指定された許容範囲に従って小さな回転角度を切り捨てます。
+  uid: Microsoft.Quantum.Canon.ApproximatelyMultiplexPauli
+- summary: Qubits の配列に条件付きで条件付きの回転を適用し、指定された許容範囲に従って小さな回転角度を切り捨てます。
+  uid: Microsoft.Quantum.Canon.ApproximatelyMultiplexZ
+- summary: >+
+    > [!WARNING]
+
+    > AssertHighestBit は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.AssertMostSignificantBit> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.AssertHighestBit
+- summary: >+
+    > [!WARNING]
+
+    > AssertLessThanPhaseLE は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.AssertPhaseLessThan> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.AssertLessThanPhaseLE
+- summary: >+
+    > [!WARNING]
+
+    > AssertPhase は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Diagnostics.AssertPhase> を使用してください。
+
+  uid: Microsoft.Quantum.Canon.AssertPhase
+- summary: >+
+    > [!WARNING]
+
+    > CNOTChain は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Canon.ApplyCNOTChain> を使用してください。
+
+  uid: Microsoft.Quantum.Canon.CNOTChain
+- summary: >+
+    > [!WARNING]
+
+    > CNOTChainTarget は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Canon.ApplyCNOTChainWithTarget> を使用してください。
+
+  uid: Microsoft.Quantum.Canon.CNOTChainTarget
+- summary: >-
+    制御された X (CX) ゲートを qubits のペアに適用します。
+
+    $ $ \begin{align} \ left (\begin{matrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 0 & 0 & \\ \\ 1 & 0 \end{matrix}\right) \end{align}、$ $。ここでは、行と列がクォンタムの概念ガイドに従って編成されています。
+  uid: Microsoft.Quantum.Canon.CX
+- summary: >-
+    コントロール-Y (CY) ゲートを qubits のペアに適用します。
+
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 0 & 0 & 0 & \\ \\ -i 0 & 0 \\ \\ & i & 0 \end{align}、$ $。ここでは、行と列がクォンタムの概念ガイドに従って編成されています。
+  uid: Microsoft.Quantum.Canon.CY
+- summary: >-
+    CS-CZ ゲートを qubits のペアに適用します。
+
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 0 \\ \\ & 0 & 1 & 0 0 & \\ \\ 0 & 0 &-1 \end{align}、$ $。ここでは、行と列がクォンタムの概念ガイドに従って編成されています。
+  uid: Microsoft.Quantum.Canon.CZ
+- summary: >+
+    > [!WARNING]
+
+    > CascadeCCNOT は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Canon.ApplyCCNOTChain> を使用してください。
+
+  uid: Microsoft.Quantum.Canon.CascadeCCNOT
+- summary: >+
+    > [!WARNING]
+
+    > CascadeCNOT は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Canon.ApplyCNOTChain> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.canon.applycnotchain" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.CascadeCNOT
+- summary: 指定された操作を遅延付きで適用します。
+  uid: Microsoft.Quantum.Canon.Delay
+- summary: 指定された操作を遅延付きで適用します。
+  uid: Microsoft.Quantum.Canon.DelayA
+- summary: 指定された操作を遅延付きで適用します。
+  uid: Microsoft.Quantum.Canon.DelayC
+- summary: 指定された操作を遅延付きで適用します。
+  uid: Microsoft.Quantum.Canon.DelayCA
+- summary: >-
+    Y ベースのアナログを、Z 軸と Y 軸をインターチェンジする Hadamard 変換に適用します。
+
+    Y Hadamard 変換 $H _Y = S H $ を1つの qubit にしています: \begin{align} H_Y \mathrel{: =} & frac {1} {\ sqrt {2} } \begin{bmatrix} 1 & 1 \\ \\ i &-i \end{bmatrix}. \end{align}
+  uid: Microsoft.Quantum.Canon.HY
+- summary: >+
+    > [!WARNING]
+
+    > InPlaceMajority は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.ApplyMajorityInPlace> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.arithmetic.applymajorityinplace" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.InPlaceMajority
+- summary: >+
+    > [!WARNING]
+
+    > InPlaceXorBE は非推奨となりました。 代わりに、<xref:ApplyReversedOpLECA(ApplyXorInPlace(value, _), target)> を使用してください。
+
+    >
+
+    > この操作は削除されました。
+
+  uid: Microsoft.Quantum.Canon.InPlaceXorBE
+- summary: >+
+    > [!WARNING]
+
+    > InPlaceXorLE は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Measurement.ApplyXorInPlace> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Measurement.ApplyXorInPlace" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.InPlaceXorLE
+- summary: >+
+    > [!WARNING]
+
+    > IntegerIncrementLE は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.IncrementByInteger> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.IncrementByInteger" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.IntegerIncrementLE
+- summary: >+
+    > [!WARNING]
+
+    > IntegerIncrementPhaseLE は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.IntegerIncrementPhaseLE
+- summary: 整数範囲のデカルト乗の各インデックスに演算を適用します。
+  uid: Microsoft.Quantum.Canon.IterateThroughCartesianPower
+- summary: 複数の範囲のデカルト積の各インデックスに対して操作を適用します。
+  uid: Microsoft.Quantum.Canon.IterateThroughCartesianProduct
+- summary: 複数の qubits の論理 AND を計算します。
+  uid: Microsoft.Quantum.Canon.LogicalANDMeasAndFix
+- summary: >+
+    > [!WARNING]
+
+    > ModularAddProductLE は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.ModularAddProductLE
+- summary: >+
+    > [!WARNING]
+
+    > ModularAddProductPhaseLE は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.ModularAddProductPhaseLE
+- summary: >+
+    > [!WARNING]
+
+    > ModularIncrementLE は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.ModularIncrementByInteger> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.ModularIncrementLE
+- summary: >+
+    > [!WARNING]
+
+    > ModularIncrementPhaseLE は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.ModularIncrementPhaseLE
+- summary: >+
+    > [!WARNING]
+
+    > ModularMultiplyByConstantLE は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Arithmetic.MultiplyByModularInteger> を使用してください。
+
+    >
+
+    > @"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger" を使用してください。
+
+  uid: Microsoft.Quantum.Canon.ModularMultiplyByConstantLE
+- summary: >-
+    数値の状態の配列によって制御される操作の配列を適用します。
+
+    つまり、$n $-qubit 数値の状態 $ \ket{j} $ によって制御されている場合は、_j $ の $V によって $ に適用される、多重制御された $U $ に適用されます。
+
+    $U = \ sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
+  uid: Microsoft.Quantum.Canon.MultiplexOperations
+- summary: >-
+    N-qubit number 状態 $ \ket{j} $ によって制御されている場合に、_j $ $V を適用する $U $ に、乗算によって制御される数値演算を適用します。
+
+    $U = \ sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
+  uid: Microsoft.Quantum.Canon.MultiplexOperationsBruteForceFromGenerator
+- summary: >-
+    N-qubit number 状態 $ \ket{j} $ によって制御されている場合に、_j $ の $V を適用する $U $ に、乗算によって制御される数値演算を適用します。
+
+    $U = \ sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
+  uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGenerator
+- summary: MultiplexOperations の実装手順。
+  uid: Microsoft.Quantum.Canon.MultiplexOperationsWithAuxRegister
+- summary: Qubits の配列に条件付きの回転を適用します。
+  uid: Microsoft.Quantum.Canon.MultiplexPauli
+- summary: Qubits の配列で条件付きの Pan Li Z の回転条件を適用します。
+  uid: Microsoft.Quantum.Canon.MultiplexZ
+- summary: 引数に対して identity 操作 (no op) を実行します。
+  uid: Microsoft.Quantum.Canon.NoOp
+- summary: スワップ操作を使用した Permutes qubits。
+  uid: Microsoft.Quantum.Canon.PermuteQubits
+- summary: ビッグエンディアン表現に整数を含むクォンタムレジスタに対して、Quantum フーリエ変換を実行します。
+  uid: Microsoft.Quantum.Canon.QFT
+- summary: リトルエンディアン表現内の整数を含むクォンタムレジスタに対して、Quantum フーリエ変換を実行します。
+  uid: Microsoft.Quantum.Canon.QFTLE
+- summary: >-
+    フェーズシフト操作を実行します。
+
+    $R = \ bold one-(1-e ^ {i \phi}) \ket{0\cdots 0} \bra{0\cdots 0} $。
+  uid: Microsoft.Quantum.Canon.RAll0
+- summary: >-
+    フェーズシフト操作を実行します。
+
+    $R = \ bold one-(1-e ^ {i \phi}) \ket{1\cdots 1} \bra{1\cdots 1} $。
+  uid: Microsoft.Quantum.Canon.RAll1
+- summary: 指定された回数だけ操作を繰り返します。
+  uid: Microsoft.Quantum.Canon.Repeat
+- summary: 指定された回数だけ操作を繰り返します。
+  uid: Microsoft.Quantum.Canon.RepeatA
+- summary: 指定された回数だけ操作を繰り返します。
+  uid: Microsoft.Quantum.Canon.RepeatC
+- summary: 指定された回数だけ操作を繰り返します。
+  uid: Microsoft.Quantum.Canon.RepeatCA
+- summary: スワップゲートを使用して、レジスタ内の qubits の順序を逆にします。
+  uid: Microsoft.Quantum.Canon.SwapReverseRegister
+- summary: 最初の順序の Trotter – Suzuki インテグレーターの実装。
+  uid: Microsoft.Quantum.Canon.Trotter1ImplCA
+- summary: 2番目の順序の Trotter – Suzuki インテグレーターの実装。
+  uid: Microsoft.Quantum.Canon.Trotter2ImplCA
+- summary: Trotter – Suzuki インテグレーターの再帰的な実装。
+  uid: Microsoft.Quantum.Canon.TrotterArbitraryImplCA
+- summary: の実装手順 `MultiplexOperationsFromGenerator` 。
+  uid: Microsoft.Quantum.Canon._MultiplexOperationsFromGenerator
+summary: ''
+uid: Microsoft.Quantum.Canon
+metadata:
+  ms.openlocfilehash: 15dd183daa445cbde87b573386780d3da34beb86
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92715981"
