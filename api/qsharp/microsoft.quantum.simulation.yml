@@ -1,0 +1,178 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: '`GeneratorSystem`新しいを作成するために、2つのを追加し `GeneratorSystem` ます。'
+  uid: Microsoft.Quantum.Simulation.AddGeneratorSystems
+- summary: >-
+    対象の演算子をにエンコード `BlockEncoding` します。
+
+    これにより、 `BlockEncoding` 一部の演算子 $H = \ sum_ {j} | \ alpha_j | をエンコードする、$U = P\ cdot V\ Cdot P ^/ダガー $ が構築されます。U_j $ は、unitaries います。 通常、$P $ は、$P \ket {0} \_ a = \ sum_j \ sqrt{\ alpha_j/ \| \ vec-alpha \| \_ 2} \ket{j} \_ a $、$V = \ sum_ {j} \ket{j}\bra{j} \_ aotimes U_j $ という状態の準備を行うためのものです。
+  uid: Microsoft.Quantum.Simulation.BlockEncodingByLCU
+- summary: >-
+    対象の演算子をにエンコード `BlockEncodingReflection` します。
+
+    これにより、 `BlockEncodingReflection` 一部の演算子 $H = \ sum_ {j} | \ alpha_j | をエンコードする、$U = P\ cdot V\ Cdot P ^/ダガー $ が構築されます。U_j $ は、unitaries います。 通常、$P $ は、$P \ket {0} \_ a \ sum_j \ sqrt{\ alpha_j/ \| \ vec-alpha \| \_ 2} \ket{j} \_ a $、$V = \ sum_ {j} \ket{j}\bra{j} \_ aotimes U_j $ という状態の準備を行うためのものです。
+  uid: Microsoft.Quantum.Simulation.BlockEncodingReflectionByLCU
+- summary: >-
+    を等価のに変換 `BlockEncoding` `BLockEncodingReflection` します。
+
+    つまり、 `BlockEncoding` $H $ of 演算子をエンコードする $U $ という文字列を指定した場合は、 `BlockEncodingReflection` 同じ演算子をエンコードする $U ' $ に変換しますが $U ' ^ ダガー = U ' $ も満たされます。 これにより、$U $ の補助レジスタのサイズが 1 qubit だけ増加します。
+  uid: Microsoft.Quantum.Simulation.BlockEncodingToReflection
+- summary: '`GeneratorIndex`内の関数を取得 `GeneratorSystem` します。'
+  uid: Microsoft.Quantum.Simulation.GetGeneratorSystemFunction
+- summary: 内の用語の数を取得 `GeneratorSystem` します。
+  uid: Microsoft.Quantum.Simulation.GetGeneratorSystemNTerms
+- summary: Id の進化操作に対応する、ゼロ Hamiltonian () と一致するジェネレーターインデックスを返し `H = 0` ます。
+  uid: Microsoft.Quantum.Simulation.IdentityGeneratorIndex
+- summary: Id 進化操作に対応する、ゼロ Hamiltonian と一貫性のあるジェネレーターシステムを返し `H = 0` ます。
+  uid: Microsoft.Quantum.Simulation.IdentityGeneratorSystem
+- summary: Hamiltonian と一貫性のある時間に依存するジェネレーターシステムを返し `H(s) = 0` ます。
+  uid: Microsoft.Quantum.Simulation.IdentityTimeDependentGeneratorSystem
+- summary: の実装で使用されます。 `PauliBlockEncoding`
+  uid: Microsoft.Quantum.Simulation.IdxToCoeff
+- summary: の実装で使用されます。 `PauliBlockEncoding`
+  uid: Microsoft.Quantum.Simulation.IdxToUnitary
+- summary: 整数をシングル qubit の P# li 演算子に変換します。
+  uid: Microsoft.Quantum.Simulation.IntToPauli
+- summary: '`TimeDependentGeneratorSystem`2 つのの間の線形補間を表すを返し `GeneratorSystem` ます。'
+  uid: Microsoft.Quantum.Simulation.InterpolateGeneratorSystems
+- summary: '`GeneratorSystems`0 から1までのスケジュールパラメーターに従って、2つの間を直線的に補間 `s` します。'
+  uid: Microsoft.Quantum.Simulation.InterpolateGeneratorSystemsImpl
+- summary: 一定のスケジュールで2つのジェネレーターの間を補間し、結果として得られる時間に依存するジェネレーターの下で、シミュレートされた進化を qubit レジスタに適用する操作を返します。
+  uid: Microsoft.Quantum.Simulation.InterpolatedEvolution
+- summary: 整数の配列をシングル qubit の演算子の配列に変換します。
+  uid: Microsoft.Quantum.Simulation.IntsToPaulis
+- summary: 内の係数を乗算 `GeneratorIndex` します。
+  uid: Microsoft.Quantum.Simulation.MultiplyGeneratorIndex
+- summary: 内のすべての用語の係数を乗算し `GeneratorSystem` ます。
+  uid: Microsoft.Quantum.Simulation.MultiplyGeneratorSystem
+- summary: >-
+    Hamiltonian のブロックエンコードのユニタリを作成します。
+
+    Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $ は、$ $ \ $P $ という実数の合計によって記述されます。
+  uid: Microsoft.Quantum.Simulation.PauliBlockEncoding
+- summary: によって記述された、によって記述されたの係数を抽出 `GeneratorIndex` します。
+  uid: Microsoft.Quantum.Simulation.PauliCoefficientFromGenIdx
+- summary: Dynamical generator を simulatable ゲートのセットとして表し、拡張を p にします。
+  uid: Microsoft.Quantum.Simulation.PauliEvolutionFunction
+- summary: Dynamical generator を simulatable ゲートのセットとして表し、拡張を p にします。
+  uid: Microsoft.Quantum.Simulation.PauliEvolutionSet
+- summary: の実装で使用されます。 `PauliBlockEncoding`
+  uid: Microsoft.Quantum.Simulation.PauliLCUUnitary
+- summary: によって記述される psystem.string li 文字列とその qubit インデックスを抽出し `GeneratorIndex` ます。
+  uid: Microsoft.Quantum.Simulation.PauliStringFromGenIdx
+- summary: ブロックエンコードのリフレクションをクォンタムウォークに変換します。
+  uid: Microsoft.Quantum.Simulation.QuantumWalkByQubitization
+- summary: '`GeneratorSystem`新しい GeneratorSystem を作成するために、複数のを追加します。'
+  uid: Microsoft.Quantum.Simulation.SumGeneratorSystems
+- summary: '`TimeDependentSimulationAlgorithm` Trotter – Suzuki 分解を使用して、時間に依存する型の式を解決する、ユニタリ演算子に近い関数。'
+  uid: Microsoft.Quantum.Simulation.TimeDependentTrotterSimulationAlgorithm
+- summary: '`SimulationAlgorithm` Trotter – Suzuki 分解を使用して、時間の進化演算子 _exp (-iHt)_ を概算する関数。'
+  uid: Microsoft.Quantum.Simulation.TrotterSimulationAlgorithm
+- summary: Trotter – Suzuki 分解を使用して、「」で説明されているシステムによる時間の短縮の単一の時間ステップを実装 `EvolutionGenerator` します。
+  uid: Microsoft.Quantum.Simulation.TrotterStep
+- summary: '`GeneratorSystem`新しいを作成するために、2つのを追加し `GeneratorSystem` ます。'
+  uid: Microsoft.Quantum.Simulation._AddGeneratorSystems
+- summary: Hamiltonian と整合性のあるジェネレーターシステムを返し `H(s) = 0` `s` ます。は schedule パラメーターです。
+  uid: Microsoft.Quantum.Simulation._IdentityTimeDependentGeneratorSystem
+- summary: 内のすべての用語の係数を乗算し `GeneratorSystem` ます。
+  uid: Microsoft.Quantum.Simulation._MultiplyGeneratorSystem
+- summary: >-
+    Hamiltonian のブロックエンコードのユニタリを作成します。
+
+    Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $ は、$ $ \ $P $ という実数の合計によって記述されます。
+  uid: Microsoft.Quantum.Simulation._PauliBlockEncoding
+name: Microsoft.Quantum.Simulation
+newtypes:
+- summary: >-
+    任意の演算子が左上のブロックでエンコードされる場合の、その中の任意の演算子を指定します。
+
+    $U つまり、は、 `BlockEncoding` $H $ \ket _a $ に対応する、任意の演算子を、システムレジスタに対して作用する、$ `s` $ という補助型の上位左ブロックにエンコードすることを意味し {0} ます。 つまり、$ $ \begin{align} (\bra {0} _a \ otimes I_s) U (\ket {0} _a/otimes I_s) = H \end{align} $ $ です。
+  uid: Microsoft.Quantum.Simulation.BlockEncoding
+- summary: '`BlockEncoding`リフレクションでもあるを表します。'
+  uid: Microsoft.Quantum.Simulation.BlockEncodingReflection
+- summary: >-
+    Dynamical generator を simulatable ゲートのセットとして表し、拡張をその基準として表します。
+
+    使用条件の最後のパラメーター。
+  uid: Microsoft.Quantum.Simulation.EvolutionGenerator
+- summary: >-
+    時間に依存する dynamical ジェネレーターを表します。
+
+    パラメーターは、 `Double` $ [0, 1] $ のスケジュールです。
+  uid: Microsoft.Quantum.Simulation.EvolutionSchedule
+- summary: >-
+    シミュレーションアルゴリズムを実装するために簡単に実装して使用できるゲートのセットを表します。
+
+    セット内の要素は、によってインデックスが作成され、  <xref:microsoft.quantum.simulation.generatorindex> 各セットはからの関数によって記述され `GeneratorIndex` ます。これは  <xref:microsoft.quantum.simulation.evolutionunitary> 、時間を表す実数によってパラメーター化された操作です。
+  uid: Microsoft.Quantum.Simulation.EvolutionSet
+- summary: >-
+    ユニタリ時間の進化演算子を表します。
+
+    1つ目のパラメーターは、時間の進化の期間であり、2番目のパラメーターは、ユニタリによって実行される qubit レジスタです。
+  uid: Microsoft.Quantum.Simulation.EvolutionUnitary
+- summary: >-
+    すべての dynamical ジェネレーター (Hermitian 演算子など) のセットに含まれる1つのプリミティブ用語を表します。これは、を通じてジェネレーターによる時間の進化にジェネレーターからのマップが存在します。 `EvolutionSet`
+
+    最初の要素 (Int [], Double []) は、1つの用語にインデックスが付けられています。たとえば、P# li 文字列の場合は、係数0.5 を使用して、([1, 1, 2], [0.5]) によってインデックスが作成されます。 また、X cos φ + Y sin φなど、連続変数によってパラメーター化された Hamiltonians は、インスタンスを ([], [φ]) で表すことができます。 2番目の要素は、ジェネレーターが動作するサブシステムのインデックスを生成します。
+  uid: Microsoft.Quantum.Simulation.GeneratorIndex
+- summary: >-
+    Es のコレクションを表し `GeneratorIndex` ます。
+
+    このコレクションを1つのインデックス整数を使用して繰り返し処理します。コレクションのサイズは既知であると見なされます。
+  uid: Microsoft.Quantum.Simulation.GeneratorSystem
+- summary: >-
+    時間に依存しないシミュレーションアルゴリズムを表します。
+
+    時間に依存しないシミュレーション手法では、を <xref:microsoft.quantum.simulation.evolutiongenerator> 一定の時間間隔での時間の増加に変換します。
+  uid: Microsoft.Quantum.Simulation.SimulationAlgorithm
+- summary: >-
+    `BlockEncoding`クロックレジスタによって制御されるを表します。
+
+    つまり、は、 `TimeDependentBlockEncoding` clock レジスタの状態 $ \ket{k} d $ によって制御されている、 _`d` 任意の演算子 $H _k $ を持つ任意の演算子が、 `s` 補助型 $ \ket a $ に対応する左上のブロックでエンコードされるように、時計の $U $ によって制御され {0} _ます。つまり、$ $ \begin{align} (\bra {0} \_ aotimes i_ {Ds}) U (\ket {0} \_ aotimes i_ {ds}) = \ sum_ {k} \ket{k}\bra{k} \_ otimes H_k です。 \end{align} $ $。
+  uid: Microsoft.Quantum.Simulation.TimeDependentBlockEncoding
+- summary: 時間に依存する dynamical ジェネレーターを、time から dynamical generator の値までの関数として表します。
+  uid: Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem
+- summary: >-
+    時間に依存するシミュレーションアルゴリズムを表します。
+
+    時間に依存するシミュレーション手法では、を <xref:microsoft.quantum.simulation.evolutionschedule> 一定の時間間隔の時間の短縮形に変換します。
+  uid: Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm
+- summary: は、ユニタリ演算子での進化を表します。
+  uid: Microsoft.Quantum.Simulation.Unitary
+operations:
+- summary: を使用して状態の準備を実行し、その後、を使用して `statePrepUnitary` adiabatic 状態の準備を行い `adiabaticUnitary` ます。最後に、を使用して、結果の状態に関してフェーズの推定を行い `qpeUnitary` `phaseEstAlgorithm` ます。
+  uid: Microsoft.Quantum.Simulation.AdiabaticStateEnergyUnitary
+- summary: '`BlockEncodingToReflection` の実装です。'
+  uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingAsReflection
+- summary: '`BlockEncodingByLCU` の実装です。'
+  uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingByLCU
+- summary: ((LittleEndian, Qubit []) => () を BlockEncoding に変換します。
+  uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingFromBEandQubit
+- summary: の実装で使用されます。 `PauliBlockEncoding`
+  uid: Microsoft.Quantum.Simulation.ApplyPauliLCUUnitary
+- summary: '`Qubitization` の実装です。'
+  uid: Microsoft.Quantum.Simulation.ApplyQuantumWalkByQubitization
+- summary: を `statePrepUnitary` 使用して、自動的に割り当てられた入力状態フェーズ推定にを適用して、状態の準備を実行し `qpeUnitary` `phaseEstAlgorithm` ます。
+  uid: Microsoft.Quantum.Simulation.EstimateEnergy
+- summary: 自動的に割り当てられた入力状態にを適用することによって状態の準備を実行した後、を使用して adiabatic 状態の準備を実行した後、を使用して `statePrepUnitary` `adiabaticUnitary` `qpeUnitary` 結果の状態に関する最後のフェーズ推定を実行し `phaseEstAlgorithm` ます。
+  uid: Microsoft.Quantum.Simulation.EstimateEnergyWithAdiabaticEvolution
+- summary: >-
+    Dynamical generator を simulatable ゲートのセットとして表し、拡張を p にします。
+
+    詳細については、「 [Dynamical Generator モデリング](/quantum/libraries/data-structures#dynamical-generator-modeling) 」を参照してください。
+  uid: Microsoft.Quantum.Simulation.PauliEvolutionImpl
+- summary: 時間に依存する Schrödinger 式を解決するための、複数の Trotter ステップの実装。
+  uid: Microsoft.Quantum.Simulation.TimeDependentTrotterSimulationAlgorithmImpl
+- summary: に対してを繰り返し呼び出し `TrotterStep` 、時間の進化演算子 exp ( _-iht_ ) を概算します。
+  uid: Microsoft.Quantum.Simulation.TrotterSimulationAlgorithmImpl
+- summary: に含まれる用語によって時間の進化を実装 `GeneratorSystem` します。
+  uid: Microsoft.Quantum.Simulation.TrotterStepImpl
+summary: この名前空間には、クォンタムシステムのダイナミクスをシミュレートする一貫の関数と操作が含まれています。
+uid: Microsoft.Quantum.Simulation
+metadata:
+  ms.openlocfilehash: dd1c6fe3baab8788047020bbe3d5dbe2888dec45
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92725780"
