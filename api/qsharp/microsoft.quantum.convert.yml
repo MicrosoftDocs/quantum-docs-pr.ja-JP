@@ -1,0 +1,58 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 指定した大きい整数をブール値の配列に変換します。 配列の0要素は、大きい整数の最下位ビットです。
+  uid: Microsoft.Quantum.Convert.BigIntAsBoolArray
+- summary: 指定したブール値の配列を等価の大きい整数に変換します。 配列の0要素は、大きい整数の最下位ビットです。
+  uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt
+- summary: リトルエンディアン形式のビット文字列から正の整数を生成します。
+  uid: Microsoft.Quantum.Convert.BoolArrayAsInt
+- summary: ビット文字列を指定した場合は、single qubit の演算子の配列として表されるマルチ qubit の P# li 演算子を返します。
+  uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
+- summary: 型を `Bool[]` 型に変換 `Result[]` `true` します。ここで、はにマップされ、 `One` `false` はにマップされ `Zero` ます。
+  uid: Microsoft.Quantum.Convert.BoolArrayAsResultArray
+- summary: 型を `Bool` 型に変換 `Result` `true` します。ここで、はにマップされ、 `One` `false` はにマップされ `Zero` ます。
+  uid: Microsoft.Quantum.Convert.BoolAsResult
+- summary: 指定したブール値を等価の文字列形式に変換します。
+  uid: Microsoft.Quantum.Convert.BoolAsString
+- summary: 指定した倍精度浮動小数点数値を等価の文字列形式に変換します。
+  uid: Microsoft.Quantum.Convert.DoubleAsString
+- summary: 指定した書式を使用して、指定した倍精度浮動小数点数を等価の文字列形式に変換します。
+  uid: Microsoft.Quantum.Convert.DoubleAsStringWithFormat
+- summary: 関数を操作に変換します。
+  uid: Microsoft.Quantum.Convert.FunctionAsOperation
+- summary: 指定した整数を等価の大きな整数に変換します。
+  uid: Microsoft.Quantum.Convert.IntAsBigInt
+- summary: 返された配列に対してリトルエンディアン表現を使用して、正の整数のバイナリ表現を生成します。
+  uid: Microsoft.Quantum.Convert.IntAsBoolArray
+- summary: 指定した整数を等価の倍精度浮動小数点数に変換します。
+  uid: Microsoft.Quantum.Convert.IntAsDouble
+- summary: 指定した整数値を等価の文字列形式に変換します。
+  uid: Microsoft.Quantum.Convert.IntAsString
+- summary: 指定した書式を使用して、指定した整数値を等価の文字列形式に変換します。
+  uid: Microsoft.Quantum.Convert.IntAsStringWithFormat
+- summary: 可能な場合は、指定した大きい整数を等価の整数に変換します。 関数は、変換が可能であった場合にのみ、結果として得られる整数とブール値のフラグのペアを返します。
+  uid: Microsoft.Quantum.Convert.MaybeBigIntAsInt
+- summary: シングル qubit の演算子の配列として表されるマルチ qubit の Pan Li 演算子を整数にエンコードします。
+  uid: Microsoft.Quantum.Convert.PauliArrayAsInt
+- summary: Start. で列挙された整数の配列を作成します `arr` 。ステップ..終わり。
+  uid: Microsoft.Quantum.Convert.RangeAsIntArray
+- summary: 型を `Result[]` 型に変換 `Bool[]` `One` します。ここで、はにマップされ、 `true` `Zero` はにマップされ `false` ます。
+  uid: Microsoft.Quantum.Convert.ResultArrayAsBoolArray
+- summary: リトルエンディアン形式の結果の文字列から正の整数を生成します。
+  uid: Microsoft.Quantum.Convert.ResultArrayAsInt
+- summary: 型を `Result` 型に変換 `Bool` `One` します。ここで、はにマップされ、 `true` `Zero` はにマップされ `false` ます。
+  uid: Microsoft.Quantum.Convert.ResultAsBool
+name: Microsoft.Quantum.Convert
+newtypes: []
+operations:
+- summary: 指定された入力を使用して関数を呼び出します。
+  uid: Microsoft.Quantum.Convert.Call
+summary: 'この名前空間には、さまざまな Q # データ型の間で変換を行うための関数が含まれています。'
+uid: Microsoft.Quantum.Convert
+metadata:
+  ms.openlocfilehash: d22f0735b800d2e9a34f8c7ce58353850a4cdded
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92713820"

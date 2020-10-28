@@ -1,0 +1,374 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >+
+    > [!WARNING]
+
+    > AbsB は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.AbsL> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.absl" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.AbsB
+- summary: >+
+    > [!WARNING]
+
+    > AbsD は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.AbsD> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.absd" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.AbsD
+- summary: >+
+    > [!WARNING]
+
+    > AbsI の使用は推奨されていません。 代わりに、<xref:Microsoft.Quantum.Math.AbsI> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.absi" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.AbsI
+- summary: >+
+    > [!WARNING]
+
+    > ArcCos の使用は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Math.ArcCos> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.arccos" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcCos
+- summary: >+
+    > [!WARNING]
+
+    > ArcSin は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.ArcSin> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.arcsin" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcSin
+- summary: >+
+    > [!WARNING]
+
+    > ArcTan は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Math.ArcTan> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.arctan" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcTan
+- summary: >+
+    > [!WARNING]
+
+    > ArcTan2 は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.ArcTan2> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.arctan2" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcTan2
+- summary: >+
+    > [!WARNING]
+
+    > シーリングは非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Math.Ceiling> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.ceiling" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.Ceiling
+- summary: >+
+    > [!WARNING]
+
+    > Cos は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Math.Cos> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.cos" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.Cos
+- summary: >+
+    > [!WARNING]
+
+    > Cosh は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.Cosh> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.cosh" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.Cosh
+- summary: >+
+    > [!WARNING]
+
+    > DivRemB は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.DivRemL> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.divreml" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.DivRemB
+- summary: >+
+    > [!WARNING]
+
+    > E は非推奨とされます。 代わりに、<xref:Microsoft.Quantum.Math.E> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.e" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.E
+- summary: >+
+    > [!WARNING]
+
+    > この関数は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.ExpD> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.expd" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.ExpD
+- summary: >+
+    > [!WARNING]
+
+    > Floor は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.Floor> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.floor" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.Floor
+- summary: >+
+    > [!WARNING]
+
+    > Ieeeremは非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.IEEERemainder> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.ieeeremainder" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.IEEERemainder
+- summary: >+
+    > [!WARNING]
+
+    > ログは非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Math.Log> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.log" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.Log
+- summary: >+
+    > [!WARNING]
+
+    > Log10 は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.Log10> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.log10" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.Log10
+- summary: >+
+    > [!WARNING]
+
+    > MaxB は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.MaxL> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.maxl" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.MaxB
+- summary: >+
+    > [!WARNING]
+
+    > MaxD は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.MaxD> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.maxd" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.MaxD
+- summary: >+
+    > [!WARNING]
+
+    > MaxI は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Math.MaxI> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.maxi" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.MaxI
+- summary: >+
+    > [!WARNING]
+
+    > MinB の使用は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Math.MinL> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.minl" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.MinB
+- summary: >+
+    > [!WARNING]
+
+    > 注意が非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Math.MinD> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.mind" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.MinD
+- summary: >+
+    > [!WARNING]
+
+    > ミニは非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.MinI> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.mini" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.MinI
+- summary: >+
+    > [!WARNING]
+
+    > ModPowB は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.ModPowL> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.modpowl" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.ModPowB
+- summary: >+
+    > [!WARNING]
+
+    > PI の使用は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Math.PI> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.pi" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.PI
+- summary: >+
+    > [!WARNING]
+
+    > PowD は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.PowD> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.powd" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.PowD
+- summary: >+
+    > [!WARNING]
+
+    > Round は非推奨とされます。 代わりに、<xref:Microsoft.Quantum.Math.Round> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.round" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.Round
+- summary: >+
+    > [!WARNING]
+
+    > SignB は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.SignL> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.signl" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.SignB
+- summary: >+
+    > [!WARNING]
+
+    > SignD は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.SignD> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.signd" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.SignD
+- summary: >+
+    > [!WARNING]
+
+    > SignI の使用は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Math.SignI> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.signi" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.SignI
+- summary: >+
+    > [!WARNING]
+
+    > Sin は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.Sin> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.sin" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.Sin
+- summary: >+
+    > [!WARNING]
+
+    > Sinh は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.Sinh> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.sinh" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.Sinh
+- summary: >+
+    > [!WARNING]
+
+    > Sqrt は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Math.Sqrt> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.sqrt" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.Sqrt
+- summary: >+
+    > [!WARNING]
+
+    > Tan は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Math.Tan> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.tan" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.Tan
+- summary: >+
+    > [!WARNING]
+
+    > Tanh は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Math.Tanh> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.tanh" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.Tanh
+- summary: >+
+    > [!WARNING]
+
+    > Truncate の使用は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Math.Truncate> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.math.truncate" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Math.Truncate
+name: Microsoft.Quantum.Extensions.Math
+newtypes: []
+operations: []
+summary: ''
+uid: Microsoft.Quantum.Extensions.Math
+metadata:
+  ms.openlocfilehash: c07f137eaca95237d581691008c614025dd35a1d
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92712089"

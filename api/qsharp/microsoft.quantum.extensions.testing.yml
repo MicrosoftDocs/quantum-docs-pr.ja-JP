@@ -1,0 +1,100 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Extensions.Testing
+newtypes: []
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > AssertAllZero は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Diagnostics.AssertAllZero> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.diagnostics.assertallzero" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertAllZero
+- summary: >+
+    > [!WARNING]
+
+    > AssertAllZeroTol は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Diagnostics.AssertAllZeroWithinTolerance> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.diagnostics.assertallzerowithintolerance" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertAllZeroTol
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualInPlace は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlace> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.diagnostics.assertoperationsequalinplace" を使用してください。
+
+    > この操作の引数の順序が変更されていることに注意してください。
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlace
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualInPlaceCompBasis は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlaceCompBasis> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis" を使用してください。
+
+    > この操作の引数の順序が変更されていることに注意してください。
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlaceCompBasis
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualReferenced は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualReferenced> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.diagnostics.assertoperationsequalreferenced" を使用してください。
+
+    > この操作の引数の順序が変更されていることに注意してください。
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualReferenced
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubit は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Diagnostics.AssertQubit> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.diagnostics.assertqubit" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubit
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubitState は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubitState
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubitTol は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.diagnostics.assertqubitwithintolerance" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubitTol
+summary: ''
+uid: Microsoft.Quantum.Extensions.Testing
+metadata:
+  ms.openlocfilehash: 717665e821b4e56b01664e6e0ed940cacd2a485c
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92712098"

@@ -1,0 +1,109 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: ブール値の2つの配列が等しいことをアサートします。
+  uid: Microsoft.Quantum.Diagnostics.AllEqualityFactB
+- summary: 整数値の2つの配列が等しいことをアサートします。
+  uid: Microsoft.Quantum.Diagnostics.AllEqualityFactI
+- summary: クラシック条件が false であることを宣言します。
+  uid: Microsoft.Quantum.Diagnostics.Contradiction
+- summary: 現在のターゲットコンピューターの状態をダンプします。
+  uid: Microsoft.Quantum.Diagnostics.DumpMachine
+- summary: 指定した qubits に関連付けられている現在のターゲットコンピューターの状態をダンプします。
+  uid: Microsoft.Quantum.Diagnostics.DumpRegister
+- summary: クラシック Bool 変数に予期される値があることをアサートします。
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactB
+- summary: 複素数に予期される値があることをアサートします。
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactC
+- summary: 複素数に予期される値があることをアサートします。
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactCP
+- summary: クラシック Int 変数に予期される値があることをアサートします。
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactI
+- summary: 古典 BigInt 変数に予期される値があることをアサートします。
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactL
+- summary: 古典的な結果変数に予期される値があることをアサートします。
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactR
+- summary: 古典的な浮動小数点値が、指定された絶対許容範囲に最大の予測値を持つことを示す要求を表します。
+  uid: Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact
+- summary: クラシック条件が true であることを宣言します。
+  uid: Microsoft.Quantum.Diagnostics.Fact
+- summary: 意味のあるエラーメッセージで失敗するために使用される内部関数です。
+  uid: Microsoft.Quantum.Diagnostics.FormattedFailure
+- summary: 古典的な複素数の値が、最小許容範囲である 1e-10 になるようにアサートします。
+  uid: Microsoft.Quantum.Diagnostics.NearEqualityFactC
+- summary: 古典的な複素数の値が、最小許容範囲である 1e-10 になるようにアサートします。
+  uid: Microsoft.Quantum.Diagnostics.NearEqualityFactCP
+- summary: 古典的な浮動小数点値が、最小の許容範囲 (1e-10) までの予測値を持つことをアサートします。
+  uid: Microsoft.Quantum.Diagnostics.NearEqualityFactD
+name: Microsoft.Quantum.Diagnostics
+newtypes:
+- summary: 型を読み込むとき、またはテスト目的で呼び出すことができる代替名を定義できる、コンパイラで認識される属性。
+  uid: Microsoft.Quantum.Diagnostics.EnableTestingViaName
+- summary: 単体テストをマークするために使用されるコンパイラ認識属性。
+  uid: Microsoft.Quantum.Diagnostics.Test
+operations:
+- summary: この操作とその adjoint の呼び出しの間に、指定された操作が特定の回数だけ呼び出されることをアサートします。
+  uid: Microsoft.Quantum.Diagnostics.AllowAtMostNCallsCA
+- summary: この操作とその adjoint の呼び出しの間には、指定された数の追加の qubits が使用され、ステートメントを使用して割り当てられます。
+  uid: Microsoft.Quantum.Diagnostics.AllowAtMostNQubits
+- summary: 指定された qubits はすべて $ \ket {0} $ 状態です。
+  uid: Microsoft.Quantum.Diagnostics.AssertAllZero
+- summary: 指定された qubits のアサートはすべて、指定された許容範囲内の $ \ket {0} $ 状態にあります。
+  uid: Microsoft.Quantum.Diagnostics.AssertAllZeroWithinTolerance
+- summary: 指定された P# li の指定した qubits を測定すると、常に指定された結果が得られることをアサートします。
+  uid: Microsoft.Quantum.Diagnostics.AssertMeasurement
+- summary: 指定された型の指定された qubits を測定すると、特定の確率で特定の結果が許容範囲内にあることをアサートします。
+  uid: Microsoft.Quantum.Diagnostics.AssertMeasurementProbability
+- summary: >-
+    2つの操作を指定すると、すべての入力状態で同じ動作をするようにアサートされます。
+
+    このアサーションは、フォームのすべての状態に対して操作のアクションを確認することによって実装されます。 $V 0/otimes V_ {n-1} $ です。 $V _k $ は、状態 $ \ket {0} $、$ \ket {1} $、$ \ket{+} $、$ \ket{i} $ (+ 1 eigenstate of Pauli Y 演算子) です
+
+    このアサーションは $n $ qubits を使用し、比較対象の操作の複数の呼び出しを必要とします。
+  uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlace
+- summary: 演算の操作が、指定された入力サイズに対する演算と等しいかどうかをチェックします。演算の操作は、 `givenU` `expectedU` 計算ベースのベクターに対してのみ操作のアクションをチェックします。 これは、2つの unitaries 等しいかどうかについて、十分ではなく、必要な条件です。
+  uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlaceCompBasis
+- summary: >-
+    2つの操作を指定すると、すべての入力状態で同じ動作をするようにアサートされます。
+
+    このアサーションは、Jamiołkowski isomorphism を使用することによって実装されます。このアサーションは、2つのありレジスタの qubit 状態アサーションのいずれかに軽減されます。 このため、この操作では、テスト対象の各操作を1回だけ呼び出す必要がありますが、割り当てられる qubits は2倍必要です。 このアサーションを使用して、最適化されたバージョンの操作がその単純な実装と同じように動作すること、またはクォンタム以外の入力の範囲に対して動作する操作が既知のケースと一致することを確認できます。
+  uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualReferenced
+- summary: 等しい法則状態のフェーズに予期される値があることをアサートします。
+  uid: Microsoft.Quantum.Diagnostics.AssertPhase
+- summary: Qubit `q` が Pauli Z 演算子の予期される eigenstate にあることをアサートします。
+  uid: Microsoft.Quantum.Diagnostics.AssertQubit
+- summary: >-
+    予期される状態の qubit をアサートします。
+
+    `expected` 複合ベクター、$ \ket{\psi} = \begin{bmatrix}a & b\ end {bmatrix} ^ {\mathrm{T}} $ を表します。 各 $a $、$b $ を表す組の最初の要素は複素数の実数部ですが、2番目の要素は虚数部です。 最後の引数は、アサーションが行われる許容範囲を定義します。
+  uid: Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance
+- summary: '`q`指定された許容範囲を上限として、Pauli Z 演算子の予期される eigenstate に qubit があることをアサートします。'
+  uid: Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance
+- summary: 操作が指定された場合、現在の実行ターゲットで使用できるようになった操作に関する診断が表示されます。
+  uid: Microsoft.Quantum.Diagnostics.DumpOperation
+- summary: DumpRegister を使用して、参照およびターゲットレジスタの状態に関する診断を提供します。 1つの結合レジスタとしてではなく、個別のレジスタとしてオーバーライドおよび解釈できるようにするために、個別の操作として記述されます。
+  uid: Microsoft.Quantum.Diagnostics.DumpReferenceAndTarget
+- summary: 2つの操作を適用した結果が同じであるかどうかを確認し `givenU` `expectedU` ます。 ベース状態は、パラメーターによって記述され `basis` ます。 <xref:microsoft.quantum.extensions.fliptobasis>この説明の詳細については、「関数」を参照してください。
+  uid: Microsoft.Quantum.Diagnostics._assertEqualOnBasisVector
+- summary: >-
+    $ \Ket {0} \otimes\cdots\ket {0} $ を $ \ket{\ psi_0} \ otimes \ket{\ psi_ {n-1}} $ にマップする unitaries 適用します。 $ \ket{\ psi_k} $ は、に依存 `basis[k]` します。
+
+    `basis[k]`と $ \ket{\ psi_k} $ の値の対応は次のとおりです。
+
+    - `basis[k]=0` $ \rightarrow \ket {0} $。 - `basis[k]=1` $ \rightarrow \ket {1} $。 - `basis[k]=2` $ \rightarrow \ket{+} $。 - `basis[k]=3` $ \rightarrow \ket{i} $ (+ 1 eigenstate of P# li Y)。
+  uid: Microsoft.Quantum.Diagnostics._flipToBasis
+- summary: デカルト積を使用して変数を反復処理します [0,、境界 [0]-1] × [0,、境界 [1]-1] × [0,、境界 [長さ (境界)-1]-1]、デカルト積のすべての要素に対して op (arr) を呼び出します。
+  uid: Microsoft.Quantum.Diagnostics._iterateThroughCartesianPower
+- summary: >-
+    2つのレジスタが指定されている場合、によって、各レジスタの qubits の各ペアの間に下回っあり状態が準備されます。 すべての qubits は、| 0 ⟩状態で開始する必要があります。
+
+    結果として、各レジスタからの対応する qubits のペアは、$ \ket{\ {beta_ {00} } beta_ {00} } $ にあります。
+  uid: Microsoft.Quantum.Diagnostics._prepareEntangledState
+summary: ''
+uid: Microsoft.Quantum.Diagnostics
+metadata:
+  ms.openlocfilehash: d39cd1cac6121bd411fc0c87024254599bbb0641
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92713237"
