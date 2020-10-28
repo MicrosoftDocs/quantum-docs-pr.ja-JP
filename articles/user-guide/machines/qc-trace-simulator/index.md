@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7f5e25aa7b58277642783e03d03854cd75ff4ca3
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: 2e2d9f8494d8709fba34123793cecce4011b609a
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771287"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690835"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft Quantum Development Kit (QDK) の量子トレース シミュレーター
 
@@ -55,7 +55,7 @@ namespace Quantum.MyProgram
 
 量子トレース シミュレーターでは実際の量子状態がシミュレートされないため、操作内の測定結果の確率を計算することはできません。 
 
-したがって、操作に測定が含まれている場合は、<xref:microsoft.quantum.diagnostics> 名前空間の <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 操作を使用して、これらの確率を明示的に指定する必要があります。 次の例を使って説明します。
+したがって、操作に測定が含まれている場合は、<xref:Microsoft.Quantum.Diagnostics> 名前空間の <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> 操作を使用して、これらの確率を明示的に指定する必要があります。 次の例を使って説明します。
 
 ```qsharp
 operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
