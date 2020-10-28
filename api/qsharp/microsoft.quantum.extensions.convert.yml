@@ -1,0 +1,114 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >+
+    > [!WARNING]
+
+    > BigIntToBools は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Convert.BigIntAsBoolArray> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.convert.bigintasboolarray" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Convert.BigIntToBools
+- summary: >+
+    > [!WARNING]
+
+    > ブール型は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Convert.BoolArrayAsBigInt> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.convert.boolarrayasbigint" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Convert.BoolsToBigInt
+- summary: >+
+    > [!WARNING]
+
+    > P# liarraytoint は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Convert.PauliArrayAsInt> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.convert.pauliarrayasint" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Convert.PauliArrayToInt
+- summary: >+
+    > [!WARNING]
+
+    > ToBigInt は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Convert.IntAsBigInt> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.convert.intasbigint" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Convert.ToBigInt
+- summary: >+
+    > [!WARNING]
+
+    > ToDouble は非推奨とされます。 代わりに、<xref:Microsoft.Quantum.Convert.IntAsDouble> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.convert.intasdouble" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Convert.ToDouble
+- summary: >+
+    > [!WARNING]
+
+    > ToStringB の使用は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Convert.BoolAsString> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.convert.boolasstring" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Convert.ToStringB
+- summary: >+
+    > [!WARNING]
+
+    > ToStringD の使用は非推奨とされました。 代わりに、<xref:Microsoft.Quantum.Convert.DoubleAsString> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.convert.doubleasstring" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Convert.ToStringD
+- summary: >+
+    > [!WARNING]
+
+    > ToStringDFormat は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Convert.DoubleAsStringWithFormat> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.convert.doubleasstringwithformat" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Convert.ToStringDFormat
+- summary: >+
+    > [!WARNING]
+
+    > ToStringI は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Convert.IntAsString> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.convert.intasstring" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Convert.ToStringI
+- summary: >+
+    > [!WARNING]
+
+    > ToStringIFormat は非推奨とされます。 代わりに、<xref:Microsoft.Quantum.Convert.IntAsStringWithFormat> を使用してください。
+
+    >
+
+    > @"microsoft.quantum.convert.intasstringwithformat" を使用してください。
+
+  uid: Microsoft.Quantum.Extensions.Convert.ToStringIFormat
+name: Microsoft.Quantum.Extensions.Convert
+newtypes: []
+operations: []
+summary: 'これらは、Q # 型システム内で関連する .NET CLR の system.string 名前空間の関数の一部です。'
+uid: Microsoft.Quantum.Extensions.Convert
+metadata:
+  ms.openlocfilehash: 1d03a685b323a4424055da4c10137af78268bb5f
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92711048"

@@ -1,0 +1,57 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Dynamical generator を simulatable ゲートと JWOptimized ベースの拡張のセットとして表します。
+  uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedFermionEvolutionFunction
+- summary: によって記述された Hamiltonian を `JWOptimizedHTerms` 、 `GeneratorSystem` `GeneratorIndex` このファイルで定義されている規則に従って表現したに変換します。
+  uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedGeneratorSystem
+- summary: Dynamical generator を simulatable ゲートのセットとして表し、拡張を p にします。
+  uid: Microsoft.Quantum.Research.Chemistry.JordanWignerOptimizedFermionEvolutionSet
+- summary: 最適化された Trotter step 操作と、それを実行するために必要なパラメーターを返します。
+  uid: Microsoft.Quantum.Research.Chemistry.OptimizedTrotterStepOracle
+- summary: の従来の処理手順 `ApplyDeltaParity` 。 これにより、2つの PQRS 間でパリティの違いを評価するためのコントロール qubits の一覧が計算されます。長さが偶数の用語。
+  uid: Microsoft.Quantum.Research.Chemistry._DeltaParityCNOTbitstring
+name: Microsoft.Quantum.Research.Chemistry
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Research.Chemistry.ApplyBasisChange
+- summary: 前の PQRS 間のパリティの差を計算します...用語と次の PQRS...句. この違いは補助 qubit で計算されます。
+  uid: Microsoft.Quantum.Research.Chemistry.ApplyDeltaParity
+- summary: スピン orbitals を利用して、評価版の状態を簡単に準備
+  uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedStatePreparation
+- summary: Z 演算子の基礎を Y 演算子に変更するために使用します。 活用形.
+  uid: Microsoft.Quantum.Research.Chemistry.TransformZToX
+- summary: Z 演算子の基準を活用形で Y 演算子に変更するために使用します。
+  uid: Microsoft.Quantum.Research.Chemistry.TransformZToY
+- summary: ''
+  uid: Microsoft.Quantum.Research.Chemistry._ApplyOptimizedTrotterStep
+- summary: によって記述された PQRS 用語によって時間の進化を適用 `GeneratorIndex` します。
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimized0123Term
+- summary: の実装手順 `JWOptimized0123Term_`
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimized0123TermImpl
+- summary: >-
+    Dynamical generator を simulatable ゲートと JWOptimized ベースの拡張のセットとして表します。
+
+    詳細については、「 [Dynamical Generator モデリング](../libraries/data-structures#dynamical-generator-modeling) 」を参照してください。
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedFermionEvolution
+- summary: によって記述された PQ 用語によって時間の進化を適用 `GeneratorIndex` します。
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedHpqTerm
+- summary: の実装手順 `JWOptimizedHpqTerm_` 。
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedHpqTermImpl
+- summary: によって記述された PQ または PQQR 用語によって時間の進化を適用 `GeneratorIndex` します。
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedPQandPQQRTerm
+- summary: フェーズの推定で、C ではなく C の Rz を2つのフェーズに回転させます。
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedZ
+- summary: によって記述された Z 語による時間の推移を適用 `GeneratorIndex` します。
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedZTerm
+- summary: によって記述された ZZ 用語によって時間の進化を適用 `GeneratorIndex` します。
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedZZTerm
+summary: この名前空間は、量子化学シミュレーションの高度な研究方法を提供します。
+uid: Microsoft.Quantum.Research.Chemistry
+metadata:
+  ms.openlocfilehash: 22850f044e31507f72d5ac505ece67112fbdccb9
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92711319"
