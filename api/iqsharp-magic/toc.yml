@@ -26,6 +26,8 @@
   name: '%chemistry.inputstate.load マジック コマンド'
 - href: config.md
   name: '%config マジック コマンド'
+- href: debug.md
+  name: '%debug マジック コマンド'
 - href: estimate.md
   name: '%estimate マジック コマンド'
 - href: kata.md
