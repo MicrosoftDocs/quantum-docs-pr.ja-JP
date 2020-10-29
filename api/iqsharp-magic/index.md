@@ -1,22 +1,23 @@
 ---
 title: IQ# マジック コマンド
+description: IQ# Jupyter カーネルで使用できるマジック コマンドをリストします。
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/26/2020
 ms.topic: article
-ms.openlocfilehash: 934ab18b667797d09d2c8188f727e64b0017e1d5
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: a615c6dac6cdb80ff84cec2b0a3c99fc700efb8e
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91464676"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691140"
 ---
 # <a name="iq-magic-commands"></a>IQ# マジック コマンド
 | マジック コマンド | まとめ |
 |---------------|---------|
 | [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Azure Quantum ワークスペースに接続するか、現在の接続状態を表示します。 |
-| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Azure Quantum ワークスペースでジョブを実行します。 |
+| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Azure Quantum ワークスペースにジョブを送信し、完了するのを待機します。 |
 | [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs) | 現在の Azure Quantum ワークスペースにジョブの一覧を表示します。 |
 | [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output) | 現在の Azure Quantum ワークスペースにジョブの結果を表示します。 |
 | [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status) | 現在の Azure Quantum ワークスペースにジョブの状態を表示します。 |
@@ -29,6 +30,7 @@ ms.locfileid: "91464676"
 | [`%chemistry.fh.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load) | 電子構造の問題に対して、フェルミオン ハミルトニアンを読み込みます。 問題はファイルから読み込まれるか、引数として渡されます。 |
 | [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load) | Broombridge の電子構造の問題を読み込み、選択した入力状態を返します。 |
 | [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config) | 構成オプションの設定またはクエリを実行できるようにします。 |
+| [`%debug`](xref:microsoft.quantum.iqsharp.magic-ref.debug) | 指定された Q# 操作または関数の実行をステップ実行します。 |
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | 指定された関数または操作を ResourcesEstimator ターゲット マシンで実行します。 |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | 1 つのテストを実行します。 |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | 現在使用可能なすべてのマジック コマンドの一覧を返します。 |

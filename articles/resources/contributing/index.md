@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0fbbe127b9f4c6b98bdc2cf0e46098bf40a816e3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a8a527df59bd7ee038de71e04003cf456b094afb
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866861"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691761"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit に貢献する
 
@@ -59,10 +59,11 @@ Quantum Development Kit には、量子プログラムを作成するための�
 - [**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler):Q# コンパイラ、Visual Studio 拡張機能、および Visual Studio Code 拡張機能。
 - [**microsoft/qsharp-runtime**](https://github.com/microsoft/qsharp-runtime):Quantum Development Kit のシミュレーション フレームワーク、コード生成、シミュレーション ターゲット マシン。
 - [**microsoft/iqsharp**](https://github.com/microsoft/iqsharp):Jupyter カーネル、Q# の Python ホスト機能、およびクラウド環境で IQ# を使用するための Docker イメージ。
+- [**microsoft/qsharp-language**](https://github.com/microsoft/qsharp-language):ここで新しい Q# 機能が開発され、指定されます。また、Q# 言語とコア ライブラリの今後の発展に関するアイデアや意見を共有できます。
 - [**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr): https://docs.microsoft.com/quantum で公開されているドキュメントのソース コード。
 
 > [!NOTE]
-> 現時点では、[**microsoft/Quantum-NC**](https://github.com/microsoft/Quantum-NC) リポジトリに関するコードとドキュメントのコントリビューションは受け付けておりませんが、バグ報告については歓迎しています。
+> 現時点では、 [**microsoft/Quantum-NC**](https://github.com/microsoft/Quantum-NC) リポジトリに関するコードとドキュメントのコントリビューションは受け付けておりませんが、バグ報告については歓迎しています。
 
 また、Quantum Development Kit に関連する補助機能に重点を置いた他の特化されたリポジトリもあります。
 
