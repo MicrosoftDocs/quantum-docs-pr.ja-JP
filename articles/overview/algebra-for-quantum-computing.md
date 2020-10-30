@@ -9,18 +9,18 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bff1da475f87278bc9e769805b3fe0fe8704d47a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 3e6700acc09adf9e2e771f6289c73ad51aa2cb90
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835130"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692248"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>量子コンピューティングの線形代数
 
 線形代数は、量子コンピューティングの数式記法です。 量子プログラムの実装や記述にその知識は必要ありませんが、量子ビットの状態や量子演算を記述するため、および量子コンピューターが一連の命令に応じて実行する処理を予測するために広く使用されています。
 
-[量子物理学の基本概念](xref:microsoft.quantum.overview.understanding)をよくわかっていることが量子コンピューティングの理解に役立つ可能性があるのと同様に、線形代数の基礎知識が、量子アルゴリズムの仕組みを理解するうえで役立つと考えられます。 少なくとも、**ベクトル**と**行列乗算**について理解しておくことをお勧めします。 これらの代数の概念についての知識を新たにする必要がある場合は、次のチュートリアルに基本的な説明があります。
+[量子物理学の基本概念](xref:microsoft.quantum.overview.understanding)をよくわかっていることが量子コンピューティングの理解に役立つ可能性があるのと同様に、線形代数の基礎知識が、量子アルゴリズムの仕組みを理解するうえで役立つと考えられます。 少なくとも、 **ベクトル** と **行列乗算** について理解しておくことをお勧めします。 これらの代数の概念についての知識を新たにする必要がある場合は、次のチュートリアルに基本的な説明があります。
 
 - [線形代数に関する Jupyter Notebook のチュートリアル](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)
 - [複雑な算術演算に関する Jupyter Notebook のチュートリアル](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)
@@ -30,7 +30,7 @@ ms.locfileid: "90835130"
 
 ## <a name="vectors-and-matrices-in-quantum-computing"></a>量子コンピューティングのベクトルと行列
 
-トピック「[量子コンピューティングについて](xref:microsoft.quantum.overview.understanding)」では、量子ビットは 1 か 0 の状態または重ね合わせ状態、もしくはこの両方の状態になることができると説明しました。 線形代数を使用すると、量子ビットの状態はベクトルとして記述され、1 列**行列** $\begin{bmatrix} a \\\\  b \end{bmatrix}$ で表されます。 これは、**量子状態ベクトル**とも呼ばれ、$|a|^2 + |b|^2 = 1$ の要件を満たす必要があります。  
+トピック「[量子コンピューティングについて](xref:microsoft.quantum.overview.understanding)」では、量子ビットは 1 か 0 の状態または重ね合わせ状態、もしくはこの両方の状態になることができると説明しました。 線形代数を使用すると、量子ビットの状態はベクトルとして記述され、1 列 **行列** $\begin{bmatrix} a \\\\  b \end{bmatrix}$ で表されます。 これは、 **量子状態ベクトル** とも呼ばれ、$|a|^2 + |b|^2 = 1$ の要件を満たす必要があります。  
 
 行列の要素は、量子ビットがどちらかの方向に収縮する確率を表しています。$|a|^2$ は 0 に収縮する確率、$|b|^2$ は 1 に収縮する確率です。 次の行列はすべて、有効な量子状態ベクトルを表しています。
 
@@ -41,7 +41,7 @@ $$\begin{bmatrix} 1 \\\\  0 \end{bmatrix}、\begin{bmatrix} 0 \\\\  1 \end{bmatr
 次に、行列乗算で表される 2 つの一般的な量子演算を示します。
 
 
-[`X` 演算](xref:microsoft.quantum.intrinsic.x)は次のパウリ行列 $X$ で表されます。
+[`X` 演算](xref:Microsoft.Quantum.Intrinsic.X)は次のパウリ行列 $X$ で表されます。
 
 $$X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}$$
     
@@ -49,7 +49,7 @@ $$X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}$$
 
 $$\begin{bmatrix}0 &1\\\\ 1 &0\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix} = \begin{bmatrix} 0 \\\\  1 \end{bmatrix}$$
 
-['H' 演算](xref:microsoft.quantum.intrinsic.h)は、次のようにアダマール変換 $H$ で表されます。
+['H' 演算](xref:Microsoft.Quantum.Intrinsic.H)は、次のようにアダマール変換 $H$ で表されます。
 
 $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}$$
 
@@ -57,13 +57,13 @@ $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}$$
 
 $$\frac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\\\  1 \end{bmatrix}=\left(\frac{1}{\sqrt{2}}\right)^2=\frac{1}{2}$$
 
-量子演算を表す行列には 1 つの要件があります。**ユニタリ**行列でなければならないということです。 行列がユニタリとなるのは、行列の**逆**が行列の**共役転置**と等しい場合です。
+量子演算を表す行列には 1 つの要件があります。 **ユニタリ** 行列でなければならないということです。 行列がユニタリとなるのは、行列の **逆** が行列の **共役転置** と等しい場合です。
 
 ## <a name="representing-two-qubit-states"></a>2 つの量子ビットの状態の表現
 
 上記の例では、1 つの量子ビットの状態が 1 列行列 $\begin{bmatrix} a \\\\  b \end{bmatrix}$ を使用して記述され、量子ビットに対する演算の適用は 2 つの行列を乗算して記述されました。 しかし、量子コンピューターでは複数の量子ビットが使用されるため、2 つのビットの結合された状態はどのように記述するのでしょうか。 
 
-各量子ビットはベクトル空間であるため、単なる乗算はできないことに注意してください。 代わりに、**テンソル積**を使用します。これは、個々のベクトル空間から新しいベクトル空間を作成する関連演算であり、$\otimes$ 記号で表されます。 たとえば、2 つの量子ビットの状態 $\begin{bmatrix} a \\\\  b \end{bmatrix}$ と $\begin{bmatrix} c \\\\  d \end{bmatrix}$ のテンソル積を計算します。
+各量子ビットはベクトル空間であるため、単なる乗算はできないことに注意してください。 代わりに、 **テンソル積** を使用します。これは、個々のベクトル空間から新しいベクトル空間を作成する関連演算であり、$\otimes$ 記号で表されます。 たとえば、2 つの量子ビットの状態 $\begin{bmatrix} a \\\\  b \end{bmatrix}$ と $\begin{bmatrix} c \\\\  d \end{bmatrix}$ のテンソル積を計算します。
 
 $$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix} $$
 
