@@ -1,14 +1,14 @@
 ---
-title: '標準ライブラリでのエラー修正 :::no-loc(Q#):::'
-description: 'プログラムでエラー修正コードを使用し :::no-loc(Q#)::: ながら、qubits の状態を保護する方法について説明します。'
+title: '標準ライブラリでのエラー修正 Q#'
+description: 'プログラムでエラー修正コードを使用し Q# ながら、qubits の状態を保護する方法について説明します。'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -51,7 +51,7 @@ ms.locfileid: "92692041"
 <span data-ttu-id="29e1d-139">一方、$Z 0 Z_1 \ket {100} =-\ket {100} $ and $Z 0 Z_1 \ket {011} =-\ket {011} $ のように指定すると、0 $Z $ を測定した結果として、発生したエラーに関する有用な情報が示されます。</span><span class="sxs-lookup"><span data-stu-id="29e1d-139">On the other hand, $Z_0 Z_1 \ket{100} = - \ket{100}$ and $Z_0 Z_1 \ket{011} = -\ket{011}$, so the result of measuring $Z_0 Z_1$ reveals useful information about which error occurred.</span></span>
 
 <span data-ttu-id="29e1d-140">このことを強調するために、上記の表を繰り返しますが、各行に 0 Z_1 $ および $Z _1 Z_2 $ $Z 測定した結果を追加します。</span><span class="sxs-lookup"><span data-stu-id="29e1d-140">To emphasize this, we repeat the table above, but add the results of measuring $Z_0 Z_1$ and $Z_1 Z_2$ on each row.</span></span>
-<span data-ttu-id="29e1d-141">各測定の結果は、 :::no-loc(Q#)::: `Result` それぞれとの値に対応する $ + $ または $-$ のいずれかの eigenvalue の符号によって示され `Zero` `One` ます。</span><span class="sxs-lookup"><span data-stu-id="29e1d-141">We denote the results of each measurement by the sign of the eigenvalue that is observed, either $+$ or $-$, corresponding to the :::no-loc(Q#)::: `Result` values of `Zero` and `One`, respectively.</span></span>
+<span data-ttu-id="29e1d-141">各測定の結果は、 Q# `Result` それぞれとの値に対応する $ + $ または $-$ のいずれかの eigenvalue の符号によって示され `Zero` `One` ます。</span><span class="sxs-lookup"><span data-stu-id="29e1d-141">We denote the results of each measurement by the sign of the eigenvalue that is observed, either $+$ or $-$, corresponding to the Q# `Result` values of `Zero` and `One`, respectively.</span></span>
 
 | <span data-ttu-id="29e1d-142">エラー $E $</span><span class="sxs-lookup"><span data-stu-id="29e1d-142">Error $E$</span></span> | <span data-ttu-id="29e1d-143">$E \ket{\overline {0} } $</span><span class="sxs-lookup"><span data-stu-id="29e1d-143">$E\ket{\overline{0}}$</span></span> | <span data-ttu-id="29e1d-144">$E \ket{\overline {1} } $</span><span class="sxs-lookup"><span data-stu-id="29e1d-144">$E\ket{\overline{1}}$</span></span> | <span data-ttu-id="29e1d-145">$Z 0 Z_1 $ の結果</span><span class="sxs-lookup"><span data-stu-id="29e1d-145">Result of $Z_0 Z_1$</span></span> | <span data-ttu-id="29e1d-146">$Z _1 Z_2 $ の結果</span><span class="sxs-lookup"><span data-stu-id="29e1d-146">Result of $Z_1 Z_2$</span></span> |
 | --- | --- | --- | --- | --- |
@@ -71,16 +71,16 @@ ms.locfileid: "92692041"
 > <span data-ttu-id="29e1d-165">一般的には、コードを作成して、より多くのエラーを処理したり、$ errors $Z 処理したり、$ errors を $X したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="29e1d-165">More generally, codes can be created to handle larger number of errors, and to handle $Z$ errors as well as $X$ errors.</span></span>
 
 <span data-ttu-id="29e1d-166">すべてのコード状態で同じように動作するクォンタムエラー修正の測定値を記述できるという洞察は、安定板の *形式* の本質です。</span><span class="sxs-lookup"><span data-stu-id="29e1d-166">The insight that we can describe measurements in quantum error correction that act the same way on all code states, is the essence of the *stabilizer formalism* .</span></span>
-<span data-ttu-id="29e1d-167">キャノンは、 :::no-loc(Q#)::: 安定板のコードに対してエンコードを記述し、それをエラーからどのように回復するかを説明するためのフレームワークを提供します。</span><span class="sxs-lookup"><span data-stu-id="29e1d-167">The :::no-loc(Q#)::: canon provides a framework for describing encoding into and decoding from stabilizer codes, and for describing how one recovers from errors.</span></span>
+<span data-ttu-id="29e1d-167">キャノンは、 Q# 安定板のコードに対してエンコードを記述し、それをエラーからどのように回復するかを説明するためのフレームワークを提供します。</span><span class="sxs-lookup"><span data-stu-id="29e1d-167">The Q# canon provides a framework for describing encoding into and decoding from stabilizer codes, and for describing how one recovers from errors.</span></span>
 <span data-ttu-id="29e1d-168">このセクションでは、このフレームワークとそのアプリケーションについて、いくつかの単純なクォンタムエラー修正コードについて説明します。</span><span class="sxs-lookup"><span data-stu-id="29e1d-168">In this section, we describe this framework and its application to a few simple quantum error-correcting codes.</span></span>
 
 > [!TIP]
 > <span data-ttu-id="29e1d-169">安定板形式の詳細については、このセクションでは説明しません。</span><span class="sxs-lookup"><span data-stu-id="29e1d-169">A full introduction to the stabilizer formalism is beyond the scope of this section.</span></span>
 > <span data-ttu-id="29e1d-170">[Gottesman 2009](https://arxiv.org/abs/0904.2557)の詳細については、読者を参照してください。</span><span class="sxs-lookup"><span data-stu-id="29e1d-170">We refer readers interested in learning more to [Gottesman 2009](https://arxiv.org/abs/0904.2557).</span></span>
 
-## <a name="representing-error-correcting-codes-in-no-locq"></a><span data-ttu-id="29e1d-171">エラー修正コードを表す :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="29e1d-171">Representing Error Correcting Codes in :::no-loc(Q#):::</span></span> ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a><span data-ttu-id="29e1d-171">エラー修正コードを表す Q#</span><span class="sxs-lookup"><span data-stu-id="29e1d-171">Representing Error Correcting Codes in Q#</span></span> ##
 
-<span data-ttu-id="29e1d-172">エラー修正コードを指定するために、 :::no-loc(Q#)::: キャノン社はいくつかの異なるユーザー定義型を提供しています。</span><span class="sxs-lookup"><span data-stu-id="29e1d-172">To help specify error correcting codes, the :::no-loc(Q#)::: canon provides several distinct user-defined types:</span></span>
+<span data-ttu-id="29e1d-172">エラー修正コードを指定するために、 Q# キャノン社はいくつかの異なるユーザー定義型を提供しています。</span><span class="sxs-lookup"><span data-stu-id="29e1d-172">To help specify error correcting codes, the Q# canon provides several distinct user-defined types:</span></span>
 
 - <span data-ttu-id="29e1d-173"><xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister>`= Qubit[]`: Qubits のレジスタは、エラー修正コードのコードブロックとして解釈される必要があることを示します。</span><span class="sxs-lookup"><span data-stu-id="29e1d-173"><xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister> `= Qubit[]`: Denotes that a register of qubits should be interpreted as the code block of an error-correcting code.</span></span>
 - <span data-ttu-id="29e1d-174"><xref:Microsoft.Quantum.ErrorCorrection.Syndrome>`= Result[]`: 測定結果の配列を、コードブロックで測定されるより隣人として解釈する必要があることを示します。</span><span class="sxs-lookup"><span data-stu-id="29e1d-174"><xref:Microsoft.Quantum.ErrorCorrection.Syndrome> `= Result[]`: Denotes that an array of measurement results should be interpreted as the syndrome measured on a code block.</span></span>
@@ -122,4 +122,4 @@ using (scratch = Qubit[nScratch]) {
 
 <span data-ttu-id="29e1d-185">この詳細については、「 [ビットフリップコードサンプル](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="29e1d-185">We explore this in more detail in the [bit flip code sample](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code).</span></span>
 
-<span data-ttu-id="29e1d-186">この例では、ビットフリップコード以外に、 :::no-loc(Q#)::: [5 qubit の完全なコード](https://arxiv.org/abs/quant-ph/9602019)と7つの [qubit コード](https://arxiv.org/abs/quant-ph/9705052)を実装しています。どちらも任意のシングル qubit エラーを修正できます。</span><span class="sxs-lookup"><span data-stu-id="29e1d-186">Aside from the bit-flip code, the :::no-loc(Q#)::: canon is provided with implementations of the [five-qubit perfect code](https://arxiv.org/abs/quant-ph/9602019), and the [seven-qubit code](https://arxiv.org/abs/quant-ph/9705052), both of which can correct an arbitrary single-qubit error.</span></span>
+<span data-ttu-id="29e1d-186">この例では、ビットフリップコード以外に、 Q# [5 qubit の完全なコード](https://arxiv.org/abs/quant-ph/9602019)と7つの [qubit コード](https://arxiv.org/abs/quant-ph/9705052)を実装しています。どちらも任意のシングル qubit エラーを修正できます。</span><span class="sxs-lookup"><span data-stu-id="29e1d-186">Aside from the bit-flip code, the Q# canon is provided with implementations of the [five-qubit perfect code](https://arxiv.org/abs/quant-ph/9602019), and the [seven-qubit code](https://arxiv.org/abs/quant-ph/9705052), both of which can correct an arbitrary single-qubit error.</span></span>

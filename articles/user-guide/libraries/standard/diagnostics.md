@@ -1,13 +1,13 @@
 ---
-title: :::no-loc(Q#):::標準ライブラリの診断
-description: :::no-loc(Q#):::クォンタムプログラムで間違いやエラーをキャッチするために使用される標準ライブラリの診断関数と操作について説明します。
+title: Q#標準ライブラリの診断
+description: Q#クォンタムプログラムで間違いやエラーをキャッチするために使用される標準ライブラリの診断関数と操作について説明します。
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 1ab9b77c7536a1860064110810371d3a68e95b40
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -18,7 +18,7 @@ ms.locfileid: "92690858"
 # <a name="diagnostics"></a><span data-ttu-id="b002d-103">診断</span><span class="sxs-lookup"><span data-stu-id="b002d-103">Diagnostics</span></span> #
 
 <span data-ttu-id="b002d-104">従来の開発と同様に、クォンタムプログラムで間違いやエラーを診断できることが重要です。</span><span class="sxs-lookup"><span data-stu-id="b002d-104">As with classical development, it is important to be able to diagnose mistakes and errors in quantum programs.</span></span>
-<span data-ttu-id="b002d-105">:::no-loc(Q#):::標準ライブラリでは、「」で詳しく説明されているように、クォンタムプログラムの正確性を確保するためにさまざまな方法が用意されて <xref:microsoft.quantum.guide.testingdebugging> います。</span><span class="sxs-lookup"><span data-stu-id="b002d-105">The :::no-loc(Q#)::: standard libraries provide a variety of different ways to ensure the correctness of quantum programs, as detailed in <xref:microsoft.quantum.guide.testingdebugging>.</span></span>
+<span data-ttu-id="b002d-105">Q#標準ライブラリでは、「」で詳しく説明されているように、クォンタムプログラムの正確性を確保するためにさまざまな方法が用意されて <xref:microsoft.quantum.guide.testingdebugging> います。</span><span class="sxs-lookup"><span data-stu-id="b002d-105">The Q# standard libraries provide a variety of different ways to ensure the correctness of quantum programs, as detailed in <xref:microsoft.quantum.guide.testingdebugging>.</span></span>
 <span data-ttu-id="b002d-106">主に、このサポートには、ホストプログラムまたは開発者に追加の診断情報を提供するように対象コンピューターに指示するか、関数または操作の呼び出しで表現される条件と不変性を強制的に適用するための関数と操作の形式が使用されます。</span><span class="sxs-lookup"><span data-stu-id="b002d-106">Largely speaking, this support comes in the form of functions and operations that either instruct the target machine to provide additional diagnostic information to the host program or developer, or enforce the correctness of conditions and invariants expressed by the function or operation call.</span></span>
 
 ## <a name="machine-diagnostics"></a><span data-ttu-id="b002d-107">コンピューターの診断</span><span class="sxs-lookup"><span data-stu-id="b002d-107">Machine Diagnostics</span></span> ##
@@ -27,13 +27,13 @@ ms.locfileid: "92690858"
 <span data-ttu-id="b002d-109">既定では、文字列がコンソールに書き込まれます。</span><span class="sxs-lookup"><span data-stu-id="b002d-109">By default, this writes the string to the console.</span></span>
 <span data-ttu-id="b002d-110">挿入文字列と共に使用することで、 <xref:Microsoft.Quantum.Intrinsic.Message> 従来の値に関する診断情報を簡単にレポートできるようになります。</span><span class="sxs-lookup"><span data-stu-id="b002d-110">Used together with interpolated strings, <xref:Microsoft.Quantum.Intrinsic.Message> makes it easy to report diagnostic information about classical values:</span></span>
 
-```:::no-loc(Q#):::
+```Q#
 let angle = Microsoft.Quantum.Math.PI() * 2.0 / 3.0;
 Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> <span data-ttu-id="b002d-111">`Message` には `(String -> Unit)` 、デバッグログメッセージを出力するという署名が含まれてい :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="b002d-111">`Message` has signature `(String -> Unit)`, again representing that emitting a debug log message cannot be observed from within :::no-loc(Q#):::.</span></span>
+> <span data-ttu-id="b002d-111">`Message` には `(String -> Unit)` 、デバッグログメッセージを出力するという署名が含まれてい Q# ます。</span><span class="sxs-lookup"><span data-stu-id="b002d-111">`Message` has signature `(String -> Unit)`, again representing that emitting a debug log message cannot be observed from within Q#.</span></span>
 
 <span data-ttu-id="b002d-112">と呼び出しによって、 <xref:Microsoft.Quantum.Diagnostics.DumpMachine> <xref:Microsoft.Quantum.Diagnostics.DumpRegister> ターゲットコンピューターは、現在割り当てられている qubits または特定の qubits のレジスタに関する診断情報をそれぞれ提供するように指示します。</span><span class="sxs-lookup"><span data-stu-id="b002d-112">The <xref:Microsoft.Quantum.Diagnostics.DumpMachine> and <xref:Microsoft.Quantum.Diagnostics.DumpRegister> callables instruct target machines to provide diagnostic information about all currently allocated qubits or about a specific register of qubits, respectively.</span></span>
 <span data-ttu-id="b002d-113">各ターゲットコンピューターは、ダンプ命令への応答として提供される診断情報によって異なります。</span><span class="sxs-lookup"><span data-stu-id="b002d-113">Each target machine varies in what diagnostic information is provided in response to a dump instruction.</span></span>
@@ -52,7 +52,7 @@ Message($"About to rotate by an angle of {angle}...");
 <span data-ttu-id="b002d-121">たとえば、は、 `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` $1 + 1 = $2 という数学的な事実を表しますが、は `AssertQubit(One, qubit)` 測定が確実性を `qubit` 持つを返す条件を表し `One` ます。</span><span class="sxs-lookup"><span data-stu-id="b002d-121">For example, `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` represents the mathematical fact that $1 + 1 = 2$, while `AssertQubit(One, qubit)` represents the condition that measuring `qubit` will return a `One` with certainty.</span></span>
 <span data-ttu-id="b002d-122">前者の場合は、値のみを指定して条件の正確性を確認できます。後者の場合、アサーションを評価するには、qubit の状態に関する情報を把握しておく必要があります。</span><span class="sxs-lookup"><span data-stu-id="b002d-122">In the former case, we can check the correctness of the condition given only its values, while in the latter, we must know something about the state of the qubit in order to evaluate the assertion.</span></span>
 
-<span data-ttu-id="b002d-123">:::no-loc(Q#):::標準ライブラリには、次のようなファクトを表すためのさまざまな関数が用意されています。</span><span class="sxs-lookup"><span data-stu-id="b002d-123">The :::no-loc(Q#)::: standard libraries provide several different functions for representing facts, including:</span></span>
+<span data-ttu-id="b002d-123">Q#標準ライブラリには、次のようなファクトを表すためのさまざまな関数が用意されています。</span><span class="sxs-lookup"><span data-stu-id="b002d-123">The Q# standard libraries provide several different functions for representing facts, including:</span></span>
 
 - <xref:Microsoft.Quantum.Diagnostics.Fact>
 - <xref:Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact>
@@ -70,7 +70,7 @@ Message($"About to rotate by an angle of {angle}...");
 <span data-ttu-id="b002d-129">アサーションが失敗した場合、実行は、指定されたメッセージを使用してを呼び出すことによって終了し `fail` ます。</span><span class="sxs-lookup"><span data-stu-id="b002d-129">If the assertion fails, the run ends by calling `fail` with the given message.</span></span>
 <span data-ttu-id="b002d-130">既定では、この操作は実装されていません。これをサポートするシミュレーターは、ランタイムチェックを実行する実装を提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b002d-130">By default, this operation is not implemented; simulators that can support it should provide an implementation that performs runtime checking.</span></span>
 <span data-ttu-id="b002d-131">`AssertMeasurement` に署名があり `((Pauli[], Qubit[], Result, String) -> ())` ます。</span><span class="sxs-lookup"><span data-stu-id="b002d-131">`AssertMeasurement` has signature `((Pauli[], Qubit[], Result, String) -> ())`.</span></span>
-<span data-ttu-id="b002d-132">`AssertMeasurement`は、出力の種類として空のタプルを持つ関数であるため、を呼び出しても、 `AssertMeasurement` プログラム内では影響を受けることはありません :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="b002d-132">Since `AssertMeasurement` is a function with an empty tuple as its output type, no effects from having called `AssertMeasurement` are observable within a :::no-loc(Q#)::: program.</span></span>
+<span data-ttu-id="b002d-132">`AssertMeasurement`は、出力の種類として空のタプルを持つ関数であるため、を呼び出しても、 `AssertMeasurement` プログラム内では影響を受けることはありません Q# 。</span><span class="sxs-lookup"><span data-stu-id="b002d-132">Since `AssertMeasurement` is a function with an empty tuple as its output type, no effects from having called `AssertMeasurement` are observable within a Q# program.</span></span>
 
 <span data-ttu-id="b002d-133">操作関数は、指定された型の指定された <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> qubits を測定することをアサートします。これは、一定の許容範囲内で指定された確率で特定の結果を取得します。</span><span class="sxs-lookup"><span data-stu-id="b002d-133">The <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> operation function asserts that measuring the given qubits in the given Pauli basis will have the given result with the given probability, within some tolerance.</span></span>
 <span data-ttu-id="b002d-134">許容範囲は加法です (など `abs(expected-actual) < tol` )。</span><span class="sxs-lookup"><span data-stu-id="b002d-134">Tolerance is additive (for example, `abs(expected-actual) < tol`).</span></span>

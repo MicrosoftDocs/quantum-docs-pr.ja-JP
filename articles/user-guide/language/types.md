@@ -1,14 +1,14 @@
 ---
-title: '型 :::no-loc(Q#):::'
-description: 'プログラミング言語で使用されるさまざまな型について説明し :::no-loc(Q#)::: ます。'
+title: '型 Q#'
+description: 'プログラミング言語で使用されるさまざまな型について説明し Q# ます。'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 349138984387cc564cca18ea09c7bf161524b0b6
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,21 +16,21 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691623"
 ---
-# <a name="types-in-no-locq"></a><span data-ttu-id="8dc33-103">型 :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="8dc33-103">Types in :::no-loc(Q#):::</span></span>
+# <a name="types-in-no-locq"></a><span data-ttu-id="8dc33-103">型 Q#</span><span class="sxs-lookup"><span data-stu-id="8dc33-103">Types in Q#</span></span>
 
-<span data-ttu-id="8dc33-104">この記事では、 :::no-loc(Q#)::: 型モデルと、型を指定して操作するための構文について説明します。</span><span class="sxs-lookup"><span data-stu-id="8dc33-104">This article describes the :::no-loc(Q#)::: type model and the syntax for specifying and working with types.</span></span> <span data-ttu-id="8dc33-105">これらの型の式を作成および操作する方法の詳細については、「 [型式](xref:microsoft.quantum.guide.expressions)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8dc33-105">For details on how to create and operate on expressions of these types, see [Type Expressions](xref:microsoft.quantum.guide.expressions).</span></span>
+<span data-ttu-id="8dc33-104">この記事では、 Q# 型モデルと、型を指定して操作するための構文について説明します。</span><span class="sxs-lookup"><span data-stu-id="8dc33-104">This article describes the Q# type model and the syntax for specifying and working with types.</span></span> <span data-ttu-id="8dc33-105">これらの型の式を作成および操作する方法の詳細については、「 [型式](xref:microsoft.quantum.guide.expressions)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8dc33-105">For details on how to create and operate on expressions of these types, see [Type Expressions](xref:microsoft.quantum.guide.expressions).</span></span>
 
-<span data-ttu-id="8dc33-106">:::no-loc(Q#):::は *厳密に型指定* された言語であることに注意してください。これは、これらの型を慎重に使用することで、コンパイル時にプログラムに関して強力な保証を提供するのに役立ち :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-106">We note that :::no-loc(Q#)::: is a *strongly-typed* language, such that careful use of these types can help the compiler to provide strong guarantees about :::no-loc(Q#)::: programs at compile time.</span></span>
-<span data-ttu-id="8dc33-107">最も強力な保証を提供するには、の型間の変換を、 :::no-loc(Q#)::: その変換を表す関数の呼び出しを使用して明示的に行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="8dc33-107">To provide the strongest guarantees possible, conversions between types in :::no-loc(Q#)::: must be explicit using calls to functions which express that conversion.</span></span> 
-<span data-ttu-id="8dc33-108">:::no-loc(Q#)::: には、名前空間の一部として、さまざまな関数が用意されて <xref:Microsoft.Quantum.Convert> います。</span><span class="sxs-lookup"><span data-stu-id="8dc33-108">:::no-loc(Q#)::: provides a variety of such functions as a part of the <xref:Microsoft.Quantum.Convert> namespace.</span></span>
+<span data-ttu-id="8dc33-106">Q#は *厳密に型指定* された言語であることに注意してください。これは、これらの型を慎重に使用することで、コンパイル時にプログラムに関して強力な保証を提供するのに役立ち Q# ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-106">We note that Q# is a *strongly-typed* language, such that careful use of these types can help the compiler to provide strong guarantees about Q# programs at compile time.</span></span>
+<span data-ttu-id="8dc33-107">最も強力な保証を提供するには、の型間の変換を、 Q# その変換を表す関数の呼び出しを使用して明示的に行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="8dc33-107">To provide the strongest guarantees possible, conversions between types in Q# must be explicit using calls to functions which express that conversion.</span></span> 
+<span data-ttu-id="8dc33-108">Q# には、名前空間の一部として、さまざまな関数が用意されて <xref:Microsoft.Quantum.Convert> います。</span><span class="sxs-lookup"><span data-stu-id="8dc33-108">Q# provides a variety of such functions as a part of the <xref:Microsoft.Quantum.Convert> namespace.</span></span>
 <span data-ttu-id="8dc33-109">一方、互換性のある型へのアップキャストは暗黙的に行われます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-109">Upcasts to compatible types, on the other hand, happen implicitly.</span></span> 
 
-<span data-ttu-id="8dc33-110">:::no-loc(Q#)::: には、直接使用されるプリミティブ型と、他の型から新しい型を生成するためのさまざまな方法が用意されています。</span><span class="sxs-lookup"><span data-stu-id="8dc33-110">:::no-loc(Q#)::: provides both primitive types, which are used directly, and a variety of ways to produce new types from other types.</span></span>
+<span data-ttu-id="8dc33-110">Q# には、直接使用されるプリミティブ型と、他の型から新しい型を生成するためのさまざまな方法が用意されています。</span><span class="sxs-lookup"><span data-stu-id="8dc33-110">Q# provides both primitive types, which are used directly, and a variety of ways to produce new types from other types.</span></span>
 <span data-ttu-id="8dc33-111">この記事の残りの部分では、それぞれについて説明します。</span><span class="sxs-lookup"><span data-stu-id="8dc33-111">We describe each in the rest of this article.</span></span>
 
 ## <a name="primitive-types"></a><span data-ttu-id="8dc33-112">プリミティブ型</span><span class="sxs-lookup"><span data-stu-id="8dc33-112">Primitive Types</span></span>
 
-<span data-ttu-id="8dc33-113">言語には、 :::no-loc(Q#)::: 次の *プリミティブ型* が用意されています。これらはすべて、プログラムで直接使用でき :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-113">The :::no-loc(Q#)::: language provides the following *primitive types* , all of which you can use directly in :::no-loc(Q#)::: programs.</span></span> <span data-ttu-id="8dc33-114">これらのプリミティブ型を使用して、新しい型を作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-114">You can also use these primitive types to construct new types.</span></span>
+<span data-ttu-id="8dc33-113">言語には、 Q# 次の *プリミティブ型* が用意されています。これらはすべて、プログラムで直接使用でき Q# ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-113">The Q# language provides the following *primitive types* , all of which you can use directly in Q# programs.</span></span> <span data-ttu-id="8dc33-114">これらのプリミティブ型を使用して、新しい型を作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-114">You can also use these primitive types to construct new types.</span></span>
 
 - <span data-ttu-id="8dc33-115">この `Int` 型は、64ビット符号付き整数 (、、など) を表し `2` `107` `-5` ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-115">The `Int` type represents a 64-bit signed integer, for example, `2`, `107`, `-5`.</span></span>
 - <span data-ttu-id="8dc33-116">型は、、、など、 `BigInt` 任意のサイズの符号付き整数を表し `2L` `107L` `-5L` ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-116">The `BigInt` type represents a signed integer of arbitrary size, for example, `2L`, `107L`, `-5L`.</span></span>
@@ -44,7 +44,7 @@ ms.locfileid: "92691623"
 - <span data-ttu-id="8dc33-123">この `String` 型は、作成後にユーザーに対して非透過の Unicode 文字のシーケンスです。</span><span class="sxs-lookup"><span data-stu-id="8dc33-123">The `String` type is a sequence of Unicode characters that is opaque to the user once created.</span></span>
   <span data-ttu-id="8dc33-124">エラーまたは診断イベントが発生した場合に、この種類を使用して、 `string` 従来のホストにメッセージを報告します。</span><span class="sxs-lookup"><span data-stu-id="8dc33-124">Use the `string` type to report messages to a classical host in the case of an error or diagnostic event.</span></span>
 - <span data-ttu-id="8dc33-125">`Unit`型は、値を1つだけ持つことができ `()` ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-125">The `Unit` type can have only one value, `()`.</span></span> 
-  <span data-ttu-id="8dc33-126">:::no-loc(Q#):::関数または操作が情報を返さないことを示すには、この型を使用します。</span><span class="sxs-lookup"><span data-stu-id="8dc33-126">Use this type to indicate that a :::no-loc(Q#)::: function or operation returns no information.</span></span> 
+  <span data-ttu-id="8dc33-126">Q#関数または操作が情報を返さないことを示すには、この型を使用します。</span><span class="sxs-lookup"><span data-stu-id="8dc33-126">Use this type to indicate that a Q# function or operation returns no information.</span></span> 
 - <span data-ttu-id="8dc33-127">この `Qubit` 型は、クォンタムビットまたは qubit を表します。</span><span class="sxs-lookup"><span data-stu-id="8dc33-127">The `Qubit` type represents a quantum bit or qubit.</span></span>
    <span data-ttu-id="8dc33-128">`Qubit`はユーザーに対して非透過的です。</span><span class="sxs-lookup"><span data-stu-id="8dc33-128">`Qubit`s are opaque to the user.</span></span> <span data-ttu-id="8dc33-129">他の操作に渡す場合を除き、これらの操作で可能な操作は、id (等値) をテストすることだけです。</span><span class="sxs-lookup"><span data-stu-id="8dc33-129">The only operation possible with them, other than passing them to another operation, is to test for identity (equality).</span></span>
    <span data-ttu-id="8dc33-130">最終的には、 `Qubit` クォンタムプロセッサ (またはクォンタムシミュレーター) で組み込み命令を呼び出すことによって、に対するアクションを実装します。</span><span class="sxs-lookup"><span data-stu-id="8dc33-130">Ultimately, you implement actions on `Qubit`s by calling intrinsic instructions on a quantum processor (or a quantum simulator).</span></span>
@@ -55,19 +55,19 @@ ms.locfileid: "92691623"
    <span data-ttu-id="8dc33-135">これは、 `One` `Zero` 型の定数であるとの2つの値を持つ列挙 `Result` 型です。</span><span class="sxs-lookup"><span data-stu-id="8dc33-135">It is an enumerated type with two possible values: `One` and `Zero`, which are constants of type `Result`.</span></span>
    <span data-ttu-id="8dc33-136">`Zero` + 1 eigenvalue が測定されたことを示します。 `One` -1 eigenvalue が測定されたことを示します。</span><span class="sxs-lookup"><span data-stu-id="8dc33-136">`Zero` indicates that the +1 eigenvalue was measured; `One` indicates the -1 eigenvalue was measured.</span></span>
 
-<span data-ttu-id="8dc33-137">、、、、、、、およびの各定数 `true` `false` は、 `PauliI` `PauliX` `PauliY` `PauliZ` `One` `Zero` で予約されているすべての記号です :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="8dc33-137">The constants `true`, `false`, `PauliI`, `PauliX`, `PauliY`, `PauliZ`, `One`, and `Zero` are all reserved symbols in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="8dc33-137">、、、、、、、およびの各定数 `true` `false` は、 `PauliI` `PauliX` `PauliY` `PauliZ` `One` `Zero` で予約されているすべての記号です Q# 。</span><span class="sxs-lookup"><span data-stu-id="8dc33-137">The constants `true`, `false`, `PauliI`, `PauliX`, `PauliY`, `PauliZ`, `One`, and `Zero` are all reserved symbols in Q#.</span></span>
 
 ## <a name="array-types"></a><span data-ttu-id="8dc33-138">配列の型</span><span class="sxs-lookup"><span data-stu-id="8dc33-138">Array Types</span></span>
 
-* <span data-ttu-id="8dc33-139">有効な型について :::no-loc(Q#)::: は、その型の値の配列を表す型があります。</span><span class="sxs-lookup"><span data-stu-id="8dc33-139">For any valid :::no-loc(Q#)::: type, there is a type that represents an array of values of that type.</span></span>
+* <span data-ttu-id="8dc33-139">有効な型について Q# は、その型の値の配列を表す型があります。</span><span class="sxs-lookup"><span data-stu-id="8dc33-139">For any valid Q# type, there is a type that represents an array of values of that type.</span></span>
     <span data-ttu-id="8dc33-140">たとえば、とは、 `Qubit[]` `(Bool, Pauli)[]` `Qubit` 値と組値の配列を表し `(Bool, Pauli)` ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-140">For example, `Qubit[]` and `(Bool, Pauli)[]` represent arrays of `Qubit` values and `(Bool, Pauli)` tuple values.</span></span>
 
 * <span data-ttu-id="8dc33-141">配列の配列も有効です。</span><span class="sxs-lookup"><span data-stu-id="8dc33-141">An array of arrays is also valid.</span></span> <span data-ttu-id="8dc33-142">前の例を展開すると、配列の配列 `(Bool, Pauli)` が示され `(Bool, Pauli)[][]` ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-142">Expanding on the previous example, an array of `(Bool, Pauli)` arrays is denoted `(Bool, Pauli)[][]`.</span></span>
 
 > [!NOTE] 
-> <span data-ttu-id="8dc33-143">この例は、 `(Bool, Pauli)[][]` 四角形の2次元配列ではなく、配列のジャグ配列を表しています。</span><span class="sxs-lookup"><span data-stu-id="8dc33-143">This example, `(Bool, Pauli)[][]`, represents a potentially jagged array of arrays and not a rectangular two-dimensional array.</span></span> <span data-ttu-id="8dc33-144">:::no-loc(Q#)::: は、四角形多次元配列をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="8dc33-144">:::no-loc(Q#)::: does not support rectangular multi-dimensional arrays.</span></span>
+> <span data-ttu-id="8dc33-143">この例は、 `(Bool, Pauli)[][]` 四角形の2次元配列ではなく、配列のジャグ配列を表しています。</span><span class="sxs-lookup"><span data-stu-id="8dc33-143">This example, `(Bool, Pauli)[][]`, represents a potentially jagged array of arrays and not a rectangular two-dimensional array.</span></span> <span data-ttu-id="8dc33-144">Q# は、四角形多次元配列をサポートしていません。</span><span class="sxs-lookup"><span data-stu-id="8dc33-144">Q# does not support rectangular multi-dimensional arrays.</span></span>
 
-* <span data-ttu-id="8dc33-145">配列の値は :::no-loc(Q#)::: 、のように、配列の要素を角かっこで囲むことによって、ソースコードで記述でき `[PauliI, PauliX, PauliY, PauliZ]` ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-145">An array value can be written in :::no-loc(Q#)::: source code by using square brackets around the elements of an array, as in `[PauliI, PauliX, PauliY, PauliZ]`.</span></span>
+* <span data-ttu-id="8dc33-145">配列の値は Q# 、のように、配列の要素を角かっこで囲むことによって、ソースコードで記述でき `[PauliI, PauliX, PauliY, PauliZ]` ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-145">An array value can be written in Q# source code by using square brackets around the elements of an array, as in `[PauliI, PauliX, PauliY, PauliZ]`.</span></span>
 <span data-ttu-id="8dc33-146">配列内のすべての項目の共通基本型によって、配列リテラルの型が決定されます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-146">The common base type of all items in the array determines the type of an array literal.</span></span> <span data-ttu-id="8dc33-147">そのため、共通の基本型を持たない要素を含む配列を構築すると、エラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="8dc33-147">Hence, constructing an array with elements that have no common base type raises an error.</span></span>  
 <span data-ttu-id="8dc33-148">例については、「 [呼び出し許容の配列](xref:microsoft.quantum.guide.expressions#arrays-of-callables)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8dc33-148">For an example, see [arrays of callables](xref:microsoft.quantum.guide.expressions#arrays-of-callables).</span></span>
 
@@ -95,7 +95,7 @@ ms.locfileid: "92691623"
 
 ## <a name="tuple-types"></a><span data-ttu-id="8dc33-155">タプル型</span><span class="sxs-lookup"><span data-stu-id="8dc33-155">Tuple Types</span></span>
 
-<span data-ttu-id="8dc33-156">タプルは、 :::no-loc(Q#)::: 値をまとめて1つの値に収集し、それらを簡単に渡すことができるように、全体で使用される強力な概念です。</span><span class="sxs-lookup"><span data-stu-id="8dc33-156">Tuples are a powerful concept used throughout :::no-loc(Q#)::: to collect values together into a single value, making it easier to pass them around.</span></span>
+<span data-ttu-id="8dc33-156">タプルは、 Q# 値をまとめて1つの値に収集し、それらを簡単に渡すことができるように、全体で使用される強力な概念です。</span><span class="sxs-lookup"><span data-stu-id="8dc33-156">Tuples are a powerful concept used throughout Q# to collect values together into a single value, making it easier to pass them around.</span></span>
 <span data-ttu-id="8dc33-157">特に、組表記を使用すると、すべての操作と呼び出し可能が厳密に1つの入力を受け取り、1つの出力のみを返すことを表現できます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-157">In particular, using tuple notation, you can express that every operation and callable takes exactly one input and returns exactly one output.</span></span>
 
 * <span data-ttu-id="8dc33-158">0個以上の異なる型 `T0` ( `T1` ,...) を指定する `Tn` と、新しい *タプル型* をとして表すことができます。 `(T0, T1, ..., Tn)`</span><span class="sxs-lookup"><span data-stu-id="8dc33-158">Given zero or more different types `T0`, `T1`, ..., `Tn`, you can denote a new  *tuple type* as `(T0, T1, ..., Tn)`.</span></span>
@@ -106,17 +106,17 @@ ms.locfileid: "92691623"
 <span data-ttu-id="8dc33-162">たとえば、 `(3, false)` は、型がタプル型であるタプルです `(Int, Bool)` 。</span><span class="sxs-lookup"><span data-stu-id="8dc33-162">For example, `(3, false)` is a tuple whose type is the tuple type `(Int, Bool)`.</span></span>
 <span data-ttu-id="8dc33-163">組の配列、配列の組、サブタプルの組などを作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-163">It is possible to create arrays of tuples, tuples of arrays, tuples of sub-tuples, and so on.</span></span>
 
-* <span data-ttu-id="8dc33-164">0.3 の :::no-loc(Q#)::: 場合、 `Unit` は空のタプルの *型* の名前です。 `()` は空のタプルの *値* に使用されます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-164">As of :::no-loc(Q#)::: 0.3, `Unit` is the name of the *type* of the empty tuple; `()` is used for the *value* of the empty tuple.</span></span>
+* <span data-ttu-id="8dc33-164">0.3 の Q# 場合、 `Unit` は空のタプルの *型* の名前です。 `()` は空のタプルの *値* に使用されます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-164">As of Q# 0.3, `Unit` is the name of the *type* of the empty tuple; `()` is used for the *value* of the empty tuple.</span></span>
 
 * <span data-ttu-id="8dc33-165">タプルインスタンスは変更できません。</span><span class="sxs-lookup"><span data-stu-id="8dc33-165">Tuple instances are immutable.</span></span>
-<span data-ttu-id="8dc33-166">:::no-loc(Q#)::: には、作成されたタプルの内容を変更する機構が用意されていません。</span><span class="sxs-lookup"><span data-stu-id="8dc33-166">:::no-loc(Q#)::: does not provide a mechanism to change the contents of a tuple once created.</span></span>
+<span data-ttu-id="8dc33-166">Q# には、作成されたタプルの内容を変更する機構が用意されていません。</span><span class="sxs-lookup"><span data-stu-id="8dc33-166">Q# does not provide a mechanism to change the contents of a tuple once created.</span></span>
 
 
 
 ### <a name="singleton-tuple-equivalence"></a><span data-ttu-id="8dc33-167">シングルトンタプルの等価性</span><span class="sxs-lookup"><span data-stu-id="8dc33-167">Singleton Tuple Equivalence</span></span>
 
 <span data-ttu-id="8dc33-168">またはなど、シングルトン (単一要素) の組を作成することができ `('T1)` `(5)` `([1,2,3])` ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-168">It is possible to create a singleton (single-element) tuple `('T1)`, such as `(5)` or `([1,2,3])`.</span></span>
-<span data-ttu-id="8dc33-169">ただし、では、 :::no-loc(Q#)::: シングルトンタプルは、囲まれた型の値と等価として扱われます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-169">However, :::no-loc(Q#)::: treats a singleton tuple as equivalent to a value of the enclosed type.</span></span>
+<span data-ttu-id="8dc33-169">ただし、では、 Q# シングルトンタプルは、囲まれた型の値と等価として扱われます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-169">However, Q# treats a singleton tuple as equivalent to a value of the enclosed type.</span></span>
 <span data-ttu-id="8dc33-170">つまり、との間、との間、 `5` `(5)` `5` `(((5)))` または `(5, (6))` と `(5, 6)` の間に違いはありません。</span><span class="sxs-lookup"><span data-stu-id="8dc33-170">That is, there is no difference between `5` and `(5)`, or between `5` and `(((5)))`, or between `(5, (6))` and `(5, 6)`.</span></span>
 <span data-ttu-id="8dc33-171">書き込みの場合と同じように記述できます。 `(5)+3` `5+3` 両方の式がに評価され `8` ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-171">It is just as valid to write `(5)+3` as it is to write `5+3`; both expressions evaluate to `8`.</span></span>
 
@@ -139,14 +139,14 @@ ms.locfileid: "92691623"
 newtype PairOfInts = (Int, Int);
 ```
     
-* <span data-ttu-id="8dc33-180">各 :::no-loc(Q#)::: ソースファイルは、任意の数のユーザー定義型を宣言できます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-180">Each :::no-loc(Q#)::: source file may declare any number of user-defined types.</span></span>
+* <span data-ttu-id="8dc33-180">各 Q# ソースファイルは、任意の数のユーザー定義型を宣言できます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-180">Each Q# source file may declare any number of user-defined types.</span></span>
 * <span data-ttu-id="8dc33-181">型名は名前空間内で一意である必要があり、操作名および関数名と競合しない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="8dc33-181">Type names must be unique within a namespace and may not conflict with operation and function names.</span></span>
 * <span data-ttu-id="8dc33-182">基本型が同一であっても、ユーザー定義型は区別されません。</span><span class="sxs-lookup"><span data-stu-id="8dc33-182">User-defined types are distinct, even if the base types are identical.</span></span>
 <span data-ttu-id="8dc33-183">特に、基になる型が同一であっても、2つのユーザー定義型の値を自動的に変換することはできません。</span><span class="sxs-lookup"><span data-stu-id="8dc33-183">In particular, there is no automatic conversion between the values of two user-defined types, even if the underlying types are identical.</span></span>
 
 ### <a name="named-vs-anonymous-items"></a><span data-ttu-id="8dc33-184">名前付き項目と匿名項目</span><span class="sxs-lookup"><span data-stu-id="8dc33-184">Named vs. anonymous items</span></span>
 
-<span data-ttu-id="8dc33-185">ファイルでは、 :::no-loc(Q#)::: 任意の有効な型の単一の値を含む新しい名前付きの型を定義できます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-185">A :::no-loc(Q#)::: file may define a new named type containing a single value of any legal type.</span></span>
+<span data-ttu-id="8dc33-185">ファイルでは、 Q# 任意の有効な型の単一の値を含む新しい名前付きの型を定義できます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-185">A Q# file may define a new named type containing a single value of any legal type.</span></span>
 <span data-ttu-id="8dc33-186">任意のタプル型では、ステートメントを使用して、 `T` のサブタイプである新しいユーザー定義型を宣言でき `T` `newtype` ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-186">For any tuple type `T`, you can declare a new user-defined type that is a subtype of `T` with the `newtype` statement.</span></span>
 <span data-ttu-id="8dc33-187">たとえば、 @"microsoft.quantum.math" 名前空間では、複合数値はユーザー定義型として定義されます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-187">In the @"microsoft.quantum.math" namespace, for example, complex numbers are defined as a user-defined type:</span></span>
 
@@ -155,7 +155,7 @@ newtype Complex = (Double, Double);
 ```
 <span data-ttu-id="8dc33-188">このステートメントは、型の2つの匿名項目を持つ新しい型を作成し `Double` ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-188">This statement creates a new type with two anonymous items of type `Double`.</span></span>   
 
-<span data-ttu-id="8dc33-189">ユーザー定義型では、匿名項目以外に、バージョン0.7 以降の *名前付き項目* もサポートされ :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-189">Aside from anonymous items, user-defined types also support *named items* as of :::no-loc(Q#)::: version 0.7 or higher.</span></span> <span data-ttu-id="8dc33-190">たとえば、 `Real` 複素数の実数部と虚数部を表す double 型の項目に、という名前を指定でき `Imag` ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-190">For example, you could name the items to `Real` for the double representing the real part of a complex number and `Imag` for the imaginary part:</span></span> 
+<span data-ttu-id="8dc33-189">ユーザー定義型では、匿名項目以外に、バージョン0.7 以降の *名前付き項目* もサポートされ Q# ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-189">Aside from anonymous items, user-defined types also support *named items* as of Q# version 0.7 or higher.</span></span> <span data-ttu-id="8dc33-190">たとえば、 `Real` 複素数の実数部と虚数部を表す double 型の項目に、という名前を指定でき `Imag` ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-190">For example, you could name the items to `Real` for the double representing the real part of a complex number and `Imag` for the imaginary part:</span></span> 
 
 ```qsharp
 newtype Complex = (Real : Double, Imag : Double);
@@ -182,7 +182,7 @@ function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
 newtype ComplexPolar = (Magnitude : Double, Argument : Double);
 ```
 
-<span data-ttu-id="8dc33-197">との両方に基になる型がある場合でも、 `Complex` `ComplexPolar` `(Double, Double)` 2 つの型は完全には互換性がないため :::no-loc(Q#)::: 、極座標を使用して複雑な数値演算関数を誤って呼び出した場合のリスクを最小限に抑えることができます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-197">Even though both `Complex` and `ComplexPolar` both have an underlying type `(Double, Double)`, the two types are wholly incompatible in :::no-loc(Q#):::, minimizing the risk of accidentally calling a complex math function with polar coordinates and vice versa.</span></span>
+<span data-ttu-id="8dc33-197">との両方に基になる型がある場合でも、 `Complex` `ComplexPolar` `(Double, Double)` 2 つの型は完全には互換性がないため Q# 、極座標を使用して複雑な数値演算関数を誤って呼び出した場合のリスクを最小限に抑えることができます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-197">Even though both `Complex` and `ComplexPolar` both have an underlying type `(Double, Double)`, the two types are wholly incompatible in Q#, minimizing the risk of accidentally calling a complex math function with polar coordinates and vice versa.</span></span>
 
 #### <a name="access-anonymous-items-with-the-unwrap-operator"></a><span data-ttu-id="8dc33-198">ラップ解除演算子を使用した匿名項目へのアクセス</span><span class="sxs-lookup"><span data-stu-id="8dc33-198">Access anonymous items with the unwrap operator</span></span>
 
@@ -215,7 +215,7 @@ newtype DoublyWrappedInt = WrappedInt;
 ...
 ```
 
-<span data-ttu-id="8dc33-205">ラップ解除演算子の詳細については、「 [」 :::no-loc(Q#)::: の「型式](xref:microsoft.quantum.guide.expressions)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8dc33-205">For more details on the unwrap operator, see [Type Expressions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.expressions).</span></span>
+<span data-ttu-id="8dc33-205">ラップ解除演算子の詳細については、「 [」 Q# の「型式](xref:microsoft.quantum.guide.expressions)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8dc33-205">For more details on the unwrap operator, see [Type Expressions in Q#](xref:microsoft.quantum.guide.expressions).</span></span>
 
 ### <a name="creating-values-of-user-defined-types"></a><span data-ttu-id="8dc33-206">ユーザー定義型の値の作成</span><span class="sxs-lookup"><span data-stu-id="8dc33-206">Creating values of user-defined types</span></span>
 
@@ -264,7 +264,7 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 <span data-ttu-id="8dc33-221">これらは呼び出し可能の *シグネチャ* と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-221">These are called the *signature* of the callable.</span></span>
 
-* <span data-ttu-id="8dc33-222">すべて :::no-loc(Q#)::: の呼び出しが、1つの値を入力として受け取り、1つの値を出力として返します。</span><span class="sxs-lookup"><span data-stu-id="8dc33-222">All :::no-loc(Q#)::: callables take a single value as input and return a single value as output.</span></span>
+* <span data-ttu-id="8dc33-222">すべて Q# の呼び出しが、1つの値を入力として受け取り、1つの値を出力として返します。</span><span class="sxs-lookup"><span data-stu-id="8dc33-222">All Q# callables take a single value as input and return a single value as output.</span></span>
 * <span data-ttu-id="8dc33-223">入力値と出力値の両方に組を使用できます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-223">You can use tuples for both the input and output values.</span></span>
 * <span data-ttu-id="8dc33-224">結果がない呼び出しの可能性がある場合は、を返し `Unit` ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-224">Callables that have no result, return `Unit`.</span></span>
 * <span data-ttu-id="8dc33-225">入力がない callables は、空のタプルを入力として受け取ります。</span><span class="sxs-lookup"><span data-stu-id="8dc33-225">Callables that have no input take the empty tuple as input.</span></span>
@@ -277,7 +277,7 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 <span data-ttu-id="8dc33-231">たとえば、操作の実行が他の qubits の状態に依存している場合は、ファンクタをサポートする必要があり `Controlled` ます。操作に逆のがある場合は、ファンクタをサポートする必要があり `Adjoint` ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-231">For example, if the running of the operation relies on the state of other qubits, then it should support the `Controlled` functor; if the operation has an inverse, then it should support the `Adjoint` functor.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="8dc33-232">この記事では、操作シグネチャの変更についてのみ説明します。</span><span class="sxs-lookup"><span data-stu-id="8dc33-232">This article only discuss how functors alter the operation signature.</span></span> <span data-ttu-id="8dc33-233">関数と操作の詳細については、「 [」の :::no-loc(Q#)::: 「操作と関数](xref:microsoft.quantum.guide.operationsfunctions)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8dc33-233">For more details about functors and operations, see [Operations and Functions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.operationsfunctions).</span></span> 
+> <span data-ttu-id="8dc33-232">この記事では、操作シグネチャの変更についてのみ説明します。</span><span class="sxs-lookup"><span data-stu-id="8dc33-232">This article only discuss how functors alter the operation signature.</span></span> <span data-ttu-id="8dc33-233">関数と操作の詳細については、「 [」の Q# 「操作と関数](xref:microsoft.quantum.guide.operationsfunctions)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8dc33-233">For more details about functors and operations, see [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions).</span></span> 
 
 <span data-ttu-id="8dc33-234">`Controlled`操作の種類でおよび/またはファンクタのサポートを要求するには、 `Adjoint` 対応する特性を示す注釈を追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8dc33-234">To require support for the `Controlled` and/or `Adjoint` functor in an operation type, you need to add an annotation indicating the corresponding characteristics.</span></span>
 <span data-ttu-id="8dc33-235">注釈 `is Ctl` (たとえば、) は、 `(Qubit => Unit is Ctl)` 操作が制御可能であることを示します。</span><span class="sxs-lookup"><span data-stu-id="8dc33-235">The annotation `is Ctl` (for example, `(Qubit => Unit is Ctl)`) indicates that the operation is controllable.</span></span> <span data-ttu-id="8dc33-236">つまり、その実行は、別の qubit または qubit の状態に依存します。</span><span class="sxs-lookup"><span data-stu-id="8dc33-236">That is, its run relies on the state of another qubit or qubits.</span></span> <span data-ttu-id="8dc33-237">同様に、注釈は、操作に adjoint があることを示します。つまり、 `is Adj` 操作を連続して適用した後、その状態を状態に変更せずに状態を維持する "逆" にすることができます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-237">Similarly, the annotation `is Adj` indicates that the operation has an adjoint, that is, it can be "inverted" such that successively applying an operation and then its adjoint to a state leaves the state unchanged.</span></span> 
@@ -290,7 +290,7 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 <span data-ttu-id="8dc33-242">呼び出し可能な型には、 *型パラメーター* を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-242">Callable types may contain *type parameters* .</span></span>
 <span data-ttu-id="8dc33-243">1つの引用符で始まる記号を使用して、型パラメーターを指定します。たとえば、 `'A` は有効な型パラメーターです。</span><span class="sxs-lookup"><span data-stu-id="8dc33-243">Use a symbol prefixed by a single quote to indicated a type parameter; for example, `'A` is a legal type parameter.</span></span>
-<span data-ttu-id="8dc33-244">型パラメーター化された呼び出しを定義する方法の詳細と詳細については、「 [」の :::no-loc(Q#)::: 「操作と関数](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8dc33-244">For more information and details on how to define type-parameterized callables, see [Operations and Functions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables).</span></span>
+<span data-ttu-id="8dc33-244">型パラメーター化された呼び出しを定義する方法の詳細と詳細については、「 [」の Q# 「操作と関数](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8dc33-244">For more information and details on how to define type-parameterized callables, see [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables).</span></span>
 
 <span data-ttu-id="8dc33-245">1つのシグネチャで、型パラメーターが複数回出現する場合があります。</span><span class="sxs-lookup"><span data-stu-id="8dc33-245">A type parameter may appear more than once in a single signature.</span></span>
 <span data-ttu-id="8dc33-246">たとえば、別の関数を配列の各要素に適用し、収集された結果を返す関数は、シグネチャを持ち `(('A[], 'A->'A) -> 'A[])` ます。</span><span class="sxs-lookup"><span data-stu-id="8dc33-246">For example, a function that applies another function to each element of an array and returns the collected results has the signature `(('A[], 'A->'A) -> 'A[])`.</span></span>
@@ -298,8 +298,8 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 <span data-ttu-id="8dc33-248">型パラメーターの呼び出し可能な呼び出しを呼び出す場合は、同じ型パラメーターを持つすべての引数が同じ型である必要があります。</span><span class="sxs-lookup"><span data-stu-id="8dc33-248">When you invoke a type-parameterized callable, all arguments that have the same type parameter must be of the same type.</span></span>
 
-<span data-ttu-id="8dc33-249">:::no-loc(Q#)::: には、ユーザーが型パラメーターの代わりに使用できる型を制約する機構が用意されていません。</span><span class="sxs-lookup"><span data-stu-id="8dc33-249">:::no-loc(Q#)::: does not provide a mechanism for constraining the possible types that a user might substitute for a type parameter.</span></span>
+<span data-ttu-id="8dc33-249">Q# には、ユーザーが型パラメーターの代わりに使用できる型を制約する機構が用意されていません。</span><span class="sxs-lookup"><span data-stu-id="8dc33-249">Q# does not provide a mechanism for constraining the possible types that a user might substitute for a type parameter.</span></span>
 
 ## <a name="next-steps"></a><span data-ttu-id="8dc33-250">次のステップ</span><span class="sxs-lookup"><span data-stu-id="8dc33-250">Next steps</span></span>
 
-<span data-ttu-id="8dc33-251">言語を構成するすべての型を確認したので :::no-loc(Q#)::: 、「 [」の :::no-loc(Q#)::: 「型式](xref:microsoft.quantum.guide.expressions)」を参照して、これらのさまざまな型の式を作成および操作する方法を学習してください。</span><span class="sxs-lookup"><span data-stu-id="8dc33-251">Now that you've seen all the types which comprise the :::no-loc(Q#)::: language, see [Type Expressions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.expressions) to learn how to create and manipulate expressions of these various types.</span></span>
+<span data-ttu-id="8dc33-251">言語を構成するすべての型を確認したので Q# 、「 [」の Q# 「型式](xref:microsoft.quantum.guide.expressions)」を参照して、これらのさまざまな型の式を作成および操作する方法を学習してください。</span><span class="sxs-lookup"><span data-stu-id="8dc33-251">Now that you've seen all the types which comprise the Q# language, see [Type Expressions in Q#](xref:microsoft.quantum.guide.expressions) to learn how to create and manipulate expressions of these various types.</span></span>

@@ -1,14 +1,14 @@
 ---
-title: 'の変数 :::no-loc(Q#):::'
-description: 'でさまざまな変数を使用する方法について説明します。 :::no-loc(Q#):::'
+title: 'の変数 Q#'
+description: 'でさまざまな変数を使用する方法について説明します。 Q#'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 67c71c09e004d77360902360fefc7a7752e4a829
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,16 +16,16 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92690930"
 ---
-# <a name="variables-in-no-locq"></a><span data-ttu-id="c5cad-103">の変数 :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="c5cad-103">Variables in :::no-loc(Q#):::</span></span>
+# <a name="variables-in-no-locq"></a><span data-ttu-id="c5cad-103">の変数 Q#</span><span class="sxs-lookup"><span data-stu-id="c5cad-103">Variables in Q#</span></span>
 
-<span data-ttu-id="c5cad-104">:::no-loc(Q#)::: 変更可能なシンボルと変更できないシンボル、または式にバインド/割り当てられている *変数* を区別します。</span><span class="sxs-lookup"><span data-stu-id="c5cad-104">:::no-loc(Q#)::: distinguishes between mutable and immutable symbols, or *variables* , which are bound/assigned to expressions.</span></span>
+<span data-ttu-id="c5cad-104">Q# 変更可能なシンボルと変更できないシンボル、または式にバインド/割り当てられている *変数* を区別します。</span><span class="sxs-lookup"><span data-stu-id="c5cad-104">Q# distinguishes between mutable and immutable symbols, or *variables* , which are bound/assigned to expressions.</span></span>
 <span data-ttu-id="c5cad-105">一般に、変更できないシンボルを使用することをお勧めします。これにより、コンパイラはより多くの最適化を実行できるためです。</span><span class="sxs-lookup"><span data-stu-id="c5cad-105">In general, the use of immutable symbols is encouraged because it allows the compiler to perform more optimizations.</span></span>
 
 <span data-ttu-id="c5cad-106">バインディングの左側は、記号の組と式の右辺で構成されています。</span><span class="sxs-lookup"><span data-stu-id="c5cad-106">The left-hand-side of a binding consists of a symbol tuple and the right-hand side of an expression.</span></span>
 
 ## <a name="immutable-variables"></a><span data-ttu-id="c5cad-107">変更できない変数</span><span class="sxs-lookup"><span data-stu-id="c5cad-107">Immutable Variables</span></span>
 
-<span data-ttu-id="c5cad-108">キーワードを使用すると、任意の型の値を変数に代入して、 :::no-loc(Q#)::: 操作または関数内で再利用することができ `let` ます。</span><span class="sxs-lookup"><span data-stu-id="c5cad-108">You can assign a value of any type in :::no-loc(Q#)::: to a variable for reuse within an operation or function by using the `let` keyword.</span></span> 
+<span data-ttu-id="c5cad-108">キーワードを使用すると、任意の型の値を変数に代入して、 Q# 操作または関数内で再利用することができ `let` ます。</span><span class="sxs-lookup"><span data-stu-id="c5cad-108">You can assign a value of any type in Q# to a variable for reuse within an operation or function by using the `let` keyword.</span></span> 
 
 <span data-ttu-id="c5cad-109">変更できないバインドは、キーワードで構成され、 `let` その後にシンボルまたは記号の組、等号 `=` (=)、および終端のセミコロンをバインドする式で構成されます。</span><span class="sxs-lookup"><span data-stu-id="c5cad-109">An immutable binding consists of the keyword `let`, followed by a symbol or symbol tuple, an equals sign `=`, an expression to bind the symbol(s) to, and a terminating semicolon.</span></span>
 
@@ -110,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-<span data-ttu-id="c5cad-134">配列の場合、 [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) 標準ライブラリでは、 :::no-loc(Q#)::: 多くの一般的な配列の初期化と操作に必要なツールが提供されるため、最初に配列項目を更新する必要がなくなります。</span><span class="sxs-lookup"><span data-stu-id="c5cad-134">In the case of arrays, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) in the :::no-loc(Q#)::: standard library provides the necessary tools for many common array initialization and manipulation needs, and thus helps avoid having to update array items in the first place.</span></span> 
+<span data-ttu-id="c5cad-134">配列の場合、 [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) 標準ライブラリでは、 Q# 多くの一般的な配列の初期化と操作に必要なツールが提供されるため、最初に配列項目を更新する必要がなくなります。</span><span class="sxs-lookup"><span data-stu-id="c5cad-134">In the case of arrays, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) in the Q# standard library provides the necessary tools for many common array initialization and manipulation needs, and thus helps avoid having to update array items in the first place.</span></span> 
 
 <span data-ttu-id="c5cad-135">必要に応じて、更新ステートメントと再割り当てステートメントで代替手段を提供します。</span><span class="sxs-lookup"><span data-stu-id="c5cad-135">Update-and-reassign statements provide an alternative if needed:</span></span>
 
@@ -239,4 +239,4 @@ if (a == b) {
 
 ## <a name="next-steps"></a><span data-ttu-id="c5cad-158">次のステップ</span><span class="sxs-lookup"><span data-stu-id="c5cad-158">Next steps</span></span>
 
-<span data-ttu-id="c5cad-159">での [Qubits の使用](xref:microsoft.quantum.guide.qubits) について説明 :::no-loc(Q#)::: します。</span><span class="sxs-lookup"><span data-stu-id="c5cad-159">Learn about [Working With Qubits](xref:microsoft.quantum.guide.qubits) in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="c5cad-159">での [Qubits の使用](xref:microsoft.quantum.guide.qubits) について説明 Q# します。</span><span class="sxs-lookup"><span data-stu-id="c5cad-159">Learn about [Working With Qubits](xref:microsoft.quantum.guide.qubits) in Q#.</span></span>

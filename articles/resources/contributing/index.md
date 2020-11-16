@@ -7,8 +7,8 @@ ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: a8a527df59bd7ee038de71e04003cf456b094afb
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
@@ -55,11 +55,11 @@ ms.locfileid: "92691761"
 
 - <span data-ttu-id="a0acb-132">[**microsoft/Quantum**](https://github.com/Microsoft/Quantum):Quantum Development Kit の使用を開始するためのサンプルとツール。</span><span class="sxs-lookup"><span data-stu-id="a0acb-132">[**microsoft/Quantum**](https://github.com/Microsoft/Quantum): Samples and tools to help get started with the Quantum Development Kit.</span></span>
 - <span data-ttu-id="a0acb-133">[**microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries):Quantum Development Kit 用の標準およびドメイン固有のライブラリ。</span><span class="sxs-lookup"><span data-stu-id="a0acb-133">[**microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries): Standard and domain-specific libraries for the Quantum Development Kit.</span></span>
-- <span data-ttu-id="a0acb-134">[**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas):量子コンピューティングと :::no-loc(Q#)::: プログラミング言語を学習するためのマイペースで進められるプログラミング演習。</span><span class="sxs-lookup"><span data-stu-id="a0acb-134">[**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas): Self-paced programming exercises for learning quantum computing and the :::no-loc(Q#)::: programming language.</span></span>
-- <span data-ttu-id="a0acb-135">[**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler)::::no-loc(Q#)::: コンパイラ、Visual Studio 拡張機能、および Visual Studio Code 拡張機能。</span><span class="sxs-lookup"><span data-stu-id="a0acb-135">[**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler): The :::no-loc(Q#)::: compiler, Visual Studio extension, and Visual Studio Code extension.</span></span>
+- <span data-ttu-id="a0acb-134">[**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas):量子コンピューティングと Q# プログラミング言語を学習するためのマイペースで進められるプログラミング演習。</span><span class="sxs-lookup"><span data-stu-id="a0acb-134">[**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas): Self-paced programming exercises for learning quantum computing and the Q# programming language.</span></span>
+- <span data-ttu-id="a0acb-135">[**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler):Q# コンパイラ、Visual Studio 拡張機能、および Visual Studio Code 拡張機能。</span><span class="sxs-lookup"><span data-stu-id="a0acb-135">[**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler): The Q# compiler, Visual Studio extension, and Visual Studio Code extension.</span></span>
 - <span data-ttu-id="a0acb-136">[**microsoft/qsharp-runtime**](https://github.com/microsoft/qsharp-runtime):Quantum Development Kit のシミュレーション フレームワーク、コード生成、シミュレーション ターゲット マシン。</span><span class="sxs-lookup"><span data-stu-id="a0acb-136">[**microsoft/qsharp-runtime**](https://github.com/microsoft/qsharp-runtime): Simulation framework, code generation, and simulation target machines for the Quantum Development Kit.</span></span>
-- <span data-ttu-id="a0acb-137">[**microsoft/iqsharp**](https://github.com/microsoft/iqsharp):Jupyter カーネル、:::no-loc(Q#)::: の Python ホスト機能、およびクラウド環境で I:::no-loc(Q#)::: を使用するための Docker イメージ。</span><span class="sxs-lookup"><span data-stu-id="a0acb-137">[**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): Jupyter kernel and Python host functionality for :::no-loc(Q#):::, as well as Docker images for using I:::no-loc(Q#)::: in cloud environments.</span></span>
-- <span data-ttu-id="a0acb-138">[**microsoft/qsharp-language**](https://github.com/microsoft/qsharp-language):ここで新しい :::no-loc(Q#)::: 機能が開発され、指定されます。また、:::no-loc(Q#)::: 言語とコア ライブラリの今後の発展に関するアイデアや意見を共有できます。</span><span class="sxs-lookup"><span data-stu-id="a0acb-138">[**microsoft/qsharp-language**](https://github.com/microsoft/qsharp-language): This is where new :::no-loc(Q#)::: features are developed and specified, and where you can share ideas and suggestions about the future evolution of the :::no-loc(Q#)::: language and core libraries.</span></span>
+- <span data-ttu-id="a0acb-137">[**microsoft/iqsharp**](https://github.com/microsoft/iqsharp):Jupyter カーネル、Q# の Python ホスト機能、およびクラウド環境で IQ# を使用するための Docker イメージ。</span><span class="sxs-lookup"><span data-stu-id="a0acb-137">[**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): Jupyter kernel and Python host functionality for Q#, as well as Docker images for using IQ# in cloud environments.</span></span>
+- <span data-ttu-id="a0acb-138">[**microsoft/qsharp-language**](https://github.com/microsoft/qsharp-language):ここで新しい Q# 機能が開発され、指定されます。また、Q# 言語とコア ライブラリの今後の発展に関するアイデアや意見を共有できます。</span><span class="sxs-lookup"><span data-stu-id="a0acb-138">[**microsoft/qsharp-language**](https://github.com/microsoft/qsharp-language): This is where new Q# features are developed and specified, and where you can share ideas and suggestions about the future evolution of the Q# language and core libraries.</span></span>
 - <span data-ttu-id="a0acb-139">[**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr): https://docs.microsoft.com/quantum で公開されているドキュメントのソース コード。</span><span class="sxs-lookup"><span data-stu-id="a0acb-139">[**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr): Source code for the documentation published at https://docs.microsoft.com/quantum.</span></span>
 
 > [!NOTE]
@@ -67,7 +67,7 @@ ms.locfileid: "92691761"
 
 <span data-ttu-id="a0acb-141">また、Quantum Development Kit に関連する補助機能に重点を置いた他の特化されたリポジトリもあります。</span><span class="sxs-lookup"><span data-stu-id="a0acb-141">There are also a few other, more specialized repositories focusing on auxiliary functionality related to the Quantum Development Kit.</span></span>
 
-- <span data-ttu-id="a0acb-142">[**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty)::::no-loc(Q#)::: 構文の LaTeX 形式サポート。</span><span class="sxs-lookup"><span data-stu-id="a0acb-142">[**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): LaTeX formatting support for :::no-loc(Q#)::: syntax.</span></span>
+- <span data-ttu-id="a0acb-142">[**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty):Q# 構文の LaTeX 形式サポート。</span><span class="sxs-lookup"><span data-stu-id="a0acb-142">[**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): LaTeX formatting support for Q# syntax.</span></span>
 
 ## <a name="next-steps"></a><span data-ttu-id="a0acb-143">次のステップ</span><span class="sxs-lookup"><span data-stu-id="a0acb-143">Next steps</span></span>
 

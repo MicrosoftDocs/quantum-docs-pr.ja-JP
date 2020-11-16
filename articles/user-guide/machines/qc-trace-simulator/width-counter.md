@@ -1,14 +1,14 @@
 ---
 title: 幅カウンター-Quantum 開発キット
-description: 'クォンタムトレースシミュレーターを使用して、プログラム内の操作によって割り当てられた qubits の数をカウントする Microsoft QDK width カウンターについて説明し :::no-loc(Q#)::: ます。'
+description: 'クォンタムトレースシミュレーターを使用して、プログラム内の操作によって割り当てられた qubits の数をカウントする Microsoft QDK width カウンターについて説明し Q# ます。'
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: e54e92cc4a76ce9f9c5aead84f2b64320d6b4f1c
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -18,7 +18,7 @@ ms.locfileid: "92691126"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a><span data-ttu-id="c2c26-103">クォンタムトレースシミュレーター: width カウンター</span><span class="sxs-lookup"><span data-stu-id="c2c26-103">Quantum trace simulator: width counter</span></span>
 
-<span data-ttu-id="c2c26-104">Width カウンターは、Quantum Development Kit [クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の一部です。</span><span class="sxs-lookup"><span data-stu-id="c2c26-104">The width counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="c2c26-105">これを使用すると、プログラムの各操作によって割り当てられた qubits の数をカウントでき :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="c2c26-105">You can use it to count the number of qubits allocated and borrowed by each operation in a :::no-loc(Q#)::: program.</span></span> <span data-ttu-id="c2c26-106">プリミティブ操作によっては、追加の qubits を割り当てることができます。たとえば、制御された操作や制御される演算を乗算でき `X` `T` ます。</span><span class="sxs-lookup"><span data-stu-id="c2c26-106">Some primitive operations can allocate extra qubits, for example, multiply controlled `X` operations or controlled `T` operations.</span></span>
+<span data-ttu-id="c2c26-104">Width カウンターは、Quantum Development Kit [クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)の一部です。</span><span class="sxs-lookup"><span data-stu-id="c2c26-104">The width counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="c2c26-105">これを使用すると、プログラムの各操作によって割り当てられた qubits の数をカウントでき Q# ます。</span><span class="sxs-lookup"><span data-stu-id="c2c26-105">You can use it to count the number of qubits allocated and borrowed by each operation in a Q# program.</span></span> <span data-ttu-id="c2c26-106">プリミティブ操作によっては、追加の qubits を割り当てることができます。たとえば、制御された操作や制御される演算を乗算でき `X` `T` ます。</span><span class="sxs-lookup"><span data-stu-id="c2c26-106">Some primitive operations can allocate extra qubits, for example, multiply controlled `X` operations or controlled `T` operations.</span></span>
 
 ## <a name="invoking-the-width-counter"></a><span data-ttu-id="c2c26-107">Width カウンターを呼び出しています</span><span class="sxs-lookup"><span data-stu-id="c2c26-107">Invoking the width counter</span></span>
 
@@ -32,7 +32,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-width-counter-in-a-c-host-program"></a><span data-ttu-id="c2c26-109">C# ホストプログラムでの width カウンターの使用</span><span class="sxs-lookup"><span data-stu-id="c2c26-109">Using the width counter in a C# host program</span></span>
 
-<span data-ttu-id="c2c26-110">このセクションで後述する C# の例では、 <xref:Microsoft.Quantum.Intrinsic.X> 次のサンプルコードに基づいて、乗算制御演算の実装によって割り当てられた追加の qubits の数を計算し :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="c2c26-110">The C# example that follows in this section computes the number of extra qubits allocated by the implementation of a multiply controlled <xref:Microsoft.Quantum.Intrinsic.X> operation, based on the following :::no-loc(Q#)::: sample code:</span></span>
+<span data-ttu-id="c2c26-110">このセクションで後述する C# の例では、 <xref:Microsoft.Quantum.Intrinsic.X> 次のサンプルコードに基づいて、乗算制御演算の実装によって割り当てられた追加の qubits の数を計算し Q# ます。</span><span class="sxs-lookup"><span data-stu-id="c2c26-110">The C# example that follows in this section computes the number of extra qubits allocated by the implementation of a multiply controlled <xref:Microsoft.Quantum.Intrinsic.X> operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

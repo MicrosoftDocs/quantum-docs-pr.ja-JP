@@ -7,8 +7,8 @@ ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 5505086c5efac89f6940cde1ecae2ce629cfeda5
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -19,33 +19,33 @@ ms.locfileid: "92690975"
 # <a name="testing-and-debugging"></a><span data-ttu-id="f6e00-103">テストとデバッグ</span><span class="sxs-lookup"><span data-stu-id="f6e00-103">Testing and debugging</span></span>
 
 <span data-ttu-id="f6e00-104">従来のプログラミングと同様に、クォンタムプログラムが意図したとおりに動作することを確認し、正しくない動作を診断できるようにすることが不可欠です。</span><span class="sxs-lookup"><span data-stu-id="f6e00-104">As with classical programming, it is essential to be able to check that quantum programs act as intended, and to be able to diagnose incorrect behavior.</span></span>
-<span data-ttu-id="f6e00-105">このセクションでは、 :::no-loc(Q#)::: クォンタムプログラムをテストおよびデバッグするためにに用意されているツールについて説明します。</span><span class="sxs-lookup"><span data-stu-id="f6e00-105">In this section, we cover the tools offered by :::no-loc(Q#)::: for testing and debugging quantum programs.</span></span>
+<span data-ttu-id="f6e00-105">このセクションでは、 Q# クォンタムプログラムをテストおよびデバッグするためにに用意されているツールについて説明します。</span><span class="sxs-lookup"><span data-stu-id="f6e00-105">In this section, we cover the tools offered by Q# for testing and debugging quantum programs.</span></span>
 
 ## <a name="unit-tests"></a><span data-ttu-id="f6e00-106">単体テスト</span><span class="sxs-lookup"><span data-stu-id="f6e00-106">Unit Tests</span></span>
 
 <span data-ttu-id="f6e00-107">従来のプログラムをテストする一般的な方法の1つは、 *単体テスト* と呼ばれる小さなプログラムを作成することです。これにより、ライブラリでコードを実行し、出力を予想される出力と比較します。</span><span class="sxs-lookup"><span data-stu-id="f6e00-107">One common approach to testing classical programs is to write small programs called *unit tests* , which run code in a library and compare its output to some expected output.</span></span>
 <span data-ttu-id="f6e00-108">たとえば、 `Square(2)` `4` $ 2 ^ 2 = $4 の *priori* がわかっているため、がを返すようにすることができます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-108">For example, you can ensure that `Square(2)` returns `4` since you know *a priori* that $2^2 = 4$.</span></span>
 
-<span data-ttu-id="f6e00-109">:::no-loc(Q#)::: は、クォンタムプログラムの単体テストの作成をサポートしています。これは、 [Xunit](https://xunit.github.io/) 単体テストフレームワーク内でテストとして実行できます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-109">:::no-loc(Q#)::: supports creating unit tests for quantum programs, and which can run as tests within the [xUnit](https://xunit.github.io/) unit testing framework.</span></span>
+<span data-ttu-id="f6e00-109">Q# は、クォンタムプログラムの単体テストの作成をサポートしています。これは、 [Xunit](https://xunit.github.io/) 単体テストフレームワーク内でテストとして実行できます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-109">Q# supports creating unit tests for quantum programs, and which can run as tests within the [xUnit](https://xunit.github.io/) unit testing framework.</span></span>
 
 ### <a name="creating-a-test-project"></a><span data-ttu-id="f6e00-110">テストプロジェクトの作成</span><span class="sxs-lookup"><span data-stu-id="f6e00-110">Creating a Test Project</span></span>
 
 #### <a name="visual-studio-2019"></a>[<span data-ttu-id="f6e00-111">Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="f6e00-111">Visual Studio 2019</span></span>](#tab/tabid-vs2019)
 
-<span data-ttu-id="f6e00-112">Visual Studio 2019 を開きます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-112">Open Visual Studio 2019.</span></span> <span data-ttu-id="f6e00-113">[ **ファイル** ] メニューにアクセスし、[ **新しい > プロジェクト** ] を選択します。右上隅にあるを検索し、 `:::no-loc(Q#):::` **:::no-loc(Q#)::: テストプロジェクト** テンプレートを選択します。</span><span class="sxs-lookup"><span data-stu-id="f6e00-113">Go to the **File** menu and select **New > Project...** . In the upper right corner, search for `:::no-loc(Q#):::`, and select the **:::no-loc(Q#)::: Test Project** template.</span></span>
+<span data-ttu-id="f6e00-112">Visual Studio 2019 を開きます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-112">Open Visual Studio 2019.</span></span> <span data-ttu-id="f6e00-113">[ **ファイル** ] メニューにアクセスし、[ **新しい > プロジェクト** ] を選択します。右上隅にあるを検索し、 `Q#` **Q# テストプロジェクト** テンプレートを選択します。</span><span class="sxs-lookup"><span data-stu-id="f6e00-113">Go to the **File** menu and select **New > Project...** . In the upper right corner, search for `Q#`, and select the **Q# Test Project** template.</span></span>
 
 #### <a name="command-line--visual-studio-code"></a>[<span data-ttu-id="f6e00-114">コマンドライン/Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="f6e00-114">Command Line / Visual Studio Code</span></span>](#tab/tabid-vscode)
 
 <span data-ttu-id="f6e00-115">お気に入りのコマンドラインから、次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="f6e00-115">From your favorite command line, run the following command:</span></span>
 ```dotnetcli
-$ dotnet new xunit -lang :::no-loc(Q#)::: -o Tests
+$ dotnet new xunit -lang Q# -o Tests
 $ cd Tests
 $ code . # To open in Visual Studio Code
 ```
 
 ****
 
-<span data-ttu-id="f6e00-116">新しいプロジェクトには `Tests.qs` 、新しい単体テストを定義するための便利な場所を提供する1つのファイルがあり :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-116">Your new project has a single file `Tests.qs`, which provides a convenient place to define new :::no-loc(Q#)::: unit tests.</span></span>
+<span data-ttu-id="f6e00-116">新しいプロジェクトには `Tests.qs` 、新しい単体テストを定義するための便利な場所を提供する1つのファイルがあり Q# ます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-116">Your new project has a single file `Tests.qs`, which provides a convenient place to define new Q# unit tests.</span></span>
 <span data-ttu-id="f6e00-117">初期状態では、このファイルに `AllocateQubit` は、新しく割り当てられた qubit が $ \ket $ 状態であることを確認し、メッセージを出力するサンプル単体テストが1つ含まれてい {0} ます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-117">Initially, this file contains one sample unit test `AllocateQubit` which checks that a newly allocated qubit is in the $\ket{0}$ state and prints a message:</span></span>
 
 ```qsharp
@@ -60,7 +60,7 @@ $ code . # To open in Visual Studio Code
     }
 ```
 
-<span data-ttu-id="f6e00-118">:::no-loc(Q#):::型の引数を受け取り、を返すすべての操作または関数は `Unit` `Unit` 、属性を使用して単体テストとしてマークでき `@Test("...")` ます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-118">Any :::no-loc(Q#)::: operation or function that takes an argument of type `Unit` and returns `Unit` can be marked as a unit test via the `@Test("...")` attribute.</span></span> <span data-ttu-id="f6e00-119">前の例では、その属性の引数が、 `"QuantumSimulator"` テストを実行するターゲットを指定しています。</span><span class="sxs-lookup"><span data-stu-id="f6e00-119">In the previous example, the argument to that attribute, `"QuantumSimulator"`, specifies the target on which the test runs.</span></span> <span data-ttu-id="f6e00-120">1つのテストを複数のターゲットで実行できます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-120">A single test can run on multiple targets.</span></span> <span data-ttu-id="f6e00-121">たとえば、の前に属性を追加し `@Test("ResourcesEstimator")` `AllocateQubit` ます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-121">For example, add an attribute `@Test("ResourcesEstimator")` before `AllocateQubit`.</span></span> 
+<span data-ttu-id="f6e00-118">Q#型の引数を受け取り、を返すすべての操作または関数は `Unit` `Unit` 、属性を使用して単体テストとしてマークでき `@Test("...")` ます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-118">Any Q# operation or function that takes an argument of type `Unit` and returns `Unit` can be marked as a unit test via the `@Test("...")` attribute.</span></span> <span data-ttu-id="f6e00-119">前の例では、その属性の引数が、 `"QuantumSimulator"` テストを実行するターゲットを指定しています。</span><span class="sxs-lookup"><span data-stu-id="f6e00-119">In the previous example, the argument to that attribute, `"QuantumSimulator"`, specifies the target on which the test runs.</span></span> <span data-ttu-id="f6e00-120">1つのテストを複数のターゲットで実行できます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-120">A single test can run on multiple targets.</span></span> <span data-ttu-id="f6e00-121">たとえば、の前に属性を追加し `@Test("ResourcesEstimator")` `AllocateQubit` ます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-121">For example, add an attribute `@Test("ResourcesEstimator")` before `AllocateQubit`.</span></span> 
 ```qsharp
     @Test("QuantumSimulator")
     @Test("ResourcesEstimator")
@@ -69,9 +69,9 @@ $ code . # To open in Visual Studio Code
 ```
 <span data-ttu-id="f6e00-122">ファイルを保存し、すべてのテストを実行します。</span><span class="sxs-lookup"><span data-stu-id="f6e00-122">Save the file and run all tests.</span></span> <span data-ttu-id="f6e00-123">ここで、2つの単体テストがあります。1つはで実行され、もう1つは `AllocateQubit` `QuantumSimulator` で実行さ `ResourcesEstimator` れます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-123">There should now be two unit tests, one where `AllocateQubit` runs on the `QuantumSimulator`, and one where it runs in the `ResourcesEstimator`.</span></span> 
 
-<span data-ttu-id="f6e00-124">コンパイラは、 :::no-loc(Q#)::: 組み込みのターゲット、、を、 `"QuantumSimulator"` `"ToffoliSimulator"` `"ResourcesEstimator"` 単体テストの有効な実行ターゲットとして認識します。</span><span class="sxs-lookup"><span data-stu-id="f6e00-124">The :::no-loc(Q#)::: compiler recognizes the built-in targets `"QuantumSimulator"`, `"ToffoliSimulator"`, and `"ResourcesEstimator"` as valid run targets for unit tests.</span></span> <span data-ttu-id="f6e00-125">また、任意の完全修飾名を指定して、カスタム実行ターゲットを定義することもできます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-125">It is also possible to specify any fully qualified name to define a custom run target.</span></span> 
+<span data-ttu-id="f6e00-124">コンパイラは、 Q# 組み込みのターゲット、、を、 `"QuantumSimulator"` `"ToffoliSimulator"` `"ResourcesEstimator"` 単体テストの有効な実行ターゲットとして認識します。</span><span class="sxs-lookup"><span data-stu-id="f6e00-124">The Q# compiler recognizes the built-in targets `"QuantumSimulator"`, `"ToffoliSimulator"`, and `"ResourcesEstimator"` as valid run targets for unit tests.</span></span> <span data-ttu-id="f6e00-125">また、任意の完全修飾名を指定して、カスタム実行ターゲットを定義することもできます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-125">It is also possible to specify any fully qualified name to define a custom run target.</span></span> 
 
-### <a name="running-no-locq-unit-tests"></a><span data-ttu-id="f6e00-126">:::no-loc(Q#):::単体テストの実行</span><span class="sxs-lookup"><span data-stu-id="f6e00-126">Running :::no-loc(Q#)::: Unit Tests</span></span>
+### <a name="running-no-locq-unit-tests"></a><span data-ttu-id="f6e00-126">Q#単体テストの実行</span><span class="sxs-lookup"><span data-stu-id="f6e00-126">Running Q# Unit Tests</span></span>
 
 #### <a name="visual-studio-2019"></a>[<span data-ttu-id="f6e00-127">Visual Studio 2019</span><span class="sxs-lookup"><span data-stu-id="f6e00-127">Visual Studio 2019</span></span>](#tab/tabid-vs2019)
 
@@ -140,9 +140,9 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 ## <a name="facts-and-assertions"></a><span data-ttu-id="f6e00-148">ファクトとアサーション</span><span class="sxs-lookup"><span data-stu-id="f6e00-148">Facts and Assertions</span></span>
 
-<span data-ttu-id="f6e00-149">の関数には :::no-loc(Q#)::: _論理的_ な副作用がないため、プログラム内から、 :::no-loc(Q#)::: 出力の種類が空のタプルである関数の実行によって他の種類の影響が発生しないようにすることはできません `()` 。</span><span class="sxs-lookup"><span data-stu-id="f6e00-149">Because functions in :::no-loc(Q#)::: have no _logical_ side effects, you can never observe, from within a :::no-loc(Q#)::: program, any other kinds of effects from running a function whose output type is the empty tuple `()`.</span></span>
-<span data-ttu-id="f6e00-150">つまり、ターゲットコンピューターは、この省略によって `()` 次のコードの動作が変更されないことを保証して、が返す関数を実行しないことを選択でき :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-150">That is, a target machine can choose not to run any function which returns `()` with the guarantee that this omission will not modify the behavior of any following :::no-loc(Q#)::: code.</span></span>
-<span data-ttu-id="f6e00-151">この動作により `()` 、関数 (など `Unit` ) が、アサーションの埋め込みとプログラムへのデバッグロジックに便利なツールとして返さ :::no-loc(Q#)::: れます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-151">This behavior makes functions returning `()` (such as `Unit`) a useful tool for embedding assertions and debugging logic into :::no-loc(Q#)::: programs.</span></span> 
+<span data-ttu-id="f6e00-149">の関数には Q# _論理的_ な副作用がないため、プログラム内から、 Q# 出力の種類が空のタプルである関数の実行によって他の種類の影響が発生しないようにすることはできません `()` 。</span><span class="sxs-lookup"><span data-stu-id="f6e00-149">Because functions in Q# have no _logical_ side effects, you can never observe, from within a Q# program, any other kinds of effects from running a function whose output type is the empty tuple `()`.</span></span>
+<span data-ttu-id="f6e00-150">つまり、ターゲットコンピューターは、この省略によって `()` 次のコードの動作が変更されないことを保証して、が返す関数を実行しないことを選択でき Q# ます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-150">That is, a target machine can choose not to run any function which returns `()` with the guarantee that this omission will not modify the behavior of any following Q# code.</span></span>
+<span data-ttu-id="f6e00-151">この動作により `()` 、関数 (など `Unit` ) が、アサーションの埋め込みとプログラムへのデバッグロジックに便利なツールとして返さ Q# れます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-151">This behavior makes functions returning `()` (such as `Unit`) a useful tool for embedding assertions and debugging logic into Q# programs.</span></span> 
 
 <span data-ttu-id="f6e00-152">単純な例を考えてみましょう。</span><span class="sxs-lookup"><span data-stu-id="f6e00-152">Let's consider a simple example:</span></span>
 
@@ -156,8 +156,8 @@ function PositivityFact(value : Double) : Unit
 }
 ```
 
-<span data-ttu-id="f6e00-153">ここで、キーワードは、 `fail` 計算が続行されないことを示し、プログラムを実行しているターゲットコンピューターで例外を発生させ :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-153">Here, the keyword `fail` indicates that the computation should not proceed, and raises an exception in the target machine running the :::no-loc(Q#)::: program.</span></span>
-<span data-ttu-id="f6e00-154">定義上、この種のエラーは、 :::no-loc(Q#)::: ターゲットコンピューターが :::no-loc(Q#)::: ステートメントに到達した後にコードを実行しなくなったため、内からは確認できません `fail` 。</span><span class="sxs-lookup"><span data-stu-id="f6e00-154">By definition, a failure of this kind cannot be observed from within :::no-loc(Q#):::, as the target machine no longer runs the :::no-loc(Q#)::: code after reaching a `fail` statement.</span></span>
+<span data-ttu-id="f6e00-153">ここで、キーワードは、 `fail` 計算が続行されないことを示し、プログラムを実行しているターゲットコンピューターで例外を発生させ Q# ます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-153">Here, the keyword `fail` indicates that the computation should not proceed, and raises an exception in the target machine running the Q# program.</span></span>
+<span data-ttu-id="f6e00-154">定義上、この種のエラーは、 Q# ターゲットコンピューターが Q# ステートメントに到達した後にコードを実行しなくなったため、内からは確認できません `fail` 。</span><span class="sxs-lookup"><span data-stu-id="f6e00-154">By definition, a failure of this kind cannot be observed from within Q#, as the target machine no longer runs the Q# code after reaching a `fail` statement.</span></span>
 <span data-ttu-id="f6e00-155">したがって、への呼び出しを実行した後にを続行すると、入力が肯定的であることが `PositivityFact` 保証されます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-155">Thus, if we proceed past a call to `PositivityFact`, we can be assured that its input was positive.</span></span>
 
 <span data-ttu-id="f6e00-156">名前空間の関数を使用するのと同じ動作を実装できることに注意して `PositivityFact` [`Fact`](xref:Microsoft.Quantum.Diagnostics.fact) <xref:Microsoft.Quantum.Diagnostics> ください。</span><span class="sxs-lookup"><span data-stu-id="f6e00-156">Note that we can implement the same behavior as `PositivityFact` using the [`Fact`](xref:Microsoft.Quantum.Diagnostics.fact) function from the <xref:Microsoft.Quantum.Diagnostics> namespace:</span></span>
@@ -189,7 +189,7 @@ using (register = Qubit())
 {
     H(register);
     AssertMeasurement([PauliX], [register], Zero);
-    // Even though we do not have access to states in :::no-loc(Q#):::,
+    // Even though we do not have access to states in Q#,
     // we know by the anthropic principle that the state
     // of register at this point is |+〉.
 }
@@ -357,7 +357,7 @@ namespace Samples {
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-<span data-ttu-id="f6e00-208">次の例は、 <xref:Microsoft.Quantum.Diagnostics.DumpRegister> コード内でとの両方を使用する方法を示してい <xref:Microsoft.Quantum.Diagnostics.DumpMachine> :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-208">The following example shows you how you can use both <xref:Microsoft.Quantum.Diagnostics.DumpRegister> and <xref:Microsoft.Quantum.Diagnostics.DumpMachine> in your :::no-loc(Q#)::: code:</span></span>
+<span data-ttu-id="f6e00-208">次の例は、 <xref:Microsoft.Quantum.Diagnostics.DumpRegister> コード内でとの両方を使用する方法を示してい <xref:Microsoft.Quantum.Diagnostics.DumpMachine> Q# ます。</span><span class="sxs-lookup"><span data-stu-id="f6e00-208">The following example shows you how you can use both <xref:Microsoft.Quantum.Diagnostics.DumpRegister> and <xref:Microsoft.Quantum.Diagnostics.DumpMachine> in your Q# code:</span></span>
 
 ```qsharp
 namespace app
@@ -384,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a><span data-ttu-id="f6e00-209">デバッグ</span><span class="sxs-lookup"><span data-stu-id="f6e00-209">Debugging</span></span>
 
-<span data-ttu-id="f6e00-210">`Assert`およびの `Dump` 関数と操作の上で、は、 :::no-loc(Q#)::: 標準の Visual Studio デバッグ機能のサブセットをサポートしています。[行ブレークポイントの設定](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)、 [F10 を使用したコードのステップ](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)実行、および[クラシック変数の値の検査](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)は、シミュレーターでコードを実行するときにすべて可能です。</span><span class="sxs-lookup"><span data-stu-id="f6e00-210">On top of `Assert` and `Dump` functions and operations, :::no-loc(Q#)::: supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger), and [inspecting values of classic variables](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) are all possible when running your code on the simulator.</span></span>
+<span data-ttu-id="f6e00-210">`Assert`およびの `Dump` 関数と操作の上で、は、 Q# 標準の Visual Studio デバッグ機能のサブセットをサポートしています。[行ブレークポイントの設定](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)、 [F10 を使用したコードのステップ](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)実行、および[クラシック変数の値の検査](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)は、シミュレーターでコードを実行するときにすべて可能です。</span><span class="sxs-lookup"><span data-stu-id="f6e00-210">On top of `Assert` and `Dump` functions and operations, Q# supports a subset of standard Visual Studio debugging capabilities: [setting line breakpoints](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [stepping through code using F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger), and [inspecting values of classic variables](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) are all possible when running your code on the simulator.</span></span>
 
 <span data-ttu-id="f6e00-211">Visual Studio Code でのデバッグでは、OmniSharp によって強化された Visual Studio Code 拡張機能のために C# によって提供されるデバッグ機能を利用し、 [最新バージョン](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)をインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="f6e00-211">Debugging in Visual Studio Code leverages the debugging capabilities provided by the C# for Visual Studio Code extension powered by OmniSharp and requires installing the [latest version](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).</span></span> 

@@ -1,14 +1,14 @@
 ---
-title: :::no-loc(Q#):::標準 libararies フロー制御
-description: 'Microsoft 標準ライブラリのフロー制御操作と関数について説明し :::no-loc(Q#)::: ます。'
+title: Q#標準 libararies フロー制御
+description: 'Microsoft 標準ライブラリのフロー制御操作と関数について説明し Q# ます。'
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -19,7 +19,7 @@ ms.locfileid: "92690872"
 # <a name="higher-order-control-flow"></a><span data-ttu-id="7ca77-103">Higher-Order 制御フロー</span><span class="sxs-lookup"><span data-stu-id="7ca77-103">Higher-Order Control Flow</span></span> #
 
 <span data-ttu-id="7ca77-104">標準ライブラリの主要な役割の1つは、高レベルのアルゴリズムアイデアを [量子プログラム](https://en.wikipedia.org/wiki/Quantum_programming)として簡単に表現できるようにすることです。</span><span class="sxs-lookup"><span data-stu-id="7ca77-104">One of the primary roles of the standard library is to make it easier to express high-level algorithmic ideas as [quantum programs](https://en.wikipedia.org/wiki/Quantum_programming).</span></span>
-<span data-ttu-id="7ca77-105">そのため、 :::no-loc(Q#)::: キャノンはさまざまなフロー制御の構成要素を提供しており、それぞれが関数と操作の部分的な適用を使用して実装されています。</span><span class="sxs-lookup"><span data-stu-id="7ca77-105">Thus, the :::no-loc(Q#)::: canon provides a variety of different flow control constructs, each implemented using partial application of functions and operations.</span></span>
+<span data-ttu-id="7ca77-105">そのため、 Q# キャノンはさまざまなフロー制御の構成要素を提供しており、それぞれが関数と操作の部分的な適用を使用して実装されています。</span><span class="sxs-lookup"><span data-stu-id="7ca77-105">Thus, the Q# canon provides a variety of different flow control constructs, each implemented using partial application of functions and operations.</span></span>
 <span data-ttu-id="7ca77-106">すぐに例にジャンプする場合は、レジスタに "CNOT はしご" を構築したいケースを考えてみます。</span><span class="sxs-lookup"><span data-stu-id="7ca77-106">Jumping immediately into an example, consider the case in which one wants to construct a "CNOT ladder" on a register:</span></span>
 
 ```qsharp
@@ -50,7 +50,7 @@ ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 
 <span data-ttu-id="7ca77-111">キャノンによって提供される主な抽象化の1つは、イテレーションのことです。</span><span class="sxs-lookup"><span data-stu-id="7ca77-111">One of the primary abstractions provided by the canon is that of iteration.</span></span>
 <span data-ttu-id="7ca77-112">たとえば、という形式の $U、1つの 1 qubit の $U である $ のような形式のユニタリを使用します。</span><span class="sxs-lookup"><span data-stu-id="7ca77-112">For instance, consider a unitary of the form $U \otimes U \otimes \cdots \otimes U$ for a single-qubit unitary $U$.</span></span>
-<span data-ttu-id="7ca77-113">では :::no-loc(Q#)::: 、を使用し <xref:Microsoft.Quantum.Arrays.IndexRange> て、これをレジスタに対するループとして表すことができ `for` ます。</span><span class="sxs-lookup"><span data-stu-id="7ca77-113">In :::no-loc(Q#):::, we might use <xref:Microsoft.Quantum.Arrays.IndexRange> to represent this as as a `for` loop over a register:</span></span>
+<span data-ttu-id="7ca77-113">では Q# 、を使用し <xref:Microsoft.Quantum.Arrays.IndexRange> て、これをレジスタに対するループとして表すことができ `for` ます。</span><span class="sxs-lookup"><span data-stu-id="7ca77-113">In Q#, we might use <xref:Microsoft.Quantum.Arrays.IndexRange> to represent this as as a `for` loop over a register:</span></span>
 
 ```qsharp
 /// # Summary
@@ -91,7 +91,7 @@ ApplyToEachCA(Adjoint U, register);
 > <span data-ttu-id="7ca77-124">次に `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` 、エラー修正コード `code` と復旧関数 `recoveryFn` を各ブロックに個別に適用します。</span><span class="sxs-lookup"><span data-stu-id="7ca77-124">Then `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` will apply the error-correcting code `code` and recovery function `recoveryFn` to each block independently.</span></span>
 > <span data-ttu-id="7ca77-125">これは、従来の入力に対しても保持されます。で `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` は、$-pi/$2 の回転が $X $ に対して適用され、$Y $ に関する $pi/$3 の回転が適用されます。</span><span class="sxs-lookup"><span data-stu-id="7ca77-125">This holds even for classical inputs: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` will apply a rotation of $\pi / 2$ about $X$ followed by a rotation of $pi / 3$ about $Y$.</span></span>
 
-<span data-ttu-id="7ca77-126">また、キャノンでは、 :::no-loc(Q#)::: 関数型プログラミングに慣れている古典的な列挙パターンもサポートしています。</span><span class="sxs-lookup"><span data-stu-id="7ca77-126">The :::no-loc(Q#)::: canon also provides support for classical enumeration patterns familiar to functional programming.</span></span>
+<span data-ttu-id="7ca77-126">また、キャノンでは、 Q# 関数型プログラミングに慣れている古典的な列挙パターンもサポートしています。</span><span class="sxs-lookup"><span data-stu-id="7ca77-126">The Q# canon also provides support for classical enumeration patterns familiar to functional programming.</span></span>
 <span data-ttu-id="7ca77-127">たとえば、は、 <xref:Microsoft.Quantum.Arrays.Fold> リストに対して関数を縮小するために、パターン $f (f (s \_ {\ text{\ text{\ text{\ text{\ text{\ text{\ text{\ text{\ text{\ text{/text{\), \_ \_ \ ドット) $) を実装します。</span><span class="sxs-lookup"><span data-stu-id="7ca77-127">For instance, <xref:Microsoft.Quantum.Arrays.Fold> implements the pattern $f(f(f(s\_{\text{initial}}, x\_0), x\_1), \dots)$ for reducing a function over a list.</span></span>
 <span data-ttu-id="7ca77-128">このパターンを使用すると、合計、製品、最小、最大化、およびその他の機能を実装できます。</span><span class="sxs-lookup"><span data-stu-id="7ca77-128">This pattern can be used to implement sums, products, minima, maxima and other such functions:</span></span>
 
@@ -103,7 +103,7 @@ function Sum(xs : Int[]) {
 }
 ```
 
-<span data-ttu-id="7ca77-129">同様に、やなどの関数を <xref:Microsoft.Quantum.Arrays.Mapped> 使用して、 <xref:Microsoft.Quantum.Arrays.MappedByIndex> の関数型プログラミングの概念を表現でき :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="7ca77-129">Similarly, functions like <xref:Microsoft.Quantum.Arrays.Mapped> and <xref:Microsoft.Quantum.Arrays.MappedByIndex> can be used to express functional programming concepts in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="7ca77-129">同様に、やなどの関数を <xref:Microsoft.Quantum.Arrays.Mapped> 使用して、 <xref:Microsoft.Quantum.Arrays.MappedByIndex> の関数型プログラミングの概念を表現でき Q# ます。</span><span class="sxs-lookup"><span data-stu-id="7ca77-129">Similarly, functions like <xref:Microsoft.Quantum.Arrays.Mapped> and <xref:Microsoft.Quantum.Arrays.MappedByIndex> can be used to express functional programming concepts in Q#.</span></span>
 
 ## <a name="composing-operations-and-functions"></a><span data-ttu-id="7ca77-130">操作と関数の作成</span><span class="sxs-lookup"><span data-stu-id="7ca77-130">Composing Operations and Functions</span></span> ##
 
@@ -173,7 +173,7 @@ U(1, time / Float(nSteps), target);
 DecomposeIntoTimeStepsCA((2, U), 1);
 ```
 
-<span data-ttu-id="7ca77-159">のシグネチャは `DecomposeIntoTimeStepsCA` 、の一般的なパターンに従います :::no-loc(Q#)::: 。ここでは、配列またはその場で計算される要素を使用してサポートされるコレクションは、最初の要素が長さを示す値である組によって表され `Int` ます。</span><span class="sxs-lookup"><span data-stu-id="7ca77-159">The signature of `DecomposeIntoTimeStepsCA` follows a common pattern in :::no-loc(Q#):::, where collections that may be backed either by arrays or by something which compute elements on the fly are represented by tuples whose first elements are `Int` values indicating their lengths.</span></span>
+<span data-ttu-id="7ca77-159">のシグネチャは `DecomposeIntoTimeStepsCA` 、の一般的なパターンに従います Q# 。ここでは、配列またはその場で計算される要素を使用してサポートされるコレクションは、最初の要素が長さを示す値である組によって表され `Int` ます。</span><span class="sxs-lookup"><span data-stu-id="7ca77-159">The signature of `DecomposeIntoTimeStepsCA` follows a common pattern in Q#, where collections that may be backed either by arrays or by something which compute elements on the fly are represented by tuples whose first elements are `Int` values indicating their lengths.</span></span>
 
 ## <a name="putting-it-together-controlling-operations"></a><span data-ttu-id="7ca77-160">まとめ: 操作の制御</span><span class="sxs-lookup"><span data-stu-id="7ca77-160">Putting it Together: Controlling Operations</span></span> ##
 
@@ -218,7 +218,7 @@ operation _ControlledOnBitString(
 
 <span data-ttu-id="7ca77-177">この時点では、これで完了ですが、新しい操作では、ファンクタを適用するような "感覚" にならないということがわかりません `Controlled` 。</span><span class="sxs-lookup"><span data-stu-id="7ca77-177">At this point, we could be done, but it is somehow unsatisfying that our new operation does not "feel" like applying the `Controlled` functor.</span></span>
 <span data-ttu-id="7ca77-178">このため、oracle を制御し、新しい操作を返す関数を記述することによって、新しい制御フローの概念を定義します。</span><span class="sxs-lookup"><span data-stu-id="7ca77-178">Thus, we finish defining our new control flow concept by writing a function that takes the oracle to be controlled and that returns a new operation.</span></span>
-<span data-ttu-id="7ca77-179">このように、新しい関数は、 `Controlled` とキャノンを使用して強力な新しい制御フローコンストラクトを簡単に定義できることを示してい :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="7ca77-179">In this way, our new function looks and feels very much like `Controlled`, illustrating that we can easily define powerful new control flow constructs using :::no-loc(Q#)::: and the canon together:</span></span>
+<span data-ttu-id="7ca77-179">このように、新しい関数は、 `Controlled` とキャノンを使用して強力な新しい制御フローコンストラクトを簡単に定義できることを示してい Q# ます。</span><span class="sxs-lookup"><span data-stu-id="7ca77-179">In this way, our new function looks and feels very much like `Controlled`, illustrating that we can easily define powerful new control flow constructs using Q# and the canon together:</span></span>
 
 ```qsharp
 function ControlledOnBitString(

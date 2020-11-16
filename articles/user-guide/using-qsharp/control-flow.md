@@ -1,5 +1,5 @@
 ---
-title: '制御フロー :::no-loc(Q#):::'
+title: '制御フロー Q#'
 description: ループ、条件、その他
 author: gillenhaalb
 ms.author: a-gibec
@@ -7,8 +7,8 @@ ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691090"
 ---
-# <a name="control-flow-in-no-locq"></a><span data-ttu-id="33981-103">制御フロー :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="33981-103">Control flow in :::no-loc(Q#):::</span></span>
+# <a name="control-flow-in-no-locq"></a><span data-ttu-id="33981-103">制御フロー Q#</span><span class="sxs-lookup"><span data-stu-id="33981-103">Control flow in Q#</span></span>
 
 <span data-ttu-id="33981-104">演算または関数内では、各ステートメントが順序どおりに実行されます。これは、その他の一般的な従来の言語と似ています。</span><span class="sxs-lookup"><span data-stu-id="33981-104">Within an operation or function, each statement runs in order, similar to other common imperative classical languages.</span></span>
 <span data-ttu-id="33981-105">ただし、制御フローを変更するには、次の3つの方法があります。</span><span class="sxs-lookup"><span data-stu-id="33981-105">However, you can modify the flow of control in three distinct ways:</span></span>
@@ -108,12 +108,12 @@ for ((index, measured) in results) { // iterates over the tuple values in result
 
 ## <a name="repeat-until-success-loop"></a><span data-ttu-id="33981-140">繰り返し-成功ループ</span><span class="sxs-lookup"><span data-stu-id="33981-140">Repeat-until-success loop</span></span>
 
-<span data-ttu-id="33981-141">この言語では、 :::no-loc(Q#)::: 古典制御フローは qubits の測定結果に依存します。</span><span class="sxs-lookup"><span data-stu-id="33981-141">The :::no-loc(Q#)::: language allows classical control flow to depend on the results of measuring qubits.</span></span>
+<span data-ttu-id="33981-141">この言語では、 Q# 古典制御フローは qubits の測定結果に依存します。</span><span class="sxs-lookup"><span data-stu-id="33981-141">The Q# language allows classical control flow to depend on the results of measuring qubits.</span></span>
 <span data-ttu-id="33981-142">さらに、この機能により、unitaries を実装するための計算コストを削減できる強力なガジェットを実装できるようになります。</span><span class="sxs-lookup"><span data-stu-id="33981-142">This capability, in turn, enables implementing powerful probabilistic gadgets that can reduce the computational cost for implementing unitaries.</span></span>
-<span data-ttu-id="33981-143">この例として、の *繰り返しの成功* (ru) パターンが挙げられ :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="33981-143">Examples of this are the *repeat-until-success* (RUS) patterns in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="33981-143">この例として、の *繰り返しの成功* (ru) パターンが挙げられ Q# ます。</span><span class="sxs-lookup"><span data-stu-id="33981-143">Examples of this are the *repeat-until-success* (RUS) patterns in Q#.</span></span>
 <span data-ttu-id="33981-144">これらの RU パターンは、基本的なゲートの観点から、 *予想* 低コストの確率論的プログラムです。発生したコストは、実際の実行と、考えられる複数の branchings のインターリーブによって異なります。</span><span class="sxs-lookup"><span data-stu-id="33981-144">These RUS patterns are probabilistic programs that have an *expected* low cost in terms of elementary gates; the incurred cost depends on the actual run and the interleaving of the multiple possible branchings.</span></span>
 
-<span data-ttu-id="33981-145">繰り返し-成功 (RU) パターンを容易にするために、は :::no-loc(Q#)::: コンストラクトをサポートしています。</span><span class="sxs-lookup"><span data-stu-id="33981-145">To facilitate repeat-until-success (RUS) patterns, :::no-loc(Q#)::: supports the constructs</span></span>
+<span data-ttu-id="33981-145">繰り返し-成功 (RU) パターンを容易にするために、は Q# コンストラクトをサポートしています。</span><span class="sxs-lookup"><span data-stu-id="33981-145">To facilitate repeat-until-success (RUS) patterns, Q# supports the constructs</span></span>
 
 ```qsharp
 repeat {
@@ -151,9 +151,9 @@ until (expression);
 
 ## <a name="while-loop"></a><span data-ttu-id="33981-157">while ループ</span><span class="sxs-lookup"><span data-stu-id="33981-157">While loop</span></span>
 
-<span data-ttu-id="33981-158">繰り返し-成功パターンには、クォンタム固有の connotation があります。</span><span class="sxs-lookup"><span data-stu-id="33981-158">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="33981-159">これらは、クォンタムアルゴリズムの特定のクラスで広く使用されているため、の専用言語構成要素 :::no-loc(Q#)::: です。</span><span class="sxs-lookup"><span data-stu-id="33981-159">They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in :::no-loc(Q#):::.</span></span> <span data-ttu-id="33981-160">ただし、条件に基づいて中断されるループは、実行の長さがコンパイル時に不明であるため、クォンタムのランタイムでは特に注意して処理されます。</span><span class="sxs-lookup"><span data-stu-id="33981-160">However, loops that break based on a condition and whose run length is thus unknown at compile-time, are handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="33981-161">ただし、これらのループには従来の (非クォンタム) ハードウェアで実行されるコードのみが含まれているため、関数内での使用は問題ありません。</span><span class="sxs-lookup"><span data-stu-id="33981-161">However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware.</span></span> 
+<span data-ttu-id="33981-158">繰り返し-成功パターンには、クォンタム固有の connotation があります。</span><span class="sxs-lookup"><span data-stu-id="33981-158">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="33981-159">これらは、クォンタムアルゴリズムの特定のクラスで広く使用されているため、の専用言語構成要素 Q# です。</span><span class="sxs-lookup"><span data-stu-id="33981-159">They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in Q#.</span></span> <span data-ttu-id="33981-160">ただし、条件に基づいて中断されるループは、実行の長さがコンパイル時に不明であるため、クォンタムのランタイムでは特に注意して処理されます。</span><span class="sxs-lookup"><span data-stu-id="33981-160">However, loops that break based on a condition and whose run length is thus unknown at compile-time, are handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="33981-161">ただし、これらのループには従来の (非クォンタム) ハードウェアで実行されるコードのみが含まれているため、関数内での使用は問題ありません。</span><span class="sxs-lookup"><span data-stu-id="33981-161">However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware.</span></span> 
 
-<span data-ttu-id="33981-162">:::no-loc(Q#):::したがって、では、関数内でのみ while ループを使用できます。</span><span class="sxs-lookup"><span data-stu-id="33981-162">:::no-loc(Q#):::, therefore, supports to use of while loops within functions only.</span></span>
+<span data-ttu-id="33981-162">Q#したがって、では、関数内でのみ while ループを使用できます。</span><span class="sxs-lookup"><span data-stu-id="33981-162">Q#, therefore, supports to use of while loops within functions only.</span></span>
 <span data-ttu-id="33981-163">ステートメントは、 `while` キーワード、 `while` かっこで囲まれたブール式、およびステートメントブロックで構成されます。</span><span class="sxs-lookup"><span data-stu-id="33981-163">A `while` statement consists of the keyword `while`, a Boolean expression in parentheses, and a statement block.</span></span>
 <span data-ttu-id="33981-164">ステートメントブロック (ループの本体) は、条件がと評価されている限り実行され `true` ます。</span><span class="sxs-lookup"><span data-stu-id="33981-164">The statement block (the body of the loop) runs as long as the condition evaluates to `true`.</span></span>
 
@@ -183,7 +183,7 @@ operation ApplyWith<'T>(
 }
 ```
 
-<span data-ttu-id="33981-169">:::no-loc(Q#)::: では、前の変換を実装する活用形ステートメントがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="33981-169">:::no-loc(Q#)::: supports a conjugation statement that implements the preceding transformation.</span></span> <span data-ttu-id="33981-170">このステートメントを使用すると、 `ApplyWith` 次のように操作を実装できます。</span><span class="sxs-lookup"><span data-stu-id="33981-170">Using that statement, the operation `ApplyWith` can be implemented in the following way:</span></span>
+<span data-ttu-id="33981-169">Q# では、前の変換を実装する活用形ステートメントがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="33981-169">Q# supports a conjugation statement that implements the preceding transformation.</span></span> <span data-ttu-id="33981-170">このステートメントを使用すると、 `ApplyWith` 次のように操作を実装できます。</span><span class="sxs-lookup"><span data-stu-id="33981-170">Using that statement, the operation `ApplyWith` can be implemented in the following way:</span></span>
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -249,7 +249,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a><span data-ttu-id="33981-193">無理数軸についてのシングル qubit ローテーションの ru パターン</span><span class="sxs-lookup"><span data-stu-id="33981-193">RUS pattern for single-qubit rotation about an irrational axis</span></span> 
 
-<span data-ttu-id="33981-194">一般的なユースケースでは、次の操作によって、 :::no-loc(Q#)::: Bloch 球の $ (I + 2i Z)/\ sqrt $ の無理数軸の周りの回転が実装され {5} ます。</span><span class="sxs-lookup"><span data-stu-id="33981-194">In a typical use case, the following :::no-loc(Q#)::: operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere.</span></span> <span data-ttu-id="33981-195">実装では、既知の RUS パターンを使用します。</span><span class="sxs-lookup"><span data-stu-id="33981-195">The implementation uses a known RUS pattern:</span></span>
+<span data-ttu-id="33981-194">一般的なユースケースでは、次の操作によって、 Q# Bloch 球の $ (I + 2i Z)/\ sqrt $ の無理数軸の周りの回転が実装され {5} ます。</span><span class="sxs-lookup"><span data-stu-id="33981-194">In a typical use case, the following Q# operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere.</span></span> <span data-ttu-id="33981-195">実装では、既知の RUS パターンを使用します。</span><span class="sxs-lookup"><span data-stu-id="33981-195">The implementation uses a known RUS pattern:</span></span>
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -375,4 +375,4 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 
 ## <a name="next-steps"></a><span data-ttu-id="33981-210">次のステップ</span><span class="sxs-lookup"><span data-stu-id="33981-210">Next steps</span></span>
 
-<span data-ttu-id="33981-211">での [テストとデバッグ](xref:microsoft.quantum.guide.testingdebugging) について説明 :::no-loc(Q#)::: します。</span><span class="sxs-lookup"><span data-stu-id="33981-211">Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="33981-211">での [テストとデバッグ](xref:microsoft.quantum.guide.testingdebugging) について説明 Q# します。</span><span class="sxs-lookup"><span data-stu-id="33981-211">Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in Q#.</span></span>

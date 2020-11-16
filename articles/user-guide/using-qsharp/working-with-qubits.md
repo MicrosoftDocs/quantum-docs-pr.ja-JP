@@ -1,14 +1,14 @@
 ---
 title: 量子ビットの操作
-description: 'での qubits の使用について説明します。 :::no-loc(Q#):::'
+description: 'での qubits の使用について説明します。 Q#'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 9a3d7e03016332a04ac9d1610428b6fcd546d1f6
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -20,7 +20,7 @@ ms.locfileid: "92691581"
 
 <span data-ttu-id="97f90-104">Qubits は、クォンタムコンピューティングにおける情報の基本的なオブジェクトです。</span><span class="sxs-lookup"><span data-stu-id="97f90-104">Qubits are the fundamental object of information in quantum computing.</span></span> <span data-ttu-id="97f90-105">Qubits の概要については、「 [クォンタムコンピューティングについ](xref:microsoft.quantum.overview.understanding)て」を参照してください。また、数学表現の詳細については、「 [qubits](xref:microsoft.quantum.concepts.qubit)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="97f90-105">For a general introduction to qubits, see [Understanding quantum computing](xref:microsoft.quantum.overview.understanding), and to dive deeper into their mathematical representation, see [The Qubit](xref:microsoft.quantum.concepts.qubit).</span></span> 
 
-<span data-ttu-id="97f90-106">この記事では、プログラムで qubits を使用して操作する方法について説明し :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="97f90-106">This article explores how to use and work with qubits in a :::no-loc(Q#)::: program.</span></span> 
+<span data-ttu-id="97f90-106">この記事では、プログラムで qubits を使用して操作する方法について説明し Q# ます。</span><span class="sxs-lookup"><span data-stu-id="97f90-106">This article explores how to use and work with qubits in a Q# program.</span></span> 
 
 > [!IMPORTANT]
 ><span data-ttu-id="97f90-107">この記事で説明されているどのステートメントも、関数の本体内では有効ではありません。</span><span class="sxs-lookup"><span data-stu-id="97f90-107">None of the statements discussed in this article are valid within the body of a function.</span></span> <span data-ttu-id="97f90-108">これらは、操作内でのみ有効です。</span><span class="sxs-lookup"><span data-stu-id="97f90-108">They are only valid within operations.</span></span>
@@ -28,7 +28,7 @@ ms.locfileid: "92691581"
 ## <a name="allocating-qubits"></a><span data-ttu-id="97f90-109">割り当て (Qubits を)</span><span class="sxs-lookup"><span data-stu-id="97f90-109">Allocating Qubits</span></span>
 
 <span data-ttu-id="97f90-110">物理 qubits は、quantum コンピューターの貴重なリソースであるため、コンパイラのジョブの一部として、それらが可能な限り効率的に使用されていることを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="97f90-110">Because physical qubits are a precious resource in a quantum computer, part of the compiler's job is to make sure they are being used as efficiently as possible.</span></span>
-<span data-ttu-id="97f90-111">そのため、 :::no-loc(Q#)::: 特定のステートメントブロック内で使用するには、qubits を *割り当てる* 必要があります。</span><span class="sxs-lookup"><span data-stu-id="97f90-111">As such, you need to tell :::no-loc(Q#)::: to *allocate* qubits for use within a particular statement block.</span></span>
+<span data-ttu-id="97f90-111">そのため、 Q# 特定のステートメントブロック内で使用するには、qubits を *割り当てる* 必要があります。</span><span class="sxs-lookup"><span data-stu-id="97f90-111">As such, you need to tell Q# to *allocate* qubits for use within a particular statement block.</span></span>
 <span data-ttu-id="97f90-112">Qubits を1つの qubits として割り当てることも、 *レジスタ* と呼ばれる qubits の配列として割り当てることもできます。</span><span class="sxs-lookup"><span data-stu-id="97f90-112">You can allocate qubits as a single qubit, or as an array of qubits, known as a *register* .</span></span> 
 
 ### <a name="clean-qubits"></a><span data-ttu-id="97f90-113">Clean qubits</span><span class="sxs-lookup"><span data-stu-id="97f90-113">Clean qubits</span></span>
@@ -85,17 +85,17 @@ borrowing ((auxiliary, register) = (Qubit(), Qubit[5])) {
 <span data-ttu-id="97f90-138">このような qubits が不足している場合は、新しい qubits を割り当てて要求を完了します。</span><span class="sxs-lookup"><span data-stu-id="97f90-138">If there aren't enough such qubits, then it allocates new qubits to complete the request.</span></span>
 
 <span data-ttu-id="97f90-139">ダーティ qubits の既知のユースケースの中では、incrementers の少数の qubits と実装のみを必要とする、マルチ制御の CNOT ゲートの実装があります。</span><span class="sxs-lookup"><span data-stu-id="97f90-139">Among the known use cases of dirty qubits are implementations of multi-controlled CNOT gates that require only very few qubits and implementation of incrementers.</span></span>
-<span data-ttu-id="97f90-140">での使用例につい :::no-loc(Q#)::: ては、この記事の「 [貸し出し Qubits の例](#borrowing-qubits-example) 」を参照するか、 [*2n + 2 qubits と Toffoli ベースのモジュール乗算 (Based*](https://arxiv.org/abs/1611.07995) 、roetteler、および svore 2017) を使用して、借り qubits を利用するアルゴリズムを確認してください。</span><span class="sxs-lookup"><span data-stu-id="97f90-140">For an example of their use in :::no-loc(Q#):::, see [Borrowing Qubits Example](#borrowing-qubits-example) in this article, or the paper [*Factoring using 2n+2 qubits with Toffoli based modular multiplication*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler, and Svore 2017) for an algorithm which utilizes borrowed qubits.</span></span>
+<span data-ttu-id="97f90-140">での使用例につい Q# ては、この記事の「 [貸し出し Qubits の例](#borrowing-qubits-example) 」を参照するか、 [*2n + 2 qubits と Toffoli ベースのモジュール乗算 (Based*](https://arxiv.org/abs/1611.07995) 、roetteler、および svore 2017) を使用して、借り qubits を利用するアルゴリズムを確認してください。</span><span class="sxs-lookup"><span data-stu-id="97f90-140">For an example of their use in Q#, see [Borrowing Qubits Example](#borrowing-qubits-example) in this article, or the paper [*Factoring using 2n+2 qubits with Toffoli based modular multiplication*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler, and Svore 2017) for an algorithm which utilizes borrowed qubits.</span></span>
 
 ## <a name="intrinsic-operations"></a><span data-ttu-id="97f90-141">組み込みの操作</span><span class="sxs-lookup"><span data-stu-id="97f90-141">Intrinsic Operations</span></span>
 
 <span data-ttu-id="97f90-142">割り当てられると、関数と操作に qubit を渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="97f90-142">Once allocated, you can pass a qubit to functions and operations.</span></span>
-<span data-ttu-id="97f90-143">これは、 :::no-loc(Q#)::: 実行可能なアクションがすべて操作として定義されているため、プログラムが qubit を使用して実行できることです。</span><span class="sxs-lookup"><span data-stu-id="97f90-143">In some sense, this is all that a :::no-loc(Q#)::: program can do with a qubit, as the actions that can be taken are all defined as operations.</span></span>
+<span data-ttu-id="97f90-143">これは、 Q# 実行可能なアクションがすべて操作として定義されているため、プログラムが qubit を使用して実行できることです。</span><span class="sxs-lookup"><span data-stu-id="97f90-143">In some sense, this is all that a Q# program can do with a qubit, as the actions that can be taken are all defined as operations.</span></span>
 
-<span data-ttu-id="97f90-144">この記事では、 :::no-loc(Q#)::: qubits との対話に使用できるいくつかの便利な操作について説明します。</span><span class="sxs-lookup"><span data-stu-id="97f90-144">This article discusses a few useful :::no-loc(Q#)::: operations that you can use to interact with qubits.</span></span>
+<span data-ttu-id="97f90-144">この記事では、 Q# qubits との対話に使用できるいくつかの便利な操作について説明します。</span><span class="sxs-lookup"><span data-stu-id="97f90-144">This article discusses a few useful Q# operations that you can use to interact with qubits.</span></span>
 <span data-ttu-id="97f90-145">これらおよび他の詳細については、「 [組み込みの操作と関数](xref:microsoft.quantum.libraries.standard.prelude)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="97f90-145">For more detail about these and others, see [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude).</span></span> 
 
-<span data-ttu-id="97f90-146">1つ目の方法として、単 qubit の Pare Li 演算子 $X $、$Y $、および $Z $ は、 :::no-loc(Q#)::: [`X`](xref:Microsoft.Quantum.Intrinsic.X) それぞれが型を持つ組み込みの操作である、、およびによって表され [`Y`](xref:Microsoft.Quantum.Intrinsic.Y) [`Z`](xref:Microsoft.Quantum.Intrinsic.Z) `(Qubit => Unit is Adj + Ctl)` ます。</span><span class="sxs-lookup"><span data-stu-id="97f90-146">First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in :::no-loc(Q#)::: by the intrinsic operations [`X`](xref:Microsoft.Quantum.Intrinsic.X), [`Y`](xref:Microsoft.Quantum.Intrinsic.Y), and [`Z`](xref:Microsoft.Quantum.Intrinsic.Z), each of which has type `(Qubit => Unit is Adj + Ctl)`.</span></span>
+<span data-ttu-id="97f90-146">1つ目の方法として、単 qubit の Pare Li 演算子 $X $、$Y $、および $Z $ は、 Q# [`X`](xref:Microsoft.Quantum.Intrinsic.X) それぞれが型を持つ組み込みの操作である、、およびによって表され [`Y`](xref:Microsoft.Quantum.Intrinsic.Y) [`Z`](xref:Microsoft.Quantum.Intrinsic.Z) `(Qubit => Unit is Adj + Ctl)` ます。</span><span class="sxs-lookup"><span data-stu-id="97f90-146">First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in Q# by the intrinsic operations [`X`](xref:Microsoft.Quantum.Intrinsic.X), [`Y`](xref:Microsoft.Quantum.Intrinsic.Y), and [`Z`](xref:Microsoft.Quantum.Intrinsic.Z), each of which has type `(Qubit => Unit is Adj + Ctl)`.</span></span>
 
 <span data-ttu-id="97f90-147">「組み込みの [操作と関数](xref:microsoft.quantum.libraries.standard.prelude)」で説明されているように、$ $X `X` は、ビットフリップ演算または NOT gate として考えられます。</span><span class="sxs-lookup"><span data-stu-id="97f90-147">As described in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), think of $X$ and hence of `X` as a bit-flip operation or NOT gate.</span></span>
 <span data-ttu-id="97f90-148">操作を使用して、 `X` $ \ket{s_0 s_1 \ ドット s_n} $ の形式の状態を準備できます。これは、一部のクラシックビット文字列 $s $:</span><span class="sxs-lookup"><span data-stu-id="97f90-148">You can use the `X` operation to prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:</span></span>
@@ -127,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > <span data-ttu-id="97f90-149">後で、手動による制御フローを必要としない、この操作をよりコンパクトな方法で作成できます。</span><span class="sxs-lookup"><span data-stu-id="97f90-149">Later, you will see more compact ways of writing this operation that do not require manual control flow.</span></span>
 
-<span data-ttu-id="97f90-150">組み込み操作によって表される \Ket transform $H $ を使用して、$ \ket{+} = \ left (\ket {0} + \ket {1} /right)/\ sqrt {2} $ and $ \ket = (\ket-Hadamard/right)/-sqrt $ などの状態を準備することもでき {-} {0} {1} {2} :::no-loc(Q#)::: [`H`](xref:Microsoft.Quantum.Intrinsic.H) ます (型 (qubit => Unit is 形容詞 + Ctl) ')。</span><span class="sxs-lookup"><span data-stu-id="97f90-150">You can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, which is represented in :::no-loc(Q#)::: by the intrinsic operation [`H`](xref:Microsoft.Quantum.Intrinsic.H) (also of type (Qubit => Unit is Adj + Ctl)\`):</span></span>
+<span data-ttu-id="97f90-150">組み込み操作によって表される \Ket transform $H $ を使用して、$ \ket{+} = \ left (\ket {0} + \ket {1} /right)/\ sqrt {2} $ and $ \ket = (\ket-Hadamard/right)/-sqrt $ などの状態を準備することもでき {-} {0} {1} {2} Q# [`H`](xref:Microsoft.Quantum.Intrinsic.H) ます (型 (qubit => Unit is 形容詞 + Ctl) ')。</span><span class="sxs-lookup"><span data-stu-id="97f90-150">You can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, which is represented in Q# by the intrinsic operation [`H`](xref:Microsoft.Quantum.Intrinsic.H) (also of type (Qubit => Unit is Adj + Ctl)\`):</span></span>
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -245,4 +245,4 @@ is Adj + Ctl {
 
 ## <a name="next-steps"></a><span data-ttu-id="97f90-171">次のステップ</span><span class="sxs-lookup"><span data-stu-id="97f90-171">Next steps</span></span>
 
-<span data-ttu-id="97f90-172">の [制御フロー](xref:microsoft.quantum.guide.controlflow) について説明 :::no-loc(Q#)::: します。</span><span class="sxs-lookup"><span data-stu-id="97f90-172">Learn about [Control Flow](xref:microsoft.quantum.guide.controlflow) in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="97f90-172">の [制御フロー](xref:microsoft.quantum.guide.controlflow) について説明 Q# します。</span><span class="sxs-lookup"><span data-stu-id="97f90-172">Learn about [Control Flow](xref:microsoft.quantum.guide.controlflow) in Q#.</span></span>

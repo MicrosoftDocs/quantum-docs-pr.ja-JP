@@ -1,5 +1,5 @@
 ---
-title: '標準ライブラリ内のアプリケーション :::no-loc(Q#):::'
+title: '標準ライブラリ内のアプリケーション Q#'
 description: クォンタムコンピューティングの2つの基本的なアプリケーション (Hamiltonian シミュレーションと Shor の検索アルゴリズム) について説明します。
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
@@ -7,8 +7,8 @@ ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT

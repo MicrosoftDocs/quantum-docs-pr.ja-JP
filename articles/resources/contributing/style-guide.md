@@ -1,14 +1,14 @@
 ---
-title: 'Microsoft :::no-loc(Q#)::: スタイルガイド'
-description: 'プログラムおよびライブラリの名前付け、入力、ドキュメント、および書式設定の規則について説明し :::no-loc(Q#)::: ます。'
+title: 'Microsoft Q# スタイルガイド'
+description: 'プログラムおよびライブラリの名前付け、入力、ドキュメント、および書式設定の規則について説明し Q# ます。'
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,10 +16,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691743"
 ---
-# <a name="no-locq-style-guide"></a><span data-ttu-id="747f7-103">:::no-loc(Q#)::: スタイルガイド</span><span class="sxs-lookup"><span data-stu-id="747f7-103">:::no-loc(Q#)::: Style Guide</span></span> #
+# <a name="no-locq-style-guide"></a><span data-ttu-id="747f7-103">Q# スタイルガイド</span><span class="sxs-lookup"><span data-stu-id="747f7-103">Q# Style Guide</span></span> #
 ## <a name="general-conventions"></a><span data-ttu-id="747f7-104">一般規則</span><span class="sxs-lookup"><span data-stu-id="747f7-104">General Conventions</span></span> ##
 
-<span data-ttu-id="747f7-105">このガイドで推奨されている規則は、プログラムやライブラリを読みやすく理解しやすいようにするためのもの :::no-loc(Q#)::: です。</span><span class="sxs-lookup"><span data-stu-id="747f7-105">The conventions suggested in this guide are intended to help make programs and libraries written in :::no-loc(Q#)::: easier to read and understand.</span></span>
+<span data-ttu-id="747f7-105">このガイドで推奨されている規則は、プログラムやライブラリを読みやすく理解しやすいようにするためのもの Q# です。</span><span class="sxs-lookup"><span data-stu-id="747f7-105">The conventions suggested in this guide are intended to help make programs and libraries written in Q# easier to read and understand.</span></span>
 
 ## <a name="guidance"></a><span data-ttu-id="747f7-106">ガイダンス</span><span class="sxs-lookup"><span data-stu-id="747f7-106">Guidance</span></span>
 
@@ -32,13 +32,13 @@ ms.locfileid: "92691743"
 <span data-ttu-id="747f7-110">Quantum 開発キットの提供では、quantum 開発者が簡単に読むことができ、驚くほど簡単なプログラムを作成するのに役立つ関数名と操作名に努めています。</span><span class="sxs-lookup"><span data-stu-id="747f7-110">In offering the Quantum Development Kit, we strive for function and operation names that help quantum developers write programs that are easy to read and that minimize surprise.</span></span>
 <span data-ttu-id="747f7-111">ここで重要なのは、関数、操作、および型の名前を選択するときに、プログラマがクォンタムの概念を表現するために使用する *ボキャブラリ* を確立することです。お客様が選択した内容を明確に伝えることができます。</span><span class="sxs-lookup"><span data-stu-id="747f7-111">An important part of that is that when we choose names for functions, operations, and types, we are establishing the *vocabulary* that programmers use to express quantum concepts; with our choices, we either help or hinder them in their effort to clearly communicate.</span></span>
 <span data-ttu-id="747f7-112">これにより、導入された名前が隠すのではなく、明確になるようにする責任があります。</span><span class="sxs-lookup"><span data-stu-id="747f7-112">This places a responsibility on us to make sure that the names we introduce offer clarity rather than obscurity.</span></span>
-<span data-ttu-id="747f7-113">このセクションでは、開発コミュニティのベストプラクティスについて、明示的なガイダンスの観点からこの義務を満たす方法について詳しく説明し :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-113">In this section, we detail how we meet this obligation in terms of explicit guidance that helps us do the best by the :::no-loc(Q#)::: development community.</span></span>
+<span data-ttu-id="747f7-113">このセクションでは、開発コミュニティのベストプラクティスについて、明示的なガイダンスの観点からこの義務を満たす方法について詳しく説明し Q# ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-113">In this section, we detail how we meet this obligation in terms of explicit guidance that helps us do the best by the Q# development community.</span></span>
 
 ### <a name="operations-and-functions"></a><span data-ttu-id="747f7-114">操作と関数</span><span class="sxs-lookup"><span data-stu-id="747f7-114">Operations and Functions</span></span> ###
 
 <span data-ttu-id="747f7-115">名前によって最初に確立されるものの1つは、特定のシンボルが関数または操作を表すかどうかです。</span><span class="sxs-lookup"><span data-stu-id="747f7-115">One of the first things that a name should establish is whether a given symbol represents a function or an operation.</span></span>
 <span data-ttu-id="747f7-116">関数と演算の違いは、コードブロックの動作を理解するために重要です。</span><span class="sxs-lookup"><span data-stu-id="747f7-116">The difference between functions and operations is critical to understanding how a block of code behaves.</span></span>
-<span data-ttu-id="747f7-117">関数と操作の違いをユーザーに伝えるために、 :::no-loc(Q#)::: 副作用を使用して、そのモデルのクォンタム操作に依存しています。</span><span class="sxs-lookup"><span data-stu-id="747f7-117">To communicate the distinction between functions and operations to users, we rely on that :::no-loc(Q#)::: models quantum operations through the use of side effects.</span></span>
+<span data-ttu-id="747f7-117">関数と操作の違いをユーザーに伝えるために、 Q# 副作用を使用して、そのモデルのクォンタム操作に依存しています。</span><span class="sxs-lookup"><span data-stu-id="747f7-117">To communicate the distinction between functions and operations to users, we rely on that Q# models quantum operations through the use of side effects.</span></span>
 <span data-ttu-id="747f7-118">つまり、操作は何らかの処理 *を行います* 。</span><span class="sxs-lookup"><span data-stu-id="747f7-118">That is, an operation *does* something.</span></span>
 
 <span data-ttu-id="747f7-119">一方、関数は、データ間の数学的な関係を記述します。</span><span class="sxs-lookup"><span data-stu-id="747f7-119">By contrast, functions describe the mathematical relationships between data.</span></span>
@@ -100,8 +100,8 @@ ms.locfileid: "92691743"
 |---|------|-------------|
 | <span data-ttu-id="747f7-163">☑</span><span class="sxs-lookup"><span data-stu-id="747f7-163">☑</span></span> | `operation ReflectAboutStart` | <span data-ttu-id="747f7-164">操作の効果を示すには、動詞 ("リフレクト") の使用をクリアします。</span><span class="sxs-lookup"><span data-stu-id="747f7-164">Clear use of a verb ("reflect") to indicate the effect of the operation.</span></span> |
 | <span data-ttu-id="747f7-165">☒</span><span class="sxs-lookup"><span data-stu-id="747f7-165">☒</span></span> | <s>`operation XRotation`</s> | <span data-ttu-id="747f7-166">名詞句の使用は、操作ではなく、関数を提案します。</span><span class="sxs-lookup"><span data-stu-id="747f7-166">Use of noun phrase suggests function, rather than operation.</span></span> |
-| <span data-ttu-id="747f7-167">☒</span><span class="sxs-lookup"><span data-stu-id="747f7-167">☒</span></span> | <s>`operation search_oracle`</s> | <span data-ttu-id="747f7-168">`snake_case`Contravenes 表記の使用 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="747f7-168">Use of `snake_case` contravenes :::no-loc(Q#)::: notation.</span></span> |
-| <span data-ttu-id="747f7-169">☒</span><span class="sxs-lookup"><span data-stu-id="747f7-169">☒</span></span> | <s>`operation Search_Oracle`</s> | <span data-ttu-id="747f7-170">操作名 contravenes notation の内部でのアンダースコアの使用 :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="747f7-170">Use of underscores internal to operation name contravenes :::no-loc(Q#)::: notation.</span></span> |
+| <span data-ttu-id="747f7-167">☒</span><span class="sxs-lookup"><span data-stu-id="747f7-167">☒</span></span> | <s>`operation search_oracle`</s> | <span data-ttu-id="747f7-168">`snake_case`Contravenes 表記の使用 Q# 。</span><span class="sxs-lookup"><span data-stu-id="747f7-168">Use of `snake_case` contravenes Q# notation.</span></span> |
+| <span data-ttu-id="747f7-169">☒</span><span class="sxs-lookup"><span data-stu-id="747f7-169">☒</span></span> | <s>`operation Search_Oracle`</s> | <span data-ttu-id="747f7-170">操作名 contravenes notation の内部でのアンダースコアの使用 Q# 。</span><span class="sxs-lookup"><span data-stu-id="747f7-170">Use of underscores internal to operation name contravenes Q# notation.</span></span> |
 | <span data-ttu-id="747f7-171">☑</span><span class="sxs-lookup"><span data-stu-id="747f7-171">☑</span></span> | `function StatePreparationOracle` | <span data-ttu-id="747f7-172">名詞句を使用すると、関数が操作を返すことがわかります。</span><span class="sxs-lookup"><span data-stu-id="747f7-172">Use of noun phrase suggests that the function returns an operation.</span></span> |
 | <span data-ttu-id="747f7-173">☑</span><span class="sxs-lookup"><span data-stu-id="747f7-173">☑</span></span> | `function EqualityFact` | <span data-ttu-id="747f7-174">名詞 ("fact") の使用をクリアし、これが関数であることを意味します。</span><span class="sxs-lookup"><span data-stu-id="747f7-174">Clear use of noun ("fact") to indicate that this is a function, while the adjective.</span></span> |
 | <span data-ttu-id="747f7-175">☒</span><span class="sxs-lookup"><span data-stu-id="747f7-175">☒</span></span> | <s>`function GetRotationAngles`</s> | <span data-ttu-id="747f7-176">動詞 ("get") を使用すると、これが操作であることが提案されます。</span><span class="sxs-lookup"><span data-stu-id="747f7-176">Use of verb ("get") suggests that this is an operation.</span></span> |
@@ -113,9 +113,9 @@ ms.locfileid: "92691743"
 
 ### <a name="entry-points"></a><span data-ttu-id="747f7-183">エントリ ポイント</span><span class="sxs-lookup"><span data-stu-id="747f7-183">Entry Points</span></span>
 
-<span data-ttu-id="747f7-184">プログラムにエントリポイントを定義すると :::no-loc(Q#)::: 、コンパイラはその :::no-loc(Q#)::: エントリポイントが特定の名前 (例: [ `@EntryPoint()` ](xref:Microsoft.Quantum.Core.EntryPoint) `main` 、 `Main` 、または) を持つことを要求するのではなく、属性を認識し `__main__` ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-184">When defining an entry point into a :::no-loc(Q#)::: program, the :::no-loc(Q#)::: compiler recognizes the [`@EntryPoint()` attribute](xref:Microsoft.Quantum.Core.EntryPoint) rather requiring that entry points have a particular name (e.g.: `main`, `Main`, or `__main__`).</span></span>
-<span data-ttu-id="747f7-185">つまり、開発者の観点から見る :::no-loc(Q#)::: と、エントリポイントは、で注釈が付けられた通常の操作です `@EntryPoint()` 。</span><span class="sxs-lookup"><span data-stu-id="747f7-185">That is, from the perspective of a :::no-loc(Q#)::: developer, entry points are ordinary operations annotated with `@EntryPoint()`.</span></span>
-<span data-ttu-id="747f7-186">さらに、エントリポイント :::no-loc(Q#)::: は、アプリケーション全体 (たとえば、スタンドアロンの実行可能プログラム) のエントリポイントである場合もあれば、 :::no-loc(Q#)::: プログラムとアプリケーションのホストプログラムとの間のインターフェイスである場合もあります :::no-loc(Q#)::: (つまり、 :::no-loc(Q#)::: Python または .net でを使用している場合) :::no-loc(Q#)::: 。</span><span class="sxs-lookup"><span data-stu-id="747f7-186">Moreover, :::no-loc(Q#)::: entry points may be entry points for an entire application (for example, in :::no-loc(Q#)::: standalone executable programs), or may be an interface between a :::no-loc(Q#)::: program and the host program for an application (i.e.: when using :::no-loc(Q#)::: with Python or .NET), such that the name "main" could be misleading when applied to a :::no-loc(Q#)::: entry point.</span></span>
+<span data-ttu-id="747f7-184">プログラムにエントリポイントを定義すると Q# 、コンパイラはその Q# エントリポイントが特定の名前 (例: [ `@EntryPoint()` ](xref:Microsoft.Quantum.Core.EntryPoint) `main` 、 `Main` 、または) を持つことを要求するのではなく、属性を認識し `__main__` ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-184">When defining an entry point into a Q# program, the Q# compiler recognizes the [`@EntryPoint()` attribute](xref:Microsoft.Quantum.Core.EntryPoint) rather requiring that entry points have a particular name (e.g.: `main`, `Main`, or `__main__`).</span></span>
+<span data-ttu-id="747f7-185">つまり、開発者の観点から見る Q# と、エントリポイントは、で注釈が付けられた通常の操作です `@EntryPoint()` 。</span><span class="sxs-lookup"><span data-stu-id="747f7-185">That is, from the perspective of a Q# developer, entry points are ordinary operations annotated with `@EntryPoint()`.</span></span>
+<span data-ttu-id="747f7-186">さらに、エントリポイント Q# は、アプリケーション全体 (たとえば、スタンドアロンの実行可能プログラム) のエントリポイントである場合もあれば、 Q# プログラムとアプリケーションのホストプログラムとの間のインターフェイスである場合もあります Q# (つまり、 Q# Python または .net でを使用している場合) Q# 。</span><span class="sxs-lookup"><span data-stu-id="747f7-186">Moreover, Q# entry points may be entry points for an entire application (for example, in Q# standalone executable programs), or may be an interface between a Q# program and the host program for an application (i.e.: when using Q# with Python or .NET), such that the name "main" could be misleading when applied to a Q# entry point.</span></span>
 
 <span data-ttu-id="747f7-187">`@EntryPoint()`前述の名前付け操作に関する一般的なアドバイスを使用して、属性の使用を反映するために名前付けのエントリポイントを使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="747f7-187">We suggest using naming entry points to reflect the use of the `@EntryPoint()` attribute by using the general advice for naming operations listed above.</span></span>
 
@@ -193,11 +193,11 @@ Especially in a field such as quantum computing that is rich with domain experti
 In naming code symbols, one way that this cognizance expresses itself is as an awareness of the convention from physics of adopting as the names of algorithms and operations the names of their original publishers.
 While we must maintain the history and intellectual provenance of concepts in quantum computing, demanding that all users be versed in this history to use even the most basic of functions and operations places a barrier to entry that is in most cases severe enough to even present an ethical compromise. -->
 <span data-ttu-id="747f7-233">このため、概念の発行履歴を記述する適切な名詞に対して、概念を説明する一般的な名詞を使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="747f7-233">Thus, we recommend that wherever reasonable, common nouns that describe a concept be adopted in strong preference to proper nouns that describe the publication history of a concept.</span></span>
-<span data-ttu-id="747f7-234">具体的な例として、単独で制御されるスワップとダブル制御されない操作は、多くの場合、教育機関の資料で "Fredkin" および "Toffoli" 操作と呼ばれますが、主にととして識別され :::no-loc(Q#)::: `CSWAP` `CCNOT` ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-234">As a particular example, the singly controlled SWAP and doubly controlled NOT operations are often called the "Fredkin" and "Toffoli" operations in academic literature, but are identified in :::no-loc(Q#)::: primarily as `CSWAP` and `CCNOT`.</span></span>
+<span data-ttu-id="747f7-234">具体的な例として、単独で制御されるスワップとダブル制御されない操作は、多くの場合、教育機関の資料で "Fredkin" および "Toffoli" 操作と呼ばれますが、主にととして識別され Q# `CSWAP` `CCNOT` ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-234">As a particular example, the singly controlled SWAP and doubly controlled NOT operations are often called the "Fredkin" and "Toffoli" operations in academic literature, but are identified in Q# primarily as `CSWAP` and `CCNOT`.</span></span>
 <span data-ttu-id="747f7-235">どちらの場合も、API ドキュメントコメントは、適切な名詞に基づいて、適切なすべての引用文と同義の名前を提供します。</span><span class="sxs-lookup"><span data-stu-id="747f7-235">In both cases, the API documentation comments provide synonymous names based on proper nouns, along with all appropriate citations.</span></span>
 
-<span data-ttu-id="747f7-236">この設定は、適切な名詞の一部の使用が常に必要であるという点で特に重要です :::no-loc(Q#)::: 。たとえば、多くの従来の言語で設定されているようなものに従います。また、は、ブール型の `Bool` ロジックを参照する型を参照します。これは、"ジョージ boole" で示されます。</span><span class="sxs-lookup"><span data-stu-id="747f7-236">This preference is especially important given that some usage of proper nouns will always be necessary — :::no-loc(Q#)::: follows the tradition set by many classical languages, for instance, and refers to `Bool` types in reference to Boolean logic, which is in turn named in honor of George Boole.</span></span>
-<span data-ttu-id="747f7-237">いくつかのクォンタムの概念は、言語に組み込まれている型を含め、同様の方法で名前が付けられ `Pauli` :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-237">A few quantum concepts similarly are named in a similar fashion, including the `Pauli` type built-in to the :::no-loc(Q#)::: language.</span></span>
+<span data-ttu-id="747f7-236">この設定は、適切な名詞の一部の使用が常に必要であるという点で特に重要です Q# 。たとえば、多くの従来の言語で設定されているようなものに従います。また、は、ブール型の `Bool` ロジックを参照する型を参照します。これは、"ジョージ boole" で示されます。</span><span class="sxs-lookup"><span data-stu-id="747f7-236">This preference is especially important given that some usage of proper nouns will always be necessary — Q# follows the tradition set by many classical languages, for instance, and refers to `Bool` types in reference to Boolean logic, which is in turn named in honor of George Boole.</span></span>
+<span data-ttu-id="747f7-237">いくつかのクォンタムの概念は、言語に組み込まれている型を含め、同様の方法で名前が付けられ `Pauli` Q# ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-237">A few quantum concepts similarly are named in a similar fashion, including the `Pauli` type built-in to the Q# language.</span></span>
 <span data-ttu-id="747f7-238">適切な名詞の使用を最小限に抑えて、そのような用途が重要ではない場合は、適切な名詞があまり避けられないような影響を軽減します。</span><span class="sxs-lookup"><span data-stu-id="747f7-238">By minimizing the usage of proper nouns where such usage is not essential, we reduce the impact where proper nouns cannot be reasonably avoided.</span></span>
 
 # <a name="guidance"></a>[<span data-ttu-id="747f7-239">ガイダンス</span><span class="sxs-lookup"><span data-stu-id="747f7-239">Guidance</span></span>](#tab/guidance) 
@@ -212,9 +212,9 @@ _*_
 
 ### <a name="type-conversions"></a><span data-ttu-id="747f7-243">型変換</span><span class="sxs-lookup"><span data-stu-id="747f7-243">Type Conversions</span></span> ###
 
-<span data-ttu-id="747f7-244">:::no-loc(Q#):::は厳密かつ厳密に型指定された言語であるため、1つの型の値は、型変換関数への明示的な呼び出しを使用して、別の型の値としてのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="747f7-244">Since :::no-loc(Q#)::: is a strongly and staticly typed language, a value of one type can only be used as a value of another type by using an explicit call to a type conversion function.</span></span>
+<span data-ttu-id="747f7-244">Q#は厳密かつ厳密に型指定された言語であるため、1つの型の値は、型変換関数への明示的な呼び出しを使用して、別の型の値としてのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="747f7-244">Since Q# is a strongly and staticly typed language, a value of one type can only be used as a value of another type by using an explicit call to a type conversion function.</span></span>
 <span data-ttu-id="747f7-245">これは、値が暗黙的に型を変更できるようにする言語 (例: 型の上位変換)、またはキャストを使用した場合とは対照的です。</span><span class="sxs-lookup"><span data-stu-id="747f7-245">This is in contrast to languages which allow for values to change types implicitly (e.g.: type promotion), or through casting.</span></span>
-<span data-ttu-id="747f7-246">その結果、型変換関数はライブラリ開発で重要な役割を果たし、 :::no-loc(Q#)::: 名前付けに関してよく発生する決定の1つを構成します。</span><span class="sxs-lookup"><span data-stu-id="747f7-246">As a result, type conversion functions play an important role in :::no-loc(Q#)::: library development, and comprise one of the more commonly encountered decisions about naming.</span></span>
+<span data-ttu-id="747f7-246">その結果、型変換関数はライブラリ開発で重要な役割を果たし、 Q# 名前付けに関してよく発生する決定の1つを構成します。</span><span class="sxs-lookup"><span data-stu-id="747f7-246">As a result, type conversion functions play an important role in Q# library development, and comprise one of the more commonly encountered decisions about naming.</span></span>
 <span data-ttu-id="747f7-247">ただし、型変換は常に _決定的_ であるため、関数として記述することができます。そのため、上記のアドバイスに従ってください。</span><span class="sxs-lookup"><span data-stu-id="747f7-247">We note, however, that since type conversions are always _deterministic_ , they can be written as functions and thus fall under the advice above.</span></span>
 <span data-ttu-id="747f7-248">具体的には、型変換関数を動詞 (例::) または副詞 prepositional フレーズ () として指定しないことをお勧めし `ConvertToX` `ToX` ますが、ソースとターゲットの型 () を示す形容詞 prepositional 指定語句として名前を付ける必要があり `XAsY` ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-248">In particular, we suggest that type conversion functions should never be named as verbs (e.g.: `ConvertToX`) or adverb prepositional phrases (`ToX`), but should be named as adjective prepositional phrases that indicate the source and destination types (`XAsY`).</span></span>
 <span data-ttu-id="747f7-249">型変換関数の名前で配列の型を一覧表示する場合は、短縮形をお勧めし `Arr` ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-249">When listing array types in type conversion function names, we recommend the shorthand `Arr`.</span></span>
@@ -247,7 +247,7 @@ _*_
 
 <span data-ttu-id="747f7-270">次のことをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="747f7-270">We suggest:</span></span>
 
-- <span data-ttu-id="747f7-271">関数、操作、またはユーザー定義型がライブラリまたはプログラムのパブリック API の一部ではない場合 :::no-loc(Q#)::: 、 `internal` `function` 、、またはの各宣言の前にキーワードを配置することで、その型が内部としてマークされていることを確認し `operation` `newtype` ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-271">When a function, operation, or user-defined type is not a part of the public API for a :::no-loc(Q#)::: library or program, ensure that it is marked as internal by placing the `internal` keyword before the `function`, `operation`, or `newtype` declaration.</span></span>
+- <span data-ttu-id="747f7-271">関数、操作、またはユーザー定義型がライブラリまたはプログラムのパブリック API の一部ではない場合 Q# 、 `internal` `function` 、、またはの各宣言の前にキーワードを配置することで、その型が内部としてマークされていることを確認し `operation` `newtype` ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-271">When a function, operation, or user-defined type is not a part of the public API for a Q# library or program, ensure that it is marked as internal by placing the `internal` keyword before the `function`, `operation`, or `newtype` declaration.</span></span>
 
 # <a name="examples"></a>[<span data-ttu-id="747f7-272">使用例</span><span class="sxs-lookup"><span data-stu-id="747f7-272">Examples</span></span>](#tab/examples)
 
@@ -259,7 +259,7 @@ _*_
 _*_
 ### <a name="variants"></a><span data-ttu-id="747f7-279">バリアント</span><span class="sxs-lookup"><span data-stu-id="747f7-279">Variants</span></span> ###
 
-<span data-ttu-id="747f7-280">この制限は、将来のバージョンのでは保持されない場合があり :::no-loc(Q#)::: ますが、現在のところ、関連する操作のグループ (入力によってサポートされる、または引数の具象型によって識別される関数) がある場合があります。</span><span class="sxs-lookup"><span data-stu-id="747f7-280">Though this limitation may not persist in future versions of :::no-loc(Q#):::, it is presently the case that there will often be groups of related operations or functions that are distinguished by which functors their inputs support, or by the concrete types of their arguments.</span></span>
+<span data-ttu-id="747f7-280">この制限は、将来のバージョンのでは保持されない場合があり Q# ますが、現在のところ、関連する操作のグループ (入力によってサポートされる、または引数の具象型によって識別される関数) がある場合があります。</span><span class="sxs-lookup"><span data-stu-id="747f7-280">Though this limitation may not persist in future versions of Q#, it is presently the case that there will often be groups of related operations or functions that are distinguished by which functors their inputs support, or by the concrete types of their arguments.</span></span>
 <span data-ttu-id="747f7-281">これらのグループは、同じルート名を使用し、そのバリアントを示す 1 ~ 2 文字で区別できます。</span><span class="sxs-lookup"><span data-stu-id="747f7-281">These groups can be distinguished by using the same root name, followed by one or two letters that indicate its variant.</span></span>
 
 | <span data-ttu-id="747f7-282">サフィックス</span><span class="sxs-lookup"><span data-stu-id="747f7-282">Suffix</span></span> | <span data-ttu-id="747f7-283">意味</span><span class="sxs-lookup"><span data-stu-id="747f7-283">Meaning</span></span> |
@@ -284,7 +284,7 @@ _*_
 
 ### <a name="arguments-and-variables"></a><span data-ttu-id="747f7-295">引数と変数</span><span class="sxs-lookup"><span data-stu-id="747f7-295">Arguments and Variables</span></span> ###
 
-<span data-ttu-id="747f7-296">:::no-loc(Q#):::関数または操作のコードの主な目的は、簡単に読み取り、理解できるようにすることです。</span><span class="sxs-lookup"><span data-stu-id="747f7-296">A key goal of the :::no-loc(Q#)::: code for a function or operation is for it to be easily read and understood.</span></span>
+<span data-ttu-id="747f7-296">Q#関数または操作のコードの主な目的は、簡単に読み取り、理解できるようにすることです。</span><span class="sxs-lookup"><span data-stu-id="747f7-296">A key goal of the Q# code for a function or operation is for it to be easily read and understood.</span></span>
 <span data-ttu-id="747f7-297">同様に、入力と型引数の名前は、指定された関数または引数の使用方法を伝達する必要があります。</span><span class="sxs-lookup"><span data-stu-id="747f7-297">Similarly, the names of inputs and type arguments should communicate how a function or argument will be used once provided.</span></span>
 
 
@@ -383,10 +383,10 @@ _*_
 
 ## <a name="documentation-conventions"></a><span data-ttu-id="747f7-355">ドキュメントの表記規則</span><span class="sxs-lookup"><span data-stu-id="747f7-355">Documentation Conventions</span></span> ##
 
-<span data-ttu-id="747f7-356">この言語では、 :::no-loc(Q#)::: 特別に書式設定されたドキュメントコメントを使用して、操作、関数、およびユーザー定義型にドキュメントを添付できます。</span><span class="sxs-lookup"><span data-stu-id="747f7-356">The :::no-loc(Q#)::: language allows for attaching documentation to operations, functions, and user-defined types through the use of specially formatted documentation comments.</span></span>
+<span data-ttu-id="747f7-356">この言語では、 Q# 特別に書式設定されたドキュメントコメントを使用して、操作、関数、およびユーザー定義型にドキュメントを添付できます。</span><span class="sxs-lookup"><span data-stu-id="747f7-356">The Q# language allows for attaching documentation to operations, functions, and user-defined types through the use of specially formatted documentation comments.</span></span>
 <span data-ttu-id="747f7-357">トリプルスラッシュ () で示さ `///` れているこれらのドキュメントコメントは、各操作、関数、およびユーザー定義型の目的、それぞれが必要とする入力、およびなどを記述するために使用できる小さな [docfx-flavored Markdown](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) ドキュメントです。</span><span class="sxs-lookup"><span data-stu-id="747f7-357">Denoted by triple-slashes (`///`), these documentation comments are small [DocFX-flavored Markdown](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) documents that can be used to describing the purpose of each operation, function, and user-defined type, what inputs each expects, and so forth.</span></span>
 <span data-ttu-id="747f7-358">Quantum Development Kit に用意されているコンパイラは、これらのコメントを抽出し、それらを使用して、での横組みと同様のドキュメントを作成し https://docs.microsoft.com/quantum ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-358">The compiler provided with the Quantum Development Kit extracts these comments and uses them to help typeset documentation similar to that at https://docs.microsoft.com/quantum.</span></span>
-<span data-ttu-id="747f7-359">同様に、Quantum 開発キットで提供されている言語サーバーは、これらのコメントを使用して、ユーザーがコード内のシンボルにマウスポインターを置いたときにヘルプを提供し :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-359">Similarly, the language server provided with the Quantum Development Kit uses these comments to provide help to users when they hover over symbols in their :::no-loc(Q#)::: code.</span></span>
+<span data-ttu-id="747f7-359">同様に、Quantum 開発キットで提供されている言語サーバーは、これらのコメントを使用して、ユーザーがコード内のシンボルにマウスポインターを置いたときにヘルプを提供し Q# ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-359">Similarly, the language server provided with the Quantum Development Kit uses these comments to provide help to users when they hover over symbols in their Q# code.</span></span>
 <span data-ttu-id="747f7-360">ドキュメントコメントを使用すると、このドキュメントの他の規則を使用して簡単には表現できない詳細情報を提供することで、ユーザーがコードを理解するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="747f7-360">Making use of documentation comments can thus help users to make sense of code by providing a useful reference for details that are not easily expressed using the other conventions in this document.</span></span>
 
 > [!div class="nextstepaction"]
@@ -457,8 +457,8 @@ _*_
 
 <span data-ttu-id="747f7-385">前述の提案に加えて、一貫性のある書式設定規則を使用するためにコードをできるだけ読みやすくするために役立ちます。</span><span class="sxs-lookup"><span data-stu-id="747f7-385">In addition to the preceding suggestions, it is helpful to help make code as legible as possible to use consistent formatting rules.</span></span>
 <span data-ttu-id="747f7-386">このような書式設定規則は、本質的にはやや自由で、個人的には見栄えがよくなります。</span><span class="sxs-lookup"><span data-stu-id="747f7-386">Such formatting rules by nature tend to be somewhat arbitrary and strongly up to personal aesthetics.</span></span>
-<span data-ttu-id="747f7-387">それでも、コラボレーターのグループ内では一貫した書式設定規則を維持することをお勧めし :::no-loc(Q#)::: ます。また、Quantum 開発キット自体などの大規模なプロジェクトの場合は特にそうです。</span><span class="sxs-lookup"><span data-stu-id="747f7-387">Nonetheless, we recommend maintaining a consistent set of formatting conventions within a group of collaborators, and especially for large :::no-loc(Q#)::: projects such as the Quantum Development Kit itself.</span></span>
-<span data-ttu-id="747f7-388">これらの規則は、コンパイラと統合された書式設定ツールを使用して自動的に適用でき :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-388">These rules can be automatically applied by using the formatting tool integrated with the :::no-loc(Q#)::: compiler.</span></span>
+<span data-ttu-id="747f7-387">それでも、コラボレーターのグループ内では一貫した書式設定規則を維持することをお勧めし Q# ます。また、Quantum 開発キット自体などの大規模なプロジェクトの場合は特にそうです。</span><span class="sxs-lookup"><span data-stu-id="747f7-387">Nonetheless, we recommend maintaining a consistent set of formatting conventions within a group of collaborators, and especially for large Q# projects such as the Quantum Development Kit itself.</span></span>
+<span data-ttu-id="747f7-388">これらの規則は、コンパイラと統合された書式設定ツールを使用して自動的に適用でき Q# ます。</span><span class="sxs-lookup"><span data-stu-id="747f7-388">These rules can be automatically applied by using the formatting tool integrated with the Q# compiler.</span></span>
 
 # <a name="guidance"></a>[<span data-ttu-id="747f7-389">ガイダンス</span><span class="sxs-lookup"><span data-stu-id="747f7-389">Guidance</span></span>](#tab/guidance) 
 

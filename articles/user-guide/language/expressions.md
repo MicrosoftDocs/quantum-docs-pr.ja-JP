@@ -1,14 +1,14 @@
 ---
-title: 'の式 :::no-loc(Q#):::'
-description: '定数、変数、演算子、操作、および関数をの式として指定、参照、および結合する方法について説明 :::no-loc(Q#)::: します。'
+title: 'の式 Q#'
+description: '定数、変数、演算子、操作、および関数をの式として指定、参照、および結合する方法について説明 Q# します。'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: e95a7cb9b74136ef9a6f51b4bbc32d1d93c43a0d
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,17 +16,17 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691604"
 ---
-# <a name="expressions-in-no-locq"></a><span data-ttu-id="6148b-103">の式 :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="6148b-103">Expressions in :::no-loc(Q#):::</span></span>
+# <a name="expressions-in-no-locq"></a><span data-ttu-id="6148b-103">の式 Q#</span><span class="sxs-lookup"><span data-stu-id="6148b-103">Expressions in Q#</span></span>
 
 ## <a name="numeric-expressions"></a><span data-ttu-id="6148b-104">数値式</span><span class="sxs-lookup"><span data-stu-id="6148b-104">Numeric Expressions</span></span>
 
 <span data-ttu-id="6148b-105">数値式は `Int` 、、 `BigInt` 、または型の式です `Double` 。</span><span class="sxs-lookup"><span data-stu-id="6148b-105">Numeric expressions are expressions of type `Int`, `BigInt`, or `Double`.</span></span>
 <span data-ttu-id="6148b-106">つまり、整数または浮動小数点数のいずれかです。</span><span class="sxs-lookup"><span data-stu-id="6148b-106">That is, they are either integer or floating-point numbers.</span></span>
 
-<span data-ttu-id="6148b-107">`Int` のリテラル :::no-loc(Q#)::: は、一連の数字として書き込まれます。</span><span class="sxs-lookup"><span data-stu-id="6148b-107">`Int` literals in :::no-loc(Q#)::: are written as a sequence of digits.</span></span>
+<span data-ttu-id="6148b-107">`Int` のリテラル Q# は、一連の数字として書き込まれます。</span><span class="sxs-lookup"><span data-stu-id="6148b-107">`Int` literals in Q# are written as a sequence of digits.</span></span>
 <span data-ttu-id="6148b-108">16進整数とバイナリ整数がサポートされ、それぞれとプレフィックスを使用して記述され `0x` `0b` ます。</span><span class="sxs-lookup"><span data-stu-id="6148b-108">Hexadecimal and binary integers are supported and written with a `0x` and `0b` prefix, respectively.</span></span>
 
-<span data-ttu-id="6148b-109">`BigInt` のリテラルに :::no-loc(Q#)::: は、末尾 `l` またはサフィックスがあり `L` ます。</span><span class="sxs-lookup"><span data-stu-id="6148b-109">`BigInt` literals in :::no-loc(Q#)::: have a trailing `l` or `L` suffix.</span></span>
+<span data-ttu-id="6148b-109">`BigInt` のリテラルに Q# は、末尾 `l` またはサフィックスがあり `L` ます。</span><span class="sxs-lookup"><span data-stu-id="6148b-109">`BigInt` literals in Q# have a trailing `l` or `L` suffix.</span></span>
 <span data-ttu-id="6148b-110">16進数の大きな整数がサポートされており、プレフィックス "0x" を使用して記述されています。</span><span class="sxs-lookup"><span data-stu-id="6148b-110">Hexadecimal big integers are supported and written with a "0x" prefix.</span></span>
 <span data-ttu-id="6148b-111">したがって、リテラルの有効な使用法は次のとおりです `BigInt` 。</span><span class="sxs-lookup"><span data-stu-id="6148b-111">Thus, the following are all valid uses of `BigInt` literals:</span></span>
 
@@ -36,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-<span data-ttu-id="6148b-112">`Double` のリテラル :::no-loc(Q#)::: は、10進数を使用して記述された浮動小数点数です。</span><span class="sxs-lookup"><span data-stu-id="6148b-112">`Double` literals in :::no-loc(Q#)::: are floating-point numbers written using decimal digits.</span></span>
+<span data-ttu-id="6148b-112">`Double` のリテラル Q# は、10進数を使用して記述された浮動小数点数です。</span><span class="sxs-lookup"><span data-stu-id="6148b-112">`Double` literals in Q# are floating-point numbers written using decimal digits.</span></span>
 <span data-ttu-id="6148b-113">小数点、 `.` 、または "e" または "e" で示された指数部を使用して記述することもできます (その後は、負の符号と小数点以下の桁数のみが有効になります)。</span><span class="sxs-lookup"><span data-stu-id="6148b-113">They can be written with or without a decimal point, `.`, or an exponential part indicated with 'e' or 'E' (after which only a possible negative sign and decimal digits are valid).</span></span>
 <span data-ttu-id="6148b-114">有効なリテラルは、、 `Double` `0.0` `1.2e5` 、 `1e-5` です。</span><span class="sxs-lookup"><span data-stu-id="6148b-114">The following are valid `Double` literals: `0.0`, `1.2e5`, `1e-5`.</span></span>
 
@@ -87,7 +87,7 @@ let bigOne = bigZero + 1L;
 <span data-ttu-id="6148b-157">同じプリミティブ型の2つの式がある場合、 `==` および `!=` 二項演算子を使用して式を作成でき `Bool` ます。</span><span class="sxs-lookup"><span data-stu-id="6148b-157">Given any two expressions of the same primitive type, the `==` and `!=` binary operators may be used to construct a `Bool` expression.</span></span>
 <span data-ttu-id="6148b-158">式は、2つの式が等しい場合は true、それ以外の場合は false です。</span><span class="sxs-lookup"><span data-stu-id="6148b-158">The expression is true if the two expressions are equal and false if not.</span></span>
 
-<span data-ttu-id="6148b-159">ユーザー定義型の値を比較することはできません。ラップ解除された値だけを比較できます。</span><span class="sxs-lookup"><span data-stu-id="6148b-159">Values of user-defined types may not be compared, only their unwrapped values can be compared.</span></span> <span data-ttu-id="6148b-160">たとえば、"ラップ解除" 演算子 `!` ([の :::no-loc(Q#)::: 型](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)の詳細については、「」をご覧ください) を使用します。</span><span class="sxs-lookup"><span data-stu-id="6148b-160">For example, using the "unwrap" operator `!` (explained in detail at [Types in :::no-loc(Q#):::](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),</span></span>
+<span data-ttu-id="6148b-159">ユーザー定義型の値を比較することはできません。ラップ解除された値だけを比較できます。</span><span class="sxs-lookup"><span data-stu-id="6148b-159">Values of user-defined types may not be compared, only their unwrapped values can be compared.</span></span> <span data-ttu-id="6148b-160">たとえば、"ラップ解除" 演算子 `!` ([の Q# 型](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)の詳細については、「」をご覧ください) を使用します。</span><span class="sxs-lookup"><span data-stu-id="6148b-160">For example, using the "unwrap" operator `!` (explained in detail at [Types in Q#](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),</span></span>
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -111,9 +111,9 @@ let t = x == y;               // This will cause a compiler error.
 
 ## <a name="string-expressions"></a><span data-ttu-id="6148b-169">文字列式</span><span class="sxs-lookup"><span data-stu-id="6148b-169">String expressions</span></span>
 
-<span data-ttu-id="6148b-170">:::no-loc(Q#):::`fail`ステートメント ([制御フロー](xref:microsoft.quantum.guide.controlflow#fail-statement)で説明されています) および標準関数で文字列を使用できるようにし [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) ます。</span><span class="sxs-lookup"><span data-stu-id="6148b-170">:::no-loc(Q#)::: allows strings to be used in the `fail` statement (explained in [Control Flow](xref:microsoft.quantum.guide.controlflow#fail-statement)) and in the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) standard function.</span></span> <span data-ttu-id="6148b-171">後者の特定の動作は、使用されるシミュレーターによって異なりますが、通常はプログラム中に呼び出されたときに、メッセージをホストコンソールに書き込み :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="6148b-171">The specific behavior of the latter depends on the simulator used but typically writes a message to the host console when called during a :::no-loc(Q#)::: program.</span></span>
+<span data-ttu-id="6148b-170">Q#`fail`ステートメント ([制御フロー](xref:microsoft.quantum.guide.controlflow#fail-statement)で説明されています) および標準関数で文字列を使用できるようにし [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) ます。</span><span class="sxs-lookup"><span data-stu-id="6148b-170">Q# allows strings to be used in the `fail` statement (explained in [Control Flow](xref:microsoft.quantum.guide.controlflow#fail-statement)) and in the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) standard function.</span></span> <span data-ttu-id="6148b-171">後者の特定の動作は、使用されるシミュレーターによって異なりますが、通常はプログラム中に呼び出されたときに、メッセージをホストコンソールに書き込み Q# ます。</span><span class="sxs-lookup"><span data-stu-id="6148b-171">The specific behavior of the latter depends on the simulator used but typically writes a message to the host console when called during a Q# program.</span></span>
 
-<span data-ttu-id="6148b-172">内の文字列 :::no-loc(Q#)::: は、リテラルまたは挿入文字列です。</span><span class="sxs-lookup"><span data-stu-id="6148b-172">Strings in :::no-loc(Q#)::: are either literals or interpolated strings.</span></span>
+<span data-ttu-id="6148b-172">内の文字列 Q# は、リテラルまたは挿入文字列です。</span><span class="sxs-lookup"><span data-stu-id="6148b-172">Strings in Q# are either literals or interpolated strings.</span></span>
 
 <span data-ttu-id="6148b-173">文字列リテラルは、ほとんどの言語の単純な文字列リテラルに似ています。これは、二重引用符で囲まれた Unicode 文字のシーケンス `" "` です。</span><span class="sxs-lookup"><span data-stu-id="6148b-173">String literals are similar to simple string literals in most languages: a sequence of Unicode characters enclosed in double-quotes `" "`.</span></span>
 <span data-ttu-id="6148b-174">文字列の内部では、円記号を使用して `\` 二重引用符 () をエスケープしたり、改行 `\"` ( `\n` )、キャリッジリターン ( `\r` )、またはタブ () を挿入したりし `\t` ます。</span><span class="sxs-lookup"><span data-stu-id="6148b-174">Inside of a string, use the backslash character `\` to escape a double-quote character (`\"`), or to insert a new-line ( `\n` ), a carriage return (`\r`), or a tab (`\t`).</span></span>
@@ -124,21 +124,21 @@ let t = x == y;               // This will cause a compiler error.
 ```
 ### <a name="interpolated-strings"></a><span data-ttu-id="6148b-176">挿入文字列</span><span class="sxs-lookup"><span data-stu-id="6148b-176">Interpolated strings</span></span>
 
-<span data-ttu-id="6148b-177">:::no-loc(Q#):::文字列補間の構文は、C# 構文のサブセットです。</span><span class="sxs-lookup"><span data-stu-id="6148b-177">The :::no-loc(Q#)::: syntax for string interpolations is a subset of the C# syntax.</span></span> <span data-ttu-id="6148b-178">次に示すのは、関連する重要なポイント :::no-loc(Q#)::: です。</span><span class="sxs-lookup"><span data-stu-id="6148b-178">Following are the key points as they pertain to :::no-loc(Q#)::::</span></span>
+<span data-ttu-id="6148b-177">Q#文字列補間の構文は、C# 構文のサブセットです。</span><span class="sxs-lookup"><span data-stu-id="6148b-177">The Q# syntax for string interpolations is a subset of the C# syntax.</span></span> <span data-ttu-id="6148b-178">次に示すのは、関連する重要なポイント Q# です。</span><span class="sxs-lookup"><span data-stu-id="6148b-178">Following are the key points as they pertain to Q#:</span></span>
 
 * <span data-ttu-id="6148b-179">文字列リテラルを挿入文字列として識別するため、先頭に `$` の記号を追加してください。</span><span class="sxs-lookup"><span data-stu-id="6148b-179">To identify a string literal as an interpolated string, prepend it with the `$` symbol.</span></span> <span data-ttu-id="6148b-180">との間には、 `$` `"` 文字列リテラルを開始する空白文字を使用できません。</span><span class="sxs-lookup"><span data-stu-id="6148b-180">There can be no white space between the `$` and the `"` that starts a string literal.</span></span>
 
-* <span data-ttu-id="6148b-181">次に、関数を使用して、 [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) 他の式と共に測定の結果をコンソールに書き込む基本的な例を示し :::no-loc(Q#)::: ます。</span><span class="sxs-lookup"><span data-stu-id="6148b-181">The following is a basic example using the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) function to write the result of a measurement to the console, alongside other :::no-loc(Q#)::: expressions.</span></span>
+* <span data-ttu-id="6148b-181">次に、関数を使用して、 [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) 他の式と共に測定の結果をコンソールに書き込む基本的な例を示し Q# ます。</span><span class="sxs-lookup"><span data-stu-id="6148b-181">The following is a basic example using the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) function to write the result of a measurement to the console, alongside other Q# expressions.</span></span>
 
 ```qsharp
-    let num = 8;       // some :::no-loc(Q#)::: expression
+    let num = 8;       // some Q# expression
     let res = M(q);
     Message($"Number: {num}, Result: {res}");
 ```
 
-* <span data-ttu-id="6148b-182">有効な :::no-loc(Q#)::: 式は、挿入文字列に含めることができます。</span><span class="sxs-lookup"><span data-stu-id="6148b-182">Any valid :::no-loc(Q#)::: expression may appear in an interpolated string.</span></span>
+* <span data-ttu-id="6148b-182">有効な Q# 式は、挿入文字列に含めることができます。</span><span class="sxs-lookup"><span data-stu-id="6148b-182">Any valid Q# expression may appear in an interpolated string.</span></span>
 
-* <span data-ttu-id="6148b-183">挿入文字列内の式は :::no-loc(Q#)::: 、C# 構文ではなく構文に従います。</span><span class="sxs-lookup"><span data-stu-id="6148b-183">Expressions inside of an interpolated string follow :::no-loc(Q#)::: syntax, not C# syntax.</span></span> <span data-ttu-id="6148b-184">最も顕著な違いは、が :::no-loc(Q#)::: 逐語的 (複数行) の補間文字列をサポートしていないことです。</span><span class="sxs-lookup"><span data-stu-id="6148b-184">The most notable distinction is that :::no-loc(Q#)::: does not support verbatim (multi-line) interpolated strings.</span></span>
+* <span data-ttu-id="6148b-183">挿入文字列内の式は Q# 、C# 構文ではなく構文に従います。</span><span class="sxs-lookup"><span data-stu-id="6148b-183">Expressions inside of an interpolated string follow Q# syntax, not C# syntax.</span></span> <span data-ttu-id="6148b-184">最も顕著な違いは、が Q# 逐語的 (複数行) の補間文字列をサポートしていないことです。</span><span class="sxs-lookup"><span data-stu-id="6148b-184">The most notable distinction is that Q# does not support verbatim (multi-line) interpolated strings.</span></span>
 
 <span data-ttu-id="6148b-185">C# の構文の詳細については、「 [*補間文字列*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6148b-185">For more details about the C# syntax, see [*Interpolated Strings*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).</span></span>
 
@@ -198,7 +198,7 @@ let t = x == y;               // This will cause a compiler error.
 
 ## <a name="unwrap-expressions"></a><span data-ttu-id="6148b-221">ラップ解除 (式の)</span><span class="sxs-lookup"><span data-stu-id="6148b-221">Unwrap Expressions</span></span>
 
-<span data-ttu-id="6148b-222">で :::no-loc(Q#)::: は、ラップ解除演算子は末尾の感嘆符 `!` です。</span><span class="sxs-lookup"><span data-stu-id="6148b-222">In :::no-loc(Q#):::, the unwrap operator is a trailing exclamation mark `!`.</span></span>
+<span data-ttu-id="6148b-222">で Q# は、ラップ解除演算子は末尾の感嘆符 `!` です。</span><span class="sxs-lookup"><span data-stu-id="6148b-222">In Q#, the unwrap operator is a trailing exclamation mark `!`.</span></span>
 <span data-ttu-id="6148b-223">たとえば、 `IntPair` が基になる型のユーザー定義型で、 `(Int, Int)` `s` が値を持つ変数である場合、 `IntPair(2, 3)` はに `s!` `(2, 3)` なります。</span><span class="sxs-lookup"><span data-stu-id="6148b-223">For example, if `IntPair` is a user-defined type with the underlying type `(Int, Int)` and `s` is a variable with value `IntPair(2, 3)`, then `s!` is `(2, 3)`.</span></span>
 
 <span data-ttu-id="6148b-224">他のユーザー定義型の観点から定義されたユーザー定義型の場合は、ラップ解除演算子を繰り返すことができます。</span><span class="sxs-lookup"><span data-stu-id="6148b-224">For user-defined types defined in terms of other user-defined types, you can repeat the unwrap operator.</span></span> <span data-ttu-id="6148b-225">たとえば、は、 `s!!` の二重ラップ解除された値を示し `s` ます。</span><span class="sxs-lookup"><span data-stu-id="6148b-225">For example, `s!!` indicates the doubly-unwrapped value of `s`.</span></span>
@@ -271,7 +271,7 @@ let g = Foo(arg)!;      // Syntax error
 (a + b)[13]
 ```
 
-<span data-ttu-id="6148b-261">内のすべての配列 :::no-loc(Q#)::: は、0から始まります。</span><span class="sxs-lookup"><span data-stu-id="6148b-261">All arrays in :::no-loc(Q#)::: are zero-based.</span></span>
+<span data-ttu-id="6148b-261">内のすべての配列 Q# は、0から始まります。</span><span class="sxs-lookup"><span data-stu-id="6148b-261">All arrays in Q# are zero-based.</span></span>
 <span data-ttu-id="6148b-262">つまり、配列の最初の要素 `a` は常に `a[0]` です。</span><span class="sxs-lookup"><span data-stu-id="6148b-262">That is, the first element of an array `a` is always `a[0]`.</span></span>
 
 
@@ -319,7 +319,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a><span data-ttu-id="6148b-281">コピーと更新の式</span><span class="sxs-lookup"><span data-stu-id="6148b-281">Copy-and-Update Expressions</span></span>
 
-<span data-ttu-id="6148b-282">すべての :::no-loc(Q#)::: 型は値型であるため (少し特別な役割を果たす qubits を使用)、値がシンボルにバインドされているとき、またはシンボルが再バインドされるときに "コピー" が作成されます。</span><span class="sxs-lookup"><span data-stu-id="6148b-282">Since all :::no-loc(Q#)::: types are value types (with the qubits taking a somewhat special role), formally a "copy" is created when a value is bound to a symbol or when a symbol is rebound.</span></span> <span data-ttu-id="6148b-283">つまり、の動作 :::no-loc(Q#)::: は、代入演算子を使用してコピーが作成された場合と同じです。</span><span class="sxs-lookup"><span data-stu-id="6148b-283">That is to say, the behavior of :::no-loc(Q#)::: is the same as if a copy were created using an assignment operator.</span></span> 
+<span data-ttu-id="6148b-282">すべての Q# 型は値型であるため (少し特別な役割を果たす qubits を使用)、値がシンボルにバインドされているとき、またはシンボルが再バインドされるときに "コピー" が作成されます。</span><span class="sxs-lookup"><span data-stu-id="6148b-282">Since all Q# types are value types (with the qubits taking a somewhat special role), formally a "copy" is created when a value is bound to a symbol or when a symbol is rebound.</span></span> <span data-ttu-id="6148b-283">つまり、の動作 Q# は、代入演算子を使用してコピーが作成された場合と同じです。</span><span class="sxs-lookup"><span data-stu-id="6148b-283">That is to say, the behavior of Q# is the same as if a copy were created using an assignment operator.</span></span> 
 
 <span data-ttu-id="6148b-284">もちろん、実際には、関連する部分のみが必要に応じて再作成されます。</span><span class="sxs-lookup"><span data-stu-id="6148b-284">Of course, in practice, only the relevant pieces are recreated as needed.</span></span> <span data-ttu-id="6148b-285">これは、配列項目を更新できないため、配列のコピー方法に影響します。</span><span class="sxs-lookup"><span data-stu-id="6148b-285">This affects how you copy arrays because it is not possible to update array items.</span></span> <span data-ttu-id="6148b-286">既存の配列を変更するには、 *コピーと更新* のメカニズムを利用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6148b-286">To modify an existing array requires leveraging a *copy-and-update* mechanism.</span></span>
 
@@ -382,7 +382,7 @@ for (i in 1..N) {
 
 <span data-ttu-id="6148b-317">たとえば、では、 `[[Op1], [Op2]]` 互換性のない2つの配列型との配列を作成しようとするため、現在、ではエラーが発生し `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` ます。</span><span class="sxs-lookup"><span data-stu-id="6148b-317">For example, `[[Op1], [Op2]]` would currently raise an error because it attempts to create an array of the two incompatible array types `(Qubit[] => Unit is Adj)[]` and `(Qubit[] => Unit is Ctl)[]`.</span></span>
 
-<span data-ttu-id="6148b-318">呼び出し可能の詳細については、このページの「呼び出し可能な[式](#callable-expressions)」または「 [」の :::no-loc(Q#)::: 操作と関数](xref:microsoft.quantum.guide.operationsfunctions)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6148b-318">For more information on callables, see [Callable expressions](#callable-expressions)  on this page or [Operations and Functions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.operationsfunctions).</span></span>
+<span data-ttu-id="6148b-318">呼び出し可能の詳細については、このページの「呼び出し可能な[式](#callable-expressions)」または「 [」の Q# 操作と関数](xref:microsoft.quantum.guide.operationsfunctions)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6148b-318">For more information on callables, see [Callable expressions](#callable-expressions)  on this page or [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions).</span></span>
 
 ## <a name="conditional-expressions"></a><span data-ttu-id="6148b-319">条件式</span><span class="sxs-lookup"><span data-stu-id="6148b-319">Conditional Expressions</span></span>
 
@@ -447,7 +447,7 @@ SomeOtherFun(Fun);           // This also causes a compilation error.
 ```
 
 <span data-ttu-id="6148b-353">[型パラメーター付き](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)呼び出し可能呼び出しを呼び出す場合、呼び出し可能な式の後に、山かっこ内に実際の型パラメーターを指定でき `< >` ます。</span><span class="sxs-lookup"><span data-stu-id="6148b-353">When invoking a [type-parameterized](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) callable, you can specify the actual type parameters within angle brackets `< >` after the callable expression.</span></span>
-<span data-ttu-id="6148b-354">通常、このアクションは、 :::no-loc(Q#)::: コンパイラが実際の型を推論するときには不要です。</span><span class="sxs-lookup"><span data-stu-id="6148b-354">This action is usually unnecessary as the :::no-loc(Q#)::: compiler infers the actual types.</span></span>
+<span data-ttu-id="6148b-354">通常、このアクションは、 Q# コンパイラが実際の型を推論するときには不要です。</span><span class="sxs-lookup"><span data-stu-id="6148b-354">This action is usually unnecessary as the Q# compiler infers the actual types.</span></span>
 <span data-ttu-id="6148b-355">ただし、型パラメーターの引数が指定されていない *場合は、* [部分的なアプリケーション](xref:microsoft.quantum.guide.operationsfunctions#partial-application) で必要になります。</span><span class="sxs-lookup"><span data-stu-id="6148b-355">However, it *is* required for [partial application](xref:microsoft.quantum.guide.operationsfunctions#partial-application) if a type-parameterized argument is left unspecified.</span></span>
 <span data-ttu-id="6148b-356">また、異なるファンのサポートを持つ操作を呼び出し可能に渡す場合にも便利です。</span><span class="sxs-lookup"><span data-stu-id="6148b-356">It is also useful when passing operations with different functor supports to a callable.</span></span>
 
@@ -470,7 +470,7 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 * <span data-ttu-id="6148b-363">演算と関数呼び出しのかっこは、演算子の前、配列のインデックス作成および関数の後にもバインドされます。</span><span class="sxs-lookup"><span data-stu-id="6148b-363">Parentheses for operation and function invocation also bind before any operator but after array indexing and functors.</span></span>
 
-<span data-ttu-id="6148b-364">:::no-loc(Q#)::: 演算子は優先順位の高い順になります。</span><span class="sxs-lookup"><span data-stu-id="6148b-364">:::no-loc(Q#)::: operators in order of precedence, from highest to lowest:</span></span>
+<span data-ttu-id="6148b-364">Q# 演算子は優先順位の高い順になります。</span><span class="sxs-lookup"><span data-stu-id="6148b-364">Q# operators in order of precedence, from highest to lowest:</span></span>
 
 <span data-ttu-id="6148b-365">演算子</span><span class="sxs-lookup"><span data-stu-id="6148b-365">Operator</span></span> | <span data-ttu-id="6148b-366">アリ</span><span class="sxs-lookup"><span data-stu-id="6148b-366">Arity</span></span> | <span data-ttu-id="6148b-367">説明</span><span class="sxs-lookup"><span data-stu-id="6148b-367">Description</span></span> | <span data-ttu-id="6148b-368">オペランドの型</span><span class="sxs-lookup"><span data-stu-id="6148b-368">Operand Types</span></span>
 ---------|----------|---------|---------------
@@ -493,4 +493,4 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 ## <a name="next-steps"></a><span data-ttu-id="6148b-423">次のステップ</span><span class="sxs-lookup"><span data-stu-id="6148b-423">Next steps</span></span>
 
-<span data-ttu-id="6148b-424">で式を操作できるようになったので、操作と関数 :::no-loc(Q#)::: を[ :::no-loc(Q#)::: ](xref:microsoft.quantum.guide.operationsfunctions)定義して呼び出す方法については、「」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6148b-424">Now that you can work with expressions in :::no-loc(Q#):::, move on to [Operations and Functions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.operationsfunctions) to learn how to define and call operations and functions.</span></span>
+<span data-ttu-id="6148b-424">で式を操作できるようになったので、操作と関数 Q# を[ Q# ](xref:microsoft.quantum.guide.operationsfunctions)定義して呼び出す方法については、「」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6148b-424">Now that you can work with expressions in Q#, move on to [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions) to learn how to define and call operations and functions.</span></span>
