@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.InjectPi4YRotation
 title: InjectPi4YRotation 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: InjectPi4YRotation
 qsharp.summary: Rotates a single qubit by π/4 about the Y-axis.
-ms.openlocfilehash: 8558767050c317661dfb490143fa3c8f4ea009e2
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4ff0abe67a6d18204e417a45f8d8f1d092d02b88
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712322"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200800"
 ---
 # <a name="injectpi4yrotation-operation"></a>InjectPi4YRotation 操作
 
 名前空間: [Microsoft. Quantum. ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Y 軸について1つの qubit をπ/4 で回転します。
 
 ```qsharp
-operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit
+operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit is Adj
 ```
 
 
@@ -60,7 +60,7 @@ $Y $ ($ \ pi/$4) について回転する qubit。
 Ry(PI() / 4.0, data);
 ```
 
-および
+and
 
 ```qsharp
 using (magic = Qubit()) {

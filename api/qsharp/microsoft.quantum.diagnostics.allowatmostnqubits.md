@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AllowAtMostNQubits
 title: AllowAtMostNQubits 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AllowAtMostNQubits
 qsharp.summary: Between a call to this operation and its adjoint, asserts that at most a given number of additional qubits are allocated with using statements.
-ms.openlocfilehash: ddbed96df0d95cfd78730c091a6a81ee6e49c349
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5376b6f39d12d664342fbf71e67442c6ef8a0827
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713055"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202551"
 ---
 # <a name="allowatmostnqubits-operation"></a>AllowAtMostNQubits 操作
 
 名前空間: [Microsoft... 診断](xref:Microsoft.Quantum.Diagnostics)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 この操作とその adjoint の呼び出しの間には、指定された数の追加の qubits が使用され、ステートメントを使用して割り当てられます。
 
 ```qsharp
-operation AllowAtMostNQubits (nQubits : Int, message : String) : Unit
+operation AllowAtMostNQubits (nQubits : Int, message : String) : Unit is Adj
 ```
 
 

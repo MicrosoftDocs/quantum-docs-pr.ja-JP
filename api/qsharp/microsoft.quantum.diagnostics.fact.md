@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.Fact
 title: Fact 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: Fact
 qsharp.summary: Declares that a classical condition is true.
-ms.openlocfilehash: 6a08703f68f9f38f2224fe4c6a4d255b00756908
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 74ec020d0437d885d7cbfc98a2c9c0c1867d5d39
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712686"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201684"
 ---
 # <a name="fact-function"></a>Fact 関数
 
 名前空間: [Microsoft... 診断](xref:Microsoft.Quantum.Diagnostics)
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 クラシック条件が true であることを宣言します。

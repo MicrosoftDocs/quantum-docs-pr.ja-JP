@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.EqualityFactCP
 title: EqualityFactCP 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: EqualityFactCP
 qsharp.summary: Asserts that a complex number has the expected value.
-ms.openlocfilehash: 1ea790debb5a9123fb8bee3a5f8a1fde0a050b37
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 39b55e17302f9d2e5049169e9c1a74e53a8b1115
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712770"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201854"
 ---
 # <a name="equalityfactcp-function"></a>EqualityFactCP 関数
 
 名前空間: [Microsoft... 診断](xref:Microsoft.Quantum.Diagnostics)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 複素数に予期される値があることをアサートします。

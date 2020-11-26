@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertMeasurementProbability
 title: AssertMeasurementProbability 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AssertMeasurementProbability
 qsharp.summary: Asserts that measuring the given qubits in the given Pauli basis will have the given result with the given probability, within some tolerance.
-ms.openlocfilehash: ff0419706d825442492f82e564f1cce86f1b112f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 032b9224ad728f0637596668c2928a889deeba55
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712980"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202364"
 ---
 # <a name="assertmeasurementprobability-operation"></a>AssertMeasurementProbability 操作
 
 名前空間: [Microsoft... 診断](xref:Microsoft.Quantum.Diagnostics)
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 指定された型の指定された qubits を測定すると、特定の確率で特定の結果が許容範囲内にあることをアサートします。
 
 ```qsharp
-operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit
+operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit is Adj + Ctl
 ```
 
 
@@ -40,7 +40,7 @@ operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], resul
 アサーションを行うレジスタ。
 
 
-### <a name="result--__invalidresult__"></a>結果: __無効 <Result>__
+### <a name="result--__invalidresult__"></a>結果:__無効 <Result>__
 
 の予期される結果 `Measure(bases, qubits)` 。
 
