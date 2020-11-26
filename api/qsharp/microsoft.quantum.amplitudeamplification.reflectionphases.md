@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
 title: ReflectionPhases ユーザー定義型
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: ReflectionPhases
 qsharp.summary: Phases for a sequence of partial reflections in amplitude amplification.
-ms.openlocfilehash: e0c7db6cd1aad636a34684958be117de1b9888f8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 743ece778239c223573a3a8536ae8059cea09d5f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721818"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191348"
 ---
 # <a name="reflectionphases-user-defined-type"></a>ReflectionPhases ユーザー定義型
 
 名前空間: [AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 振幅増幅での部分的な反射のシーケンスのフェーズ。

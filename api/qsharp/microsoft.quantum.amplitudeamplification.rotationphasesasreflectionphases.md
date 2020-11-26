@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.RotationPhasesAsReflectionPhases
 title: RotationPhasesAsReflectionPhases 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: RotationPhasesAsReflectionPhases
 qsharp.summary: Converts phases specified as single-qubit rotations to phases specified as partial reflections.
-ms.openlocfilehash: d62a7584324c9467ccc759e4bed81acbceee719c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6e601cfd867b449d628da7cd60dfacd465e48860
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721753"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191195"
 ---
 # <a name="rotationphasesasreflectionphases-function"></a>RotationPhasesAsReflectionPhases 関数
 
 名前空間: [AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 シングル qubit 回転として指定されたフェーズを部分反射として指定されたフェーズに変換します。
@@ -40,7 +40,7 @@ function RotationPhasesAsReflectionPhases (rotPhases : Microsoft.Quantum.Amplitu
 
 部分的な反射として指定されたフェーズを実装する操作。
 
-## <a name="references"></a>関連項目
+## <a name="references"></a>リファレンス
 
 では、次の規則を使用します。
 

@@ -1,31 +1,31 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyOuterCDKMAdder
 title: ApplyOuterCDKMAdder 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyOuterCDKMAdder
 qsharp.summary: Reversible, in-place ripple-carry operation that is used in the integer addition operation RippleCarryAdderCDKM below. Given two qubit registers `xs` and `ys` of the same length, the operation applies a ripple carry sequence of CNOT and CCNOT gates with qubits in `xs` and `ys` as the controls and qubits in `xs` as the targets.
-ms.openlocfilehash: 5ec9d31252254e40efb22e06656294325b4cffcd
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 81311a75beedb62331184faf4e1523f3ccc74f43
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721567"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190668"
 ---
 # <a name="applyoutercdkmadder-operation"></a>ApplyOuterCDKMAdder 操作
 
 名前空間: [Microsoft. Quantum. 算術](xref:Microsoft.Quantum.Arithmetic)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 次の整数加算演算 RippleCarryAdderCDKM で使用される、元に戻すことができるインプレース操作。
 2つの qubit レジスタと同じ長さが指定されて `xs` `ys` いる場合、この操作は、内の qubit と、 `xs` `ys` ターゲットとしてのコントロールおよび qubit を使用して、リップ not と ccnot ゲートの ripple キャリーシーケンスを適用し `xs` ます。
 
 ```qsharp
-operation ApplyOuterCDKMAdder (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, ancilla : Qubit) : Unit
+operation ApplyOuterCDKMAdder (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, ancilla : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -51,7 +51,7 @@ operation ApplyOuterCDKMAdder (xs : Microsoft.Quantum.Arithmetic.LittleEndian, y
 
 
 
-## <a name="references"></a>関連項目
+## <a name="references"></a>リファレンス
 
 - Cuccaro、Draper、Samuel、Kutin、David Petrie の: "新しいクォンタム ripple-キャリー追加回路", 2004 ですが、このようになります。
   https://arxiv.org/abs/quant-ph/0410184v1

@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d38482be17e67f180441440ee8ccc7f1f64ebc9d
-ms.sourcegitcommit: fb75d8f30f1d91f644b2a594f46867eb5968cfda
+ms.openlocfilehash: 93ece8cbaa2ac8e6e0c9bb417e8f40130cb8a3fa
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94448346"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192096"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -23,6 +23,18 @@ ms.locfileid: "94448346"
 インストール手順については、[インストール ガイド](xref:microsoft.quantum.install)を参照してください。
 
 更新手順については、[更新ガイド](xref:microsoft.quantum.update)を参照してください。
+
+## <a name="version-0142011120240"></a>バージョン0.14.2011120240
+
+*リリース日: 2020 年11月25日*
+
+- 参照の読み込みが高速になるため、コンパイラのパフォーマンスが向上しました。
+- [の Q# ANTLR 文法](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language/5_Grammar)を言語仕様に追加しました Q# 。
+- スタイルガイドおよび API 設計の原則との一貫性を高めるため、および追加データを含む purified 混合状態をサポートするために、 [ `Microsoft.Quantum.Preparation` 名前空間](xref:Microsoft.Quantum.Preparation)が更新されました ([提案](https://github.com/microsoft/QuantumLibraries/issues/344)、[レビューメモ](https://github.com/microsoft/QuantumLibraries/blob/main/Design/meetings/2020/api-design-2020-11-05.md)と pr [#212](https://github.com/microsoft/QuantumLibraries/pull/212)、 [#322](https://github.com/microsoft/QuantumLibraries/pull/322)、 [#375](https://github.com/microsoft/QuantumLibraries/pull/375)、 [#376](https://github.com/microsoft/QuantumLibraries/pull/376))。
+- 繰り返し呼び出し式を囲むかっこは省略可能になりました。 `(Foo(x))(y)` として書き込むことができ `Foo(x)(y)` ます。
+- .NET 5 または Visual Studio 16.8 をインストールした Visual Studio または Visual Studio Code 拡張機能のユーザーは、拡張機能を引き続き使用するために .NET Core 3.1 をインストールするように求められることがあります。
+
+[ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18)、 [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18) 、 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18)については、closed pr の完全な一覧を参照してください。
 
 ## <a name="version-01320111004"></a>バージョン0.13.20111004
 
@@ -240,7 +252,7 @@ ms.locfileid: "94448346"
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
 
-## <a name="version-09-packagereference-0919082902"></a>バージョン 0.9 ( *PackageReference 0.9.1908.2902* )
+## <a name="version-09-packagereference-0919082902"></a>バージョン 0.9 (*PackageReference 0.9.1908.2902*)
 
 *リリース日:2019 年 8 月 29 日*
 
@@ -257,7 +269,7 @@ ms.locfileid: "94448346"
 
 ここでは、既存のプログラムをアップグレードする手順だけでなく、変更の概要を示します。  これらの変更の詳細については、 [ Q# dev ブログ](https://devblogs.microsoft.com/qsharp)を参照してください。
 
-## <a name="version-08-packagereference-0819071701"></a>バージョン 0.8 ( *PackageReference 0.8.1907.1701* )
+## <a name="version-08-packagereference-0819071701"></a>バージョン 0.8 (*PackageReference 0.8.1907.1701*)
 
 *リリース日:2019 年 7 月 12 日*
 
@@ -269,7 +281,7 @@ ms.locfileid: "94448346"
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)と[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)については、閉じられた PR の完全な一覧を参照してください。  
 
-## <a name="version-07-packagereference-0719053109"></a>バージョン 0.7 ( *PackageReference 0.7.1905.3109* )
+## <a name="version-07-packagereference-0719053109"></a>バージョン 0.7 (*PackageReference 0.7.1905.3109*)
 
 *リリース日:2019 年 5 月 31 日*
 
@@ -372,7 +384,7 @@ QDK を更新する場合は、[インストール ガイド](xref:microsoft.qua
 > * 0\.6 リリースの場合、Quantum Development Kit に含まれている言語サーバーでは、複数のワークスペースがサポートされません。
 > * Visual Studio Code でプロジェクトを操作するには、プロジェクト自体とすべての参照先プロジェクトを含むルート フォルダーを開きます。   
 > * Visual Studio でソリューションを操作するには、ソリューションに含まれるすべてのプロジェクトが、ソリューションと同じフォルダーまたはそのサブフォルダーのいずれかに存在する必要があります。  
-> * 0\.6 以降に移行されたプロジェクトと、古いパッケージ バージョンを使用しているプロジェクトの間の参照は、サポート **されません** 。
+> * 0\.6 以降に移行されたプロジェクトと、古いパッケージ バージョンを使用しているプロジェクトの間の参照は、サポート **されません**。
 
 ## <a name="version-051904"></a>バージョン 0.5.1904
 
@@ -545,7 +557,7 @@ Q#プログラマが成長しているので、お客様がオープンコード
 * Jessica Lemieux ([@Lemj3111](https://github.com/Lemj3111)): @"microsoft.quantum.canon.quantumphaseestimation" を修正し、新しい単体テストを作成しました。  [PR #54](https://github.com/Microsoft/Quantum/pull/54)
 * Tama McGlinn ([@TamaHobbit](https://github.com/TamaHobbit)): QuantumSimulator インスタンスが破棄されていることを確認し、テレポーテーション サンプルをクリーニングしました。 [PR #20](https://github.com/Microsoft/Quantum/pull/20)
 
-さらに、以下の人たちに深く **感謝します** 。 商用エンジニアリング サービス チームのこれらの Microsoft ソフトウェア エンジニアは、ハッカソン時にドキュメントに重要な変更を加えた投稿者です。  これらの変更により、私たち全員のわかりやすいオンボード エクスペリエンスが大幅に向上しました。
+さらに、以下の人たちに深く **感謝します**。 商用エンジニアリング サービス チームのこれらの Microsoft ソフトウェア エンジニアは、ハッカソン時にドキュメントに重要な変更を加えた投稿者です。  これらの変更により、私たち全員のわかりやすいオンボード エクスペリエンスが大幅に向上しました。
 * Sascha Corti
 * Mihaela Curmei
 * John Donnelly
@@ -557,7 +569,7 @@ Q#プログラマが成長しているので、お客様がオープンコード
 
 ### <a name="update-existing-projects"></a>既存のプロジェクトを更新する
 
-このリリースには完全に下位互換性があります。 プロジェクトの nuget パッケージをバージョン `0.2.1806.1503-preview` に単に更新し、 **完全な再構築** を行って、すべての中間ファイルが再生成されていることを確認します。
+このリリースには完全に下位互換性があります。 プロジェクトの nuget パッケージをバージョン `0.2.1806.1503-preview` に単に更新し、**完全な再構築** を行って、すべての中間ファイルが再生成されていることを確認します。
 
 Visual Studio から、[パッケージを更新する](https://docs.microsoft.com/nuget/tools/package-manager-ui#updating-a-package)方法に関する通常の手順に従います。
 

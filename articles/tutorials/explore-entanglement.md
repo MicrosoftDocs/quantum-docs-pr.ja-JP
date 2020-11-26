@@ -9,30 +9,30 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7a1a49e18ac9330ca6e3cc89b3e58c96eccb91db
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4c73a070fea2ce69a0bce9bf293a4679727e27bc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691660"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192029"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>チュートリアル:Q\# でのもつれの確認
 
-このチュートリアルでは、qubits を操作して測定するプログラムを記述する方法を説明 Q# し、法則と entanglement 効果を示します。
+このチュートリアルでは、qubits を操作して測定するプログラムを記述する方法を説明 Q# し、法則と entanglement 効果を示します。 
 
 量子のもつれを示すため、Bell というアプリケーションを記述します。
 Bell という名前は、ベル状態を表しています。これは、量子の重ね合わせともつれの最も簡単な例を表すために使用される、2 つの量子ビットの特定の量子の状態です。
 
 ## <a name="pre-requisites"></a>前提条件
 
-コーディングを開始する準備ができたら、続行する前に次の手順を実行してください。 
+コーディングを開始する準備ができたら、続行する前に次の手順を実行してください。
 
-* 任意の言語および開発環境を使用して、Quantum 開発キットを[インストール](xref:microsoft.quantum.install)します。
+* 任意の言語および開発環境を使用して、Quantum 開発キットを[インストール](xref:microsoft.quantum.install)します。 
 * 既に QDK をインストールしている場合は、バージョンが[最新](xref:microsoft.quantum.update)であることを確認する
 
 また、QDK をインストールしなくても、 Q# プログラミング言語の概要と、クォンタムコンピューティングの最初の概念を確認することで、この解説に従うことができます。
 
-## <a name="in-this-tutorial-youll-learn-how-to"></a>このチュートリアルで学習する内容は次のとおりです。
+## <a name="in-this-tutorial-youll-learn-how-to"></a>このチュートリアルでは、次の方法について説明します。
 
 > [!div class="checklist"]
 > * Q での操作の作成と結合\#
@@ -41,7 +41,7 @@ Bell という名前は、ベル状態を表しています。これは、量子
 
 ## <a name="demonstrating-qubit-behavior-with-the-qdk"></a>QDK を使用した qubit 動作のデモンストレーション
 
-従来のビットでは単一のバイナリ値 (0、1 など) が保持されるのに対し、 [量子ビット](xref:microsoft.quantum.glossary#qubit)の状態は 0 と 1 の **重ね合わせ** になることができます。  概念上、qubit の状態は、抽象空間 (ベクターとも呼ばれます) の方向と考えることができます。  Qubit 状態は、可能な任意の方向にすることができます。 2 つの **従来の状態** とは、0 を測定する確率が 100% になる方向と、1 を測定する確率が 100% になる方向のことです。
+従来のビットでは単一のバイナリ値 (0、1 など) が保持されるのに対し、[量子ビット](xref:microsoft.quantum.glossary#qubit)の状態は 0 と 1 の **重ね合わせ** になることができます。  概念上、qubit の状態は、抽象空間 (ベクターとも呼ばれます) の方向と考えることができます。  Qubit 状態は、可能な任意の方向にすることができます。 2 つの **従来の状態** とは、0 を測定する確率が 100% になる方向と、1 を測定する確率が 100% になる方向のことです。
 
 測定の動作により、2 進法の結果が生成され、量子ビットの状態が変わります。
 測定値によって、0または1の2進値が生成されます。  量子ビットは重ね合わせ (あらゆる方向にある) の状態から古典的状態のいずれかになります。  その後、介在する操作なしで同じ測定を繰り返すと、同じ 2 進数の結果が生成されます。  
@@ -83,7 +83,7 @@ Bell という名前は、ベル状態を表しています。これは、量子
 
 ### <a name="initialize-qubit-using-measurement"></a>測定を使用して qubit を初期化する
 
-次の最初のコードスニペットでは、で qubits を使用する方法を説明し Q# ます。  2つの操作を紹介 [`M`](xref:Microsoft.Quantum.Intrinsic.m) し、 [`X`](xref:Microsoft.Quantum.Intrinsic.X) qubit の状態を変換します。 このコード スニペットでは、量子ビットをパラメーターと見なす操作 `SetQubitState` が定義されています。もう 1 つのパラメーター `desired` は量子ビットが目的とする状態を表しています。  操作 `SetQubitState` は、操作 `M` を使用して、量子ビットに対する測定を実行します。  で Q# は、qubit 測定値は常に `Zero` またはを返し `One` ます。  測定値が目的の値と等しくない値を返す場合、 `SetQubitState` は qubit を "反転" します。つまり、演算子は演算を実行します。これにより、 `X` qubit 状態が戻り値の確率が返され、元に戻される新しい状態に変更 `Zero` され `One` ます。 これにより、は `SetQubitState` 常にターゲットの qubit を目的の状態にします。
+次の最初のコードスニペットでは、で qubits を使用する方法を説明し Q# ます。  2つの操作を紹介 [`M`](xref:Microsoft.Quantum.Intrinsic.M) し、 [`X`](xref:Microsoft.Quantum.Intrinsic.X) qubit の状態を変換します。 このコード スニペットでは、量子ビットをパラメーターと見なす操作 `SetQubitState` が定義されています。もう 1 つのパラメーター `desired` は量子ビットが目的とする状態を表しています。  操作 `SetQubitState` は、操作 `M` を使用して、量子ビットに対する測定を実行します。  で Q# は、qubit 測定値は常に `Zero` またはを返し `One` ます。  測定値が目的の値と等しくない値を返す場合、 `SetQubitState` は qubit を "反転" します。つまり、演算子は演算を実行します。これにより、 `X` qubit 状態が戻り値の確率が返され、元に戻される新しい状態に変更 `Zero` され `One` ます。 これにより、は `SetQubitState` 常にターゲットの qubit を目的の状態にします。
 
 の内容を `Program.qs` 次のコードに置き換えます。
 
@@ -116,7 +116,7 @@ Q#操作は、クォンタムサブルーチンです。 つまり、これは�
 
 最初の操作で2つのクォンタム操作を使用しました Q# 。
 
-* [`M`](xref:Microsoft.Quantum.Intrinsic.m)Qubit の状態を測定する操作。
+* [`M`](xref:Microsoft.Quantum.Intrinsic.M)Qubit の状態を測定する操作。
 * [`X`](xref:Microsoft.Quantum.Intrinsic.X)Qubit の状態を反転する操作。
 
 量子操作により、量子ビットの状態が変換されます。 従来の論理ゲートの類義語として、量子操作の代わりに、量子ゲートが話題になることがあります。 これは初期の量子コンピューティングでは、アルゴリズムが単なる理論上の構成要素であり、古典コンピューティングの回路図に似た図で視覚化されていたことに端を発します。

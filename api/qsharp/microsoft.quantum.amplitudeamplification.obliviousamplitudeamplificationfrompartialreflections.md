@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromPartialReflections
 title: ObliviousAmplitudeAmplificationFromPartialReflections 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: ObliviousAmplitudeAmplificationFromPartialReflections
 qsharp.summary: Returns a unitary that implements oblivious amplitude amplification by specifying for partial reflections.
-ms.openlocfilehash: 98f410e4c00e50d60d9b45b675e99396d79f955c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c818fcd8d8b83d8b479b4f133497449d500ca70e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721837"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191314"
 ---
 # <a name="obliviousamplitudeamplificationfrompartialreflections-function"></a>ObliviousAmplitudeAmplificationFromPartialReflections 関数
 
 名前空間: [AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 部分的な反射にを指定して、無関係の振幅増幅を実装するユニタリを返します。
@@ -51,5 +51,5 @@ function ObliviousAmplitudeAmplificationFromPartialReflections (phases : Microso
 
 
 
-## <a name="output--qubitqubit--unit-adj--ctl"></a>出力: ([qubit](xref:microsoft.quantum.lang-ref.qubit)[],[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [単位](xref:microsoft.quantum.lang-ref.unit) の調整 + Ctl
+## <a name="output--qubitqubit--unit--is-adj--ctl"></a>出力: ([qubit](xref:microsoft.quantum.lang-ref.qubit)[],[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞 + Ctl です
 
