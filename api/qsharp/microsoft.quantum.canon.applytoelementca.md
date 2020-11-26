@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToElementCA
 title: ApplyToElementCA 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToElementCA
 qsharp.summary: Applies an operation to a given element of an array.
-ms.openlocfilehash: 599a8afe1ab97b0ab0d6621cabd7707faaeddda3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8ae4ece0d3d56ea2be1ce494ab0c5ee7caacbbf8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717446"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208858"
 ---
 # <a name="applytoelementca-operation"></a>ApplyToElementCA 操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 配列の特定の要素に操作を適用します。
 
 ```qsharp
-operation ApplyToElementCA<'T> (op : ('T => Unit is Adj + Ctl), index : Int, targets : 'T[]) : Unit
+operation ApplyToElementCA<'T> (op : ('T => Unit is Adj + Ctl), index : Int, targets : 'T[]) : Unit is Adj + Ctl
 ```
 
 
@@ -34,7 +34,7 @@ operation ApplyToElementCA<'T> (op : ('T => Unit is Adj + Ctl), index : Int, tar
 
 ## <a name="input"></a>入力
 
-### <a name="op--t--unit-adj--ctl"></a>op: ' t => [単位](xref:microsoft.quantum.lang-ref.unit) の形容詞 + Ctl
+### <a name="op--t--unit--is-adj--ctl"></a>op: ' t => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞 + Ctl です
 
 適用する操作。
 

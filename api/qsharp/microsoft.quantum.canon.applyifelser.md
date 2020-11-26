@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseR
 title: ApplyIfElseR 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseR
 qsharp.summary: Applies one of two operations, depending on the value of a classical result.
-ms.openlocfilehash: 78c1cf23614fbb7c27122548de487c7350467948
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 874dae2ba5e842066e9c1582af431a73520e4ccd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718160"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209538"
 ---
 # <a name="applyifelser-operation"></a>ApplyIfElseR 操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 古典的な結果の値に応じて、2つの操作のいずれかを適用します。
@@ -34,7 +34,7 @@ operation ApplyIfElseR<'T, 'U> (result : Result, (zeroOp : ('T => Unit), zeroInp
 
 ## <a name="input"></a>入力
 
-### <a name="result--__invalidresult__"></a>結果: __無効 <Result>__
+### <a name="result--__invalidresult__"></a>結果:__無効 <Result>__
 
 またはが適用されているかどうかを判断するために使用される測定結果 `zeroOp` `oneOp` 。
 

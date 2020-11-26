@@ -1,37 +1,37 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyMultiControlledCA
 title: ApplyMultiControlledCA 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyMultiControlledCA
 qsharp.summary: Applies a multiply controlled version of a singly controlled operation. The modifier `CA` indicates that the single-qubit operation is controllable and adjointable.
-ms.openlocfilehash: 5662efe0dc6f665206b8773596bf885ce631413c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 28797583c23e21eb4bcae996a34c70ee06c6dbe8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717964"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209283"
 ---
 # <a name="applymulticontrolledca-operation"></a>ApplyMultiControlledCA 操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 1つの操作の制御された複数のバージョンを適用します。
 修飾子は、 `CA` single qubit 操作が制御可能で adjointable であることを示します。
 
 ```qsharp
-operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => Unit is Adj), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit
+operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => Unit is Adj), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
 ## <a name="input"></a>入力
 
-### <a name="singlycontrolledop--qubit--unit-adj"></a>Sing(Controlledop): [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [単位](xref:microsoft.quantum.lang-ref.unit) の形容詞
+### <a name="singlycontrolledop--qubit--unit--is-adj"></a>Sing(Controlledop): [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞です
 
 1つの qubit で制御される操作。
 操作の引数の最初の qubit はコントロールであると想定され、残りはターゲット qubit と見なされます。
@@ -65,9 +65,9 @@ operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => Unit is Adj),
 
 説明とサーキットの図については、図4.10 のセクション4.3 を参照してください & 語
 
-## <a name="references"></a>関連項目
+## <a name="references"></a>リファレンス
 
-- [*Michael、Isaac、語* 、量子計算、およびクォンタム情報](http://doi.org/10.1017/CBO9780511976667)
+- [*Michael、Isaac、語*、量子計算、およびクォンタム情報](http://doi.org/10.1017/CBO9780511976667)
 
 ## <a name="see-also"></a>参照
 

@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareChoiStateC
 title: Istatec 操作の実行
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PrepareChoiStateC
-qsharp.summary: Prepares the Choi–Jamiłkowski state for a given operation with a controlled variant onto given reference and target registers.
-ms.openlocfilehash: b23b22fa4bf21ca48076ccda0db62b313f887aa9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+qsharp.summary: Prepares the Choi–Jamiołkowski state for a given operation with a controlled variant onto given reference and target registers.
+ms.openlocfilehash: 7d9e53b1dd8ec08c0d0b200cc51562ca6330b06e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724898"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210541"
 ---
 # <a name="preparechoistatec-operation"></a>Istatec 操作の実行
 
 名前空間: [Microsoft. Quantum](xref:Microsoft.Quantum.Preparation)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-指定された参照およびターゲットレジスタに制御されるバリアントを持つ特定の操作に対して、[Jamiłkowski] 状態を準備します。
+指定された参照およびターゲットレジスタに制御されるバリアントを持つ特定の操作に対して、[Jamiołkowski] 状態を準備します。
 
 ```qsharp
-operation PrepareChoiStateC (op : (Qubit[] => Unit is Ctl), reference : Qubit[], target : Qubit[]) : Unit
+operation PrepareChoiStateC (op : (Qubit[] => Unit is Ctl), reference : Qubit[], target : Qubit[]) : Unit is Ctl
 ```
 
 
 ## <a name="input"></a>入力
 
-### <a name="op--qubit--unit-ctl"></a>op: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [ユニット](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="op--qubit--unit--is-ctl"></a>op: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [単位](xref:microsoft.quantum.lang-ref.unit)  は Ctl
 
 
 

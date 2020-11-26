@@ -1,24 +1,60 @@
 ### YamlMime:QSharpNamespace
 functions:
+- summary: 任意の状態の準備手順の実装手順。
+  uid: Microsoft.Quantum.Preparation.ApproximatelyUnprepareArbitraryStatePlan
 - summary: >-
     シングル qubit 状態の Bloch 球座標を計算します。
 
     2つの複素数を $a 0、a1 $ は qubit 状態を表し、\ket が 0 {0} + a1 \ket {1} = r e ^ {it} (e ^ {-i/phi/2}\cos{(\ シータ/2)} \ket {0} + e ^ {i/phi/2}\sin{(\ シータ/2)} \ket) $ $a というように計算され {1} ます。
   uid: Microsoft.Quantum.Preparation.BlochSphereCoordinates
 - summary: >-
+    指定された混合状態の purification を準備する操作を返します。
+
+    "Purified mixed state" は、係数 {pi} のベクターによって指定されたフォーム | ψ⟩ = Σi √ pi | i ⟩ | garbagei ⟩の状態を示します。 このフォームの状態は、混合状態複素数≔ pi | i ⟩⟨ i | に減らすことができます。"ガベージ" レジスタをトレースする (つまり、コンピューティングのために対角線が斜めである混合状態)。
+
+
+    詳細については、「」を参照してください https://arxiv.org/pdf/1805.03662.pdf?page=15 。
+  uid: Microsoft.Quantum.Preparation.PurifiedMixedState
+- summary: によって返された操作を適用するために割り当てる必要がある qubits の合計数を返し @"microsoft.quantum.preparation.purifiedmixedstate" ます。
+  uid: Microsoft.Quantum.Preparation.PurifiedMixedStateRequirements
+- summary: >-
+    指定されたデータのコレクションを表すレジスタを使用して、指定された混合状態の purification を準備する操作を返します。
+
+    "Purified mixed state with data" は、Σi √ pi | i ⟩ | xi ⟩ | garbagei ⟩という形式の状態を示します。各 xi は、register | i ⟩に関連付けられたビット文字列エンコーディングです。
+
+
+    詳細については、「」を参照してください https://arxiv.org/pdf/1805.03662.pdf?page=15 。
+  uid: Microsoft.Quantum.Preparation.PurifiedMixedStateWithData
+- summary: >-
+    > [!WARNING]
+
+    > QuantumROM は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Preparation.PurifiedMixedState> を使用してください。
+
+
     は、指定された密度マトリックスを表すために、クォンタム ROM の手法を使用します。
 
     $N $ 係数 $ \ alpha_j $ のリストが指定されている場合、$U この例では、クォンタム-ROM 手法を使用して近似 $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j 密度マトリックス $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j |} の purification の \ket{j}\bra{j} $ を準備します。{\ sum_k | \ alpha_k |}\ket{j}\bra{j} $。 この近似値では、$/イプシロン $ というエラーが $ | p_j-\frac{| alpha_j |} のようになります。{\ sum_k | \ alpha_k |} |\ le/イプシロン/N $ と $ \| \tilde\rho-\rho \| $。 つまり、$ $ \begin{align} U\ket {0} ^ {\lceil\ log_2 N\r ceil} \ k {0} ^ {m} = \ sum_ {j = 0} ^ {N-1} \ sqrt{p_j} \ket{j}\ket{\text{garbage} _j} です。 \end{align} $ $
   uid: Microsoft.Quantum.Preparation.QuantumROM
 - summary: ''
   uid: Microsoft.Quantum.Preparation.QuantumROMBitStringWriterByIndex
-- summary: によって返された操作に割り当てる必要がある qubits の合計数を返し `QuantumROM` ます。
+- summary: >-
+    > [!WARNING]
+
+    > QuantumROMQubitCount は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Preparation.PurifiedMixedStateRequirements> を使用してください。
+
+
+    によって返された操作に割り当てる必要がある qubits の合計数を返し `QuantumROM` ます。
   uid: Microsoft.Quantum.Preparation.QuantumROMQubitCount
 - summary: ''
-  uid: Microsoft.Quantum.Preparation.RangeLength
-- summary: ''
   uid: Microsoft.Quantum.Preparation.RoundedDiscretizationCoefficients
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.SplitSign
 - summary: >-
+    > [!WARNING]
+
+    > StatePreparationComplexCoefficients は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP> を使用してください。
+
+
     特定のクォンタム状態を準備する操作を返します。
 
     返された操作 $U $ は、複雑な $r 係数を持つ任意のクォンタム状態 $ \ket{\psi} $ を、$n $-qubit 計算ベースの状態 $ \ket{0...0} $ から _j e ^ {i t_j} $ に準備します。
@@ -26,6 +62,11 @@ functions:
     新しく割り当てられたレジスタに対する U のアクションは、$ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}} によって指定されます。 \end{align} $ $
   uid: Microsoft.Quantum.Preparation.StatePreparationComplexCoefficients
 - summary: >-
+    > [!WARNING]
+
+    > StatePreparationPositiveCoefficients は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateD> を使用してください。
+
+
     指定されたクォンタム状態を準備する操作を返します。
 
     返された操作 $U $ は、$ \ket{0...0} $ という $n から正の係数 $ \ $0 alpha_j を含む任意のクォンタム状態 $ \ket{\psi} $ を準備します。
@@ -33,17 +74,17 @@ functions:
     新しく割り当てられたレジスタの U のアクションは、$ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}} によって指定されます。 \end{align} $ $
   uid: Microsoft.Quantum.Preparation.StatePreparationPositiveCoefficients
 - summary: 任意の状態の準備手順の実装手順。
-  uid: Microsoft.Quantum.Preparation._ApproximatelyUnprepareArbitraryStatePlan
+  uid: Microsoft.Quantum.Preparation.StatePreparationSBMComputeCoefficients
 - summary: ''
   uid: Microsoft.Quantum.Preparation._CompileApproximateArbitraryStatePreparation
 - summary: ''
   uid: Microsoft.Quantum.Preparation._QuantumROMDiscretization
-- summary: ''
-  uid: Microsoft.Quantum.Preparation._QuantumROMQubitManager
-- summary: 任意の状態の準備手順の実装手順。
-  uid: Microsoft.Quantum.Preparation._StatePreparationSBMComputeCoefficients
 name: Microsoft.Quantum.Preparation
-newtypes: []
+newtypes:
+- summary: インデックスとガベージレジスタで準備できる特定の混合状態を表します。
+  uid: Microsoft.Quantum.Preparation.MixedStatePreparation
+- summary: 指定された混合状態を準備するために必要な qubits の数を表します。
+  uid: Microsoft.Quantum.Preparation.MixedStatePreparationRequirements
 operations:
 - summary: ''
   uid: Microsoft.Quantum.Preparation.ApplyGlobalRotationStep
@@ -51,17 +92,39 @@ operations:
   uid: Microsoft.Quantum.Preparation.ApplyMultiplexStep
 - summary: リトルエンディアンレジスタを作成する、基になる qubits に操作を適用します。 この操作は内部としてマークされています。リトルエンディアンレジスタは "不透明" になるため、これが実装の詳細であることが前提となります。
   uid: Microsoft.Quantum.Preparation.ApplyToLittleEndian
-- summary: 係数とリトルエンディアンでエンコードされたクォンタムレジスタを指定すると、は指定された係数によって示されるレジスタの状態を、指定された近似値に設定します。
+- summary: >-
+    > [!WARNING]
+
+    > ApproximatelyPrepareArbitraryState は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP> を使用してください。
+
+
+    係数とリトルエンディアンでエンコードされたクォンタムレジスタを指定すると、は指定された係数によって示されるレジスタの状態を、指定された近似値に設定します。
   uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState
-- summary: 係数とリトルエンディアンでエンコードされたクォンタムレジスタを指定すると、は、指定された係数によって記述されるレジスタに状態を準備します。
+- summary: 係数とリトルエンディアンでエンコードされたクォンタムレジスタを指定すると、は指定された係数によって示されるレジスタの状態を、指定された近似値に設定します。
+  uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP
+- summary: 係数とリトルエンディアンでエンコードされたクォンタムレジスタを指定すると、は指定された係数によって示されるレジスタの状態を、指定された近似値に設定します。
+  uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateD
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.IgnoreDataRegister
+- summary: >-
+    > [!WARNING]
+
+    > PrepareArbitraryState は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP> を使用してください。
+
+
+    係数とリトルエンディアンでエンコードされたクォンタムレジスタを指定すると、は、指定された係数によって記述されるレジスタに状態を準備します。
   uid: Microsoft.Quantum.Preparation.PrepareArbitraryState
-- summary: 指定された操作について、指定された参照およびターゲットレジスタに Jamiłkowski 状態を準備します。
+- summary: 係数とリトルエンディアンでエンコードされたクォンタムレジスタを指定すると、は、指定された係数によって記述されるレジスタに状態を準備します。
+  uid: Microsoft.Quantum.Preparation.PrepareArbitraryStateCP
+- summary: 係数とリトルエンディアンでエンコードされたクォンタムレジスタを指定すると、は、指定された係数によって記述されるレジスタに状態を準備します。
+  uid: Microsoft.Quantum.Preparation.PrepareArbitraryStateD
+- summary: 指定された操作について、指定された参照およびターゲットレジスタに Jamiołkowski 状態を準備します。
   uid: Microsoft.Quantum.Preparation.PrepareChoiState
-- summary: 指定された参照およびターゲットレジスタに adjoint バリアントを使用して、指定された操作に対して Jamiłkowski 状態を準備します。
+- summary: 指定された参照およびターゲットレジスタに adjoint バリアントを使用して、指定された操作に対して Jamiołkowski 状態を準備します。
   uid: Microsoft.Quantum.Preparation.PrepareChoiStateA
-- summary: 指定された参照およびターゲットレジスタに制御されるバリアントを持つ特定の操作に対して、[Jamiłkowski] 状態を準備します。
+- summary: 指定された参照およびターゲットレジスタに制御されるバリアントを持つ特定の操作に対して、[Jamiołkowski] 状態を準備します。
   uid: Microsoft.Quantum.Preparation.PrepareChoiStateC
-- summary: 指定された参照およびターゲットレジスタに対し、制御されるバリアントと adjoint バリアントの両方を持つ特定の操作に対して、[Jamiłkowski] 状態を準備します。
+- summary: 指定された参照およびターゲットレジスタに対し、制御されるバリアントと adjoint バリアントの両方を持つ特定の操作に対して、[Jamiołkowski] 状態を準備します。
   uid: Microsoft.Quantum.Preparation.PrepareChoiStateCA
 - summary: >-
     2つの qubit レジスタがペアになります。
@@ -73,9 +136,16 @@ operations:
 
     レジスタは、depolarizing チャネル全体を各 qubit に適用することで、$/bold done/2 ^ N $ 状態で準備されます。ここで $N $ はレジスタの長さです。
   uid: Microsoft.Quantum.Preparation.PrepareIdentity
+- summary: 指定された Pauli 演算子の正の eigenstate で qubit を準備します。 Id 演算子が指定されている場合、qubit は下回っ mixed 状態で準備されます。
+  uid: Microsoft.Quantum.Preparation.PreparePauliEigenstate
 - summary: ''
   uid: Microsoft.Quantum.Preparation.PrepareQuantumROMState
 - summary: >-
+    > [!WARNING]
+
+    > PrepareQubit は非推奨となりました。 代わりに、<xref:Microsoft.Quantum.Preparation.PreparePauliEigenstate> を使用してください。
+
+
     `Zero`指定された Pauli 演算子の + 1 () eigenstate で qubit を準備します。 Id 演算子が指定されている場合、qubit は下回っ mixed 状態で準備されます。
 
     Qubit が最初に $ \ket $ 状態であった場合 {0} 、この操作は、指定された p li 演算子の $ + $1 eigenstate の qubit を準備します。または、の場合は、 `PauliI` 代わりに下回っ mixed 状態 (を参照) で qubit を準備し <xref:microsoft.quantum.preparation.preparesinglequbitidentity> ます。
@@ -93,15 +163,17 @@ operations:
     つまり、このユニタリ $U $ は、入力状態が $ \ket{0\cdots 0} $ の場合に、すべての数値の州 $0 $ に対して $M-$1 に対して uniform 法則を作成します。 つまり、$ $ \begin{align} U\ket {0} = \ frac {\ {1} sqsum_ rt{\ket{j}. {j = 0} ^ {m.-1} \end{align} $ $。
   uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition
 - summary: の実装手順 <xref:microsoft.quantum.canon.prepareuniformsuperposition>
-  uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition_
+  uid: Microsoft.Quantum.Preparation.PrepareUniformSuperpositionOracle
 - summary: ''
   uid: Microsoft.Quantum.Preparation.WriteQuantumROMBitString
+- summary: 係数のセットと、リトルエンディアンでエンコードされた qubits のレジスタが指定され、そのすべてがゼロ状態である場合、指定された係数によって記述されたレジスタに状態が準備されます。 ターゲットでサポートされている場合は、状態エミュレーションを使用します。
+  uid: Microsoft.Quantum.Preparation._PrepareAmplitudesFromZeroState
 summary: この名前空間には、任意の初期状態に qubits を準備するための関数と操作が含まれています。
 uid: Microsoft.Quantum.Preparation
 metadata:
-  ms.openlocfilehash: f8dc07d5fe1073f626eea41e6291d8cc919d93b6
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: f08467fae166b83cbb71d86739b4cd1300259b8b
+  ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92723349"
+  ms.lasthandoff: 11/26/2020
+  ms.locfileid: "96210303"
