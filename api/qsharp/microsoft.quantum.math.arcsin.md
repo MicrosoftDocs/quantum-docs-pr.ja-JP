@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.ArcSin
 title: ArcSin 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ArcSin
 qsharp.summary: Returns the angle whose sine is the specified number.
-ms.openlocfilehash: 4572e40e7d7eb83e3561a798b4c6341de963936c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fe24867f8bdce2f8078dc1fa9de5b0db3e6ab16a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722350"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195802"
 ---
 # <a name="arcsin-function"></a>ArcSin 関数
 
 名前空間: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 サインが指定数となる角度を返します。

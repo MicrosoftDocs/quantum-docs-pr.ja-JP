@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.FeatureRegisterSize
 title: FeatureRegisterSize 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: FeatureRegisterSize
 qsharp.summary: Returns the number of qubits required to encode a particular feature vector.
-ms.openlocfilehash: 8f7c47c7547e7a0ac1672f308de445c1b46461e1
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: bc5d5a23cfb431f9506b15bc404ab6955d1c2a35
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723288"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196414"
 ---
 # <a name="featureregistersize-function"></a>FeatureRegisterSize 関数
 
 名前空間: [Microsoft. Quantum の e ラーニング](xref:Microsoft.Quantum.MachineLearning)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum.](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 特定の特徴ベクターをエンコードするために必要な qubits の数を返します。

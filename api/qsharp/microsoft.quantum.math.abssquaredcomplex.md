@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.AbsSquaredComplex
 title: AbsSquaredComplex 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: AbsSquaredComplex
 qsharp.summary: Returns the squared absolute value of a complex number of type `Complex`.
-ms.openlocfilehash: da42fd1df2247a3cd7f9a71b06c098638ff4f7e4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d48212d7f861b3ff9e37d078742f53f0cd8c71ba
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719966"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195904"
 ---
 # <a name="abssquaredcomplex-function"></a>AbsSquaredComplex 関数
 
 名前空間: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 型の複素数の2乗の絶対値を返し `Complex` ます。
