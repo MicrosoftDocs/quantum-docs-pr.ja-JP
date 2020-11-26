@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.ResultAsBool
 title: ResultAsBool 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: ResultAsBool
 qsharp.summary: Converts a `Result` type to a `Bool` type, where `One` is mapped to `true` and `Zero` is mapped to `false`.
-ms.openlocfilehash: 34fca15faf79f706b398e3fdfc537ea91b28da86
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a170acf635e4e2b2150ffc208fabc9782ff837b0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713344"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224175"
 ---
 # <a name="resultasbool-function"></a>ResultAsBool 関数
 
 名前空間: [Microsoft. Quantum. 変換](xref:Microsoft.Quantum.Convert)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 型を `Result` 型に変換 `Bool` `One` します。ここで、はにマップされ、 `true` `Zero` はにマップされ `false` ます。
@@ -30,7 +30,7 @@ function ResultAsBool (input : Result) : Bool
 
 ## <a name="input"></a>入力
 
-### <a name="input--__invalidresult__"></a>入力: __無効 <Result>__
+### <a name="input--__invalidresult__"></a>入力:__無効 <Result>__
 
 `Result` 変換されます。
 

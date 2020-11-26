@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.FunctionAsOperation
 title: FunctionAsOperation 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: FunctionAsOperation
 qsharp.summary: Converts functions to operations.
-ms.openlocfilehash: 90e9f0c922a77fbb6d6faf8945d4f5d1c8ff33b7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 10703818242cf6b3853f08a45bfb9094f397f6c2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713512"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224379"
 ---
 # <a name="functionasoperation-function"></a>FunctionAsOperation 関数
 
 名前空間: [Microsoft. Quantum. 変換](xref:Microsoft.Quantum.Convert)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 関数を操作に変換します。
