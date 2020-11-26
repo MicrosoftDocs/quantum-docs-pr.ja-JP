@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyWithCA
 title: ApplyWithCA 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyWithCA
 qsharp.summary: Given two operations, applies one as conjugated with the other.
-ms.openlocfilehash: abc62791416e78c1b2937a226327b71da8b8e288
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e86c452e9693c5a4d0d4e5a36471ab46bbf66dfe
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716886"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208144"
 ---
 # <a name="applywithca-operation"></a>ApplyWithCA 操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 2つの操作を指定した場合、1つは conjugated として適用されます。
 
 ```qsharp
-operation ApplyWithCA<'T> (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl), target : 'T) : Unit
+operation ApplyWithCA<'T> (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl), target : 'T) : Unit is Adj + Ctl
 ```
 
 
@@ -34,12 +34,12 @@ operation ApplyWithCA<'T> (outerOperation : ('T => Unit is Adj), innerOperation 
 
 ## <a name="input"></a>入力
 
-### <a name="outeroperation--t--unit-adj"></a>outerOperation: t => [単位](xref:microsoft.quantum.lang-ref.unit) の形容詞
+### <a name="outeroperation--t--unit--is-adj"></a>outerOperation: ' t => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞です
 
 $ $V を共役するために使用する必要がある操作 $U $。 外部操作 $U $ は adjointable である必要があることに注意してください。ただし、制御可能である必要はありません。
 
 
-### <a name="inneroperation--t--unit-adj--ctl"></a>innerOperation: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit) 形容詞 + Ctl
+### <a name="inneroperation--t--unit--is-adj--ctl"></a>innerOperation: t => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞 + Ctl です
 
 操作 $V $ conjugated。
 

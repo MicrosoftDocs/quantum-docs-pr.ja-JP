@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ConjugatedByA
 title: ConjugatedByA 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ConjugatedByA
 qsharp.summary: Given outer and inner operations, returns a new operation that conjugates the inner operation by the outer operation.
-ms.openlocfilehash: bcaab28e99d3d61f4a36da866321d28f3dc4bd53
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eaa104039b857f0469ddc0aaba97698eca20860d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716466"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207345"
 ---
 # <a name="conjugatedbya-function"></a>ConjugatedByA 関数
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 外部操作と内部操作では、外部操作によって内部操作を活用する新しい操作が返されます。
@@ -30,18 +30,18 @@ function ConjugatedByA<'T> (outerOperation : ('T => Unit is Adj), innerOperation
 
 ## <a name="input"></a>入力
 
-### <a name="outeroperation--t--unit-adj"></a>outerOperation: t => [単位](xref:microsoft.quantum.lang-ref.unit) の形容詞
+### <a name="outeroperation--t--unit--is-adj"></a>outerOperation: ' t => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞です
 
 $ $V を共役するために使用する必要がある操作 $U $。 外部操作 $U $ は adjointable である必要があることに注意してください。ただし、制御可能である必要はありません。
 
 
-### <a name="inneroperation--t--unit-adj"></a>innerOperation: t => [単位](xref:microsoft.quantum.lang-ref.unit) の形容詞
+### <a name="inneroperation--t--unit--is-adj"></a>innerOperation: t => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞です
 
 操作 $V $ conjugated。
 
 
 
-## <a name="output--t--unit-adj"></a>出力: t => [単位](xref:microsoft.quantum.lang-ref.unit) の形容詞
+## <a name="output--t--unit--is-adj"></a>出力: t => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞です
 
 そのアクションが、$U ^ {-dagger} V U $ という、1つのユニタリによって表される新しい操作です。
 

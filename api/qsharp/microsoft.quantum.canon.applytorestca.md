@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToRestCA
 title: ApplyToRestCA 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToRestCA
 qsharp.summary: Applies an operation to all but the first element of an array.
-ms.openlocfilehash: d2dc10803044980d53f80f0577d16cb14a2eb301
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3123c7f7b5e5c7f5cb17a34eedc81b3912109883
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717068"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208161"
 ---
 # <a name="applytorestca-operation"></a>ApplyToRestCA 操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 配列の最初の要素以外のすべてに操作を適用します。
 
 ```qsharp
-operation ApplyToRestCA<'T> (op : ('T[] => Unit is Adj + Ctl), targets : 'T[]) : Unit
+operation ApplyToRestCA<'T> (op : ('T[] => Unit is Adj + Ctl), targets : 'T[]) : Unit is Adj + Ctl
 ```
 
 
@@ -34,7 +34,7 @@ operation ApplyToRestCA<'T> (op : ('T[] => Unit is Adj + Ctl), targets : 'T[]) :
 
 ## <a name="input"></a>入力
 
-### <a name="op--t--unit-adj--ctl"></a>op: ' t [] => [単位](xref:microsoft.quantum.lang-ref.unit) の形容詞 + Ctl
+### <a name="op--t--unit--is-adj--ctl"></a>op: ' t [] => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞 + Ctl です
 
 適用する操作。
 
