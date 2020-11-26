@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyConditionally
 title: 条件付き操作の適用
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyConditionally
 qsharp.summary: ''
-ms.openlocfilehash: fe623b240e35ee88f673b6e90db6307ef701d049
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 24d52576d2fb3e83f294874be4b0d1cd6a80f188
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710535"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229071"
 ---
 # <a name="applyconditionally-operation"></a>条件付き操作の適用
 
 名前空間: [QuantumProcessor](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)を実行します。
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 
@@ -30,12 +30,12 @@ operation ApplyConditionally<'T, 'U> (measurementResults : Result[], resultsValu
 
 ## <a name="input"></a>入力
 
-### <a name="measurementresults--__invalidresult__"></a>measurementResults: __無効 <Result> な__ []
+### <a name="measurementresults--__invalidresult__"></a>measurementResults:__無効 <Result> な__[]
 
 
 
 
-### <a name="resultsvalues--__invalidresult__"></a>値の値 __: <Result> 無効__ []
+### <a name="resultsvalues--__invalidresult__"></a>値の値 __: <Result> 無効__[]
 
 
 
