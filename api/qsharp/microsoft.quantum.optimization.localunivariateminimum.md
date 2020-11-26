@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Optimization.LocalUnivariateMinimum
 title: LocalUnivariateMinimum 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Optimization
 qsharp.name: LocalUnivariateMinimum
 qsharp.summary: Returns the local minimum for a univariate function over a bounded interval, using a golden interval search.
-ms.openlocfilehash: 3b09af88bbed20a392768d005e5e9567b3bb7022
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e804e6a6ed82f14dcc9b8f721ad503d77922dc0f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711020"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194085"
 ---
 # <a name="localunivariateminimum-function"></a>LocalUnivariateMinimum 関数
 
 名前空間: [Microsoft. Quantum. Optimization](xref:Microsoft.Quantum.Optimization)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 ゴールデン interval 検索を使用して、範囲指定された期間にわたって、uni可変 ate 関数のローカル最小値を返します。

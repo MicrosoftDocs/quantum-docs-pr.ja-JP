@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.DiscreteUniformDistribution
 title: DiscreteUniformDistribution 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DiscreteUniformDistribution
 qsharp.summary: Returns a uniform distribution over a given inclusive range.
-ms.openlocfilehash: 5e93c66d891d9b6aec548c0cf266df35e6090c92
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 08a62805f59df339ef6b91dff802c40c407808f4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720295"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193014"
 ---
 # <a name="discreteuniformdistribution-function"></a>DiscreteUniformDistribution 関数
 
 名前空間: [Microsoft. Quantum. Random](xref:Microsoft.Quantum.Random)
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 指定された包括範囲に対する一様分布を返します。

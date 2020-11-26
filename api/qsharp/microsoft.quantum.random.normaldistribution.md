@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.NormalDistribution
 title: NormalDistribution 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: NormalDistribution
 qsharp.summary: Returns a normal distribution with a given mean and variance.
-ms.openlocfilehash: 849376258ea122a6dbe859dd08144e4d18434143
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cfbf9c0918a571fefc4294befacf641d6a7835b8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722803"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192725"
 ---
 # <a name="normaldistribution-function"></a>NormalDistribution 関数
 
 名前空間: [Microsoft. Quantum. Random](xref:Microsoft.Quantum.Random)
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 指定された平均と分散を使用して正規分布を返します。

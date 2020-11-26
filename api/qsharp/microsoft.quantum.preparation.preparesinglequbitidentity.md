@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareSingleQubitIdentity
 title: PrepareSingleQubitIdentity 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Prepares a qubit in the maximally mixed state.
 
   It prepares the given qubit in the $\boldone / 2$ state by applying the depolarizing channel $$ \begin{align} \Omega(\rho) \mathrel{:=} \frac{1}{4} \sum_{\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu}^{\dagger}, \end{align} $$ where $\sigma\_i$ is the $i$th Pauli operator, and where $\rho$ is a density operator representing a mixed state.
-ms.openlocfilehash: 12a650568aa5682e8fb6498808d188b154527acb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1c8c161ec2eae73a81c46e7941af49145cde0493
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724884"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193626"
 ---
 # <a name="preparesinglequbitidentity-operation"></a>PrepareSingleQubitIdentity 操作
 
 名前空間: [Microsoft. Quantum](xref:Microsoft.Quantum.Preparation)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 下回っ混合状態で qubit を準備します。
