@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.SWAP
 title: スワップ操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -12,18 +12,18 @@ qsharp.summary: >-
   \begin{align} \operatorname{SWAP} \mathrel{:=} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{align}
 
   where rows and columns are ordered as in the quantum concepts guide.
-ms.openlocfilehash: 18b910741e9d0883fc5fcd025eb647407c823269
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e93c976f2fdf02de77fafa4d22e95fe9a33a9ba6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719995"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198420"
 ---
 # <a name="swap-operation"></a>スワップ操作
 
 名前空間: [Microsoft. Quantum. 組み込み](xref:Microsoft.Quantum.Intrinsic)
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 スワップゲートを qubits のペアに適用します。
@@ -33,7 +33,7 @@ ms.locfileid: "92719995"
 ここでは、行と列は、クォンタムの概念ガイドのとおりに並べられています。
 
 ```qsharp
-operation SWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit
+operation SWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit is Adj + Ctl
 ```
 
 

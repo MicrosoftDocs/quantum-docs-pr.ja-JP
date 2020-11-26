@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.LessThanOrEqualD
 title: LessThanOrEqualD 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: LessThanOrEqualD
 qsharp.summary: Returns true if and only if a number is less than or equal to another number.
-ms.openlocfilehash: 7b0e9da379bd67eb78a80e7a535a15dcb8ba85c7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3f4ccb0888e7df7c43ff73be8a3140e3fa84d4dc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92709947"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197638"
 ---
 # <a name="lessthanorequald-function"></a>LessThanOrEqualD 関数
 
 名前空間: [Microsoft. Quantum. Logical](xref:Microsoft.Quantum.Logical)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 数値が別の数値以下の場合にのみ true を返します。

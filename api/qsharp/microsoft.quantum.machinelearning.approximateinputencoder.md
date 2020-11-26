@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ApproximateInputEncoder
 title: ApproximateInputEncoder 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: ApproximateInputEncoder
 qsharp.summary: Given a set of coefficients and a tolerance, returns a state preparation operation that prepares each coefficient as the corresponding amplitude of a computational basis state, up to the given tolerance.
-ms.openlocfilehash: 67ef7a47a2e036f0953d946b4ace0e6673b173bd
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2e39318cfaf3321c33b08f742bb25a9276b7e660
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720535"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196601"
 ---
 # <a name="approximateinputencoder-function"></a>ApproximateInputEncoder 関数
 
 名前空間: [Microsoft. Quantum の e ラーニング](xref:Microsoft.Quantum.MachineLearning)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum.](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 係数と許容範囲が指定されている場合、は、指定された許容範囲に対して、計算ベース状態の対応する振幅として各係数を準備する状態準備操作を返します。

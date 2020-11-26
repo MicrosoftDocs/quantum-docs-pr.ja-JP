@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.NotNearlyEqualD
 title: NotNearlyEqualD 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: NotNearlyEqualD
 qsharp.summary: Returns true if and only if two inputs are not nearly equal (that is, are not within a tolerance of 1e-12).
-ms.openlocfilehash: d9e4cc5b0cfba3989ae64e494d0daa52069718a4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 23229b1630982eba4485330cc2290aed733c4d86
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720727"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197145"
 ---
 # <a name="notnearlyequald-function"></a>NotNearlyEqualD 関数
 
 名前空間: [Microsoft. Quantum. Logical](xref:Microsoft.Quantum.Logical)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 2つの入力がほぼ等しくない場合 (つまり、許容範囲が 1e-12 の範囲内にない場合) にのみ、true を返します。
