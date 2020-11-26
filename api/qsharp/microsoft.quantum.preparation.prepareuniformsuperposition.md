@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition
 title: PrepareUniformSuperposition 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Creates a uniform superposition over states that encode 0 through `nIndices - 1`.
 
   That is, this unitary $U$ creates a uniform superposition over all number states $0$ to $M-1$, given an input state $\ket{0\cdots 0}$. In other words, $$ \begin{align} U\ket{0}=\frac{1}{\sqrt{M}}\sum_{j=0}^{M-1}\ket{j}. \end{align} $$.
-ms.openlocfilehash: 8b57a7a02e9f704cf9677574824dfdc93fff25b0
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9b9f182ed7c1ea24ae74b8a2321a309042a17c97
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92709457"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96230091"
 ---
 # <a name="prepareuniformsuperposition-operation"></a>PrepareUniformSuperposition 操作
 
 名前空間: [Microsoft. Quantum](xref:Microsoft.Quantum.Preparation)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 0 ~ をエンコードする州に対して一様な法則を作成し `nIndices - 1` ます。
@@ -30,7 +30,7 @@ ms.locfileid: "92709457"
 \end{align} $ $。
 
 ```qsharp
-operation PrepareUniformSuperposition (nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation PrepareUniformSuperposition (nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 

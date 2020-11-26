@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Synthesis.TruthTablesFromPermutation
 title: TruthTablesFromPermutation 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: TruthTablesFromPermutation
 qsharp.summary: Collect all functions for controlled gates by folding through all variable indexes
-ms.openlocfilehash: 4838ab03d3b6a804b15079c380e11edb0bbbd529
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: de990298e707e5c16e6c457a7714e8d383b3c149
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725444"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231043"
 ---
 # <a name="truthtablesfrompermutation-function"></a>TruthTablesFromPermutation 関数
 
 名前空間: [Microsoft. Quantum. 合成](xref:Microsoft.Quantum.Synthesis)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 すべての変数インデックスをフォールドして、制御されたゲートのすべての関数を収集します
