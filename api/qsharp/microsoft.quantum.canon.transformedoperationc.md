@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.TransformedOperationC
 title: TransformedOperationC 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: TransformedOperationC
 qsharp.summary: Given a function and an operation, returns a new operation whose input is transformed by the given function.
-ms.openlocfilehash: b6867a076b654337f6127657189a8453c9973cc2
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 964576788bc80dd8920acdfb62d5d69a060e75f6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715323"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204863"
 ---
 # <a name="transformedoperationc-function"></a>TransformedOperationC 関数
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 関数と操作が指定された場合、指定された関数によって入力が変換される新しい操作を返します。
@@ -35,13 +35,13 @@ function TransformedOperationC<'T, 'U> (fn : ('U -> 'T), op : ('T => Unit is Ctl
 指定された入力を操作によって予期される形式に変換する関数。
 
 
-### <a name="op--t--unit-ctl"></a>op: ' t => [ユニット](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="op--t--unit--is-ctl"></a>op: ' t => [単位](xref:microsoft.quantum.lang-ref.unit)  は Ctl です
 
 変換する操作。
 
 
 
-## <a name="output--u--unit-ctl"></a>出力: ' U => [ユニット](xref:microsoft.quantum.lang-ref.unit) Ctl
+## <a name="output--u--unit--is-ctl"></a>出力: ' U => [単位](xref:microsoft.quantum.lang-ref.unit)  は Ctl です
 
 新しい操作 tbat は、 `fn` 入力を使用してを呼び出し、その結果の出力をに渡し `op` ます。
 

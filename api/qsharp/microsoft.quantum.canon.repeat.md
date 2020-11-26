@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.Repeat
 title: 繰り返し操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Repeat
 qsharp.summary: Repeats an operation a given number of times.
-ms.openlocfilehash: 5aedd056b851b8d8d7c25a32eb22587292e132a8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cd572e5e082df94d762a0869ad2c1923fb71fd3d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715598"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96205598"
 ---
 # <a name="repeat-operation"></a>繰り返し操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 指定された回数だけ操作を繰り返します。

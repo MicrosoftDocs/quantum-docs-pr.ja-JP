@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.UncurriedOpA
 title: UncurriedOpA 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: UncurriedOpA
 qsharp.summary: Given a function which returns operations, returns a new operation which takes both inputs as a tuple. The modifier `A` indicates that the operations are adjointable.
-ms.openlocfilehash: 21df20354ad2388891f32b1bf1c7781287904983
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e535d017d2665ddb76e5f422e18b8656c73171c6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715220"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204625"
 ---
 # <a name="uncurriedopa-function"></a>UncurriedOpA 関数
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 操作を返す関数を指定した場合、は、両方の入力をタプルとして受け取る新しい操作を返します。
@@ -31,13 +31,13 @@ function UncurriedOpA<'T, 'U> (curriedOp : ('T -> ('U => Unit is Adj))) : (('T, 
 
 ## <a name="input"></a>入力
 
-### <a name="curriedop--t---u--unit-adj"></a>curriedOp: > ' U => [単位](xref:microsoft.quantum.lang-ref.unit) の形容詞
+### <a name="curriedop--t---u--unit--is-adj"></a>curriedOp: > ' U => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞です
 
 操作を返す関数。
 
 
 
-## <a name="output--tu--unit-adj"></a>出力: (' t, ' U) => [単位](xref:microsoft.quantum.lang-ref.unit) の形容詞
+## <a name="output--tu--unit--is-adj"></a>出力: (' t, ' U) => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞
 
 と等価の新しい操作 `op` `op(t, u)` `(curriedOp(t))(u)` 。
 

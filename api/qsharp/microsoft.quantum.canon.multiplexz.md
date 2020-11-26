@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.MultiplexZ
 title: MultiplexZ 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: MultiplexZ
 qsharp.summary: Applies a Pauli Z rotation conditioned on an array of qubits.
-ms.openlocfilehash: f7b1973e18ad396ebe892ad63ae47374a7cafbd5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 364d23a0e57a2510f069b6db66b085368f20162e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715780"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96206070"
 ---
 # <a name="multiplexz-operation"></a>MultiplexZ 操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Qubits の配列で条件付きの Pan Li Z の回転条件を適用します。
 
 ```qsharp
-operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit
+operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -62,7 +62,7 @@ $E ^ {i P \ theta_j} $ によって回転された1つの qubit レジスタ。
 
 `coefficients` $ 2 ^ n $ 未満の値が指定されている場合は、$ \ theta_j = $0.0 という要素が埋め込まれます。
 
-## <a name="references"></a>関連項目
+## <a name="references"></a>リファレンス
 
 - クォンタムロジック回線の合成、Shende、Stephen、Igor、igor または Markov https://arxiv.org/abs/quant-ph/0406176
 

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.NoOp
 title: NoOp 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: NoOp
 qsharp.summary: Performs the identity operation (no-op) on an argument.
-ms.openlocfilehash: 987e39577c3b736418234431ed7a915ae461f763
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 35b6b62cab35f941f04b150dcca763457ddaa084
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715757"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96205968"
 ---
 # <a name="noop-operation"></a>NoOp 操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 引数に対して identity 操作 (no op) を実行します。
 
 ```qsharp
-operation NoOp<'T> (input : 'T) : Unit
+operation NoOp<'T> (input : 'T) : Unit is Adj + Ctl
 ```
 
 
