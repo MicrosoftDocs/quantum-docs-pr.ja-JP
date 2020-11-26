@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation
 title: RandomWalkPhaseEstimation 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Characterization
 qsharp.name: RandomWalkPhaseEstimation
 qsharp.summary: Performs iterative phase estimation using a random walk to approximate Bayesian inference on the classical measurement results from a given oracle and eigenstate.
-ms.openlocfilehash: 5e0c0871b916ff51b85dec8703111788b5204bc6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c3afdd41da24a1f32f59f36f0f5c5ed29df1f0b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710880"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226164"
 ---
 # <a name="randomwalkphaseestimation-operation"></a>RandomWalkPhaseEstimation 操作
 
 名前空間: [Microsoft. Quantum. 特性](xref:Microsoft.Quantum.Research.Characterization)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. 特性](https://nuget.org/packages/Microsoft.Quantum.Research.Characterization)
 
 
 指定された oracle および eigenstate からの古典的な測定結果に対するベイジアン推定を概算するランダムウォークを使用して反復フェーズ推定を実行します。
@@ -80,7 +80,7 @@ $ Act $U れるレジスタ。
 
 ### <a name="experiment-design"></a>実験の設計
 
-に渡された $t $ と反転角度 $ \ シータ $ の測定時間は、 `oracle` *パーティクル推測のヒューリスティック* 、\begin{align} (-phi)、および \variance{\phi}}. に従って選択されます。 {1}
+に渡された $t $ と反転角度 $ \ シータ $ の測定時間は、 `oracle` *パーティクル推測のヒューリスティック*、\begin{align} (-phi)、および \variance{\phi}}. に従って選択されます。 {1}
 \end{align} このヒューリスティックは、予期される事後分散を、標準の前提条件下で反復フェーズ推定で削減するのに最適です。
 
 ### <a name="optimality"></a>たいてい
@@ -89,8 +89,8 @@ $ Act $U れるレジスタ。
 
 反復フェーズ推定の統計の詳細については、「 [ベイジアンフェーズの推定](xref:microsoft.quantum.libraries.characterization#bayesian-phase-estimation) 」を参照してください。
 
-## <a name="references"></a>関連項目
+## <a name="references"></a>リファレンス
 
 - Ferrie *et al.* 2011 [doi:10/tfx](https://doi.org/10.1007/s11128-012-0407-6)、 [arxiv: 1110.3067](https://arxiv.org/abs/1110.3067)。
 - Wiebe *2013* [doi:10/tf3](https://doi.org/10.1103/PhysRevLett.112.190501)、 [arxiv: 1309.0876](https://arxiv.org/abs/1309.0876)
-- Wiebe と Granade 2018 *(準備中)* 。
+- Wiebe と Granade 2018 *(準備中)*。

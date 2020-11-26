@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedHpqTermImpl
 title: _JWOptimizedHpqTermImpl 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: _JWOptimizedHpqTermImpl
 qsharp.summary: Implementation step of `JWOptimizedHpqTerm_`.
-ms.openlocfilehash: 9970ca833779bec0a055ddb48292027f7a1d0020
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 08a506e4eb9c2f11765d25137dd2a94f70c536cf
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722154"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225926"
 ---
 # <a name="_jwoptimizedhpqtermimpl-operation"></a>_JWOptimizedHpqTermImpl 操作
 
 名前空間: [Microsoft. Quantum. 化学](xref:Microsoft.Quantum.Research.Chemistry)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. 化学](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 の実装手順 `JWOptimizedHpqTerm_` 。
 
 ```qsharp
-operation _JWOptimizedHpqTermImpl (term : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit
+operation _JWOptimizedHpqTermImpl (term : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
