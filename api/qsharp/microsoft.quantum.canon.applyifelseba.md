@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseBA
 title: ApplyIfElseBA 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseBA
 qsharp.summary: Applies one of two adjointable operations, depending on the value of a classical bit.
-ms.openlocfilehash: ce08907646c3210f76244f29aa0d936e2bd6ee43
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 74d43344481c5a808e84ce9c9e36fa3e83cd0d89
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718202"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218667"
 ---
 # <a name="applyifelseba-operation"></a>ApplyIfElseBA 操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 従来のビットの値に応じて、2つの adjointable 操作のいずれかを適用します。
 
 ```qsharp
-operation ApplyIfElseBA<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U)) : Unit
+operation ApplyIfElseBA<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Adj), trueInput : 'T), (falseOp : ('U => Unit is Adj), falseInput : 'U)) : Unit is Adj
 ```
 
 
@@ -39,7 +39,7 @@ operation ApplyIfElseBA<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Adj), true
 またはが適用されるかどうかを判断するために使用されるブール値 `trueOp` `falseOp` 。
 
 
-### <a name="trueop--t--unit-adj"></a>trueOp: t => [単位](xref:microsoft.quantum.lang-ref.unit) の形容詞
+### <a name="trueop--t--unit--is-adj"></a>trueOp: t => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞です
 
 がの場合に適用される adjointable 操作 `bit` `true` 。
 
@@ -49,7 +49,7 @@ operation ApplyIfElseBA<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Adj), true
 がの場合に提供される入力 `trueOp` `bit` `true` 。
 
 
-### <a name="falseop--u--unit-adj"></a>False Op: ' U => [単位](xref:microsoft.quantum.lang-ref.unit) の形容詞
+### <a name="falseop--u--unit--is-adj"></a>False Op: ' U => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞です
 
 がの場合に適用される adjointable 操作 `bit` `false` 。
 

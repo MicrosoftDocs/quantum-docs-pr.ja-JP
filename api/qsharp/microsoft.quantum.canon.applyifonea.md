@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfOneA
 title: Applyiの Ea 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfOneA
 qsharp.summary: Applies an adjointable operation conditioned on a classical result value being one.
-ms.openlocfilehash: 76c15aba6042c2801ecfe8470e82099c54ba3846
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 200908f2958b74e4823c891ef901474d75d18336
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718095"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218548"
 ---
 # <a name="applyifonea-operation"></a>Applyiの Ea 操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 従来の結果値が1である adjointable 操作を適用します。
 
 ```qsharp
-operation ApplyIfOneA<'T> (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit
+operation ApplyIfOneA<'T> (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit is Adj
 ```
 
 
@@ -35,12 +35,12 @@ operation ApplyIfOneA<'T> (result : Result, (op : ('T => Unit is Adj), target : 
 
 ## <a name="input"></a>入力
 
-### <a name="result--__invalidresult__"></a>結果: __無効 <Result>__
+### <a name="result--__invalidresult__"></a>結果:__無効 <Result>__
 
 Op が適用されるかどうかを制御する測定結果。
 
 
-### <a name="op--t--unit-adj"></a>op: ' t => [単位](xref:microsoft.quantum.lang-ref.unit) の形容詞
+### <a name="op--t--unit--is-adj"></a>op: ' t => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞です
 
 条件付きで適用する操作。
 

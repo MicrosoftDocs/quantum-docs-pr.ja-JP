@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Unique
 title: Unique 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Unique
 qsharp.summary: Returns a new array that has no equal adjacent elements.
-ms.openlocfilehash: c5d40bb82f2de640e9c78eef0c27e4766b477826
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7964d5d41eb68cb05f9414164d69496c1f76eb08
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718783"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220010"
 ---
 # <a name="unique-function"></a>Unique 関数
 
 名前空間: [Microsoft. Quantum. 配列](xref:Microsoft.Quantum.Arrays)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 隣接する要素が等しくない新しい配列を返します。

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyFermionicSWAP
 title: Applyの Mimionicswap 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyFermionicSWAP
 qsharp.summary: Applies the Fermionic SWAP.
-ms.openlocfilehash: 25dd91b200700d1474cf27bf1d0fa71d57f2e09b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 0c470705843a6360df0a72374570d86571397e41
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718274"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218803"
 ---
 # <a name="applyfermionicswap-operation"></a>Applyの Mimionicswap 操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Fermionic SWAP を適用します。
 
 ```qsharp
-operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit
+operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -53,9 +53,9 @@ operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit
 
 
 
-## <a name="references"></a>関連項目
+## <a name="references"></a>リファレンス
 
-- [*ライアン Babbush、Nathan Wiebe、Jarrod McClean、James Mcclアイン、Hartmut Neven、Garnet Kin-Lic チャン* 、arxiv: 1706.00023](https://arxiv.org/pdf/1706.00023.pdf)
+- [*ライアン Babbush、Nathan Wiebe、Jarrod McClean、James Mcclアイン、Hartmut Neven、Garnet Kin-Lic チャン*、arxiv: 1706.00023](https://arxiv.org/pdf/1706.00023.pdf)
 
 ## <a name="see-also"></a>参照
 

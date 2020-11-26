@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Bitwise.Not
 title: Not 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: Not
 qsharp.summary: Returns the bitwise NOT of an integer. This performs the same computation as the built-in `~~~` operator.
-ms.openlocfilehash: e27a38514702d5bed17e35737d608ab1c3d39159
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 99c4a503b79ea0cb416c8b4e64d053be82ee9605
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718603"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219585"
 ---
 # <a name="not-function"></a>Not 関数
 
 名前空間: [Microsoft. Quantum. ビット](xref:Microsoft.Quantum.Bitwise)処理
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 整数のビットごとの NOT を返します。

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseBCA
 title: ApplyIfElseBCA 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseBCA
 qsharp.summary: Applies one of two unitary operations, depending on the value of a classical bit.
-ms.openlocfilehash: 0ebd086f4c8166a8d6b593200b0a3354c1420c6e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d36b16298ea177f16b7bbb260f069bfe35b9a72f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718193"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218633"
 ---
 # <a name="applyifelsebca-operation"></a>ApplyIfElseBCA 操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 従来のビットの値に応じて、2つのいずれかのユニタリ操作を適用します。
 
 ```qsharp
-operation ApplyIfElseBCA<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U)) : Unit
+operation ApplyIfElseBCA<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U)) : Unit is Adj + Ctl
 ```
 
 
@@ -39,7 +39,7 @@ operation ApplyIfElseBCA<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl
 またはが適用されるかどうかを判断するために使用されるブール値 `trueOp` `falseOp` 。
 
 
-### <a name="trueop--t--unit-adj--ctl"></a>trueOp: t => [単位](xref:microsoft.quantum.lang-ref.unit) の形容詞 + Ctl
+### <a name="trueop--t--unit--is-adj--ctl"></a>trueOp: t => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞 + Ctl です
 
 がの場合に適用される、使用するユニタリ操作 `bit` `true` 。
 
@@ -49,7 +49,7 @@ operation ApplyIfElseBCA<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl
 がの場合に提供される入力 `trueOp` `bit` `true` 。
 
 
-### <a name="falseop--u--unit-adj--ctl"></a>False Op: ' U => [単位](xref:microsoft.quantum.lang-ref.unit) の形容詞 + Ctl
+### <a name="falseop--u--unit--is-adj--ctl"></a>False Op: ' U => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞 + Ctl です
 
 がの場合に適用される、使用するユニタリ操作 `bit` `false` 。
 

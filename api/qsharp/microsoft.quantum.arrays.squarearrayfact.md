@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.SquareArrayFact
 title: SquareArrayFact 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: SquareArrayFact
 qsharp.summary: Represents a condition that a 2-dimensional array has a square shape
-ms.openlocfilehash: f7f0573db9098feebfd481624e11119c58fd9eed
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3529718f0c903266d21fd593c11c0149dae0fa2c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718855"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220197"
 ---
 # <a name="squarearrayfact-function"></a>SquareArrayFact 関数
 
 名前空間: [Microsoft. Quantum. 配列](xref:Microsoft.Quantum.Arrays)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 2次元配列に正方形の形状がある条件を表します。

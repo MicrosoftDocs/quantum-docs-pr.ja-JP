@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Bitwise.ZBits
 title: ZBits 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: ZBits
 qsharp.summary: Returns an integer representing the Z bits of an array of Pauli operators.
-ms.openlocfilehash: f66b8ef0370e898dd1d095ff2840c91566f32cb8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3ded981dc53236a48f1fb8f6ae12e39c17469447
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718531"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219449"
 ---
 # <a name="zbits-function"></a>ZBits 関数
 
 名前空間: [Microsoft. Quantum. ビット](xref:Microsoft.Quantum.Bitwise)処理
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 P# li 演算子の配列の Z ビットを表す整数を返します。

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyCNOTChain
 title: ApplyCNOTChain 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyCNOTChain
 qsharp.summary: Computes the parity of a register of qubits in-place.
-ms.openlocfilehash: c98fe24ca352952162acb7a9c4fc93d5da4285b8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e237e4424661de816e73b0c78523180b41190cf9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718375"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219143"
 ---
 # <a name="applycnotchain-operation"></a>ApplyCNOTChain 操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Qubits のレジスタのパリティを計算します。
 
 ```qsharp
-operation ApplyCNOTChain (qubits : Qubit[]) : Unit
+operation ApplyCNOTChain (qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

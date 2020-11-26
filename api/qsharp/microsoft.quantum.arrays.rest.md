@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Rest
 title: Rest 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Rest
 qsharp.summary: Creates an array that is equal to an input array except that the first array element is dropped.
-ms.openlocfilehash: c14e4b2902741d7ea70c895aa715cbcaa849af3e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4dd10b6e8839fd906ca9c2e36c89c626d5772149
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718915"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220394"
 ---
 # <a name="rest-function"></a>Rest 関数
 
 名前空間: [Microsoft. Quantum. 配列](xref:Microsoft.Quantum.Arrays)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 最初の配列要素が削除される点を除いて、入力配列と等しい配列を作成します。
