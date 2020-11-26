@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Bitwise.ZBits
 title: ZBits 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Bitwise
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.bitwise.zbits".
-ms.openlocfilehash: ddbc5785fb751e3fdff70eb25b7e94a49cd6d4bb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 04a424ccceed7c6c99aed08169f6d097c9ae22c8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711944"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200069"
 ---
 # <a name="zbits-function"></a>ZBits 関数
 
 名前空間: [Microsoft..](xref:Microsoft.Quantum.Extensions.Bitwise) .......
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 > [!WARNING]

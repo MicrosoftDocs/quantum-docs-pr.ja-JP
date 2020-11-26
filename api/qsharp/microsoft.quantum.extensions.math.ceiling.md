@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.Ceiling
 title: シーリング関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.ceiling".
-ms.openlocfilehash: 3396f2db081e82b47225a7ca865d45ec47139f69
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b6ebf166fc38582f0b9d6ed8a8bbf244b101b2b5
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710395"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96199763"
 ---
 # <a name="ceiling-function"></a>シーリング関数
 
 名前空間: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Extensions.Math)
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 > [!WARNING]

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Assert
 title: アサート操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,18 +10,18 @@ qsharp.summary: >-
   > [!WARNING]
 
   > Assert has been deprecated. Please use <xref:Microsoft.Quantum.Diagnostics.AssertMeasurement> instead.
-ms.openlocfilehash: cbcba24a791393e1bbea06fedfc97917904f14bb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d1d44ca6de1788b11f5de743d6a83f8f4d6aa5c2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711552"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96199088"
 ---
 # <a name="assert-operation"></a>アサート操作
 
 名前空間: [Microsoft. Quantum. 組み込み](xref:Microsoft.Quantum.Intrinsic)
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 > [!WARNING]
@@ -30,7 +30,7 @@ ms.locfileid: "92711552"
 
 
 ```qsharp
-operation Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit
+operation Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit is Adj + Ctl
 ```
 
 
@@ -46,7 +46,7 @@ operation Assert (bases : Pauli[], qubits : Qubit[], result : Result, msg : Stri
 
 
 
-### <a name="result--__invalidresult__"></a>結果: __無効 <Result>__
+### <a name="result--__invalidresult__"></a>結果:__無効 <Result>__
 
 
 

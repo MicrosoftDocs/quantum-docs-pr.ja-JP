@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.R
 title: R 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Applies a rotation about the given Pauli axis.
 
   \begin{align} R_{\mu}(\theta) \mathrel{:=} e^{-i \theta \sigma_{\mu} / 2}, \end{align} where $\mu \in \{I, X, Y, Z\}$.
-ms.openlocfilehash: 7d1d51031f4587b1c501feab459e614fc1530457
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 89aa5b2867068d4352a0b9550e8d22aa77439111
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720931"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96199031"
 ---
 # <a name="r-operation"></a>R 操作
 
 名前空間: [Microsoft. Quantum. 組み込み](xref:Microsoft.Quantum.Intrinsic)
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 指定された P# li 軸についての回転を適用します。
@@ -29,7 +29,7 @@ ms.locfileid: "92720931"
 \begin{align} R_ {\ mu} (\ シータ) \mathrel{: =} e ^ {-i \ シータ \ sigma_ {/mu}/2}、\end{align} where $ \ mu \ \{ i, X, Y, Z \} $ です。
 
 ```qsharp
-operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit
+operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 

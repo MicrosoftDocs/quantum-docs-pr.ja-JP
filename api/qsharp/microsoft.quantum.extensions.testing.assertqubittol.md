@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Testing.AssertQubitTol
 title: AssertQubitTol 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Extensions.Testing
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
-ms.openlocfilehash: 9199337e032fa0a94b66691cb5f8c3986914f229
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: acd13277dfd451af7a99d5d3c3958994b81e23ea
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711608"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96199134"
 ---
 # <a name="assertqubittol-operation"></a>AssertQubitTol 操作
 
 名前空間: [Microsoft.](xref:Microsoft.Quantum.Extensions.Testing) .. 拡張子
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 > [!WARNING]
@@ -42,7 +42,7 @@ operation AssertQubitTol (expected : Result, q : Qubit, tolerance : Double) : Un
 
 ## <a name="input"></a>入力
 
-### <a name="expected--__invalidresult__"></a>想定: __無効 <Result>__
+### <a name="expected--__invalidresult__"></a>想定:__無効 <Result>__
 
 
 
