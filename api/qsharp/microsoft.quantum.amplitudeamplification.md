@@ -1,56 +1,56 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification
 title: AmplitudeAmplification 名前空間
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.AmplitudeAmplification
 qsharp.summary: This namespace contains functions and operations for performing amplitude amplification.
-ms.openlocfilehash: 09c29bd9d0648bb8652051ad97ceca6ef6557df3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f265f1f8b41513f9201a758f85451e768b7564e2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721846"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191416"
 ---
-# <a name="microsoftquantumamplitudeamplification-namespace"></a><span data-ttu-id="455d9-102">AmplitudeAmplification 名前空間</span><span class="sxs-lookup"><span data-stu-id="455d9-102">Microsoft.Quantum.AmplitudeAmplification namespace</span></span>
+# <a name="microsoftquantumamplitudeamplification-namespace"></a><span data-ttu-id="1e438-102">AmplitudeAmplification 名前空間</span><span class="sxs-lookup"><span data-stu-id="1e438-102">Microsoft.Quantum.AmplitudeAmplification namespace</span></span>
 
-<span data-ttu-id="455d9-103">この名前空間には、振幅増幅を実行するための関数と操作が含まれています。</span><span class="sxs-lookup"><span data-stu-id="455d9-103">This namespace contains functions and operations for performing amplitude amplification.</span></span>
+<span data-ttu-id="1e438-103">この名前空間には、振幅増幅を実行するための関数と操作が含まれています。</span><span class="sxs-lookup"><span data-stu-id="1e438-103">This namespace contains functions and operations for performing amplitude amplification.</span></span>
 
 
 
-## <a name="description"></a><span data-ttu-id="455d9-104">説明</span><span class="sxs-lookup"><span data-stu-id="455d9-104">Description</span></span>
+## <a name="description"></a><span data-ttu-id="1e438-104">説明</span><span class="sxs-lookup"><span data-stu-id="1e438-104">Description</span></span>
 
-<span data-ttu-id="455d9-105">無関係の部分反射を使用した振幅増幅は、ここで実装されている振幅増幅の最も一般的な形式です。</span><span class="sxs-lookup"><span data-stu-id="455d9-105">Oblivious amplitude amplification with partial reflections is the most general form of amplitude amplification implemented here.</span></span>
+<span data-ttu-id="1e438-105">無関係の部分反射を使用した振幅増幅は、ここで実装されている振幅増幅の最も一般的な形式です。</span><span class="sxs-lookup"><span data-stu-id="1e438-105">Oblivious amplitude amplification with partial reflections is the most general form of amplitude amplification implemented here.</span></span>
 
-<span data-ttu-id="455d9-106">これは、操作 AmpAmpObliviousByReflectionPhases を通じて呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="455d9-106">This is called through the operation AmpAmpObliviousByReflectionPhases.</span></span>
+<span data-ttu-id="1e438-106">これは、操作 AmpAmpObliviousByReflectionPhases を通じて呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="1e438-106">This is called through the operation AmpAmpObliviousByReflectionPhases.</span></span>
 
-<span data-ttu-id="455d9-107">これには、との2つのレジスタがあり `ancillaRegister` `systemRegister` ます。</span><span class="sxs-lookup"><span data-stu-id="455d9-107">This has two registers: `ancillaRegister` and `systemRegister`.</span></span>
+<span data-ttu-id="1e438-107">これには、との2つのレジスタがあり `ancillaRegister` `systemRegister` ます。</span><span class="sxs-lookup"><span data-stu-id="1e438-107">This has two registers: `ancillaRegister` and `systemRegister`.</span></span>
 
-<span data-ttu-id="455d9-108">これは `ReflectionOracle` 、レジスタにのみ作用する型の反射に対して、2つの oracles を受け入れ `ancillaRegister` ます。</span><span class="sxs-lookup"><span data-stu-id="455d9-108">This accepts two oracles for these reflections of type `ReflectionOracle` which act only on the `ancillaRegister` register.</span></span>
+<span data-ttu-id="1e438-108">これは `ReflectionOracle` 、レジスタにのみ作用する型の反射に対して、2つの oracles を受け入れ `ancillaRegister` ます。</span><span class="sxs-lookup"><span data-stu-id="1e438-108">This accepts two oracles for these reflections of type `ReflectionOracle` which act only on the `ancillaRegister` register.</span></span>
 
-<span data-ttu-id="455d9-109">これは、 `ObliviousOracle` 両方のレジスタに共同で動作する、型の無関係の特殊な振幅増幅を許可します。</span><span class="sxs-lookup"><span data-stu-id="455d9-109">This accepts an oracle special to oblivious amplitude amplification of type `ObliviousOracle` which acts jointly on both register.</span></span>
+<span data-ttu-id="1e438-109">これは、 `ObliviousOracle` 両方のレジスタに共同で動作する、型の無関係の特殊な振幅増幅を許可します。</span><span class="sxs-lookup"><span data-stu-id="1e438-109">This accepts an oracle special to oblivious amplitude amplification of type `ObliviousOracle` which acts jointly on both register.</span></span>
 
-<span data-ttu-id="455d9-110">への入力状態は、 `ancillaRegister` 最初のリフレクション演算子 $I-2 \ k {s} \ bra {s} $ という一意の $-$1 eigenstate と想定されます。</span><span class="sxs-lookup"><span data-stu-id="455d9-110">The input state to `ancillaRegister` is assumed to be the unique $-1$ eigenstate of the first reflection operator $I - 2\ket{s}\bra{s}$.</span></span>
+<span data-ttu-id="1e438-110">への入力状態は、 `ancillaRegister` 最初のリフレクション演算子 $I-2 \ k {s} \ bra {s} $ という一意の $-$1 eigenstate と想定されます。</span><span class="sxs-lookup"><span data-stu-id="1e438-110">The input state to `ancillaRegister` is assumed to be the unique $-1$ eigenstate of the first reflection operator $I - 2\ket{s}\bra{s}$.</span></span>
 
-<span data-ttu-id="455d9-111">ターゲットクォンタムの状態に関する反射は、多くの場合、計算ベース $ \ket{0\cdots 0} $ からその状態を準備する oracle へのアクセスを前提として実装されます。</span><span class="sxs-lookup"><span data-stu-id="455d9-111">Reflections about a target quantum state are often implemented by assuming access to an oracle that prepare that state from the computational basis $\ket{0\cdots 0}$.</span></span>
+<span data-ttu-id="1e438-111">ターゲットクォンタムの状態に関する反射は、多くの場合、計算ベース $ \ket{0\cdots 0} $ からその状態を準備する oracle へのアクセスを前提として実装されます。</span><span class="sxs-lookup"><span data-stu-id="1e438-111">Reflections about a target quantum state are often implemented by assuming access to an oracle that prepare that state from the computational basis $\ket{0\cdots 0}$.</span></span>
 
-<span data-ttu-id="455d9-112">これらの oracles の規則では、2つのレジスタが必要です。1つはシングル qubit レジスタ、もう1つはフロントシャー `flagQubit` ドレジスタレジスタに登録します。</span><span class="sxs-lookup"><span data-stu-id="455d9-112">Our convention for these oracles requires two registers: a single-qubit `flagQubit` register, and a register for everything else on the ancillaRegister register.</span></span>
+<span data-ttu-id="1e438-112">これらの oracles の規則では、2つのレジスタが必要です。1つはシングル qubit レジスタ、もう1つはフロントシャー `flagQubit` ドレジスタレジスタに登録します。</span><span class="sxs-lookup"><span data-stu-id="1e438-112">Our convention for these oracles requires two registers: a single-qubit `flagQubit` register, and a register for everything else on the ancillaRegister register.</span></span>
 
-<span data-ttu-id="455d9-113">型の oracle は、 `StateOracle` 両方のレジスタに共同で動作し、レジスタ内の $ \ket $ によってフラグが設定されたターゲット状態を、 {1} `flagQubit` いくつかの実際の振幅で作成します。</span><span class="sxs-lookup"><span data-stu-id="455d9-113">The oracle of type `StateOracle` acts jointly on both registers to create the target state flagged by $\ket{1}$ in the `flagQubit` register with some real amplitude.</span></span>
+<span data-ttu-id="1e438-113">型の oracle は、 `StateOracle` 両方のレジスタに共同で動作し、レジスタ内の $ \ket $ によってフラグが設定されたターゲット状態を、 {1} `flagQubit` いくつかの実際の振幅で作成します。</span><span class="sxs-lookup"><span data-stu-id="1e438-113">The oracle of type `StateOracle` acts jointly on both registers to create the target state flagged by $\ket{1}$ in the `flagQubit` register with some real amplitude.</span></span>
 
-<span data-ttu-id="455d9-114">`ReflectionOracle`このフラグの状態に関するリフレクションは、操作によって生成され `TargetStateReflectionOracle` ます。</span><span class="sxs-lookup"><span data-stu-id="455d9-114">The reflection `ReflectionOracle` about the this flag state is generated by the operation `TargetStateReflectionOracle`.</span></span>
+<span data-ttu-id="1e438-114">`ReflectionOracle`このフラグの状態に関するリフレクションは、操作によって生成され `TargetStateReflectionOracle` ます。</span><span class="sxs-lookup"><span data-stu-id="1e438-114">The reflection `ReflectionOracle` about the this flag state is generated by the operation `TargetStateReflectionOracle`.</span></span>
 
-<span data-ttu-id="455d9-115">への `ReflectionOracle` 入力状態に関するリフレクション `ancillaRegister` は、を反転することによって生成され、$ \ket{0\cdots 0} $ と ReflectionStart () を反映します。</span><span class="sxs-lookup"><span data-stu-id="455d9-115">The reflection `ReflectionOracle` about the input state to `ancillaRegister` is generated by the inverting StateOracle and then reflecting about $\ket{0\cdots 0}$ with ReflectionStart().</span></span>
+<span data-ttu-id="1e438-115">への `ReflectionOracle` 入力状態に関するリフレクション `ancillaRegister` は、を反転することによって生成され、$ \ket{0\cdots 0} $ と ReflectionStart () を反映します。</span><span class="sxs-lookup"><span data-stu-id="1e438-115">The reflection `ReflectionOracle` about the input state to `ancillaRegister` is generated by the inverting StateOracle and then reflecting about $\ket{0\cdots 0}$ with ReflectionStart().</span></span>
 
-<span data-ttu-id="455d9-116">型の oracle は、 `DeterministicStateOracle` レジスタに対して動作し、 `qubitState` フラグなしでターゲットの状態を正確に作成します。</span><span class="sxs-lookup"><span data-stu-id="455d9-116">The oracle of type `DeterministicStateOracle` acts on the `qubitState` registers to create the target state exactly with no flag.</span></span>
+<span data-ttu-id="1e438-116">型の oracle は、 `DeterministicStateOracle` レジスタに対して動作し、 `qubitState` フラグなしでターゲットの状態を正確に作成します。</span><span class="sxs-lookup"><span data-stu-id="1e438-116">The oracle of type `DeterministicStateOracle` acts on the `qubitState` registers to create the target state exactly with no flag.</span></span>
 
-<span data-ttu-id="455d9-117">`AmpAmpObliviousByOraclePhases` は、反射ではなく oracles とを受け入れる無関係の振幅増幅のバージョンです `StateOracle` `ObliviousOracle` 。</span><span class="sxs-lookup"><span data-stu-id="455d9-117">`AmpAmpObliviousByOraclePhases` is a version of oblivious amplitude amplification that accepts oracles `StateOracle` and `ObliviousOracle` instead of reflections.</span></span>
+<span data-ttu-id="1e438-117">`AmpAmpObliviousByOraclePhases` は、反射ではなく oracles とを受け入れる無関係の振幅増幅のバージョンです `StateOracle` `ObliviousOracle` 。</span><span class="sxs-lookup"><span data-stu-id="1e438-117">`AmpAmpObliviousByOraclePhases` is a version of oblivious amplitude amplification that accepts oracles `StateOracle` and `ObliviousOracle` instead of reflections.</span></span>
 
-<span data-ttu-id="455d9-118">振幅増幅は特殊なケースで、無関係の振幅増幅であることに注意してください。 `ObliviousOracle` は id 演算子で、システム qubits は存在しません。つまり、 `systemRegister` は空です。</span><span class="sxs-lookup"><span data-stu-id="455d9-118">Note that amplitude amplification is a special case of oblivious amplitude amplification where `ObliviousOracle` is the identity operator, and there are no system qubits i.e. `systemRegister` is empty.</span></span>
+<span data-ttu-id="1e438-118">振幅増幅は特殊なケースで、無関係の振幅増幅であることに注意してください。 `ObliviousOracle` は id 演算子で、システム qubits は存在しません。つまり、 `systemRegister` は空です。</span><span class="sxs-lookup"><span data-stu-id="1e438-118">Note that amplitude amplification is a special case of oblivious amplitude amplification where `ObliviousOracle` is the identity operator, and there are no system qubits i.e. `systemRegister` is empty.</span></span>
 
-<span data-ttu-id="455d9-119">これは、操作とを通じて呼び出され `AmpAmByReflectionPhases` `AmpAmpByOraclePhases` ます。</span><span class="sxs-lookup"><span data-stu-id="455d9-119">This is called through the operation `AmpAmByReflectionPhases` and `AmpAmpByOraclePhases`.</span></span>
+<span data-ttu-id="1e438-119">これは、操作とを通じて呼び出され `AmpAmByReflectionPhases` `AmpAmpByOraclePhases` ます。</span><span class="sxs-lookup"><span data-stu-id="1e438-119">This is called through the operation `AmpAmByReflectionPhases` and `AmpAmpByOraclePhases`.</span></span>
 
-<span data-ttu-id="455d9-120">Grover search の標準的なケースでの部分的な反射のフェーズは、AmpAmpPhasesStandard 関数によって提供されます。</span><span class="sxs-lookup"><span data-stu-id="455d9-120">The phases for partial reflections in the standard case of Grover search is provided by the function AmpAmpPhasesStandard.</span></span>
+<span data-ttu-id="1e438-120">Grover search の標準的なケースでの部分的な反射のフェーズは、AmpAmpPhasesStandard 関数によって提供されます。</span><span class="sxs-lookup"><span data-stu-id="1e438-120">The phases for partial reflections in the standard case of Grover search is provided by the function AmpAmpPhasesStandard.</span></span>
 
-<span data-ttu-id="455d9-121">たとえば、AmpAmpByOracle >-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases という依存関係があります。</span><span class="sxs-lookup"><span data-stu-id="455d9-121">For instance, we have the following dependencies: AmpAmpByOracle -> AmpAmpByOraclePhases -> AmpAmpObliviousByOraclePhases -> AmpAmpObliviousByReflectionPhases.</span></span>
+<span data-ttu-id="1e438-121">たとえば、AmpAmpByOracle >-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases という依存関係があります。</span><span class="sxs-lookup"><span data-stu-id="1e438-121">For instance, we have the following dependencies: AmpAmpByOracle -> AmpAmpByOraclePhases -> AmpAmpObliviousByOraclePhases -> AmpAmpObliviousByReflectionPhases.</span></span>
