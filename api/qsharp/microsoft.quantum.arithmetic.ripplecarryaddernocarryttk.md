@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderNoCarryTTK
 title: RippleCarryAdderNoCarryTTK 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: RippleCarryAdderNoCarryTTK
 qsharp.summary: Reversible, in-place ripple-carry addition of two integers without carry out.
-ms.openlocfilehash: 59451b4f5c992f900a27139332059af7427b9b93
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a539d85a4800c2f4452a1c6fe2c4f88a6296c3e1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719582"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221999"
 ---
 # <a name="ripplecarryaddernocarryttk-operation"></a>RippleCarryAdderNoCarryTTK 操作
 
 名前空間: [Microsoft. Quantum. 算術](xref:Microsoft.Quantum.Arithmetic)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 元に戻すことができ、インプレースリップは実行されずに2つの整数を追加します。
 
 ```qsharp
-operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -53,7 +53,7 @@ LittleEndian qubit レジスタエンコーディング2番目の整数 summand 
 
 この操作には RippleCarryAdderTTK と同じ機能がありますが、キャリービットは返されません。
 
-## <a name="references"></a>関連項目
+## <a name="references"></a>リファレンス
 
 - Yasuhiro Takahashi、Seiichiro Tani、Noboru Kunihiro: "クォンタムの追加回路と無制限のファンアウト"、クォンタムの情報と計算、Vol. 10、2010。
   https://arxiv.org/abs/0910.2530

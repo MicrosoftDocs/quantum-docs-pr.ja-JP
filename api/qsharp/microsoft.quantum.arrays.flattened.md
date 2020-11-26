@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Flattened
 title: フラット化関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Flattened
 qsharp.summary: Given an array of arrays, returns the concatenation of all arrays.
-ms.openlocfilehash: 91a35f0ac2c2f8609bac07734265fcf4e88bf50b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 331b1714109259b21982e99d030aa0662e3aaadb
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719239"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221217"
 ---
 # <a name="flattened-function"></a>フラット化関数
 
 名前空間: [Microsoft. Quantum. 配列](xref:Microsoft.Quantum.Arrays)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 配列の配列を指定すると、すべての配列の連結が返されます。

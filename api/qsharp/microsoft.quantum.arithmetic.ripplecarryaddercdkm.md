@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderCDKM
 title: RippleCarryAdderCDKM 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: RippleCarryAdderCDKM
 qsharp.summary: Reversible, in-place ripple-carry addition of two integers.
-ms.openlocfilehash: 6dcb5193c5d1d059682a79e63e6562aabff7539d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b08d8823fd539263205aca1ee15ee69adcb163b7
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719611"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222101"
 ---
 # <a name="ripplecarryaddercdkm-operation"></a>RippleCarryAdderCDKM 操作
 
 名前空間: [Microsoft. Quantum. 算術](xref:Microsoft.Quantum.Arithmetic)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 元に戻すことができ、2つの整数がインプレース適用されます。
 
 ```qsharp
-operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit
+operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -58,7 +58,7 @@ LittleEndian qubit レジスタは、最初の整数 summand をエンコード�
 
 この操作には、RippleCarryAdderD と同じ機能がありますが、$n $ ではなく、補助 qubit を1つだけ使用します。
 
-## <a name="references"></a>関連項目
+## <a name="references"></a>リファレンス
 
 - Cuccaro、Draper、Samuel、Kutin、David Petrie の: "新しいクォンタム ripple-キャリー追加回路", 2004 ですが、このようになります。
   https://arxiv.org/abs/quant-ph/0410184v1

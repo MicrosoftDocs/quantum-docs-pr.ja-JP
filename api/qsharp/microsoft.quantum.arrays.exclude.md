@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Exclude
 title: Exclude 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Exclude
 qsharp.summary: Returns an array containing the elements of another array, excluding elements at a given list of indices.
-ms.openlocfilehash: e1fa7e728d4846db90872055454a8182a77a518b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4ea0d754fce4fc7e3e4e42e55b56720cb3f95ca6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719282"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221353"
 ---
 # <a name="exclude-function"></a>Exclude 関数
 
 名前空間: [Microsoft. Quantum. 配列](xref:Microsoft.Quantum.Arrays)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 指定されたインデックスリストの要素を除く、別の配列の要素を含む配列を返します。

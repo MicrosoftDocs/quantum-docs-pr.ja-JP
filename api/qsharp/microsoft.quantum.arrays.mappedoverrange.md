@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.MappedOverRange
 title: MappedOverRange 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: MappedOverRange
 qsharp.summary: Given a range and a function that takes an integer as input, returns a new array that consists of the images of the range values under the function.
-ms.openlocfilehash: e527a3ca1fd7571836f4f79bb453581f53d1db2b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b1d73c2503e63ed09a3d6a56421760ca29eb0c3f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719042"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220690"
 ---
 # <a name="mappedoverrange-function"></a>MappedOverRange 関数
 
 名前空間: [Microsoft. Quantum. 配列](xref:Microsoft.Quantum.Arrays)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 入力として整数を受け取る範囲と関数を指定した場合は、関数の下の範囲値のイメージで構成される新しい配列を返します。

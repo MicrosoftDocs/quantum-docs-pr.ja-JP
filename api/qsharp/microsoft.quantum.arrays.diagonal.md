@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Diagonal
 title: 対角線関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Diagonal
 qsharp.summary: Returns an array of diagonal elements of a 2-dimensional array
-ms.openlocfilehash: 180b7185c94d712fa02100cb97abfbb6c464d12a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fe6bac0acfa07b14620c7c35ae5e1cec2287d13d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719383"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221540"
 ---
 # <a name="diagonal-function"></a>対角線関数
 
 名前空間: [Microsoft. Quantum. 配列](xref:Microsoft.Quantum.Arrays)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 2次元配列の対角線要素の配列を返します。

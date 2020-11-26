@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Any
 title: すべての関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Any
 qsharp.summary: Given an array and a predicate that is defined for the elements of the array, checks if at least one element of the array satisfies the predicate.
-ms.openlocfilehash: dd5639f1b0a76cb356c89aca0c0e02d375f30d12
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 717ab9ebcbb864a6faf1c14cd36125e589849f2e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719474"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221659"
 ---
 # <a name="any-function"></a>すべての関数
 
 名前空間: [Microsoft. Quantum. 配列](xref:Microsoft.Quantum.Arrays)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 配列と、配列の要素に対して定義された述語が指定されている場合、配列の少なくとも1つの要素が述語を満たすかどうかを確認します。

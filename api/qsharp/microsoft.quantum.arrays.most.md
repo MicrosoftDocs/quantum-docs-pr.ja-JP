@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Most
 title: ほとんどの関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Most
 qsharp.summary: Creates an array that is equal to an input array except that the last array element is dropped.
-ms.openlocfilehash: ca89041a4e70472e9bf7a63ffcacccb35aad527c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 81e66e0b64ae8dfc44d163b68370ccadd191c729
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718999"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220605"
 ---
 # <a name="most-function"></a>ほとんどの関数
 
 名前空間: [Microsoft. Quantum. 配列](xref:Microsoft.Quantum.Arrays)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 最後の配列要素が削除される点を除いて、入力配列と等しい配列を作成します。
