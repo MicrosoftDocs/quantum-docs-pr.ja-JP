@@ -176,12 +176,12 @@ operations:
   uid: Microsoft.Quantum.Arithmetic.SquareSI
 - summary: 元に戻すことができない合計ゲートを実装します。 Qubit でエンコードされたキャリービット `carryIn` と、とでエンコードされた2つの summand ビットを指定すると `summand1` 、とのビット `summand2` ごとの xor を計算し `carryIn` `summand1` `summand2` `summand2` ます。
   uid: Microsoft.Quantum.Arithmetic.Sum
-summary: ''
+summary: この名前空間には、一貫 compute 算術演算に使用される関数と操作が含まれています。
 uid: Microsoft.Quantum.Arithmetic
 metadata:
-  ms.openlocfilehash: 73e3ac964e19ce4613c9426bfc09a39aff4228cf
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: 687e23caf1e5844fcba3d8b6dbe09524903184a2
+  ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92719990"
+  ms.lasthandoff: 11/26/2020
+  ms.locfileid: "96221761"
