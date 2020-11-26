@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 93ece8cbaa2ac8e6e0c9bb417e8f40130cb8a3fa
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 1c3c502b6487482f06820e07425b8516f259fb0d
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192096"
+ms.locfileid: "96231793"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -173,7 +173,7 @@ ms.locfileid: "96192096"
 
 このリリースには、次のものが含まれています。
 
-- のアクセス修飾子が新しくサポートされ Q# ています。詳細については、「[ファイル構造](xref:microsoft.quantum.guide.filestructure)」を参照してください。
+- のアクセス修飾子が新しくサポートされ Q# ています。詳細については、「[アクセス修飾子](xref:microsoft.quantum.qsharp.accessmodifiers)」を参照してください。
 - .NET Core SDK 3.1 に更新されました
 
 [ライブラリ](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed)、[コンパイラ](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed)、[ランタイム](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed)、[サンプル](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)および [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed) については、閉じられた PR の完全な一覧を参照してください。  
@@ -258,7 +258,7 @@ ms.locfileid: "96192096"
 
 このリリースには、次のものが含まれています。
 
-- での [活用形ステートメント](xref:microsoft.quantum.guide.operationsfunctions#conjugations) の新しいサポート Q#
+- での [活用形ステートメント](xref:microsoft.quantum.qsharp.conjugations#conjugations) の新しいサポート Q#
 - "置換"、"ドキュメントの追加"、およびシンプルな配列項目の更新など、コンパイラでの新しいコード アクション
 - Visual Studio Code 拡張機能へのインストール テンプレートと新しいプロジェクト コマンドの追加
 - [Microsoft.Quantum.Canon.ApplyIfOne](xref:Microsoft.Quantum.Canon.ApplyIfOne) などの ApplyIf 連結子の新しいバリアントの追加
@@ -275,7 +275,7 @@ ms.locfileid: "96192096"
 
 このリリースには、次のものが含まれています。
 
-- 配列をスライスするための新しいインデックス作成場所。詳細については、[言語リファレンスを参照](xref:microsoft.quantum.guide.expressions#array-slices)してください。
+- 配列をスライスするための新しいインデックス作成、詳細について [は、言語リファレンスを参照してください](xref:microsoft.quantum.qsharp.contextualexpressions#contextual-and-omitted-expressions) 。
 - [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry)でホストされている Dockerfile を追加しました。 [ Q# 詳細に](https://github.com/microsoft/iqsharp/blob/main/README.md)ついては、I リポジトリを参照してください。
 - [トレース シミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)に関する破壊的変更、構成設定の更新、名前の変更。[更新された名前については、.NET API ブラウザー](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration)を参照してください。
 
@@ -296,10 +296,10 @@ ms.locfileid: "96192096"
 
 ### <a name="no-locq-language-syntax"></a>Q# 言語の構文
 このリリースでは、新しい言語の構文が追加されてい Q# ます。
-* [ユーザー定義型](xref:microsoft.quantum.guide.types#user-defined-types)の名前付き項目が追加されます。  
+* [ユーザー定義型] typedeclarations # 型宣言の名前付きの項目を追加します。  
 * ユーザー定義型コンストラクターを関数として使用できるようになりました。
-* ユーザー定義型の [copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) および [apply-and-reassign](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) のサポートが追加されます。
-* [repeat-until-success](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop) ループの fixup ブロックが省略可能になりました。
+* ユーザー定義型の [copy-and-update](xref:microsoft.quantum.qsharp.copyandupdateexpressions#copy-and-update-expressions) および [apply-and-reassign](xref:microsoft.quantum.qsharp.variabledeclarationsandreassignments#evaluate-and-reassign-statements) のサポートが追加されます。
+* [repeat-until-success](xref:microsoft.quantum.qsharp.conditionalloops#repeat-statement) ループの fixup ブロックが省略可能になりました。
 * (演算ではなく) 関数で while ループがサポートされるようになりました。
 
 ### <a name="library"></a>ライブラリ 
@@ -327,10 +327,10 @@ ms.locfileid: "96192096"
 
 ### <a name="no-locq-language-syntax"></a>Q# 言語の構文
 このリリースでは、新しい言語の構文が追加されてい Q# ます。
-* `+` 演算子を使用する[量子演算 (control および adjoint) の特殊化を表現するための短縮形](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)が追加されます。  古い構文は非推奨になります。  古い構文 (`: adjoint` など) を使用するプログラムは引き続き機能しますが、コンパイル時の警告が生成されます。  
-* 既存の配列の変更として配列の作成を表現するために使用できる、[copy-and-update](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) の新しい演算子 `w/` が追加されます。
-* 一般的な [apply-and-update ステートメント](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols) (`+=`、`w/=` など) が追加されます。
-* [オープン ディレクティブ](xref:microsoft.quantum.guide.filestructure#open-directives)で名前空間の短い名前を指定する方法が追加されます。
+* `+` 演算子を使用する[量子演算 (control および adjoint) の特殊化を表現するための短縮形](xref:microsoft.quantum.qsharp.specializationdeclarations)が追加されます。  古い構文は非推奨になります。  古い構文 (`: adjoint` など) を使用するプログラムは引き続き機能しますが、コンパイル時の警告が生成されます。  
+* [コピーと更新](xref:microsoft.quantum.qsharp.copyandupdateexpressions#copy-and-update-expressions)のために新しい三項演算子を追加 `w/` `<-` すると、を使用して、既存の配列の変更として配列の作成を表すことができます。
+* 一般的な [適用と再割り当てのステートメント](xref:microsoft.quantum.qsharp.variabledeclarationsandreassignments#evaluate-and-reassign-statements)(、など) を追加します `+=` `w/=` 。
+* [オープン ディレクティブ](xref:microsoft.quantum.qsharp.namespaces#open-directives)で名前空間の短い名前を指定する方法が追加されます。
 
 このリリースでは、set ステートメントの左側で配列要素を指定できなくなりました。  これは、構文では配列が可変であることが示され、実際には、演算の結果が常に変更を伴う新しい配列の作成となっていたためです。  代わりに、同じ結果を得るために、copy-and-update の演算子 `w/` を使用する提案を含む、コンパイラ エラーが生成されます。  
 
@@ -405,7 +405,7 @@ QDK を更新する場合は、[インストール ガイド](xref:microsoft.qua
 
 - コミュニティによって報告された DumpRegister に関する問題 ([#148](https://github.com/Microsoft/Quantum/issues/148)) のバグ修正。
 
-- [using ステートメント](xref:microsoft.quantum.guide.qubits#allocating-qubits)内から返す機能が追加されました。
+- [Using および借りステートメント](xref:microsoft.quantum.qsharp.quantummemorymanagement#quantum-memory-management)内からを返す機能を追加しました。
 
 - [入門ガイド](xref:microsoft.quantum.install)が改訂されました。
 
@@ -428,7 +428,7 @@ QDK を更新する場合は、[インストール ガイド](xref:microsoft.qua
 
 このリリースには、次のものが含まれています。
 
-- 任意のサイズの符号付き整数を表す、新しいプリミティブ型である BigInt のサポートが追加されます。  BigInt 型の詳細については、[こちら](xref:microsoft.quantum.guide.types)を参照してください。
+- 任意のサイズの符号付き整数を表す、新しいプリミティブ型である BigInt のサポートが追加されます。  [BigInt](xref:microsoft.quantum.qsharp.valueliterals#bigint-literals)の詳細については、こちらをご覧ください。
 - 新しい Toffoli シミュレーターが追加されます。これは、X、CNOT およびマルチ制御の X 量子演算を非常に多くの量子ビットを使用してシミュレートできる特別な用途の高速シミュレーターです。  Toffoli シミュレーターの詳細については、[こちら](xref:microsoft.quantum.machines.toffoli-simulator)を参照してください。
 - クォンタムコンピューターで特定の操作のれを実行するために必要なリソースを推定する単純なリソース推定機能を追加し Q# ます。  詳細については、[リソース推定機能](xref:microsoft.quantum.machines.resources-estimator)に関するページを参照してください。
 

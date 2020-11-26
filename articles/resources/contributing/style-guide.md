@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691743"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231657"
 ---
 # <a name="no-locq-style-guide"></a>Q# スタイルガイド #
 ## <a name="general-conventions"></a>一般規則 ##
@@ -96,7 +96,7 @@ Quantum 開発キットの提供では、quantum 開発者が簡単に読むこ�
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-| &nbsp;  | 名前 | 説明 |
+| &nbsp;  | 名前 | [説明] |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | 操作の効果を示すには、動詞 ("リフレクト") の使用をクリアします。 |
 | ☒ | <s>`operation XRotation`</s> | 名詞句の使用は、操作ではなく、関数を提案します。 |
@@ -129,7 +129,7 @@ Quantum 開発キットの提供では、quantum 開発者が簡単に読むこ�
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-| &nbsp;  | 名前 | 説明 |
+| &nbsp;  | 名前 | [説明] |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | 操作名を使用してエントリポイントの目的を明確に伝えます。 |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | の使用 `Main` は、エントリポイントの目的を明確に伝えるものではなく、属性と重複し `@EntryPoint()` ます。 |
@@ -171,7 +171,7 @@ is Adj + Ctl {
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-| &nbsp;   | 名前 | 説明 |
+| &nbsp;   | 名前 | [説明] |
 |---|------|-------------|
 | ☑ | `X` | 「$X $ transformation の適用」の短縮形 |
 | ☑ | `CNOT` | "制御された-NOT" の短縮形 |
@@ -228,7 +228,7 @@ Q#は厳密かつ厳密に型指定された言語であるため、1つの型�
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-| &nbsp;   | 名前 | 説明 |
+| &nbsp;   | 名前 | [説明] |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | 前置詞 "to" は、関数ではなく操作を示す動詞句を生成します。 |
 | ☒ | <s>`AsDouble`</s> | 入力の型は、関数名からは明確ではありません。 |
@@ -251,7 +251,7 @@ _*_
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-| &nbsp;  | 名前 | 説明 |
+| &nbsp;  | 名前 | [説明] |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | `_`この操作が内部でのみ使用されることを示すために、アンダースコアを使用しないでください。 |
 | ☑ | `internal operation ApplyDecomposedOperation` | `internal`最初のキーワードは、この操作が内部でのみ使用されることを明確に示しています。 |
@@ -323,7 +323,7 @@ _*_
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-| &nbsp;  | スニペット | 説明 |
+| &nbsp;  | スニペット | [説明] |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | 名前は `Apply` 形式の `CamelCase` 動詞フレーズで、名前付き項目が操作であることを示します。 |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | 名前付き項目の先頭は大文字である必要があります。 |
@@ -390,7 +390,7 @@ Quantum Development Kit に用意されているコンパイラは、これら�
 ドキュメントコメントを使用すると、このドキュメントの他の規則を使用して簡単には表現できない詳細情報を提供することで、ユーザーがコードを理解するのに役立ちます。
 
 > [!div class="nextstepaction"]
-> [ドキュメントコメントの構文リファレンス](xref:microsoft.quantum.guide.filestructure#documentation-comments)。
+> [ドキュメントコメントの構文リファレンス](xref:microsoft.quantum.qsharp.comments#documentation-comments)。
 
 この機能を効果的に使用してユーザーを支援するには、ドキュメントコメントを記述する際に注意することをお勧めします。
 
@@ -479,7 +479,7 @@ _*_
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-| &nbsp; | スニペット | 説明 |
+| &nbsp; | スニペット | [説明] |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | バイナリ演算子の前後にスペースを使用します。 |
 | ☒ | <s>`target:Qubit`</s> | 注釈のコロンを囲むにはスペースを使用します。 |

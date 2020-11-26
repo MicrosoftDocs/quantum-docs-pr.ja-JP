@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f1a4ef0616a8a3f1548b7a7207cf8cbb9dcc7260
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c5bdebc826bb85f6d7e0ade6232e15e29e8fb19
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691693"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231691"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>プログラムを実行する方法 Q#
 
@@ -45,7 +45,7 @@ Quantum Development Kit の最大の強みの1つは、プラットフォーム�
 ```
 
 ただし、このコードだけをで実行することはできません Q# 。
-そのためには、操作の本体を構成する必要があります。この [操作](xref:microsoft.quantum.guide.basics#q-operations-and-functions)は、直接または別の操作によって---呼び出されたときに実行されます。 そのため、次の形式の操作を記述できます。
+そのためには、操作の本体を構成する必要があります。この [操作](xref:microsoft.quantum.qsharp.operationsandfunctions)は、直接または別の操作によって---呼び出されたときに実行されます。 そのため、次の形式の操作を記述できます。
 ```qsharp
     operation MeasureSuperposition() : Result {
         using (q = Qubit()) {
@@ -54,9 +54,9 @@ Quantum Development Kit の最大の強みの1つは、プラットフォーム�
         }
     }
 ```
-`MeasureSuperposition`入力を受け取らず、 [Result](xref:microsoft.quantum.guide.types)型の値を返す操作を定義しました。
+`MeasureSuperposition`入力を受け取らず、 [Result](xref:microsoft.quantum.qsharp.typesystem-index#available-types)型の値を返す操作を定義しました。
 
-このページの例は操作のみで構成 Q# *operations* されていますが、ここで説明するすべての概念は、関数にも同様に関係 Q# *functions* します。そのため、これらのすべての概念を *呼び出し* が許容できるものとして参照します。 これらの違いについては、 [ Q# 「基本: 操作と関数](xref:microsoft.quantum.guide.basics#q-operations-and-functions)」で説明されています。これらの定義の詳細については、「[操作と関数](xref:microsoft.quantum.guide.operationsfunctions)」を参照してください。
+では、操作だけでなく、 Q# 決定的な計算を関数にカプセル化することもできます。 決定論的な保証とは別に、qubits で動作する計算を関数ではなく操作にカプセル化する必要があることを意味します。操作と関数の違いはほとんどありません。 これらの参照は、 *呼び出し* の意味を持つものとしてまとめられています。
 
 ### <a name="callable-defined-in-a-no-locq-file"></a>ファイルで定義された呼び出し可能 Q#
 
@@ -65,7 +65,7 @@ Quantum Development Kit の最大の強みの1つは、プラットフォーム�
 
 すべての Q# 型と呼び出し可能 (定義したものと言語に固有の型の両方) は、 *名前空間* 内で定義されます。これらの名前は、参照可能な完全な名前を提供します。
 
-たとえば、およびの [`H`](xref:Microsoft.Quantum.Intrinsic.H) 各 [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) 操作は、 [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) 名前空間と名前空間 ( [ Q# 標準ライブラリ](xref:microsoft.quantum.qsharplibintro)の一部) にあります。
+たとえば、およびの [`H`](xref:Microsoft.Quantum.Intrinsic.H) 各 [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) 操作は、 [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) 名前空間と名前空間 ( [ Q# 標準ライブラリ](xref:microsoft.quantum.libraries.standard.intro)の一部) にあります。
 そのため、常に *完全な* 名前を使用してを呼び出すことができます `Microsoft.Quantum.Intrinsic.H(<qubit>)` が、 `Microsoft.Quantum.Measurement.MResetZ(<qubit>)` 常にこの操作を実行すると、コードが乱雑になることがあります。
 
 ステートメントを `open` 使用すると、上記の操作本体で行ったように、より簡潔な短縮形で呼び出し可能なを参照できます。
@@ -164,7 +164,7 @@ namespace NamespaceName {
 そのため、またはのどちらかが表示され `One` `Zero` ます。 
 
 より多くの呼び出し可能を定義しているかどうかは関係ありません `MeasureSuperposition` 。実行されるのはのみです。
-また、呼び出し元が宣言の前に [ドキュメントコメント](xref:microsoft.quantum.guide.filestructure#documentation-comments) を含んでいる場合は問題ありません `@EntryPoint()` 。属性は、単純にその上に配置できます。
+また、呼び出し元が宣言の前に [ドキュメントコメント](xref:microsoft.quantum.qsharp.comments#documentation-comments) を含んでいる場合は問題ありません `@EntryPoint()` 。属性は、単純にその上に配置できます。
 
 ### <a name="callable-arguments"></a>呼び出し可能引数
 
@@ -589,7 +589,7 @@ Q# Jupyter Notebook では、I カーネルを使用します Q# 。これによ
 
 Jupyter Notebook では Q# 、 Q# ファイルの名前空間内と同様にコードを入力し Q# ます。
 
-そのため、 [ Q# 標準ライブラリ](xref:microsoft.quantum.qsharplibintro)から、 `open` それぞれの名前空間のステートメントを使用して、呼び出し可能なアクセスを有効にすることができます。
+そのため、 [ Q# 標準ライブラリ](xref:microsoft.quantum.libraries.standard.intro)から、 `open` それぞれの名前空間のステートメントを使用して、呼び出し可能なアクセスを有効にすることができます。
 このようなステートメントでセルを実行すると、その名前空間の定義がワークスペース全体で使用できるようになります。
 
 > [!NOTE]

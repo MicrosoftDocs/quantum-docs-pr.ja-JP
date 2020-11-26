@@ -87,7 +87,7 @@ author: bradben: benbra: ms. date: 9/1/2020 ms. topic: article uid: microsoft...
 
 ## <a name="adjoint"></a>Adjoint
 
-[操作](xref:microsoft.quantum.glossary#operation)の複素共役転置。 [ユニタリ](xref:microsoft.quantum.glossary#unitary-operator)演算子を実装する操作の場合、adjoint は演算の逆であり、ダガー記号によって示されます。 たとえば、操作が、のように、の場合は、u `U` $ ^ を $ `Adjoint U` 表し $ \dagger $ ます。 詳細については、「 [Adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)」を参照してください。
+[操作](xref:microsoft.quantum.glossary#operation)の複素共役転置。 [ユニタリ](xref:microsoft.quantum.glossary#unitary-operator)演算子を実装する操作の場合、adjoint は演算の逆であり、ダガー記号によって示されます。 たとえば、操作が、のように、の場合は、u `U` $ ^ を $ `Adjoint U` 表し $ \dagger $ ます。 詳細については、「 [ファンクタアプリケーション](xref:microsoft.quantum.qsharp.functorapplication#functor-application)」を参照してください。
 
 ## <a name="ancilla"></a>Ancilla
 
@@ -103,7 +103,8 @@ author: bradben: benbra: ms. date: 9/1/2020 ms. topic: article uid: microsoft...
 
 ## <a name="callable"></a>呼び出し可能
 
-言語の [操作](xref:microsoft.quantum.glossary#operation) または [関数](xref:microsoft.quantum.glossary#function) Q# 。 詳細については、「 [操作と関数](xref:microsoft.quantum.guide.operationsfunctions)」を参照してください。
+[ Q# 言語](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language)の[操作](xref:microsoft.quantum.glossary#operation)または[関数](xref:microsoft.quantum.glossary#function)。
+詳細については、「 [ Q# プログラム](xref:microsoft.quantum.guide.programs)」を参照してください。
 
 ## <a name="clifford-group"></a>Clifford グループ
 
@@ -111,7 +112,7 @@ author: bradben: benbra: ms. date: 9/1/2020 ms. topic: article uid: microsoft...
 
 ## <a name="controlled"></a>た
 
-ターゲット操作のイネーブラーとして1つ以上の[qubits](xref:microsoft.quantum.glossary#qubit)を受け取るクォンタム[操作](xref:microsoft.quantum.glossary#operation)。 詳細については、「 [制御対象と adjoint の操作](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)」を参照してください。
+ターゲット操作のイネーブラーとして1つ以上の[qubits](xref:microsoft.quantum.glossary#qubit)を受け取るクォンタム[操作](xref:microsoft.quantum.glossary#operation)。 詳細については、「 [ファンクタアプリケーション](xref:microsoft.quantum.qsharp.functorapplication#functor-application)」を参照してください。
 
 ## <a name="dirac-notation"></a>Dirac 表記
 
@@ -138,11 +139,11 @@ author: bradben: benbra: ms. date: 9/1/2020 ms. topic: article uid: microsoft...
 クォンタムの [状態](xref:microsoft.quantum.glossary#quantum-state) が時間の経過と共にどのように変化するか。 詳細については、「 [Matrix 指数](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials)」を参照してください。
 
 ## <a name="function"></a>機能
-Q#純粋な古典的な言語 (非クォンタム) のサブルーチンの種類。 関数はクォンタムアルゴリズム内で使用されますが、 [qubits](xref:microsoft.quantum.glossary#qubit) または call [操作](xref:microsoft.quantum.glossary#operation)では動作しません。 詳細については、「 [操作と関数](xref:microsoft.quantum.guide.operationsfunctions)」を参照してください。
+純粋に決定的な言語のサブルーチンの型 Q# 。 関数はクォンタムアルゴリズム内で使用されますが、 [qubits](xref:microsoft.quantum.glossary#qubit) または call [操作](xref:microsoft.quantum.glossary#operation)では動作しません。 詳細については、「 [ Q# プログラム](xref:microsoft.quantum.guide.programs)」を参照してください。
 
 ## <a name="gate"></a>ゲートウェイ
 
-古典的なロジックゲートの概念に基づいた、クォンタム [操作](xref:microsoft.quantum.glossary#operation)の従来の用語。 [クォンタム回線](xref:microsoft.quantum.glossary#quantum-circuit-diagram)は、従来のロジック回線と同様の概念に基づいて、ゲート (または操作) のネットワークです。
+従来のロジックゲートの概念に基づく、特定の組み込みのクォンタム [操作](xref:microsoft.quantum.glossary#operation)に関する従来の用語。 [クォンタム回線](xref:microsoft.quantum.glossary#quantum-circuit-diagram)は、従来のロジック回線と同様の概念に基づいたゲートのネットワークです。
 
 ## <a name="global-phase"></a>グローバルフェーズ
 
@@ -166,15 +167,11 @@ Hadamard 操作 (Hadamard gate または transform とも呼ばれます) は、
 
 ## <a name="namespace"></a>名前空間
 
-関連する名前 (つまり、 [操作](xref:microsoft.quantum.glossary#operation)、 [関数](xref:microsoft.quantum.glossary#function)、および [ユーザー定義型](xref:microsoft.quantum.glossary#user-defined-type)) のコレクションのラベル。 たとえば、名前空間は、初期状態の準備に役立つ標準ライブラリで定義されているすべてのシンボルをラベル [付けします](xref:microsoft.quantum.preparation) 。
+関連する名前 (つまり、 [操作](xref:microsoft.quantum.glossary#operation)、 [関数](xref:microsoft.quantum.glossary#function)、および [ユーザー定義型](xref:microsoft.quantum.glossary#user-defined-type)) のコレクションのラベル。 たとえば、名前空間は、初期状態の準備に役立つ標準ライブラリで定義されているすべてのシンボルをラベル [付けします](xref:Microsoft.Quantum.Preparation) 。
 
-## <a name="operation"></a>Operation
+## <a name="operation"></a>操作
 
-でのクォンタム計算の基本単位 Q# 。 これは、C、C++、または Python の関数、または C# または Java の静的メソッドとほぼ同じです。 詳細については、「 [操作と関数](xref:microsoft.quantum.guide.operationsfunctions)」を参照してください。
-
-## <a name="operator-application"></a>オペレーターアプリケーション
-
-クォンタム操作を実行しています。 通常、これは、現在のクォンタム状態ベクトルに対して、通常、ユニタリ行列を適用します。
+でのクォンタム計算の基本単位 Q# 。 これは、C、C++、または Python の関数、または C# または Java の静的メソッドとほぼ同じです。 詳細については、「 [ Q# プログラム](xref:microsoft.quantum.guide.programs)」を参照してください。
 
 ## <a name="oracle"></a>Oracle
 
@@ -182,7 +179,7 @@ Hadamard 操作 (Hadamard gate または transform とも呼ばれます) は、
 
 ## <a name="partial-application"></a>部分アプリケーション
 
-必須の入力をすべて指定せずに [関数](xref:microsoft.quantum.glossary#function) または [操作](xref:microsoft.quantum.glossary#operation) を呼び出します。 これにより、今後のアプリケーションの実行中に、不足しているパラメーター (アンダースコアで示される) のみを必要とする新しい [呼び出し](xref:microsoft.quantum.glossary#callable) 可能が返されます。 たとえば、関数を指定する `MyFunc(x : int, y : int) : int {return x + y;}` と、その関数を新しい関数に部分的に適用でき `let NewFunc = MyFunc(_, 3)` ます。 その後、 `NewFunc(2)` 値 *5* を返すパラメーターを指定しないで、後で新しい関数を呼び出すことができます。  詳細については、「 [部分アプリケーション](xref:microsoft.quantum.guide.operationsfunctions#partial-application)」を参照してください。
+必須の入力をすべて指定せずに [関数](xref:microsoft.quantum.glossary#function) または [操作](xref:microsoft.quantum.glossary#operation) を呼び出します。 これにより、今後のアプリケーションの実行中に、不足しているパラメーター (アンダースコアで示される) のみを必要とする新しい [呼び出し](xref:microsoft.quantum.glossary#callable) 可能が返されます。 詳細については、「 [部分アプリケーション](xref:microsoft.quantum.qsharp.partialapplication)」を参照してください。
 
 ## <a name="pauli-operators"></a>P# li 演算子
 
@@ -190,7 +187,7 @@ Hadamard 操作 (Hadamard gate または transform とも呼ばれます) は、
 
 ## <a name="quantum-circuit-diagram"></a>クォンタム回線の図
 
-単純なクォンタムプログラムの一連の [操作](xref:microsoft.quantum.glossary#operation) (または [ゲート](xref:microsoft.quantum.glossary#gate)) をグラフィカルに表すメソッド。たとえば、 
+単純なクォンタムプログラムの [ゲート](xref:microsoft.quantum.glossary#gate) シーケンスをグラフィカルに表すメソッド。たとえば、 
 
 ![回路図のサンプル](~/media/qpe.png). 
 
@@ -210,7 +207,7 @@ Hadamard 操作 (Hadamard gate または transform とも呼ばれます) は、
 
 ## <a name="repeat-until-success"></a>繰り返し-成功まで
 
-見込みが成功するクォンタムアルゴリズム。 エラーが発生すると、ルーチンは成功するまで (または制限に達したときに) 再試行します。 詳細については、「[成功まで繰り返す (RUS)](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop) 」を参照してください。
+クォンタムアルゴリズムで頻繁に使用される概念で、特定の条件が満たされるまで計算を繰り返し適用することで構成されます。 条件が満たされない場合、多くの場合、次のイテレーションを入力して再試行する前にフィックスアップが必要になります。 詳細については、「 [ Q# ユーザーガイド](xref:microsoft.quantum.guide)」を参照してください。
 
 ## <a name="standard-libraries"></a>標準ライブラリ
 
@@ -230,7 +227,7 @@ Hadamard 操作 (Hadamard gate または transform とも呼ばれます) は、
 
 ## <a name="tuple"></a>タプル
 
-単一の値として機能するコンマ区切り値のコレクション。 組の *型* は、その組に含まれる値の型によって定義されます。 では Q# 、組は [変更不可](xref:microsoft.quantum.glossary#immutable) で、入れ子にしたり、配列を含めたり、配列で使用したりすることができます。 詳細については、[タプル型](xref:microsoft.quantum.guide.types#tuple-types)に関するページを参照してください。
+単一の値として機能するコンマ区切り値のコレクション。 組の *型* は、その組に含まれる値の型によって定義されます。 では Q# 、組は [変更不可](xref:microsoft.quantum.glossary#immutable) で、入れ子にしたり、配列を含めたり、配列で使用したりすることができます。 詳細については、「[タプル](xref:microsoft.quantum.qsharp.valueliterals#tuple-literals)」を参照してください
 
 ## <a name="unitary-operator"></a>ユニタリ演算子
 
@@ -238,4 +235,4 @@ Hadamard 操作 (Hadamard gate または transform とも呼ばれます) は、
 
 ## <a name="user-defined-type"></a>ユーザー定義型
 
-1つの単位として参照される組み込み型または以前に定義された型のコレクション。 詳細については、「 [ユーザー定義型](xref:microsoft.quantum.guide.types#user-defined-types)」を参照してください。
+1つ以上の名前付き項目または匿名項目を含むことができるカスタム型。 詳細については、「[型宣言] typedeclarations # 型宣言」を参照してください。
