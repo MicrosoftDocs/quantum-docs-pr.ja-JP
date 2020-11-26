@@ -81,6 +81,8 @@ functions:
   uid: Microsoft.Quantum.Canon.HammingWeightI
 - summary: 演算または関数の出力を無視します。
   uid: Microsoft.Quantum.Canon.Ignore
+- summary: 入力範囲が空の場合にのみ true を返します。
+  uid: Microsoft.Quantum.Canon.IsRangeEmpty
 - summary: 指定された結果値がと等しいかどうかをテスト `One` します。
   uid: Microsoft.Quantum.Canon.IsResultOne
 - summary: 指定された結果値がと等しいかどうかをテスト `Zero` します。
@@ -220,6 +222,8 @@ operations:
   uid: Microsoft.Quantum.Canon.AndLadder
 - summary: 測定を使用して adjoint 演算を実行し、両方のコントロール qubit が1の状態である場合にのみ、指定されたターゲット qubit を反転します。
   uid: Microsoft.Quantum.Canon.ApplyAnd
+- summary: ゲートとゲートのチェーンを計算します
+  uid: Microsoft.Quantum.Canon.ApplyAndChain
 - summary: ''
   uid: Microsoft.Quantum.Canon.ApplyBound
 - summary: ''
@@ -658,8 +662,6 @@ operations:
   uid: Microsoft.Quantum.Canon.IterateThroughCartesianPower
 - summary: 複数の範囲のデカルト積の各インデックスに対して操作を適用します。
   uid: Microsoft.Quantum.Canon.IterateThroughCartesianProduct
-- summary: 複数の qubits の論理 AND を計算します。
-  uid: Microsoft.Quantum.Canon.LogicalANDMeasAndFix
 - summary: >+
     > [!WARNING]
 
@@ -727,6 +729,8 @@ operations:
 
     $U = \ sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $。
   uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGenerator
+- summary: の実装手順 `MultiplexOperationsFromGenerator` 。
+  uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGeneratorImpl
 - summary: MultiplexOperations の実装手順。
   uid: Microsoft.Quantum.Canon.MultiplexOperationsWithAuxRegister
 - summary: Qubits の配列に条件付きの回転を適用します。
@@ -767,14 +771,12 @@ operations:
   uid: Microsoft.Quantum.Canon.Trotter2ImplCA
 - summary: Trotter – Suzuki インテグレーターの再帰的な実装。
   uid: Microsoft.Quantum.Canon.TrotterArbitraryImplCA
-- summary: の実装手順 `MultiplexOperationsFromGenerator` 。
-  uid: Microsoft.Quantum.Canon._MultiplexOperationsFromGenerator
 summary: ''
 uid: Microsoft.Quantum.Canon
 metadata:
-  ms.openlocfilehash: 15dd183daa445cbde87b573386780d3da34beb86
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: c8bb0e87c5f22812587ed5eaefcddc4ad04b851b
+  ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92715981"
+  ms.lasthandoff: 11/26/2020
+  ms.locfileid: "96204489"
