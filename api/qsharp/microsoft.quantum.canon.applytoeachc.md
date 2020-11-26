@@ -1,57 +1,57 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToEachC
 title: Applytoall c 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToEachC
 qsharp.summary: Applies a single-qubit operation to each element in a register. The modifier `C` indicates that the single-qubit operation is controllable.
-ms.openlocfilehash: dfa18b6eb7a2c42fa2982994a2fc92170b52599c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 535f815503e20b5cee35f3f273a714203a4baf12
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717563"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217783"
 ---
-# <a name="applytoeachc-operation"></a><span data-ttu-id="aa090-102">Applytoall c 操作</span><span class="sxs-lookup"><span data-stu-id="aa090-102">ApplyToEachC operation</span></span>
+# <a name="applytoeachc-operation"></a><span data-ttu-id="ee462-102">Applytoall c 操作</span><span class="sxs-lookup"><span data-stu-id="ee462-102">ApplyToEachC operation</span></span>
 
-<span data-ttu-id="aa090-103">名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="aa090-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="ee462-103">名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="ee462-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="aa090-104">パック [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="aa090-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="ee462-104">パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="ee462-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="aa090-105">レジスタ内の各要素に単一の qubit 演算を適用します。</span><span class="sxs-lookup"><span data-stu-id="aa090-105">Applies a single-qubit operation to each element in a register.</span></span>
-<span data-ttu-id="aa090-106">修飾子は、 `C` single qubit 操作が制御可能であることを示します。</span><span class="sxs-lookup"><span data-stu-id="aa090-106">The modifier `C` indicates that the single-qubit operation is controllable.</span></span>
+<span data-ttu-id="ee462-105">レジスタ内の各要素に単一の qubit 演算を適用します。</span><span class="sxs-lookup"><span data-stu-id="ee462-105">Applies a single-qubit operation to each element in a register.</span></span>
+<span data-ttu-id="ee462-106">修飾子は、 `C` single qubit 操作が制御可能であることを示します。</span><span class="sxs-lookup"><span data-stu-id="ee462-106">The modifier `C` indicates that the single-qubit operation is controllable.</span></span>
 
 ```qsharp
-operation ApplyToEachC<'T> (singleElementOperation : ('T => Unit is Ctl), register : 'T[]) : Unit
+operation ApplyToEachC<'T> (singleElementOperation : ('T => Unit is Ctl), register : 'T[]) : Unit is Ctl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="aa090-107">入力</span><span class="sxs-lookup"><span data-stu-id="aa090-107">Input</span></span>
+## <a name="input"></a><span data-ttu-id="ee462-107">入力</span><span class="sxs-lookup"><span data-stu-id="ee462-107">Input</span></span>
 
-### <a name="singleelementoperation--t--unit-ctl"></a><span data-ttu-id="aa090-108">singleElementOperation: t => [ユニット](xref:microsoft.quantum.lang-ref.unit) Ctl</span><span class="sxs-lookup"><span data-stu-id="aa090-108">singleElementOperation : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl</span></span>
+### <a name="singleelementoperation--t--unit--is-ctl"></a><span data-ttu-id="ee462-108">singleElementOperation: t => [単位](xref:microsoft.quantum.lang-ref.unit)  は Ctl です</span><span class="sxs-lookup"><span data-stu-id="ee462-108">singleElementOperation : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl</span></span>
 
-<span data-ttu-id="aa090-109">各 qubit に適用する操作。</span><span class="sxs-lookup"><span data-stu-id="aa090-109">Operation to apply to each qubit.</span></span>
-
-
-### <a name="register--t"></a><span data-ttu-id="aa090-110">register: t []</span><span class="sxs-lookup"><span data-stu-id="aa090-110">register : 'T[]</span></span>
-
-<span data-ttu-id="aa090-111">指定された操作を適用する qubits の配列。</span><span class="sxs-lookup"><span data-stu-id="aa090-111">Array of qubits on which to apply the given operation.</span></span>
+<span data-ttu-id="ee462-109">各 qubit に適用する操作。</span><span class="sxs-lookup"><span data-stu-id="ee462-109">Operation to apply to each qubit.</span></span>
 
 
+### <a name="register--t"></a><span data-ttu-id="ee462-110">register: t []</span><span class="sxs-lookup"><span data-stu-id="ee462-110">register : 'T[]</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="aa090-112">出力: [単位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="aa090-112">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="ee462-111">指定された操作を適用する qubits の配列。</span><span class="sxs-lookup"><span data-stu-id="ee462-111">Array of qubits on which to apply the given operation.</span></span>
 
 
 
-## <a name="type-parameters"></a><span data-ttu-id="aa090-113">型パラメーター</span><span class="sxs-lookup"><span data-stu-id="aa090-113">Type Parameters</span></span>
+## <a name="output--unit"></a><span data-ttu-id="ee462-112">出力: [単位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="ee462-112">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-### <a name="t"></a><span data-ttu-id="aa090-114">&</span><span class="sxs-lookup"><span data-stu-id="aa090-114">'T</span></span>
 
-<span data-ttu-id="aa090-115">操作が動作するターゲット。</span><span class="sxs-lookup"><span data-stu-id="aa090-115">The target on which the operation acts.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="aa090-116">参照</span><span class="sxs-lookup"><span data-stu-id="aa090-116">See Also</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="ee462-113">型パラメーター</span><span class="sxs-lookup"><span data-stu-id="ee462-113">Type Parameters</span></span>
 
-- [<span data-ttu-id="aa090-117">Microsoft. ApplyToEach</span><span class="sxs-lookup"><span data-stu-id="aa090-117">Microsoft.Quantum.Canon.ApplyToEach</span></span>](xref:Microsoft.Quantum.Canon.ApplyToEach)
+### <a name="t"></a><span data-ttu-id="ee462-114">&</span><span class="sxs-lookup"><span data-stu-id="ee462-114">'T</span></span>
+
+<span data-ttu-id="ee462-115">操作が動作するターゲット。</span><span class="sxs-lookup"><span data-stu-id="ee462-115">The target on which the operation acts.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="ee462-116">参照</span><span class="sxs-lookup"><span data-stu-id="ee462-116">See Also</span></span>
+
+- [<span data-ttu-id="ee462-117">Microsoft. ApplyToEach</span><span class="sxs-lookup"><span data-stu-id="ee462-117">Microsoft.Quantum.Canon.ApplyToEach</span></span>](xref:Microsoft.Quantum.Canon.ApplyToEach)
