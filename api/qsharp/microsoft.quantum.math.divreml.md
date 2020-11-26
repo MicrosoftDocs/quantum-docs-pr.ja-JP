@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.DivRemL
 title: DivRemL 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: DivRemL
 qsharp.summary: Divides one BigInteger value by another, returns the result and the remainder as a tuple.
-ms.openlocfilehash: d2ca91e0c3e8d69902234689359da7b73a8f7d1b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 40ce295b82d138ad0b5261641c7f3649631d309d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723741"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210847"
 ---
 # <a name="divreml-function"></a>DivRemL 関数
 
 名前空間: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 1つの BigInteger 値を別の値で除算し、その結果と剰余をタプルとして返します。

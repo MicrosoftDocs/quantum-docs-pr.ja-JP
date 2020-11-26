@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ValidationResults
 title: ValidationResults ユーザー定義型
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: ValidationResults
 qsharp.summary: The results from having validated a classifier against a set of samples.
-ms.openlocfilehash: 1e54a5a086035f5f8d36d777badb306156d99600
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 42bfab7fd1f9372d9394f2eaf2d698b39b4307e1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720427"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211493"
 ---
 # <a name="validationresults-user-defined-type"></a>ValidationResults ユーザー定義型
 
 名前空間: [Microsoft. Quantum の e ラーニング](xref:Microsoft.Quantum.MachineLearning)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum.](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 一連のサンプルに対して分類子が検証された結果。

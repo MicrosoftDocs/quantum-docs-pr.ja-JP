@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.ComplexPolar
 title: ComplexPolar ユーザー定義型
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Math
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Represents a complex number in polar form.
 
   The polar representation of a complex number is $c=r e^{i t}$.
-ms.openlocfilehash: 0c18c3f02cb036f22a68b6e4b46fd19049dc34cc
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a4f3a7b6ffa73271d7ac9674d8c718f6f09c0291
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92709648"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210983"
 ---
 # <a name="complexpolar-user-defined-type"></a>ComplexPolar ユーザー定義型
 
 名前空間: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 極座標形式の複素数を表します。
