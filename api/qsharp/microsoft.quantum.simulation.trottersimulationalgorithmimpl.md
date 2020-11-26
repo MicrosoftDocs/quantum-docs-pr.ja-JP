@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Simulation.TrotterSimulationAlgorithmImpl
 title: TrotterSimulationAlgorithmImpl 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: TrotterSimulationAlgorithmImpl
 qsharp.summary: Makes repeated calls to `TrotterStep` to approximate the time-evolution operator exp(_-iHt_).
-ms.openlocfilehash: 2af68532d700a1fb5b037707ce4650696cbe1a64
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5b796245e2a4434228260a229cb61be66f3e38d6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725360"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203401"
 ---
 # <a name="trottersimulationalgorithmimpl-operation"></a>TrotterSimulationAlgorithmImpl 操作
 
 名前空間: [Microsoft. Quantum. シミュレーション](xref:Microsoft.Quantum.Simulation)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-に対してを繰り返し呼び出し `TrotterStep` 、時間の進化演算子 exp ( _-iht_ ) を概算します。
+に対してを繰り返し呼び出し `TrotterStep` 、時間の進化演算子 exp (_-iht_) を概算します。
 
 ```qsharp
-operation TrotterSimulationAlgorithmImpl (trotterStepSize : Double, trotterOrder : Int, maxTime : Double, evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, qubits : Qubit[]) : Unit
+operation TrotterSimulationAlgorithmImpl (trotterStepSize : Double, trotterOrder : Int, maxTime : Double, evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

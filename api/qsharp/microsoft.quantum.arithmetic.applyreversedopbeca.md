@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpBECA
 title: ApplyReversedOpBECA 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyReversedOpBECA
 qsharp.summary: Applies an operation that takes big-endian input to a register encoding an unsigned integer using little-endian format.
-ms.openlocfilehash: 1a11b85e4eca627246d7b9d3b4c10824296e9a77
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5c761fb8e1042a25cd2e88f1b33e597c7d9287f9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721471"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202721"
 ---
 # <a name="applyreversedopbeca-operation"></a>ApplyReversedOpBECA 操作
 
 名前空間: [Microsoft. Quantum. 算術](xref:Microsoft.Quantum.Arithmetic)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 リトルエンディアン入力をリトルエンディアン形式で符号なし整数にエンコードする操作を適用します。
 
 ```qsharp
-operation ApplyReversedOpBECA (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl + Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApplyReversedOpBECA (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl + Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
 ## <a name="input"></a>入力
 
-### <a name="op--bigendian--unit-ctl--adj"></a>op: [bigendian ディアン](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [ユニット](xref:microsoft.quantum.lang-ref.unit) Ctl + 形容詞
+### <a name="op--bigendian--unit--is-adj--ctl"></a>op: [bigendian ディアン](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [ユニット](xref:microsoft.quantum.lang-ref.unit)  は形容詞 + Ctl です
 
 ビッグエンディアンレジスタに対して動作する操作。
 

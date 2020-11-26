@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._ComputeJordanWignerBitString
 title: _ComputeJordanWignerBitString 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _ComputeJordanWignerBitString
 qsharp.summary: Computes Z component of Jordan–Wigner string between fermion indices in a fermionic operator with an even number of creation / annihilation operators.
-ms.openlocfilehash: 31b957a435c3f578bc03d432609cde14c2ef5ced
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8121421a77174ef3e894381b281964b448e00a18
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92714702"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203945"
 ---
 # <a name="_computejordanwignerbitstring-function"></a>_ComputeJordanWignerBitString 関数
 
 名前空間: [JordanWigner。](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. 化学](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 2つの作成/annihilation 演算子を使用して、fermionic 演算子内のインデックスに対して、よりも多くの型の配列の Z 成分を計算します。

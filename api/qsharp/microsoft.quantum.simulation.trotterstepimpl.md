@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Simulation.TrotterStepImpl
 title: TrotterStepImpl 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: TrotterStepImpl
 qsharp.summary: Implements time-evolution by a term contained in a `GeneratorSystem`.
-ms.openlocfilehash: 1ddd7ab33df243d729b5b48cba393d976bfd3640
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: bc6c3c6656da319fce9c7c48824dbc4ad75ccc83
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725323"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203417"
 ---
 # <a name="trotterstepimpl-operation"></a>TrotterStepImpl 操作
 
 名前空間: [Microsoft. Quantum. シミュレーション](xref:Microsoft.Quantum.Simulation)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 に含まれる用語によって時間の進化を実装 `GeneratorSystem` します。
 
 ```qsharp
-operation TrotterStepImpl (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, idx : Int, stepsize : Double, qubits : Qubit[]) : Unit
+operation TrotterStepImpl (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, idx : Int, stepsize : Double, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
