@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Core.RangeReverse
 title: RangeReverse 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Core
 qsharp.name: RangeReverse
 qsharp.summary: Returns a new range which is the reverse of the input range.
-ms.openlocfilehash: d4e612d2f175015b7193634aeec12f9df12df7d3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7bd7c55abe0b56b9d30b4c6e91f7175101dd2948
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713232"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213839"
 ---
 # <a name="rangereverse-function"></a>RangeReverse 関数
 
 名前空間: [Microsoft. Quantum. コア](xref:Microsoft.Quantum.Core)
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 入力範囲の逆の新しい範囲を返します。
