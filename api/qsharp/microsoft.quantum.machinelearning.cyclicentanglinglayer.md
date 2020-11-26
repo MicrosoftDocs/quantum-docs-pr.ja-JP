@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.CyclicEntanglingLayer
 title: CyclicEntanglingLayer 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: CyclicEntanglingLayer
 qsharp.summary: Returns an array of singly controlled rotations along a given axis, arranged cyclically across a register of qubits, and parameterized by distinct model parameters.
-ms.openlocfilehash: 6e0f5057b35baefe2677126ba70ee4fddde7d4db
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5421765e36ef3e8e744e118206dafcb2bb582cc2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720511"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211935"
 ---
 # <a name="cyclicentanglinglayer-function"></a>CyclicEntanglingLayer 関数
 
 名前空間: [Microsoft. Quantum の e ラーニング](xref:Microsoft.Quantum.MachineLearning)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum.](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 指定された軸に沿って1つの制御された回転の配列を返します。 qubits のレジスタで周期的に配置され、個別のモデルパラメーターによってパラメーター化されます。
