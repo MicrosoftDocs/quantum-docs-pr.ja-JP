@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.IntAsDouble
 title: IntAsDouble 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: IntAsDouble
 qsharp.summary: Converts a given integer to an equivalent double-precision floating-point number.
-ms.openlocfilehash: 195c94480c0a121227bd70fa6d13489b6d71b770
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 03658ab98296a52347bf27970753ba2ec5bd676a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713447"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214094"
 ---
 # <a name="intasdouble-function"></a>IntAsDouble 関数
 
 名前空間: [Microsoft. Quantum. 変換](xref:Microsoft.Quantum.Convert)
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 指定した整数を等価の倍精度浮動小数点数に変換します。

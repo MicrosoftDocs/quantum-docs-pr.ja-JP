@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.DoubleAsStringWithFormat
 title: DoubleAsStringWithFormat 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: DoubleAsStringWithFormat
 qsharp.summary: Converts a given double-precision floating-point number to an equivalent string representation, using the given format.
-ms.openlocfilehash: 2d5caa6172e1b4c66fabd560024f07c7df6dd7e4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e2c2f8692d2ef63510c36777aef83699339b774e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713517"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214179"
 ---
 # <a name="doubleasstringwithformat-function"></a>DoubleAsStringWithFormat 関数
 
 名前空間: [Microsoft. Quantum. 変換](xref:Microsoft.Quantum.Convert)
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 指定した書式を使用して、指定した倍精度浮動小数点数を等価の文字列形式に変換します。

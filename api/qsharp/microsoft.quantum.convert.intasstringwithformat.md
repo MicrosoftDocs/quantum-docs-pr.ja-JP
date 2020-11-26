@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.IntAsStringWithFormat
 title: IntAsStringWithFormat 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: IntAsStringWithFormat
 qsharp.summary: Converts a given integer number to an equivalent string representation, using the given format.
-ms.openlocfilehash: 3618eb4c60d5a8e81e79e05f1af886d6c6f1fb1d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ff9812b0e2d256fc5212a40b39dc65e69a8a6b7a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713428"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214077"
 ---
 # <a name="intasstringwithformat-function"></a>IntAsStringWithFormat 関数
 
 名前空間: [Microsoft. Quantum. 変換](xref:Microsoft.Quantum.Convert)
 
-パック [](https://nuget.org/packages/)
+Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア
 
 
 指定した書式を使用して、指定した整数値を等価の文字列形式に変換します。
