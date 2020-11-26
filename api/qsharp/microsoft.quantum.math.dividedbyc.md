@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.DividedByC
 title: 区分 Dedbyc 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: DividedByC
 qsharp.summary: Returns the quotient of two inputs.
-ms.openlocfilehash: 15a0a2fa686130b7290ccd145e243bd34a9f285f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 676ba38a129777131afc072ba2787efed0ba23c4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723806"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228561"
 ---
 # <a name="dividedbyc-function"></a>区分 Dedbyc 関数
 
 名前空間: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 2つの入力の商を返します。
