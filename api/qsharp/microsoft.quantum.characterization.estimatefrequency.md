@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.EstimateFrequency
 title: EstimateFrequency 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: EstimateFrequency
 qsharp.summary: Given a preparation and measurement, estimates the frequency with which that measurement succeeds (returns `Zero`) by performing a given number of trials.
-ms.openlocfilehash: 83589637a7bfa328812207271844411f57d42097
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 30b21a8e86eb5a4dd8dd8207dbdc6a0970308319
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715085"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216253"
 ---
 # <a name="estimatefrequency-operation"></a>EstimateFrequency 操作
 
 名前空間: [Microsoft. 量子. 特性](xref:Microsoft.Quantum.Characterization)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 準備と測定値を指定すると、指定された数の試行回数を実行することで、測定が成功する頻度 (を返します) を推定し `Zero` ます。
@@ -35,7 +35,7 @@ operation EstimateFrequency (preparation : (Qubit[] => Unit), measurement : (Qub
 入力レジスタに特定の状態 $ \rho $ を準備する、$ $P の操作。
 
 
-### <a name="measurement--qubit--__invalidresult__"></a>測定値: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] = __無効 <Result>__ > 
+### <a name="measurement--qubit--__invalidresult__"></a>測定値: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] =__無効 <Result>__> 
 
 対象の測定値を表す $ $M 演算。
 

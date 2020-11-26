@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyWith
 title: ApplyWith 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyWith
 qsharp.summary: Given two operations, applies one as conjugated with the other.
-ms.openlocfilehash: 61047ea2ea249e5a4d39b5747c542462c9632138
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fd46f84e30e72672967b90d92f507d2a5c438dba
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716947"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217307"
 ---
 # <a name="applywith-operation"></a>ApplyWith 操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 2つの操作を指定した場合、1つは conjugated として適用されます。
@@ -34,7 +34,7 @@ operation ApplyWith<'T> (outerOperation : ('T => Unit is Adj), innerOperation : 
 
 ## <a name="input"></a>入力
 
-### <a name="outeroperation--t--unit-adj"></a>outerOperation: t => [単位](xref:microsoft.quantum.lang-ref.unit) の形容詞
+### <a name="outeroperation--t--unit--is-adj"></a>outerOperation: ' t => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞です
 
 $ $V を共役するために使用する必要がある操作 $U $。 外部操作 $U $ は adjointable である必要があることに注意してください。ただし、制御可能である必要はありません。
 

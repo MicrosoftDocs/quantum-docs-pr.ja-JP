@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.RobustPhaseEstimation
 title: RobustPhaseEstimation 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: RobustPhaseEstimation
 qsharp.summary: Performs the robust non-iterative quantum phase estimation algorithm for a given oracle `U` and eigenstate, and provides a single real-valued estimate of the phase with variance scaling at the Heisenberg limit.
-ms.openlocfilehash: d04ee578c0e6f916e9a4da451075b79e0630c70a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3e6774e2fe348668840cdc08fe3a070ec3d82a6d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92714940"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216083"
 ---
 # <a name="robustphaseestimation-operation"></a>RobustPhaseEstimation 操作
 
 名前空間: [Microsoft. 量子. 特性](xref:Microsoft.Quantum.Characterization)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 指定された oracle および eigenstate に対して、反復的ではない堅牢なクォンタムフェーズの推定アルゴリズムを実行 `U` し、ハイゼンベルグ limit での差異のスケーリングにより、フェーズの1つの実際の値の見積もりを提供します。
@@ -54,6 +54,6 @@ $ Act を $U するクォンタムレジスタ。 Eigenstate $ \ket{\phi} $ of $
 
 クエリ数が多い場合、$/phi $ を満たす $/phi $ に対する標準偏差の下限を Cramer-Rao します (クエリの数は $/シグマ)。この値を超えると、クエリは {# of queries} $ となります。
 
-## <a name="references"></a>関連項目
+## <a name="references"></a>リファレンス
 
 - 堅牢なフェーズ推定 Shelby Kimmel、Guang Hao Low、Theodore J 氏によるユニバーサル Single-Qubit Gate-Set の堅牢な調整 https://arxiv.org/abs/1502.02677

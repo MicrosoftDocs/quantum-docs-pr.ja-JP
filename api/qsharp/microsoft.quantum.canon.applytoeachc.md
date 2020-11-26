@@ -1,37 +1,37 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToEachC
 title: Applytoall c 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToEachC
 qsharp.summary: Applies a single-qubit operation to each element in a register. The modifier `C` indicates that the single-qubit operation is controllable.
-ms.openlocfilehash: dfa18b6eb7a2c42fa2982994a2fc92170b52599c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 535f815503e20b5cee35f3f273a714203a4baf12
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717563"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217783"
 ---
 # <a name="applytoeachc-operation"></a>Applytoall c 操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 レジスタ内の各要素に単一の qubit 演算を適用します。
 修飾子は、 `C` single qubit 操作が制御可能であることを示します。
 
 ```qsharp
-operation ApplyToEachC<'T> (singleElementOperation : ('T => Unit is Ctl), register : 'T[]) : Unit
+operation ApplyToEachC<'T> (singleElementOperation : ('T => Unit is Ctl), register : 'T[]) : Unit is Ctl
 ```
 
 
 ## <a name="input"></a>入力
 
-### <a name="singleelementoperation--t--unit-ctl"></a>singleElementOperation: t => [ユニット](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="singleelementoperation--t--unit--is-ctl"></a>singleElementOperation: t => [単位](xref:microsoft.quantum.lang-ref.unit)  は Ctl です
 
 各 qubit に適用する操作。
 

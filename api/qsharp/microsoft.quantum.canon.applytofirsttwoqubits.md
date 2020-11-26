@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToFirstTwoQubits
 title: ApplyToFirstTwoQubits 操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToFirstTwoQubits
 qsharp.summary: Applies an operation to the first two qubits in the register.
-ms.openlocfilehash: aad07889c0dbf2329304c98b06dbd0c225df8a81
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e4f1eb396efb390c7470ea2aaf5c3b5be60b8c1b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717311"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217409"
 ---
 # <a name="applytofirsttwoqubits-operation"></a>ApplyToFirstTwoQubits 操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 レジスタ内の最初の2つの qubits に操作を適用します。

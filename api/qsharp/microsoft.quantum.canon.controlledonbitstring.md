@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ControlledOnBitString
 title: Control/Bitstring 関数
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ControlledOnBitString
 qsharp.summary: Returns a unitary operation that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
-ms.openlocfilehash: ca5a6e116eff187060f7a160e42836b170f0362d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9435406506fc99fe211f5dce628b21c18ee4f9fe
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716443"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216661"
 ---
 # <a name="controlledonbitstring-function"></a>Control/Bitstring 関数
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 制御レジスタの状態が指定したビットマスクに対応する場合に、ターゲットレジスタに oracle を適用する、ユニタリ操作を返します。
@@ -39,13 +39,13 @@ function ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj +
 指定されたユニタリ操作を制御するビット文字列。
 
 
-### <a name="oracle--t--unit-adj--ctl"></a>oracle: t => [ユニット](xref:microsoft.quantum.lang-ref.unit) の調整 + Ctl
+### <a name="oracle--t--unit--is-adj--ctl"></a>oracle: ' t => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞 + Ctl です
 
 ターゲットレジスタに適用されるユニタリ操作。
 
 
 
-## <a name="output--qubitt--unit-adj--ctl"></a>出力: ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[], ' t) => [単位](xref:microsoft.quantum.lang-ref.unit) の形容詞 + Ctl
+## <a name="output--qubitt--unit--is-adj--ctl"></a>出力: ([Qubit](xref:microsoft.quantum.lang-ref.qubit)[], ' t) => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞 + Ctl です
 
 `oracle`コントロールのレジスタの状態がビットマスクに対応している場合に、ターゲットのレジスタに適用されるユニタリ操作 `bits` 。
 

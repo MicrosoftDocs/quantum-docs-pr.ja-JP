@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.Delay
 title: 遅延操作
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Delay
 qsharp.summary: Applies a given operation with a delay.
-ms.openlocfilehash: f9f0e5c3120eb69bd7431d52d6cde5e846ffbe4d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4f45527faa49f79fccff3892e928fed09f9f0bc8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716317"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216508"
 ---
 # <a name="delay-operation"></a>遅延操作
 
 名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)
 
-パック [](https://nuget.org/packages/)
+パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 指定された操作を遅延付きで適用します。
