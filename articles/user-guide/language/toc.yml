@@ -1,4 +1,12 @@
-- name: Q# の型
-  href: types.md
+- name: 概要
+  href: index.md
+- name: プログラムの構造
+  href: programstructure/toc.yml
+- name: ステートメント
+  href: statements/toc.yml
 - name: 式
-  href: expressions.md
+  href: expressions/toc.yml
+- name: 型システム
+  href: typesystem/toc.yml
+- name: 文法
+  href: grammar.md
