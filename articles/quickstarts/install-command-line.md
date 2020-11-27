@@ -10,12 +10,12 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a6823888dcbe8cf79f0045d2615fe8b889dcc7c3
-ms.sourcegitcommit: a13c7c86fd52a05cbf129b8dd713d6586ca1cc2c
+ms.openlocfilehash: eeb567dedc1b8123b32faf7ed3a42bb51f16a7d2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93376424"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228731"
 ---
 # <a name="develop-with-no-locq-applications-in-an-ide"></a>IDE で Q# アプリケーションを使用して開発する
 
@@ -63,7 +63,7 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 
 1. **[表示]**  ->  **[コマンド パレット]** をクリックして、 **[Q#: 新しいプロジェクトの作成]** を選択します。
 2. **[Standalone console application]\(スタンドアロン コンソール アプリケーション\)** をクリックします。
-3. プロジェクトを保存する場所に移動して、 **[プロジェクトの作成]** をクリックします。
+3. プロジェクトを保存する場所に移動します。 プロジェクト名を入力し、 **[プロジェクトの作成]** をクリックします。
 4. プロジェクトが正常に作成されたら、右下にある **[Open new project...]\(新しいプロジェクトを開く...\)** をクリックします。
 
 プロジェクトを確認します。 `Program.qs` という名前のソース ファイルがあるはずです。これは、コンソールにメッセージを表示する簡単な演算を定義する Q# プログラムです。
