@@ -10,12 +10,12 @@ uid: microsoft.quantum.install
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f0c3df1998f9b64ff6544867b83a7afe52b6f46d
-ms.sourcegitcommit: fd57a845d013ae4578715d04b1ed1edc1c8ff6b4
+ms.openlocfilehash: c6e128ea8b3845336fb692d2bceefda998b935d9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870823"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228836"
 ---
 # <a name="setting-up-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum 開発キット (QDK) の設定
 
@@ -45,7 +45,7 @@ QDK は、次の 3 つの方法で使用できます。
         <th width=10%>&nbsp;</th>
         <th>&nbsp;</th>
         <th align="center" width=18%><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS Code<br>(2019 以降)</b></th>
-        <th align="center" width=18%><img src="~/media/vs_studio.png" alt="VS Studio" width="50"/><br><b>VS Studio<br>(2019 以降)</b></th>
+        <th align="center" width=18%><img src="~/media/vs_studio.png" alt="Visual Studio" width="50"/><br><b>Visual Studio<br>(2019 以降)</b></th>
         <th align="center" width=18%><img src="~/media/jupyter-wht.png" alt="jupyter install" width="65"/><br><b>Jupyter Notebook</b></th>
         <th align="center" width=18%><img src="~/media/blank.png" alt="blank spacer" width="65"/><br><b>コマンド ライン</b></th>
     </tr>
@@ -70,7 +70,7 @@ QDK は、次の 3 つの方法で使用できます。
         <td align="left"><b>Q# および Python</b></td>
         <td align="center"><a href="xref:microsoft.quantum.install.python">インストール</a></td>
         <td align="center"><a href="xref:microsoft.quantum.install.python">インストール</a></td>
-        <td align="center"><a href="xref:microsoft.quantum.install.jupyter">インストール</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">インストール</a></td>
         <td align="center"><a href="xref:microsoft.quantum.install.python">インストール</a></td>
     </tr>
     <tr>

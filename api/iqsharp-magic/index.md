@@ -4,14 +4,14 @@ description: IQ# Jupyter カーネルで使用できるマジック コマンド
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
 ms.author: ryansha
-ms.date: 10/26/2020
+ms.date: 11/25/2020
 ms.topic: article
-ms.openlocfilehash: a615c6dac6cdb80ff84cec2b0a3c99fc700efb8e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3b6a46b67207953b0e3dd89b1dd083593b374586
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691140"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191841"
 ---
 # <a name="iq-magic-commands"></a>IQ# マジック コマンド
 | マジック コマンド | まとめ |
