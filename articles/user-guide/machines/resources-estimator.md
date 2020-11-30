@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
+ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691863"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96318492"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Quantum Development Kit (QDK) リソースの推定機能
 
@@ -131,7 +131,7 @@ namespace Quantum.MyProgram
 |__R__    |`T`、Clifford、および P# li の各操作を除く、任意の1つの qubit 回転の実行回数。  |
 |__T__    |操作の実行回数 `T` とその活用 ( `T` 操作、T_x = h. t .h、T_y = Hy. t. hy など)。  |
 |__[奥行]__|操作によって実行されるクォンタム回線の深さ Q# ( [下記](#depth-width-and-qubitcount)参照)。 既定では、深さメトリックはゲートだけをカウントし `T` ます。 詳細については、「 [深度カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)」を参照してください。   |
-|__Width__|操作によって実行されるクォンタム回線の幅 Q# ( [下記](#depth-width-and-qubitcount)参照)。 既定では、深さメトリックはゲートだけをカウントし `T` ます。 詳細については、「 [深度カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)」を参照してください。   |
+|__Width__|操作によって実行されるクォンタム回線の幅 Q# ( [下記](#depth-width-and-qubitcount)参照)。 既定では、深さメトリックはゲートだけをカウントし `T` ます。 詳細については、「 [Width カウンタ](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)」を参照してください。   |
 |__QubitCount__    |操作の実行中に割り当てられた qubits の最大数の下限 Q# 。 このメトリックは、 __深さ__ と互換性がない場合があります (下記参照)。  |
 |__BorrowedWidth__    |操作内で借用される qubits の最大数 Q# 。  |
 
