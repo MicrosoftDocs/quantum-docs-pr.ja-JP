@@ -1,0 +1,14 @@
+- name: Q# での型システム
+  href: index.md
+- name: 量子データ型
+  href: quantumdatatypes.md
+- name: 不変性
+  href: immutability.md
+- name: 操作と関数
+  href: operationsandfunctions.md
+- name: シングルトン タプルの等価性
+  href: singletontupleequivalence.md
+- name: サブタイプと変性
+  href: subtypingandvariance.md
+- name: 型のパラメーター化
+  href: typeparameterizations.md
