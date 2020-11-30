@@ -9,44 +9,26 @@ uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 81f31a531a1b50ead332bb578ccf392ddced9e8d
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: 979e468cc743bd9125eaba0b71f794977c914447
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771381"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231759"
 ---
 # <a name="the-no-locq-user-guide"></a>Q# ユーザー ガイド
 
 Q# ユーザー ガイドへようこそ。 
 
-このガイドの様々なトピックでは、Q# 言語の主要概念と、量子プログラムを記述するために必要なすべての情報について説明します。
+このガイドのさまざまなトピックでは、Q#を使用して、量子プログラムを開発するための基本事項をいくつか紹介します。
+
+Q# 量子プログラミング言語の完全な仕様とドキュメントについては、[Q# 言語ガイド](xref:microsoft.quantum.qsharp.index)を参照します。 
 
 ## <a name="user-guide-contents"></a>ユーザー ガイドの内容
 
-- [Q# の基本](xref:microsoft.quantum.guide.basics):Q# プログラミング言語の目的と機能に関する概要について説明します。 
+- [Q# プログラム](xref:microsoft.quantum.guide.programs):Q# での量子プログラムの概要について説明します。 
 
 - [Q# プログラム実行する方法](xref:microsoft.quantum.guide.host-programs): Q# プログラムの実行方法について説明します。また、コマンド ライン、Q# Jupyter Notebook、または Python や .NET 言語で記述された従来のホスト プログラムから、プログラムを呼び出すためのさまざまな方法の概要を示します。
-
-### <a name="no-locq-language"></a>Q# 言語
-
-- [Q#の型](xref:microsoft.quantum.guide.types):Q# の型モデルを紹介し、型を指定して操作するための構文について説明します。
-
-- [型式](xref:microsoft.quantum.guide.expressions):Q# の各型の値の指定、参照、結合、および操作を行う方法について詳しく説明します。 
-
-### <a name="using-no-locq"></a>Q# の使用
-
-- [Q# のファイル構造](xref:microsoft.quantum.guide.filestructure):`*.qs` Q# ファイルの構造と構文について説明します。
-
-- [演算と関数](xref:microsoft.quantum.guide.operationsfunctions):Q# 言語の 2 つの呼び出し可能な型について詳しく説明します。すなわち、"*演算*" (量子ビット レジスタに対するアクションを含みます) と "*関数*" (従来の情報と厳密に連携して機能します) です。 
-    ここでは、adjoint および制御されたバージョンの量子操作を含め、これらを定義して呼び出す方法について説明します。
-
-- [変数](xref:microsoft.quantum.guide.variables): Q# プログラム内における変数の役割と、それらを効果的に活用する方法について説明します。 
-    たとえば、バインド スコープに関する情報に加えて、変更できない変数と変更可能な変数の違い、およびそれらを割り当てまたは再割り当てする方法についても説明します。
-
-- [量子ビットの操作](xref:microsoft.quantum.guide.qubits):個々の量子ビットと量子ビットの系を扱うために使用する Q# の機能について説明します。具体的には、それらの割り当て、それらに対する演算の実行、それらの測定です。 
-
-- [制御フロー](xref:microsoft.quantum.guide.controlflow):Q# で使用できるプログラミング制御フロー パターンについて詳しく説明します。これには、多くの標準的な手法 (条件付き処理、*for* ループ、*while* ループなど) に加え、量子固有の "*成功するまで繰り返す*" パターンが含まれます。
 
 - [テストとデバッグ](xref:microsoft.quantum.guide.testingdebugging):自分のコードが想定どおりに動作していることを確かめるためのいくつかの手法について説明します。 
     量子情報の一般的な不透明性により、量子プログラムのデバッグには特殊な手法が必要になる場合があります。 

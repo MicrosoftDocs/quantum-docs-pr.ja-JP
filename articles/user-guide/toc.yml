@@ -1,13 +1,13 @@
 - name: 概要/内容
   href: index.md
-- name: Q# の基本
-  href: basics.md
+- name: Q# プログラム
+  href: programs.md
 - name: Q# プログラムを実行する方法
   href: host-programs.md
-- name: Q# 言語
+- name: テストとデバッグ
+  href: testing-debugging.md
+- name: Q# 言語ガイド
   href: language/toc.yml
-- name: Q# を使用する
-  href: using-qsharp/toc.yml
 - name: シミュレーターとリソース エスティメーター
   href: machines/toc.yml
 - name: Q# ライブラリ
