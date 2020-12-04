@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
-ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
+ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
+ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96318492"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604645"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Quantum Development Kit (QDK) リソースの推定機能
 
@@ -28,9 +28,9 @@ ms.locfileid: "96318492"
 
 ### <a name="invoking-the-resources-estimator-from-c"></a>C からリソースの推定を呼び出す# 
 
-他のターゲット マシンと同様に、最初に `ResourceEstimator` クラスのインスタンスを作成し、それを操作の `Run` メソッドの最初のパラメーターとして渡します。
+他のターゲット マシンと同様に、最初に `ResourcesEstimator` クラスのインスタンスを作成し、それを操作の `Run` メソッドの最初のパラメーターとして渡します。
 
-`QuantumSimulator` クラスとは異なり、`ResourceEstimator` クラスでは <xref:System.IDisposable> インターフェイスが実装されていないため、これを `using` ステートメント内で囲む必要はありません。
+`QuantumSimulator` クラスとは異なり、`ResourcesEstimator` クラスでは <xref:System.IDisposable> インターフェイスが実装されていないため、これを `using` ステートメント内で囲む必要はありません。
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
