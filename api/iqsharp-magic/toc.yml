@@ -1,3 +1,5 @@
+- href: index.md
+  name: IQ# マジック コマンド
 - href: azure.connect.md
   name: '% azure.connect マジック コマンド'
 - href: azure.execute.md
