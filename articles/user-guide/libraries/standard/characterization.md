@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 72af3f5517b272d6d8159b158103b5af91d266b5
+ms.sourcegitcommit: c48cdafccb3487bf93d67fa80cdc64768445b691
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692152"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940888"
 ---
 # <a name="quantum-characterization-and-statistics"></a>クォンタムの特性と統計 #
 
@@ -22,7 +22,7 @@ ms.locfileid: "92692152"
 これは、クォンタムシステムのすべての測定値が1ビットの情報を生成するため、困難です。
 このような概念を表すために必要な多くの情報をユーザーが収集できるように、1つのクォンタム状態だけを使用して、eigenvalue を学習するには、多くの測定の結果を合成する必要があります。
 クォンタムの状態は特に厄介です。これは、 [複製なしの定理](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) は、状態のコピーを作成できるようにするため、状態の1つのコピーから任意のクォンタム状態を学習する方法がないことを示すためです。
-ユーザーからのクォンタム状態のこの難読化は、" Q# クォンタムプログラム" に対して状態を公開したり定義 *is* したりしないという事実に反映されます。
+ユーザーからのクォンタム状態のこの難読化は、" Q# クォンタムプログラム" に対して状態を公開したり定義したりしないという事実に反映されます。
 このため、操作と状態を黒色のボックスとして扱うことによって、クォンタムの特性を解決します。このアプローチは、クォンタムの特性、検証、検証 (QCVV) の実験的プラクティスによく似ています。
 
 特性は、前に説明した他の多くのライブラリとは異なります。
@@ -56,7 +56,7 @@ ms.locfileid: "92692152"
 
 Eigenstate ではない入力状態が指定されている場合、たとえば $U (m) \ket{\phi \_ j} = e ^ {im/phi \_ j} $ の場合、フェーズ推定のプロセスによって、クォンタム状態が1つのエネルギー eigenstate に対して非決定的に指示されます。  最終的に収束される eigenstate は、観測されたを生成する可能性が最も高い eigenstate です `Result` 。
 
-具体的には、PE の1つのステップで、状態が \begin{align} \ sum_j \ sqrt{/pr (\ phi j)} \ket{\phi j}/map (\ phi j) に対して、次の非ユニタリ変換が実行されます。 \_ \_ \_ \_ } \ sqrt{\ Pr (\ text{result} | \ phi \_ j)} \Ket{\phi \_ j}} {\ sqrt{/pr (\ phi \_ j) \ sum \_ j/pr (\ text{result} | \ phi \_ j)}}。
+具体的には、PE の1つのステップで、状態が \begin{align} \ sum_j \ sqrt{/pr (\ phi j)} \ket{\phi j}/map (\ phi j) に対して、次の非ユニタリ変換が実行されます。 \_ \_ \_ \_ } \ sqrt{\ Pr (\ text{result} | \ phi \_ j)} \Ket{\phi \_ j}} {\ sqrt{/pr (\ phi \_ j) \ sum \_ k \ pr (\ text{result} |/phi \_ k)}}
 \end{align} このプロセスは複数の値に対して反復処理さ `Result` れるため、$ \ prod_k \ Pr (\ text{result} k | \ phi j) $ の最大値を持たない eigenstates \_ \_ は指数関数的に抑制されます。
 その結果、推論プロセスは、実験が適切に選択された場合に、1つの eigenvalue を持つ状態に収束する傾向があります。
 
