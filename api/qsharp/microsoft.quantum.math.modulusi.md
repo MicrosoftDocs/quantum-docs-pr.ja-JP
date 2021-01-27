@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Math.ModulusI
 title: ModulusI 関数
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ModulusI
 qsharp.summary: Computes the canonical residue of `value` modulo `modulus`.
-ms.openlocfilehash: 6bbb3877b93e1fc6b38f85a716ba617311c7cfba
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 7bad044db9e2229c85cb3909dc4802bceaee6382
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96227779"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847304"
 ---
 # <a name="modulusi-function"></a>ModulusI 関数
 
@@ -47,4 +47,4 @@ Residues の取得に使用する剰余。正の整数である必要があり�
 
 ## <a name="remarks"></a>解説
 
-この関数は、演算子が `%` C# および Q # で動作する方法とは異なり、 `modulus - 1` 値が負の場合でも、結果は常に 0 ~ の正の整数になります。
+この関数の動作は、 `%` C# および Q # での演算子の動作によって異なります。結果は、 `modulus - 1` 値が負の場合でも、常に 0 ~ の範囲の負でない整数になります。

@@ -1,20 +1,20 @@
 ---
 title: クォンタムリソースの推定-Quantum 開発キット
 description: クォンタムコンピューターで特定の操作のインスタンスを実行するために必要なリソースを推定する、Microsoft QDK リソースの推定機能について説明し Q# ます。
-author: anpaz-msft
+author: anpaz
 ms.author: anpaz
 ms.date: 06/26/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
-ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
+ms.openlocfilehash: c3aa94c8b34ad7247fbdeab4bf4dcb96ce746014
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96604645"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847460"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Quantum Development Kit (QDK) リソースの推定機能
 
@@ -123,14 +123,14 @@ namespace Quantum.MyProgram
 
 リソースの推定機能では、次のメトリックが追跡されます。
 
-|メトリック|説明|
+|指標|説明|
 |----|----|
 |__CNOT__    |操作の実行回数 `CNOT` (制御された Pa Li X 操作とも呼ばれます)。|
 |__QubitClifford__ |任意の1つの qubit Clifford および P# li 操作の実行回数。|
 |__測定値__    |測定の実行回数。  |
 |__R__    |`T`、Clifford、および P# li の各操作を除く、任意の1つの qubit 回転の実行回数。  |
 |__T__    |操作の実行回数 `T` とその活用 ( `T` 操作、T_x = h. t .h、T_y = Hy. t. hy など)。  |
-|__[奥行]__|操作によって実行されるクォンタム回線の深さ Q# ( [下記](#depth-width-and-qubitcount)参照)。 既定では、深さメトリックはゲートだけをカウントし `T` ます。 詳細については、「 [深度カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)」を参照してください。   |
+|__Depth__|操作によって実行されるクォンタム回線の深さ Q# ( [下記](#depth-width-and-qubitcount)参照)。 既定では、深さメトリックはゲートだけをカウントし `T` ます。 詳細については、「 [深度カウンター](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)」を参照してください。   |
 |__Width__|操作によって実行されるクォンタム回線の幅 Q# ( [下記](#depth-width-and-qubitcount)参照)。 既定では、深さメトリックはゲートだけをカウントし `T` ます。 詳細については、「 [Width カウンタ](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)」を参照してください。   |
 |__QubitCount__    |操作の実行中に割り当てられた qubits の最大数の下限 Q# 。 このメトリックは、 __深さ__ と互換性がない場合があります (下記参照)。  |
 |__BorrowedWidth__    |操作内で借用される qubits の最大数 Q# 。  |
@@ -143,8 +143,8 @@ namespace Quantum.MyProgram
 
 次のメトリックがレポートされます。
 
-__深さ:__ ルート操作では、特定のゲート時間を想定して実行されます。
-操作を実行した場合は、操作の開始時と終了時の最新の qubit 可用性時間との間で行われた操作時間の差。
+__深さ:__ ルート操作の実行に必要な場合は、構成されたゲート時間を前提とします。
+操作が呼び出された場合、または操作の開始時と終了時の最新の qubit の時間差。
 
 __幅:__ ルート操作の場合-実際に使用された qubits の数 (とその操作を呼び出します)。
 操作が呼び出された操作または後続の操作の場合-操作の開始時に既に使用されている qubits に加えて、使用された qubits の数。
@@ -157,9 +157,9 @@ __Qubitcount:__ ルート操作の場合-この操作を実行するのに十分
 
 2つの操作モードがサポートされています。 モードを選択するには、QCTraceSimulatorConfiguration. 最適化の深さを設定します。
 
-最適化の __深さ = true:__ QubitManager は、qubit の使用を要求されるたびに、新しい qubit が割り当てられないようにすることをお勧めします。 ルート操作の __深さ__ は、最小の深さ (下限) になります。 この深さでは、互換性のある __幅__ がレポートされます (両方とも同時に実現できます)。 この深さでは、この幅が最適でない可能性があることに注意してください。 再利用が想定されているため、ルート操作の場合、 __Qubitcount__ は Width よりも小さくなることがあります。
+最適化の __深さ = false:__ これは既定のモードです。 QubitManager は、qubits を再利用することをお勧めします。新たにリリースされた qubits を再利用して、新しいものを割り当てます。 ルート操作の __幅__ は、最小幅 (下限) になります。 互換性のある __深さ__ がレポートされます。 __Qubitcount__ は、借りていないことを前提として、ルート操作の __幅__ と同じになります。
 
-最適化の __深さ = false:__ QubitManager は、qubits を再利用することをお勧めします。新たにリリースされた qubits を再利用して、新しいものを割り当てます。 ルート操作の __幅__ は、最小幅 (下限) になります。 互換性のある __深さ__ がレポートされます。 __Qubitcount__ は、借りていないことを前提として、ルート操作の __幅__ と同じになります。
+最適化の __深さ = true:__ QubitManager は、実行中および実行後に実行される qubit の再利用とヒューリスティックベースの最適化では推奨されません。 ルート操作の __深さ__ は、最小の深さ (下限) になります。 この深さでは、互換性のある __幅__ がレポートされます (両方とも同時に実現できます)。 幅を最適化するために、プログラムで後で検出されたゲートが、プログラムの前に発生したゲートの前にスケジュールされている可能性があります。ただし、qubits は、深さが最小限になるように再利用されるようにスケジュールされています。 時間の値に基づいて qubits を再利用する場合は、ゲート時間を整数値として構成することをお勧めします。 __幅__ が最適であることは保証されていません。 詳細については、「トレーサーのホワイトペーパーの [幅と詳細](https://github.com/microsoft/qsharp-runtime/tree/main/src/Simulation/Simulators/QCTraceSimulator/Docs)」を参照してください。
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>測定結果の確率を指定する
 

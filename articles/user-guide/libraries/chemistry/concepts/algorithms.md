@@ -4,17 +4,17 @@ description: Trotter-Suzuki の数式と qubitization を使用して Hamiltonia
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eeaa13b99ab07ce22f8a3306a756bf7ac7cde65b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691884"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857592"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics のシミュレーション
 
@@ -28,7 +28,7 @@ Trotter – Suzuki 数式の背後にあるアイデアは単純なものです�
 特に、$H = \ sum_ {j = 1} ^ m H_j $ を Hamiltonian にします。
 次に、$ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ prod_ {j = 1} ^ m e ^ {-iH_j t} + O (m ^ 2 t ^ 2), $ $1 $t $。この近似値のエラーはごくわずかになります。
 $E ^ {-i H} $ が通常の指数の場合、この近似値のエラーは $O されません (m ^ 2 t ^ 2) $: 0 になります。
-このエラーは $e ^ {-iHt} $ が演算子指数であるために発生します。結果として、この数式を使用すると、$ terms _j $H ( *つまり* 、$H _j H_k \n e H_k H_j $ general) ではないことが原因でエラーが発生します。
+このエラーは $e ^ {-iHt} $ が演算子指数であるために発生します。結果として、この数式を使用すると、$ terms _j $H (*つまり*、$H _j H_k \n e H_k H_j $ general) ではないことが原因でエラーが発生します。
 
 $T $ が大きい場合でも、Trotter – Suzuki 式を使用して、短時間の一連の手順に分割することで、dynamics を正確にシミュレートできます。
 $R $ を時間の進化に使用されるステップの数にします。そのため、各時間ステップは、$t/r $ の時間に実行されます。 次に、$ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r)、$ $ は、$ $m t ^ 2/\ イプシロン $ として $r $ のスケールを設定した場合、$-イプシロン>$0 に対して最大 $/イプシロン $ にエラーを加えることを意味します。

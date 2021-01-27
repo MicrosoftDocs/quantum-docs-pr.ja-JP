@@ -4,23 +4,24 @@ description: NWChem 入力デッキを使用して、量子化学シミュレー
 author: cgranade
 ms.author: chgranad
 ms.date: 10/23/2018
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 986ff2c2ff144c57bd01ddeea0467d0168fd9334
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e0ec7dcbdccbab5c81177a4223c71fd3f2ce57d8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835759"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847778"
 ---
 # <a name="end-to-end-with-nwchem"></a>NWChem を使用したエンド ツー エンド #
 
 この記事では、Nw化学シミュレーションのゲート数を取得する例を、 [Nwchem](http://www.nwchem-sw.org/index.php/Main_Page) 入力デッキから順に見ていきます。
 この例に進む前に、Docker がインストールされていることを確認してください。 [インストールと検証のガイド](xref:microsoft.quantum.chemistry.concepts.installation)に従ってください。
 
-詳細情報:
+詳細:
 - [NWChem 入力デッキの構造](https://github.com/nwchemgit/nwchem/wiki/Getting-Started#input-file-structure)
     - [Quantum 開発キットで使用する入力デックコマンド](https://github.com/nwchemgit/nwchem/tree/main/contrib/quasar)
 - [化学ライブラリと依存関係のインストール](xref:microsoft.quantum.chemistry.concepts.installation)

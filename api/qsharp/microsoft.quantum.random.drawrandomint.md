@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Random.DrawRandomInt
 title: DrawRandomInt 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DrawRandomInt
 qsharp.summary: Draws a random integer in a given inclusive range.
-ms.openlocfilehash: f7b6cb75f761e4c45295245ed4bd4fb82c592809
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ebed7f52b7c4a8c538ed9d718c486b5aa94a0327
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192912"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851138"
 ---
 # <a name="drawrandomint-operation"></a>DrawRandomInt 操作
 
@@ -44,6 +44,14 @@ operation DrawRandomInt (min : Int, max : Int) : Int
 ## <a name="output--int"></a>出力: [Int](xref:microsoft.quantum.lang-ref.int)
 
 からまでの範囲に含まれる `min` 、 `max` 一様確率を含む整数。
+
+## <a name="example"></a>例
+
+次の Q # スニペットは、6辺をランダムにロールします。
+
+```qsharp
+let roll = DrawRandomInt(1, 6);
+```
 
 ## <a name="remarks"></a>解説
 

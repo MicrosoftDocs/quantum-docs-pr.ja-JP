@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumWalkByQubitization
 title: QuantumWalkByQubitization 関数
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: QuantumWalkByQubitization
 qsharp.summary: Converts a block-encoding reflection into a quantum walk.
-ms.openlocfilehash: ccef1bbf400e01800053777d0010acb7addaef53
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 8ffb6eb77a3f910d3064c4a3c90215d5d9a694aa
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192487"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851051"
 ---
 # <a name="quantumwalkbyqubitization-function"></a>QuantumWalkByQubitization 関数
 
@@ -44,7 +44,7 @@ $W `BlockEncodingReflection` 対象の $H 演算子をエンコードする $U $
 
 クォンタムウォーク $W $ はレジスタに対して共同で動作し、$ `a` `s` $H-pm e ^ {\ pm i\ sin ^ {-1} (H)} $ の範囲を含んでいます。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - Hamiltonian シミュレーション Qubitization Guang Hao Low、Isaac L. 語 https://arxiv.org/abs/1610.06546
 

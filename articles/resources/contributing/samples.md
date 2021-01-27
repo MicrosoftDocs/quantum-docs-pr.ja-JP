@@ -4,17 +4,17 @@ description: Microsoft Quantum Development Kit (QDK) にサンプルコードを
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.samples
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ae29614cc9c8bf965ea3cb373dc17470aec21252
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 0c940a4cf228c694a899988f469158b1bb6e2425
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759188"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847580"
 ---
 # <a name="contributing-samples-to-the-quantum-development-kit"></a>Quantum 開発キットに貢献するサンプル
 
@@ -67,7 +67,7 @@ microsoft/Quantum
 > [!div class="nextstepaction"]
 > [Chsh ゲームのサンプルのレンダリング方法を確認する](https://docs.microsoft.com/samples/microsoft/quantum/validating-quantum-mechanics/)
 
-このメタデータは、サンプル[YAML header](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html#yaml-header)で使用されている言語 (通常は、、、 `qsharp` `csharp` および `python` ) と、サンプルによってカバーされる製品 (通常は) を示す yaml ヘッダーとして提供され `qdk` ます。
+このメタデータは、サンプル[](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html#yaml-header)で使用されている言語 (通常は、、、 `qsharp` `csharp` および `python` ) と、サンプルによってカバーされる製品 (通常は) を示す yaml ヘッダーとして提供され `qdk` ます。
 
 :::code language="markdown" source="~/quantum/samples/algorithms/chsh-game/README.md" range="1-11":::
 

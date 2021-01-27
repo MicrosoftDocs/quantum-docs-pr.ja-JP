@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.BlockEncodingToReflection
 title: BlockEncodingToReflection 関数
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -10,12 +10,12 @@ qsharp.summary: >-
   Converts a `BlockEncoding` into an equivalent `BLockEncodingReflection`.
 
   That is, given a `BlockEncoding` unitary $U$ that encodes some operator $H$ of interest, converts it into a `BlockEncodingReflection` $U'$ that encodes the same operator, but also satisfies $U'^\dagger = U'$. This increases the size of the auxiliary register of $U$ by one qubit.
-ms.openlocfilehash: 742d4f5623c7c26810998f6c96e2c7b05cc452d3
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: bada0dcc54d2a8d67cf7383d7153c7f46a4a8415
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96225348"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847259"
 ---
 # <a name="blockencodingtoreflection-function"></a>BlockEncodingToReflection 関数
 
@@ -50,7 +50,7 @@ $U ' $ はレジスタに対して共同で動作し、 `a` `s` $H $ をブロ�
 
 これにより、$U $ の補助レジスタのサイズが 1 qubit だけ増加します。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - Hamiltonian シミュレーション Qubitization Guang Hao Low、Isaac L. 語 https://arxiv.org/abs/1610.06546
 

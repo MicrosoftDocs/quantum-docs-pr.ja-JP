@@ -1,6 +1,6 @@
 ---
 title: 複数の qubits の説明: 2 つ以上の qubits に対して操作を実行する方法について説明します。
-author: bradben uid: benbra: v-ms. date: 12/11/2017 ミリ秒。 topic: article no loc (場所: 記事の場所):
+author: bradben uid: benbra: v-ミリ秒。日付: 12/11/2017 ミリ秒。トピック: 概念的な場所はありません。::
 - "Q#"
 - "$$v"
 - "$$"
@@ -105,10 +105,10 @@ author: bradben uid: benbra: v-ms. date: 12/11/2017 ミリ秒。 topic: article 
 $ $ $ $ この構築を使用して、n qubits のクォンタムの状態がディメンション 2 ^ n の単位ベクトルで表されるのが一般的であることがわかります。  ベクター
 
 $$
-\begin{bmatrix}\alpha _ { 00 } 01 \\\\ 10 \alpha   _ { } \\\\ \alpha _ { 11 } \\\\ \alpha   _ { }  \end{bmatrix}
+\begin{bmatrix}\alpha _{ 00 } 01 \\\\ 10 \alpha_ { } \\\\ \alpha _{ 11 } \\\\ \alpha_ { }  \end{bmatrix}
 $$
 
-$ | \alpha _ { 00 } | ^ 2 | + \alpha _ { 01 } | ^ 2 + | \alpha _ { 10 } | ^ 2 | + \alpha _ { 11 } | ^ 2 = 1 $ の場合、2つの qubits のクォンタム状態を表します。 1つの qubits の場合と同様に、複数の qubits のクォンタム状態ベクトルには、システムの動作を説明するために必要なすべての情報が格納されます。
+$ | \alpha _{ 00 } | ^ 2 | + \alpha_ { 01 } | ^ 2 + | \alpha _{ 10 } | ^ 2 | + \alpha_ { 11 } | ^ 2 = 1 $ の場合、2つの qubits のクォンタム状態を表します。 1つの qubits の場合と同様に、複数の qubits のクォンタム状態ベクトルには、システムの動作を説明するために必要なすべての情報が格納されます。
 
 2つの独立した qubits があるとします。1つは状態で、もう1つは $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ 状態で2番目の qubits $ \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} $ です。    
 
@@ -124,17 +124,17 @@ $$\psi\otimes\phi = \begin{bmatrix}1/ \sqrt { 2 } \\\\ 0 \\\\ 0 \\\\ 1/ \sqrt { 
 
 このような2つの qubit 状態は、シングル qubit 状態の管理されていない製品として記述することはできません。2つの qubits は、 [*あり*](https://en.wikipedia.org/wiki/Quantum_entanglement)であると言います。  疎に言うと、クォンタムの状態は、1つの qubit 状態の状態を維持したものと考えることはできません。そのため、状態が保持する情報は、qubit のいずれかに限定されません。  この情報は、2つの状態の間の相関関係でローカルではなく保存されます。  このような非局所情報は、古典的なコンピューティングに対するクォンタムコンピューティングの主要な特徴の1つであり、クォンタムの電話と[クォンタムのエラー修正](xref:microsoft.quantum.libraries.error-correction)[を含むさまざま](https://github.com/microsoft/Quantum/tree/main/samples/getting-started/teleportation)なクォンタムプロトコルに不可欠です。
 
-## <a name="measuring-two-qubit-states"></a>2つのビット状態の測定 ##
+## <a name="measuring-two-qubit-states"></a>Two-Qubit の状態の測定 ##
 2つのビット状態の測定は、単一の qubit 測定と非常によく似ています。 状態の測定
 
 $$
     \begin{bmatrix}
-        \alpha_ { 00 } 01 \\\\ \alpha _ { }\\\\ 
-        \alpha_ { 10 } 11 \\\\ \alpha _ {}
+        \alpha_{ 00 } 01 \\\\ \alpha_ { }\\\\ 
+        \alpha_{ 10 } 11 \\\\ \alpha_ {}
     \end{bmatrix}
 $$
 
-確率 $ が $ $ | \alpha _ { 00 } | ^ 2、 $ $ 01 $ が $ 確率が 01 ^ 2、10が確率が 10 ^ 2、および確率が 11 ^ 2 である00を生成します。 | \alpha _ { } | $ $ $ $ | \alpha _ { } | $ $ $ $ | \alpha _ { } | $ 変数 $ \alpha _ { 00 } 、 \alpha _ { 01 } 、 \alpha _ { 10 } 、 $ および $ 11 は、この接続を明確にするために意図的に名前が付けられていました。 \alpha _ { } $ 測定の後、結果が00の場合、 $ $ 2 つの qubit システムのクォンタムの状態が折りたたまれ、現在の状態になります。
+確率 $ が $ $ | \alpha _{ 00 } | ^ 2、 $ $ 01 $ が $ 確率が 01 ^ 2、10が確率が 10 ^ 2、および確率が 11 ^ 2 である00を生成します。 | \alpha_ { } | $ $ $ $ | \alpha _{ } | $ $ $ $ | \alpha_ { } | $ 変数 $ \alpha _{ 00 } 、 \alpha_ { 01 } 、 \alpha _{ 10 } 、 $ および $ 11 は、この接続を明確にするために意図的に名前が付けられていました。 \alpha_ { } $ 測定の後、結果が00の場合、 $ $ 2 つの qubit システムのクォンタムの状態が折りたたまれ、現在の状態になります。
 
 $$
     モスクワ \equiv
@@ -193,7 +193,7 @@ $$
 
 ここでも、直感に従っています。
 
-## <a name="two-qubit-operations"></a>2つの Qubit 操作
+## <a name="two-qubit-operations"></a>Two-Qubit の操作
 シングル qubit の場合と同様に、すべてのユニタリ変換は、qubit で有効な操作です。 一般に、 $ n qubits での $ 長さの変換は、 $ サイズ 2 ^ n $ $ \times 2 ^ n $ (サイズ 2 ^ n のベクトルで動作するように、 $ $ $ u ^ { -1 } = u ^ \dagger $ ) のマトリックス U です。
 たとえば、CNOT (制御された) ゲートは、一般的に使用される2つの qubit ゲートであり、次のような種類の表で表されています。
 
@@ -240,7 +240,7 @@ $$
 Single qubit の場合と同様に、2つの qubit ゲートセットは、 $ \times $ このセットから任意の有効桁数になるゲートの製品によって近似される 4 4 つのすべての粒度行列を持つことができます。
 ユニバーサルゲートセットの一例として、Hadamard ゲート、T ゲート、CNOT gate があります。 これらのゲートの製品を作成することによって、2つの qubits 上のすべてのユニタリ行列を概算することができます。
 
-## <a name="many-qubit-systems"></a>多対ビットシステム
+## <a name="many-qubit-systems"></a>Many-Qubit システム
 ここでは、2つのビットケースで調査したのとまったく同じパターンに従って、小規模なシステムから多数の qubit クォンタムの状態を構築します。  このような状態は、より小さい状態の製品を作成することによって構築されます。  たとえば、 $ クォンタムコンピューターにビット文字列1011001をエンコードすることを検討してください $ 。  これを次のようにエンコードできます。
 
 $$
