@@ -1,62 +1,77 @@
 ---
 uid: Microsoft.Quantum.Canon.Trotter1ImplCA
 title: Trotter1ImplCA 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Trotter1ImplCA
 qsharp.summary: Implementation of the first-order Trotter–Suzuki integrator.
-ms.openlocfilehash: 1b4e0a9597f4f30b8e92ef91ff0780e7c7ecdc9b
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 6de4b6e7a34d66037d83a6e2bd5821402207c743
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96204795"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840099"
 ---
-# <a name="trotter1implca-operation"></a><span data-ttu-id="598c7-102">Trotter1ImplCA 操作</span><span class="sxs-lookup"><span data-stu-id="598c7-102">Trotter1ImplCA operation</span></span>
+# <a name="trotter1implca-operation"></a><span data-ttu-id="e2f20-102">Trotter1ImplCA 操作</span><span class="sxs-lookup"><span data-stu-id="e2f20-102">Trotter1ImplCA operation</span></span>
 
-<span data-ttu-id="598c7-103">名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="598c7-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="e2f20-103">名前空間: [Microsoft. Quantum. キャノン](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="e2f20-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="598c7-104">パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="598c7-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="e2f20-104">パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="e2f20-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="598c7-105">最初の順序の Trotter – Suzuki インテグレーターの実装。</span><span class="sxs-lookup"><span data-stu-id="598c7-105">Implementation of the first-order Trotter–Suzuki integrator.</span></span>
+<span data-ttu-id="e2f20-105">最初の順序の Trotter – Suzuki インテグレーターの実装。</span><span class="sxs-lookup"><span data-stu-id="e2f20-105">Implementation of the first-order Trotter–Suzuki integrator.</span></span>
 
 ```qsharp
 operation Trotter1ImplCA<'T> ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), stepSize : Double, target : 'T) : Unit is Adj + Ctl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="598c7-106">入力</span><span class="sxs-lookup"><span data-stu-id="598c7-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="e2f20-106">入力</span><span class="sxs-lookup"><span data-stu-id="e2f20-106">Input</span></span>
 
-### <a name="nsteps--int"></a><span data-ttu-id="598c7-107">nSteps: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="598c7-107">nSteps : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="nsteps--int"></a><span data-ttu-id="e2f20-107">nSteps: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="e2f20-107">nSteps : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
-<span data-ttu-id="598c7-108">時間ステップに分解される操作の数。</span><span class="sxs-lookup"><span data-stu-id="598c7-108">The number of operations to be decomposed into time steps.</span></span>
-
-
-### <a name="op--intdoublet--unit--is-adj--ctl"></a><span data-ttu-id="598c7-109">op: ([Int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double), t) => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞 + Ctl です</span><span class="sxs-lookup"><span data-stu-id="598c7-109">op : ([Int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double),'T) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
-
-<span data-ttu-id="598c7-110">分解用のインデックス入力 (型 `Int` ) と時間入力 (型) `Double` およびクォンタムレジスタ (型) を受け入れる操作 `'T` 。</span><span class="sxs-lookup"><span data-stu-id="598c7-110">An operation which accepts an index input (type `Int`) and a time input (type `Double`) and a quantum register (type `'T`) for decomposition.</span></span>
+<span data-ttu-id="e2f20-108">時間ステップに分解される操作の数。</span><span class="sxs-lookup"><span data-stu-id="e2f20-108">The number of operations to be decomposed into time steps.</span></span>
 
 
-### <a name="stepsize--double"></a><span data-ttu-id="598c7-111">stepSize: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="598c7-111">stepSize : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+### <a name="op--intdoublet--unit--is-adj--ctl"></a><span data-ttu-id="e2f20-109">op: ([Int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double), t) => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞 + Ctl です</span><span class="sxs-lookup"><span data-stu-id="e2f20-109">op : ([Int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double),'T) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 
-<span data-ttu-id="598c7-112">シミュレーションの各ステップのサイズに対する乗数。</span><span class="sxs-lookup"><span data-stu-id="598c7-112">Multiplier on size of each step of the simulation.</span></span>
-
-
-### <a name="target--t"></a><span data-ttu-id="598c7-113">ターゲット: \</span><span class="sxs-lookup"><span data-stu-id="598c7-113">target : 'T</span></span>
-
-<span data-ttu-id="598c7-114">操作が動作するクォンタムレジスタ。</span><span class="sxs-lookup"><span data-stu-id="598c7-114">A quantum register on which the operations act.</span></span>
+<span data-ttu-id="e2f20-110">分解用のインデックス入力 (型 `Int` ) と時間入力 (型) `Double` およびクォンタムレジスタ (型) を受け入れる操作 `'T` 。</span><span class="sxs-lookup"><span data-stu-id="e2f20-110">An operation which accepts an index input (type `Int`) and a time input (type `Double`) and a quantum register (type `'T`) for decomposition.</span></span>
 
 
+### <a name="stepsize--double"></a><span data-ttu-id="e2f20-111">stepSize: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="e2f20-111">stepSize : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="598c7-115">出力: [単位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="598c7-115">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="e2f20-112">シミュレーションの各ステップのサイズに対する乗数。</span><span class="sxs-lookup"><span data-stu-id="e2f20-112">Multiplier on size of each step of the simulation.</span></span>
+
+
+### <a name="target--t"></a><span data-ttu-id="e2f20-113">ターゲット: \</span><span class="sxs-lookup"><span data-stu-id="e2f20-113">target : 'T</span></span>
+
+<span data-ttu-id="e2f20-114">操作が動作するクォンタムレジスタ。</span><span class="sxs-lookup"><span data-stu-id="e2f20-114">A quantum register on which the operations act.</span></span>
 
 
 
-## <a name="type-parameters"></a><span data-ttu-id="598c7-116">型パラメーター</span><span class="sxs-lookup"><span data-stu-id="598c7-116">Type Parameters</span></span>
+## <a name="output--unit"></a><span data-ttu-id="e2f20-115">出力: [単位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="e2f20-115">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-### <a name="t"></a><span data-ttu-id="598c7-117">&</span><span class="sxs-lookup"><span data-stu-id="598c7-117">'T</span></span>
 
-<span data-ttu-id="598c7-118">各時間ステップが動作する型。通常は、 `Qubit[]` またはのいずれか `Qubit` です。</span><span class="sxs-lookup"><span data-stu-id="598c7-118">The type which each time step should act upon; typically, either `Qubit[]` or `Qubit`.</span></span>
+
+## <a name="type-parameters"></a><span data-ttu-id="e2f20-116">型パラメーター</span><span class="sxs-lookup"><span data-stu-id="e2f20-116">Type Parameters</span></span>
+
+### <a name="t"></a><span data-ttu-id="e2f20-117">&</span><span class="sxs-lookup"><span data-stu-id="e2f20-117">'T</span></span>
+
+<span data-ttu-id="e2f20-118">各時間ステップが動作する型。通常は、 `Qubit[]` またはのいずれか `Qubit` です。</span><span class="sxs-lookup"><span data-stu-id="e2f20-118">The type which each time step should act upon; typically, either `Qubit[]` or `Qubit`.</span></span>
+
+## <a name="example"></a><span data-ttu-id="e2f20-119">例</span><span class="sxs-lookup"><span data-stu-id="e2f20-119">Example</span></span>
+
+<span data-ttu-id="e2f20-120">同等のものを次に示します。</span><span class="sxs-lookup"><span data-stu-id="e2f20-120">The following are equivalent:</span></span>
+
+```qsharp
+op(0, deltaT, target);
+op(1, deltaT, target);
+```
+
+<span data-ttu-id="e2f20-121">and</span><span class="sxs-lookup"><span data-stu-id="e2f20-121">and</span></span>
+
+```qsharp
+Trotter1ImplCA((2, op), deltaT, target);
+```

@@ -1,41 +1,41 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._V0123TermToPauliGenIdx_
 title: _V0123TermToPauliGenIdx_ 関数
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _V0123TermToPauliGenIdx_
 qsharp.summary: Converts a GeneratorIndex describing a PQRS term to an expression 'GeneratorIndex[]' in terms of Paulis
-ms.openlocfilehash: fc5ad0e97374c52a90012b0ce633af8488f3ad88
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 8893d7c5479409a0ff98aa0b9e58f34fd3d274f7
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96215097"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98839191"
 ---
-# <a name="_v0123termtopauligenidx_-function"></a><span data-ttu-id="b8b48-102">_V0123TermToPauliGenIdx_ 関数</span><span class="sxs-lookup"><span data-stu-id="b8b48-102">_V0123TermToPauliGenIdx_ function</span></span>
+# <a name="_v0123termtopauligenidx_-function"></a><span data-ttu-id="2892d-102">_V0123TermToPauliGenIdx_ 関数</span><span class="sxs-lookup"><span data-stu-id="2892d-102">_V0123TermToPauliGenIdx_ function</span></span>
 
-<span data-ttu-id="b8b48-103">名前空間: [JordanWigner。](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="b8b48-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
+<span data-ttu-id="2892d-103">名前空間: [JordanWigner。](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="2892d-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
 
-<span data-ttu-id="b8b48-104">パッケージ: [Microsoft. Quantum. 化学](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="b8b48-104">Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span></span>
+<span data-ttu-id="2892d-104">パッケージ: [Microsoft. Quantum. 化学](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="2892d-104">Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span></span>
 
 
-<span data-ttu-id="b8b48-105">Paulis の観点から、PQRS 用語を記述する GeneratorIndex を式 ' GeneratorIndex [] ' に変換します。</span><span class="sxs-lookup"><span data-stu-id="b8b48-105">Converts a GeneratorIndex describing a PQRS term to an expression 'GeneratorIndex[]' in terms of Paulis</span></span>
+<span data-ttu-id="2892d-105">Paulis の観点から、PQRS 用語を記述する GeneratorIndex を式 ' GeneratorIndex [] ' に変換します。</span><span class="sxs-lookup"><span data-stu-id="2892d-105">Converts a GeneratorIndex describing a PQRS term to an expression 'GeneratorIndex[]' in terms of Paulis</span></span>
 
 ```qsharp
 function _V0123TermToPauliGenIdx_ (term : Microsoft.Quantum.Simulation.GeneratorIndex) : Microsoft.Quantum.Simulation.GeneratorIndex[]
 ```
 
 
-## <a name="input"></a><span data-ttu-id="b8b48-106">入力</span><span class="sxs-lookup"><span data-stu-id="b8b48-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="2892d-106">入力</span><span class="sxs-lookup"><span data-stu-id="2892d-106">Input</span></span>
 
-### <a name="term--generatorindex"></a><span data-ttu-id="b8b48-107">用語: [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span><span class="sxs-lookup"><span data-stu-id="b8b48-107">term : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span></span>
+### <a name="term--generatorindex"></a><span data-ttu-id="2892d-107">用語: [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span><span class="sxs-lookup"><span data-stu-id="2892d-107">term : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span></span>
 
-<span data-ttu-id="b8b48-108">`GeneratorIndex` PQRS 用語を表す。</span><span class="sxs-lookup"><span data-stu-id="b8b48-108">`GeneratorIndex` representing a PQRS term.</span></span>
+<span data-ttu-id="2892d-108">`GeneratorIndex` PQRS 用語を表す。</span><span class="sxs-lookup"><span data-stu-id="2892d-108">`GeneratorIndex` representing a PQRS term.</span></span>
 
 
 
-## <a name="output--generatorindex"></a><span data-ttu-id="b8b48-109">出力: [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)[]</span><span class="sxs-lookup"><span data-stu-id="b8b48-109">Output : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)[]</span></span>
+## <a name="output--generatorindex"></a><span data-ttu-id="2892d-109">出力: [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)[]</span><span class="sxs-lookup"><span data-stu-id="2892d-109">Output : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)[]</span></span>
 
-<span data-ttu-id="b8b48-110">' GeneratorIndex [] ' は、PQRS 用語として表現されています。</span><span class="sxs-lookup"><span data-stu-id="b8b48-110">'GeneratorIndex[]' expressing PQRS term as Pauli terms.</span></span>
+<span data-ttu-id="2892d-110">' GeneratorIndex [] ' は、PQRS 用語として表現されています。</span><span class="sxs-lookup"><span data-stu-id="2892d-110">'GeneratorIndex[]' expressing PQRS term as Pauli terms.</span></span>
