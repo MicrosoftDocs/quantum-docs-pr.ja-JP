@@ -1,55 +1,63 @@
 ---
 uid: Microsoft.Quantum.Arrays.FlatMapped
 title: FlatMapped 関数
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: FlatMapped
 qsharp.summary: Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.
-ms.openlocfilehash: e851e8503b3afcb4572f09fe39079247518c22c4
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: bee7002c5a1e80cee7907ff9cb4ebaaedf8e9923
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221251"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98848639"
 ---
-# <a name="flatmapped-function"></a><span data-ttu-id="4ee84-102">FlatMapped 関数</span><span class="sxs-lookup"><span data-stu-id="4ee84-102">FlatMapped function</span></span>
+# <a name="flatmapped-function"></a><span data-ttu-id="c1d95-102">FlatMapped 関数</span><span class="sxs-lookup"><span data-stu-id="c1d95-102">FlatMapped function</span></span>
 
-<span data-ttu-id="4ee84-103">名前空間: [Microsoft. Quantum. 配列](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="4ee84-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
+<span data-ttu-id="c1d95-103">名前空間: [Microsoft. Quantum. 配列](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="c1d95-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
 
-<span data-ttu-id="4ee84-104">パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="4ee84-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="c1d95-104">パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="c1d95-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="4ee84-105">配列と、配列要素をいくつかの出力配列にマップする関数を指定すると、配列要素ごとに連結された出力配列が返されます。</span><span class="sxs-lookup"><span data-stu-id="4ee84-105">Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.</span></span>
+<span data-ttu-id="c1d95-105">配列と、配列要素をいくつかの出力配列にマップする関数を指定すると、配列要素ごとに連結された出力配列が返されます。</span><span class="sxs-lookup"><span data-stu-id="c1d95-105">Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.</span></span>
 
 ```qsharp
 function FlatMapped<'TInput, 'TOutput> (mapper : ('TInput -> 'TOutput[]), array : 'TInput[]) : 'TOutput[]
 ```
 
 
-## <a name="input"></a><span data-ttu-id="4ee84-106">入力</span><span class="sxs-lookup"><span data-stu-id="4ee84-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="c1d95-106">入力</span><span class="sxs-lookup"><span data-stu-id="c1d95-106">Input</span></span>
 
-### <a name="mapper--tinput---toutput"></a><span data-ttu-id="4ee84-107">マッパー: ' > TInput ' TOutput []</span><span class="sxs-lookup"><span data-stu-id="4ee84-107">mapper : 'TInput -> 'TOutput[]</span></span>
+### <a name="mapper--tinput---toutput"></a><span data-ttu-id="c1d95-107">マッパー: ' > TInput ' TOutput []</span><span class="sxs-lookup"><span data-stu-id="c1d95-107">mapper : 'TInput -> 'TOutput[]</span></span>
 
-<span data-ttu-id="4ee84-108">`'TInput` `'TOutput[]` 配列要素をマップするために使用されるからへの関数。</span><span class="sxs-lookup"><span data-stu-id="4ee84-108">A function from `'TInput` to `'TOutput[]` that is used to map array elements.</span></span>
-
-
-### <a name="array--tinput"></a><span data-ttu-id="4ee84-109">配列: ' TInput []</span><span class="sxs-lookup"><span data-stu-id="4ee84-109">array : 'TInput[]</span></span>
-
-<span data-ttu-id="4ee84-110">要素の配列。</span><span class="sxs-lookup"><span data-stu-id="4ee84-110">An array of elements.</span></span>
+<span data-ttu-id="c1d95-108">`'TInput` `'TOutput[]` 配列要素をマップするために使用されるからへの関数。</span><span class="sxs-lookup"><span data-stu-id="c1d95-108">A function from `'TInput` to `'TOutput[]` that is used to map array elements.</span></span>
 
 
+### <a name="array--tinput"></a><span data-ttu-id="c1d95-109">配列: ' TInput []</span><span class="sxs-lookup"><span data-stu-id="c1d95-109">array : 'TInput[]</span></span>
 
-## <a name="output--toutput"></a><span data-ttu-id="4ee84-111">出力: ' TOutput []</span><span class="sxs-lookup"><span data-stu-id="4ee84-111">Output : 'TOutput[]</span></span>
+<span data-ttu-id="c1d95-110">要素の配列。</span><span class="sxs-lookup"><span data-stu-id="c1d95-110">An array of elements.</span></span>
 
-<span data-ttu-id="4ee84-112">の配列 `'TOutput[]` 。これは、マッピング関数によって生成されるすべての配列を連結したものです。</span><span class="sxs-lookup"><span data-stu-id="4ee84-112">An array of `'TOutput[]` which is the concatenation of all arrays generated by the mapping function.</span></span>
 
-## <a name="type-parameters"></a><span data-ttu-id="4ee84-113">型パラメーター</span><span class="sxs-lookup"><span data-stu-id="4ee84-113">Type Parameters</span></span>
 
-### <a name="tinput"></a><span data-ttu-id="4ee84-114">'TInput</span><span class="sxs-lookup"><span data-stu-id="4ee84-114">'TInput</span></span>
+## <a name="output--toutput"></a><span data-ttu-id="c1d95-111">出力: ' TOutput []</span><span class="sxs-lookup"><span data-stu-id="c1d95-111">Output : 'TOutput[]</span></span>
 
-<span data-ttu-id="4ee84-115">要素の型 `array` 。</span><span class="sxs-lookup"><span data-stu-id="4ee84-115">The type of `array` elements.</span></span>
-### <a name="toutput"></a><span data-ttu-id="4ee84-116">'TOutput</span><span class="sxs-lookup"><span data-stu-id="4ee84-116">'TOutput</span></span>
+<span data-ttu-id="c1d95-112">の配列 `'TOutput[]` 。これは、マッピング関数によって生成されるすべての配列を連結したものです。</span><span class="sxs-lookup"><span data-stu-id="c1d95-112">An array of `'TOutput[]` which is the concatenation of all arrays generated by the mapping function.</span></span>
 
-<span data-ttu-id="4ee84-117">関数は、 `mapper` この型の配列を返します。</span><span class="sxs-lookup"><span data-stu-id="4ee84-117">The `mapper` function returns arrays of this type.</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="c1d95-113">型パラメーター</span><span class="sxs-lookup"><span data-stu-id="c1d95-113">Type Parameters</span></span>
+
+### <a name="tinput"></a><span data-ttu-id="c1d95-114">'TInput</span><span class="sxs-lookup"><span data-stu-id="c1d95-114">'TInput</span></span>
+
+<span data-ttu-id="c1d95-115">要素の型 `array` 。</span><span class="sxs-lookup"><span data-stu-id="c1d95-115">The type of `array` elements.</span></span>
+### <a name="toutput"></a><span data-ttu-id="c1d95-116">'TOutput</span><span class="sxs-lookup"><span data-stu-id="c1d95-116">'TOutput</span></span>
+
+<span data-ttu-id="c1d95-117">関数は、 `mapper` この型の配列を返します。</span><span class="sxs-lookup"><span data-stu-id="c1d95-117">The `mapper` function returns arrays of this type.</span></span>
+
+## <a name="example"></a><span data-ttu-id="c1d95-118">例</span><span class="sxs-lookup"><span data-stu-id="c1d95-118">Example</span></span>
+
+```qsharp
+let Numbers = SequenceI(1, _); // generates numbers starting from 1
+let values = FlatMapped(Numbers, [1, 2, 3]);
+// values = [1, 1, 2, 1, 2, 3]
+```
