@@ -1,145 +1,145 @@
 ---
-<span data-ttu-id="002dd-101">title: P# li 測定の説明: 単一および複数のメジャーの測定演算を使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="002dd-101">title: Pauli Measurements description: Learn how to work with single- and multi-qubit Pauli measurement operations.</span></span>
-<span data-ttu-id="002dd-102">author: bradben: benbra: ms. date: 12/11/2017 ミリ秒。 topic: article no loc (場所: 記事の内容は含まれません):</span><span class="sxs-lookup"><span data-stu-id="002dd-102">author: bradben uid: microsoft.quantum.concepts.pauli ms.author: v-benbra ms.date: 12/11/2017 ms.topic: article no-loc:</span></span>
-- <span data-ttu-id="002dd-103">"Q#"</span><span class="sxs-lookup"><span data-stu-id="002dd-103">"Q#"</span></span>
-- <span data-ttu-id="002dd-104">"$$v"</span><span class="sxs-lookup"><span data-stu-id="002dd-104">"$$v"</span></span>
-- <span data-ttu-id="002dd-105">"$$"</span><span class="sxs-lookup"><span data-stu-id="002dd-105">"$$"</span></span>
-- <span data-ttu-id="002dd-106">"$$"</span><span class="sxs-lookup"><span data-stu-id="002dd-106">"$$"</span></span>
-- <span data-ttu-id="002dd-107">"$"</span><span class="sxs-lookup"><span data-stu-id="002dd-107">"$"</span></span>
-- <span data-ttu-id="002dd-108">"$"</span><span class="sxs-lookup"><span data-stu-id="002dd-108">"$"</span></span>
-- <span data-ttu-id="002dd-109">"$"</span><span class="sxs-lookup"><span data-stu-id="002dd-109">"$"</span></span>
-- <span data-ttu-id="002dd-110">"$$"</span><span class="sxs-lookup"><span data-stu-id="002dd-110">"$$"</span></span>
-- <span data-ttu-id="002dd-111">"\cdots"</span><span class="sxs-lookup"><span data-stu-id="002dd-111">"\cdots"</span></span>
-- <span data-ttu-id="002dd-112">"bmatrix"</span><span class="sxs-lookup"><span data-stu-id="002dd-112">"bmatrix"</span></span>
-- <span data-ttu-id="002dd-113">"\ddots"</span><span class="sxs-lookup"><span data-stu-id="002dd-113">"\ddots"</span></span>
-- <span data-ttu-id="002dd-114">"\equiv"</span><span class="sxs-lookup"><span data-stu-id="002dd-114">"\equiv"</span></span>
-- <span data-ttu-id="002dd-115">"\sum"</span><span class="sxs-lookup"><span data-stu-id="002dd-115">"\sum"</span></span>
-- <span data-ttu-id="002dd-116">"\begin"</span><span class="sxs-lookup"><span data-stu-id="002dd-116">"\begin"</span></span>
-- <span data-ttu-id="002dd-117">"\end"</span><span class="sxs-lookup"><span data-stu-id="002dd-117">"\end"</span></span>
-- <span data-ttu-id="002dd-118">"\sqrt"</span><span class="sxs-lookup"><span data-stu-id="002dd-118">"\sqrt"</span></span>
-- <span data-ttu-id="002dd-119">"\otimes"</span><span class="sxs-lookup"><span data-stu-id="002dd-119">"\otimes"</span></span>
-- <span data-ttu-id="002dd-120">"{"</span><span class="sxs-lookup"><span data-stu-id="002dd-120">"{"</span></span>
-- <span data-ttu-id="002dd-121">"}"</span><span class="sxs-lookup"><span data-stu-id="002dd-121">"}"</span></span>
-- <span data-ttu-id="002dd-122">"\text"</span><span class="sxs-lookup"><span data-stu-id="002dd-122">"\text"</span></span>
-- <span data-ttu-id="002dd-123">"\phi"</span><span class="sxs-lookup"><span data-stu-id="002dd-123">"\phi"</span></span>
-- <span data-ttu-id="002dd-124">"\kappa"</span><span class="sxs-lookup"><span data-stu-id="002dd-124">"\kappa"</span></span>
-- <span data-ttu-id="002dd-125">"\psi"</span><span class="sxs-lookup"><span data-stu-id="002dd-125">"\psi"</span></span>
-- <span data-ttu-id="002dd-126">"\alpha"</span><span class="sxs-lookup"><span data-stu-id="002dd-126">"\alpha"</span></span>
-- <span data-ttu-id="002dd-127">"\beta"</span><span class="sxs-lookup"><span data-stu-id="002dd-127">"\beta"</span></span>
-- <span data-ttu-id="002dd-128">"\gamma"</span><span class="sxs-lookup"><span data-stu-id="002dd-128">"\gamma"</span></span>
-- <span data-ttu-id="002dd-129">"\delta"</span><span class="sxs-lookup"><span data-stu-id="002dd-129">"\delta"</span></span>
-- <span data-ttu-id="002dd-130">"\omega"</span><span class="sxs-lookup"><span data-stu-id="002dd-130">"\omega"</span></span>
-- <span data-ttu-id="002dd-131">"\bra"</span><span class="sxs-lookup"><span data-stu-id="002dd-131">"\bra"</span></span>
-- <span data-ttu-id="002dd-132">"\ket"</span><span class="sxs-lookup"><span data-stu-id="002dd-132">"\ket"</span></span>
-- <span data-ttu-id="002dd-133">"\boldone"</span><span class="sxs-lookup"><span data-stu-id="002dd-133">"\boldone"</span></span>
-- <span data-ttu-id="002dd-134">"\\\\"</span><span class="sxs-lookup"><span data-stu-id="002dd-134">"\\\\"</span></span>
-- <span data-ttu-id="002dd-135">"\\"</span><span class="sxs-lookup"><span data-stu-id="002dd-135">"\\"</span></span>
-- <span data-ttu-id="002dd-136">"="</span><span class="sxs-lookup"><span data-stu-id="002dd-136">"="</span></span>
-- <span data-ttu-id="002dd-137">"\frac"</span><span class="sxs-lookup"><span data-stu-id="002dd-137">"\frac"</span></span>
-- <span data-ttu-id="002dd-138">"\text"</span><span class="sxs-lookup"><span data-stu-id="002dd-138">"\text"</span></span>
-- <span data-ttu-id="002dd-139">"\mapsto"</span><span class="sxs-lookup"><span data-stu-id="002dd-139">"\mapsto"</span></span>
-- <span data-ttu-id="002dd-140">"\dagger"</span><span class="sxs-lookup"><span data-stu-id="002dd-140">"\dagger"</span></span>
-- <span data-ttu-id="002dd-141">"\to"</span><span class="sxs-lookup"><span data-stu-id="002dd-141">"\to"</span></span>
-- <span data-ttu-id="002dd-142">"\begin{cases}"</span><span class="sxs-lookup"><span data-stu-id="002dd-142">"\begin{cases}"</span></span>
-- <span data-ttu-id="002dd-143">"\end{cases}"</span><span class="sxs-lookup"><span data-stu-id="002dd-143">"\end{cases}"</span></span>
-- <span data-ttu-id="002dd-144">"\operatorname"</span><span class="sxs-lookup"><span data-stu-id="002dd-144">"\operatorname"</span></span>
-- <span data-ttu-id="002dd-145">"\braket"</span><span class="sxs-lookup"><span data-stu-id="002dd-145">"\braket"</span></span>
-- <span data-ttu-id="002dd-146">"\id"</span><span class="sxs-lookup"><span data-stu-id="002dd-146">"\id"</span></span>
-- <span data-ttu-id="002dd-147">"\expect"</span><span class="sxs-lookup"><span data-stu-id="002dd-147">"\expect"</span></span>
-- <span data-ttu-id="002dd-148">"\defeq"</span><span class="sxs-lookup"><span data-stu-id="002dd-148">"\defeq"</span></span>
-- <span data-ttu-id="002dd-149">"\variance"</span><span class="sxs-lookup"><span data-stu-id="002dd-149">"\variance"</span></span>
-- <span data-ttu-id="002dd-150">"\dd"</span><span class="sxs-lookup"><span data-stu-id="002dd-150">"\dd"</span></span>
-- <span data-ttu-id="002dd-151">"&"</span><span class="sxs-lookup"><span data-stu-id="002dd-151">"&"</span></span>
-- <span data-ttu-id="002dd-152">"\begin{align}"</span><span class="sxs-lookup"><span data-stu-id="002dd-152">"\begin{align}"</span></span>
-- <span data-ttu-id="002dd-153">"\end{align}"</span><span class="sxs-lookup"><span data-stu-id="002dd-153">"\end{align}"</span></span>
-- <span data-ttu-id="002dd-154">"\Lambda"</span><span class="sxs-lookup"><span data-stu-id="002dd-154">"\Lambda"</span></span>
-- <span data-ttu-id="002dd-155">"\lambda"</span><span class="sxs-lookup"><span data-stu-id="002dd-155">"\lambda"</span></span>
-- <span data-ttu-id="002dd-156">"\Omega"</span><span class="sxs-lookup"><span data-stu-id="002dd-156">"\Omega"</span></span>
-- <span data-ttu-id="002dd-157">"\mathrm"</span><span class="sxs-lookup"><span data-stu-id="002dd-157">"\mathrm"</span></span>
-- <span data-ttu-id="002dd-158">"\left"</span><span class="sxs-lookup"><span data-stu-id="002dd-158">"\left"</span></span>
-- <span data-ttu-id="002dd-159">"\right"</span><span class="sxs-lookup"><span data-stu-id="002dd-159">"\right"</span></span>
-- <span data-ttu-id="002dd-160">"\qquad"</span><span class="sxs-lookup"><span data-stu-id="002dd-160">"\qquad"</span></span>
-- <span data-ttu-id="002dd-161">"\times"</span><span class="sxs-lookup"><span data-stu-id="002dd-161">"\times"</span></span>
-- <span data-ttu-id="002dd-162">"\big"</span><span class="sxs-lookup"><span data-stu-id="002dd-162">"\big"</span></span>
-- <span data-ttu-id="002dd-163">"\langle"</span><span class="sxs-lookup"><span data-stu-id="002dd-163">"\langle"</span></span>
-- <span data-ttu-id="002dd-164">"\rangle"</span><span class="sxs-lookup"><span data-stu-id="002dd-164">"\rangle"</span></span>
-- <span data-ttu-id="002dd-165">"\bigg"</span><span class="sxs-lookup"><span data-stu-id="002dd-165">"\bigg"</span></span>
-- <span data-ttu-id="002dd-166">"\Big"</span><span class="sxs-lookup"><span data-stu-id="002dd-166">"\Big"</span></span>
-- <span data-ttu-id="002dd-167">"|"</span><span class="sxs-lookup"><span data-stu-id="002dd-167">"|"</span></span>
-- <span data-ttu-id="002dd-168">"\mathbb"</span><span class="sxs-lookup"><span data-stu-id="002dd-168">"\mathbb"</span></span>
-- <span data-ttu-id="002dd-169">"\vec"</span><span class="sxs-lookup"><span data-stu-id="002dd-169">"\vec"</span></span>
-- <span data-ttu-id="002dd-170">"\in"</span><span class="sxs-lookup"><span data-stu-id="002dd-170">"\in"</span></span>
-- <span data-ttu-id="002dd-171">"\texttt"</span><span class="sxs-lookup"><span data-stu-id="002dd-171">"\texttt"</span></span>
-- <span data-ttu-id="002dd-172">"\ne"</span><span class="sxs-lookup"><span data-stu-id="002dd-172">"\ne"</span></span>
-- <span data-ttu-id="002dd-173">"<"</span><span class="sxs-lookup"><span data-stu-id="002dd-173">"<"</span></span>
-- <span data-ttu-id="002dd-174">">"</span><span class="sxs-lookup"><span data-stu-id="002dd-174">">"</span></span>
-- <span data-ttu-id="002dd-175">"\leq"</span><span class="sxs-lookup"><span data-stu-id="002dd-175">"\leq"</span></span>
-- <span data-ttu-id="002dd-176">"\geq"</span><span class="sxs-lookup"><span data-stu-id="002dd-176">"\geq"</span></span>
-- <span data-ttu-id="002dd-177">"~~"</span><span class="sxs-lookup"><span data-stu-id="002dd-177">"~~"</span></span>
-- <span data-ttu-id="002dd-178">"~"</span><span class="sxs-lookup"><span data-stu-id="002dd-178">"~"</span></span>
-- <span data-ttu-id="002dd-179">"\begin{bmatrix}"</span><span class="sxs-lookup"><span data-stu-id="002dd-179">"\begin{bmatrix}"</span></span>
-- <span data-ttu-id="002dd-180">"\end{bmatrix}"</span><span class="sxs-lookup"><span data-stu-id="002dd-180">"\end{bmatrix}"</span></span>
-- <span data-ttu-id="002dd-181">"\_"</span><span class="sxs-lookup"><span data-stu-id="002dd-181">"\_"</span></span>
+<span data-ttu-id="6e78b-101">title: P# li 測定の説明: 単一および複数のメジャーの測定演算を使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="6e78b-101">title: Pauli Measurements description: Learn how to work with single- and multi-qubit Pauli measurement operations.</span></span>
+<span data-ttu-id="6e78b-102">author: bradben: benbra: ms. date: 12/11/2017 ミリ秒。 topic: 概念に関する次のように指定します (& a):</span><span class="sxs-lookup"><span data-stu-id="6e78b-102">author: bradben uid: microsoft.quantum.concepts.pauli ms.author: v-benbra ms.date: 12/11/2017 ms.topic: conceptual no-loc:</span></span>
+- <span data-ttu-id="6e78b-103">"Q#"</span><span class="sxs-lookup"><span data-stu-id="6e78b-103">"Q#"</span></span>
+- <span data-ttu-id="6e78b-104">"$$v"</span><span class="sxs-lookup"><span data-stu-id="6e78b-104">"$$v"</span></span>
+- <span data-ttu-id="6e78b-105">"$$"</span><span class="sxs-lookup"><span data-stu-id="6e78b-105">"$$"</span></span>
+- <span data-ttu-id="6e78b-106">"$$"</span><span class="sxs-lookup"><span data-stu-id="6e78b-106">"$$"</span></span>
+- <span data-ttu-id="6e78b-107">"$"</span><span class="sxs-lookup"><span data-stu-id="6e78b-107">"$"</span></span>
+- <span data-ttu-id="6e78b-108">"$"</span><span class="sxs-lookup"><span data-stu-id="6e78b-108">"$"</span></span>
+- <span data-ttu-id="6e78b-109">"$"</span><span class="sxs-lookup"><span data-stu-id="6e78b-109">"$"</span></span>
+- <span data-ttu-id="6e78b-110">"$$"</span><span class="sxs-lookup"><span data-stu-id="6e78b-110">"$$"</span></span>
+- <span data-ttu-id="6e78b-111">"\cdots"</span><span class="sxs-lookup"><span data-stu-id="6e78b-111">"\cdots"</span></span>
+- <span data-ttu-id="6e78b-112">"bmatrix"</span><span class="sxs-lookup"><span data-stu-id="6e78b-112">"bmatrix"</span></span>
+- <span data-ttu-id="6e78b-113">"\ddots"</span><span class="sxs-lookup"><span data-stu-id="6e78b-113">"\ddots"</span></span>
+- <span data-ttu-id="6e78b-114">"\equiv"</span><span class="sxs-lookup"><span data-stu-id="6e78b-114">"\equiv"</span></span>
+- <span data-ttu-id="6e78b-115">"\sum"</span><span class="sxs-lookup"><span data-stu-id="6e78b-115">"\sum"</span></span>
+- <span data-ttu-id="6e78b-116">"\begin"</span><span class="sxs-lookup"><span data-stu-id="6e78b-116">"\begin"</span></span>
+- <span data-ttu-id="6e78b-117">"\end"</span><span class="sxs-lookup"><span data-stu-id="6e78b-117">"\end"</span></span>
+- <span data-ttu-id="6e78b-118">"\sqrt"</span><span class="sxs-lookup"><span data-stu-id="6e78b-118">"\sqrt"</span></span>
+- <span data-ttu-id="6e78b-119">"\otimes"</span><span class="sxs-lookup"><span data-stu-id="6e78b-119">"\otimes"</span></span>
+- <span data-ttu-id="6e78b-120">"{"</span><span class="sxs-lookup"><span data-stu-id="6e78b-120">"{"</span></span>
+- <span data-ttu-id="6e78b-121">"}"</span><span class="sxs-lookup"><span data-stu-id="6e78b-121">"}"</span></span>
+- <span data-ttu-id="6e78b-122">"\text"</span><span class="sxs-lookup"><span data-stu-id="6e78b-122">"\text"</span></span>
+- <span data-ttu-id="6e78b-123">"\phi"</span><span class="sxs-lookup"><span data-stu-id="6e78b-123">"\phi"</span></span>
+- <span data-ttu-id="6e78b-124">"\kappa"</span><span class="sxs-lookup"><span data-stu-id="6e78b-124">"\kappa"</span></span>
+- <span data-ttu-id="6e78b-125">"\psi"</span><span class="sxs-lookup"><span data-stu-id="6e78b-125">"\psi"</span></span>
+- <span data-ttu-id="6e78b-126">"\alpha"</span><span class="sxs-lookup"><span data-stu-id="6e78b-126">"\alpha"</span></span>
+- <span data-ttu-id="6e78b-127">"\beta"</span><span class="sxs-lookup"><span data-stu-id="6e78b-127">"\beta"</span></span>
+- <span data-ttu-id="6e78b-128">"\gamma"</span><span class="sxs-lookup"><span data-stu-id="6e78b-128">"\gamma"</span></span>
+- <span data-ttu-id="6e78b-129">"\delta"</span><span class="sxs-lookup"><span data-stu-id="6e78b-129">"\delta"</span></span>
+- <span data-ttu-id="6e78b-130">"\omega"</span><span class="sxs-lookup"><span data-stu-id="6e78b-130">"\omega"</span></span>
+- <span data-ttu-id="6e78b-131">"\bra"</span><span class="sxs-lookup"><span data-stu-id="6e78b-131">"\bra"</span></span>
+- <span data-ttu-id="6e78b-132">"\ket"</span><span class="sxs-lookup"><span data-stu-id="6e78b-132">"\ket"</span></span>
+- <span data-ttu-id="6e78b-133">"\boldone"</span><span class="sxs-lookup"><span data-stu-id="6e78b-133">"\boldone"</span></span>
+- <span data-ttu-id="6e78b-134">"\\\\"</span><span class="sxs-lookup"><span data-stu-id="6e78b-134">"\\\\"</span></span>
+- <span data-ttu-id="6e78b-135">"\\"</span><span class="sxs-lookup"><span data-stu-id="6e78b-135">"\\"</span></span>
+- <span data-ttu-id="6e78b-136">"="</span><span class="sxs-lookup"><span data-stu-id="6e78b-136">"="</span></span>
+- <span data-ttu-id="6e78b-137">"\frac"</span><span class="sxs-lookup"><span data-stu-id="6e78b-137">"\frac"</span></span>
+- <span data-ttu-id="6e78b-138">"\text"</span><span class="sxs-lookup"><span data-stu-id="6e78b-138">"\text"</span></span>
+- <span data-ttu-id="6e78b-139">"\mapsto"</span><span class="sxs-lookup"><span data-stu-id="6e78b-139">"\mapsto"</span></span>
+- <span data-ttu-id="6e78b-140">"\dagger"</span><span class="sxs-lookup"><span data-stu-id="6e78b-140">"\dagger"</span></span>
+- <span data-ttu-id="6e78b-141">"\to"</span><span class="sxs-lookup"><span data-stu-id="6e78b-141">"\to"</span></span>
+- <span data-ttu-id="6e78b-142">"\begin{cases}"</span><span class="sxs-lookup"><span data-stu-id="6e78b-142">"\begin{cases}"</span></span>
+- <span data-ttu-id="6e78b-143">"\end{cases}"</span><span class="sxs-lookup"><span data-stu-id="6e78b-143">"\end{cases}"</span></span>
+- <span data-ttu-id="6e78b-144">"\operatorname"</span><span class="sxs-lookup"><span data-stu-id="6e78b-144">"\operatorname"</span></span>
+- <span data-ttu-id="6e78b-145">"\braket"</span><span class="sxs-lookup"><span data-stu-id="6e78b-145">"\braket"</span></span>
+- <span data-ttu-id="6e78b-146">"\id"</span><span class="sxs-lookup"><span data-stu-id="6e78b-146">"\id"</span></span>
+- <span data-ttu-id="6e78b-147">"\expect"</span><span class="sxs-lookup"><span data-stu-id="6e78b-147">"\expect"</span></span>
+- <span data-ttu-id="6e78b-148">"\defeq"</span><span class="sxs-lookup"><span data-stu-id="6e78b-148">"\defeq"</span></span>
+- <span data-ttu-id="6e78b-149">"\variance"</span><span class="sxs-lookup"><span data-stu-id="6e78b-149">"\variance"</span></span>
+- <span data-ttu-id="6e78b-150">"\dd"</span><span class="sxs-lookup"><span data-stu-id="6e78b-150">"\dd"</span></span>
+- <span data-ttu-id="6e78b-151">"&"</span><span class="sxs-lookup"><span data-stu-id="6e78b-151">"&"</span></span>
+- <span data-ttu-id="6e78b-152">"\begin{align}"</span><span class="sxs-lookup"><span data-stu-id="6e78b-152">"\begin{align}"</span></span>
+- <span data-ttu-id="6e78b-153">"\end{align}"</span><span class="sxs-lookup"><span data-stu-id="6e78b-153">"\end{align}"</span></span>
+- <span data-ttu-id="6e78b-154">"\Lambda"</span><span class="sxs-lookup"><span data-stu-id="6e78b-154">"\Lambda"</span></span>
+- <span data-ttu-id="6e78b-155">"\lambda"</span><span class="sxs-lookup"><span data-stu-id="6e78b-155">"\lambda"</span></span>
+- <span data-ttu-id="6e78b-156">"\Omega"</span><span class="sxs-lookup"><span data-stu-id="6e78b-156">"\Omega"</span></span>
+- <span data-ttu-id="6e78b-157">"\mathrm"</span><span class="sxs-lookup"><span data-stu-id="6e78b-157">"\mathrm"</span></span>
+- <span data-ttu-id="6e78b-158">"\left"</span><span class="sxs-lookup"><span data-stu-id="6e78b-158">"\left"</span></span>
+- <span data-ttu-id="6e78b-159">"\right"</span><span class="sxs-lookup"><span data-stu-id="6e78b-159">"\right"</span></span>
+- <span data-ttu-id="6e78b-160">"\qquad"</span><span class="sxs-lookup"><span data-stu-id="6e78b-160">"\qquad"</span></span>
+- <span data-ttu-id="6e78b-161">"\times"</span><span class="sxs-lookup"><span data-stu-id="6e78b-161">"\times"</span></span>
+- <span data-ttu-id="6e78b-162">"\big"</span><span class="sxs-lookup"><span data-stu-id="6e78b-162">"\big"</span></span>
+- <span data-ttu-id="6e78b-163">"\langle"</span><span class="sxs-lookup"><span data-stu-id="6e78b-163">"\langle"</span></span>
+- <span data-ttu-id="6e78b-164">"\rangle"</span><span class="sxs-lookup"><span data-stu-id="6e78b-164">"\rangle"</span></span>
+- <span data-ttu-id="6e78b-165">"\bigg"</span><span class="sxs-lookup"><span data-stu-id="6e78b-165">"\bigg"</span></span>
+- <span data-ttu-id="6e78b-166">"\Big"</span><span class="sxs-lookup"><span data-stu-id="6e78b-166">"\Big"</span></span>
+- <span data-ttu-id="6e78b-167">"|"</span><span class="sxs-lookup"><span data-stu-id="6e78b-167">"|"</span></span>
+- <span data-ttu-id="6e78b-168">"\mathbb"</span><span class="sxs-lookup"><span data-stu-id="6e78b-168">"\mathbb"</span></span>
+- <span data-ttu-id="6e78b-169">"\vec"</span><span class="sxs-lookup"><span data-stu-id="6e78b-169">"\vec"</span></span>
+- <span data-ttu-id="6e78b-170">"\in"</span><span class="sxs-lookup"><span data-stu-id="6e78b-170">"\in"</span></span>
+- <span data-ttu-id="6e78b-171">"\texttt"</span><span class="sxs-lookup"><span data-stu-id="6e78b-171">"\texttt"</span></span>
+- <span data-ttu-id="6e78b-172">"\ne"</span><span class="sxs-lookup"><span data-stu-id="6e78b-172">"\ne"</span></span>
+- <span data-ttu-id="6e78b-173">"<"</span><span class="sxs-lookup"><span data-stu-id="6e78b-173">"<"</span></span>
+- <span data-ttu-id="6e78b-174">">"</span><span class="sxs-lookup"><span data-stu-id="6e78b-174">">"</span></span>
+- <span data-ttu-id="6e78b-175">"\leq"</span><span class="sxs-lookup"><span data-stu-id="6e78b-175">"\leq"</span></span>
+- <span data-ttu-id="6e78b-176">"\geq"</span><span class="sxs-lookup"><span data-stu-id="6e78b-176">"\geq"</span></span>
+- <span data-ttu-id="6e78b-177">"~~"</span><span class="sxs-lookup"><span data-stu-id="6e78b-177">"~~"</span></span>
+- <span data-ttu-id="6e78b-178">"~"</span><span class="sxs-lookup"><span data-stu-id="6e78b-178">"~"</span></span>
+- <span data-ttu-id="6e78b-179">"\begin{bmatrix}"</span><span class="sxs-lookup"><span data-stu-id="6e78b-179">"\begin{bmatrix}"</span></span>
+- <span data-ttu-id="6e78b-180">"\end{bmatrix}"</span><span class="sxs-lookup"><span data-stu-id="6e78b-180">"\end{bmatrix}"</span></span>
+- <span data-ttu-id="6e78b-181">"\_"</span><span class="sxs-lookup"><span data-stu-id="6e78b-181">"\_"</span></span>
 
 ---
 
-# <a name="pauli-measurements"></a><span data-ttu-id="002dd-182">P# li 測定</span><span class="sxs-lookup"><span data-stu-id="002dd-182">Pauli Measurements</span></span>
+# <a name="pauli-measurements"></a><span data-ttu-id="6e78b-182">P# li 測定</span><span class="sxs-lookup"><span data-stu-id="6e78b-182">Pauli Measurements</span></span>
 
-<span data-ttu-id="002dd-183">前のディスカッションでは、計算ベースの測定に重点を置いてきました。</span><span class="sxs-lookup"><span data-stu-id="002dd-183">In the previous discussions, we have focused on computational basis measurements.</span></span>
-<span data-ttu-id="002dd-184">実際には、数値表記の観点からは、コンピューティングベースの測定を表すのに便利な、クォンタムコンピューティングで発生する一般的な測定値があります。</span><span class="sxs-lookup"><span data-stu-id="002dd-184">In fact, there are other common measurements that occur in quantum computing that, from a notational perspective, are convenient to express in terms of computational basis measurements.</span></span>
-<span data-ttu-id="002dd-185">作業を行う際に実行する最も一般的な種類の測定は、通常、測定値として使用されます。この測定では、計算ベースの測定値が Q# 汎用化され、 *Pauli measurements* 他のベースや異なる qubits 間のパリティが含まれます。</span><span class="sxs-lookup"><span data-stu-id="002dd-185">As you work with Q#, the most common kind of measurements that you'll run into will likely be *Pauli measurements*, which generalize computational basis measurements to include measurements in other bases, and of parity between different qubits.</span></span>
-<span data-ttu-id="002dd-186">このような場合、一般的には、通常、 $ x、y、z、 $ $ z \otimes z、x \otimes x、x Y \otimes $ などの演算子で、p# li 演算子の測定について説明します。</span><span class="sxs-lookup"><span data-stu-id="002dd-186">In such cases, it is common to discuss measuring a Pauli operator, in general an operator such as $X,Y,Z$ or $Z\otimes Z, X\otimes X, X\otimes Y$, and so forth.</span></span> 
+<span data-ttu-id="6e78b-183">前のディスカッションでは、計算ベースの測定に重点を置いてきました。</span><span class="sxs-lookup"><span data-stu-id="6e78b-183">In the previous discussions, we have focused on computational basis measurements.</span></span>
+<span data-ttu-id="6e78b-184">実際には、数値表記の観点からは、コンピューティングベースの測定を表すのに便利な、クォンタムコンピューティングで発生する一般的な測定値があります。</span><span class="sxs-lookup"><span data-stu-id="6e78b-184">In fact, there are other common measurements that occur in quantum computing that, from a notational perspective, are convenient to express in terms of computational basis measurements.</span></span>
+<span data-ttu-id="6e78b-185">作業を行う際に実行する最も一般的な種類の測定は、通常、測定値として使用されます。この測定では、計算ベースの測定値が Q# 汎用化され、 他のベースや異なる qubits 間のパリティが含まれます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-185">As you work with Q#, the most common kind of measurements that you'll run into will likely be *Pauli measurements*, which generalize computational basis measurements to include measurements in other bases, and of parity between different qubits.</span></span>
+<span data-ttu-id="6e78b-186">このような場合、一般的には、通常、 $ x、y、z、 $ $ z \otimes z、x \otimes x、x Y \otimes $ などの演算子で、p# li 演算子の測定について説明します。</span><span class="sxs-lookup"><span data-stu-id="6e78b-186">In such cases, it is common to discuss measuring a Pauli operator, in general an operator such as $X,Y,Z$ or $Z\otimes Z, X\otimes X, X\otimes Y$, and so forth.</span></span> 
 
 > [!TIP]
-<span data-ttu-id="002dd-187">> では Q# 、通常、マルチ qubit の演算子は型の配列によって表され `Pauli[]` ます。</span><span class="sxs-lookup"><span data-stu-id="002dd-187">> In Q#, multi-qubit Pauli operators are generally represented by arrays of type `Pauli[]`.</span></span>
-<span data-ttu-id="002dd-188">> たとえば、X Z Y を表すには、 $ \otimes 配列を使用し \otimes $ `[PauliX, PauliZ, PauliY]` ます。</span><span class="sxs-lookup"><span data-stu-id="002dd-188">> For example, to represent $X \otimes Z \otimes Y$, you can use the array `[PauliX, PauliZ, PauliY]`.</span></span>
+<span data-ttu-id="6e78b-187">> では Q# 、通常、マルチ qubit の演算子は型の配列によって表され `Pauli[]` ます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-187">> In Q#, multi-qubit Pauli operators are generally represented by arrays of type `Pauli[]`.</span></span>
+<span data-ttu-id="6e78b-188">> たとえば、X Z Y を表すには、 $ \otimes 配列を使用し \otimes $ `[PauliX, PauliZ, PauliY]` ます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-188">> For example, to represent $X \otimes Z \otimes Y$, you can use the array `[PauliX, PauliZ, PauliY]`.</span></span>
 
-<span data-ttu-id="002dd-189">P# li 演算子の観点から、メジャーについて説明することは、クォンタムエラー修正のサブフィールドで特に一般的です。</span><span class="sxs-lookup"><span data-stu-id="002dd-189">Discussing measurement in terms of Pauli operators is especially common in the subfield of quantum error correction.</span></span>
-<span data-ttu-id="002dd-190">では、同様の規則に従います。ここでは、 Q# この測定の別のビューについて説明します。</span><span class="sxs-lookup"><span data-stu-id="002dd-190">In Q#, we follow a similar convention; we now explain this alternative view of measurements.</span></span>
+<span data-ttu-id="6e78b-189">P# li 演算子の観点から、メジャーについて説明することは、クォンタムエラー修正のサブフィールドで特に一般的です。</span><span class="sxs-lookup"><span data-stu-id="6e78b-189">Discussing measurement in terms of Pauli operators is especially common in the subfield of quantum error correction.</span></span>
+<span data-ttu-id="6e78b-190">では、同様の規則に従います。ここでは、 Q# この測定の別のビューについて説明します。</span><span class="sxs-lookup"><span data-stu-id="6e78b-190">In Q#, we follow a similar convention; we now explain this alternative view of measurements.</span></span>
 
-<span data-ttu-id="002dd-191">P# li 測定を考える方法の詳細について検討する前に、クォンタムコンピューター内の1つの qubit がクォンタムの状態にどのように測定されるかについて考えることをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="002dd-191">Before delving into the details of how to think of a Pauli measurement, it is useful to think about what measuring a single qubit inside a quantum computer does to the quantum state.</span></span>
-<span data-ttu-id="002dd-192">ここでは、 $ n qubit クォンタム状態になっていると $ します。その後、1つの qubit は、状態がである可能性がある 2 ^ n の可能性の半分を測定し $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="002dd-192">Imagine that we have an $n$-qubit quantum state; then measuring one qubit immediately rules out half of the $2^n$ possibilities that state could be in.</span></span>
-<span data-ttu-id="002dd-193">つまり、測定値は、2つの半分の空白のいずれかにクォンタムの状態を投影します。</span><span class="sxs-lookup"><span data-stu-id="002dd-193">In other words, the measurement projects the quantum state onto one of two half-spaces.</span></span>
-<span data-ttu-id="002dd-194">この直感を反映するために、測定について考える方法を一般化できます。</span><span class="sxs-lookup"><span data-stu-id="002dd-194">We can generalize the way we think about measurement to reflect this intuition.</span></span>
+<span data-ttu-id="6e78b-191">P# li 測定を考える方法の詳細について検討する前に、クォンタムコンピューター内の1つの qubit がクォンタムの状態にどのように測定されるかについて考えることをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="6e78b-191">Before delving into the details of how to think of a Pauli measurement, it is useful to think about what measuring a single qubit inside a quantum computer does to the quantum state.</span></span>
+<span data-ttu-id="6e78b-192">ここでは、 $ n qubit クォンタム状態になっていると $ します。その後、1つの qubit は、状態がである可能性がある 2 ^ n の可能性の半分を測定し $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-192">Imagine that we have an $n$-qubit quantum state; then measuring one qubit immediately rules out half of the $2^n$ possibilities that state could be in.</span></span>
+<span data-ttu-id="6e78b-193">つまり、測定値は、2つの半分の空白のいずれかにクォンタムの状態を投影します。</span><span class="sxs-lookup"><span data-stu-id="6e78b-193">In other words, the measurement projects the quantum state onto one of two half-spaces.</span></span>
+<span data-ttu-id="6e78b-194">この直感を反映するために、測定について考える方法を一般化できます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-194">We can generalize the way we think about measurement to reflect this intuition.</span></span>
 
-<span data-ttu-id="002dd-195">これらのサブスペースを簡潔に識別するためには、それらを説明するための言語が必要です。</span><span class="sxs-lookup"><span data-stu-id="002dd-195">In order to concisely identify these subspaces, we need a language for describing them.</span></span>
-<span data-ttu-id="002dd-196">2つのサブスペースを記述する方法の1つとして、2つの一意の値を持つマトリックスを使用して指定する方法があります。これは、慣例によって午後1時に行われ $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="002dd-196">One way to describe the two subspaces is by specifying them through a matrix that just has two unique eigenvalues, taken by convention to be $\pm 1$.</span></span>
-<span data-ttu-id="002dd-197">この方法でサブスペースを記述する簡単な例については、 $ Z $ :</span><span class="sxs-lookup"><span data-stu-id="002dd-197">For a simple example of describing subspaces in this way, consider $Z$:</span></span>
+<span data-ttu-id="6e78b-195">これらのサブスペースを簡潔に識別するためには、それらを説明するための言語が必要です。</span><span class="sxs-lookup"><span data-stu-id="6e78b-195">In order to concisely identify these subspaces, we need a language for describing them.</span></span>
+<span data-ttu-id="6e78b-196">2つのサブスペースを記述する方法の1つとして、2つの一意の値を持つマトリックスを使用して指定する方法があります。これは、慣例によって午後1時に行われ $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-196">One way to describe the two subspaces is by specifying them through a matrix that just has two unique eigenvalues, taken by convention to be $\pm 1$.</span></span>
+<span data-ttu-id="6e78b-197">この方法でサブスペースを記述する簡単な例については、 $ Z $ :</span><span class="sxs-lookup"><span data-stu-id="6e78b-197">For a simple example of describing subspaces in this way, consider $Z$:</span></span>
 
 $$
 \begin{align}
-  <span data-ttu-id="002dd-198">Z & = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix} 。</span><span class="sxs-lookup"><span data-stu-id="002dd-198">Z & = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix}.</span></span>
+  <span data-ttu-id="6e78b-198">Z & = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix} 。</span><span class="sxs-lookup"><span data-stu-id="6e78b-198">Z & = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix}.</span></span>
 \end{align}
 $$
 
-<span data-ttu-id="002dd-199">P# li-z マトリックスの対角線要素を読み取ることで、 $ $ Z に $ $ 2 つの固有ベクトル ( $ \ket { 0 と 1) があり、 } $ $ \ket { } $ 対応する固有値/ $ pm 1 $ があることがわかります。</span><span class="sxs-lookup"><span data-stu-id="002dd-199">By reading the diagonal elements of the Pauli-$Z$ matrix, we can see that $Z$ has two eigenvectors, $\ket{0}$ and $\ket{1}$, with corresponding eigenvalues $\pm 1$.</span></span>
-<span data-ttu-id="002dd-200">したがって、qubit を測定し、 `Zero` (状態0に対応する) を取得すると、 $ \ket { } $ qubit の状態が $ $ Z 演算子の + 1 eigenstate であることがわかり $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="002dd-200">Thus, if we measure the qubit and obtain `Zero` (corresponding to the state $\ket{0}$), we know that the state of our qubit is a $+1$ eigenstate of the $Z$ operator.</span></span>
-<span data-ttu-id="002dd-201">同様に、を取得した場合は、 `One` qubit の状態が $ z の-1 $ eigenstate であることがわかり $ $ ます。このプロセスは、「P# li Z の測定」として P# li 測定の言語で参照され $ $ ます。これは、計算ベースの測定を実行することとまったく同じです。</span><span class="sxs-lookup"><span data-stu-id="002dd-201">Similarly, if we obtain `One`, we know that the state of our qubit is a $-1$ eigenstate of $Z$. This process is referred to in the language of Pauli measurements as "measuring Pauli $Z$," and is entirely equivalent to performing a computational basis measurement.</span></span>
+<span data-ttu-id="6e78b-199">P# li-z マトリックスの対角線要素を読み取ることで、 $ $ Z に $ $ 2 つの固有ベクトル ( $ \ket { 0 と 1) があり、 } $ $ \ket { } $ 対応する固有値/ $ pm 1 $ があることがわかります。</span><span class="sxs-lookup"><span data-stu-id="6e78b-199">By reading the diagonal elements of the Pauli-$Z$ matrix, we can see that $Z$ has two eigenvectors, $\ket{0}$ and $\ket{1}$, with corresponding eigenvalues $\pm 1$.</span></span>
+<span data-ttu-id="6e78b-200">したがって、qubit を測定し、 `Zero` (状態0に対応する) を取得すると、 $ \ket { } $ qubit の状態が $ $ Z 演算子の + 1 eigenstate であることがわかり $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-200">Thus, if we measure the qubit and obtain `Zero` (corresponding to the state $\ket{0}$), we know that the state of our qubit is a $+1$ eigenstate of the $Z$ operator.</span></span>
+<span data-ttu-id="6e78b-201">同様に、を取得した場合は、 `One` qubit の状態が $ z の-1 $ eigenstate であることがわかり $ $ ます。このプロセスは、「P# li Z の測定」として P# li 測定の言語で参照され $ $ ます。これは、計算ベースの測定を実行することとまったく同じです。</span><span class="sxs-lookup"><span data-stu-id="6e78b-201">Similarly, if we obtain `One`, we know that the state of our qubit is a $-1$ eigenstate of $Z$. This process is referred to in the language of Pauli measurements as "measuring Pauli $Z$," and is entirely equivalent to performing a computational basis measurement.</span></span>
 
-<span data-ttu-id="002dd-202">$また、 \times $ Z の1つのユニタリ変換である 2 2 つのマトリックス $ も、 $ この条件を満たしています。</span><span class="sxs-lookup"><span data-stu-id="002dd-202">Any $2\times 2$ matrix that is a unitary transformation of $Z$ also satisfies this criteria.</span></span>
-<span data-ttu-id="002dd-203">つまり、マトリックス a $ = u ^ \dagger Z u を使用することもでき $ ます。ここで、 $ u $ は他の任意の長さ行列で、午後1時の固有ベクトルの測定の2つの結果を定義するマトリックスを提供し $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="002dd-203">That is, we could also use a matrix $A=U^\dagger Z U$, where $U$ is any other unitary matrix, to give a matrix that defines the two outcomes of a measurement in its $\pm 1$ eigenvectors.</span></span>
-<span data-ttu-id="002dd-204">Preferences Li 測定の表記では、 $ X、Y、Z の各測定値を $ 等価の測定値として識別することで、このような値を参照します。</span><span class="sxs-lookup"><span data-stu-id="002dd-204">The notation of Pauli measurements references this unitary equivalence by identifying $X,Y,Z$ measurements as equivalent measurements that one could do to gain information from a qubit.</span></span>
-<span data-ttu-id="002dd-205">これらの測定値は、便宜上、次のように提供されます。</span><span class="sxs-lookup"><span data-stu-id="002dd-205">These measurements are given below for convenience.</span></span>
+<span data-ttu-id="6e78b-202">$また、 \times $ Z の1つのユニタリ変換である 2 2 つのマトリックス $ も、 $ この条件を満たしています。</span><span class="sxs-lookup"><span data-stu-id="6e78b-202">Any $2\times 2$ matrix that is a unitary transformation of $Z$ also satisfies this criteria.</span></span>
+<span data-ttu-id="6e78b-203">つまり、マトリックス a $ = u ^ \dagger Z u を使用することもでき $ ます。ここで、 $ u $ は他の任意の長さ行列で、午後1時の固有ベクトルの測定の2つの結果を定義するマトリックスを提供し $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-203">That is, we could also use a matrix $A=U^\dagger Z U$, where $U$ is any other unitary matrix, to give a matrix that defines the two outcomes of a measurement in its $\pm 1$ eigenvectors.</span></span>
+<span data-ttu-id="6e78b-204">Preferences Li 測定の表記では、 $ X、Y、Z の各測定値を $ 等価の測定値として識別することで、このような値を参照します。</span><span class="sxs-lookup"><span data-stu-id="6e78b-204">The notation of Pauli measurements references this unitary equivalence by identifying $X,Y,Z$ measurements as equivalent measurements that one could do to gain information from a qubit.</span></span>
+<span data-ttu-id="6e78b-205">これらの測定値は、便宜上、次のように提供されます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-205">These measurements are given below for convenience.</span></span>
 
 
-<span data-ttu-id="002dd-206">|P# li 測定の  | ユニタリ変換  |</span><span class="sxs-lookup"><span data-stu-id="002dd-206">|Pauli Measurement  |Unitary transformation  |</span></span>
+<span data-ttu-id="6e78b-206">|P# li 測定の  | ユニタリ変換  |</span><span class="sxs-lookup"><span data-stu-id="6e78b-206">|Pauli Measurement  |Unitary transformation  |</span></span>
 |-------------------|------------------------|
-<span data-ttu-id="002dd-207">|$ $ Z |               $\boldone$             |</span><span class="sxs-lookup"><span data-stu-id="002dd-207">| $Z$               | $\boldone$             |</span></span>
-<span data-ttu-id="002dd-208">|$ $ X |$H               $                    |</span><span class="sxs-lookup"><span data-stu-id="002dd-208">| $X$               | $H$                    |</span></span>
-<span data-ttu-id="002dd-209">|$ $ Y |$HS ^               {\dagger}$         |</span><span class="sxs-lookup"><span data-stu-id="002dd-209">| $Y$               | $HS^{\dagger}$         |</span></span>
+<span data-ttu-id="6e78b-207">|$ $ Z |               $\boldone$             |</span><span class="sxs-lookup"><span data-stu-id="6e78b-207">| $Z$               | $\boldone$             |</span></span>
+<span data-ttu-id="6e78b-208">|$ $ X |$H               $                    |</span><span class="sxs-lookup"><span data-stu-id="6e78b-208">| $X$               | $H$                    |</span></span>
+<span data-ttu-id="6e78b-209">|$ $ Y |$HS ^               {\dagger}$         |</span><span class="sxs-lookup"><span data-stu-id="6e78b-209">| $Y$               | $HS^{\dagger}$         |</span></span>
 
-<span data-ttu-id="002dd-210">つまり、この言語を使用すると、"measure $ Y $ " は HS ^ を適用し $ \dagger $ た後、計算単位で測定することと同じです。ここで、は "フェーズゲート" と呼ばれる組み込みのクォンタム操作であり、これは、長さ [`S`](xref:Microsoft.Quantum.Intrinsic.S) 行列によってシミュレートできます。</span><span class="sxs-lookup"><span data-stu-id="002dd-210">That is, using this language, "measure $Y$" is equivalent to applying $HS^\dagger$ and then measuring in the computational basis, where [`S`](xref:Microsoft.Quantum.Intrinsic.S) is an intrinsic quantum operation sometimes called the "phase gate," and can be simulated by the unitary matrix</span></span>
+<span data-ttu-id="6e78b-210">つまり、この言語を使用すると、"measure $ Y $ " は HS ^ を適用し $ \dagger $ た後、計算単位で測定することと同じです。ここで、は "フェーズゲート" と呼ばれる組み込みのクォンタム操作であり、これは、長さ [`S`](xref:Microsoft.Quantum.Intrinsic.S) 行列によってシミュレートできます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-210">That is, using this language, "measure $Y$" is equivalent to applying $HS^\dagger$ and then measuring in the computational basis, where [`S`](xref:Microsoft.Quantum.Intrinsic.S) is an intrinsic quantum operation sometimes called the "phase gate," and can be simulated by the unitary matrix</span></span>
 
 $$
 \begin{align}
-    <span data-ttu-id="002dd-211">S =\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="002dd-211">S = \begin{bmatrix}</span></span>
-        <span data-ttu-id="002dd-212">1 & 0 \\\\ 0 & i \end{bmatrix} .</span><span class="sxs-lookup"><span data-stu-id="002dd-212">1 & 0 \\\\ 0 & i \end{bmatrix}.</span></span>
+    <span data-ttu-id="6e78b-211">S =\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="6e78b-211">S = \begin{bmatrix}</span></span>
+        <span data-ttu-id="6e78b-212">1 & 0 \\\\ 0 & i \end{bmatrix} .</span><span class="sxs-lookup"><span data-stu-id="6e78b-212">1 & 0 \\\\ 0 & i \end{bmatrix}.</span></span>
 \end{align}
 $$
 
-<span data-ttu-id="002dd-213">これは、 $ \dagger $ $ $ 次の演算がと等価になるように、クォンタムの状態ベクターに HS ^ を適用し、Z を測定 `Measure([PauliY], [q])` することと同じです。</span><span class="sxs-lookup"><span data-stu-id="002dd-213">It is also equivalent to applying $HS^\dagger$ to the quantum state vector and then measuring $Z$, such that the following operation is equivalent to `Measure([PauliY], [q])`:</span></span>
+<span data-ttu-id="6e78b-213">これは、 $ \dagger $ $ $ 次の演算がと等価になるように、クォンタムの状態ベクターに HS ^ を適用し、Z を測定 `Measure([PauliY], [q])` することと同じです。</span><span class="sxs-lookup"><span data-stu-id="6e78b-213">It is also equivalent to applying $HS^\dagger$ to the quantum state vector and then measuring $Z$, such that the following operation is equivalent to `Measure([PauliY], [q])`:</span></span>
 
-```Q#
+```qsharp
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {
@@ -152,136 +152,136 @@ operation MeasureY(qubit : Qubit) : Result {
 }
 ```
 
-<span data-ttu-id="002dd-214">その後、適切な状態が検出されます。これは、クォンタムの状態ベクターに SH を適用する量です $ $ 。上記のスニペットでは、計算ベースに戻る変換は、ブロックを使用することによって自動的に処理され `within … apply` ます。</span><span class="sxs-lookup"><span data-stu-id="002dd-214">The correct state would then be found by transforming back to the computational basis, which amounts to applying $SH$ to the quantum state vector; in the above snippet, the transformation back to the computational basis is handled automatically by the use of the `within … apply` block.</span></span>
+<span data-ttu-id="6e78b-214">その後、適切な状態が検出されます。これは、クォンタムの状態ベクターに SH を適用する量です $ $ 。上記のスニペットでは、計算ベースに戻る変換は、ブロックを使用することによって自動的に処理され `within … apply` ます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-214">The correct state would then be found by transforming back to the computational basis, which amounts to applying $SH$ to the quantum state vector; in the above snippet, the transformation back to the computational basis is handled automatically by the use of the `within … apply` block.</span></span>
 
-<span data-ttu-id="002dd-215">では、結果と Q# ---して、州---との対話から抽出された古典的な情報は、値 j 0 によって与えられます。これは、測定された `Result` $ \in \\ { \texttt { } \texttt { } \\ } $ $ pauli 演算子の (-1) ^ j eigenspace に結果があるかどうかを示し $ ます。</span><span class="sxs-lookup"><span data-stu-id="002dd-215">In Q#, we say the outcome---that is, the classical information extracted from interacting with the state---is given by a `Result` value $j \in \\{\texttt{Zero}, \texttt{One}\\}$ indicating if the result is in the $(-1)^j$ eigenspace of the Pauli operator measured.</span></span>
+<span data-ttu-id="6e78b-215">では、結果と Q# ---して、州---との対話から抽出された古典的な情報は、値 j 0 によって与えられます。これは、測定された `Result` $ \in \\ { \texttt { } \texttt { } \\ } $ $ pauli 演算子の (-1) ^ j eigenspace に結果があるかどうかを示し $ ます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-215">In Q#, we say the outcome---that is, the classical information extracted from interacting with the state---is given by a `Result` value $j \in \\{\texttt{Zero}, \texttt{One}\\}$ indicating if the result is in the $(-1)^j$ eigenspace of the Pauli operator measured.</span></span>
 
 
-## <a name="multiple-qubit-measurements"></a><span data-ttu-id="002dd-216">複数の qubit 測定値</span><span class="sxs-lookup"><span data-stu-id="002dd-216">Multiple-qubit measurements</span></span>
+## <a name="multiple-qubit-measurements"></a><span data-ttu-id="6e78b-216">複数の qubit 測定値</span><span class="sxs-lookup"><span data-stu-id="6e78b-216">Multiple-qubit measurements</span></span>
 
-<span data-ttu-id="002dd-217">次に示すように、マルチ qubit の演算子の測定値は同様に定義されています。</span><span class="sxs-lookup"><span data-stu-id="002dd-217">Measurements of multi-qubit Pauli operators are defined similarly, as seen from:</span></span>
+<span data-ttu-id="6e78b-217">次に示すように、マルチ qubit の演算子の測定値は同様に定義されています。</span><span class="sxs-lookup"><span data-stu-id="6e78b-217">Measurements of multi-qubit Pauli operators are defined similarly, as seen from:</span></span>
 
 $$
-<span data-ttu-id="002dd-218">Z \otimes z 1 0 0 0 0 = \begin{bmatrix} & & -1 0 0 0 0 & \\\\ & & & \\\\ & & -1 & 0 \\\\ & & & \end{bmatrix} 0 0 0 1。</span><span class="sxs-lookup"><span data-stu-id="002dd-218">Z\otimes Z = \begin{bmatrix}1 &0 &0&0\\\\  0&-1&0&0\\\\ 0&0&-1&0\\\\ 0&0&0&1\end{bmatrix}.</span></span>
+<span data-ttu-id="6e78b-218">Z \otimes z 1 0 0 0 0 = \begin{bmatrix} & & -1 0 0 0 0 & \\\\ & & & \\\\ & & -1 & 0 \\\\ & & & \end{bmatrix} 0 0 0 1。</span><span class="sxs-lookup"><span data-stu-id="6e78b-218">Z\otimes Z = \begin{bmatrix}1 &0 &0&0\\\\  0&-1&0&0\\\\ 0&0&-1&0\\\\ 0&0&0&1\end{bmatrix}.</span></span>
 $$
 
-<span data-ttu-id="002dd-219">したがって、2つの Pauthentication Li z 演算子のすべての製品は、 $ $ $ + 1 と-1 の値で構成される2つのスペースで構成されるマトリックスを形成し $ $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="002dd-219">Thus the tensor products of two Pauli-$Z$ operators forms a matrix composed of two spaces consisting of $+1$ and $-1$ eigenvalues.</span></span>
-<span data-ttu-id="002dd-220">シングル qubit の場合と同様に、両方とも、アクセス可能なベクター空間の半分が $ + 1 eigspace に所属し、残りの半分が-1 の範囲に属していることを意味し $ $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="002dd-220">As with the single-qubit case, both constitute a half-space meaning that half of the accessible vector space belongs to the $+1$ eigenspace and the remaining half to the $-1$ eigenspace.</span></span>
-<span data-ttu-id="002dd-221">一般に、これに従うのは、Pdefinition Li の演算子と id のすべての情報が含まれているので、その製品の定義から簡単に確認でき $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="002dd-221">In general, it is easy to see from the definition of the tensor product that any tensor product of Pauli-$Z$ operators and the identity also obeys this.</span></span>
-<span data-ttu-id="002dd-222">たとえば、次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="002dd-222">For example,</span></span>
+<span data-ttu-id="6e78b-219">したがって、2つの Pauthentication Li z 演算子のすべての製品は、 $ $ $ + 1 と-1 の値で構成される2つのスペースで構成されるマトリックスを形成し $ $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-219">Thus the tensor products of two Pauli-$Z$ operators forms a matrix composed of two spaces consisting of $+1$ and $-1$ eigenvalues.</span></span>
+<span data-ttu-id="6e78b-220">シングル qubit の場合と同様に、両方とも、アクセス可能なベクター空間の半分が $ + 1 eigspace に所属し、残りの半分が-1 の範囲に属していることを意味し $ $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-220">As with the single-qubit case, both constitute a half-space meaning that half of the accessible vector space belongs to the $+1$ eigenspace and the remaining half to the $-1$ eigenspace.</span></span>
+<span data-ttu-id="6e78b-221">一般に、これに従うのは、Pdefinition Li の演算子と id のすべての情報が含まれているので、その製品の定義から簡単に確認でき $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-221">In general, it is easy to see from the definition of the tensor product that any tensor product of Pauli-$Z$ operators and the identity also obeys this.</span></span>
+<span data-ttu-id="6e78b-222">たとえば、次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="6e78b-222">For example,</span></span>
 
 $$
 \begin{align}
-    <span data-ttu-id="002dd-223">\otimes \boldone Z =\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="002dd-223">Z \otimes \boldone = \begin{bmatrix}</span></span>
-        <span data-ttu-id="002dd-224">1 & 0 & 0 0 &\\\\</span><span class="sxs-lookup"><span data-stu-id="002dd-224">1 &  0 &  0 &  0 \\\\</span></span>
-        <span data-ttu-id="002dd-225">0 &  1 &  0 &  0 \\\\</span><span class="sxs-lookup"><span data-stu-id="002dd-225">0 &  1 &  0 &  0 \\\\</span></span>
-        <span data-ttu-id="002dd-226">0 &  0 & ~ 1 &  0 \\\\</span><span class="sxs-lookup"><span data-stu-id="002dd-226">0 &  0 & -1 &  0 \\\\</span></span>
-        <span data-ttu-id="002dd-227">0 0 0 & & & -1 \end{bmatrix} 。</span><span class="sxs-lookup"><span data-stu-id="002dd-227">0 &  0 &  0 & -1 \end{bmatrix}.</span></span>
+    <span data-ttu-id="6e78b-223">\otimes \boldone Z =\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="6e78b-223">Z \otimes \boldone = \begin{bmatrix}</span></span>
+        <span data-ttu-id="6e78b-224">1 & 0 & 0 0 &\\\\</span><span class="sxs-lookup"><span data-stu-id="6e78b-224">1 &  0 &  0 &  0 \\\\</span></span>
+        <span data-ttu-id="6e78b-225">0 &  1 &  0 &  0 \\\\</span><span class="sxs-lookup"><span data-stu-id="6e78b-225">0 &  1 &  0 &  0 \\\\</span></span>
+        <span data-ttu-id="6e78b-226">0 &  0 & ~ 1 &  0 \\\\</span><span class="sxs-lookup"><span data-stu-id="6e78b-226">0 &  0 & -1 &  0 \\\\</span></span>
+        <span data-ttu-id="6e78b-227">0 0 0 & & & -1 \end{bmatrix} 。</span><span class="sxs-lookup"><span data-stu-id="6e78b-227">0 &  0 &  0 & -1 \end{bmatrix}.</span></span>
 \end{align}
 $$
 
-<span data-ttu-id="002dd-228">前と同様に、このようなマトリックスのすべてのユニタリ変換では、- $ pm 1 eigenvalues によってラベル付けされた2つの半分の空白も記述さ $ れています。</span><span class="sxs-lookup"><span data-stu-id="002dd-228">As before, any unitary transformation of such matrices also describes two half-spaces labeled by $\pm 1$ eigenvalues.</span></span>
-<span data-ttu-id="002dd-229">たとえば、 $ \otimes = \otimes z hxh という id の x x h h (z \otimes z) h \otimes h のように $ $ = $ なります。</span><span class="sxs-lookup"><span data-stu-id="002dd-229">For example, $X\otimes X = H\otimes H(Z\otimes Z)H\otimes H$  from the identity that $Z=HXH$.</span></span>
-<span data-ttu-id="002dd-230">1 qubit の場合と同様に、2つの2つのすべての値は、 $ \dagger \otimes \id $ $ 4 4 つの \times $ ユニタリマトリックス $ u の $ u ^ (Z) u として書き込むことができます。次の表に示す変換を列挙します。</span><span class="sxs-lookup"><span data-stu-id="002dd-230">Similar to the one-qubit case, all two-qubit Pauli-measurements can be written as $U^\dagger (Z\otimes \id) U$ for $4\times 4$ unitary matrices $U$. We enumerate the transformations in the following table.</span></span>
+<span data-ttu-id="6e78b-228">前と同様に、このようなマトリックスのすべてのユニタリ変換では、- $ pm 1 eigenvalues によってラベル付けされた2つの半分の空白も記述さ $ れています。</span><span class="sxs-lookup"><span data-stu-id="6e78b-228">As before, any unitary transformation of such matrices also describes two half-spaces labeled by $\pm 1$ eigenvalues.</span></span>
+<span data-ttu-id="6e78b-229">たとえば、 $ \otimes = \otimes z hxh という id の x x h h (z \otimes z) h \otimes h のように $ $ = $ なります。</span><span class="sxs-lookup"><span data-stu-id="6e78b-229">For example, $X\otimes X = H\otimes H(Z\otimes Z)H\otimes H$  from the identity that $Z=HXH$.</span></span>
+<span data-ttu-id="6e78b-230">1 qubit の場合と同様に、2つの2つのすべての値は、 $ \dagger \otimes \id $ $ 4 4 つの \times $ ユニタリマトリックス $ u の $ u ^ (Z) u として書き込むことができます。次の表に示す変換を列挙します。</span><span class="sxs-lookup"><span data-stu-id="6e78b-230">Similar to the one-qubit case, all two-qubit Pauli-measurements can be written as $U^\dagger (Z\otimes \id) U$ for $4\times 4$ unitary matrices $U$. We enumerate the transformations in the following table.</span></span>
 
 > [!NOTE]
-<span data-ttu-id="002dd-231">>次の表では、 $ \operatorname { SWAP を使用し } $ てマトリックス > を示しています。$$</span><span class="sxs-lookup"><span data-stu-id="002dd-231">> In the table below, we use $\operatorname{SWAP}$ to indicate the matrix > $$</span></span>
-<span data-ttu-id="002dd-232">> \begin{align}</span><span class="sxs-lookup"><span data-stu-id="002dd-232">> \begin{align}</span></span>
-<span data-ttu-id="002dd-233">>     \operatorname{スワップ } &=</span><span class="sxs-lookup"><span data-stu-id="002dd-233">>     \operatorname{SWAP} & =</span></span>
-<span data-ttu-id="002dd-234">>     \left( \begin { マトリックス}</span><span class="sxs-lookup"><span data-stu-id="002dd-234">>     \left(\begin{matrix}</span></span>
-<span data-ttu-id="002dd-235">>1 & 0 & 0 0 &\\\\</span><span class="sxs-lookup"><span data-stu-id="002dd-235">>         1 & 0 & 0 & 0 \\\\</span></span>
-<span data-ttu-id="002dd-236">>         0 & 0 & 1 & 0 \\\\</span><span class="sxs-lookup"><span data-stu-id="002dd-236">>         0 & 0 & 1 & 0 \\\\</span></span>
-<span data-ttu-id="002dd-237">>         0 & 1 & 0 & 0 \\\\</span><span class="sxs-lookup"><span data-stu-id="002dd-237">>         0 & 1 & 0 & 0 \\\\</span></span>
-<span data-ttu-id="002dd-238">>0 0 0 & & & 1 > \end { マトリックス } \right ) >     \end{align}</span><span class="sxs-lookup"><span data-stu-id="002dd-238">>         0 & 0 & 0 & 1 >     \end{matrix}\right) > \end{align}</span></span>
-<span data-ttu-id="002dd-239">> $$</span><span class="sxs-lookup"><span data-stu-id="002dd-239">> $$</span></span>
-<span data-ttu-id="002dd-240">> 組み込み操作をシミュレートするために使用され [`SWAP`](xref:Microsoft.Quantum.Intrinsic) ます。</span><span class="sxs-lookup"><span data-stu-id="002dd-240">> used to simulate the intrinsic operation [`SWAP`](xref:Microsoft.Quantum.Intrinsic).</span></span>
+<span data-ttu-id="6e78b-231">>次の表では、 $ \operatorname { SWAP を使用し } $ てマトリックス > を示しています。$$</span><span class="sxs-lookup"><span data-stu-id="6e78b-231">> In the table below, we use $\operatorname{SWAP}$ to indicate the matrix > $$</span></span>
+<span data-ttu-id="6e78b-232">> \begin{align}</span><span class="sxs-lookup"><span data-stu-id="6e78b-232">> \begin{align}</span></span>
+<span data-ttu-id="6e78b-233">>     \operatorname{スワップ } &=</span><span class="sxs-lookup"><span data-stu-id="6e78b-233">>     \operatorname{SWAP} & =</span></span>
+<span data-ttu-id="6e78b-234">>     \left( \begin { マトリックス}</span><span class="sxs-lookup"><span data-stu-id="6e78b-234">>     \left(\begin{matrix}</span></span>
+<span data-ttu-id="6e78b-235">>1 & 0 & 0 0 &\\\\</span><span class="sxs-lookup"><span data-stu-id="6e78b-235">>         1 & 0 & 0 & 0 \\\\</span></span>
+<span data-ttu-id="6e78b-236">>         0 & 0 & 1 & 0 \\\\</span><span class="sxs-lookup"><span data-stu-id="6e78b-236">>         0 & 0 & 1 & 0 \\\\</span></span>
+<span data-ttu-id="6e78b-237">>         0 & 1 & 0 & 0 \\\\</span><span class="sxs-lookup"><span data-stu-id="6e78b-237">>         0 & 1 & 0 & 0 \\\\</span></span>
+<span data-ttu-id="6e78b-238">>0 0 0 & & & 1 > \end { マトリックス } \right ) >     \end{align}</span><span class="sxs-lookup"><span data-stu-id="6e78b-238">>         0 & 0 & 0 & 1 >     \end{matrix}\right) > \end{align}</span></span>
+<span data-ttu-id="6e78b-239">> $$</span><span class="sxs-lookup"><span data-stu-id="6e78b-239">> $$</span></span>
+<span data-ttu-id="6e78b-240">> 組み込み操作をシミュレートするために使用され [`SWAP`](xref:Microsoft.Quantum.Intrinsic) ます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-240">> used to simulate the intrinsic operation [`SWAP`](xref:Microsoft.Quantum.Intrinsic).</span></span>
 
-<span data-ttu-id="002dd-241">|P# li 測定の     | ユニタリ変換  |</span><span class="sxs-lookup"><span data-stu-id="002dd-241">|Pauli Measurement     |Unitary transformation  |</span></span>
+<span data-ttu-id="6e78b-241">|P# li 測定の     | ユニタリ変換  |</span><span class="sxs-lookup"><span data-stu-id="6e78b-241">|Pauli Measurement     |Unitary transformation  |</span></span>
 |----------------------|------------------------|
-<span data-ttu-id="002dd-242">|$ \otimes \boldone Z $| $\boldone\otimes\boldone$|</span><span class="sxs-lookup"><span data-stu-id="002dd-242">| $Z\otimes \boldone$ | $\boldone\otimes \boldone$ |</span></span>
-<span data-ttu-id="002dd-243">|$ \otimes \boldone X $| $\otimes \boldone H $|</span><span class="sxs-lookup"><span data-stu-id="002dd-243">| $X\otimes \boldone$ | $H\otimes \boldone$ |</span></span>
-<span data-ttu-id="002dd-244">|$ \otimes \boldone Y $| $HS \dagger \otimes \boldone ^ $|</span><span class="sxs-lookup"><span data-stu-id="002dd-244">| $Y\otimes \boldone$ | $HS^\dagger\otimes \boldone$ |</span></span>
-<span data-ttu-id="002dd-245">|$\boldone \otimesZ $ | $ \operatorname { スワップ } $|</span><span class="sxs-lookup"><span data-stu-id="002dd-245">| $\boldone \otimes Z$ | $\operatorname{SWAP}$ |</span></span>
-<span data-ttu-id="002dd-246">|$\boldone \otimesX $ | $ (H \otimes \boldone ) \operatorname { の } スワップ $|</span><span class="sxs-lookup"><span data-stu-id="002dd-246">| $\boldone \otimes X$ | $(H\otimes \boldone)\operatorname{SWAP}$ |</span></span>
-<span data-ttu-id="002dd-247">|$\boldone \otimesY $ | $ (HS ^ \dagger \otimes \boldone ) \operatorname { スワップ } $|</span><span class="sxs-lookup"><span data-stu-id="002dd-247">| $\boldone \otimes Y$ | $(HS^\dagger\otimes \boldone)\operatorname{SWAP}$ |</span></span>
-<span data-ttu-id="002dd-248">|$Z \otimesZ $ | $ \operatorname { cnot } \_ { 10 } $|</span><span class="sxs-lookup"><span data-stu-id="002dd-248">| $Z\otimes Z$ | $\operatorname{CNOT}\_{10}$ |</span></span>
-<span data-ttu-id="002dd-249">|$X \otimesZ $ | $ \operatorname { cnot } \_ { 10 } (H \otimes \boldone ) $|</span><span class="sxs-lookup"><span data-stu-id="002dd-249">| $X\otimes Z$ | $\operatorname{CNOT}\_{10}(H\otimes \boldone)$ |</span></span>
-<span data-ttu-id="002dd-250">|$Y \otimesZ $ | $ \operatorname { cnot } \_ { 10 } (HS ^ \dagger \otimes \boldone ) $|</span><span class="sxs-lookup"><span data-stu-id="002dd-250">| $Y\otimes Z$ | $\operatorname{CNOT}\_{10}(HS^\dagger\otimes \boldone)$ |</span></span>
-<span data-ttu-id="002dd-251">|$Z \otimesX $ | $ \operatorname { cnot } \_ { 10 } ( \boldone \otimes H) $|</span><span class="sxs-lookup"><span data-stu-id="002dd-251">| $Z\otimes X$ | $\operatorname{CNOT}\_{10}(\boldone\otimes H)$ |</span></span>
-<span data-ttu-id="002dd-252">|$X \otimesX $ | $ \operatorname { cnot } \_ { 10 } (h \otimes h) $|</span><span class="sxs-lookup"><span data-stu-id="002dd-252">| $X\otimes X$ | $\operatorname{CNOT}\_{10}(H\otimes H)$ |</span></span>
-<span data-ttu-id="002dd-253">|$Y \otimesX $ | $ \operatorname { cnot } \_ { 10 } (HS ^ \dagger \otimes H) $|</span><span class="sxs-lookup"><span data-stu-id="002dd-253">| $Y\otimes X$ | $\operatorname{CNOT}\_{10}(HS^\dagger\otimes H)$ |</span></span>
-<span data-ttu-id="002dd-254">|$Z \otimesY $ | $ \operatorname { cnot } \_ { 10 } ( \boldone \otimes HS ^ \dagger ) $|</span><span class="sxs-lookup"><span data-stu-id="002dd-254">| $Z\otimes Y$ | $\operatorname{CNOT}\_{10}(\boldone \otimes HS^\dagger)$ |</span></span>
-<span data-ttu-id="002dd-255">|$X \otimesY $ | $ \operatorname { cnot } \_ { 10 } (H \otimes HS ^ \dagger ) $|</span><span class="sxs-lookup"><span data-stu-id="002dd-255">| $X\otimes Y$ | $\operatorname{CNOT}\_{10}(H\otimes HS^\dagger)$ |</span></span>
-<span data-ttu-id="002dd-256">|$Y \otimesY $ | $ \operatorname { cnot } \_ { 10 } (hs ^ \dagger \otimes hs ^ \dagger ) $|</span><span class="sxs-lookup"><span data-stu-id="002dd-256">| $Y\otimes Y$ | $\operatorname{CNOT}\_{10}(HS^\dagger\otimes HS^\dagger)$ |</span></span>
+<span data-ttu-id="6e78b-242">|$ \otimes \boldone Z $| $\boldone\otimes\boldone$|</span><span class="sxs-lookup"><span data-stu-id="6e78b-242">| $Z\otimes \boldone$ | $\boldone\otimes \boldone$ |</span></span>
+<span data-ttu-id="6e78b-243">|$ \otimes \boldone X $| $\otimes \boldone H $|</span><span class="sxs-lookup"><span data-stu-id="6e78b-243">| $X\otimes \boldone$ | $H\otimes \boldone$ |</span></span>
+<span data-ttu-id="6e78b-244">|$ \otimes \boldone Y $| $HS \dagger \otimes \boldone ^ $|</span><span class="sxs-lookup"><span data-stu-id="6e78b-244">| $Y\otimes \boldone$ | $HS^\dagger\otimes \boldone$ |</span></span>
+<span data-ttu-id="6e78b-245">|$\boldone \otimesZ $ | $ \operatorname { スワップ } $|</span><span class="sxs-lookup"><span data-stu-id="6e78b-245">| $\boldone \otimes Z$ | $\operatorname{SWAP}$ |</span></span>
+<span data-ttu-id="6e78b-246">|$\boldone \otimesX $ | $ (H \otimes \boldone ) \operatorname { の } スワップ $|</span><span class="sxs-lookup"><span data-stu-id="6e78b-246">| $\boldone \otimes X$ | $(H\otimes \boldone)\operatorname{SWAP}$ |</span></span>
+<span data-ttu-id="6e78b-247">|$\boldone \otimesY $ | $ (HS ^ \dagger \otimes \boldone ) \operatorname { スワップ } $|</span><span class="sxs-lookup"><span data-stu-id="6e78b-247">| $\boldone \otimes Y$ | $(HS^\dagger\otimes \boldone)\operatorname{SWAP}$ |</span></span>
+<span data-ttu-id="6e78b-248">|$Z \otimesZ $ | $ \operatorname { cnot } \_ { 10 } $|</span><span class="sxs-lookup"><span data-stu-id="6e78b-248">| $Z\otimes Z$ | $\operatorname{CNOT}\_{10}$ |</span></span>
+<span data-ttu-id="6e78b-249">|$X \otimesZ $ | $ \operatorname { cnot } \_ { 10 } (H \otimes \boldone ) $|</span><span class="sxs-lookup"><span data-stu-id="6e78b-249">| $X\otimes Z$ | $\operatorname{CNOT}\_{10}(H\otimes \boldone)$ |</span></span>
+<span data-ttu-id="6e78b-250">|$Y \otimesZ $ | $ \operatorname { cnot } \_ { 10 } (HS ^ \dagger \otimes \boldone ) $|</span><span class="sxs-lookup"><span data-stu-id="6e78b-250">| $Y\otimes Z$ | $\operatorname{CNOT}\_{10}(HS^\dagger\otimes \boldone)$ |</span></span>
+<span data-ttu-id="6e78b-251">|$Z \otimesX $ | $ \operatorname { cnot } \_ { 10 } ( \boldone \otimes H) $|</span><span class="sxs-lookup"><span data-stu-id="6e78b-251">| $Z\otimes X$ | $\operatorname{CNOT}\_{10}(\boldone\otimes H)$ |</span></span>
+<span data-ttu-id="6e78b-252">|$X \otimesX $ | $ \operatorname { cnot } \_ { 10 } (h \otimes h) $|</span><span class="sxs-lookup"><span data-stu-id="6e78b-252">| $X\otimes X$ | $\operatorname{CNOT}\_{10}(H\otimes H)$ |</span></span>
+<span data-ttu-id="6e78b-253">|$Y \otimesX $ | $ \operatorname { cnot } \_ { 10 } (HS ^ \dagger \otimes H) $|</span><span class="sxs-lookup"><span data-stu-id="6e78b-253">| $Y\otimes X$ | $\operatorname{CNOT}\_{10}(HS^\dagger\otimes H)$ |</span></span>
+<span data-ttu-id="6e78b-254">|$Z \otimesY $ | $ \operatorname { cnot } \_ { 10 } ( \boldone \otimes HS ^ \dagger ) $|</span><span class="sxs-lookup"><span data-stu-id="6e78b-254">| $Z\otimes Y$ | $\operatorname{CNOT}\_{10}(\boldone \otimes HS^\dagger)$ |</span></span>
+<span data-ttu-id="6e78b-255">|$X \otimesY $ | $ \operatorname { cnot } \_ { 10 } (H \otimes HS ^ \dagger ) $|</span><span class="sxs-lookup"><span data-stu-id="6e78b-255">| $X\otimes Y$ | $\operatorname{CNOT}\_{10}(H\otimes HS^\dagger)$ |</span></span>
+<span data-ttu-id="6e78b-256">|$Y \otimesY $ | $ \operatorname { cnot } \_ { 10 } (hs ^ \dagger \otimes hs ^ \dagger ) $|</span><span class="sxs-lookup"><span data-stu-id="6e78b-256">| $Y\otimes Y$ | $\operatorname{CNOT}\_{10}(HS^\dagger\otimes HS^\dagger)$ |</span></span>
 
-<span data-ttu-id="002dd-257">ここでは、 [`CNOT`](xref:Microsoft.Quantum.Intrinsic.CNOT) 次の理由で操作が表示されます。</span><span class="sxs-lookup"><span data-stu-id="002dd-257">Here, the [`CNOT`](xref:Microsoft.Quantum.Intrinsic.CNOT) operation appears for the following reason.</span></span>
-<span data-ttu-id="002dd-258">マトリックスを含まない各 peach の測定値 $ \boldone $ は、 $ \otimes 上記の理由により、ユニタリから z z までと同等です $ 。</span><span class="sxs-lookup"><span data-stu-id="002dd-258">Each Pauli measurement that does not include the $\boldone$ matrix is equivalent up to a unitary to $Z\otimes Z$ by the above reasoning.</span></span>
-<span data-ttu-id="002dd-259">Z z の固有値は、 $ \otimes $ 各計算ベースベクトルを構成する qubits のパリティに依存します。また、制御されていない操作は、このパリティを計算して最初のビットに格納します。</span><span class="sxs-lookup"><span data-stu-id="002dd-259">The eigenvalues of $Z\otimes Z$ only depend on the parity of the qubits that comprise each computational basis vector, and the controlled-not operations serve to compute this parity and store it in the first bit.</span></span>
-<span data-ttu-id="002dd-260">次に、最初のビットを測定した後、結果として得られる半分の領域の id を回復できます。これは、P# li 演算子の測定に相当します。</span><span class="sxs-lookup"><span data-stu-id="002dd-260">Then once the first bit is measured, we can recover the identity of the resultant half-space, which is equivalent to measuring the Pauli operator.</span></span>
+<span data-ttu-id="6e78b-257">ここでは、 [`CNOT`](xref:Microsoft.Quantum.Intrinsic.CNOT) 次の理由で操作が表示されます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-257">Here, the [`CNOT`](xref:Microsoft.Quantum.Intrinsic.CNOT) operation appears for the following reason.</span></span>
+<span data-ttu-id="6e78b-258">マトリックスを含まない各 peach の測定値 $ \boldone $ は、 $ \otimes 上記の理由により、ユニタリから z z までと同等です $ 。</span><span class="sxs-lookup"><span data-stu-id="6e78b-258">Each Pauli measurement that does not include the $\boldone$ matrix is equivalent up to a unitary to $Z\otimes Z$ by the above reasoning.</span></span>
+<span data-ttu-id="6e78b-259">Z z の固有値は、 $ \otimes $ 各計算ベースベクトルを構成する qubits のパリティに依存します。また、制御されていない操作は、このパリティを計算して最初のビットに格納します。</span><span class="sxs-lookup"><span data-stu-id="6e78b-259">The eigenvalues of $Z\otimes Z$ only depend on the parity of the qubits that comprise each computational basis vector, and the controlled-not operations serve to compute this parity and store it in the first bit.</span></span>
+<span data-ttu-id="6e78b-260">次に、最初のビットを測定した後、結果として得られる半分の領域の id を回復できます。これは、P# li 演算子の測定に相当します。</span><span class="sxs-lookup"><span data-stu-id="6e78b-260">Then once the first bit is measured, we can recover the identity of the resultant half-space, which is equivalent to measuring the Pauli operator.</span></span>
 
-<span data-ttu-id="002dd-261">1つ追加の注意事項: $ z \otimes z $ は、 $ z \otimes \mathbb { 1 と 1 z を順番に測定するのと同じ } $ $ \mathbb { } \otimes $ であると想定されますが、この想定は false になります。</span><span class="sxs-lookup"><span data-stu-id="002dd-261">One additional note: while it may be tempting to assume that measuring $Z\otimes Z$ is the same as sequentially measuring $Z\otimes \mathbb{1}$ and then $\mathbb{1} \otimes Z$, this assumption would be false.</span></span>
-<span data-ttu-id="002dd-262">その理由は、z z を測定すると、 $ \otimes $ $ $ これらの演算子の + 1 または-1 のいずれか $ $ の状態になります。</span><span class="sxs-lookup"><span data-stu-id="002dd-262">The reason is that measuring $Z\otimes Z$ projects the quantum state into either the $+1$ or $-1$ eigenstate of these operators.</span></span>
-<span data-ttu-id="002dd-263">$Z \otimes \mathbb { 1 } $ と $ \mathbb { 1 z を測定 } \otimes すると $ 、まずクォンタム状態ベクトルが z 1 の半分の領域に投影され、 $ 次に \otimes \mathbb { } $ 1 の半分の領域 $ \mathbb { } \otimes $ に投影されます。計算ベースのベクトルが4つあるため、両方の測定を実行すると、状態が4分の1に減少し、1つの計算ベースのベクトルに縮小されます。</span><span class="sxs-lookup"><span data-stu-id="002dd-263">Measuring $Z\otimes \mathbb{1}$ and then $\mathbb{1} \otimes Z$ projects the quantum state vector first onto a half space of $Z\otimes \mathbb{1}$ and then onto a half space of $\mathbb{1} \otimes Z$. As there are four computational basis vectors, performing both measurements reduces the state to a quarter-space and hence reduces it to a single computational basis vector.</span></span>
+<span data-ttu-id="6e78b-261">1つ追加の注意事項: $ z \otimes z $ は、 $ z \otimes \mathbb { 1 と 1 z を順番に測定するのと同じ } $ $ \mathbb { } \otimes $ であると想定されますが、この想定は false になります。</span><span class="sxs-lookup"><span data-stu-id="6e78b-261">One additional note: while it may be tempting to assume that measuring $Z\otimes Z$ is the same as sequentially measuring $Z\otimes \mathbb{1}$ and then $\mathbb{1} \otimes Z$, this assumption would be false.</span></span>
+<span data-ttu-id="6e78b-262">その理由は、z z を測定すると、 $ \otimes $ $ $ これらの演算子の + 1 または-1 のいずれか $ $ の状態になります。</span><span class="sxs-lookup"><span data-stu-id="6e78b-262">The reason is that measuring $Z\otimes Z$ projects the quantum state into either the $+1$ or $-1$ eigenstate of these operators.</span></span>
+<span data-ttu-id="6e78b-263">$Z \otimes \mathbb { 1 } $ と $ \mathbb { 1 z を測定 } \otimes すると $ 、まずクォンタム状態ベクトルが z 1 の半分の領域に投影され、 $ 次に \otimes \mathbb { } $ 1 の半分の領域 $ \mathbb { } \otimes $ に投影されます。計算ベースのベクトルが4つあるため、両方の測定を実行すると、状態が4分の1に減少し、1つの計算ベースのベクトルに縮小されます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-263">Measuring $Z\otimes \mathbb{1}$ and then $\mathbb{1} \otimes Z$ projects the quantum state vector first onto a half space of $Z\otimes \mathbb{1}$ and then onto a half space of $\mathbb{1} \otimes Z$. As there are four computational basis vectors, performing both measurements reduces the state to a quarter-space and hence reduces it to a single computational basis vector.</span></span>
 
-## <a name="correlations-between-qubits"></a><span data-ttu-id="002dd-264">量子ビット間の相関関係</span><span class="sxs-lookup"><span data-stu-id="002dd-264">Correlations between qubits</span></span>
-<span data-ttu-id="002dd-265">X x や z z などの P# li マトリックスの保存されていない製品を測定する別の方法として、 $ \otimes これらの $ $ \otimes $ 測定値を使用すると、2つの qubits 間の相関関係に格納されている情報を確認できます。</span><span class="sxs-lookup"><span data-stu-id="002dd-265">Another way of looking at measuring tensor products of Pauli matrices such as $X\otimes X$ or $Z\otimes Z$ is that these measurements let you look at information stored in the correlations between the two qubits.</span></span>
-<span data-ttu-id="002dd-266">$X \otimes \id $ を測定すると、最初の qubit にローカルに格納されている情報を確認できます。</span><span class="sxs-lookup"><span data-stu-id="002dd-266">Measuring $X\otimes \id$ lets you look at information that is locally stored in the first qubit.</span></span>
-<span data-ttu-id="002dd-267">クォンタムコンピューティングではどちらの種類の測定も同等の価値がありますが、前者はクォンタムコンピューティングの能力を測定します。</span><span class="sxs-lookup"><span data-stu-id="002dd-267">While both types of measurements are equally valuable in quantum computing, the former illuminates the power of quantum computing.</span></span>
-<span data-ttu-id="002dd-268">クォンタムコンピューティングでは、学習する情報が1つの qubit に格納されておらず、すべての qubit にローカルに格納されていないことがわかります。したがって、この情報は、結合測定 (z z など) を使用して参照することによってのみ、 $ \otimes マニフェストに $ なります。</span><span class="sxs-lookup"><span data-stu-id="002dd-268">It reveals that in quantum computing, often the information you wish to learn is not stored in any single qubit but rather stored non-locally in all the qubits at once, and therefore only by looking at it through a joint measurement (e.g. $Z\otimes Z$) does this information become manifest.</span></span>
+## <a name="correlations-between-qubits"></a><span data-ttu-id="6e78b-264">量子ビット間の相関関係</span><span class="sxs-lookup"><span data-stu-id="6e78b-264">Correlations between qubits</span></span>
+<span data-ttu-id="6e78b-265">X x や z z などの P# li マトリックスの保存されていない製品を測定する別の方法として、 $ \otimes これらの $ $ \otimes $ 測定値を使用すると、2つの qubits 間の相関関係に格納されている情報を確認できます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-265">Another way of looking at measuring tensor products of Pauli matrices such as $X\otimes X$ or $Z\otimes Z$ is that these measurements let you look at information stored in the correlations between the two qubits.</span></span>
+<span data-ttu-id="6e78b-266">$X \otimes \id $ を測定すると、最初の qubit にローカルに格納されている情報を確認できます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-266">Measuring $X\otimes \id$ lets you look at information that is locally stored in the first qubit.</span></span>
+<span data-ttu-id="6e78b-267">クォンタムコンピューティングではどちらの種類の測定も同等の価値がありますが、前者はクォンタムコンピューティングの能力を測定します。</span><span class="sxs-lookup"><span data-stu-id="6e78b-267">While both types of measurements are equally valuable in quantum computing, the former illuminates the power of quantum computing.</span></span>
+<span data-ttu-id="6e78b-268">クォンタムコンピューティングでは、学習する情報が1つの qubit に格納されておらず、すべての qubit にローカルに格納されていないことがわかります。したがって、この情報は、結合測定 (z z など) を使用して参照することによってのみ、 $ \otimes マニフェストに $ なります。</span><span class="sxs-lookup"><span data-stu-id="6e78b-268">It reveals that in quantum computing, often the information you wish to learn is not stored in any single qubit but rather stored non-locally in all the qubits at once, and therefore only by looking at it through a joint measurement (e.g. $Z\otimes Z$) does this information become manifest.</span></span>
 
-<span data-ttu-id="002dd-269">たとえば、エラー修正では、保護しようとしている状態について何も学習していないときに発生したエラーを確認したい場合がよくあります。</span><span class="sxs-lookup"><span data-stu-id="002dd-269">For example, in error correction, we often wish to learn what error occurred while learning nothing about the state that we're trying to protect.</span></span>
-<span data-ttu-id="002dd-270">[ビットフリップコードサンプル](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code)では、 $ z z や z z などの測定値を使用してこれを行う方法の例を示して \otimes \otimes \id $ $ \id \otimes \otimes $ います。 <--TODO: ビットフリップコードサンプルがオンボードになるとすぐに、これをサンプルブラウザーへのリンクに変更します。</span><span class="sxs-lookup"><span data-stu-id="002dd-270">The [bit-flip code sample](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code) shows an example of how you can do that using measurements like $Z \otimes Z \otimes \id$ and $\id \otimes Z \otimes Z$. <!-- TODO: change this to a link to the samples browser as soon as the bit-flip code sample is on-boarded.</span></span> -->
+<span data-ttu-id="6e78b-269">たとえば、エラー修正では、保護しようとしている状態について何も学習していないときに発生したエラーを確認したい場合がよくあります。</span><span class="sxs-lookup"><span data-stu-id="6e78b-269">For example, in error correction, we often wish to learn what error occurred while learning nothing about the state that we're trying to protect.</span></span>
+<span data-ttu-id="6e78b-270">[ビットフリップコードサンプル](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code)では、 $ z z や z z などの測定値を使用してこれを行う方法の例を示して \otimes \otimes \id $ $ \id \otimes \otimes $ います。 <--TODO: ビットフリップコードサンプルがオンボードになるとすぐに、これをサンプルブラウザーへのリンクに変更します。</span><span class="sxs-lookup"><span data-stu-id="6e78b-270">The [bit-flip code sample](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code) shows an example of how you can do that using measurements like $Z \otimes Z \otimes \id$ and $\id \otimes Z \otimes Z$. <!-- TODO: change this to a link to the samples browser as soon as the bit-flip code sample is on-boarded.</span></span> -->
 
-<span data-ttu-id="002dd-271">$X \otimes Y \otimes Z などの任意の演算子 \otimes \boldone $ も測定できます。</span><span class="sxs-lookup"><span data-stu-id="002dd-271">Arbitrary Pauli operators such as $X\otimes Y \otimes Z \otimes \boldone$ can also be measured.</span></span>
-<span data-ttu-id="002dd-272">P# li 演算子のすべてのその他の製品には、2つの固有値- $ pm 1 しかあり $ ません。固有値はベクター空間全体の半分のスペースを構成します。</span><span class="sxs-lookup"><span data-stu-id="002dd-272">All such tensor products of Pauli operators have only two eigenvalues $\pm 1$ and both eigenspaces constitute half-spaces of the entire vector space.</span></span>
-<span data-ttu-id="002dd-273">そのため、これらは上記の要件と一致します。</span><span class="sxs-lookup"><span data-stu-id="002dd-273">Thus they coincide with the requirements stated above.</span></span>
+<span data-ttu-id="6e78b-271">$X \otimes Y \otimes Z などの任意の演算子 \otimes \boldone $ も測定できます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-271">Arbitrary Pauli operators such as $X\otimes Y \otimes Z \otimes \boldone$ can also be measured.</span></span>
+<span data-ttu-id="6e78b-272">P# li 演算子のすべてのその他の製品には、2つの固有値- $ pm 1 しかあり $ ません。固有値はベクター空間全体の半分のスペースを構成します。</span><span class="sxs-lookup"><span data-stu-id="6e78b-272">All such tensor products of Pauli operators have only two eigenvalues $\pm 1$ and both eigenspaces constitute half-spaces of the entire vector space.</span></span>
+<span data-ttu-id="6e78b-273">そのため、これらは上記の要件と一致します。</span><span class="sxs-lookup"><span data-stu-id="6e78b-273">Thus they coincide with the requirements stated above.</span></span>
 
-<span data-ttu-id="002dd-274">では Q# 、このような測定値が $ $ 結果を生成する場合は j が返され $ ます (-1) ^ j $ 。</span><span class="sxs-lookup"><span data-stu-id="002dd-274">In Q#, such measurements return $j$ if the measurement yields a result in the eigenspace of sign $(-1)^j$.</span></span>
-<span data-ttu-id="002dd-275">の組み込み機能として Pdiagonalizing の測定値を持つこと Q# は役に立ちます。このような演算子を測定するには、制御されていないゲートと基本変換の長いチェーンが必要であり、その操作を、 $ $ Z との積として表現するために必要な U ゲートを記述する必要があり $ $ $ \id $ ます。</span><span class="sxs-lookup"><span data-stu-id="002dd-275">Having Pauli measurements as a built-in feature in Q# is helpful because measuring such operators requires long chains of controlled-NOT gates and basis transformations to describe the diagonalizing $U$ gate needed to express the operation as a tensor product of $Z$ and $\id$.</span></span>
-<span data-ttu-id="002dd-276">これらの定義済みの測定値のいずれかを実行することを指定できるようにすることで、計算ベースの測定によって必要な情報が得られるように、基になる方法を気にする必要がなくなります。</span><span class="sxs-lookup"><span data-stu-id="002dd-276">By being able to specify that you wish to do one of these pre-defined measurements, you don't need to worry about how to transform your basis such that a computational basis measurement provides the necessary information.</span></span>
-<span data-ttu-id="002dd-277">Q# 必要なすべての基準変換を自動的に処理します。</span><span class="sxs-lookup"><span data-stu-id="002dd-277">Q# handles all the necessary basis transformations for you automatically.</span></span>
-<span data-ttu-id="002dd-278">詳細については、「」および「」操作を参照してください [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) [`MeasurePaulis`](xref:Microsoft.Quantum.Measurement.MeasurePaulis) 。</span><span class="sxs-lookup"><span data-stu-id="002dd-278">For more information, see the [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) and [`MeasurePaulis`](xref:Microsoft.Quantum.Measurement.MeasurePaulis) operations.</span></span>
+<span data-ttu-id="6e78b-274">では Q# 、このような測定値が $ $ 結果を生成する場合は j が返され $ ます (-1) ^ j $ 。</span><span class="sxs-lookup"><span data-stu-id="6e78b-274">In Q#, such measurements return $j$ if the measurement yields a result in the eigenspace of sign $(-1)^j$.</span></span>
+<span data-ttu-id="6e78b-275">の組み込み機能として Pdiagonalizing の測定値を持つこと Q# は役に立ちます。このような演算子を測定するには、制御されていないゲートと基本変換の長いチェーンが必要であり、その操作を、 $ $ Z との積として表現するために必要な U ゲートを記述する必要があり $ $ $ \id $ ます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-275">Having Pauli measurements as a built-in feature in Q# is helpful because measuring such operators requires long chains of controlled-NOT gates and basis transformations to describe the diagonalizing $U$ gate needed to express the operation as a tensor product of $Z$ and $\id$.</span></span>
+<span data-ttu-id="6e78b-276">これらの定義済みの測定値のいずれかを実行することを指定できるようにすることで、計算ベースの測定によって必要な情報が得られるように、基になる方法を気にする必要がなくなります。</span><span class="sxs-lookup"><span data-stu-id="6e78b-276">By being able to specify that you wish to do one of these pre-defined measurements, you don't need to worry about how to transform your basis such that a computational basis measurement provides the necessary information.</span></span>
+<span data-ttu-id="6e78b-277">Q# 必要なすべての基準変換を自動的に処理します。</span><span class="sxs-lookup"><span data-stu-id="6e78b-277">Q# handles all the necessary basis transformations for you automatically.</span></span>
+<span data-ttu-id="6e78b-278">詳細については、「」および「」操作を参照してください [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) [`MeasurePaulis`](xref:Microsoft.Quantum.Measurement.MeasurePaulis) 。</span><span class="sxs-lookup"><span data-stu-id="6e78b-278">For more information, see the [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) and [`MeasurePaulis`](xref:Microsoft.Quantum.Measurement.MeasurePaulis) operations.</span></span>
 
-## <a name="the-no-cloning-theorem"></a><span data-ttu-id="002dd-279">No-Cloning 定理</span><span class="sxs-lookup"><span data-stu-id="002dd-279">The No-Cloning Theorem</span></span>
+## <a name="the-no-cloning-theorem"></a><span data-ttu-id="6e78b-279">No-Cloning 定理</span><span class="sxs-lookup"><span data-stu-id="6e78b-279">The No-Cloning Theorem</span></span>
 
-<span data-ttu-id="002dd-280">クォンタム情報は強力です。</span><span class="sxs-lookup"><span data-stu-id="002dd-280">Quantum information is powerful.</span></span>
-<span data-ttu-id="002dd-281">これにより、最もよく知られている古典アルゴリズムよりも指数関数的に数値を指数関数的に処理できるようにすることが可能になります。また、正確にシミュレートするためにクラシックデプロイに必要な、関連する電子システムを効率的にシミュレートできます。</span><span class="sxs-lookup"><span data-stu-id="002dd-281">It enables us to do amazing things such as factor numbers exponentially faster than the best known classical algorithms, or efficiently simulate correlated electron systems that classically require exponential cost to simulate accurately.</span></span>
-<span data-ttu-id="002dd-282">ただし、クォンタムコンピューティングの能力には制限があります。</span><span class="sxs-lookup"><span data-stu-id="002dd-282">However, there are limitations to the power of quantum computing.</span></span>
-<span data-ttu-id="002dd-283">このような制限は、 *複製なしの定理* によって与えられます。</span><span class="sxs-lookup"><span data-stu-id="002dd-283">One such limitation is given by the *No-Cloning Theorem*.</span></span>
+<span data-ttu-id="6e78b-280">クォンタム情報は強力です。</span><span class="sxs-lookup"><span data-stu-id="6e78b-280">Quantum information is powerful.</span></span>
+<span data-ttu-id="6e78b-281">これにより、最もよく知られている古典アルゴリズムよりも指数関数的に数値を指数関数的に処理できるようにすることが可能になります。また、正確にシミュレートするためにクラシックデプロイに必要な、関連する電子システムを効率的にシミュレートできます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-281">It enables us to do amazing things such as factor numbers exponentially faster than the best known classical algorithms, or efficiently simulate correlated electron systems that classically require exponential cost to simulate accurately.</span></span>
+<span data-ttu-id="6e78b-282">ただし、クォンタムコンピューティングの能力には制限があります。</span><span class="sxs-lookup"><span data-stu-id="6e78b-282">However, there are limitations to the power of quantum computing.</span></span>
+<span data-ttu-id="6e78b-283">このような制限は、 *複製なしの定理* によって与えられます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-283">One such limitation is given by the *No-Cloning Theorem*.</span></span>
 
-<span data-ttu-id="002dd-284">No-Cloning 定理はこのという名前です。</span><span class="sxs-lookup"><span data-stu-id="002dd-284">The No-Cloning Theorem is aptly named.</span></span>
-<span data-ttu-id="002dd-285">クォンタムコンピューターによる汎用クォンタム状態の複製は禁止されています。</span><span class="sxs-lookup"><span data-stu-id="002dd-285">It disallows cloning of generic quantum states by a quantum computer.</span></span>
-<span data-ttu-id="002dd-286">定理の証明は、非常に簡単です。</span><span class="sxs-lookup"><span data-stu-id="002dd-286">The proof of the theorem is remarkably straightforward.</span></span>
-<span data-ttu-id="002dd-287">複製なしの定理の完全な証明は、ここで説明するための技術的なものではありませんが、追加の補助 qubits が存在しない場合の証拠は、この範囲内にあります。</span><span class="sxs-lookup"><span data-stu-id="002dd-287">While a full proof of the no-cloning theorem is a little too technical for our discussion here, the proof in the case of no additional auxiliary qubits is within our scope.</span></span>
+<span data-ttu-id="6e78b-284">No-Cloning 定理はこのという名前です。</span><span class="sxs-lookup"><span data-stu-id="6e78b-284">The No-Cloning Theorem is aptly named.</span></span>
+<span data-ttu-id="6e78b-285">クォンタムコンピューターによる汎用クォンタム状態の複製は禁止されています。</span><span class="sxs-lookup"><span data-stu-id="6e78b-285">It disallows cloning of generic quantum states by a quantum computer.</span></span>
+<span data-ttu-id="6e78b-286">定理の証明は、非常に簡単です。</span><span class="sxs-lookup"><span data-stu-id="6e78b-286">The proof of the theorem is remarkably straightforward.</span></span>
+<span data-ttu-id="6e78b-287">複製なしの定理の完全な証明は、ここで説明するための技術的なものではありませんが、追加の補助 qubits が存在しない場合の証拠は、この範囲内にあります。</span><span class="sxs-lookup"><span data-stu-id="6e78b-287">While a full proof of the no-cloning theorem is a little too technical for our discussion here, the proof in the case of no additional auxiliary qubits is within our scope.</span></span>
 
-<span data-ttu-id="002dd-288">このようなクォンタムコンピューターでは、複製操作は、1つのユニタリ行列によって記述される必要があります。</span><span class="sxs-lookup"><span data-stu-id="002dd-288">For such a quantum computer, the cloning operation must be described by a unitary matrix.</span></span>
-<span data-ttu-id="002dd-289">複製しようとしているクォンタムの状態が破損する可能性があるため、測定は禁止されています。</span><span class="sxs-lookup"><span data-stu-id="002dd-289">We disallow measurement, since it would corrupt the quantum state we are trying to clone.</span></span>
-<span data-ttu-id="002dd-290">複製操作をシミュレートするために、次のようなプロパティを持つために使用されている、 $$</span><span class="sxs-lookup"><span data-stu-id="002dd-290">To simulate the cloning operation, we want the unitary matrix used to have the property that $$</span></span>
-  <span data-ttu-id="002dd-291">U \ket { \psi } \ket { 0 } = \ket { \psi }\ket{\psi}</span><span class="sxs-lookup"><span data-stu-id="002dd-291">U \ket{\psi} \ket{0} = \ket{\psi} \ket{\psi}</span></span>
+<span data-ttu-id="6e78b-288">このようなクォンタムコンピューターでは、複製操作は、1つのユニタリ行列によって記述される必要があります。</span><span class="sxs-lookup"><span data-stu-id="6e78b-288">For such a quantum computer, the cloning operation must be described by a unitary matrix.</span></span>
+<span data-ttu-id="6e78b-289">複製しようとしているクォンタムの状態が破損する可能性があるため、測定は禁止されています。</span><span class="sxs-lookup"><span data-stu-id="6e78b-289">We disallow measurement, since it would corrupt the quantum state we are trying to clone.</span></span>
+<span data-ttu-id="6e78b-290">複製操作をシミュレートするために、次のようなプロパティを持つために使用されている、 $$</span><span class="sxs-lookup"><span data-stu-id="6e78b-290">To simulate the cloning operation, we want the unitary matrix used to have the property that $$</span></span>
+  <span data-ttu-id="6e78b-291">U \ket { \psi } \ket { 0 } = \ket { \psi }\ket{\psi}</span><span class="sxs-lookup"><span data-stu-id="6e78b-291">U \ket{\psi} \ket{0} = \ket{\psi} \ket{\psi}</span></span>
 $$
-<span data-ttu-id="002dd-292">任意の状態 $ \ket { \psi } $ 。</span><span class="sxs-lookup"><span data-stu-id="002dd-292">for any state $\ket{\psi}$.</span></span>
-<span data-ttu-id="002dd-293">マトリックス乗算の直線性プロパティは、2番目のクォンタム状態の場合 $ \ket { \phi } $ 、</span><span class="sxs-lookup"><span data-stu-id="002dd-293">The linearity property of matrix multiplication then implies that for any second quantum state $\ket{\phi}$,</span></span>
+<span data-ttu-id="6e78b-292">任意の状態 $ \ket { \psi } $ 。</span><span class="sxs-lookup"><span data-stu-id="6e78b-292">for any state $\ket{\psi}$.</span></span>
+<span data-ttu-id="6e78b-293">マトリックス乗算の直線性プロパティは、2番目のクォンタム状態の場合 $ \ket { \phi } $ 、</span><span class="sxs-lookup"><span data-stu-id="6e78b-293">The linearity property of matrix multiplication then implies that for any second quantum state $\ket{\phi}$,</span></span>
 
 $$
 \begin{align}
-    <span data-ttu-id="002dd-294">U \left [ \frac { 1 } { \sqrt { 2 } } \left ( \ket { \phi } + \ket { \psi } \right ) \right ] \ket { 0}</span><span class="sxs-lookup"><span data-stu-id="002dd-294">U \left[ \frac{1}{\sqrt{2}}\left(\ket{\phi}+\ket{\psi} \right) \right] \ket{0}</span></span>
-    <span data-ttu-id="002dd-295">&= \frac{1 } { \sqrt { 2 } } U \ket { \phi } \ket { 0}</span><span class="sxs-lookup"><span data-stu-id="002dd-295">& = \frac{1}{\sqrt{2}} U\ket{\phi}\ket{0}</span></span>
-      <span data-ttu-id="002dd-296">+ \frac{1 } { \sqrt { 2 } } U \ket { \psi } \ket { 0 }\\\\</span><span class="sxs-lookup"><span data-stu-id="002dd-296">+ \frac{1}{\sqrt{2}} U\ket{\psi}\ket{0} \\\\</span></span>
-    <span data-ttu-id="002dd-297">&= \frac{1 } { \sqrt { 2 } } \left ( \ket { \phi } \ket { \phi }  +  \ket { \psi }\ket{\psi}</span><span class="sxs-lookup"><span data-stu-id="002dd-297">& = \frac{1}{\sqrt{2}} \left( \ket{\phi} \ket{\phi} + \ket{\psi} \ket{\psi}</span></span>
-        <span data-ttu-id="002dd-298">\right) \\\\</span><span class="sxs-lookup"><span data-stu-id="002dd-298">\right) \\\\</span></span>
-    <span data-ttu-id="002dd-299">&\ne \left ( \frac { 1 } { \sqrt { 2 } } \left ( \ket { \phi } + \ket { \psi } \right ) \right ) \otimes \left ( \frac { 1 } { \sqrt { 2 } } \left ( \ket { \phi } + \ket { \psi } \right )) \right 。</span><span class="sxs-lookup"><span data-stu-id="002dd-299">& \ne \left( \frac{1}{\sqrt{2}}\left(\ket{\phi}+\ket{\psi} \right) \right) \otimes \left( \frac{1}{\sqrt{2}}\left(\ket{\phi}+\ket{\psi} \right) \right).</span></span>
+    <span data-ttu-id="6e78b-294">U \left [ \frac { 1 } { \sqrt { 2 } } \left ( \ket { \phi } + \ket { \psi } \right ) \right ] \ket { 0}</span><span class="sxs-lookup"><span data-stu-id="6e78b-294">U \left[ \frac{1}{\sqrt{2}}\left(\ket{\phi}+\ket{\psi} \right) \right] \ket{0}</span></span>
+    <span data-ttu-id="6e78b-295">&= \frac{1 } { \sqrt { 2 } } U \ket { \phi } \ket { 0}</span><span class="sxs-lookup"><span data-stu-id="6e78b-295">& = \frac{1}{\sqrt{2}} U\ket{\phi}\ket{0}</span></span>
+      <span data-ttu-id="6e78b-296">+ \frac{1 } { \sqrt { 2 } } U \ket { \psi } \ket { 0 }\\\\</span><span class="sxs-lookup"><span data-stu-id="6e78b-296">+ \frac{1}{\sqrt{2}} U\ket{\psi}\ket{0} \\\\</span></span>
+    <span data-ttu-id="6e78b-297">&= \frac{1 } { \sqrt { 2 } } \left ( \ket { \phi } \ket { \phi }  +  \ket { \psi }\ket{\psi}</span><span class="sxs-lookup"><span data-stu-id="6e78b-297">& = \frac{1}{\sqrt{2}} \left( \ket{\phi} \ket{\phi} + \ket{\psi} \ket{\psi}</span></span>
+        <span data-ttu-id="6e78b-298">\right) \\\\</span><span class="sxs-lookup"><span data-stu-id="6e78b-298">\right) \\\\</span></span>
+    <span data-ttu-id="6e78b-299">&\ne \left ( \frac { 1 } { \sqrt { 2 } } \left ( \ket { \phi } + \ket { \psi } \right ) \right ) \otimes \left ( \frac { 1 } { \sqrt { 2 } } \left ( \ket { \phi } + \ket { \psi } \right )) \right 。</span><span class="sxs-lookup"><span data-stu-id="6e78b-299">& \ne \left( \frac{1}{\sqrt{2}}\left(\ket{\phi}+\ket{\psi} \right) \right) \otimes \left( \frac{1}{\sqrt{2}}\left(\ket{\phi}+\ket{\psi} \right) \right).</span></span>
 \end{align}
 $$
 
-<span data-ttu-id="002dd-300">これにより、No-Cloning 定理の背後に基本的な直感が提供されます。不明なクォンタム状態をコピーするすべてのデバイスは、少なくとも、コピーする状態の一部でエラーを発生させる必要があります。</span><span class="sxs-lookup"><span data-stu-id="002dd-300">This provides the fundamental intuition behind the No-Cloning Theorem: any device that copies an unknown quantum state must induce errors on at least some of the states it copies.</span></span>
-<span data-ttu-id="002dd-301">Cloner が入力状態で直線的に動作することを前提として、補助 qubits の追加や測定によって違反が発生する可能性がありますが、このような対話によって、測定統計を通じてシステムに関する情報が漏洩し、そのような場合には正確な複製を防ぐことができます。</span><span class="sxs-lookup"><span data-stu-id="002dd-301">While the key assumption that the cloner acts linearly on the input state can be violated through the addition and measurement of auxiliary qubits, such interactions also leak information about the system through the measurement statistics and prevent exact cloning in such cases as well.</span></span>
-<span data-ttu-id="002dd-302">No-Cloning の完全な証明については、「」 [を](xref:microsoft.quantum.more-information)参照してください。</span><span class="sxs-lookup"><span data-stu-id="002dd-302">For a more complete proof of the No-Cloning Theorem see [For more information](xref:microsoft.quantum.more-information).</span></span>
+<span data-ttu-id="6e78b-300">これにより、No-Cloning 定理の背後に基本的な直感が提供されます。不明なクォンタム状態をコピーするすべてのデバイスは、少なくとも、コピーする状態の一部でエラーを発生させる必要があります。</span><span class="sxs-lookup"><span data-stu-id="6e78b-300">This provides the fundamental intuition behind the No-Cloning Theorem: any device that copies an unknown quantum state must induce errors on at least some of the states it copies.</span></span>
+<span data-ttu-id="6e78b-301">Cloner が入力状態で直線的に動作することを前提として、補助 qubits の追加や測定によって違反が発生する可能性がありますが、このような対話によって、測定統計を通じてシステムに関する情報が漏洩し、そのような場合には正確な複製を防ぐことができます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-301">While the key assumption that the cloner acts linearly on the input state can be violated through the addition and measurement of auxiliary qubits, such interactions also leak information about the system through the measurement statistics and prevent exact cloning in such cases as well.</span></span>
+<span data-ttu-id="6e78b-302">No-Cloning の完全な証明については、「」 [を](xref:microsoft.quantum.more-information)参照してください。</span><span class="sxs-lookup"><span data-stu-id="6e78b-302">For a more complete proof of the No-Cloning Theorem see [For more information](xref:microsoft.quantum.more-information).</span></span>
 
-<span data-ttu-id="002dd-303">クォンタムの状態を複製できる場合は、クォンタムの状態を定理することができるので、クォンタムの計算を理解するためには、No-Cloning のが重要です。</span><span class="sxs-lookup"><span data-stu-id="002dd-303">The No-Cloning Theorem is important for qualitative understanding of quantum computing because if you could clone quantum states inexpensively then you would be granted a near-magical ability to learn from quantum states.</span></span>
-<span data-ttu-id="002dd-304">実際には、ハイゼンベルグの vaunted の不確定性の原則に違反する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="002dd-304">Indeed, you could violate Heisenberg's vaunted uncertainty principle.</span></span>
-<span data-ttu-id="002dd-305">または、最適な cloner を使用して、複雑なクォンタム分布から1つのサンプルを取得し、1つのサンプルだけからその分布について学習できる可能性のあるすべてのことを学ぶこともできます。</span><span class="sxs-lookup"><span data-stu-id="002dd-305">Alternatively, you could use an optimal cloner to take a single sample from a complex quantum distribution and learn everything you could possibly learn about that distribution from just one sample.</span></span>
-<span data-ttu-id="002dd-306">これは、コインと観察ヘッドを反転し、その結果について友人に伝えたときに、そのコインの分布が $ p = 0.512643 \ ldots でベルヌーイでなければならないということです $ 。</span><span class="sxs-lookup"><span data-stu-id="002dd-306">This would be like you flipping a coin and observing heads and then upon telling a friend about the result having them respond "Ah the distribution of that coin must be Bernoulli with $p=0.512643\ldots$!"</span></span>  <span data-ttu-id="002dd-307">このようなステートメントは非 sensical になります。これは、1つの情報 (ヘッドの結果) は、十分な前の情報を使用せずに、分布をエンコードするために必要な多くの情報を提供できないためです。</span><span class="sxs-lookup"><span data-stu-id="002dd-307">Such a statement would be non-sensical because one bit of information (the heads outcome) simply cannot provide the many bits of information needed to encode the distribution without substantial prior information.</span></span>
-<span data-ttu-id="002dd-308">同様に、事前の情報がないと、p を知らなくても、このようなコインを完全に複製することはできません $ $ 。</span><span class="sxs-lookup"><span data-stu-id="002dd-308">Similarly, without prior information we cannot perfectly clone a quantum state just as we cannot prepare an ensemble of such coins without knowing $p$.</span></span>
+<span data-ttu-id="6e78b-303">クォンタムの状態を複製できる場合は、クォンタムの状態を定理することができるので、クォンタムの計算を理解するためには、No-Cloning のが重要です。</span><span class="sxs-lookup"><span data-stu-id="6e78b-303">The No-Cloning Theorem is important for qualitative understanding of quantum computing because if you could clone quantum states inexpensively then you would be granted a near-magical ability to learn from quantum states.</span></span>
+<span data-ttu-id="6e78b-304">実際には、ハイゼンベルグの vaunted の不確定性の原則に違反する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="6e78b-304">Indeed, you could violate Heisenberg's vaunted uncertainty principle.</span></span>
+<span data-ttu-id="6e78b-305">または、最適な cloner を使用して、複雑なクォンタム分布から1つのサンプルを取得し、1つのサンプルだけからその分布について学習できる可能性のあるすべてのことを学ぶこともできます。</span><span class="sxs-lookup"><span data-stu-id="6e78b-305">Alternatively, you could use an optimal cloner to take a single sample from a complex quantum distribution and learn everything you could possibly learn about that distribution from just one sample.</span></span>
+<span data-ttu-id="6e78b-306">これは、コインと観察ヘッドを反転し、その結果について友人に伝えたときに、そのコインの分布が $ p = 0.512643 \ ldots でベルヌーイでなければならないということです $ 。</span><span class="sxs-lookup"><span data-stu-id="6e78b-306">This would be like you flipping a coin and observing heads and then upon telling a friend about the result having them respond "Ah the distribution of that coin must be Bernoulli with $p=0.512643\ldots$!"</span></span>  <span data-ttu-id="6e78b-307">このようなステートメントは非 sensical になります。これは、1つの情報 (ヘッドの結果) は、十分な前の情報を使用せずに、分布をエンコードするために必要な多くの情報を提供できないためです。</span><span class="sxs-lookup"><span data-stu-id="6e78b-307">Such a statement would be non-sensical because one bit of information (the heads outcome) simply cannot provide the many bits of information needed to encode the distribution without substantial prior information.</span></span>
+<span data-ttu-id="6e78b-308">同様に、事前の情報がないと、p を知らなくても、このようなコインを完全に複製することはできません $ $ 。</span><span class="sxs-lookup"><span data-stu-id="6e78b-308">Similarly, without prior information we cannot perfectly clone a quantum state just as we cannot prepare an ensemble of such coins without knowing $p$.</span></span>
 
-<span data-ttu-id="002dd-309">クォンタムコンピューティングでは、情報は無料です。</span><span class="sxs-lookup"><span data-stu-id="002dd-309">Information is not free in quantum computing.</span></span>
-<span data-ttu-id="002dd-310">測定された各 qubit は1ビットの情報を提供し、No-Cloning 定理は、システムに関する情報とそれに対して発生した問題の基本的なトレードオフを回避するために侵入できるバックドアがないことを示しています。</span><span class="sxs-lookup"><span data-stu-id="002dd-310">Each qubit measured gives a single bit of information, and the No-Cloning Theorem shows that there is no backdoor that can be exploited to get around the fundamental tradeoff between information gained about the system and the disturbance invoked upon it.</span></span>
+<span data-ttu-id="6e78b-309">クォンタムコンピューティングでは、情報は無料です。</span><span class="sxs-lookup"><span data-stu-id="6e78b-309">Information is not free in quantum computing.</span></span>
+<span data-ttu-id="6e78b-310">測定された各 qubit は1ビットの情報を提供し、No-Cloning 定理は、システムに関する情報とそれに対して発生した問題の基本的なトレードオフを回避するために侵入できるバックドアがないことを示しています。</span><span class="sxs-lookup"><span data-stu-id="6e78b-310">Each qubit measured gives a single bit of information, and the No-Cloning Theorem shows that there is no backdoor that can be exploited to get around the fundamental tradeoff between information gained about the system and the disturbance invoked upon it.</span></span>
