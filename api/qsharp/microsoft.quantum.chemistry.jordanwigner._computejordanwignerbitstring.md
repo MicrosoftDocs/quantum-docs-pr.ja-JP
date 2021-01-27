@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._ComputeJordanWignerBitString
 title: _ComputeJordanWignerBitString 関数
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _ComputeJordanWignerBitString
 qsharp.summary: Computes Z component of Jordan–Wigner string between fermion indices in a fermionic operator with an even number of creation / annihilation operators.
-ms.openlocfilehash: 8121421a77174ef3e894381b281964b448e00a18
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 82b5e433f79c93c640b89e6365e5f468bacd892e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96203945"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98839529"
 ---
 # <a name="_computejordanwignerbitstring-function"></a>_ComputeJordanWignerBitString 関数
 
@@ -44,3 +44,7 @@ fermionic 演算子のインデックス。
 ## <a name="output--bool"></a>出力: [Bool](xref:microsoft.quantum.lang-ref.bool)[]
 
 `Bool[]` `true` の適用先となる bitstring `PauliZ` 。
+
+## <a name="example"></a>例
+
+let bitString = _ComputeJordanWignerBitString (6, [0, 1, 2, 6]);bitString は [false、false、false、true、true、true、false] です。
