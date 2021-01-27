@@ -4,17 +4,17 @@ description: Microsoft Quantum Development Kit にコードまたはドキュメ
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.pulls
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8e04e6502e0a6005dfdf0f93450bf3ffd5aaa672
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a936283f3e51da9b97b8145bad3ab765b6423458
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866929"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858466"
 ---
 # <a name="opening-pull-requests"></a>pull request を開く #
 
@@ -23,7 +23,7 @@ Git と GitHub を一緒に使用することで、Quantum 開発キットで幅
 特に、Git リポジトリを複製したりフォークしたりして、そのリポジトリの完全に独立したコピーを作成することができます。
 これにより、ツールを使用した投稿や、好きなペースで作業できるようになります。
 
-準備ができたら、GitHub の_プル要求_機能を使用して、リポジトリへの投稿を含めるように要求を送信できます。
+準備ができたら、GitHub の _プル要求_ 機能を使用して、リポジトリへの投稿を含めるように要求を送信できます。
 各プル要求のページには、投稿物を作成するすべての変更の詳細、投稿物に関するコメントの一覧、コミュニティの他のメンバーがフィードバックやアドバイスを提供するために使用できる一連のレビューツールが含まれています。
 
 > [!NOTE]
@@ -38,16 +38,16 @@ Git と GitHub を一緒に使用することで、Quantum 開発キットで幅
 
 ## <a name="what-is-a-pull-request"></a>プル要求とは ##
 
-前述のように、プル要求の内容について、少し時間を取っておくと**便利です。**
-Git を使用する場合、変更は、変更前にリポジトリの状態にどのように関連しているかを説明する_コミット_として表されます。
+前述のように、プル要求の内容について、少し時間を取っておくと **便利です。**
+Git を使用する場合、変更は、変更前にリポジトリの状態にどのように関連しているかを説明する _コミット_ として表されます。
 多くの場合、前のコミットからの矢印を持つ円としてコミットが描画される図を描画します。
 
-という_分岐_で投稿を開始したと `feature` します。
-その後、 **Microsoft/クォンタム**のフォークは次のようになります。
+という _分岐_ で投稿を開始したと `feature` します。
+その後、 **Microsoft/クォンタム** のフォークは次のようになります。
 
 ![GitHub の作業ブランチ](~/media/git-workflow-step0.png)
 
-ローカルリポジトリに変更を加えた場合は、別のリポジトリから変更を_取得_して、上流に発生した変更をキャッチアップできます。
+ローカルリポジトリに変更を加えた場合は、別のリポジトリから変更を _取得_ して、上流に発生した変更をキャッチアップできます。
 
 ![アップストリームリポジトリから変更をプルしてマージする](~/media/git-workflow-step1.png)
 

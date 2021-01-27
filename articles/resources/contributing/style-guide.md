@@ -4,17 +4,17 @@ description: プログラムおよびライブラリの名前付け、入力、�
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 2edd6baf7375415e395d15bac422168216bcff9a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231657"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852756"
 ---
 # <a name="no-locq-style-guide"></a>Q# スタイルガイド #
 ## <a name="general-conventions"></a>一般規則 ##
@@ -68,7 +68,7 @@ Quantum 開発キットの提供では、quantum 開発者が簡単に読むこ�
 | 適用 | 入力として指定された操作が呼び出されます。 |
 | Assert | シミュレーターによって実行されるクォンタム測定の結果に関する仮説 |
 | 見積もり | 1つ以上の測定値からの推定値を表す、古典的な値が返されます。 |
-| Measure | クォンタム測定が実行され、その結果がユーザーに返されます。 |
+| メジャー | クォンタム測定が実行され、その結果がユーザーに返されます。 |
 | 準備 | 指定された qubits のレジスタは、特定の状態に初期化されます |
 | サンプル | 古典的な値は、ある分布からランダムに返されます。 |
 
@@ -96,7 +96,7 @@ Quantum 開発キットの提供では、quantum 開発者が簡単に読むこ�
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-| &nbsp;  | 名前 | [説明] |
+| &nbsp;  | 名前 | 説明 |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | 操作の効果を示すには、動詞 ("リフレクト") の使用をクリアします。 |
 | ☒ | <s>`operation XRotation`</s> | 名詞句の使用は、操作ではなく、関数を提案します。 |
@@ -129,7 +129,7 @@ Quantum 開発キットの提供では、quantum 開発者が簡単に読むこ�
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-| &nbsp;  | 名前 | [説明] |
+| &nbsp;  | 名前 | 説明 |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | 操作名を使用してエントリポイントの目的を明確に伝えます。 |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | の使用 `Main` は、エントリポイントの目的を明確に伝えるものではなく、属性と重複し `@EntryPoint()` ます。 |
@@ -171,7 +171,7 @@ is Adj + Ctl {
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-| &nbsp;   | 名前 | [説明] |
+| &nbsp;   | 名前 | 説明 |
 |---|------|-------------|
 | ☑ | `X` | 「$X $ transformation の適用」の短縮形 |
 | ☑ | `CNOT` | "制御された-NOT" の短縮形 |
@@ -228,7 +228,7 @@ Q#は厳密かつ厳密に型指定された言語であるため、1つの型�
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-| &nbsp;   | 名前 | [説明] |
+| &nbsp;   | 名前 | 説明 |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | 前置詞 "to" は、関数ではなく操作を示す動詞句を生成します。 |
 | ☒ | <s>`AsDouble`</s> | 入力の型は、関数名からは明確ではありません。 |
@@ -251,7 +251,7 @@ _*_
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-| &nbsp;  | 名前 | [説明] |
+| &nbsp;  | 名前 | 説明 |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | `_`この操作が内部でのみ使用されることを示すために、アンダースコアを使用しないでください。 |
 | ☑ | `internal operation ApplyDecomposedOperation` | `internal`最初のキーワードは、この操作が内部でのみ使用されることを明確に示しています。 |
@@ -262,7 +262,7 @@ _*_
 この制限は、将来のバージョンのでは保持されない場合があり Q# ますが、現在のところ、関連する操作のグループ (入力によってサポートされる、または引数の具象型によって識別される関数) がある場合があります。
 これらのグループは、同じルート名を使用し、そのバリアントを示す 1 ~ 2 文字で区別できます。
 
-| サフィックス | 意味 |
+| サフィックス | 説明 |
 |--------|---------|
 | `A` | サポートが必要な入力 `Adjoint` |
 | `C` | サポートが必要な入力 `Controlled` |
@@ -323,7 +323,7 @@ _*_
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-| &nbsp;  | スニペット | [説明] |
+| &nbsp;  | スニペット | 説明 |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | 名前は `Apply` 形式の `CamelCase` 動詞フレーズで、名前付き項目が操作であることを示します。 |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | 名前付き項目の先頭は大文字である必要があります。 |
@@ -479,7 +479,7 @@ _*_
 
 # <a name="examples"></a>[使用例](#tab/examples)
 
-| &nbsp; | スニペット | [説明] |
+| &nbsp; | スニペット | 説明 |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | バイナリ演算子の前後にスペースを使用します。 |
 | ☒ | <s>`target:Qubit`</s> | 注釈のコロンを囲むにはスペースを使用します。 |
