@@ -1,6 +1,6 @@
 ---
 title: P# li 測定の説明: 単一および複数のメジャーの測定演算を使用する方法について説明します。
-author: bradben: benbra: ms. date: 12/11/2017 ミリ秒。 topic: article no loc (場所: 記事の内容は含まれません):
+author: bradben: benbra: ms. date: 12/11/2017 ミリ秒。 topic: 概念に関する次のように指定します (& a):
 - "Q#"
 - "$$v"
 - "$$"
@@ -87,7 +87,7 @@ author: bradben: benbra: ms. date: 12/11/2017 ミリ秒。 topic: article no loc
 
 前のディスカッションでは、計算ベースの測定に重点を置いてきました。
 実際には、数値表記の観点からは、コンピューティングベースの測定を表すのに便利な、クォンタムコンピューティングで発生する一般的な測定値があります。
-作業を行う際に実行する最も一般的な種類の測定は、通常、測定値として使用されます。この測定では、計算ベースの測定値が Q# 汎用化され、 *Pauli measurements* 他のベースや異なる qubits 間のパリティが含まれます。
+作業を行う際に実行する最も一般的な種類の測定は、通常、測定値として使用されます。この測定では、計算ベースの測定値が Q# 汎用化され、 他のベースや異なる qubits 間のパリティが含まれます。
 このような場合、一般的には、通常、 $ x、y、z、 $ $ z \otimes z、x \otimes x、x Y \otimes $ などの演算子で、p# li 演算子の測定について説明します。 
 
 > [!TIP]
@@ -139,7 +139,7 @@ $$
 
 これは、 $ \dagger $ $ $ 次の演算がと等価になるように、クォンタムの状態ベクターに HS ^ を適用し、Z を測定 `Measure([PauliY], [q])` することと同じです。
 
-```Q#
+```qsharp
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {

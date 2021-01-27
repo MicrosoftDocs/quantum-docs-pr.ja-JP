@@ -4,17 +4,17 @@ description: クォンタムプログラミングで電子構造をモデル化�
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a08e20d5b53aa97cb12ead0dc3a36069d0ec5df8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835810"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858832"
 ---
 # <a name="second-quantization"></a>2番目の量子化
 
@@ -84,7 +84,7 @@ $ 2N $ spin orbitals の職業状態は、同様に $ 2N $ qubits に格納で�
 例として、$N = $2 の場合は、$ $ \ket {0} \ket {1} \ket {1} \ket {0} , $ $ という状態になります。
 
 は、剰余が空であるスピン orbitals $1 $ と $2 $ に対応します。
-同様に、state $ $ \ket {0} \equiv \ket {0} _ {0} \ cドット \ket {0} _{N-1}, $ $
+同様に、state $ $ \ket {0} \equiv \ket {0} _{0} \ cドット \ket {0}_{N-1}, $ $
 
 には原子がなく、"vacuum state" と呼ばれています。
 
@@ -211,12 +211,12 @@ $ $ このような演算子は ' commute ' $i と呼ばれます。 j $ dagger_
     var signEqual = sign0 == sign1;
 ```
 
-## <a name="second-quantized-fermionic-hamiltonian"></a>2番目-量子化 Fermionic Hamiltonian
+## <a name="second-quantized-fermionic-hamiltonian"></a>Second-Quantized Fermionic Hamiltonian
 
 [たとえば、電子システムのクォンタムモデル](xref:microsoft.quantum.chemistry.concepts.quantummodels)の Hamiltonian は、作成演算子と annihilation 演算子の観点から記述できます。
 特に、$ \ psi \_ j $ が、基礎を形成するスピン orbitals の場合、
 
-\ begin{nuc} \hat{H} = \ sum \_ {pq} h \_ {pq} a ^ \_ -ダガー p a \_ q +-frac {1} {2} -sum \_ {pqrs} H \_ {pqrs} a ^-ダガー \_ p a ^ \ ダガー \_ q a \_ ra \_ s + h \_ {\t extrm}, \ label{eq: totalHam} \ end{}。ここで $h \_ {\t extrm nuc} $ は核エネルギー (Oppenheimer 近似の定数) で、
+\ begin{nuc} \hat{H} = \ sum \_ {pq} h \_ {pq} a ^ \_ -ダガー p a \_ q +-frac {1} {2} -sum \_ {pqrs} H \_ {pqrs} a ^-ダガー \_ p a ^ \ ダガー \_ q a \_ ra \_ s + h \_ {\t extrm}, \ label{eq: totalHam} \ end{}。ここで $h \_ {\t extrm nuc} $ は核エネルギー (Born-Oppenheimer 近似値の定数) で、
 
 \begin{align} h \_ {pq} &= \ int \_ {-\ inf}} ^ \ inf\ psi ^ \* \_ p (x \_ 1) \ left (-\Frac{\nabla ^ 2} {2} + V (x \_ 1) \ right) \ psi \_ q (x \_ 1) \mathrm{d} ^ 3x \_ 1, \end{align}
 

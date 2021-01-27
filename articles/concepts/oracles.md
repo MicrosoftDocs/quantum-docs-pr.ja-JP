@@ -1,6 +1,6 @@
 ---
 title: クォンタム oracles の説明: 別のアルゴリズムへの入力として使用される、クォンタム oracles、ブラックボックス操作の操作方法と定義方法について説明します。
-執筆者: cgranade uid: oracles: chgranad ms. date: 07/11/2018 ms. topic: article no loc (次の説明を参照):
+執筆者: cgranade uid: oracles: chgranad ms. date: 07/11/2018 ms. topic: 概念的な場所 (非場所):
 - "Q#"
 - "$$v"
 - "$$"
@@ -134,13 +134,13 @@ $$
 
 $$
 \begin{align}
-O \ket { \psi } & = o \sum _ { x \in \\ { 0、1 \\ } ^ n、y \in \\ { 0、1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & 、 = 1 ^ n、y 0、1 ^ m (x, y) O \sum _ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
+O \ket { \psi } & = o \sum _{ x \in \\ { 0、1 \\ } ^ n、y \in \\ { 0、1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & 、 = 1 ^ n、y 0、1 ^ m (x, y) O \sum_ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
              &= \sum _ { x \in \\ { 0、1 \\ } ^ n、y \in \\ { 0、1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y/oplus f (x) } 。
 \end{align}
 $$
 
 ## <a name="phase-oracles"></a>フェーズ oracles
-または、 $ $ $ $ O への入力に基づいて_フェーズ_を適用して、f を oracle O にエンコード $ することもでき $ ます。たとえば、次のような O を定義する場合があります。 $ $$$
+または、 $ $ $ $ O への入力に基づいて _フェーズ_ を適用して、f を oracle O にエンコード $ することもでき $ ます。たとえば、次のような O を定義する場合があります。 $ $$$
 \begin{align}
     O \ket { x } = (-1) ^ { f (x) } \ket { x }
 \end{align}
@@ -158,10 +158,13 @@ $$
 \end{align}
 $$
 
+> [!NOTE]
+>Z ^ $ { -1 } = z ^ { \dagger } = z $ と $ z ^ { f (0)-f (1) } = z ^ { f (1)-f (0) } であることに注意してください。$
+
 一般的には、oracles の両方のビューを拡大して、1ビットだけではなく実数を返す古典関数を表すことができます。
 
 Oracle を実装する最適な方法を選択することは、特定のアルゴリズム内でこの oracle がどのように使用されるかに大きく依存します。
 たとえば、 [Deutsch アルゴリズム](https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm) は最初の方法で実装された oracle に依存しますが、 [Grover のアルゴリズム](https://en.wikipedia.org/wiki/Grover's_algorithm) は2番目の方法で実装された oracle に依存しています。
 
 
-詳細については、 [Gilyén *et*1711.00465](https://arxiv.org/abs/1711.00465)に関する説明をお勧めします。
+詳細については、 [Gilyén *et* 1711.00465](https://arxiv.org/abs/1711.00465)に関する説明をお勧めします。

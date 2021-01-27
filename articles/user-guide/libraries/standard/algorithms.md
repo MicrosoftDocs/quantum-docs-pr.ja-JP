@@ -4,17 +4,17 @@ description: 振幅増幅、フーリエ変換、Draper、Beauregard adders、�
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 982103876b00718aa3b42c6bc3a07d242cde7594
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d4d8c35b3196ffb9915c6da06116b3c7dfd0562a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692228"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98859004"
 ---
 # <a name="quantum-algorithms"></a>クォンタムアルゴリズム #
 
@@ -40,7 +40,7 @@ Q# 無関係の振幅増幅の特殊化として振幅増幅を導入します�
 
 前述のように、従来の振幅増幅は、これらのルーチンの特殊なケースにすぎ `ObliviousOracle` ません。が id 演算子であり、システム qubits (つまり、が空) ではありません `systemRegister` 。 部分的な反射 (Grover 検索など) のフェーズを取得する場合は、関数を `AmpAmpPhasesStandard` 使用できます。 `DatabaseSearch.qs`Grover のアルゴリズムの実装例については、「」を参照してください。
 
-この記事では、 [G.H. Low, 語](https://arxiv.org/abs/1707.05391)によって説明されているように、単一の qubit 回転フェーズをリフレクション演算子フェーズに関連付けています。 使用されている固定ポイントフェーズは、[語、低、および](https://arxiv.org/abs/1409.3305)語の各フェーズと共に、最低でも[Low, Yoder and Chuang](https://arxiv.org/abs/1603.03996)でも詳しく説明しています。
+この記事では、 [G.H. Low, 語](https://arxiv.org/abs/1707.05391)によって説明されているように、単一の qubit 回転フェーズをリフレクション演算子フェーズに関連付けています。 使用されている固定ポイントフェーズは、[語、低、および](https://arxiv.org/abs/1409.3305)語の各フェーズと共に、最低でも[](https://arxiv.org/abs/1603.03996)でも詳しく説明しています。
 
 背景については、 [標準の振幅増幅](https://arxiv.org/abs/quant-ph/0005055) から開始し、無関係の [振幅増幅](https://arxiv.org/abs/1312.1414) の概要に進み、最後に [低と語](https://arxiv.org/abs/1610.06546)で示されている一般化を行うことができます。 この領域全体 (Hamiltonian シミュレーションに関連する) のわかりやすい概要が [Dominic Berry](http://www.dominicberry.org/presentations/Durban.pdf)によって提供されています。
 
@@ -49,14 +49,14 @@ Q# 無関係の振幅増幅の特殊化として振幅増幅を導入します�
 フーリエ変換は、古典的な分析の基本ツールであり、クォンタムの計算において非常に重要です。
 さらに、 *quantum のフーリエ変換* (qft) の効率が、クォンタムアルゴリズムを設計するときに選択する最初のツールの1つとして、従来のコンピューターで可能なことをはるかに上回ります。
 
-QFT のおおよその汎化として、 <xref:Microsoft.Quantum.Canon.ApproximateQft> 目的のアルゴリズムの精度に対して厳密には必要のない回転を排除することによって、さらなる最適化を可能にする操作を提供します。
+QFT のおおよその汎化として、 <xref:Microsoft.Quantum.Canon.ApproximateQFT> 目的のアルゴリズムの精度に対して厳密には必要のない回転を排除することによって、さらなる最適化を可能にする操作を提供します。
 おおよその QFT では、操作だけでなく、dyadic $Z $ ローテーション操作が必要です <xref:Microsoft.Quantum.Intrinsic.RFrac> <xref:Microsoft.Quantum.Intrinsic.H> 。
 入力と出力はビッグエンディアン---エンコーディングでエンコードされていると想定されています。つまり、qubit with index `0` は、バイナリ整数表現の左端 (最上位) でエンコードされます。
 これは、 [k 表記](xref:microsoft.quantum.concepts.dirac)と整合しています。これは、状態 $ \ket $ 内の3つの qubits のレジスタとして、 {100} $q 0 $ は状態 $ \ket $ に対応し、 {1} $q _1 $ と $q _2 $ は両方とも状態 $ \ket {0} $ になります。
 近似パラメーター $a $ は、$ ローテーション $Z の排除レベルを決定します。つまり、[0.. n] $ に $a ます。
 この例では、$ $Z $ ローテーション $ 2 \ pi/2 ^ k $ として $k > $ が QFT 回線から削除されます。
 $K \ log_2 (n) + \ log_2 (1//イプシロン) + $3 であることがわかっています。 $ | をバインドすることができ \\ ます。 $ |-演算子 name{qft}--演算子 name{アク ft} \\ | </イプシロン $。
-ここで \\ 、$ | \ cdot \\ | $ は演算子の基準です。この例では、$ ( [eigenvalue](xref:microsoft.quantum.concepts.matrix-advanced) -operator name{qft}-\ operator name{cft}-\ operator name{cft}--operator name{cft}--演算子 name{cft}) ^/ダガー $ の平方根です。
+ここで \\ 、$ | \ cdot \\ | $ は演算子の基準です。この例では、$ ( [](xref:microsoft.quantum.concepts.matrix-advanced) -operator name{qft}-\ operator name{cft}-\ operator name{cft}--operator name{cft}--演算子 name{cft}) ^/ダガー $ の平方根です。
 
 ## <a name="arithmetic"></a>算術 ##
 

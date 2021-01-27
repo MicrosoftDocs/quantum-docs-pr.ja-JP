@@ -4,17 +4,17 @@ description: クォンタムトレースシミュレーターを使用して、�
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 89d8a2c9f2ecd5c5332215cd4307bcf4a6422036
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9c3a772861582e5c49fe5ad27519c25a59d617b1
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692103"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98859042"
 ---
 # <a name="quantum-trace-simulator-depth-counter"></a>クォンタムトレースシミュレーター: 深度カウンター
 
@@ -52,7 +52,7 @@ operation ApplySampleWithCCNOT() : Unit {
 }
 ```
 
-深度が5で深さが6であることを確認するには `CCNOT` `T` **5** `ApplySampleWithCCNOT` `T` 、次の C# コードを使用します。 **6**
+深度が5で深さが6であることを確認するには `CCNOT` `T`  `ApplySampleWithCCNOT` `T` 、次の C# コードを使用します。 
 
 ```csharp
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
