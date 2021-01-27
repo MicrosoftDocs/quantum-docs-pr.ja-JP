@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Logical.LessThanOrEqualI
 title: LessThanOrEqualI 関数
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: LessThanOrEqualI
 qsharp.summary: Returns true if and only if a number is less than or equal to another number.
-ms.openlocfilehash: b2974c9bc84d0b4366767f47682ab542f85063e2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 9438fc05b4ccb041b087f9cfeb30ac0c8cfcabd6
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96197568"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98815608"
 ---
 # <a name="lessthanorequali-function"></a>LessThanOrEqualI 関数
 
@@ -49,7 +49,7 @@ function LessThanOrEqualI (a : Int, b : Int) : Bool
 
 同等のものを次に示します。
 
-```Q#
+```qsharp
 let cond = a <= b;
 let cond = LessThanOrEqualI(a, b);
 ```

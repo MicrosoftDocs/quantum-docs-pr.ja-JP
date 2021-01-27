@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Logical.EqualL
 title: すべての関数を返します。
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: EqualL
 qsharp.summary: Returns true if and only if two inputs are equal.
-ms.openlocfilehash: 395b8fedd3b3334939c2a4b5602ee19e0c6e34b0
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 58086f40ea20b6f1a5fa6996e3a6703e2bf66306
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96198114"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98815988"
 ---
 # <a name="equall-function"></a>すべての関数を返します。
 
@@ -49,7 +49,7 @@ function EqualL (a : BigInt, b : BigInt) : Bool
 
 同等のものを次に示します。
 
-```Q#
+```qsharp
 let cond = a == b;
 let cond = EqualL(a, b);
 ```
