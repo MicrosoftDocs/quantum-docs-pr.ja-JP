@@ -8,6 +8,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.Extended
 - summary: '{-1,1}Yates のメソッドを使用して、エンコードのブール関数の変換を計算します。'
   uid: Microsoft.Quantum.Synthesis.FastHadamardTransformed
+- summary: 2レベルのすべての列では、"フリップマスク" を計算します。これは、対応する 1-qubits ゲートを適用する前と後の逆にする必要がある qubits を表します。 便宜上、便宜のために0を使用します。
+  uid: Microsoft.Quantum.Synthesis.FlipMasks
 - summary: ターゲットが0でない場合、MCMTMask 型をシングルトン配列として構築します。それ以外の場合は、空の配列を返します。
   uid: Microsoft.Quantum.Synthesis.GateMask
 - summary: Y を x に変換するために、最大2つの MCMT マスクを計算します。
@@ -20,6 +22,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.RMEncoding
 - summary: 変数の数に従ってブール値の配列から真理値のテーブルを調整します。新しい配列は長さとして返され `2^numVars` `table` ます。これは、のサイズをエントリで拡張したり、要素に切り捨てたりすることが必要になる可能性が `false` `2^numVars` あります。
   uid: Microsoft.Quantum.Synthesis.SizeAdjustedTruthTable
+- summary: 指定された配列が正方形行列を表していることを確認します。
+  uid: Microsoft.Quantum.Synthesis.SquareMatrixFact
 - summary: 順列を合成するゲートマスクを計算します。
   uid: Microsoft.Quantum.Synthesis.TBSMain
 - summary: '[X] を x に変換し、現在の順列を更新するゲートマスクを計算します。'
@@ -34,6 +38,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.UpdatedPermutation
 - summary: 0ビットを整数に挿入する
   uid: Microsoft.Quantum.Synthesis.WithZeroInsertedAt
+- summary: ''
+  uid: Microsoft.Quantum.Synthesis._TwoLevelDecomposition
 name: Microsoft.Quantum.Synthesis
 newtypes:
 - summary: 変数インデックスに基づく分解中の状態
@@ -54,8 +60,15 @@ operations:
   uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder
 - summary: 変換ベースの合成を使用した順列を指定して、クォンタムの状態の振幅を Permutes します。
   uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
+- summary: 2×2で定義されている単一の qubit ゲートを適用します。
+  uid: Microsoft.Quantum.Synthesis.ApplySingleQubitUnitary
 - summary: ''
   uid: Microsoft.Quantum.Synthesis.ApplyTransposition
+- summary: >-
+    2 ^ n x 2 ^ n のユニタリ行列で定義されているゲートを適用します。
+
+    マトリックスがユニタリでない場合、またはサイズが間違っている場合に失敗します。
+  uid: Microsoft.Quantum.Synthesis.ApplyUnitary
 - summary: の @"microsoft.quantum.intrinsic.x" `target` クラシック代入に対してブール関数が true と評価された場合に、操作をに適用し `func` `controlRegister` ます。
   uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable
 - summary: の @"microsoft.quantum.intrinsic.x" `target` クラシック代入に対してブール関数が true と評価された場合に、操作をに適用し `func` `controlRegister` ます。
@@ -63,9 +76,9 @@ operations:
 summary: この名前空間には、順列および Boolean 関数に基づくからクォンタム操作のための関数と操作が含まれています。
 uid: Microsoft.Quantum.Synthesis
 metadata:
-  ms.openlocfilehash: 2f92f4662252148ff0e093f5392f5f00f26b661f
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: e238fdedcc931bb02c35591014d20b50b695b116
+  ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92725724"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98855185"

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState
 title: ApproximatelyPrepareArbitraryState 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -13,68 +13,68 @@ qsharp.summary: >-
 
 
   Given a set of coefficients and a little-endian encoded quantum register, prepares an state on that register described by the given coefficients, up to a given approximation tolerance.
-ms.openlocfilehash: 9e1b172258acd0cb09b824a773e7e79d44fec20c
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: dab7647ab6e6a8592ab49ad7b7d398cb43b4f486
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96193711"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854418"
 ---
-# <a name="approximatelypreparearbitrarystate-operation"></a><span data-ttu-id="4a217-102">ApproximatelyPrepareArbitraryState 操作</span><span class="sxs-lookup"><span data-stu-id="4a217-102">ApproximatelyPrepareArbitraryState operation</span></span>
+# <a name="approximatelypreparearbitrarystate-operation"></a><span data-ttu-id="ee5dd-102">ApproximatelyPrepareArbitraryState 操作</span><span class="sxs-lookup"><span data-stu-id="ee5dd-102">ApproximatelyPrepareArbitraryState operation</span></span>
 
-<span data-ttu-id="4a217-103">名前空間: [Microsoft. Quantum](xref:Microsoft.Quantum.Preparation)</span><span class="sxs-lookup"><span data-stu-id="4a217-103">Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)</span></span>
+<span data-ttu-id="ee5dd-103">名前空間: [Microsoft. Quantum](xref:Microsoft.Quantum.Preparation)</span><span class="sxs-lookup"><span data-stu-id="ee5dd-103">Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)</span></span>
 
-<span data-ttu-id="4a217-104">パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="4a217-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="ee5dd-104">パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="ee5dd-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="4a217-105">ApproximatelyPrepareArbitraryState は非推奨となりました。</span><span class="sxs-lookup"><span data-stu-id="4a217-105">ApproximatelyPrepareArbitraryState has been deprecated.</span></span> <span data-ttu-id="4a217-106">代わりに、<xref:Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP> を使用してください。</span><span class="sxs-lookup"><span data-stu-id="4a217-106">Please use <xref:Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP> instead.</span></span>
+> <span data-ttu-id="ee5dd-105">ApproximatelyPrepareArbitraryState は非推奨となりました。</span><span class="sxs-lookup"><span data-stu-id="ee5dd-105">ApproximatelyPrepareArbitraryState has been deprecated.</span></span> <span data-ttu-id="ee5dd-106">代わりに、<xref:Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP> を使用してください。</span><span class="sxs-lookup"><span data-stu-id="ee5dd-106">Please use <xref:Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP> instead.</span></span>
 
-<span data-ttu-id="4a217-107">係数とリトルエンディアンでエンコードされたクォンタムレジスタを指定すると、は指定された係数によって示されるレジスタの状態を、指定された近似値に設定します。</span><span class="sxs-lookup"><span data-stu-id="4a217-107">Given a set of coefficients and a little-endian encoded quantum register, prepares an state on that register described by the given coefficients, up to a given approximation tolerance.</span></span>
+<span data-ttu-id="ee5dd-107">係数とリトルエンディアンでエンコードされたクォンタムレジスタを指定すると、は指定された係数によって示されるレジスタの状態を、指定された近似値に設定します。</span><span class="sxs-lookup"><span data-stu-id="ee5dd-107">Given a set of coefficients and a little-endian encoded quantum register, prepares an state on that register described by the given coefficients, up to a given approximation tolerance.</span></span>
 
 ```qsharp
 operation ApproximatelyPrepareArbitraryState (tolerance : Double, coefficients : Microsoft.Quantum.Math.ComplexPolar[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
-## <a name="description"></a><span data-ttu-id="4a217-108">説明</span><span class="sxs-lookup"><span data-stu-id="4a217-108">Description</span></span>
+## <a name="description"></a><span data-ttu-id="ee5dd-108">説明</span><span class="sxs-lookup"><span data-stu-id="ee5dd-108">Description</span></span>
 
-<span data-ttu-id="4a217-109">この操作では $n、_j e ^ {i t_j} $ から \ket{\psi} $-qubit コンピューティングベースの状態 $ \ket{0/cドット 0} $ から、複雑な $r 係数を持つ任意のクォンタム状態 $ $ を準備します。</span><span class="sxs-lookup"><span data-stu-id="4a217-109">This operation prepares an arbitrary quantum state $\ket{\psi}$ with complex coefficients $r_j e^{i t_j}$ from the $n$-qubit computational basis state $\ket{0 \cdots 0}$.</span></span>
-<span data-ttu-id="4a217-110">具体的には、この操作のアクションは、すべてゼロの状態を処理するための $U $ として、</span><span class="sxs-lookup"><span data-stu-id="4a217-110">In particular, the action of this operation can be simulated by the a unitary transformation $U$ which acts on the all-zeros state as</span></span>
+<span data-ttu-id="ee5dd-109">この操作では $n、_j e ^ {i t_j} $ から \ket{\psi} $-qubit コンピューティングベースの状態 $ \ket{0/cドット 0} $ から、複雑な $r 係数を持つ任意のクォンタム状態 $ $ を準備します。</span><span class="sxs-lookup"><span data-stu-id="ee5dd-109">This operation prepares an arbitrary quantum state $\ket{\psi}$ with complex coefficients $r_j e^{i t_j}$ from the $n$-qubit computational basis state $\ket{0 \cdots 0}$.</span></span>
+<span data-ttu-id="ee5dd-110">具体的には、この操作のアクションは、すべてゼロの状態を処理するための $U $ として、</span><span class="sxs-lookup"><span data-stu-id="ee5dd-110">In particular, the action of this operation can be simulated by the a unitary transformation $U$ which acts on the all-zeros state as</span></span>
 
-<span data-ttu-id="4a217-111">$ $ \begin{align} U\ket {0... 0} & = \ket{\psi} \\ \\ & = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}} {\ sqrt_ \ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}。</span><span class="sxs-lookup"><span data-stu-id="4a217-111">$$ \begin{align} U\ket{0...0} & = \ket{\psi} \\\\ & = \frac{ \sum_{j=0}^{2^n-1} r_j e^{i t_j} \ket{j} }{ \sqrt{\sum_{j=0}^{2^n-1} |r_j|^2} }.</span></span>
-<span data-ttu-id="4a217-112">\end{align} $ $</span><span class="sxs-lookup"><span data-stu-id="4a217-112">\end{align} $$</span></span>
+<span data-ttu-id="ee5dd-111">$ $ \begin{align} U\ket {0... 0} & = \ket{\psi} \\ \\ & = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}} {\ sqrt_ \ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}。</span><span class="sxs-lookup"><span data-stu-id="ee5dd-111">$$ \begin{align} U\ket{0...0} & = \ket{\psi} \\\\ & = \frac{ \sum_{j=0}^{2^n-1} r_j e^{i t_j} \ket{j} }{ \sqrt{\sum_{j=0}^{2^n-1} |r_j|^2} }.</span></span>
+<span data-ttu-id="ee5dd-112">\end{align} $ $</span><span class="sxs-lookup"><span data-stu-id="ee5dd-112">\end{align} $$</span></span>
 
-## <a name="input"></a><span data-ttu-id="4a217-113">入力</span><span class="sxs-lookup"><span data-stu-id="4a217-113">Input</span></span>
+## <a name="input"></a><span data-ttu-id="ee5dd-113">入力</span><span class="sxs-lookup"><span data-stu-id="ee5dd-113">Input</span></span>
 
-### <a name="tolerance--double"></a><span data-ttu-id="4a217-114">tolerance: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="4a217-114">tolerance : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+### <a name="tolerance--double"></a><span data-ttu-id="ee5dd-114">tolerance: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="ee5dd-114">tolerance : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
-<span data-ttu-id="4a217-115">指定された状態を準備するときに使用する近似の許容範囲。</span><span class="sxs-lookup"><span data-stu-id="4a217-115">The approximation tolerance to be used when preparing the given state.</span></span>
-
-
-### <a name="coefficients--complexpolar"></a><span data-ttu-id="4a217-116">係数: [Complexpolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span><span class="sxs-lookup"><span data-stu-id="4a217-116">coefficients : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span></span>
-
-<span data-ttu-id="4a217-117">絶対値とフェーズ $ (r_j、t_j) $ で表される、最大 $ 2 ^ n $ の複合係数の配列。</span><span class="sxs-lookup"><span data-stu-id="4a217-117">Array of up to $2^n$ complex coefficients represented by their absolute value and phase $(r_j, t_j)$.</span></span> <span data-ttu-id="4a217-118">$J $ th 係数は、リトルエンディアン形式でエンコードされた数値の状態 $ \ket{j} $ にインデックスを付けます。</span><span class="sxs-lookup"><span data-stu-id="4a217-118">The $j$th coefficient indexes the number state $\ket{j}$ encoded in little-endian format.</span></span>
+<span data-ttu-id="ee5dd-115">指定された状態を準備するときに使用する近似の許容範囲。</span><span class="sxs-lookup"><span data-stu-id="ee5dd-115">The approximation tolerance to be used when preparing the given state.</span></span>
 
 
-### <a name="qubits--littleendian"></a><span data-ttu-id="4a217-119">qubits: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="4a217-119">qubits : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
+### <a name="coefficients--complexpolar"></a><span data-ttu-id="ee5dd-116">係数: [Complexpolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span><span class="sxs-lookup"><span data-stu-id="ee5dd-116">coefficients : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]</span></span>
 
-<span data-ttu-id="4a217-120">リトルエンディアン形式での qubit レジスタのエンコード番号の状態。</span><span class="sxs-lookup"><span data-stu-id="4a217-120">Qubit register encoding number states in little-endian format.</span></span> <span data-ttu-id="4a217-121">この値は、コンピューティングベースの状態 $ \ket{0...0} $ で初期化されることが想定されています。</span><span class="sxs-lookup"><span data-stu-id="4a217-121">This is expected to be initialized in the computational basis state $\ket{0...0}$.</span></span>
+<span data-ttu-id="ee5dd-117">絶対値とフェーズ $ (r_j、t_j) $ で表される、最大 $ 2 ^ n $ の複合係数の配列。</span><span class="sxs-lookup"><span data-stu-id="ee5dd-117">Array of up to $2^n$ complex coefficients represented by their absolute value and phase $(r_j, t_j)$.</span></span> <span data-ttu-id="ee5dd-118">$J $ th 係数は、リトルエンディアン形式でエンコードされた数値の状態 $ \ket{j} $ にインデックスを付けます。</span><span class="sxs-lookup"><span data-stu-id="ee5dd-118">The $j$th coefficient indexes the number state $\ket{j}$ encoded in little-endian format.</span></span>
 
 
+### <a name="qubits--littleendian"></a><span data-ttu-id="ee5dd-119">qubits: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="ee5dd-119">qubits : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="4a217-122">出力: [単位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="4a217-122">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="ee5dd-120">リトルエンディアン形式での qubit レジスタのエンコード番号の状態。</span><span class="sxs-lookup"><span data-stu-id="ee5dd-120">Qubit register encoding number states in little-endian format.</span></span> <span data-ttu-id="ee5dd-121">この値は、コンピューティングベースの状態 $ \ket{0...0} $ で初期化されることが想定されています。</span><span class="sxs-lookup"><span data-stu-id="ee5dd-121">This is expected to be initialized in the computational basis state $\ket{0...0}$.</span></span>
 
 
 
-## <a name="remarks"></a><span data-ttu-id="4a217-123">解説</span><span class="sxs-lookup"><span data-stu-id="4a217-123">Remarks</span></span>
+## <a name="output--unit"></a><span data-ttu-id="ee5dd-122">出力: [単位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="ee5dd-122">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-<span data-ttu-id="4a217-124">負の入力係数 $r _j < $0 は、値 $ | r_j | $ を持つ正の値として処理されます。</span><span class="sxs-lookup"><span data-stu-id="4a217-124">Negative input coefficients $r_j < 0$ will be treated as though positive with value $|r_j|$.</span></span> <span data-ttu-id="4a217-125">`coefficients` $ 2 ^ n $ 未満の場合は、要素 $ (r_j、t_j) = (0.0, 0.0) $ が埋め込まれます。</span><span class="sxs-lookup"><span data-stu-id="4a217-125">`coefficients` will be padded with elements $(r_j, t_j) = (0.0, 0.0)$ if fewer than $2^n$ are specified.</span></span>
 
-## <a name="references"></a><span data-ttu-id="4a217-126">リファレンス</span><span class="sxs-lookup"><span data-stu-id="4a217-126">References</span></span>
 
-- <span data-ttu-id="4a217-127">クォンタムロジック回線の合成、Shende、Stephen、Igor、igor または Markov https://arxiv.org/abs/quant-ph/0406176</span><span class="sxs-lookup"><span data-stu-id="4a217-127">Synthesis of Quantum Logic Circuits Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176</span></span>
+## <a name="remarks"></a><span data-ttu-id="ee5dd-123">解説</span><span class="sxs-lookup"><span data-stu-id="ee5dd-123">Remarks</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="4a217-128">参照</span><span class="sxs-lookup"><span data-stu-id="4a217-128">See Also</span></span>
+<span data-ttu-id="ee5dd-124">負の入力係数 $r _j < $0 は、値 $ | r_j | $ を持つ正の値として処理されます。</span><span class="sxs-lookup"><span data-stu-id="ee5dd-124">Negative input coefficients $r_j < 0$ will be treated as though positive with value $|r_j|$.</span></span> <span data-ttu-id="ee5dd-125">`coefficients` $ 2 ^ n $ 未満の場合は、要素 $ (r_j、t_j) = (0.0, 0.0) $ が埋め込まれます。</span><span class="sxs-lookup"><span data-stu-id="ee5dd-125">`coefficients` will be padded with elements $(r_j, t_j) = (0.0, 0.0)$ if fewer than $2^n$ are specified.</span></span>
 
-- [<span data-ttu-id="4a217-129">ApproximatelyPrepareArbitraryState の準備</span><span class="sxs-lookup"><span data-stu-id="4a217-129">Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState</span></span>](xref:Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState)
+## <a name="references"></a><span data-ttu-id="ee5dd-126">References</span><span class="sxs-lookup"><span data-stu-id="ee5dd-126">References</span></span>
+
+- <span data-ttu-id="ee5dd-127">クォンタムロジック回線の合成、Shende、Stephen、Igor、igor または Markov https://arxiv.org/abs/quant-ph/0406176</span><span class="sxs-lookup"><span data-stu-id="ee5dd-127">Synthesis of Quantum Logic Circuits Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="ee5dd-128">参照</span><span class="sxs-lookup"><span data-stu-id="ee5dd-128">See Also</span></span>
+
+- [<span data-ttu-id="ee5dd-129">ApproximatelyPrepareArbitraryState の準備</span><span class="sxs-lookup"><span data-stu-id="ee5dd-129">Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState</span></span>](xref:Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState)
