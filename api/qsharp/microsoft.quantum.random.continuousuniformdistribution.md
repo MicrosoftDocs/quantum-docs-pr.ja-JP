@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Random.ContinuousUniformDistribution
 title: ContinuousUniformDistribution 関数
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: ContinuousUniformDistribution
 qsharp.summary: Returns a uniform distribution over a given inclusive interval.
-ms.openlocfilehash: a3911fe9962ce18daa239de0272c53d83344134a
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c81eb433f50277c677756ee70d916f4856260c6d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96193082"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842315"
 ---
 # <a name="continuousuniformdistribution-function"></a>ContinuousUniformDistribution 関数
 
@@ -44,6 +44,15 @@ function ContinuousUniformDistribution (min : Double, max : Double) : Microsoft.
 ## <a name="output--continuousdistribution"></a>出力: [ContinuousDistribution](xref:Microsoft.Quantum.Random.ContinuousDistribution)
 
 ランダムな可変数を持つ分布は、からまでの範囲内の実数で `min` `max` あり、一様確率を持ちます。
+
+## <a name="example"></a>例
+
+次の Q # スニペットでは、$0 $ と $2 の間の角度をランダムに描画します。
+
+```qsharp
+let angleDistribution = ContinuousUniformDistribution(0.0, 2.0 * PI());
+let angle = angleDistribution::Sample();
+```
 
 ## <a name="remarks"></a>解説
 
