@@ -4,17 +4,17 @@ description: Q#分子 hydrogen のエネルギーレベルの値を推定する�
 author: guanghaolow
 ms.author: gulow
 ms.date: 07/02/2020
-ms.topic: article-type-from-white-list
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 81fba0c52c854d61f9143659795fb4d3c3cee8b9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 60935e7c1e8c674fab3a546c1f110f589d2e6b77
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691536"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855056"
 ---
 # <a name="obtaining-energy-level-estimates"></a>エネルギー準位の推定の取得
 エネルギーレベルの値の推定は、量子化学の主要なアプリケーションの1つです。 この記事では、分子 hydrogen の正規の例に対してこれを実行する方法について説明します。 このセクションで参照されているサンプルは、 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) 化学サンプルリポジトリにあります。 出力をプロットするより視覚的な例は [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) デモです。

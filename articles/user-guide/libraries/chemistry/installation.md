@@ -4,26 +4,26 @@ description: Microsoft Quantum の化学ライブラリをインストールし�
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.installation
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f1a7d1d041dab73980d8debc179d6c79acac6d33
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 5d32544bbce527a376345023d5549308fd4e7c79
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759801"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854076"
 ---
 # <a name="chemistry-library-installation"></a>化学ライブラリのインストール
 
-[ **MolecularHydrogen**サンプル](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen)では、手動で構成された分子入力データを使用します。
+[ **MolecularHydrogen** サンプル](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen)では、手動で構成された分子入力データを使用します。
 これは、小さな例では問題ありませんが、大規模な量子化学では、何百万または十億の Hamiltonians を持つ必要があります。
 スケーラブルな計算化学パッケージによって生成されるこのような Hamiltonians は、大きすぎて手動でインポートすることはできません。
 
 Quantum 開発キットの quantum 化学ライブラリは、計算化学パッケージで適切に動作するように設計されています。特に、環境分子サイエンス研究所 (EMSL) によって開発された、太平洋北西国立研究所で作成された [**Nwchem**](http://www.nwchem-sw.org/) 計算化学プラットフォームです。
-特に、 [Broombridge スキーマ](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)に示されている量子化学シミュレーションの問題のインスタンスを読み込むためのツールを提供しています。 [ **Microsoft.Quantum.Chemistry**これは、](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry)最近のバージョンの nwchem のエクスポートでもサポートされています。
+特に、 [Broombridge スキーマ](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)に示されている量子化学シミュレーションの問題のインスタンスを読み込むためのツールを提供しています。 [ これは、](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry)最近のバージョンの nwchem のエクスポートでもサポートされています。
 
 Quantum Development Kit 化学ライブラリには、 `qdk-chem` 従来の形式と [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)を変換するためのコマンドラインツールも用意されています。
 

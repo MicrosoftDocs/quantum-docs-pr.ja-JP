@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Random.DiscreteUniformDistribution
 title: DiscreteUniformDistribution 関数
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DiscreteUniformDistribution
 qsharp.summary: Returns a uniform distribution over a given inclusive range.
-ms.openlocfilehash: 08a62805f59df339ef6b91dff802c40c407808f4
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f909e7def5439ec0feef4ca4dc0cf8ed12374dfe
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96193014"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98853717"
 ---
 # <a name="discreteuniformdistribution-function"></a>DiscreteUniformDistribution 関数
 
@@ -44,6 +44,15 @@ function DiscreteUniformDistribution (min : Int, max : Int) : Microsoft.Quantum.
 ## <a name="output--discretedistribution"></a>出力: [DiscreteDistribution](xref:Microsoft.Quantum.Random.DiscreteDistribution)
 
 ランダムな可変性の範囲の整数である分布は、からまでの範囲内の整数です `min` `max` 。
+
+## <a name="example"></a>例
+
+次の Q # スニペットは、6辺をランダムにロールします。
+
+```qsharp
+let dieDistribution = DiscreteUniformDistribution(1, 6);
+let dieRoll = dieDistribution::Sample();
+```
 
 ## <a name="remarks"></a>解説
 

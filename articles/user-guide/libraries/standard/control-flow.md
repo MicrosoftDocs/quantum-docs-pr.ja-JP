@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8f4b69250ed49bd56c3066d5cd40db4b8abfc9cb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690872"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858695"
 ---
 # <a name="higher-order-control-flow"></a>Higher-Order 制御フロー #
 
@@ -164,7 +164,7 @@ U(1, time / Float(nSteps), target);
 
 この時点で、Trotter – Suzuki 拡張については、 *クォンタムメカニズムをまったく参照する* 必要がなくなりました。
 拡張は、実質的には $ \eqref{eq: trotter-0} $ によって実現される非常に具体的な反復パターンです。
-この反復パターンは、次の方法で実装され <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA> ます。
+この反復パターンは、次の方法で実装され <xref:Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA> ます。
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,
@@ -213,7 +213,7 @@ $X ^ {\ dagger} = X $ であるため、これは $ \ket{0\dots 0} = X ^ {s \_ 0
 ```
 
 ここでは、 <xref:Microsoft.Quantum.Canon.ApplyPauliFromBitString> で使用するために、$P $ を適用し、そのターゲットに部分的に適用してい `ApplyWith` ます。
-ただし、 *コントロール* レジスタを目的の形式に変換する必要があることに注意してください。したがって、内部操作はターゲットに部分的に適用され `(Controlled oracle)` ます。 *target*
+ただし、*コントロール* レジスタを目的の形式に変換する必要があることに注意してください。したがって、内部操作はターゲットに部分的に適用され `(Controlled oracle)` ます。 
 これ `ApplyWith` により、必要に応じて、コントロールレジスタが $P $ に角かっこで囲みます。
 
 この時点では、これで完了ですが、新しい操作では、ファンクタを適用するような "感覚" にならないということがわかりません `Controlled` 。

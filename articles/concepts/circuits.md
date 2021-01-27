@@ -1,6 +1,6 @@
 ---
 タイトル: クォンタム回線の説明: 量子回線図を使用して、単純で複雑なクォンタム操作を視覚的に表現する方法について説明します。
-author: QuantumWriter uid: benbra: v-ms. date: 12/11/2017 ms. topic: article no loc (場所の記事):
+author: QuantumWriter uid: benbra: v-ms. date: 12/11/2017 ms. topic: 概念用のものがありません。
 - "Q#"
 - "$$v"
 - "$$"

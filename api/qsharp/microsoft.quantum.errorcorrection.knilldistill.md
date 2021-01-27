@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.KnillDistill
 title: KnillDistill 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: KnillDistill
 qsharp.summary: Implements the Knill magic state distillation algorithm.
-ms.openlocfilehash: df00c7572d909a67ec658bc8dccaf0e338afe5c5
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 4eff99eebb1e271d240513f827c6e93973ef79a6
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96200749"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98853114"
 ---
 # <a name="knilldistill-operation"></a>KnillDistill 操作
 
@@ -50,6 +50,6 @@ Knill のアルゴリズムに従います。
 ただし、現在の実装は、使用される qubits が多すぎるため、最適な実装ではありません。
 このルーチンでは、マジック状態が挿入されます。この場合、より優れたプロトコルが使用されます。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - [Knill](https://arxiv.org/abs/quant-ph/0402171)

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Preparation.PurifiedMixedState
 title: PurifiedMixedState 関数
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PurifiedMixedState
 qsharp.summary: "Returns an operation that prepares a a purification of a given mixed state.\rA \"purified mixed state\" refers to states of the form |ψ⟩ = Σᵢ √\U0001D45Dᵢ |\U0001D456⟩ |garbageᵢ⟩ specified by a vector of\rcoefficients {\U0001D45Dᵢ}. States of this form can be reduced to mixed states ρ ≔ \U0001D45Dᵢ |\U0001D456⟩⟨\U0001D456| by tracing over the \"garbage\"\rregister (that is, a mixed state that is diagonal in the computational basis).\r\rSee https://arxiv.org/pdf/1805.03662.pdf?page=15 for further discussion."
-ms.openlocfilehash: 73b031f1082d0a12975abad074b07184dcbabdbe
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 594a1d9fa674e457ab88072ade4198283b677af6
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96230023"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854299"
 ---
 # <a name="purifiedmixedstate-function"></a>PurifiedMixedState 関数
 
@@ -57,11 +57,26 @@ function PurifiedMixedState (targetError : Double, coefficients : Double[]) : Mi
 
 結合インデックスとガベージレジスタに対する purification として $ \ チルダ \rho $ を準備する操作。
 
+## <a name="example"></a>例
+
+次のコードスニペットは、$ 3 $-qubit state $ \rho = \ sum_ {j = 0} ^ {4} \frac{| alpha_j |} の purification を準備します。{\ sum_k | \ alpha_k |}\ket{j}\bra{j} $,、$ \ vec\ alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $,、ターゲットエラーは $10 ^ {-3} $:
+
+```qsharp
+let coefficients = [1.0, 2.0, 3.0, 4.0, 5.0];
+let targetError = 1e-3;
+let purifiedState = PurifiedMixedState(targetError, coefficients);
+using (indexRegister = Qubit[purifiedState::Requirements::NIndexQubits]) {
+    using (garbageRegister = Qubit[purifiedState::Requirements::NGarbageQubits]) {
+        purifiedState::Prepare(LittleEndian(indexRegister), new Qubit[0], garbageRegister);
+    }
+}
+```
+
 ## <a name="remarks"></a>解説
 
 この演算に指定された係数は、1基準に従って正規化されます。そのため、係数は常に有効なカテゴリ確率分布を表していると見なされます。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - Babbush、Spectra、Gidney、Dominic W Berry、Nathan Wiebe、Jarrod McClean、Alexandru Er、オースティン Fowler、Hartmut Neven の各クォンタム回線での電子商取引のエンコード https://arxiv.org/abs/1805.03662
 

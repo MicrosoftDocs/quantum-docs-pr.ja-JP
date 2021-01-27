@@ -4,17 +4,17 @@ description: Microsoft QDK で無効になっている qubits 使用チェッカ
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 18371b3798d0eaa12d4e7107f58f44379594619f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 9014097ace7c9f19d93a92372da40f71fa7f87ee
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835997"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858619"
 ---
 # <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>クォンタムトレースシミュレーター: 無効になった qubits 使用チェッカー
 
@@ -34,11 +34,11 @@ operation UseReleasedQubit() : Unit {
 }
 ```
 
-に操作を適用すると `H` `q[0]` 、既に解放されている qubit が参照されるため、未定義の動作が発生する可能性があります。 無効化された Qubits Use Checker が有効になっている場合、 `InvalidatedQubitsUseCheckerException` プログラムが既に解放された qubits に操作を適用すると、例外がスローされます。 詳細については、 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException> を参照してください。
+に操作を適用すると `H` `q[0]` 、既に解放されている qubit が参照されるため、未定義の動作が発生する可能性があります。 無効化された Qubits Use Checker が有効になっている場合、 `InvalidatedQubitsUseCheckerException` プログラムが既に解放された qubits に操作を適用すると、例外がスローされます。 詳細については、「<xref:Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.InvalidatedQubitsUseCheckerException>」を参照してください。
 
 ## <a name="invoking-the-invalidated-qubits-use-checker"></a>無効化された qubits を使用したチェッカーの呼び出し
 
-無効化された qubits use checker でクォンタムトレースシミュレーターを実行するには、インスタンスを作成し <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 、 `UseInvalidatedQubitsUseChecker` プロパティを **true**に設定してから、 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> パラメーターとしてを使用して新しいインスタンスを作成する必要があり `QCTraceSimulatorConfiguration` ます。 
+無効化された qubits use checker でクォンタムトレースシミュレーターを実行するには、インスタンスを作成し <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 、 `UseInvalidatedQubitsUseChecker` プロパティを **true** に設定してから、 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> パラメーターとしてを使用して新しいインスタンスを作成する必要があり `QCTraceSimulatorConfiguration` ます。 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -78,4 +78,4 @@ namespace Quantum.MyProgram
 - Quantum Development Kit [クォンタムトレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro) の概要。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API リファレンス。
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>API リファレンス。
-- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException>API リファレンス。
+- <xref:Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.InvalidatedQubitsUseCheckerException>API リファレンス。

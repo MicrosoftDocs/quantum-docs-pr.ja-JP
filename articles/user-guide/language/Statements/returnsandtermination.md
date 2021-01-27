@@ -1,6 +1,6 @@
 ---
 title: "return ステートメントおよび fail ステートメントを Q# 使用して、 Q# サブルーチンまたはプログラムを終了する方法について説明します。
-執筆者: bettinaheim: beheim ms. date: 10/07/2020 ms. topic: article uid: returnsandtermination no loc (場所: no):
+author: bettinaheim: beheim ミリ秒。日付: 10/07/2020 ミリ秒。トピック: 参照 uid: returnsandtermination no loc (アドインなし):
 - "Q#"
 - "$$v"
 

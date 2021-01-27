@@ -4,16 +4,16 @@ description: Q#クォンタムプログラムで間違いやエラーをキャ�
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1ab9b77c7536a1860064110810371d3a68e95b40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d13122187a24893d297cfdbb3ad4db03eb22ded0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690858"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858680"
 ---
 # <a name="diagnostics"></a>診断 #
 
@@ -27,7 +27,7 @@ Q#標準ライブラリでは、「」で詳しく説明されているように
 既定では、文字列がコンソールに書き込まれます。
 挿入文字列と共に使用することで、 <xref:Microsoft.Quantum.Intrinsic.Message> 従来の値に関する診断情報を簡単にレポートできるようになります。
 
-```Q#
+```qsharp
 let angle = Microsoft.Quantum.Math.PI() * 2.0 / 3.0;
 Message($"About to rotate by an angle of {angle}...");
 ```
@@ -47,7 +47,7 @@ Message($"About to rotate by an angle of {angle}...");
 
 「 [テストおよびデバッグ](xref:microsoft.quantum.guide.testingdebugging)」で説明したように、シグネチャまたはを持つ関数または操作は、 `Unit -> Unit` `Unit => Unit` それぞれ *単体テスト* としてマークできます。
 各単体テストは、通常、小さいクォンタムプログラムと、そのプログラムの正確性をチェックする1つ以上の条件で構成されます。
-これらの条件は、入力の値を確認する _ファクト_ 、または入力として渡された1つ以上の qubits の状態をチェックする _アサーション_ のいずれかの形式で指定できます。
+これらの条件は、入力の値を確認する _ファクト_、または入力として渡された1つ以上の qubits の状態をチェックする _アサーション_ のいずれかの形式で指定できます。
 
 たとえば、は、 `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` $1 + 1 = $2 という数学的な事実を表しますが、は `AssertQubit(One, qubit)` 測定が確実性を `qubit` 持つを返す条件を表し `One` ます。
 前者の場合は、値のみを指定して条件の正確性を確認できます。後者の場合、アサーションを評価するには、qubit の状態に関する情報を把握しておく必要があります。

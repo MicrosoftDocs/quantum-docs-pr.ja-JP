@@ -1,6 +1,6 @@
 ---
 title: 高度なマトリックスの概念説明: クォンタムアルゴリズムの記述とシミュレーションに使用される基本的なツールである固有ベクトル、eigenvalues、および matrix 指数について説明します。
-author: QuantumWriter uid: benbra:: 12/11/2017 ミリ秒。トピック: 記事の場所は含まれていません (& a):
+author: QuantumWriter uid: benbra: 12/11/2017 ミリ秒。日付: ミリ秒。トピック: 概念に関係ありません (& a):
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,11 +93,11 @@ author: QuantumWriter uid: benbra:: 12/11/2017 ミリ秒。トピック: 記事�
 
 $M を $ 正方形行列にし、 $ v は $ すべてゼロベクトルではないベクター (つまり、すべてのエントリが0に等しいベクトル) に $ し $ ます。
 
-$ $ たとえば、 [*eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors)があると $ $ $ します。この場合、 = 数 c の Mv cv が発生 $ $ $ します。 $C $ は eigenvector v に対応する[*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors)であると言い $ $ ます。 一般に、マトリックス $ M は $ ベクターを他のベクターに変換することがありますが、eigenvector は特殊なものです。これは、数値で乗算される点を除いて、変更されていないためです。 $V $ が eigenvalue c の eigenvector である場合 $ $ 、 $ $ $ 同じ eigenvalue を持つ av は eigenvector (0 以外の a の場合) でも $ あることに注意してください。
+$ $ たとえば、 [*eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors)があると $ $ $ します。この場合、 = 数 c の Mv cv が発生 $ $ $ します。 $C $ は eigenvector v に対応する [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors)であると言い $ $ ます。 一般に、マトリックス $ M は $ ベクターを他のベクターに変換することがありますが、eigenvector は特殊なものです。これは、数値で乗算される点を除いて、変更されていないためです。 $V $ が eigenvalue c の eigenvector である場合 $ $ 、 $ $ $ 同じ eigenvalue を持つ av は eigenvector (0 以外の a の場合) でも $ あることに注意してください。
 
 たとえば、id 行列の場合、すべての vector $ v $ は eigenvalue 1 の eigenvector $ に $ なります。
 
-もう1つの例と[*diagonal matrix*](https://en.wikipedia.org/wiki/Diagonal_matrix)して、対角線 $ $ に0以外のエントリのみを持つ対角線行列 D を考えてみます。
+もう1つの例と[](https://en.wikipedia.org/wiki/Diagonal_matrix)して、対角線 $ $ に0以外のエントリのみを持つ対角線行列 D を考えてみます。
 
 $$
 \begin{bmatrix}

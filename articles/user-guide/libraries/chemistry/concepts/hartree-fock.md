@@ -1,20 +1,20 @@
 ---
-title: ハーツリー-Fock 理論
+title: Hartree-Fock 理論
 description: 量子システムの初期状態を構築する簡単な方法である、Fock 理論について説明します。
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.hartreefock
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 53d6e4342e5b58886528e89871591e57d8e70c82
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 48d6bc4face90046271dd8705188a92daafad98a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835351"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854103"
 ---
 # <a name="hartreefock-theory"></a>ハーツリー– Fock 理論
 
@@ -54,7 +54,7 @@ var wavefunctionInt = wavefunctionSpinOrbital.ToIndexing(IndexConvention.UpDown)
 Fock 理論に関する最も印象的な機能は、原子の間に entangを持たないクォンタム状態を生成することです。
 これは、多くの場合、分子 systems のプロパティに関する適切な定性的な説明を提供することを意味します。 
 
-次のように、Fock 状態をから再構築することもでき `FermionHamiltonian`  ます。
+Hartree-Fock の状態は、次のようにから再構築することもでき `FermionHamiltonian`  ます。
 ```csharp
 // We initialize a fermion Hamiltonian.
 var fermionHamiltonian = new FermionHamiltonian();
