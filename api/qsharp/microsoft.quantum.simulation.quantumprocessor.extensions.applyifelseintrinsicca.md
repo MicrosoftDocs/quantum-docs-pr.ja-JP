@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyIfElseIntrinsicCA
 title: ApplyIfElseIntrinsicCA 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyIfElseIntrinsicCA
 qsharp.summary: ''
-ms.openlocfilehash: 40513e407d4f7a42dffde940cd4b3548d8738a4d
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 6ba83f7344c77b95f2e7397cd42f39884556547a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192657"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855692"
 ---
-# <a name="applyifelseintrinsicca-operation"></a><span data-ttu-id="234f6-102">ApplyIfElseIntrinsicCA 操作</span><span class="sxs-lookup"><span data-stu-id="234f6-102">ApplyIfElseIntrinsicCA operation</span></span>
+# <a name="applyifelseintrinsicca-operation"></a><span data-ttu-id="673b5-102">ApplyIfElseIntrinsicCA 操作</span><span class="sxs-lookup"><span data-stu-id="673b5-102">ApplyIfElseIntrinsicCA operation</span></span>
 
-<span data-ttu-id="234f6-103">名前空間: [QuantumProcessor](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)を実行します。</span><span class="sxs-lookup"><span data-stu-id="234f6-103">Namespace: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)</span></span>
+<span data-ttu-id="673b5-103">名前空間: [QuantumProcessor](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)を実行します。</span><span class="sxs-lookup"><span data-stu-id="673b5-103">Namespace: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)</span></span>
 
-<span data-ttu-id="234f6-104">Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア</span><span class="sxs-lookup"><span data-stu-id="234f6-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="673b5-104">Package: [Microsoft.](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core) ....... コア</span><span class="sxs-lookup"><span data-stu-id="673b5-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 
@@ -28,23 +28,23 @@ operation ApplyIfElseIntrinsicCA (measurementResult : Result, onResultZeroOp : (
 ```
 
 
-## <a name="input"></a><span data-ttu-id="234f6-105">入力</span><span class="sxs-lookup"><span data-stu-id="234f6-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="673b5-105">入力</span><span class="sxs-lookup"><span data-stu-id="673b5-105">Input</span></span>
 
-### <a name="measurementresult--__invalidresult__"></a><span data-ttu-id="234f6-106">measurementResult:__無効 <Result>__</span><span class="sxs-lookup"><span data-stu-id="234f6-106">measurementResult : __invalid<Result>__</span></span>
-
-
-
-
-### <a name="onresultzeroop--unit--unit--is-adj--ctl"></a><span data-ttu-id="234f6-107">onResultZeroOp: [単位](xref:microsoft.quantum.lang-ref.unit) => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞 + Ctl です</span><span class="sxs-lookup"><span data-stu-id="234f6-107">onResultZeroOp : [Unit](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
+### <a name="measurementresult--__invalidresult__"></a><span data-ttu-id="673b5-106">measurementResult:__無効 <Result>__</span><span class="sxs-lookup"><span data-stu-id="673b5-106">measurementResult : __invalid<Result>__</span></span>
 
 
 
 
-### <a name="onresultoneop--unit--unit--is-adj--ctl"></a><span data-ttu-id="234f6-108">onResultOneOp: [単位](xref:microsoft.quantum.lang-ref.unit) => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞 + Ctl です</span><span class="sxs-lookup"><span data-stu-id="234f6-108">onResultOneOp : [Unit](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
+### <a name="onresultzeroop--unit--unit--is-adj--ctl"></a><span data-ttu-id="673b5-107">onResultZeroOp: [単位](xref:microsoft.quantum.lang-ref.unit) => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞 + Ctl です</span><span class="sxs-lookup"><span data-stu-id="673b5-107">onResultZeroOp : [Unit](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
+
+
+
+
+### <a name="onresultoneop--unit--unit--is-adj--ctl"></a><span data-ttu-id="673b5-108">onResultOneOp: [単位](xref:microsoft.quantum.lang-ref.unit) => [単位](xref:microsoft.quantum.lang-ref.unit)  は形容詞 + Ctl です</span><span class="sxs-lookup"><span data-stu-id="673b5-108">onResultOneOp : [Unit](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 
 
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="234f6-109">出力: [単位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="234f6-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="673b5-109">出力: [単位](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="673b5-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
