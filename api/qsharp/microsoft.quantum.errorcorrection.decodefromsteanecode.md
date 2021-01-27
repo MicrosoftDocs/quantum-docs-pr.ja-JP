@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.DecodeFromSteaneCode
 title: DecodeFromSteaneCode 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: DecodeFromSteaneCode
 qsharp.summary: An inverse encoding operation that maps an unencoded quantum register to an encoded quantum register under the ⟦7, 1, 3⟧ Steane quantum code.
-ms.openlocfilehash: 50fc6fb22e8b65ce10aba41e18362ad96236a907
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 54e47b65ed7a89c8ff9026126a9542d3d7ba15cc
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96201140"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98827387"
 ---
 # <a name="decodefromsteanecode-operation"></a>DecodeFromSteaneCode 操作
 
@@ -44,7 +44,7 @@ operation DecodeFromSteaneCode (logicalRegister : Microsoft.Quantum.ErrorCorrect
 
 選択したデコーダーは、⟦7、1、3⟧ Steane code の CSS コードプロパティを使用します。つまり、X エラーと Z エラーを個別に修正します。 コードのプロパティとして、X の位置 (それぞれ、適用される Z 補正) は X の3ビットエンコーディング、それぞれ Z より隣人は整数であると見なされます。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - D. Gottesman、"安定板のコードとクォンタムのエラーの修正" 博士、Thesis、Caltech、1997; https://arxiv.org/abs/quant-ph/9705052
 
