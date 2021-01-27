@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Convert.BoolArrayAsInt
 title: ブール Arrayasint 関数
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: BoolArrayAsInt
-qsharp.summary: Produces a positive integer from a string of bits in little endian format.
-ms.openlocfilehash: 2fbe4492bef5f61d20e33c8500e841413d511d78
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+qsharp.summary: Produces a non-negative integer from a string of bits in little endian format.
+ms.openlocfilehash: f8901fe4d1a74f3912ea0218c0cc67b67b701080
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96224515"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98834317"
 ---
 # <a name="boolarrayasint-function"></a>ブール Arrayasint 関数
 
@@ -21,7 +21,7 @@ ms.locfileid: "96224515"
 パッケージ: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-リトルエンディアン形式のビット文字列から正の整数を生成します。
+リトルエンディアン形式のビット文字列から負でない整数を生成します。
 
 ```qsharp
 function BoolArrayAsInt (bits : Bool[]) : Int
