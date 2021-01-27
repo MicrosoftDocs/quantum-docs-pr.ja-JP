@@ -1,30 +1,30 @@
 ---
-title: ヨルダン-Wigner 表現
-description: ヨルダン Hamiltonian 表現について説明します。これにより、クォンタムコンピューターでより簡単に実装できるように、その演算子が、より簡単に実装できるようになります。
+title: Jordan-Wigner 表現
+description: Jordan-Wigner 表現について説明します。これにより、Hamiltonian 演算子が、quantum コンピューターでより簡単に実装できるように、その行列に変換されます。
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 29abb4d2ef11239a58af45bc4eee3bd60d20a6c7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 738c8262ea66b8a02ea7541e402953237dc2ea48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833855"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844130"
 ---
-# <a name="jordan-wigner-representation"></a>ヨルダン-Wigner 表現
+# <a name="jordan-wigner-representation"></a>Jordan-Wigner 表現
 
 2番目の量子化 Hamiltonians は $a ^ & ダガー $ (作成) と $a $ (annihilation) という観点からわかりやすくなっていますが、これらの操作は、quantum コンピューターでは基本的な操作ではありません。
 そのため、クォンタムコンピューターに実装する場合は、クォンタムコンピューターに実装できる一連の検索行列に演算子をマップする必要があります。
 ヨルダン– Wigner 表現は、このようなマップを1つ提供します。
 ただし、Bravyi – Kitaev 表現などの他のものも存在し、独自の相対利点と欠点があります。
-ヨルダン表現の主な利点は、単純であるということです。
+Jordan-Wigner 表現の主な利点は、単純であることです。
 
-ヨルダン表現は、派生するために簡単に記述できます。
+Jordan-Wigner 表現は、派生するために単純になります。
 State $ \ket {0} _j $ は、spin 回転 $j $ が空であることを意味し、$ \ket {1} _j $ はそれが占有されていることを意味します。
 これは、qubits が特定のスピン回転の職業を自然に格納できることを意味します。
 次に、$a ^ \ dagger_j \ket {0} _j = \ket {1} _j $ および $a ^ \ dagger_j \ket {1} _j = $0 を設定します。
@@ -51,14 +51,14 @@ $ $ つまり、2つの作成演算子は、必要に応じて commute を実行
 \begin{align} a ^ \ dagger_1 &= \ left (\frac{X-iY})/otimes 1, otimes 1, otimes/otimes/otimes {2} /otimes 1, \\ \\ ^ \ dagger_2 &= Z\frac{X-iY} (\frac{X-iY} {2} )-otimes 1 \ otimes 1/otimes/cドット/otimes 1、 \\ \\ ^ \ dagger_3 &= zotimes-left ()/otimes/otimes 1、otimes {2} 、cドット、otimes 1、およびです。 \\ \\ & \ vドット \\ \\ a ^ \ dagger_N &= zotimes {2} zo times & lt;/o times & lt; \frac{X-iY}; o times-←/otimes/left ()。 & # {eq: JW} \end{align}
 
 また、演算子として、数値演算子 $n _j $ を表すのも便利です。
-さいわいにも、$Z $ operators (ヨルダン-Wigner 文字列) の文字列は、この置換が行われた後にキャンセルされます。
+ありがたいと、$Z $ operators (Jordan-Wigner 文字列と呼ばれます) の文字列は、1つがこの置換を行った後にキャンセルされます。
 これを実行した後 (および $X _jY_j = iZ_j $) を呼び出した後は、& lt;、"n_j = a ^ \ dagger_j a_j = \frac{(1-Z_j)} {2} です。
 \end{equation}
 
 
-## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>ヨルダン-Wigner 表現でのの構築
+## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Jordan-Wigner 表現での Hamiltonians の構築
 
-Hamiltonian 表現を呼び出した後は、その後、すべての演算子の合計に対して、高速に変換されます。
+Jordan-Wigner 表現を呼び出した後、Hamiltonian を p Li 演算子の合計に変換すると、簡単に転送できます。
 1つは、Fermionic Hamiltonian の各 $a ^ & ダガー $ および $a $ 演算子を、上記の p の文字列に置き換えるだけです。
 この置換を実行するときには、Hamiltonian 内に含まれる用語のクラスは5つだけです。
 これらの5つのクラスは、1つの本文で Hamiltonian、q $ と $p、q、r、s $ を $p 選択するさまざまな方法に対応しています。また、内の2つの本文の語句を使用します。

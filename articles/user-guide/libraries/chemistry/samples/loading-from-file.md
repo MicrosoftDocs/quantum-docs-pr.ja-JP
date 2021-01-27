@@ -4,17 +4,17 @@ description: Broombridge スキーマを使用して大規模な Hamiltonian を
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
-ms.topic: article-type-from-white-list
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 57e25bf55009797b01695cef0f3d29b94662ccc0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4bd663ade7649be05058f07bee1acf541ec3e487
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869241"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844118"
 ---
 # <a name="loading-a-hamiltonian-from-file"></a>ファイルからのハミルトニアンの読み込み
 以前は、個別の用語を追加して Hamiltonians を構築していました。 これは、小さな例では問題ありませんが、大規模な量子化学には、何百万または十億の Hamiltonians が必要です。 NWChem などの化学パッケージによって生成された Hamiltonians は、大きすぎて手動でインポートすることができません。 このサンプルでは、 `FermionHamiltonian` [Broombridge スキーマ](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)によって表される分子からインスタンスが自動的に生成される方法を説明します。 参考までに、提供されている `LithiumHydrideGUI` サンプルまたはサンプルを調べることができ `RunSimulation` ます。 [LIQUi |>](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/)で使用される形式からのインポートについても、制限付きサポートを利用できます。
@@ -43,7 +43,7 @@ var fermionHamiltonian = orbitalIntegralHamiltonian.ToFermionHamiltonian(IndexCo
 var jordanWignerEncoding = fermionHamiltonian.ToPauliHamiltonian(Pauli.QubitEncoding.JordanWigner);
 ```
 
-Broombridge スキーマには、準備する初期状態の提案も含まれています。 `"|G⟩"`これらの状態のラベル (例: または `"|E1⟩"` ) は、ファイルを調べることで確認できます。 これらの初期状態を準備するために、 `qSharpData` クォンタムアルゴリズムによって使用 Q# されるは[前のセクション](xref:microsoft.quantum.chemistry.examples.energyestimate)と同様に取得されますが、必要な初期状態を選択するパラメーターが追加されています。 たとえば、
+Broombridge スキーマには、準備する初期状態の提案も含まれています。 `"|G⟩"`これらの状態のラベル (例: または `"|E1⟩"` ) は、ファイルを調べることで確認できます。 これらの初期状態を準備するために、 `qSharpData` クォンタムアルゴリズムによって使用 Q# されるは [前のセクション](xref:microsoft.quantum.chemistry.examples.energyestimate)と同様に取得されますが、必要な初期状態を選択するパラメーターが追加されています。 たとえば、
 ```csharp
 // The desired initial state, assuming that a description of it is present in the
 // Broombridge schema.

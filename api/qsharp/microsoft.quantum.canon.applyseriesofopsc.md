@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplySeriesOfOpsC
 title: Applyシリーズ Ofopsc 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplySeriesOfOpsC
 qsharp.summary: Applies a list of ops and their targets sequentially on an array. (Controlled)
-ms.openlocfilehash: eaa0ea3e33cce708af5879cfbe875397fbb82a8a
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 308256833dc607f685e3a5f2278e374cf3b6ce22
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217936"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844642"
 ---
 # <a name="applyseriesofopsc-operation"></a>Applyシリーズ Ofopsc 操作
 
@@ -56,6 +56,10 @@ Op のターゲットを記述する入れ子になった配列。 各配列に�
 ### <a name="t"></a>&
 
 
+
+## <a name="example"></a>例
+
+次のようになります。 Exp ([P\n Lix, P、p、p、および 0.5) を qubits 0、1//then X to qubits 2 let ops = [Exp ([P\n Lix, Pて Liy], 0.5, _)、ApplyToFirstQubitC (X, _)] です。let インデックス = [[0, 1], [2]];Applyシリーズ Ofopsc (ops, インデックス, qubitArray);
 
 ## <a name="see-also"></a>参照
 
