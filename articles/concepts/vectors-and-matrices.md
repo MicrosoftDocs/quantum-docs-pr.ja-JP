@@ -1,252 +1,252 @@
 ---
-<span data-ttu-id="21b4c-101">title: 量子コンピューティングのベクトルとマトリックスの説明: ベクターとマトリックスを操作する方法の基本について説明します。</span><span class="sxs-lookup"><span data-stu-id="21b4c-101">title: Vectors and matrices in quantum computing description: Learn the basics of how to work with vectors and matrices.</span></span>
-<span data-ttu-id="21b4c-102">author: QuantumWriter uid: benbra: v-ms. date: 12/11/2017 ms. topic: article no loc (場所の記事):</span><span class="sxs-lookup"><span data-stu-id="21b4c-102">author: QuantumWriter uid: microsoft.quantum.concepts.vectors ms.author: v-benbra ms.date: 12/11/2017 ms.topic: article no-loc:</span></span>
-- <span data-ttu-id="21b4c-103">"Q#"</span><span class="sxs-lookup"><span data-stu-id="21b4c-103">"Q#"</span></span>
-- <span data-ttu-id="21b4c-104">"$$v"</span><span class="sxs-lookup"><span data-stu-id="21b4c-104">"$$v"</span></span>
-- <span data-ttu-id="21b4c-105">"$$"</span><span class="sxs-lookup"><span data-stu-id="21b4c-105">"$$"</span></span>
-- <span data-ttu-id="21b4c-106">"$$"</span><span class="sxs-lookup"><span data-stu-id="21b4c-106">"$$"</span></span>
-- <span data-ttu-id="21b4c-107">"$"</span><span class="sxs-lookup"><span data-stu-id="21b4c-107">"$"</span></span>
-- <span data-ttu-id="21b4c-108">"$"</span><span class="sxs-lookup"><span data-stu-id="21b4c-108">"$"</span></span>
-- <span data-ttu-id="21b4c-109">"$"</span><span class="sxs-lookup"><span data-stu-id="21b4c-109">"$"</span></span>
-- <span data-ttu-id="21b4c-110">"$$"</span><span class="sxs-lookup"><span data-stu-id="21b4c-110">"$$"</span></span>
-- <span data-ttu-id="21b4c-111">"\cdots"</span><span class="sxs-lookup"><span data-stu-id="21b4c-111">"\cdots"</span></span>
-- <span data-ttu-id="21b4c-112">"bmatrix"</span><span class="sxs-lookup"><span data-stu-id="21b4c-112">"bmatrix"</span></span>
-- <span data-ttu-id="21b4c-113">"\ddots"</span><span class="sxs-lookup"><span data-stu-id="21b4c-113">"\ddots"</span></span>
-- <span data-ttu-id="21b4c-114">"\equiv"</span><span class="sxs-lookup"><span data-stu-id="21b4c-114">"\equiv"</span></span>
-- <span data-ttu-id="21b4c-115">"\sum"</span><span class="sxs-lookup"><span data-stu-id="21b4c-115">"\sum"</span></span>
-- <span data-ttu-id="21b4c-116">"\begin"</span><span class="sxs-lookup"><span data-stu-id="21b4c-116">"\begin"</span></span>
-- <span data-ttu-id="21b4c-117">"\end"</span><span class="sxs-lookup"><span data-stu-id="21b4c-117">"\end"</span></span>
-- <span data-ttu-id="21b4c-118">"\sqrt"</span><span class="sxs-lookup"><span data-stu-id="21b4c-118">"\sqrt"</span></span>
-- <span data-ttu-id="21b4c-119">"\otimes"</span><span class="sxs-lookup"><span data-stu-id="21b4c-119">"\otimes"</span></span>
-- <span data-ttu-id="21b4c-120">"{"</span><span class="sxs-lookup"><span data-stu-id="21b4c-120">"{"</span></span>
-- <span data-ttu-id="21b4c-121">"}"</span><span class="sxs-lookup"><span data-stu-id="21b4c-121">"}"</span></span>
-- <span data-ttu-id="21b4c-122">"\text"</span><span class="sxs-lookup"><span data-stu-id="21b4c-122">"\text"</span></span>
-- <span data-ttu-id="21b4c-123">"\phi"</span><span class="sxs-lookup"><span data-stu-id="21b4c-123">"\phi"</span></span>
-- <span data-ttu-id="21b4c-124">"\kappa"</span><span class="sxs-lookup"><span data-stu-id="21b4c-124">"\kappa"</span></span>
-- <span data-ttu-id="21b4c-125">"\psi"</span><span class="sxs-lookup"><span data-stu-id="21b4c-125">"\psi"</span></span>
-- <span data-ttu-id="21b4c-126">"\alpha"</span><span class="sxs-lookup"><span data-stu-id="21b4c-126">"\alpha"</span></span>
-- <span data-ttu-id="21b4c-127">"\beta"</span><span class="sxs-lookup"><span data-stu-id="21b4c-127">"\beta"</span></span>
-- <span data-ttu-id="21b4c-128">"\gamma"</span><span class="sxs-lookup"><span data-stu-id="21b4c-128">"\gamma"</span></span>
-- <span data-ttu-id="21b4c-129">"\delta"</span><span class="sxs-lookup"><span data-stu-id="21b4c-129">"\delta"</span></span>
-- <span data-ttu-id="21b4c-130">"\omega"</span><span class="sxs-lookup"><span data-stu-id="21b4c-130">"\omega"</span></span>
-- <span data-ttu-id="21b4c-131">"\bra"</span><span class="sxs-lookup"><span data-stu-id="21b4c-131">"\bra"</span></span>
-- <span data-ttu-id="21b4c-132">"\ket"</span><span class="sxs-lookup"><span data-stu-id="21b4c-132">"\ket"</span></span>
-- <span data-ttu-id="21b4c-133">"\boldone"</span><span class="sxs-lookup"><span data-stu-id="21b4c-133">"\boldone"</span></span>
-- <span data-ttu-id="21b4c-134">"\\\\"</span><span class="sxs-lookup"><span data-stu-id="21b4c-134">"\\\\"</span></span>
-- <span data-ttu-id="21b4c-135">"\\"</span><span class="sxs-lookup"><span data-stu-id="21b4c-135">"\\"</span></span>
-- <span data-ttu-id="21b4c-136">"="</span><span class="sxs-lookup"><span data-stu-id="21b4c-136">"="</span></span>
-- <span data-ttu-id="21b4c-137">"\frac"</span><span class="sxs-lookup"><span data-stu-id="21b4c-137">"\frac"</span></span>
-- <span data-ttu-id="21b4c-138">"\text"</span><span class="sxs-lookup"><span data-stu-id="21b4c-138">"\text"</span></span>
-- <span data-ttu-id="21b4c-139">"\mapsto"</span><span class="sxs-lookup"><span data-stu-id="21b4c-139">"\mapsto"</span></span>
-- <span data-ttu-id="21b4c-140">"\dagger"</span><span class="sxs-lookup"><span data-stu-id="21b4c-140">"\dagger"</span></span>
-- <span data-ttu-id="21b4c-141">"\to"</span><span class="sxs-lookup"><span data-stu-id="21b4c-141">"\to"</span></span>
-- <span data-ttu-id="21b4c-142">"\begin{cases}"</span><span class="sxs-lookup"><span data-stu-id="21b4c-142">"\begin{cases}"</span></span>
-- <span data-ttu-id="21b4c-143">"\end{cases}"</span><span class="sxs-lookup"><span data-stu-id="21b4c-143">"\end{cases}"</span></span>
-- <span data-ttu-id="21b4c-144">"\operatorname"</span><span class="sxs-lookup"><span data-stu-id="21b4c-144">"\operatorname"</span></span>
-- <span data-ttu-id="21b4c-145">"\braket"</span><span class="sxs-lookup"><span data-stu-id="21b4c-145">"\braket"</span></span>
-- <span data-ttu-id="21b4c-146">"\id"</span><span class="sxs-lookup"><span data-stu-id="21b4c-146">"\id"</span></span>
-- <span data-ttu-id="21b4c-147">"\expect"</span><span class="sxs-lookup"><span data-stu-id="21b4c-147">"\expect"</span></span>
-- <span data-ttu-id="21b4c-148">"\defeq"</span><span class="sxs-lookup"><span data-stu-id="21b4c-148">"\defeq"</span></span>
-- <span data-ttu-id="21b4c-149">"\variance"</span><span class="sxs-lookup"><span data-stu-id="21b4c-149">"\variance"</span></span>
-- <span data-ttu-id="21b4c-150">"\dd"</span><span class="sxs-lookup"><span data-stu-id="21b4c-150">"\dd"</span></span>
-- <span data-ttu-id="21b4c-151">"&"</span><span class="sxs-lookup"><span data-stu-id="21b4c-151">"&"</span></span>
-- <span data-ttu-id="21b4c-152">"\begin{align}"</span><span class="sxs-lookup"><span data-stu-id="21b4c-152">"\begin{align}"</span></span>
-- <span data-ttu-id="21b4c-153">"\end{align}"</span><span class="sxs-lookup"><span data-stu-id="21b4c-153">"\end{align}"</span></span>
-- <span data-ttu-id="21b4c-154">"\Lambda"</span><span class="sxs-lookup"><span data-stu-id="21b4c-154">"\Lambda"</span></span>
-- <span data-ttu-id="21b4c-155">"\lambda"</span><span class="sxs-lookup"><span data-stu-id="21b4c-155">"\lambda"</span></span>
-- <span data-ttu-id="21b4c-156">"\Omega"</span><span class="sxs-lookup"><span data-stu-id="21b4c-156">"\Omega"</span></span>
-- <span data-ttu-id="21b4c-157">"\mathrm"</span><span class="sxs-lookup"><span data-stu-id="21b4c-157">"\mathrm"</span></span>
-- <span data-ttu-id="21b4c-158">"\left"</span><span class="sxs-lookup"><span data-stu-id="21b4c-158">"\left"</span></span>
-- <span data-ttu-id="21b4c-159">"\right"</span><span class="sxs-lookup"><span data-stu-id="21b4c-159">"\right"</span></span>
-- <span data-ttu-id="21b4c-160">"\qquad"</span><span class="sxs-lookup"><span data-stu-id="21b4c-160">"\qquad"</span></span>
-- <span data-ttu-id="21b4c-161">"\times"</span><span class="sxs-lookup"><span data-stu-id="21b4c-161">"\times"</span></span>
-- <span data-ttu-id="21b4c-162">"\big"</span><span class="sxs-lookup"><span data-stu-id="21b4c-162">"\big"</span></span>
-- <span data-ttu-id="21b4c-163">"\langle"</span><span class="sxs-lookup"><span data-stu-id="21b4c-163">"\langle"</span></span>
-- <span data-ttu-id="21b4c-164">"\rangle"</span><span class="sxs-lookup"><span data-stu-id="21b4c-164">"\rangle"</span></span>
-- <span data-ttu-id="21b4c-165">"\bigg"</span><span class="sxs-lookup"><span data-stu-id="21b4c-165">"\bigg"</span></span>
-- <span data-ttu-id="21b4c-166">"\Big"</span><span class="sxs-lookup"><span data-stu-id="21b4c-166">"\Big"</span></span>
-- <span data-ttu-id="21b4c-167">"|"</span><span class="sxs-lookup"><span data-stu-id="21b4c-167">"|"</span></span>
-- <span data-ttu-id="21b4c-168">"\mathbb"</span><span class="sxs-lookup"><span data-stu-id="21b4c-168">"\mathbb"</span></span>
-- <span data-ttu-id="21b4c-169">"\vec"</span><span class="sxs-lookup"><span data-stu-id="21b4c-169">"\vec"</span></span>
-- <span data-ttu-id="21b4c-170">"\in"</span><span class="sxs-lookup"><span data-stu-id="21b4c-170">"\in"</span></span>
-- <span data-ttu-id="21b4c-171">"\texttt"</span><span class="sxs-lookup"><span data-stu-id="21b4c-171">"\texttt"</span></span>
-- <span data-ttu-id="21b4c-172">"\ne"</span><span class="sxs-lookup"><span data-stu-id="21b4c-172">"\ne"</span></span>
-- <span data-ttu-id="21b4c-173">"<"</span><span class="sxs-lookup"><span data-stu-id="21b4c-173">"<"</span></span>
-- <span data-ttu-id="21b4c-174">">"</span><span class="sxs-lookup"><span data-stu-id="21b4c-174">">"</span></span>
-- <span data-ttu-id="21b4c-175">"\leq"</span><span class="sxs-lookup"><span data-stu-id="21b4c-175">"\leq"</span></span>
-- <span data-ttu-id="21b4c-176">"\geq"</span><span class="sxs-lookup"><span data-stu-id="21b4c-176">"\geq"</span></span>
-- <span data-ttu-id="21b4c-177">"~~"</span><span class="sxs-lookup"><span data-stu-id="21b4c-177">"~~"</span></span>
-- <span data-ttu-id="21b4c-178">"~"</span><span class="sxs-lookup"><span data-stu-id="21b4c-178">"~"</span></span>
-- <span data-ttu-id="21b4c-179">"\begin{bmatrix}"</span><span class="sxs-lookup"><span data-stu-id="21b4c-179">"\begin{bmatrix}"</span></span>
-- <span data-ttu-id="21b4c-180">"\end{bmatrix}"</span><span class="sxs-lookup"><span data-stu-id="21b4c-180">"\end{bmatrix}"</span></span>
-- <span data-ttu-id="21b4c-181">"\_"</span><span class="sxs-lookup"><span data-stu-id="21b4c-181">"\_"</span></span>
+<span data-ttu-id="685dc-101">title: 量子コンピューティングのベクトルとマトリックスの説明: ベクターとマトリックスを操作する方法の基本について説明します。</span><span class="sxs-lookup"><span data-stu-id="685dc-101">title: Vectors and matrices in quantum computing description: Learn the basics of how to work with vectors and matrices.</span></span>
+<span data-ttu-id="685dc-102">author: QuantumWriter uid: benbra: v-ms. date: 12/11/2017 ms. topic: 概念用のものがありません。</span><span class="sxs-lookup"><span data-stu-id="685dc-102">author: QuantumWriter uid: microsoft.quantum.concepts.vectors ms.author: v-benbra ms.date: 12/11/2017 ms.topic: conceptual no-loc:</span></span>
+- <span data-ttu-id="685dc-103">"Q#"</span><span class="sxs-lookup"><span data-stu-id="685dc-103">"Q#"</span></span>
+- <span data-ttu-id="685dc-104">"$$v"</span><span class="sxs-lookup"><span data-stu-id="685dc-104">"$$v"</span></span>
+- <span data-ttu-id="685dc-105">"$$"</span><span class="sxs-lookup"><span data-stu-id="685dc-105">"$$"</span></span>
+- <span data-ttu-id="685dc-106">"$$"</span><span class="sxs-lookup"><span data-stu-id="685dc-106">"$$"</span></span>
+- <span data-ttu-id="685dc-107">"$"</span><span class="sxs-lookup"><span data-stu-id="685dc-107">"$"</span></span>
+- <span data-ttu-id="685dc-108">"$"</span><span class="sxs-lookup"><span data-stu-id="685dc-108">"$"</span></span>
+- <span data-ttu-id="685dc-109">"$"</span><span class="sxs-lookup"><span data-stu-id="685dc-109">"$"</span></span>
+- <span data-ttu-id="685dc-110">"$$"</span><span class="sxs-lookup"><span data-stu-id="685dc-110">"$$"</span></span>
+- <span data-ttu-id="685dc-111">"\cdots"</span><span class="sxs-lookup"><span data-stu-id="685dc-111">"\cdots"</span></span>
+- <span data-ttu-id="685dc-112">"bmatrix"</span><span class="sxs-lookup"><span data-stu-id="685dc-112">"bmatrix"</span></span>
+- <span data-ttu-id="685dc-113">"\ddots"</span><span class="sxs-lookup"><span data-stu-id="685dc-113">"\ddots"</span></span>
+- <span data-ttu-id="685dc-114">"\equiv"</span><span class="sxs-lookup"><span data-stu-id="685dc-114">"\equiv"</span></span>
+- <span data-ttu-id="685dc-115">"\sum"</span><span class="sxs-lookup"><span data-stu-id="685dc-115">"\sum"</span></span>
+- <span data-ttu-id="685dc-116">"\begin"</span><span class="sxs-lookup"><span data-stu-id="685dc-116">"\begin"</span></span>
+- <span data-ttu-id="685dc-117">"\end"</span><span class="sxs-lookup"><span data-stu-id="685dc-117">"\end"</span></span>
+- <span data-ttu-id="685dc-118">"\sqrt"</span><span class="sxs-lookup"><span data-stu-id="685dc-118">"\sqrt"</span></span>
+- <span data-ttu-id="685dc-119">"\otimes"</span><span class="sxs-lookup"><span data-stu-id="685dc-119">"\otimes"</span></span>
+- <span data-ttu-id="685dc-120">"{"</span><span class="sxs-lookup"><span data-stu-id="685dc-120">"{"</span></span>
+- <span data-ttu-id="685dc-121">"}"</span><span class="sxs-lookup"><span data-stu-id="685dc-121">"}"</span></span>
+- <span data-ttu-id="685dc-122">"\text"</span><span class="sxs-lookup"><span data-stu-id="685dc-122">"\text"</span></span>
+- <span data-ttu-id="685dc-123">"\phi"</span><span class="sxs-lookup"><span data-stu-id="685dc-123">"\phi"</span></span>
+- <span data-ttu-id="685dc-124">"\kappa"</span><span class="sxs-lookup"><span data-stu-id="685dc-124">"\kappa"</span></span>
+- <span data-ttu-id="685dc-125">"\psi"</span><span class="sxs-lookup"><span data-stu-id="685dc-125">"\psi"</span></span>
+- <span data-ttu-id="685dc-126">"\alpha"</span><span class="sxs-lookup"><span data-stu-id="685dc-126">"\alpha"</span></span>
+- <span data-ttu-id="685dc-127">"\beta"</span><span class="sxs-lookup"><span data-stu-id="685dc-127">"\beta"</span></span>
+- <span data-ttu-id="685dc-128">"\gamma"</span><span class="sxs-lookup"><span data-stu-id="685dc-128">"\gamma"</span></span>
+- <span data-ttu-id="685dc-129">"\delta"</span><span class="sxs-lookup"><span data-stu-id="685dc-129">"\delta"</span></span>
+- <span data-ttu-id="685dc-130">"\omega"</span><span class="sxs-lookup"><span data-stu-id="685dc-130">"\omega"</span></span>
+- <span data-ttu-id="685dc-131">"\bra"</span><span class="sxs-lookup"><span data-stu-id="685dc-131">"\bra"</span></span>
+- <span data-ttu-id="685dc-132">"\ket"</span><span class="sxs-lookup"><span data-stu-id="685dc-132">"\ket"</span></span>
+- <span data-ttu-id="685dc-133">"\boldone"</span><span class="sxs-lookup"><span data-stu-id="685dc-133">"\boldone"</span></span>
+- <span data-ttu-id="685dc-134">"\\\\"</span><span class="sxs-lookup"><span data-stu-id="685dc-134">"\\\\"</span></span>
+- <span data-ttu-id="685dc-135">"\\"</span><span class="sxs-lookup"><span data-stu-id="685dc-135">"\\"</span></span>
+- <span data-ttu-id="685dc-136">"="</span><span class="sxs-lookup"><span data-stu-id="685dc-136">"="</span></span>
+- <span data-ttu-id="685dc-137">"\frac"</span><span class="sxs-lookup"><span data-stu-id="685dc-137">"\frac"</span></span>
+- <span data-ttu-id="685dc-138">"\text"</span><span class="sxs-lookup"><span data-stu-id="685dc-138">"\text"</span></span>
+- <span data-ttu-id="685dc-139">"\mapsto"</span><span class="sxs-lookup"><span data-stu-id="685dc-139">"\mapsto"</span></span>
+- <span data-ttu-id="685dc-140">"\dagger"</span><span class="sxs-lookup"><span data-stu-id="685dc-140">"\dagger"</span></span>
+- <span data-ttu-id="685dc-141">"\to"</span><span class="sxs-lookup"><span data-stu-id="685dc-141">"\to"</span></span>
+- <span data-ttu-id="685dc-142">"\begin{cases}"</span><span class="sxs-lookup"><span data-stu-id="685dc-142">"\begin{cases}"</span></span>
+- <span data-ttu-id="685dc-143">"\end{cases}"</span><span class="sxs-lookup"><span data-stu-id="685dc-143">"\end{cases}"</span></span>
+- <span data-ttu-id="685dc-144">"\operatorname"</span><span class="sxs-lookup"><span data-stu-id="685dc-144">"\operatorname"</span></span>
+- <span data-ttu-id="685dc-145">"\braket"</span><span class="sxs-lookup"><span data-stu-id="685dc-145">"\braket"</span></span>
+- <span data-ttu-id="685dc-146">"\id"</span><span class="sxs-lookup"><span data-stu-id="685dc-146">"\id"</span></span>
+- <span data-ttu-id="685dc-147">"\expect"</span><span class="sxs-lookup"><span data-stu-id="685dc-147">"\expect"</span></span>
+- <span data-ttu-id="685dc-148">"\defeq"</span><span class="sxs-lookup"><span data-stu-id="685dc-148">"\defeq"</span></span>
+- <span data-ttu-id="685dc-149">"\variance"</span><span class="sxs-lookup"><span data-stu-id="685dc-149">"\variance"</span></span>
+- <span data-ttu-id="685dc-150">"\dd"</span><span class="sxs-lookup"><span data-stu-id="685dc-150">"\dd"</span></span>
+- <span data-ttu-id="685dc-151">"&"</span><span class="sxs-lookup"><span data-stu-id="685dc-151">"&"</span></span>
+- <span data-ttu-id="685dc-152">"\begin{align}"</span><span class="sxs-lookup"><span data-stu-id="685dc-152">"\begin{align}"</span></span>
+- <span data-ttu-id="685dc-153">"\end{align}"</span><span class="sxs-lookup"><span data-stu-id="685dc-153">"\end{align}"</span></span>
+- <span data-ttu-id="685dc-154">"\Lambda"</span><span class="sxs-lookup"><span data-stu-id="685dc-154">"\Lambda"</span></span>
+- <span data-ttu-id="685dc-155">"\lambda"</span><span class="sxs-lookup"><span data-stu-id="685dc-155">"\lambda"</span></span>
+- <span data-ttu-id="685dc-156">"\Omega"</span><span class="sxs-lookup"><span data-stu-id="685dc-156">"\Omega"</span></span>
+- <span data-ttu-id="685dc-157">"\mathrm"</span><span class="sxs-lookup"><span data-stu-id="685dc-157">"\mathrm"</span></span>
+- <span data-ttu-id="685dc-158">"\left"</span><span class="sxs-lookup"><span data-stu-id="685dc-158">"\left"</span></span>
+- <span data-ttu-id="685dc-159">"\right"</span><span class="sxs-lookup"><span data-stu-id="685dc-159">"\right"</span></span>
+- <span data-ttu-id="685dc-160">"\qquad"</span><span class="sxs-lookup"><span data-stu-id="685dc-160">"\qquad"</span></span>
+- <span data-ttu-id="685dc-161">"\times"</span><span class="sxs-lookup"><span data-stu-id="685dc-161">"\times"</span></span>
+- <span data-ttu-id="685dc-162">"\big"</span><span class="sxs-lookup"><span data-stu-id="685dc-162">"\big"</span></span>
+- <span data-ttu-id="685dc-163">"\langle"</span><span class="sxs-lookup"><span data-stu-id="685dc-163">"\langle"</span></span>
+- <span data-ttu-id="685dc-164">"\rangle"</span><span class="sxs-lookup"><span data-stu-id="685dc-164">"\rangle"</span></span>
+- <span data-ttu-id="685dc-165">"\bigg"</span><span class="sxs-lookup"><span data-stu-id="685dc-165">"\bigg"</span></span>
+- <span data-ttu-id="685dc-166">"\Big"</span><span class="sxs-lookup"><span data-stu-id="685dc-166">"\Big"</span></span>
+- <span data-ttu-id="685dc-167">"|"</span><span class="sxs-lookup"><span data-stu-id="685dc-167">"|"</span></span>
+- <span data-ttu-id="685dc-168">"\mathbb"</span><span class="sxs-lookup"><span data-stu-id="685dc-168">"\mathbb"</span></span>
+- <span data-ttu-id="685dc-169">"\vec"</span><span class="sxs-lookup"><span data-stu-id="685dc-169">"\vec"</span></span>
+- <span data-ttu-id="685dc-170">"\in"</span><span class="sxs-lookup"><span data-stu-id="685dc-170">"\in"</span></span>
+- <span data-ttu-id="685dc-171">"\texttt"</span><span class="sxs-lookup"><span data-stu-id="685dc-171">"\texttt"</span></span>
+- <span data-ttu-id="685dc-172">"\ne"</span><span class="sxs-lookup"><span data-stu-id="685dc-172">"\ne"</span></span>
+- <span data-ttu-id="685dc-173">"<"</span><span class="sxs-lookup"><span data-stu-id="685dc-173">"<"</span></span>
+- <span data-ttu-id="685dc-174">">"</span><span class="sxs-lookup"><span data-stu-id="685dc-174">">"</span></span>
+- <span data-ttu-id="685dc-175">"\leq"</span><span class="sxs-lookup"><span data-stu-id="685dc-175">"\leq"</span></span>
+- <span data-ttu-id="685dc-176">"\geq"</span><span class="sxs-lookup"><span data-stu-id="685dc-176">"\geq"</span></span>
+- <span data-ttu-id="685dc-177">"~~"</span><span class="sxs-lookup"><span data-stu-id="685dc-177">"~~"</span></span>
+- <span data-ttu-id="685dc-178">"~"</span><span class="sxs-lookup"><span data-stu-id="685dc-178">"~"</span></span>
+- <span data-ttu-id="685dc-179">"\begin{bmatrix}"</span><span class="sxs-lookup"><span data-stu-id="685dc-179">"\begin{bmatrix}"</span></span>
+- <span data-ttu-id="685dc-180">"\end{bmatrix}"</span><span class="sxs-lookup"><span data-stu-id="685dc-180">"\end{bmatrix}"</span></span>
+- <span data-ttu-id="685dc-181">"\_"</span><span class="sxs-lookup"><span data-stu-id="685dc-181">"\_"</span></span>
 
 ---
 
-# <a name="vectors-and-matrices"></a><span data-ttu-id="21b4c-182">ベクターと行列</span><span class="sxs-lookup"><span data-stu-id="21b4c-182">Vectors and Matrices</span></span>
+# <a name="vectors-and-matrices"></a><span data-ttu-id="685dc-182">ベクターと行列</span><span class="sxs-lookup"><span data-stu-id="685dc-182">Vectors and Matrices</span></span>
 
-<span data-ttu-id="21b4c-183">ベクターとマトリックスについては、クォンタムコンピューティングを理解するために重要な知識があります。</span><span class="sxs-lookup"><span data-stu-id="21b4c-183">Some familiarity with vectors and matrices is essential to understand quantum computing.</span></span> <span data-ttu-id="21b4c-184">次の簡単な概要を説明します。また、読者には、 *Strang、G. (1993) などの線形代数の標準参照を読むことをお勧めします。線形代数 (Vol. 3) の概要。Wellesley、MA: Wellesley を押す* か、 [線形代数](http://joshua.smcvt.edu/linearalgebra/)などのオンライン参照をクリックします。</span><span class="sxs-lookup"><span data-stu-id="21b4c-184">We provide a brief introduction below and interested readers are recommended to read a standard reference on linear algebra such as *Strang, G. (1993). Introduction to linear algebra (Vol. 3). Wellesley, MA: Wellesley-Cambridge Press* or an online reference such as [Linear Algebra](http://joshua.smcvt.edu/linearalgebra/).</span></span>
+<span data-ttu-id="685dc-183">ベクターとマトリックスについては、クォンタムコンピューティングを理解するために重要な知識があります。</span><span class="sxs-lookup"><span data-stu-id="685dc-183">Some familiarity with vectors and matrices is essential to understand quantum computing.</span></span> <span data-ttu-id="685dc-184">次の簡単な概要を説明します。また、読者には、 *Strang、G. (1993) などの線形代数の標準参照を読むことをお勧めします。線形代数 (Vol. 3) の概要。Wellesley、MA: Wellesley-Cambridge 押し* ます。または、 [線形代数](http://joshua.smcvt.edu/linearalgebra/)などのオンライン参照をクリックします。</span><span class="sxs-lookup"><span data-stu-id="685dc-184">We provide a brief introduction below and interested readers are recommended to read a standard reference on linear algebra such as *Strang, G. (1993). Introduction to linear algebra (Vol. 3). Wellesley, MA: Wellesley-Cambridge Press* or an online reference such as [Linear Algebra](http://joshua.smcvt.edu/linearalgebra/).</span></span>
 
-<span data-ttu-id="21b4c-185">次元 (またはサイズ) n の列ベクター (または単なる [*vector*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v $ は、 $ $ $ 列として配置された n 個の $ 複素数 $ (v_1、v_2、\ lドット、v_n) のコレクションです $ 。</span><span class="sxs-lookup"><span data-stu-id="21b4c-185">A column vector (or simply [*vector*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $v$ of dimension (or size) $n$ is a collection of $n$ complex numbers $(v_1,v_2,\ldots,v_n)$ arranged as a column:</span></span>
+<span data-ttu-id="685dc-185">次元 (またはサイズ) n の列ベクター (または単なる [*vector*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v $ は、 $ $ $ 列として配置された n 個の $ 複素数 $ (v_1、v_2、\ lドット、v_n) のコレクションです $ 。</span><span class="sxs-lookup"><span data-stu-id="685dc-185">A column vector (or simply [*vector*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $v$ of dimension (or size) $n$ is a collection of $n$ complex numbers $(v_1,v_2,\ldots,v_n)$ arranged as a column:</span></span>
 
-<span data-ttu-id="21b4c-186">$$v =\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-186">$$v =\begin{bmatrix}</span></span>
-<span data-ttu-id="21b4c-187">v_1\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-187">v_1\\\\</span></span>
-<span data-ttu-id="21b4c-188">v_2\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-188">v_2\\\\</span></span>
-<span data-ttu-id="21b4c-189">\ vドット\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-189">\vdots\\\\</span></span>
-<span data-ttu-id="21b4c-190">v_n \end{bmatrix}$$</span><span class="sxs-lookup"><span data-stu-id="21b4c-190">v_n \end{bmatrix}$$</span></span>
+<span data-ttu-id="685dc-186">$$v =\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-186">$$v =\begin{bmatrix}</span></span>
+<span data-ttu-id="685dc-187">v_1\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-187">v_1\\\\</span></span>
+<span data-ttu-id="685dc-188">v_2\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-188">v_2\\\\</span></span>
+<span data-ttu-id="685dc-189">\ vドット\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-189">\vdots\\\\</span></span>
+<span data-ttu-id="685dc-190">v_n \end{bmatrix}$$</span><span class="sxs-lookup"><span data-stu-id="685dc-190">v_n \end{bmatrix}$$</span></span>
 
-<span data-ttu-id="21b4c-191">Vector v の標準 $ $ は $ \sqrt { \sum \_ i | v \_ i | ^ 2 } $ として定義されています。</span><span class="sxs-lookup"><span data-stu-id="21b4c-191">The norm of a vector $v$ is defined as $\sqrt{\sum\_i |v\_i|^2}$.</span></span> <span data-ttu-id="21b4c-192">ベクターは、基準が1である場合は単位基準 (または [*単位ベクトル*](https://en.wikipedia.org/wiki/Unit_vector)と呼ばれます) と呼ばれ $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="21b4c-192">A vector is said to be of unit norm (or alternatively it is called a [*unit vector*](https://en.wikipedia.org/wiki/Unit_vector)) if its norm is $1$.</span></span> <span data-ttu-id="21b4c-193">[*ベクター v の adjoint*](https://en.wikipedia.org/wiki/Adjoint_matrix) $ は、 $ $ v ^ \dagger $ として定義されています。は、 $ \* $ 複雑な共役を示す次の行ベクトルとして定義されています。</span><span class="sxs-lookup"><span data-stu-id="21b4c-193">The [*adjoint of a vector*](https://en.wikipedia.org/wiki/Adjoint_matrix) $v$ is denoted $v^\dagger$ and is defined to be the following row vector where $\*$ denotes the complex conjugate,</span></span>
+<span data-ttu-id="685dc-191">Vector v の標準 $ $ は $ \sqrt { \sum \_ i | v \_ i | ^ 2 } $ として定義されています。</span><span class="sxs-lookup"><span data-stu-id="685dc-191">The norm of a vector $v$ is defined as $\sqrt{\sum\_i |v\_i|^2}$.</span></span> <span data-ttu-id="685dc-192">ベクターは、基準が1である場合は単位基準 (または [*単位ベクトル*](https://en.wikipedia.org/wiki/Unit_vector)と呼ばれます) と呼ばれ $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="685dc-192">A vector is said to be of unit norm (or alternatively it is called a [*unit vector*](https://en.wikipedia.org/wiki/Unit_vector)) if its norm is $1$.</span></span> <span data-ttu-id="685dc-193">[*ベクター v の adjoint*](https://en.wikipedia.org/wiki/Adjoint_matrix) $ は、 $ $ v ^ \dagger $ として定義されています。は、 $ \* $ 複雑な共役を示す次の行ベクトルとして定義されています。</span><span class="sxs-lookup"><span data-stu-id="685dc-193">The [*adjoint of a vector*](https://en.wikipedia.org/wiki/Adjoint_matrix) $v$ is denoted $v^\dagger$ and is defined to be the following row vector where $\*$ denotes the complex conjugate,</span></span>
 
-<span data-ttu-id="21b4c-194">$$\begin{bmatrix}v_1 \\\\ \ vドット \\\\ v_n \end{bmatrix} ^ \dagger = \begin{bmatrix} v_1 ^ \* & \cdots & v_n ^ \*\end{bmatrix}$$</span><span class="sxs-lookup"><span data-stu-id="21b4c-194">$$\begin{bmatrix}v_1 \\\\ \vdots \\\\ v_n \end{bmatrix}^\dagger = \begin{bmatrix}v_1^\* & \cdots & v_n^\* \end{bmatrix}$$</span></span>
+<span data-ttu-id="685dc-194">$$\begin{bmatrix}v_1 \\\\ \ vドット \\\\ v_n \end{bmatrix} ^ \dagger = \begin{bmatrix} v_1 ^ \* & \cdots & v_n ^ \*\end{bmatrix}$$</span><span class="sxs-lookup"><span data-stu-id="685dc-194">$$\begin{bmatrix}v_1 \\\\ \vdots \\\\ v_n \end{bmatrix}^\dagger = \begin{bmatrix}v_1^\* & \cdots & v_n^\* \end{bmatrix}$$</span></span>
 
-<span data-ttu-id="21b4c-195">2つのベクトルを乗算する最も一般的な方法は、 [*内部製品*](https://en.wikipedia.org/wiki/Inner_product_space)(ドット積とも呼ばれます) を使用することです。</span><span class="sxs-lookup"><span data-stu-id="21b4c-195">The most common way to multiply two vectors together is through the [*inner product*](https://en.wikipedia.org/wiki/Inner_product_space), also known as a dot product.</span></span>  <span data-ttu-id="21b4c-196">内側の製品は、あるベクターの射影を別のベクターに提供し、1つのベクターを他のより単純なベクターの合計として表現する方法を説明するうえで非常に重要です。</span><span class="sxs-lookup"><span data-stu-id="21b4c-196">The inner product gives the projection of one vector onto another and is invaluable in describing how to express one vector as a sum of other simpler vectors.</span></span>  <span data-ttu-id="21b4c-197">U と v の間の内部積 $ $ $ $ ( $ \left \langle u, v) \right \rangle $ は、として定義されます。</span><span class="sxs-lookup"><span data-stu-id="21b4c-197">The inner product between $u$ and $v$, denoted $\left\langle u, v\right\rangle$ is defined as</span></span>
+<span data-ttu-id="685dc-195">2つのベクトルを乗算する最も一般的な方法は、 [*内部製品*](https://en.wikipedia.org/wiki/Inner_product_space)(ドット積とも呼ばれます) を使用することです。</span><span class="sxs-lookup"><span data-stu-id="685dc-195">The most common way to multiply two vectors together is through the [*inner product*](https://en.wikipedia.org/wiki/Inner_product_space), also known as a dot product.</span></span>  <span data-ttu-id="685dc-196">内側の製品は、あるベクターの射影を別のベクターに提供し、1つのベクターを他のより単純なベクターの合計として表現する方法を説明するうえで非常に重要です。</span><span class="sxs-lookup"><span data-stu-id="685dc-196">The inner product gives the projection of one vector onto another and is invaluable in describing how to express one vector as a sum of other simpler vectors.</span></span>  <span data-ttu-id="685dc-197">U と v の間の内部積 $ $ $ $ ( $ \left \langle u, v) \right \rangle $ は、として定義されます。</span><span class="sxs-lookup"><span data-stu-id="685dc-197">The inner product between $u$ and $v$, denoted $\left\langle u, v\right\rangle$ is defined as</span></span>
 
 $$
-<span data-ttu-id="21b4c-198">\langleu、v \rangle = u ^ \dagger v = u \_ 1 ^ { \* } v_1 + \cdots + u \_ n ^ { \* } v \_ n</span><span class="sxs-lookup"><span data-stu-id="21b4c-198">\langle u, v\rangle = u^\dagger v=u\_1^{\*} v_1 + \cdots + u\_n^{\*} v\_n.</span></span>
+<span data-ttu-id="685dc-198">\langleu、v \rangle = u ^ \dagger v = u \_ 1 ^ { \* } v_1 + \cdots + u \_ n ^ { \* } v \_ n</span><span class="sxs-lookup"><span data-stu-id="685dc-198">\langle u, v\rangle = u^\dagger v=u\_1^{\*} v_1 + \cdots + u\_n^{\*} v\_n.</span></span>
 $$
 
-<span data-ttu-id="21b4c-199">この表記法では、ベクター v の標準を $ $ v として記述することもでき $ \sqrt { \langle \rangle } $ ます。</span><span class="sxs-lookup"><span data-stu-id="21b4c-199">This notation also allows the norm of a vector $v$ to be written as $\sqrt{\langle v, v\rangle}$.</span></span>
+<span data-ttu-id="685dc-199">この表記法では、ベクター v の標準を $ $ v として記述することもでき $ \sqrt { \langle \rangle } $ ます。</span><span class="sxs-lookup"><span data-stu-id="685dc-199">This notation also allows the norm of a vector $v$ to be written as $\sqrt{\langle v, v\rangle}$.</span></span>
 
-<span data-ttu-id="21b4c-200">ベクターと数値 c を乗算し $ $ て、エントリに c を乗算した新しいベクターを作成することができ $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="21b4c-200">We can multiply a vector with a number $c$ to form a new vector whose entries are multiplied by $c$.</span></span> <span data-ttu-id="21b4c-201">また、2つのベクター $ u $ と v を追加して、 $ $ エントリが u と v のエントリの合計である新しいベクターを作成することもでき $ $ $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="21b4c-201">We can also add two vectors $u$ and $v$ to form a new vector whose entries are the sum of the entries of $u$ and $v$.</span></span> <span data-ttu-id="21b4c-202">これらの操作を次に示します。</span><span class="sxs-lookup"><span data-stu-id="21b4c-202">These operations are depicted below:</span></span>
+<span data-ttu-id="685dc-200">ベクターと数値 c を乗算し $ $ て、エントリに c を乗算した新しいベクターを作成することができ $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="685dc-200">We can multiply a vector with a number $c$ to form a new vector whose entries are multiplied by $c$.</span></span> <span data-ttu-id="685dc-201">また、2つのベクター $ u $ と v を追加して、 $ $ エントリが u と v のエントリの合計である新しいベクターを作成することもでき $ $ $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="685dc-201">We can also add two vectors $u$ and $v$ to form a new vector whose entries are the sum of the entries of $u$ and $v$.</span></span> <span data-ttu-id="685dc-202">これらの操作を次に示します。</span><span class="sxs-lookup"><span data-stu-id="685dc-202">These operations are depicted below:</span></span>
 
-<span data-ttu-id="21b4c-203">$$\mathrm{If } ~ u=\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-203">$$\mathrm{If}~u =\begin{bmatrix}</span></span>
-<span data-ttu-id="21b4c-204">u_1\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-204">u_1\\\\</span></span>
-<span data-ttu-id="21b4c-205">u_2\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-205">u_2\\\\</span></span>
-<span data-ttu-id="21b4c-206">\ vドット\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-206">\vdots\\\\</span></span>
-<span data-ttu-id="21b4c-207">u_n \end{bmatrix} ~ \mathrm { と}~</span><span class="sxs-lookup"><span data-stu-id="21b4c-207">u_n \end{bmatrix}~\mathrm{and}~</span></span>
-<span data-ttu-id="21b4c-208">画像 =\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-208">v =\begin{bmatrix}</span></span>
-    <span data-ttu-id="21b4c-209">v_1\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-209">v_1\\\\</span></span>
-    <span data-ttu-id="21b4c-210">v_2\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-210">v_2\\\\</span></span>
-    <span data-ttu-id="21b4c-211">\ vドット\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-211">\vdots\\\\</span></span>
-    <span data-ttu-id="21b4c-212">v_n \end{bmatrix} 、 ~ \mathrm {}~</span><span class="sxs-lookup"><span data-stu-id="21b4c-212">v_n \end{bmatrix},~\mathrm{then}~</span></span>
-<span data-ttu-id="21b4c-213">au + bv =\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-213">au+bv =\begin{bmatrix}</span></span>
-<span data-ttu-id="21b4c-214">au_1 + bv_1\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-214">au_1+bv_1\\\\</span></span>
-<span data-ttu-id="21b4c-215">au_2 + bv_2\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-215">au_2+bv_2\\\\</span></span>
-<span data-ttu-id="21b4c-216">\ vドット\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-216">\vdots\\\\</span></span>
-<span data-ttu-id="21b4c-217">au_n + bv_n \end{bmatrix} 。</span><span class="sxs-lookup"><span data-stu-id="21b4c-217">au_n+bv_n \end{bmatrix}.</span></span>
+<span data-ttu-id="685dc-203">$$\mathrm{If } ~ u=\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-203">$$\mathrm{If}~u =\begin{bmatrix}</span></span>
+<span data-ttu-id="685dc-204">u_1\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-204">u_1\\\\</span></span>
+<span data-ttu-id="685dc-205">u_2\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-205">u_2\\\\</span></span>
+<span data-ttu-id="685dc-206">\ vドット\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-206">\vdots\\\\</span></span>
+<span data-ttu-id="685dc-207">u_n \end{bmatrix} ~ \mathrm { と}~</span><span class="sxs-lookup"><span data-stu-id="685dc-207">u_n \end{bmatrix}~\mathrm{and}~</span></span>
+<span data-ttu-id="685dc-208">画像 =\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-208">v =\begin{bmatrix}</span></span>
+    <span data-ttu-id="685dc-209">v_1\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-209">v_1\\\\</span></span>
+    <span data-ttu-id="685dc-210">v_2\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-210">v_2\\\\</span></span>
+    <span data-ttu-id="685dc-211">\ vドット\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-211">\vdots\\\\</span></span>
+    <span data-ttu-id="685dc-212">v_n \end{bmatrix} 、 ~ \mathrm {}~</span><span class="sxs-lookup"><span data-stu-id="685dc-212">v_n \end{bmatrix},~\mathrm{then}~</span></span>
+<span data-ttu-id="685dc-213">au + bv =\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-213">au+bv =\begin{bmatrix}</span></span>
+<span data-ttu-id="685dc-214">au_1 + bv_1\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-214">au_1+bv_1\\\\</span></span>
+<span data-ttu-id="685dc-215">au_2 + bv_2\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-215">au_2+bv_2\\\\</span></span>
+<span data-ttu-id="685dc-216">\ vドット\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-216">\vdots\\\\</span></span>
+<span data-ttu-id="685dc-217">au_n + bv_n \end{bmatrix} 。</span><span class="sxs-lookup"><span data-stu-id="685dc-217">au_n+bv_n \end{bmatrix}.</span></span>
 $$
 
-<span data-ttu-id="21b4c-218">サイズ m n の [*マトリックス*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) は、 $ \times $ $ $ $ $ $ $ 次に示すように、m 行と n 列に配置された、全数の複素数のコレクションです。</span><span class="sxs-lookup"><span data-stu-id="21b4c-218">A [*matrix*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) of size $m \times n$ is a collection of $mn$ complex numbers arranged in $m$ rows and $n$ columns as shown below:</span></span>
+<span data-ttu-id="685dc-218">サイズ m n の [*マトリックス*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) は、 $ \times $ $ $ $ $ $ $ 次に示すように、m 行と n 列に配置された、全数の複素数のコレクションです。</span><span class="sxs-lookup"><span data-stu-id="685dc-218">A [*matrix*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) of size $m \times n$ is a collection of $mn$ complex numbers arranged in $m$ rows and $n$ columns as shown below:</span></span>
 
-<span data-ttu-id="21b4c-219">$$M =</span><span class="sxs-lookup"><span data-stu-id="21b4c-219">$$M =</span></span> 
+<span data-ttu-id="685dc-219">$$M =</span><span class="sxs-lookup"><span data-stu-id="685dc-219">$$M =</span></span> 
 \begin{bmatrix}
-<span data-ttu-id="21b4c-220">M_ { 11 } ~~ M_ { 12 } ~~ \cdots ~~ M_ { 1n}\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-220">M_{11} ~~ M_{12} ~~ \cdots ~~ M_{1n}\\\\</span></span>
-<span data-ttu-id="21b4c-221">M_ { 21 } ~~ M_ { 22 } ~~ \cdots ~~ M_ { 2n}\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-221">M_{21} ~~ M_{22} ~~ \cdots ~~ M_{2n}\\\\</span></span>
+<span data-ttu-id="685dc-220">M_ { 11 } ~~ M_ { 12 } ~~ \cdots ~~ M_ { 1n}\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-220">M_{11} ~~ M_{12} ~~ \cdots ~~ M_{1n}\\\\</span></span>
+<span data-ttu-id="685dc-221">M_ { 21 } ~~ M_ { 22 } ~~ \cdots ~~ M_ { 2n}\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-221">M_{21} ~~ M_{22} ~~ \cdots ~~ M_{2n}\\\\</span></span>
 \ddots\\\\
-<span data-ttu-id="21b4c-222">M_ { m1 } ~~ M_ { m2 } ~~ \cdots ~~ M_ { があります}\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-222">M_{m1} ~~ M_{m2} ~~ \cdots ~~ M_{mn}\\\\</span></span>
-<span data-ttu-id="21b4c-223">\end{bmatrix}.$$</span><span class="sxs-lookup"><span data-stu-id="21b4c-223">\end{bmatrix}.$$</span></span>
+<span data-ttu-id="685dc-222">M_ { m1 } ~~ M_ { m2 } ~~ \cdots ~~ M_ { があります}\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-222">M_{m1} ~~ M_{m2} ~~ \cdots ~~ M_{mn}\\\\</span></span>
+<span data-ttu-id="685dc-223">\end{bmatrix}.$$</span><span class="sxs-lookup"><span data-stu-id="685dc-223">\end{bmatrix}.$$</span></span>
 
-<span data-ttu-id="21b4c-224">ディメンション n のベクトルは、 $ $ サイズ n 1 のマトリックスであることに注意して $ \times $ ください。</span><span class="sxs-lookup"><span data-stu-id="21b4c-224">Note that a vector of dimension $n$ is simply a matrix of size $n \times 1$.</span></span> <span data-ttu-id="21b4c-225">ベクターの場合と同様に、マトリックスと数値 c を乗算して、すべてのエントリに c を乗算した $ $ 新しい行列を取得できます $ $ 。また、同じサイズの2つのマトリックスを追加して、2つの行列の各エントリの合計であるエントリを持つ新しいマトリックスを生成することもできます。</span><span class="sxs-lookup"><span data-stu-id="21b4c-225">As with vectors, we can multiply a matrix with a number $c$ to obtain a new matrix where every entry is multiplied with $c$, and we can add two matrices of the same size to produce a new matrix whose entries are the sum of the respective entries of the two matrices.</span></span> 
+<span data-ttu-id="685dc-224">ディメンション n のベクトルは、 $ $ サイズ n 1 のマトリックスであることに注意して $ \times $ ください。</span><span class="sxs-lookup"><span data-stu-id="685dc-224">Note that a vector of dimension $n$ is simply a matrix of size $n \times 1$.</span></span> <span data-ttu-id="685dc-225">ベクターの場合と同様に、マトリックスと数値 c を乗算して、すべてのエントリに c を乗算した $ $ 新しい行列を取得できます $ $ 。また、同じサイズの2つのマトリックスを追加して、2つの行列の各エントリの合計であるエントリを持つ新しいマトリックスを生成することもできます。</span><span class="sxs-lookup"><span data-stu-id="685dc-225">As with vectors, we can multiply a matrix with a number $c$ to obtain a new matrix where every entry is multiplied with $c$, and we can add two matrices of the same size to produce a new matrix whose entries are the sum of the respective entries of the two matrices.</span></span> 
 
-## <a name="matrix-multiplication-and-tensor-products"></a><span data-ttu-id="21b4c-226">マトリックス乗算とその他の製品</span><span class="sxs-lookup"><span data-stu-id="21b4c-226">Matrix Multiplication and Tensor Products</span></span>
+## <a name="matrix-multiplication-and-tensor-products"></a><span data-ttu-id="685dc-226">マトリックス乗算とその他の製品</span><span class="sxs-lookup"><span data-stu-id="685dc-226">Matrix Multiplication and Tensor Products</span></span>
 
-<span data-ttu-id="21b4c-227">また、次元 m n の2つ $ の行列 m $ $ \times $ と $ $ 次元 n p の n を乗算し $ \times $ て、 $ 次のように dimension m p の新しいマトリックス p を取得する $ $ \times $ こともできます。</span><span class="sxs-lookup"><span data-stu-id="21b4c-227">We can also multiply two matrices $M$ of dimension $m\times n$ and $N$ of dimension $n \times p$ to get a new matrix $P$ of dimension $m \times p$ as follows:</span></span>
+<span data-ttu-id="685dc-227">また、次元 m n の2つ $ の行列 m $ $ \times $ と $ $ 次元 n p の n を乗算し $ \times $ て、 $ 次のように dimension m p の新しいマトリックス p を取得する $ $ \times $ こともできます。</span><span class="sxs-lookup"><span data-stu-id="685dc-227">We can also multiply two matrices $M$ of dimension $m\times n$ and $N$ of dimension $n \times p$ to get a new matrix $P$ of dimension $m \times p$ as follows:</span></span>
 
 \begin{align}
 &\begin{bmatrix}
-    <span data-ttu-id="21b4c-228">M_ { 11 } ~~ M_ { 12 } ~~ \cdots ~~ M_ { 1n}\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-228">M_{11} ~~ M_{12} ~~ \cdots ~~ M_{1n}\\\\</span></span>
-    <span data-ttu-id="21b4c-229">M_ { 21 } ~~ M_ { 22 } ~~ \cdots ~~ M_ { 2n}\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-229">M_{21} ~~ M_{22} ~~ \cdots ~~ M_{2n}\\\\</span></span>
+    <span data-ttu-id="685dc-228">M_ { 11 } ~~ M_ { 12 } ~~ \cdots ~~ M_ { 1n}\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-228">M_{11} ~~ M_{12} ~~ \cdots ~~ M_{1n}\\\\</span></span>
+    <span data-ttu-id="685dc-229">M_ { 21 } ~~ M_ { 22 } ~~ \cdots ~~ M_ { 2n}\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-229">M_{21} ~~ M_{22} ~~ \cdots ~~ M_{2n}\\\\</span></span>
     \ddots\\\\
-    <span data-ttu-id="21b4c-230">M_ { m1 } ~~ M_ { m2 } ~~ \cdots ~~ M_ { があります}</span><span class="sxs-lookup"><span data-stu-id="21b4c-230">M_{m1} ~~ M_{m2} ~~ \cdots ~~ M_{mn}</span></span>
+    <span data-ttu-id="685dc-230">M_ { m1 } ~~ M_ { m2 } ~~ \cdots ~~ M_ { があります}</span><span class="sxs-lookup"><span data-stu-id="685dc-230">M_{m1} ~~ M_{m2} ~~ \cdots ~~ M_{mn}</span></span>
 \end{bmatrix}
 \begin{bmatrix}
-<span data-ttu-id="21b4c-231">N_ { 11 } ~~ N_ { 12 } ~~ \cdots ~~ N_ { 1p}\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-231">N_{11} ~~ N_{12} ~~ \cdots ~~ N_{1p}\\\\</span></span>
-<span data-ttu-id="21b4c-232">N_ { 21 } ~~ N_ { 22 } ~~ \cdots ~~ N_ { 2p}\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-232">N_{21} ~~ N_{22} ~~ \cdots ~~ N_{2p}\\\\</span></span>
+<span data-ttu-id="685dc-231">N_ { 11 } ~~ N_ { 12 } ~~ \cdots ~~ N_ { 1p}\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-231">N_{11} ~~ N_{12} ~~ \cdots ~~ N_{1p}\\\\</span></span>
+<span data-ttu-id="685dc-232">N_ { 21 } ~~ N_ { 22 } ~~ \cdots ~~ N_ { 2p}\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-232">N_{21} ~~ N_{22} ~~ \cdots ~~ N_{2p}\\\\</span></span>
 \ddots\\\\
-<span data-ttu-id="21b4c-233">N_ { n1 } ~~ N_ { n2 } ~~ \cdots ~~ N_ { np}</span><span class="sxs-lookup"><span data-stu-id="21b4c-233">N_{n1} ~~ N_{n2} ~~ \cdots ~~ N_{np}</span></span>
+<span data-ttu-id="685dc-233">N_ { n1 } ~~ N_ { n2 } ~~ \cdots ~~ N_ { np}</span><span class="sxs-lookup"><span data-stu-id="685dc-233">N_{n1} ~~ N_{n2} ~~ \cdots ~~ N_{np}</span></span>
 \end{bmatrix}=\begin{bmatrix}
-<span data-ttu-id="21b4c-234">P_ { 11 } ~~ P_ { 12 } ~~ \cdots ~~ P_ { 1p}\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-234">P_{11} ~~ P_{12} ~~ \cdots ~~ P_{1p}\\\\</span></span>
-<span data-ttu-id="21b4c-235">P_ { 21 } ~~ P_ { 22 } ~~ \cdots ~~ P_ { 2p}\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-235">P_{21} ~~ P_{22} ~~ \cdots ~~ P_{2p}\\\\</span></span>
+<span data-ttu-id="685dc-234">P_ { 11 } ~~ P_ { 12 } ~~ \cdots ~~ P_ { 1p}\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-234">P_{11} ~~ P_{12} ~~ \cdots ~~ P_{1p}\\\\</span></span>
+<span data-ttu-id="685dc-235">P_ { 21 } ~~ P_ { 22 } ~~ \cdots ~~ P_ { 2p}\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-235">P_{21} ~~ P_{22} ~~ \cdots ~~ P_{2p}\\\\</span></span>
 \ddots\\\\
-<span data-ttu-id="21b4c-236">P_ { m1 } ~~ P_ { m2 } ~~ \cdots ~~ P_ { mp}</span><span class="sxs-lookup"><span data-stu-id="21b4c-236">P_{m1} ~~ P_{m2} ~~ \cdots ~~ P_{mp}</span></span>
+<span data-ttu-id="685dc-236">P_ { m1 } ~~ P_ { m2 } ~~ \cdots ~~ P_ { mp}</span><span class="sxs-lookup"><span data-stu-id="685dc-236">P_{m1} ~~ P_{m2} ~~ \cdots ~~ P_{mp}</span></span>
 \end{bmatrix}
 \end{align}
 
-<span data-ttu-id="21b4c-237">P のエントリは $ $ $ P_ { ik } = \sum _j M_ { ij } N_ { jk } $ です。</span><span class="sxs-lookup"><span data-stu-id="21b4c-237">where the entries of $P$ are $P_{ik} = \sum_j M_{ij}N_{jk}$.</span></span> <span data-ttu-id="21b4c-238">たとえば、P_ 11 のエントリは、 $ { } $ $ $ N の最初の列を含む M の最初の行の内部積です $ $ 。ベクターは単にマトリックスの特殊なケースであるため、この定義はマトリックスベクトル乗算まで拡張されることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="21b4c-238">For example, the entry $P_{11}$ is the inner product of the first row of $M$ with the first column of $N$. Note that since a vector is simply a special case of a matrix, this definition extends to matrix-vector multiplication.</span></span> 
+<span data-ttu-id="685dc-237">P のエントリは $ $ $ P_ { ik } = \sum _j M_ { ij } N_ { jk } $ です。</span><span class="sxs-lookup"><span data-stu-id="685dc-237">where the entries of $P$ are $P_{ik} = \sum_j M_{ij}N_{jk}$.</span></span> <span data-ttu-id="685dc-238">たとえば、P_ 11 のエントリは、 $ { } $ $ $ N の最初の列を含む M の最初の行の内部積です $ $ 。ベクターは単にマトリックスの特殊なケースであるため、この定義はマトリックスベクトル乗算まで拡張されることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="685dc-238">For example, the entry $P_{11}$ is the inner product of the first row of $M$ with the first column of $N$. Note that since a vector is simply a special case of a matrix, this definition extends to matrix-vector multiplication.</span></span> 
 
-<span data-ttu-id="21b4c-239">考慮するすべてのマトリックスは、行と列の数が等しいか、またはベクター (1 つの列にのみ対応する) である、正方形のマトリックス $ $ です。</span><span class="sxs-lookup"><span data-stu-id="21b4c-239">All the matrices we consider will either be square matrices, where the number of rows and columns are equal, or vectors, which corresponds to only $1$ column.</span></span> <span data-ttu-id="21b4c-240">1つの特殊な正方形[*identity matrix*](https://en.wikipedia.org/wiki/Identity_matrix)の行列は、次のように、 $ \boldone $ すべての対角線の要素が1に等しく、 $ $ 残りの要素が0に等しい $ $ id 行列です。</span><span class="sxs-lookup"><span data-stu-id="21b4c-240">One special square matrix is the [*identity matrix*](https://en.wikipedia.org/wiki/Identity_matrix), denoted $\boldone$, which has all its diagonal elements equal to $1$ and the remaining elements equal to $0$:</span></span>
+<span data-ttu-id="685dc-239">考慮するすべてのマトリックスは、行と列の数が等しいか、またはベクター (1 つの列にのみ対応する) である、正方形のマトリックス $ $ です。</span><span class="sxs-lookup"><span data-stu-id="685dc-239">All the matrices we consider will either be square matrices, where the number of rows and columns are equal, or vectors, which corresponds to only $1$ column.</span></span> <span data-ttu-id="685dc-240">1つの特殊な正方形[](https://en.wikipedia.org/wiki/Identity_matrix)の行列は、次のように、 $ \boldone $ すべての対角線の要素が1に等しく、 $ $ 残りの要素が0に等しい $ $ id 行列です。</span><span class="sxs-lookup"><span data-stu-id="685dc-240">One special square matrix is the [*identity matrix*](https://en.wikipedia.org/wiki/Identity_matrix), denoted $\boldone$, which has all its diagonal elements equal to $1$ and the remaining elements equal to $0$:</span></span>
 
 $$\boldone=\begin{bmatrix}
-<span data-ttu-id="21b4c-241">1 ~~ 0 ~~ \cdots ~~ 0\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-241">1 ~~ 0 ~~ \cdots ~~ 0\\\\</span></span>
-<span data-ttu-id="21b4c-242">0 ~~ 1 ~~ \cdots ~~ 0\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-242">0 ~~ 1 ~~ \cdots ~~ 0\\\\</span></span>
-<span data-ttu-id="21b4c-243">~~ \ddots\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-243">~~ \ddots\\\\</span></span>
-<span data-ttu-id="21b4c-244">0 ~~ 0 ~~ \cdots ~~ 1 \end{bmatrix} 。$$</span><span class="sxs-lookup"><span data-stu-id="21b4c-244">0 ~~ 0 ~~ \cdots ~~ 1 \end{bmatrix}.$$</span></span>
+<span data-ttu-id="685dc-241">1 ~~ 0 ~~ \cdots ~~ 0\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-241">1 ~~ 0 ~~ \cdots ~~ 0\\\\</span></span>
+<span data-ttu-id="685dc-242">0 ~~ 1 ~~ \cdots ~~ 0\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-242">0 ~~ 1 ~~ \cdots ~~ 0\\\\</span></span>
+<span data-ttu-id="685dc-243">~~ \ddots\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-243">~~ \ddots\\\\</span></span>
+<span data-ttu-id="685dc-244">0 ~~ 0 ~~ \cdots ~~ 1 \end{bmatrix} 。$$</span><span class="sxs-lookup"><span data-stu-id="685dc-244">0 ~~ 0 ~~ \cdots ~~ 1 \end{bmatrix}.$$</span></span>
 
-<span data-ttu-id="21b4c-245">B 行列 a の $ $ 場合は、"a" という行列 $ があるとし $ [*inverse*](https://en.wikipedia.org/wiki/Invertible_matrix) $ = = \boldone $ ます。</span><span class="sxs-lookup"><span data-stu-id="21b4c-245">For a square matrix $A$, we say a matrix $B$ is its [*inverse*](https://en.wikipedia.org/wiki/Invertible_matrix) if $AB = BA = \boldone$.</span></span> <span data-ttu-id="21b4c-246">マトリックスの逆のは存在しない必要がありますが、存在する場合は一意であり、これは $ ^-1 を意味し { } $ ます。</span><span class="sxs-lookup"><span data-stu-id="21b4c-246">The inverse of a matrix need not exist, but when it exists it is unique and we denote it $A^{-1}$.</span></span> 
+<span data-ttu-id="685dc-245">B 行列 a の $ $ 場合は、"a" という行列 $ があるとし $ [](https://en.wikipedia.org/wiki/Invertible_matrix) $ = = \boldone $ ます。</span><span class="sxs-lookup"><span data-stu-id="685dc-245">For a square matrix $A$, we say a matrix $B$ is its [*inverse*](https://en.wikipedia.org/wiki/Invertible_matrix) if $AB = BA = \boldone$.</span></span> <span data-ttu-id="685dc-246">マトリックスの逆のは存在しない必要がありますが、存在する場合は一意であり、これは $ ^-1 を意味し { } $ ます。</span><span class="sxs-lookup"><span data-stu-id="685dc-246">The inverse of a matrix need not exist, but when it exists it is unique and we denote it $A^{-1}$.</span></span> 
 
-<span data-ttu-id="21b4c-247">任意のマトリックス $ m の場合 $ 、m の adjoint または共役転置は $ $ マトリックス $ N であり、 $ $ N_ { ij } = M_ { ji に } ^ \* $ なります。</span><span class="sxs-lookup"><span data-stu-id="21b4c-247">For any matrix $M$, the adjoint or conjugate transpose of $M$ is a matrix $N$ such that $N_{ij} = M_{ji}^\*$.</span></span> <span data-ttu-id="21b4c-248">M の adjoint $ $ は、通常 m ^ と示されてい $ \dagger $ ます。</span><span class="sxs-lookup"><span data-stu-id="21b4c-248">The adjoint of $M$ is usually denoted $M^\dagger$.</span></span> <span data-ttu-id="21b4c-249">マトリックス $ u $ は[*unitary*](https://en.wikipedia.org/wiki/Unitary_matrix) $ 、UU ^ u \dagger = ^ \dagger u = \boldone $ または同等の $ u ^ { -1 } = u ^ \dagger $ と同等のものです。</span><span class="sxs-lookup"><span data-stu-id="21b4c-249">We say a matrix $U$ is [*unitary*](https://en.wikipedia.org/wiki/Unitary_matrix) if $UU^\dagger = U^\dagger U = \boldone$ or equivalently, $U^{-1} = U^\dagger$.</span></span>  <span data-ttu-id="21b4c-250">たとえば、最も重要なのは、ベクトルの基準を維持することです。</span><span class="sxs-lookup"><span data-stu-id="21b4c-250">Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.</span></span>  <span data-ttu-id="21b4c-251">これは、</span><span class="sxs-lookup"><span data-stu-id="21b4c-251">This happens because</span></span> 
+<span data-ttu-id="685dc-247">任意のマトリックス $ m の場合 $ 、m の adjoint または共役転置は $ $ マトリックス $ N であり、 $ $ N_ { ij } = M_ { ji に } ^ \* $ なります。</span><span class="sxs-lookup"><span data-stu-id="685dc-247">For any matrix $M$, the adjoint or conjugate transpose of $M$ is a matrix $N$ such that $N_{ij} = M_{ji}^\*$.</span></span> <span data-ttu-id="685dc-248">M の adjoint $ $ は、通常 m ^ と示されてい $ \dagger $ ます。</span><span class="sxs-lookup"><span data-stu-id="685dc-248">The adjoint of $M$ is usually denoted $M^\dagger$.</span></span> <span data-ttu-id="685dc-249">マトリックス $ u $ は[](https://en.wikipedia.org/wiki/Unitary_matrix) $ 、UU ^ u \dagger = ^ \dagger u = \boldone $ または同等の $ u ^ { -1 } = u ^ \dagger $ と同等のものです。</span><span class="sxs-lookup"><span data-stu-id="685dc-249">We say a matrix $U$ is [*unitary*](https://en.wikipedia.org/wiki/Unitary_matrix) if $UU^\dagger = U^\dagger U = \boldone$ or equivalently, $U^{-1} = U^\dagger$.</span></span>  <span data-ttu-id="685dc-250">たとえば、最も重要なのは、ベクトルの基準を維持することです。</span><span class="sxs-lookup"><span data-stu-id="685dc-250">Perhaps the most important property of unitary matrices is that they preserve the norm of a vector.</span></span>  <span data-ttu-id="685dc-251">これは、</span><span class="sxs-lookup"><span data-stu-id="685dc-251">This happens because</span></span> 
 
-<span data-ttu-id="21b4c-252">$$\langlev、v2.0、v、 \rangle = \dagger = ^ \dagger u ^ { -1 } U v = ^ \dagger u ^ \dagger u v u v = \langle 、u v \rangle$$</span><span class="sxs-lookup"><span data-stu-id="21b4c-252">$$\langle v,v \rangle=v^\dagger v = v^\dagger U^{-1} U v = v^\dagger U^\dagger U v = \langle U v, U v\rangle.$$</span></span>  
+<span data-ttu-id="685dc-252">$$\langlev、v2.0、v、 \rangle = \dagger = ^ \dagger u ^ { -1 } U v = ^ \dagger u ^ \dagger u v u v = \langle 、u v \rangle$$</span><span class="sxs-lookup"><span data-stu-id="685dc-252">$$\langle v,v \rangle=v^\dagger v = v^\dagger U^{-1} U v = v^\dagger U^\dagger U v = \langle U v, U v\rangle.$$</span></span>  
 
-<span data-ttu-id="21b4c-253">マトリックス $ m $ は、m m ^ の場合は[*Hermitian*](https://en.wikipedia.org/wiki/Hermitian_matrix)と言い $ = \dagger $ ます。</span><span class="sxs-lookup"><span data-stu-id="21b4c-253">A matrix $M$ is said to be [*Hermitian*](https://en.wikipedia.org/wiki/Hermitian_matrix) if $M=M^\dagger$.</span></span>
+<span data-ttu-id="685dc-253">マトリックス $ m $ は、m m ^ の場合は [*Hermitian*](https://en.wikipedia.org/wiki/Hermitian_matrix)と言い $ = \dagger $ ます。</span><span class="sxs-lookup"><span data-stu-id="685dc-253">A matrix $M$ is said to be [*Hermitian*](https://en.wikipedia.org/wiki/Hermitian_matrix) if $M=M^\dagger$.</span></span>
 
-<span data-ttu-id="21b4c-254">最後に、サイズが m n の2つのマトリックス m の Kronecker [*製品 (また*](https://en.wikipedia.org/wiki/Tensor_product) は nq $ $ $ \times $ $ $ $ p q) は \times 、 $ $ サイズ mp の大きなマトリックス p m n で、次のように = \otimes $ $ \times $ M と n から取得され $ $ $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="21b4c-254">Finally, the [*tensor product*](https://en.wikipedia.org/wiki/Tensor_product) (or Kronecker product) of two matrices $M$ of size $m\times n$ and $N$ of size $p \times q$ is a larger matrix $P=M\otimes N$ of size $mp \times nq$, and is obtained from $M$ and $N$ as follows:</span></span>
+<span data-ttu-id="685dc-254">最後に、サイズが m n の2つのマトリックス m の Kronecker [*製品 (また*](https://en.wikipedia.org/wiki/Tensor_product) は nq $ $ $ \times $ $ $ $ p q) は \times 、 $ $ サイズ mp の大きなマトリックス p m n で、次のように = \otimes $ $ \times $ M と n から取得され $ $ $ $ ます。</span><span class="sxs-lookup"><span data-stu-id="685dc-254">Finally, the [*tensor product*](https://en.wikipedia.org/wiki/Tensor_product) (or Kronecker product) of two matrices $M$ of size $m\times n$ and $N$ of size $p \times q$ is a larger matrix $P=M\otimes N$ of size $mp \times nq$, and is obtained from $M$ and $N$ as follows:</span></span>
 
 \begin{align}
-    <span data-ttu-id="21b4c-255">M \otimes N &=</span><span class="sxs-lookup"><span data-stu-id="21b4c-255">M \otimes N &=</span></span>
+    <span data-ttu-id="685dc-255">M \otimes N &=</span><span class="sxs-lookup"><span data-stu-id="685dc-255">M \otimes N &=</span></span>
     \begin{bmatrix}
-        <span data-ttu-id="21b4c-256">M_ { 11 } ~~ \cdots ~~ M_ { 1n }\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-256">M_{11} ~~ \cdots ~~ M_{1n} \\\\</span></span>
+        <span data-ttu-id="685dc-256">M_ { 11 } ~~ \cdots ~~ M_ { 1n }\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-256">M_{11} ~~ \cdots ~~ M_{1n} \\\\</span></span>
         \ddots\\\\
-        <span data-ttu-id="21b4c-257">M_ { m1 } ~~ \cdots ~~ M_ { 中  }</span><span class="sxs-lookup"><span data-stu-id="21b4c-257">M_{m1}  ~~ \cdots ~~ M_{mn}</span></span>
+        <span data-ttu-id="685dc-257">M_ { m1 } ~~ \cdots ~~ M_ { 中  }</span><span class="sxs-lookup"><span data-stu-id="685dc-257">M_{m1}  ~~ \cdots ~~ M_{mn}</span></span>
     \end{bmatrix}
     \otimes
     \begin{bmatrix}
-        <span data-ttu-id="21b4c-258">N_ { 11 } ~~ \cdots ~~ N_ { 1q  }\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-258">N_{11}  ~~ \cdots ~~ N_{1q}\\\\</span></span>
+        <span data-ttu-id="685dc-258">N_ { 11 } ~~ \cdots ~~ N_ { 1q  }\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-258">N_{11}  ~~ \cdots ~~ N_{1q}\\\\</span></span>
         \ddots\\\\
-        <span data-ttu-id="21b4c-259">N_ { p1 } ~~ \cdots ~~ N_ { pq}</span><span class="sxs-lookup"><span data-stu-id="21b4c-259">N_{p1} ~~ \cdots ~~ N_{pq}</span></span>
+        <span data-ttu-id="685dc-259">N_ { p1 } ~~ \cdots ~~ N_ { pq}</span><span class="sxs-lookup"><span data-stu-id="685dc-259">N_{p1} ~~ \cdots ~~ N_{pq}</span></span>
     \end{bmatrix}\\\\
     &=
     \begin{bmatrix}
-        <span data-ttu-id="21b4c-260">M_ { 11 } \begin{bmatrix} N_ { 11 } ~~ \cdots ~~ N_ { 1q } \\\\ \ddots \\\\ N_ { p1 } ~~ \cdots ~~ N_ { pq } \end{bmatrix} ~~ \cdots  ~~</span><span class="sxs-lookup"><span data-stu-id="21b4c-260">M_{11} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq} \end{bmatrix}~~ \cdots ~~</span></span> 
-        <span data-ttu-id="21b4c-261">M_ { 1n } \begin{bmatrix} N_ { 11 } ~~ \cdots ~~ N_ { 1n } \\\\ \ddots \\\\ N_ { p1 } ~~ \cdots ~~ N_ { pq }  \end{bmatrix}\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-261">M_{1n} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq} \end{bmatrix}\\\\</span></span>
+        <span data-ttu-id="685dc-260">M_ { 11 } \begin{bmatrix} N_ { 11 } ~~ \cdots ~~ N_ { 1q } \\\\ \ddots \\\\ N_ { p1 } ~~ \cdots ~~ N_ { pq } \end{bmatrix} ~~ \cdots  ~~</span><span class="sxs-lookup"><span data-stu-id="685dc-260">M_{11} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq} \end{bmatrix}~~ \cdots ~~</span></span> 
+        <span data-ttu-id="685dc-261">M_ { 1n } \begin{bmatrix} N_ { 11 } ~~ \cdots ~~ N_ { 1n } \\\\ \ddots \\\\ N_ { p1 } ~~ \cdots ~~ N_ { pq }  \end{bmatrix}\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-261">M_{1n} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq} \end{bmatrix}\\\\</span></span>
         \ddots\\\\
-        <span data-ttu-id="21b4c-262">M_ { m1 } \begin{bmatrix} N_ { 11 } ~~ \cdots ~~ N_ { 1q } \\\\ \ddots \\\\ N_ { p1 } ~~ \cdots ~~ N_ { pq } \end{bmatrix} ~~ \cdots  ~~</span><span class="sxs-lookup"><span data-stu-id="21b4c-262">M_{m1} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq} \end{bmatrix}~~ \cdots ~~</span></span> 
-        <span data-ttu-id="21b4c-263">M_ { } \begin{bmatrix} N_ { 11 } ~~ \cdots ~~ N_ { 1q } \\\\ \ddots \\\\ N_ { p1 } ~~ \cdots ~~ N_ { pq }  \end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-263">M_{mn} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq} \end{bmatrix}</span></span>
-    <span data-ttu-id="21b4c-264">\end{bmatrix}.</span><span class="sxs-lookup"><span data-stu-id="21b4c-264">\end{bmatrix}.</span></span>
+        <span data-ttu-id="685dc-262">M_ { m1 } \begin{bmatrix} N_ { 11 } ~~ \cdots ~~ N_ { 1q } \\\\ \ddots \\\\ N_ { p1 } ~~ \cdots ~~ N_ { pq } \end{bmatrix} ~~ \cdots  ~~</span><span class="sxs-lookup"><span data-stu-id="685dc-262">M_{m1} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq} \end{bmatrix}~~ \cdots ~~</span></span> 
+        <span data-ttu-id="685dc-263">M_ { } \begin{bmatrix} N_ { 11 } ~~ \cdots ~~ N_ { 1q } \\\\ \ddots \\\\ N_ { p1 } ~~ \cdots ~~ N_ { pq }  \end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-263">M_{mn} \begin{bmatrix} N_{11}  ~~ \cdots ~~ N_{1q}\\\\ \ddots\\\\ N_{p1} ~~ \cdots ~~ N_{pq} \end{bmatrix}</span></span>
+    <span data-ttu-id="685dc-264">\end{bmatrix}.</span><span class="sxs-lookup"><span data-stu-id="685dc-264">\end{bmatrix}.</span></span>
 \end{align}
 
-<span data-ttu-id="21b4c-265">次に例をいくつか示します。</span><span class="sxs-lookup"><span data-stu-id="21b4c-265">This is better demonstrated with some examples:</span></span>
+<span data-ttu-id="685dc-265">次に例をいくつか示します。</span><span class="sxs-lookup"><span data-stu-id="685dc-265">This is better demonstrated with some examples:</span></span>
 
 $$
     \begin{bmatrix}
-        <span data-ttu-id="21b4c-266">a \\\\ b \end{bmatrix} \otimes \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}=</span><span class="sxs-lookup"><span data-stu-id="21b4c-266">a \\\\ b  \end{bmatrix} \otimes \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix} =</span></span>
+        <span data-ttu-id="685dc-266">a \\\\ b \end{bmatrix} \otimes \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}=</span><span class="sxs-lookup"><span data-stu-id="685dc-266">a \\\\ b  \end{bmatrix} \otimes \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix} =</span></span>
     \begin{bmatrix}
-        <span data-ttu-id="21b4c-267">a \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-267">a \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}</span></span>
-        <span data-ttu-id="21b4c-268">\\\\[1.5 em] b \begin{bmatrix} c \\\\ d \\\\ e\end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-268">\\\\[1.5em] b \begin{bmatrix} c \\\\ d \\\\ e\end{bmatrix}</span></span>
+        <span data-ttu-id="685dc-267">a \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-267">a \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}</span></span>
+        <span data-ttu-id="685dc-268">\\\\[1.5 em] b \begin{bmatrix} c \\\\ d \\\\ e\end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-268">\\\\[1.5em] b \begin{bmatrix} c \\\\ d \\\\ e\end{bmatrix}</span></span>
     \end{bmatrix}
-    <span data-ttu-id="21b4c-269">=\begin{bmatrix}c \\\\ a d \\\\ a e \\\\ b c \\\\ b d \\\\\end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-269">= \begin{bmatrix} a c \\\\ a d \\\\ a e \\\\ b c \\\\ b d \\\\ be\end{bmatrix}</span></span>
+    <span data-ttu-id="685dc-269">=\begin{bmatrix}c \\\\ a d \\\\ a e \\\\ b c \\\\ b d \\\\\end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-269">= \begin{bmatrix} a c \\\\ a d \\\\ a e \\\\ b c \\\\ b d \\\\ be\end{bmatrix}</span></span>
 $$
 
-<span data-ttu-id="21b4c-270">and</span><span class="sxs-lookup"><span data-stu-id="21b4c-270">and</span></span>
+<span data-ttu-id="685dc-270">and</span><span class="sxs-lookup"><span data-stu-id="685dc-270">and</span></span>
 
 $$
     \begin{bmatrix}
-        <span data-ttu-id="21b4c-271">a \ b \\\\ c \ d \end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-271">a\ b \\\\ c\ d \end{bmatrix}</span></span>
+        <span data-ttu-id="685dc-271">a \ b \\\\ c \ d \end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-271">a\ b \\\\ c\ d \end{bmatrix}</span></span>
     \otimes 
     \begin{bmatrix}
-        <span data-ttu-id="21b4c-272">e \ f \\\\ g \ h \end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-272">e\ f\\\\g\ h \end{bmatrix}</span></span>
+        <span data-ttu-id="685dc-272">e \ f \\\\ g \ h \end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-272">e\ f\\\\g\ h \end{bmatrix}</span></span>
      =
     \begin{bmatrix}
-    <span data-ttu-id="21b4c-273">ある\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-273">a\begin{bmatrix}</span></span>
-    <span data-ttu-id="21b4c-274">e \ f \\\\ g \ h \end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-274">e\ f\\\\ g\ h \end{bmatrix}</span></span>
-    <span data-ttu-id="21b4c-275">b\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-275">b\begin{bmatrix}</span></span>
-    <span data-ttu-id="21b4c-276">e \ f \\\\ g \ h \end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-276">e\ f\\\\ g\ h \end{bmatrix}</span></span>
-    <span data-ttu-id="21b4c-277">\\\\[1em] c\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-277">\\\\[1em] c\begin{bmatrix}</span></span>
-    <span data-ttu-id="21b4c-278">e \ f \\\\ g \ h \end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-278">e\ f\\\\ g\ h \end{bmatrix}</span></span>
-    <span data-ttu-id="21b4c-279">a\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-279">d\begin{bmatrix}</span></span>
-    <span data-ttu-id="21b4c-280">e \ f \\\\ g \ h \end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="21b4c-280">e\ f\\\\ g\ h \end{bmatrix}</span></span>
+    <span data-ttu-id="685dc-273">ある\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-273">a\begin{bmatrix}</span></span>
+    <span data-ttu-id="685dc-274">e \ f \\\\ g \ h \end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-274">e\ f\\\\ g\ h \end{bmatrix}</span></span>
+    <span data-ttu-id="685dc-275">b\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-275">b\begin{bmatrix}</span></span>
+    <span data-ttu-id="685dc-276">e \ f \\\\ g \ h \end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-276">e\ f\\\\ g\ h \end{bmatrix}</span></span>
+    <span data-ttu-id="685dc-277">\\\\[1em] c\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-277">\\\\[1em] c\begin{bmatrix}</span></span>
+    <span data-ttu-id="685dc-278">e \ f \\\\ g \ h \end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-278">e\ f\\\\ g\ h \end{bmatrix}</span></span>
+    <span data-ttu-id="685dc-279">a\begin{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-279">d\begin{bmatrix}</span></span>
+    <span data-ttu-id="685dc-280">e \ f \\\\ g \ h \end{bmatrix}</span><span class="sxs-lookup"><span data-stu-id="685dc-280">e\ f\\\\ g\ h \end{bmatrix}</span></span>
     \end{bmatrix}
     =
     \begin{bmatrix}
-    <span data-ttu-id="21b4c-281">ae \ af \ bf \\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-281">ae\ af\ be\ bf \\\\</span></span>
-    <span data-ttu-id="21b4c-282">ag \ ah \ bg \ bh \\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-282">ag\ ah\ bg\ bh \\\\</span></span>
-    <span data-ttu-id="21b4c-283">ce \ cf \ de \ df \\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-283">ce\ cf\ de\ df \\\\</span></span>
-    <span data-ttu-id="21b4c-284">cg \ ch \ dg \ dh \end{bmatrix} 。</span><span class="sxs-lookup"><span data-stu-id="21b4c-284">cg\ ch\ dg\ dh \end{bmatrix}.</span></span>
+    <span data-ttu-id="685dc-281">ae \ af \ bf \\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-281">ae\ af\ be\ bf \\\\</span></span>
+    <span data-ttu-id="685dc-282">ag \ ah \ bg \ bh \\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-282">ag\ ah\ bg\ bh \\\\</span></span>
+    <span data-ttu-id="685dc-283">ce \ cf \ de \ df \\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-283">ce\ cf\ de\ df \\\\</span></span>
+    <span data-ttu-id="685dc-284">cg \ ch \ dg \ dh \end{bmatrix} 。</span><span class="sxs-lookup"><span data-stu-id="685dc-284">cg\ ch\ dg\ dh \end{bmatrix}.</span></span>
 $$
 
-<span data-ttu-id="21b4c-285">数値表記と製品を囲む最後の便利な規則として、ベクター $ v またはマトリックス m の場合は、 $ $ $ $ { \otimes } $ $ { \otimes } $ $ n フォールドの繰り返しが繰り返されてい $ ます。</span><span class="sxs-lookup"><span data-stu-id="21b4c-285">A final useful notational convention surrounding tensor products is that, for any vector $v$ or matrix $M$, $v^{\otimes n}$ or $M^{\otimes n}$ is short hand for an $n$-fold repeated tensor product.</span></span>  <span data-ttu-id="21b4c-286">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="21b4c-286">For example:</span></span>
+<span data-ttu-id="685dc-285">数値表記と製品を囲む最後の便利な規則として、ベクター $ v またはマトリックス m の場合は、 $ $ $ $ { \otimes } $ $ { \otimes } $ $ n フォールドの繰り返しが繰り返されてい $ ます。</span><span class="sxs-lookup"><span data-stu-id="685dc-285">A final useful notational convention surrounding tensor products is that, for any vector $v$ or matrix $M$, $v^{\otimes n}$ or $M^{\otimes n}$ is short hand for an $n$-fold repeated tensor product.</span></span>  <span data-ttu-id="685dc-286">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="685dc-286">For example:</span></span>
 
 \begin{align}
-<span data-ttu-id="21b4c-287">&\begin{bmatrix}1 \\\\ 0 \end{bmatrix} ^ { \otimes 1 1 } = \begin{bmatrix} \\\\ 0 \end{bmatrix} 、 \qquad \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1 \\\\ 0 0 0 \\\\ \\\\ \end{bmatrix} 、 \qquad \begin{bmatrix} 1 \\\\ -1 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1 \\\\ -1 \\\\ -1 \\\\ 1 \end{bmatrix} 、\\\\</span><span class="sxs-lookup"><span data-stu-id="21b4c-287">&\begin{bmatrix} 1 \\\\ 0 \end{bmatrix}^{\otimes 1} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}, \qquad\begin{bmatrix} 1 \\\\ 0 \end{bmatrix}^{\otimes 2} = \begin{bmatrix} 1 \\\\ 0 \\\\0 \\\\0 \end{bmatrix}, \qquad\begin{bmatrix} 1 \\\\ -1 \end{bmatrix}^{\otimes 2} = \begin{bmatrix} 1 \\\\ -1 \\\\-1 \\\\1 \end{bmatrix}, \\\\</span></span>
-  <span data-ttu-id="21b4c-288">&\begin{bmatrix}0 1 1 1 0 1 0 1 1 0 & \\\\ & \end{bmatrix} ^ { \otimes } = \begin{bmatrix} & \\\\ & \end{bmatrix} 、 \qquad \begin{bmatrix} 0 & 1 1 0 \\\\ & 2 \end{bmatrix} ^ { \otimes } = \begin{bmatrix} 0 & & & \\\\ & & & \\\\ & & & \\\\ & & & \end{bmatrix} 0 0 1 0 0 1 0 = 1 0 0 を0にします。</span><span class="sxs-lookup"><span data-stu-id="21b4c-288">&\begin{bmatrix}  0 & 1 \\\\ 1& 0   \end{bmatrix}^{\otimes 1}= \begin{bmatrix}  0& 1 \\\\ 1& 0    \end{bmatrix},    \qquad\begin{bmatrix}   0 & 1 \\\\ 1& 0   \end{bmatrix}^{\otimes 2}= \begin{bmatrix} 0 &0&0&1 \\\\ 0 &0&1&0 \\\\ 0 &1&0&0\\\\ 1 &0&0&0\end{bmatrix}.</span></span>
+<span data-ttu-id="685dc-287">&\begin{bmatrix}1 \\\\ 0 \end{bmatrix} ^ { \otimes 1 1 } = \begin{bmatrix} \\\\ 0 \end{bmatrix} 、 \qquad \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1 \\\\ 0 0 0 \\\\ \\\\ \end{bmatrix} 、 \qquad \begin{bmatrix} 1 \\\\ -1 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1 \\\\ -1 \\\\ -1 \\\\ 1 \end{bmatrix} 、\\\\</span><span class="sxs-lookup"><span data-stu-id="685dc-287">&\begin{bmatrix} 1 \\\\ 0 \end{bmatrix}^{\otimes 1} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}, \qquad\begin{bmatrix} 1 \\\\ 0 \end{bmatrix}^{\otimes 2} = \begin{bmatrix} 1 \\\\ 0 \\\\0 \\\\0 \end{bmatrix}, \qquad\begin{bmatrix} 1 \\\\ -1 \end{bmatrix}^{\otimes 2} = \begin{bmatrix} 1 \\\\ -1 \\\\-1 \\\\1 \end{bmatrix}, \\\\</span></span>
+  <span data-ttu-id="685dc-288">&\begin{bmatrix}0 1 1 1 0 1 0 1 1 0 & \\\\ & \end{bmatrix} ^ { \otimes } = \begin{bmatrix} & \\\\ & \end{bmatrix} 、 \qquad \begin{bmatrix} 0 & 1 1 0 \\\\ & 2 \end{bmatrix} ^ { \otimes } = \begin{bmatrix} 0 & & & \\\\ & & & \\\\ & & & \\\\ & & & \end{bmatrix} 0 0 1 0 0 1 0 = 1 0 0 を0にします。</span><span class="sxs-lookup"><span data-stu-id="685dc-288">&\begin{bmatrix}  0 & 1 \\\\ 1& 0   \end{bmatrix}^{\otimes 1}= \begin{bmatrix}  0& 1 \\\\ 1& 0    \end{bmatrix},    \qquad\begin{bmatrix}   0 & 1 \\\\ 1& 0   \end{bmatrix}^{\otimes 2}= \begin{bmatrix} 0 &0&0&1 \\\\ 0 &0&1&0 \\\\ 0 &1&0&0\\\\ 1 &0&0&0\end{bmatrix}.</span></span>
 \end{align}
