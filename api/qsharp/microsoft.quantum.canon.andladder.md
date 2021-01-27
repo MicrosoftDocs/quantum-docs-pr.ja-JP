@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.AndLadder
 title: AndLadder 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: AndLadder
 qsharp.summary: Performs a controlled "AND ladder" on a register of target qubits.
-ms.openlocfilehash: 2c6114ec8a5caabdeea8ab7e26a4877e1633671c
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: d44c462c7a9fc9521bdecfe2ca7f607e90482baf
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209725"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845221"
 ---
 # <a name="andladder-operation"></a>AndLadder 操作
 
@@ -61,6 +61,6 @@ operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[]
 - およびの一部として使用され <xref:microsoft.quantum.canon.applymulticontrolledc> <xref:microsoft.quantum.canon.applymulticontrolledca> ます。
 - 説明とサーキットの図については、図4.10 のセクション4.3 を参照してください & 語。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - [*Michael、Isaac、語*、量子計算、およびクォンタム情報](http://doi.org/10.1017/CBO9780511976667)

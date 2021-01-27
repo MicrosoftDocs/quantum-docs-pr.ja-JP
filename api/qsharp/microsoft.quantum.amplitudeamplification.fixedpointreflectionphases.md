@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.FixedPointReflectionPhases
 title: FixedPointReflectionPhases 関数
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: FixedPointReflectionPhases
 qsharp.summary: Computes partial reflection phases for fixed-point amplitude amplification.
-ms.openlocfilehash: 8cc1073447f5fae87ece38db64dcc312f6208899
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 2ded197801111c26d8a33f9c2363b46ca4b6c4b9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191450"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845857"
 ---
 # <a name="fixedpointreflectionphases-function"></a>FixedPointReflectionPhases 関数
 
@@ -45,7 +45,7 @@ function FixedPointReflectionPhases (nQueries : Int, successMin : Double) : Micr
 
 固定小数点数の振幅増幅クォンタムアルゴリズムの実装で使用できるフェーズの配列。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 「最適な数のクエリを使用した固定ポイントの振幅増幅」のフェーズを使用します。
 

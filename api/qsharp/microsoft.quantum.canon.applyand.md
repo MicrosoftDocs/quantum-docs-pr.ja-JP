@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyAnd
 title: ApplyAnd 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyAnd
 qsharp.summary: Inverts a given target qubit if and only if both control qubits are in the 1 state, using measurement to perform the adjoint operation.
-ms.openlocfilehash: b749013584c89273375da002ac36b3575085b7f2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 39ffb9c598b6345c0d63c0c0d9705d84e101cc47
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96219296"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845182"
 ---
 # <a name="applyand-operation"></a>ApplyAnd 操作
 
@@ -56,7 +56,7 @@ operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit i
 
 
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - Cody Jones: 「fault トレラントな Toffoli ゲートのための斬新構造」、「Phys 87、022328、2013 [Arxiv: 1212.5069](https://arxiv.org/abs/1212.5069) doi: 10.1103/PhysRevA
 - Gidney: "半分に of クォンタムの追加", Quantum 2, ページ 74, 2018 [Arxiv: 1709.06648](https://arxiv.org/abs/1709.06648) doi: 10.1103/PhysRevA. 85.044302
