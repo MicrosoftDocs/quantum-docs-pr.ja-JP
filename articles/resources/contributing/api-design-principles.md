@@ -4,21 +4,21 @@ description: Q# API 設計の原則
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b8623ba7e876c4ccda42d0ddaa07c0012a763292
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 452b32141dc660acbe8ef28530f1430e5acff9aa
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231776"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856697"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# API 設計の原則
 
-## <a name="introduction"></a>はじめに
+## <a name="introduction"></a>概要
 
 言語としてのプラットフォームとして、では、 Q# ユーザーは quantum アプリケーションの作成、実行、理解、調査を行うことができます。
 ユーザーを支援するために、ライブラリを設計する際に Q# は、一連の API 設計原則に従って設計を進め、quantum 開発コミュニティで使用可能なライブラリを作成できるようにします。

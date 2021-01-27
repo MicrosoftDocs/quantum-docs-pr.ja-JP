@@ -4,24 +4,24 @@ description: クォンタムモデリングを使用して分子の電子シス�
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.quantummodels
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4ff3d11bfd4dae5489fc4b7efe4da4ccda00882f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c12ab277f06bed61991a26af96953ccdbf72b642
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833923"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856217"
 ---
 # <a name="quantum-models-for-electronic-systems"></a>電子システムの Quantum モデル
 
 電子システムをシミュレートするには、最初に Hamiltonian を指定する必要があります。これは、上記で説明した標準の量子化手順で確認できます。
 具体的には、$N _e $ 原子と momenta $p _i $ (3 つの次元) を使用し、nuclei を料金 $m _e $ と $x $ _i $Z e $ _k $y $ に配置します。 Hamiltonian 演算子は、\hat{H} = \ sum \_ {i = 1} ^ {N \_ e} \frac{\hat{p} \_ i ^ 2} {2m \_ e} + \ frac/ {1} {2} sum {i\n を読み取ります。 \_ e j} \frac{e ^ 2} {| \hat{x} \_ i-\hat{x} \_ j |}-\ sum \_ {i, k} \frac{Z \_ ke ^ 2} {| \hat{x} \_ i-{y} \_ k |}+ \ frac {1} {2} \ sum_ {k\n e k '} \Frac{Z \_ kz \_ {k '} e ^ 2} {| y \_ k-y \_ k ' |}。 momenta operators $ \hat{p} \_ i ^ 2 $ は、Ham 演算子として実際のスペースで見ることができます。つまり、$ \hat{p} \_ i ^ 2 =-\ partial {x i} ^ 2-\ partial {y i} ^ 2 \_ \_ \_ \_ -\ partial \_ {z \_ i} ^ 2 $ として表示されます。
 ここでは、nuclei が分子に保存されていることを前提としています。
-これは、Oppenheimer 近似として知られており、$ \hat{H} $ の低エネルギーエネルギー範囲で有効になる傾向があります。これは、電子質量が proton の質量を約 $ 1/1836 $ にするためです。
+これは Born-Oppenheimer 近似値として知られており、$ \hat{H} $ の低エネルギーエネルギー範囲で有効である傾向があります。これは、proton の大部分が $ 1/1836 $ であるためです。
 この Hamiltonian 演算子は、$N e $ 原子のシステムのエネルギーを書き出し、 \_ [Quantum Dynamics](xref:microsoft.quantum.chemistry.concepts.quantumdynamics)に記述されている正規の量子化プロセスを適用することで簡単に見つけることができます。
 
 $E ^ {-i\ hat {H} t} $ のためのユニタリ行列表現を構築するには、演算子 $ \hat{H} $ をマトリックスとして表す必要があります。
@@ -36,7 +36,7 @@ $E ^ {-i\ hat {H} t} $ のためのユニタリ行列表現を構築するには
 
 使用できる適切なベースは多数あります。また、問題に対応するための適切な基準を選択することは、多くの場合、量子化学の最先端です。
 おそらく、最も単純な基本的なセットは、hydrogen に似たアトムの Schrödinger 式 ($ \hat{H} $ の eigenfunctions) に対する (orthogonalized) ソリューションであるということです。
-平面や実数など、その他の基準セットを使用することもできます。詳細については、通常のテキスト [「分子の電子構造理論」](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) を参照してください。
+平面や実数などの他の基準セットを使用することもできます。詳細については、参考読者を標準テキストの ["分子 Electronic-Structure 理論"](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) と呼んでいます。
 
 上記のモデルで使用されている状態は任意であるように見えますが、量子化メカニズムによって、自然な状態になる場合があります。
 特に、すべての有効な電子 quantum の状態は、電子ラベルの交換の下で対称である必要があります。

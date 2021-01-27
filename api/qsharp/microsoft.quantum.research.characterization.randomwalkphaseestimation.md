@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation
 title: RandomWalkPhaseEstimation 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Characterization
 qsharp.name: RandomWalkPhaseEstimation
 qsharp.summary: Performs iterative phase estimation using a random walk to approximate Bayesian inference on the classical measurement results from a given oracle and eigenstate.
-ms.openlocfilehash: 2c3afdd41da24a1f32f59f36f0f5c5ed29df1f0b
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f9edafcce62c8b30a6bd52b7dbaa2df2c50c920d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96226164"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845999"
 ---
 # <a name="randomwalkphaseestimation-operation"></a>RandomWalkPhaseEstimation 操作
 
@@ -89,7 +89,7 @@ $ Act $U れるレジスタ。
 
 反復フェーズ推定の統計の詳細については、「 [ベイジアンフェーズの推定](xref:microsoft.quantum.libraries.characterization#bayesian-phase-estimation) 」を参照してください。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - Ferrie *et al.* 2011 [doi:10/tfx](https://doi.org/10.1007/s11128-012-0407-6)、 [arxiv: 1110.3067](https://arxiv.org/abs/1110.3067)。
 - Wiebe *2013* [doi:10/tf3](https://doi.org/10.1103/PhysRevLett.112.190501)、 [arxiv: 1309.0876](https://arxiv.org/abs/1309.0876)

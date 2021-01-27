@@ -4,17 +4,17 @@ description: Microsoft Quantum の数値ライブラリで使用できる型と�
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.numerics.usage
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dfcb8e9e5a15d0881750d67cf58d7ad47cbecd3a
-ms.sourcegitcommit: 897ace8b506adb2331e911ee5633dceced566174
+ms.openlocfilehash: 92efd3b8677d2f27bc59f986ce6c9e915cd23652
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91764133"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856445"
 ---
 # <a name="using-the-numerics-library"></a>数値ライブラリの使用
 
@@ -22,16 +22,16 @@ ms.locfileid: "91764133"
 
 数値ライブラリは3つのコンポーネントで構成されています。
 
-1. 整数の加算と比較子を使用した**基本的な整数算術演算**
-1. 基本機能の上に構築された**高レベルの整数機能**。これには、乗算、除算、逆転などが含まれます。 符号付き整数と符号なし整数の場合。
-1. 固定小数点の初期化、加算、乗算、逆数、多項式評価、および測定を使用した**固定小数点演算機能**。
+1. 整数の加算と比較子を使用した **基本的な整数算術演算**
+1. 基本機能の上に構築された **高レベルの整数機能**。これには、乗算、除算、逆転などが含まれます。 符号付き整数と符号なし整数の場合。
+1. 固定小数点の初期化、加算、乗算、逆数、多項式評価、および測定を使用した **固定小数点演算機能**。
 
 これらのコンポーネントはすべて、1つのステートメントを使用してアクセスでき `open` ます。
 ```qsharp
 open Microsoft.Quantum.Arithmetic;
 ```
 
-## <a name="types"></a>型
+## <a name="types"></a>種類
 
 数値ライブラリでは、次の型がサポートされています。
 
@@ -39,7 +39,7 @@ open Microsoft.Quantum.Arithmetic;
 1. **`SignedLittleEndian`**: と同じです `LittleEndian` が、2の補数に格納されている符号付き整数を表している点が異なります。
 1. **`FixedPoint`**: Qubit 配列とバイナリポイント位置で構成される実数を表します。この値は、バイナリ `qArr2 : Qubit[]` `pos` ポイントの左側にあるバイナリの桁数をカウントします。 `qArr2` はと同じ方法で格納され `SignedLittleEndian` ます。
 
-## <a name="operations"></a>操作
+## <a name="operations"></a>Operations
 
 上記の3種類のそれぞれに対して、さまざまな操作を実行できます。
 
@@ -95,7 +95,7 @@ operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
 
 クォンタム $x コンピューターで $ \ sin (x) $ などの smooth functions を評価するには ($ がクォンタム番号である)、 `FixedPoint` クォンタム開発キットの数値ライブラリでは、操作 `EvaluatePolynomialFxP` とを提供し `Evaluate[Even/Odd]PolynomialFxP` ます。
 
-1つ目のは、 `EvaluatePolynomialFxP` $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \ cドット + a_dx ^ d, $ $ という形式の多項式を評価できるようにします。ここで、$d $ は *度*を表します。 これを行うには、必要なのは多項式係数 `[a_0,..., a_d]` (型 `Double[]` )、入力、 `x : FixedPoint` および出力 `y : FixedPoint` (最初はゼロ) だけです。
+1つ目のは、 `EvaluatePolynomialFxP` $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \ cドット + a_dx ^ d, $ $ という形式の多項式を評価できるようにします。ここで、$d $ は *度* を表します。 これを行うには、必要なのは多項式係数 `[a_0,..., a_d]` (型 `Double[]` )、入力、 `x : FixedPoint` および出力 `y : FixedPoint` (最初はゼロ) だけです。
 ```qsharp
 EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```

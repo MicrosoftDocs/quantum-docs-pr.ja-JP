@@ -1,6 +1,6 @@
 ---
 タイトル: クォンタムコンピューティング用語集の説明: クォンタムコンピューティングで使用される一般的な用語、アクション、およびオブジェクトの用語集です。
-author: bradben: benbra: ms. date: 9/1/2020 ms. topic: article uid: microsoft.... グロッサリ:
+執筆者: bradben: benbra ms. date: 9/1/2020 ミリ秒。トピック: 参照 uid: microsoft. quantum. 用語集なし:
 - "Q#"
 - "$$v"
 - "$$"
@@ -138,7 +138,7 @@ author: bradben: benbra: ms. date: 9/1/2020 ms. topic: article uid: microsoft...
 
 クォンタムの [状態](xref:microsoft.quantum.glossary#quantum-state) が時間の経過と共にどのように変化するか。 詳細については、「 [Matrix 指数](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials)」を参照してください。
 
-## <a name="function"></a>機能
+## <a name="function"></a>Function
 純粋に決定的な言語のサブルーチンの型 Q# 。 関数はクォンタムアルゴリズム内で使用されますが、 [qubits](xref:microsoft.quantum.glossary#qubit) または call [操作](xref:microsoft.quantum.glossary#operation)では動作しません。 詳細については、「 [ Q# プログラム](xref:microsoft.quantum.guide.programs)」を参照してください。
 
 ## <a name="gate"></a>ゲートウェイ
@@ -177,7 +177,7 @@ Hadamard 操作 (Hadamard gate または transform とも呼ばれます) は、
 
 実行時にクォンタムアルゴリズムにデータ依存の情報を提供するサブルーチン。 通常、目標は、法則内の入力に対応する出力の [法則](xref:microsoft.quantum.glossary#superposition) を提供することです。 詳細については、「 [Oracles](xref:microsoft.quantum.libraries.data-structures#oracles)」を参照してください。
 
-## <a name="partial-application"></a>部分アプリケーション
+## <a name="partial-application"></a>部分適用
 
 必須の入力をすべて指定せずに [関数](xref:microsoft.quantum.glossary#function) または [操作](xref:microsoft.quantum.glossary#operation) を呼び出します。 これにより、今後のアプリケーションの実行中に、不足しているパラメーター (アンダースコアで示される) のみを必要とする新しい [呼び出し](xref:microsoft.quantum.glossary#callable) 可能が返されます。 詳細については、「 [部分アプリケーション](xref:microsoft.quantum.qsharp.partialapplication)」を参照してください。
 
@@ -211,7 +211,7 @@ Hadamard 操作 (Hadamard gate または transform とも呼ばれます) は、
 
 ## <a name="standard-libraries"></a>標準ライブラリ
 
-[Operations](xref:microsoft.quantum.glossary#operation)インストール時にコンパイラと共にインストールされる操作、[関数](xref:microsoft.quantum.glossary#function)、および[ユーザー定義型](xref:microsoft.quantum.glossary#user-defined-type) Q# 。 標準ライブラリの実装は、ターゲットコンピューターに対しては依存しません。 詳細については、「 [標準ライブラリ](xref:microsoft.quantum.libraries.standard.intro)」を参照してください。
+[](xref:microsoft.quantum.glossary#operation)インストール時にコンパイラと共にインストールされる操作、[関数](xref:microsoft.quantum.glossary#function)、および[ユーザー定義型](xref:microsoft.quantum.glossary#user-defined-type) Q# 。 標準ライブラリの実装は、ターゲットコンピューターに対しては依存しません。 詳細については、「 [標準ライブラリ](xref:microsoft.quantum.libraries.standard.intro)」を参照してください。
 
 ## <a name="superposition"></a>法則
 
@@ -223,7 +223,7 @@ Hadamard 操作 (Hadamard gate または transform とも呼ばれます) は、
 
 ## <a name="teleportation"></a>テレポーテーション
 
-[結び付き](xref:microsoft.quantum.glossary#entanglement)[測定と測定](xref:microsoft.quantum.glossary#measurement)を[quantum state](xref:microsoft.quantum.glossary#quantum-state)使用して、qubit を物理的に移動せずに1つの場所から別の場所に1つの[qubit](xref:microsoft.quantum.glossary#qubit)のデータを再生成する方法。  詳細については、「クォンタム [回線](xref:microsoft.quantum.concepts.circuits) 」と「 [quantum Katas](xref:microsoft.quantum.overview.katas)の各 kata」を参照してください。
+[結び付き](xref:microsoft.quantum.glossary#entanglement)[測定と測定](xref:microsoft.quantum.glossary#measurement)を[](xref:microsoft.quantum.glossary#quantum-state)使用して、qubit を物理的に移動せずに1つの場所から別の場所に1つの[qubit](xref:microsoft.quantum.glossary#qubit)のデータを再生成する方法。  詳細については、「クォンタム [回線](xref:microsoft.quantum.concepts.circuits) 」と「 [quantum Katas](xref:microsoft.quantum.overview.katas)の各 kata」を参照してください。
 
 ## <a name="tuple"></a>タプル
 

@@ -4,17 +4,17 @@ description: サンプルおよびライブラリコードを Microsoft Quantum 
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 47845c4f3520e8c50cf8aefd9bf9e8f086c42842
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 54ef15db2b850e6a3bff38945c57129361517bfe
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691803"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856673"
 ---
 # <a name="contributing-code"></a>コードの投稿
 
@@ -34,7 +34,7 @@ ms.locfileid: "92691803"
 キャノンなどの Q# ライブラリを構成する関数、操作、およびユーザー定義型は、 [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) リポジトリでの開発の一部として自動的にテストされます。
 たとえば、新しいプル要求が開かれたときに、 [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) 構成によって、クォンタムプログラミングコミュニティが依存している既存の機能が、プル要求の変更によって中断されていないことが確認されます。
 
-最新バージョンでは、 Q# 属性を使用して単体テストが定義され `@Test("QuantumSimulator")` ます。 引数には、"QuantumSimulator"、"ToffoliSimulator"、"TraceSimulator"、または実行ターゲットを指定する完全修飾名のいずれかを指定できます。 異なる実行ターゲットを定義するいくつかの属性が、同じ呼び出し可能にアタッチされている可能性があります。 一部のテストでは、で終了[Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/)したすべて Q# の関数と操作を `Test` [xunit](https://xunit.github.io/)フレームワークに公開する、非推奨の Microsoft Quantum パッケージが引き続き使用されます。 単体テストを定義するために、このパッケージは不要になりました。 
+最新バージョンでは、 Q# 属性を使用して単体テストが定義され `@Test("QuantumSimulator")` ます。 引数には、"QuantumSimulator"、"ToffoliSimulator"、"TraceSimulator"、または実行ターゲットを指定する完全修飾名のいずれかを指定できます。 異なる実行ターゲットを定義するいくつかの属性が、同じ呼び出し可能にアタッチされている可能性があります。 一部のテストでは、で終了[](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/)したすべて Q# の関数と操作を `Test` [xunit](https://xunit.github.io/)フレームワークに公開する、非推奨の Microsoft Quantum パッケージが引き続き使用されます。 単体テストを定義するために、このパッケージは不要になりました。 
 
 次の関数は、 <xref:Microsoft.Quantum.Canon.Fst> <xref:Microsoft.Quantum.Canon.Snd> 関数と関数が両方とも代表的な例で正しい出力を返すようにするために使用されます。
 またはの出力が正しくない場合は、ステートメントを使用して `Fst` `Snd` テストが `fail` 失敗します。
@@ -59,7 +59,7 @@ function PairTest () : Unit {
 より複雑な条件を確認するには、「標準ライブラリ」ガイドの [「テスト」セクション](xref:microsoft.quantum.libraries.diagnostics) の手法を使用します。
 たとえば、次のテストでは、によって呼び出されたがと同じものであることを確認し `H(q); X(q); H(q);` <xref:Microsoft.Quantum.Canon.ApplyWith> `Z(q)` ます。
 
-```Q#
+```qsharp
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);

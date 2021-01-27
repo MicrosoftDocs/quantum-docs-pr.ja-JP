@@ -4,21 +4,21 @@ description: クォンタムトレースシミュレーターを使用してリ�
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
-ms.topic: article-type-from-white-list
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.resourcecounts
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 35c16e622a390b730ad7385efcc365c212e981fe
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b8974114a5629fa1928b5774e79aba93fa3d1f7d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869326"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856240"
 ---
 # <a name="obtaining-resource-counts"></a>リソース数の取得
 
-従来のコンピューターで $n $ qubits をシミュレートするコストは、$n $ を使用して指数関数的に拡大できます。 これにより、完全な状態シミュレーターで実行できる量子化学シミュレーションのサイズが大幅に制限されます。 しかし、大規模な化学インスタンスの場合は、役に立つ情報が得られる可能性があります。 ここでは、[トレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)を使用して、化学をシミュレートするための T ゲートや cnot ゲートの数などのリソースコストを自動で取得する方法について説明します。 このような情報は、quantum のコンピューターがこれらの quantum の化学アルゴリズムを実行するのに十分な大きさであることが通知されます。 参考のために、提供されているサンプルを参照してください `GetGateCount` 。
+従来のコンピューターで $n $ qubits をシミュレートするコストは、$n $ を使用して指数関数的に拡大できます。 これにより、完全な状態シミュレーターで実行できる量子化学シミュレーションのサイズが大幅に制限されます。 しかし、大規模な化学インスタンスの場合は、役に立つ情報が得られる可能性があります。 ここでは、 [トレースシミュレーター](xref:microsoft.quantum.machines.qc-trace-simulator.intro)を使用して、化学をシミュレートするための T ゲートや cnot ゲートの数などのリソースコストを自動で取得する方法について説明します。 このような情報は、quantum のコンピューターがこれらの quantum の化学アルゴリズムを実行するのに十分な大きさであることが通知されます。 参考のために、提供されているサンプルを参照してください `GetGateCount` 。
 
 `FermionHamiltonian`たとえば、「[ファイルからの読み込み](xref:microsoft.quantum.chemistry.examples.loadhamiltonian)」の例で説明したように、Broombridge スキーマから読み込まれたインスタンスが既に存在するとします。 
 

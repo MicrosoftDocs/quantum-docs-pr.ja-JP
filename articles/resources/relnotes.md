@@ -4,17 +4,17 @@ description: Microsoft Quantum 開発キット プレビューの最新の更新
 author: bradben
 ms.author: v-benbra
 ms.date: 8/30/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1c3c502b6487482f06820e07425b8516f259fb0d
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231793"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856663"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -24,6 +24,16 @@ ms.locfileid: "96231793"
 
 更新手順については、[更新ガイド](xref:microsoft.quantum.update)を参照してください。
 
+## <a name="version-0152101125897"></a>バージョン0.15.2101125897
+
+*リリース日: 2021 年1月26日*
+
+- Qubit の割り当てを簡略化し、qubit を割り当てるためのより便利な構文を提供します。 [ Q# 言語リポジトリの詳細を参照してください](https://github.com/microsoft/qsharp-language/blob/main/Approved/1-implicitly-scoped-qubit-allocation.md)。
+- QDK-Python リポジトリが作成されました。これには、 `azure-quantum` Azure クォンタムサービスにクォンタムを使用した最適化ジョブを送信するための python クライアントも含まれ `qdk` `qdk.chemistry` Q# ます。また、分子の視覚化機能や、Nwchem、Psi4、OpenMolcas などの複数の化学パッケージの入力ファイルを生成する機能を含む化学ライブラリの python ベースの便利なレイヤーも含まれてい
+- 操作および関数の型、、、およびステートメントでは、かっこは省略可能になりました `if` `elif` `while` `until` 。 `for`、、およびステートメントのかっこは `use` `borrow` 非推奨とされます。
+- 最適な深さの幅の推定については、 [「詳細」を参照してください](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159)。
+- 明示的なマトリックスとして提供される `ApplyUnitary` 、([QuantumLibraries # 391](https://github.com/microsoft/QuantumLibraries/pull/391)、外部の貢献を Dmytro Fedoriaka を使用して) 指定されたユニタリ操作を適用します
+- https://github.com/microsoft/iqsharp/issues/387カーネル起動時のパフォーマンスへの影響を軽減することによって修正しました Q# 。
 ## <a name="version-0142011120240"></a>バージョン0.14.2011120240
 
 *リリース日: 2020 年11月25日*
@@ -211,7 +221,7 @@ ms.locfileid: "96231793"
 
 このリリースには、次のものが含まれています。
 
-- 単体テストの新しいテスト属性。ここで Q# 更新さ[here](xref:Microsoft.Quantum.Diagnostics.Test)れた API ドキュメントを参照してください。[ここでは](xref:microsoft.quantum.guide.testingdebugging)、更新されたテスト & デバッグガイドを参照してください
+- 単体テストの新しいテスト属性。ここで Q# 更新さ[](xref:Microsoft.Quantum.Diagnostics.Test)れた API ドキュメントを参照してください。[ここでは](xref:microsoft.quantum.guide.testingdebugging)、更新されたテスト & デバッグガイドを参照してください
 - プログラム実行エラーの場合にスタックトレースを追加しました Q#
 - [OmniSharp C# Visual Studio Code 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)の更新により、Visual Studio Code 内のブレークポイントがサポートされるようになります
 
@@ -486,14 +496,7 @@ Quantum Development Kit の化学ライブラリの詳細については、[こ�
 
 新しい化学ライブラリでは、ライブラリを新しい GitHub リポジトリ ([Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries)) に分割します。  サンプルは、リポジトリ [Microsoft/Quantum](https://github.com/Microsoft/Quantum) に残ります。  両方への投稿を歓迎します。
 
-このリリースには、コミュニティによって報告された問題に関するバグの修正と機能が含まれています。
-
-* Intellisense の Q# 場合 ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918))。
-* .qs ファイル ([UserVoice](https://quantum.uservoice.com/forums/906097/suggestions/32593049))。
-* If ステートメントで中かっこが省略された場合のエラー メッセージを改善する ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/34718518))。
-* 可変 (再) バインドでのタプル分解をサポートする ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/35020444))。
-* 指定された BitFlipCode の実行中のエラー ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546))。
-* H2SimulationGUI に大きなピークが表示されることがある ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34668370))。
+このリリースには、コミュニティによって報告された問題のバグ修正と機能が含まれています。
 
 ### <a name="community-contributions"></a>コミュニティへの投稿
 
@@ -509,15 +512,7 @@ Rohit Gupta ([@guptarohit](https://github.com/guptarohit)、[PR #90](https://git
 
 *リリース日:2018 年 9 月 10 日*
 
-このリリースには、コミュニティによって報告された問題に関するバグの修正が含まれています。 含まれている内容は次のとおりです。
-
-* シフト演算子を使用できない ([GitHub](https://github.com/Microsoft/Quantum/issues/75))。
-* コンソールへの出力時に `QCTraceSimulator` で `DumpMachine` / `DumpRegister` が失敗する ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34709680))。
-* 0 量子ビットの割り当てを許可する ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34768069-allow-allocating-0-qubits))。
-* `AssertQubitState` に明示的な Complex() 呼び出しが必要である ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34713733-assertqubitstate-requires-explicit-complex-call))。
-* macOS での `Measure` 演算で常に `One` が返される ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546))。
-
-よろしくお願いいたします。 
+このリリースには、コミュニティによって報告された問題に関するバグの修正が含まれています。
 
 ## <a name="version-0218063001"></a>バージョン 0.2.1806.3001
 
