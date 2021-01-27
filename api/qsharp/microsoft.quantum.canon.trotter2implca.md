@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.Trotter2ImplCA
 title: Trotter2ImplCA 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Trotter2ImplCA
 qsharp.summary: Implementation of the second-order Trotter–Suzuki integrator.
-ms.openlocfilehash: 0e3a7e53a4d415e6b5af81d9bb3f52cddf36c4b3
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 34b60934b67c19b2d1d718d68b85a2f0fffeab5d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96204744"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852015"
 ---
 # <a name="trotter2implca-operation"></a>Trotter2ImplCA 操作
 
@@ -60,3 +60,20 @@ operation Trotter2ImplCA<'T> ((nSteps : Int, op : ((Int, Double, 'T) => Unit is 
 ### <a name="t"></a>&
 
 各時間ステップが動作する型。通常は、 `Qubit[]` またはのいずれか `Qubit` です。
+
+## <a name="example"></a>例
+
+同等のものを次に示します。
+
+```qsharp
+op(0, deltaT / 2.0, target);
+op(1, deltaT / 2.0, target);
+op(1, deltaT / 2.0, target);
+op(0, deltaT / 2.0, target);
+```
+
+and
+
+```qsharp
+Trotter2ImplCA((2, op), deltaT, target);
+```

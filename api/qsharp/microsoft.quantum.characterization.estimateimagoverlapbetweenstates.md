@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Characterization.EstimateImagOverlapBetweenStates
 title: EstimateImagOverlapBetweenStates 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: EstimateImagOverlapBetweenStates
 qsharp.summary: Given two operations which each prepare copies of a state, estimates the imaginary part of the overlap between the states prepared by each operation.
-ms.openlocfilehash: b192abc4ba37d126bf46f94c66cb87fe3bbec4c8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f18ce43f9e5ebada4c5cc0aeff1538ac640c7390
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216202"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851867"
 ---
 # <a name="estimateimagoverlapbetweenstates-operation"></a>EstimateImagOverlapBetweenStates 操作
 
@@ -64,9 +64,9 @@ operation EstimateImagOverlapBetweenStates (commonPreparation : (Qubit[] => Unit
 
 この操作では、Hadamard テストを使用して $ $ \begin{align} \braket{\psi | の虚数部を検索します。V ^ {\ dagger} U |\psi} \end{align} $ $ ここで、$ \ket{\psi} $ はによって準備された状態であり `commonPreparation` $U、$ はのアクションのユニタリ表現で `preparation1` あり、$V $ はに対応し `preparation2` ます。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
-- Aharonov *et al.* [/0511096 のように](https://arxiv.org/abs/quant-ph/0511096)なります。
+- Aharonov  [/0511096 のように](https://arxiv.org/abs/quant-ph/0511096)なります。
 
 ## <a name="see-also"></a>参照
 
