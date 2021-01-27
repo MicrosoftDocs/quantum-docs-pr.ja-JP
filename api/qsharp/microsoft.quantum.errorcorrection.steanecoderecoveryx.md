@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.SteaneCodeRecoveryX
 title: SteaneCodeRecoveryX 関数
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: SteaneCodeRecoveryX
 qsharp.summary: Decoder for the X-part of the stabilizer group of the ⟦7, 1, 3⟧ Steane quantum code.
-ms.openlocfilehash: 5fac832ef5b7d7be2d85675a32f45e66312f66c8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c90eac291ebe718d10377399184ad705bb51673e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96200372"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98824691"
 ---
 # <a name="steanecoderecoveryx-function"></a>SteaneCodeRecoveryX 関数
 
@@ -44,7 +44,7 @@ function SteaneCodeRecoveryX (syndrome : Microsoft.Quantum.ErrorCorrection.Syndr
 
 選択したデコーダーは、⟦7、1、3⟧ Steane code の CSS コードプロパティを使用します。つまり、X エラーと Z エラーを個別に修正します。 コードのプロパティとして、X の位置 (それぞれ、適用される Z 補正) は X の3ビットエンコーディング、それぞれ Z より隣人は整数であると見なされます。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - D. Gottesman、"安定板のコードとクォンタムのエラーの修正" 博士、Thesis、Caltech、1997; https://arxiv.org/abs/quant-ph/9705052
 
