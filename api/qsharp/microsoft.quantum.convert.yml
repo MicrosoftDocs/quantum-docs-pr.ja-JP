@@ -4,7 +4,7 @@ functions:
   uid: Microsoft.Quantum.Convert.BigIntAsBoolArray
 - summary: 指定したブール値の配列を等価の大きい整数に変換します。 配列の0要素は、大きい整数の最下位ビットです。
   uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt
-- summary: リトルエンディアン形式のビット文字列から正の整数を生成します。
+- summary: リトルエンディアン形式のビット文字列から負でない整数を生成します。
   uid: Microsoft.Quantum.Convert.BoolArrayAsInt
 - summary: ビット文字列を指定した場合は、single qubit の演算子の配列として表されるマルチ qubit の P# li 演算子を返します。
   uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
@@ -22,7 +22,7 @@ functions:
   uid: Microsoft.Quantum.Convert.FunctionAsOperation
 - summary: 指定した整数を等価の大きな整数に変換します。
   uid: Microsoft.Quantum.Convert.IntAsBigInt
-- summary: 返された配列に対してリトルエンディアン表現を使用して、正の整数のバイナリ表現を生成します。
+- summary: 返された配列に対してリトルエンディアン表現を使用して、負でない整数のバイナリ表現を生成します。
   uid: Microsoft.Quantum.Convert.IntAsBoolArray
 - summary: 指定した整数を等価の倍精度浮動小数点数に変換します。
   uid: Microsoft.Quantum.Convert.IntAsDouble
@@ -38,7 +38,7 @@ functions:
   uid: Microsoft.Quantum.Convert.RangeAsIntArray
 - summary: 型を `Result[]` 型に変換 `Bool[]` `One` します。ここで、はにマップされ、 `true` `Zero` はにマップされ `false` ます。
   uid: Microsoft.Quantum.Convert.ResultArrayAsBoolArray
-- summary: リトルエンディアン形式の結果の文字列から正の整数を生成します。
+- summary: 結果の文字列から、リトルエンディアン形式の負でない整数を生成します。
   uid: Microsoft.Quantum.Convert.ResultArrayAsInt
 - summary: 型を `Result` 型に変換 `Bool` `One` します。ここで、はにマップされ、 `true` `Zero` はにマップされ `false` ます。
   uid: Microsoft.Quantum.Convert.ResultAsBool
@@ -50,9 +50,9 @@ operations:
 summary: 'この名前空間には、さまざまな Q # データ型の間で変換を行うための関数が含まれています。'
 uid: Microsoft.Quantum.Convert
 metadata:
-  ms.openlocfilehash: d22f0735b800d2e9a34f8c7ce58353850a4cdded
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: 18cef8a797a4657f1b846a5b2d2ba2a673378f9a
+  ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92713820"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98850062"

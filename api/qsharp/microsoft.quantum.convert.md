@@ -1,19 +1,19 @@
 ---
 uid: Microsoft.Quantum.Convert
 title: Microsoft... Convert 名前空間
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/23/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.Convert
 qsharp.summary: This namespace contains functions for converting between various Q# data types.
-ms.openlocfilehash: 8d74bda72f3165e702ffce8276f93ea8db30c0a2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: d124329437a2c27b96cec954cfe96eda5e089603
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96214043"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850117"
 ---
-# <a name="microsoftquantumconvert-namespace"></a><span data-ttu-id="72c85-102">Microsoft... Convert 名前空間</span><span class="sxs-lookup"><span data-stu-id="72c85-102">Microsoft.Quantum.Convert namespace</span></span>
+# <a name="microsoftquantumconvert-namespace"></a><span data-ttu-id="d6350-102">Microsoft... Convert 名前空間</span><span class="sxs-lookup"><span data-stu-id="d6350-102">Microsoft.Quantum.Convert namespace</span></span>
 
-<span data-ttu-id="72c85-103">この名前空間には、さまざまな Q # データ型の間で変換を行うための関数が含まれています。</span><span class="sxs-lookup"><span data-stu-id="72c85-103">This namespace contains functions for converting between various Q# data types.</span></span>
+<span data-ttu-id="d6350-103">この名前空間には、さまざまな Q # データ型の間で変換を行うための関数が含まれています。</span><span class="sxs-lookup"><span data-stu-id="d6350-103">This namespace contains functions for converting between various Q# data types.</span></span>
 
