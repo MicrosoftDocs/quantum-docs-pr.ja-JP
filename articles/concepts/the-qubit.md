@@ -1,6 +1,6 @@
 ---
 title: 量子コンピューティングにおける qubit の説明: 量子コンピューティングにおける情報の基本単位である qubit について説明します。
-author: QuantumWriter uid: benbra: v-ミリ秒。 date: 12/11/2017 ms. topic: article no loc (次のようになります。
+author: QuantumWriter uid: benbra: v-ms. date: 12/11/2017 ms. topic: 概念用のものはありません。
 - "Q#"
 - "$$v"
 - "$$"

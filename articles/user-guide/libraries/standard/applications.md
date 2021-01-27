@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 214d584840f235868c66a1fb3ee24d0acab49630
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692164"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857239"
 ---
 # <a name="applications"></a>アプリケーション #
 
@@ -62,7 +62,7 @@ Hamiltonian 分解されが Hermitian パーツの合計になる特殊なケー
 newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => Unit is Adj + Ctl);
 ```
 
-最初のパラメーターは `Double` シミュレーションの時間で、データ構造の Dynamical Generator 表現セクションに記載されている2番目のパラメーターは、 `EvolutionGenerator` 時間に依存しない Hamiltonian の典型的な説明であり、Hamiltonian の各用語は、クォンタム回線によってシミュレートされる方法についての指示と共にパッケージ化されます。 [data-structures](xref:microsoft.quantum.libraries.data-structures) このフォームの型では、3番目のパラメーターに対して、( `Qubit[]` シミュレートされたシステムのクォンタムの状態を格納するレジスタである) 3 番目のパラメーターに対して、$e におおよその単位が指定されています。 時間に依存する場合と同様に、ユーザー定義型は `EvolutionSchedule` 、時間に依存する Hamiltonian の従来の説明である型を使用して定義します。
+最初のパラメーターは `Double` シミュレーションの時間で、データ構造の Dynamical Generator 表現セクションに記載されている2番目のパラメーターは、 `EvolutionGenerator` 時間に依存しない Hamiltonian の典型的な説明であり、Hamiltonian の各用語は、クォンタム回線によってシミュレートされる方法についての指示と共にパッケージ化されます。 [](xref:microsoft.quantum.libraries.data-structures) このフォームの型では、3番目のパラメーターに対して、( `Qubit[]` シミュレートされたシステムのクォンタムの状態を格納するレジスタである) 3 番目のパラメーターに対して、$e におおよその単位が指定されています。 時間に依存する場合と同様に、ユーザー定義型は `EvolutionSchedule` 、時間に依存する Hamiltonian の従来の説明である型を使用して定義します。
 
 ```qsharp
 newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[]) => Unit : Adjoint, Controlled);
@@ -178,7 +178,7 @@ QFT ゲートについては [既](xref:microsoft.quantum.libraries.standard.alg
 $ (A ^ nx) \ text{mod} N $ を実現するには、制御された $U _ {a ^ N} $ を適用します。ここで、$a ^ n \ text{mod} N $ クラシックデプロイを計算して、quantum 回線に接続します。  
 このようなモジュール式を実現する回路は、「 [クォンタム算術ドキュメント](./algorithms.md#arithmetic)」で説明されています。具体的には、制御された $U \_ {a ^ i} $ 操作を実装するには、モジュール式の累乗回路が必要です。
 
-上記の回線は [クォンタムフェーズ推定](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) に対応しており、順序の検索を明示的に有効にすると、必要な qubits の数を減らすことができます。 [ArXiv: quant-ph/0205095v3 のページ8で](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)説明されているように、Beauregard の方法に従うか、または Microsoft の Quantum で利用可能なフェーズの推定ルーチンの1つを使用できます。 たとえば、 [堅牢なフェーズの推定](xref:microsoft.quantum.characterization.robustphaseestimation) では、1つの追加の qubit も使用します。
+上記の回線は [クォンタムフェーズ推定](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) に対応しており、順序の検索を明示的に有効にすると、必要な qubits の数を減らすことができます。 [ArXiv: quant-ph/0205095v3 のページ8で](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)説明されているように、Beauregard の方法に従うか、または Microsoft の Quantum で利用可能なフェーズの推定ルーチンの1つを使用できます。 たとえば、 [堅牢なフェーズの推定](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation) では、1つの追加の qubit も使用します。
 
 ### <a name="factoring"></a>取り入れる ###
 要素をファクタリングする目的は、$ $N 整数の2つの素要因を決定することです。 $ は、$ ビットの $n で $N $ です。  

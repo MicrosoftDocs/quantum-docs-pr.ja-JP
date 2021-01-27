@@ -1,6 +1,6 @@
 ---
 title: "条件分岐の Q# " 説明: 条件分岐およびプログラミング言語の ' if ' ステートメントについて説明します Q# 。
-author: bettinaheim: beheim ミリ秒。日付: 10/07/2020 ミリ秒。トピック: 記事 uid: microsoft......:
+author: bettinaheim: beheim ミリ秒。日付: 10/07/2020 ミリ秒。トピック: 参照 uid: microsoft......:
 - "Q#"
 - "$$v"
 

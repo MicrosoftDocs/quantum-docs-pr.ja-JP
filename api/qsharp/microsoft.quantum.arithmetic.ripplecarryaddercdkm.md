@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderCDKM
 title: RippleCarryAdderCDKM 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: RippleCarryAdderCDKM
 qsharp.summary: Reversible, in-place ripple-carry addition of two integers.
-ms.openlocfilehash: b08d8823fd539263205aca1ee15ee69adcb163b7
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: df9b62b649af532a4202aacc3e8dd4613eb8665d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222101"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846358"
 ---
 # <a name="ripplecarryaddercdkm-operation"></a>RippleCarryAdderCDKM 操作
 
@@ -58,7 +58,7 @@ LittleEndian qubit レジスタは、最初の整数 summand をエンコード�
 
 この操作には、RippleCarryAdderD と同じ機能がありますが、$n $ ではなく、補助 qubit を1つだけ使用します。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - Cuccaro、Draper、Samuel、Kutin、David Petrie の: "新しいクォンタム ripple-キャリー追加回路", 2004 ですが、このようになります。
   https://arxiv.org/abs/quant-ph/0410184v1

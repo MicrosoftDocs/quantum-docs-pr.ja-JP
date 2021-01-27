@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Logical.LessThanL
 title: ない関数
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: LessThanL
 qsharp.summary: Returns true if and only if a number is less than another number.
-ms.openlocfilehash: 9a0678569596ac188c87c3944f3759783fcc77ee
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: d5753f9e1447fc1bd433703037fe44c86aaa659c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96197723"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98849148"
 ---
 # <a name="lessthanl-function"></a>ない関数
 
@@ -49,7 +49,7 @@ function LessThanL (a : BigInt, b : BigInt) : Bool
 
 同等のものを次に示します。
 
-```Q#
+```qsharp
 let cond = a < b;
 let cond = LessThanL(a, b);
 ```
