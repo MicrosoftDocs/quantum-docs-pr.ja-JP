@@ -1,6 +1,6 @@
 ---
 title: 量子コンピューティングのベクトルとマトリックスの説明: ベクターとマトリックスを操作する方法の基本について説明します。
-author: QuantumWriter uid: benbra: v-ms. date: 12/11/2017 ms. topic: article no loc (場所の記事):
+author: QuantumWriter uid: benbra: v-ms. date: 12/11/2017 ms. topic: 概念用のものがありません。
 - "Q#"
 - "$$v"
 - "$$"
@@ -85,7 +85,7 @@ author: QuantumWriter uid: benbra: v-ms. date: 12/11/2017 ms. topic: article no 
 
 # <a name="vectors-and-matrices"></a>ベクターと行列
 
-ベクターとマトリックスについては、クォンタムコンピューティングを理解するために重要な知識があります。 次の簡単な概要を説明します。また、読者には、 *Strang、G. (1993) などの線形代数の標準参照を読むことをお勧めします。線形代数 (Vol. 3) の概要。Wellesley、MA: Wellesley を押す* か、 [線形代数](http://joshua.smcvt.edu/linearalgebra/)などのオンライン参照をクリックします。
+ベクターとマトリックスについては、クォンタムコンピューティングを理解するために重要な知識があります。 次の簡単な概要を説明します。また、読者には、 *Strang、G. (1993) などの線形代数の標準参照を読むことをお勧めします。線形代数 (Vol. 3) の概要。Wellesley、MA: Wellesley-Cambridge 押し* ます。または、 [線形代数](http://joshua.smcvt.edu/linearalgebra/)などのオンライン参照をクリックします。
 
 次元 (またはサイズ) n の列ベクター (または単なる [*vector*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v $ は、 $ $ $ 列として配置された n 個の $ 複素数 $ (v_1、v_2、\ lドット、v_n) のコレクションです $ 。
 
@@ -164,7 +164,7 @@ P_ { m1 } ~~ P_ { m2 } ~~ \cdots ~~ P_ { mp}
 
 P のエントリは $ $ $ P_ { ik } = \sum _j M_ { ij } N_ { jk } $ です。 たとえば、P_ 11 のエントリは、 $ { } $ $ $ N の最初の列を含む M の最初の行の内部積です $ $ 。ベクターは単にマトリックスの特殊なケースであるため、この定義はマトリックスベクトル乗算まで拡張されることに注意してください。 
 
-考慮するすべてのマトリックスは、行と列の数が等しいか、またはベクター (1 つの列にのみ対応する) である、正方形のマトリックス $ $ です。 1つの特殊な正方形[*identity matrix*](https://en.wikipedia.org/wiki/Identity_matrix)の行列は、次のように、 $ \boldone $ すべての対角線の要素が1に等しく、 $ $ 残りの要素が0に等しい $ $ id 行列です。
+考慮するすべてのマトリックスは、行と列の数が等しいか、またはベクター (1 つの列にのみ対応する) である、正方形のマトリックス $ $ です。 1つの特殊な正方形[](https://en.wikipedia.org/wiki/Identity_matrix)の行列は、次のように、 $ \boldone $ すべての対角線の要素が1に等しく、 $ $ 残りの要素が0に等しい $ $ id 行列です。
 
 $$\boldone=\begin{bmatrix}
 1 ~~ 0 ~~ \cdots ~~ 0\\\\
@@ -172,13 +172,13 @@ $$\boldone=\begin{bmatrix}
 ~~ \ddots\\\\
 0 ~~ 0 ~~ \cdots ~~ 1 \end{bmatrix} 。$$
 
-B 行列 a の $ $ 場合は、"a" という行列 $ があるとし $ [*inverse*](https://en.wikipedia.org/wiki/Invertible_matrix) $ = = \boldone $ ます。 マトリックスの逆のは存在しない必要がありますが、存在する場合は一意であり、これは $ ^-1 を意味し { } $ ます。 
+B 行列 a の $ $ 場合は、"a" という行列 $ があるとし $ [](https://en.wikipedia.org/wiki/Invertible_matrix) $ = = \boldone $ ます。 マトリックスの逆のは存在しない必要がありますが、存在する場合は一意であり、これは $ ^-1 を意味し { } $ ます。 
 
-任意のマトリックス $ m の場合 $ 、m の adjoint または共役転置は $ $ マトリックス $ N であり、 $ $ N_ { ij } = M_ { ji に } ^ \* $ なります。 M の adjoint $ $ は、通常 m ^ と示されてい $ \dagger $ ます。 マトリックス $ u $ は[*unitary*](https://en.wikipedia.org/wiki/Unitary_matrix) $ 、UU ^ u \dagger = ^ \dagger u = \boldone $ または同等の $ u ^ { -1 } = u ^ \dagger $ と同等のものです。  たとえば、最も重要なのは、ベクトルの基準を維持することです。  これは、 
+任意のマトリックス $ m の場合 $ 、m の adjoint または共役転置は $ $ マトリックス $ N であり、 $ $ N_ { ij } = M_ { ji に } ^ \* $ なります。 M の adjoint $ $ は、通常 m ^ と示されてい $ \dagger $ ます。 マトリックス $ u $ は[](https://en.wikipedia.org/wiki/Unitary_matrix) $ 、UU ^ u \dagger = ^ \dagger u = \boldone $ または同等の $ u ^ { -1 } = u ^ \dagger $ と同等のものです。  たとえば、最も重要なのは、ベクトルの基準を維持することです。  これは、 
 
 $$\langlev、v2.0、v、 \rangle = \dagger = ^ \dagger u ^ { -1 } U v = ^ \dagger u ^ \dagger u v u v = \langle 、u v \rangle$$  
 
-マトリックス $ m $ は、m m ^ の場合は[*Hermitian*](https://en.wikipedia.org/wiki/Hermitian_matrix)と言い $ = \dagger $ ます。
+マトリックス $ m $ は、m m ^ の場合は [*Hermitian*](https://en.wikipedia.org/wiki/Hermitian_matrix)と言い $ = \dagger $ ます。
 
 最後に、サイズが m n の2つのマトリックス m の Kronecker [*製品 (また*](https://en.wikipedia.org/wiki/Tensor_product) は nq $ $ $ \times $ $ $ $ p q) は \times 、 $ $ サイズ mp の大きなマトリックス p m n で、次のように = \otimes $ $ \times $ M と n から取得され $ $ $ $ ます。
 

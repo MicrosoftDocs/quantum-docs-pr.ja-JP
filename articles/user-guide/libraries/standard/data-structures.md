@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e9b593ba69ed41a9fb3c1298b5b945a4cbe43d5d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692234"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858325"
 ---
 # <a name="data-structures-and-modeling"></a>データ構造とモデリング #
 
@@ -72,7 +72,7 @@ ApplyToEach(
 ## <a name="oracles"></a>Oracles ##
 
 フェーズの [推定](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) と [振幅増幅](https://en.wikipedia.org/wiki/Amplitude_amplification) の資料では、oracle の概念が頻繁に表示されます。
-ここで、oracle という用語は、qubits のセットに対して動作し、その回答をフェーズとして返すブラックボックスクォンタムサブルーチンを指します。
+ここで、oracle とは、一連の qubits に対して動作し、その回答をフェーズとして返すクォンタムサブルーチンを意味します。
 多くの場合、このサブルーチンは、他のいくつかのパラメーターに加えて oracle を受け入れるクォンタムアルゴリズムへの入力と考えることができます。また、一連のクォンタム操作を適用し、このクォンタムサブルーチンの呼び出しを基本的なゲートと同様に処理します。
 当然ながら、より大きなアルゴリズムを実際に実装するためには、oracle の根本的な分解を基本的なゲートに提供する必要がありますが、このような分解は、oracle を呼び出すアルゴリズムを理解するためには必要ありません。
 では Q# 、この抽象化は、操作がファーストクラスの値であることによって表されます。これにより、操作を、ブラックボックス方式でクォンタムアルゴリズムの実装に渡すことができます。

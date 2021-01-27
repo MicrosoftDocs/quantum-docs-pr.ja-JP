@@ -4,17 +4,17 @@ description: Microsoft quantum 化学ライブラリの Broombridge 量子化学
 author: cgranade
 ms.author: chgranad
 ms.date: 10/17/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_1
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b99c90c434958f7b04712580789b203766cd084d
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 0a306f59a823e76ba0518d023a41f1f9d5670e7a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835742"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858187"
 ---
 # <a name="broombridge-specification-v01"></a>Broombridge の仕様 v 0.1 #
 
@@ -22,7 +22,7 @@ ms.locfileid: "90835742"
 
 見出しが "NOTE"、"情報"、または "警告" のサイドバーは役に立つものです。
 
-## <a name="introduction"></a>はじめに ##
+## <a name="introduction"></a>概要 ##
 
 このセクションは有益です。
 
@@ -47,12 +47,12 @@ YAML にシリアル化されるオブジェクトに `"$schema"` は、値が `
 
 このセクションは non-normative です。
 
-_Quantity オブジェクト_は JSON オブジェクトであり、 `units` テーブル1に示されている許容値のいずれかの値を持つプロパティを持つ必要があります。
+_Quantity オブジェクト_ は JSON オブジェクトであり、 `units` テーブル1に示されている許容値のいずれかの値を持つプロパティを持つ必要があります。
 
 Quantity オブジェクトは、そのプロパティに加えて1つのプロパティがある場合、 _単純な quantity オブジェクト_ です `value` `units` 。
 プロパティの値は `value` 数値である必要があります。
 
-Quantity オブジェクトは、その_bounded quantity object_ `lower` `upper` プロパティに加えてプロパティがある場合は、制限された quantity オブジェクトです `units` 。
+Quantity オブジェクトは、その `lower` `upper` プロパティに加えてプロパティがある場合は、制限された quantity オブジェクトです `units` 。
 `lower`プロパティとプロパティの値は `upper` 数値である必要があります。
 範囲指定された quantity オブジェクトには、値が数値であるプロパティが含まれる場合があり `value` ます。
 
@@ -169,7 +169,7 @@ $$
 Hamiltonian オブジェクトには、プロパティを含めることもでき `particle_hole_representation` ます。
 存在する場合、の値は、 `particle_hole_representation` このセクションの残りの部分で説明されている形式に従う必要があります。
 
-##### <a name="one-electron-integrals-object"></a>1-電子積分オブジェクト #####
+##### <a name="one-electron-integrals-object"></a>One-Electron 積分オブジェクト #####
 
 このセクションは non-normative です。
 
@@ -199,7 +199,7 @@ one_electron_integrals:     # required
 > Broombridge は、1から始まるインデックスを使用します。
 
 
-##### <a name="two-electron-integrals-object"></a>2つの電子積分オブジェクト #####
+##### <a name="two-electron-integrals-object"></a>Two-Electron 積分オブジェクト #####
 
 このセクションは non-normative です。
 

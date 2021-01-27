@@ -4,17 +4,17 @@ description: Microsoft Quantum Development Kit (QDK) でバグまたは懸案事
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.reporting
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f8fd5de99a742c07f367bad6830d37e0e45573b5
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: e15bfd0933aa10ae8f3c52295f50126d1d887dc7
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867541"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857615"
 ---
 # <a name="reporting-bugs"></a>バグのレポート #
 
@@ -33,5 +33,5 @@ Quantum 開発キットのコンポーネントでバグが発見された場合
 - 実際に起こったこと
 - ソフトウェア環境に関する情報 (例: OS、.NET Core、および Quantum 開発キットのバージョン)
 
-また、非常に単純であり、何の意味もない場合 (たとえば、ミスミスなど)、バグを直接修正するための[プル要求を作成](https://help.github.com/articles/about-pull-requests/)することもできます。
+また、非常に単純であり、何の意味もない場合 (たとえば、ミスミスなど)、バグを直接修正するための [プル要求を作成](https://help.github.com/articles/about-pull-requests/) することもできます。
 
