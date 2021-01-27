@@ -5,20 +5,20 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fc8e46aa22cb2575de42cfc3d4f57c43e5d3f7b0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692041"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857208"
 ---
 # <a name="error-correction"></a>エラーの修正 #
 
-## <a name="introduction"></a>はじめに ##
+## <a name="introduction"></a>概要 ##
 
 従来のコンピューティングでは、エラーに対して1つの保護が必要な場合は、データビットを繰り返すことによって、そのビットを *論理ビット* で表現するのが十分な場合があります。
 たとえば、$0 $ > は、 {0} データビット0のエンコーディングとして使用します。この場合、ラベル0の上の行を使用して、0状態のビットのエンコーディングであることを示します。
@@ -84,7 +84,7 @@ $Z 0 Z_1 \ket {000} = \ket {000} $ で $Z 0 Z_1 \ket = \ket $ であることに
 
 - <xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister>`= Qubit[]`: Qubits のレジスタは、エラー修正コードのコードブロックとして解釈される必要があることを示します。
 - <xref:Microsoft.Quantum.ErrorCorrection.Syndrome>`= Result[]`: 測定結果の配列を、コードブロックで測定されるより隣人として解釈する必要があることを示します。
-- <xref:Microsoft.Quantum.ErrorCorrection.RecoveryFn>`= (Syndrome -> Pauli[])`: より隣人を解釈し、適用する必要のある修正を返すために、 *古典* 関数を使用する必要があることを示します。
+- <xref:Microsoft.Quantum.ErrorCorrection.RecoveryFn>`= (Syndrome -> Pauli[])`: より隣人を解釈し、適用する必要のある修正を返すために、*古典* 関数を使用する必要があることを示します。
 - <xref:Microsoft.Quantum.ErrorCorrection.EncodeOp>`= ((Qubit[], Qubit[]) => LogicalRegister)`: エラー修正コードのコードブロックを生成するために、操作がデータを表す qubits を新しい ancilla qubits と共に受け取ることを示します。
 - <xref:Microsoft.Quantum.ErrorCorrection.DecodeOp>`= (LogicalRegister => (Qubit[], Qubit[]))`: データ qubits にコードを修正するコードブロックとより隣人情報を表すために使用される ancilla qubits を分解されする操作であることを示します。
 - <xref:Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp>`= (LogicalRegister => Syndrome)`: コードブロックからより隣人情報を抽出するために使用する必要がある操作を表します。コードによって保護されている状態には支障がありません。

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToRest
 title: ApplyToRest 操作
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToRest
 qsharp.summary: Applies an operation to all but the first element of an array.
-ms.openlocfilehash: fe49361f3c2259960eaa58d47df9b69b30b572a8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f18536a056935220feedc4ea50531c5def61d650
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208269"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850507"
 ---
 # <a name="applytorest-operation"></a>ApplyToRest 操作
 
@@ -54,6 +54,15 @@ operation ApplyToRest<'T> (op : ('T[] => Unit), targets : 'T[]) : Unit
 ### <a name="t"></a>&
 
 適用する操作の入力型。
+
+## <a name="example"></a>例
+
+次の Q # スニペットは同等です。
+
+```qsharp
+ApplyToRest(ApplyCNOTChain, register);
+ApplyCNOTChain(Rest(register));
+```
 
 ## <a name="see-also"></a>参照
 

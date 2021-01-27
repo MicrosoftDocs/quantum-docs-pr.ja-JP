@@ -4,17 +4,17 @@ description: QDK の組み込みの操作と関数について説明します。
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4d15226fe46be79b7d3e6f414f33f1debd691f40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6ed5b1677a204b9425f229a3ea0855bb789f3f75
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692119"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857182"
 ---
 # <a name="the-prelude"></a>準備 #
 
@@ -109,13 +109,13 @@ Hadamard ゲートは、$ \ket {0} $ と $ \ket $ の状態の法則を作成す
 $T $ gate は、操作によって実装されてい <xref:Microsoft.Quantum.Intrinsic.T> `(Qubit => Unit is Adj + Ctl)` ます。また、このメソッドは、単一の qubit に対する1つのユニタリ操作であることを示すシグネチャを持っています。
 
 これは、任意のシングル qubit 操作を記述するのに十分な原則ですが、準備には、このような回転を実現するさまざまな方法が用意されているため、異なるターゲットコンピューターでは、Pauthentication Li 演算子についての回転をより効率的に行うことができます。
-これらの最も基本的な操作は、 <xref:Microsoft.Quantum.Intrinsic.r> 指定された P# li 軸を中心とした回転を実装する操作です。 \mathrel{: =} \ exp (-i/phi/シグマ/2),、\ end{の場合は、$/シグマ $ は角度、$ \、$ $ $ exp $ は指数を表します。 $/を指定します (& a) (& a)。
+これらの最も基本的な操作は、 <xref:Microsoft.Quantum.Intrinsic.R> 指定された P# li 軸を中心とした回転を実装する操作です。 \mathrel{: =} \ exp (-i/phi/シグマ/2),、\ end{の場合は、$/シグマ $ は角度、$ \、$ $ $ exp $ は指数を表します。 $/を指定します (& a) (& a)。
 これにはシグネチャがあります `((Pauli, Double, Qubit) => Unit is Adj + Ctl)` 。ここで、入力の最初の2つの部分は、(-シグマ, + phi) $ という、ユニタリ演算子 $R を指定するために必要な従来の引数 $/シグマ $ と $ ¥ phi $ を表します。
 $-シグマ $ と $/phi $ を部分的に適用して、1つの型が単一の qubit の読み込み操作を取得することができます。
 たとえば、に `R(PauliZ, PI() / 4, _)` は型があり `(Qubit => Unit is Adj + Ctl)` ます。
 
 > [!NOTE]
-> この操作では、 <xref:Microsoft.Quantum.Intrinsic.r> 入力角度を2で除算し、-1 で乗算します。
+> この操作では、 <xref:Microsoft.Quantum.Intrinsic.R> 入力角度を2で除算し、-1 で乗算します。
 > $Z $ ローテーションの場合、これは $ \ket {0} $ eigenstate が $--phi/$2 で回転し、$ \ket $ eigenstate が $/phi/$2 によってローテーションされることを意味し {1} ます。これにより、$ \ket $ eigenstate は $ {1} \ket {0} $ eigenstate に対して相対的に $/phi $ で
 >
 > 特に、 `T` とは無関係な `R(PauliZ, PI() / 8, _)` [グローバルフェーズ](xref:microsoft.quantum.glossary#global-phase)によってのみ異なることを意味します。
@@ -217,7 +217,7 @@ $Z 0 Z_1 $ を測定すると、$ \ket $ の pairity が正であることを表
 この操作では、 <xref:Microsoft.Quantum.Intrinsic.M> 1 つの qubit に対して P# li $Z $ 演算子を測定し、シグネチャを持ち `(Qubit => Result)` ます。
 `M(q)` は `Measure([PauliZ], [q])` に相当します。
 
-は、 <xref:microsoft.quantum.measurement.MultiM> qubits の各配列で *個別* に $Z $ 演算子を測定し、qubits ごとに取得された値の *配列* を返し `Result` ます。
+は、 <xref:Microsoft.Quantum.Measurement.MultiM> qubits の各配列で *個別* に $Z $ 演算子を測定し、qubits ごとに取得された値の *配列* を返し `Result` ます。
 場合によっては、これを最適化することができます。 シグネチャ () があり `Qubit[] => Result[])` ます。
 `MultiM(qs)` は、次の場合と同じです。
 
