@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
-ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.openlocfilehash: dd37581dff2a512a29eb7729ecbf81412917b8f8
+ms.sourcegitcommit: e915baf3b84ee3a562004c5b31d157d21533d450
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98856663"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99101460"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit のリリース ノート
 
@@ -23,6 +23,15 @@ ms.locfileid: "98856663"
 インストール手順については、[インストール ガイド](xref:microsoft.quantum.install)を参照してください。
 
 更新手順については、[更新ガイド](xref:microsoft.quantum.update)を参照してください。
+
+## <a name="version-0152101126807"></a>バージョン0.15.2101.126807
+
+*リリース日: 2021 年1月29日*
+
+- Q#IonQ および Honeywell プロバイダーを対象とする実行可能ファイルのコンパイラにプロジェクトテンプレートを追加しました
+- Q# Q# バージョン[0.15.2101125897](#version-0152101125897)で導入された構文の変更を含むように、カーネル構文の強調表示を更新します。
+- を介して Azure クォンタムに送信されるプログラムへの入力引数としての配列の引き渡しをサポートするためのバグ修正 Q# `%azure.execute` については、「問題の [#401](https://github.com/microsoft/iqsharp/issues/401)
+- Docker イメージ内でを使用して、"アクセスが拒否されました" エラーを修正しました。 `az` `iqsharp-base` 問題を参照してください [#404](https://github.com/microsoft/iqsharp/issues/404)
 
 ## <a name="version-0152101125897"></a>バージョン0.15.2101125897
 
@@ -34,6 +43,7 @@ ms.locfileid: "98856663"
 - 最適な深さの幅の推定については、 [「詳細」を参照してください](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159)。
 - 明示的なマトリックスとして提供される `ApplyUnitary` 、([QuantumLibraries # 391](https://github.com/microsoft/QuantumLibraries/pull/391)、外部の貢献を Dmytro Fedoriaka を使用して) 指定されたユニタリ操作を適用します
 - https://github.com/microsoft/iqsharp/issues/387カーネル起動時のパフォーマンスへの影響を軽減することによって修正しました Q# 。
+
 ## <a name="version-0142011120240"></a>バージョン0.14.2011120240
 
 *リリース日: 2020 年11月25日*
