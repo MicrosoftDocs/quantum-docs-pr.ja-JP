@@ -4,26 +4,25 @@ description: Jupyter Notebook を使用して Q# アプリケーションを作�
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b34d89ab33a4644c1dd4342949685f9bf84babd8
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: 4cef9b7252a2199b2ea995c4cf819a3582d9ca8f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771399"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844293"
 ---
-# <a name="develop-with-no-locq-jupyter-notebooks"></a>Q# 用の Jupyter Notebook を使用した開発
+# <a name="develop-with-q-jupyter-notebooks"></a>Q# 用の Jupyter Notebook を使用した開発
 
 Q# 用の Jupyter Notebook で Q# の演算を開発するための QDK をインストールします。
 
 Jupyter Notebook を使用すると、手順書、ノート、その他のコンテンツと共に、コードをインプレースで実行できます。 この環境は、組み込まれた説明や、量子コンピューティングの対話型チュートリアルを使用しながら Q# コードを作成するのに最適です。 独自の Q# ノートブックの作成を開始するには、次の手順を実行する必要があります。
 
-## <a name="install-the-ino-locq-jupyter-kernel"></a>IQ# Jupyter カーネルをインストールする
+## <a name="install-the-iq-jupyter-kernel"></a>IQ# Jupyter カーネルをインストールする
 
 IQ# (発音: アイ キュー シャープ) は主に Jupyter と Python で .NET Core SDK に対して使用される拡張機能であり、Q# の演算をコンパイルおよびシミュレートするためのコア機能を提供します。
 
@@ -69,11 +68,11 @@ IQ# (発音: アイ キュー シャープ) は主に Jupyter と Python で .NE
 > ここで、`/path/to/dotnet-iqsharp` は自分のファイル システムでの `dotnet-iqsharp` ツールの絶対パスに置き換える必要があります。
 > 通常は、ユーザー プロファイル フォルダーの `.dotnet/tools` にあります。
     
-***
+**_
 
 これで完了です。 Jupyter 用の IQ# カーネルが用意されました。これは、Q# Jupyter Notebook から Q# 演算をコンパイルして実行するためのコア機能を提供します。
 
-## <a name="create-your-first-no-locq-notebook"></a>最初の Q# ノートブックを作成する
+## <a name="create-your-first-q-notebook"></a>最初の Q# ノートブックを作成する
 
 これで、簡単な Q# 演算を作成して実行することで、Q# 用の Jupyter Notebook のインストールを確認する準備ができました。
 
@@ -85,7 +84,7 @@ IQ# (発音: アイ キュー シャープ) は主に Jupyter と Python で .NE
 
     - Jupyter Notebook がブラウザーで自動的に開かない場合は、コマンド ラインに表示された URL をコピーして、ブラウザーに貼り付けます。
 
-1. **[新規] → [Q#]** を選択して、Q# カーネルを使用して Jupyter Notebook を作成し、最初のノートブックのセルに次のコードを追加します。
+1. _ *[新規] → [Q#]* * を選択して、Q# カーネルを使用して Jupyter Notebook を作成し、最初のノートブックのセルに次のコードを追加します。
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 

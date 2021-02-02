@@ -4,20 +4,19 @@ description: Python を使用して Q# アプリケーションを作成する�
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1ec40b6f1b7a8d9144860e3b8cfd554eb51bae81
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834161"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844267"
 ---
-# <a name="develop-with-no-locq-and-python"></a>Q# と Python を使用した開発
+# <a name="develop-with-q-and-python"></a>Q# と Python を使用した開発
 
 QDK をインストールして、Q# の演算を呼び出す Python のホスト プログラムを開発します。
 
@@ -72,7 +71,7 @@ QDK をインストールして、Q# の演算を呼び出す Python のホス�
     > ここで、`/path/to/dotnet-iqsharp` は自分のファイル システムでの `dotnet-iqsharp` ツールの絶対パスに置き換える必要があります。
     > 通常は、ユーザー プロファイル フォルダーの `.dotnet/tools` にあります。
     
-***
+**_
 
 これで完了です。 `qsharp` Python パッケージと Jupyter 用の IQ# カーネルの両方が用意されました。これらは、Python から Q# 演算をコンパイルして実行するためのコア機能を提供し、Q# 用の Jupyter Notebooks を使用できるようにします。
 
@@ -87,7 +86,7 @@ VS Code を使用する場合は、次のようにします。
 
 別のエディターを使用する場合は、上記の手順ですべてが設定されています。
 
-## <a name="write-your-first-no-locq-program"></a>最初の Q# プログラムを作成する
+## <a name="write-your-first-q-program"></a>最初の Q# プログラムを作成する
 
 これで、簡単な Q# プログラムを作成して実行することで、`qsharp` Python パッケージのインストールを確認する準備ができました。
 
@@ -113,7 +112,7 @@ VS Code を使用する場合は、次のようにします。
 1. 呼び出された演算の結果が表示されます。 この場合、演算によってランダムな結果が生成されるため、`0` または `1` が画面に表示されます。 プログラムを繰り返し実行すると、それぞれの結果がだいたい半分ずつ表示されます。
 
 > [!NOTE]
-> * その Python コードは通常の Python プログラムです。 Python ベースの Jupyter Notebook を含む任意の Python 環境を使用して、Python プログラムを記述し、Q# 演算を呼び出すことができます。 Python プログラムでは、Python コード自体と同じフォルダーにある任意の .qs ファイルから Q# 演算をインポートできます。
+> _ その Python コードは通常の Python プログラムです。 Python ベースの Jupyter Notebook を含む任意の Python 環境を使用して、Python プログラムを記述し、Q# 演算を呼び出すことができます。 Python プログラムでは、Python コード自体と同じフォルダーにある任意の .qs ファイルから Q# 演算をインポートできます。
 
 ## <a name="next-steps"></a>次のステップ
 
