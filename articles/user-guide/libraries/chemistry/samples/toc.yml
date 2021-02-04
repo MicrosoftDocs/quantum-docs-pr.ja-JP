@@ -1,8 +1,0 @@
-- name: エネルギー準位の推定の取得
-  href: molecular-hydrogen.md
-- name: ファイルからのハミルトニアンの読み込み
-  href: loading-from-file.md
-- name: リソース数の取得
-  href: resource-counts.md
-- name: NWChem を使用したエンド ツー エンド
-  href: end-to-end.md
